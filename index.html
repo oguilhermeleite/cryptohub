@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoHub - Sua Porta de Entrada Completa para o Mundo Cripto</title>
+    <meta name="description" content="Encontre a melhor forma de comprar, vender e usar criptomoedas com segurança. P2P, Exchanges, Cartões Cripto e Segurança.">
+    <meta name="keywords" content="bitcoin, criptomoedas, p2p, exchange, cartão cripto, ledger, segurança">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>₿</text></svg>">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>CryptoHub</h1>
+                    <span class="logo-icon">₿</span>
+                </div>
+
+                <nav class="navigation">
+                    <ul class="nav-menu">
+                        <li><a href="#p2p" data-section="p2p">P2P</a></li>
+                        <li><a href="#exchanges" data-section="exchanges">Exchanges</a></li>
+                        <li><a href="#cards" data-section="cards"><span data-lang="nav-cards">Cartões</span></a></li>
+                        <li><a href="#security" data-section="security"><span data-lang="nav-security">Segurança</span></a></li>
+                    </ul>
+                </nav>
+
+                <div class="language-toggle">
+                    <button class="lang-btn active" data-lang-switch="pt">🇧🇷 PT</button>
+                    <button class="lang-btn" data-lang-switch="en">🇺🇸 EN</button>
+                </div>
+
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title" data-lang="hero-title">Sua Porta de Entrada Completa para o Mundo Cripto</h2>
+                <p class="hero-subtitle" data-lang="hero-subtitle">Encontre a melhor forma de comprar, vender e usar criptomoedas com segurança</p>
+                <button class="cta-button" onclick="document.querySelector('.main-sections').scrollIntoView({behavior: 'smooth'})">
+                    <span data-lang="hero-cta">Começar Agora</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="hero-visual">
+                <div class="crypto-icons">
+                    <div class="crypto-icon bitcoin">₿</div>
+                    <div class="crypto-icon ethereum">Ξ</div>
+                    <div class="crypto-icon cardano">₳</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Sections -->
+    <section class="main-sections">
+        <div class="container">
+            <div class="sections-grid">
+
+                <!-- P2P Trading Card -->
+                <div class="section-card" id="p2p">
+                    <div class="card-icon">🤝</div>
+                    <h3 class="card-title">P2P Trading</h3>
+                    <p class="card-description" data-lang="p2p-desc">Compra e venda direto entre pessoas</p>
+
+                    <div class="card-options">
+                        <div class="option-item">
+                            <span class="option-name">Compre Cripto</span>
+                            <a href="https://comprecripto.io/?ref=mqm" target="_blank" rel="noopener noreferrer" class="option-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="option-item">
+                            <span class="option-name">P2P.me</span>
+                            <a href="https://br.p2p.me/recommend?address=0xa4884FEA51387224e6039b6903EeeFE24Fab7251&nonce=559537&signature=0x9561591564c21ffb8be3a4d7a8ecf0d1d45cbae59469cb24359cbc70ffa4cde86aa2cb0151e158667a4622af32aba022d5d22427a2b250d8810a334e8a5714401b" target="_blank" rel="noopener noreferrer" class="option-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <button class="card-button" onclick="window.open('https://comprecripto.io/?ref=mqm', '_blank')">
+                        <span data-lang="view-options">Ver Opções</span>
+                    </button>
+                </div>
+
+                <!-- Exchanges Card -->
+                <div class="section-card" id="exchanges">
+                    <div class="card-icon">🏦</div>
+                    <h3 class="card-title">Exchanges</h3>
+                    <p class="card-description" data-lang="exchanges-desc">Trading e conversão de criptomoedas</p>
+
+                    <div class="card-options">
+                        <div class="option-item">
+                            <span class="option-name">MEXC</span>
+                            <a href="https://promote.mexc.com/a/Q26ooE1o" target="_blank" rel="noopener noreferrer" class="option-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <button class="card-button" onclick="window.open('https://promote.mexc.com/a/Q26ooE1o', '_blank')">
+                        <span data-lang="access">Acessar</span>
+                    </button>
+                </div>
+
+                <!-- Crypto Cards Card -->
+                <div class="section-card" id="cards">
+                    <div class="card-icon">💳</div>
+                    <h3 class="card-title" data-lang="cards-title">Cartões Cripto</h3>
+                    <p class="card-description" data-lang="cards-desc">Gaste cripto no dia a dia com cartões</p>
+
+                    <div class="card-options">
+                        <div class="option-item">
+                            <span class="option-name">Kast Finance</span>
+                            <a href="https://kastfinance.app.link/CLE47K9D" target="_blank" rel="noopener noreferrer" class="option-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="option-item">
+                            <span class="option-name">Offramp</span>
+                            <a href="https://app.offramp.xyz/login?referralCode=iokost" target="_blank" rel="noopener noreferrer" class="option-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="option-item">
+                            <span class="option-name">Ether.fi</span>
+                            <a href="https://www.ether.fi/refer/6ad38ada" target="_blank" rel="noopener noreferrer" class="option-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <button class="card-button" onclick="window.open('https://kastfinance.app.link/CLE47K9D', '_blank')">
+                        <span data-lang="view-cards">Ver Cartões</span>
+                    </button>
+                </div>
+
+                <!-- Security Card -->
+                <div class="section-card" id="security">
+                    <div class="card-icon">🔒</div>
+                    <h3 class="card-title" data-lang="security-title">Segurança</h3>
+                    <p class="card-description" data-lang="security-desc">Proteja seus investimentos com segurança máxima</p>
+
+                    <div class="card-options">
+                        <div class="option-item">
+                            <span class="option-name">Ledger</span>
+                            <a href="https://shop.ledger.com/?r=9414e4bea285&tracker=MY_TRACKER" target="_blank" rel="noopener noreferrer" class="option-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <button class="card-button" onclick="window.open('https://shop.ledger.com/?r=9414e4bea285&tracker=MY_TRACKER', '_blank')">
+                        <span data-lang="buy">Comprar</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>CryptoHub</h3>
+                    <p data-lang="footer-desc">Sua porta de entrada completa para o mundo cripto</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4 data-lang="footer-services">Serviços</h4>
+                        <ul>
+                            <li><a href="#p2p">P2P Trading</a></li>
+                            <li><a href="#exchanges">Exchanges</a></li>
+                            <li><a href="#cards"><span data-lang="nav-cards">Cartões</span></a></li>
+                            <li><a href="#security"><span data-lang="nav-security">Segurança</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CryptoHub. <span data-lang="footer-rights">Todos os direitos reservados.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
