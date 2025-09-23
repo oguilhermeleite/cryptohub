@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(start \"C:\\Users\\Guilherme\\Trae.ai\\CryptoHub\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
