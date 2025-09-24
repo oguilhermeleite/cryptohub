@@ -1,6 +1,6 @@
 {
-  "name": "CryptoHub - Complete Crypto Gateway",
-  "short_name": "CryptoHub",
+  "name": "Crypto Agregator - Complete Crypto Gateway",
+  "short_name": "Crypto Agregator",
   "description": "Your complete gateway to the crypto world. Find the best way to buy, sell and use cryptocurrencies safely.",
   "start_url": "/",
   "display": "standalone",
