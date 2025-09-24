@@ -402,23 +402,31 @@ class CryptoAgregator {
         scrollContainers.forEach((container, containerIndex) => {
             const dots = container.parentElement.querySelectorAll('.scroll-dot');
 
-            // Update active dot based on scroll position
-            container.addEventListener('scroll', this.debounce(() => {
+            // Enhanced scroll position tracking
+            const updateScrollIndicators = () => {
                 const scrollLeft = container.scrollLeft;
+                const containerWidth = container.offsetWidth;
+                const scrollWidth = container.scrollWidth;
                 const cardWidth = container.querySelector('.platform-card')?.offsetWidth || 280;
-                const gap = 32; // 2rem in pixels
-                const activeIndex = Math.round(scrollLeft / (cardWidth + gap));
+
+                // More accurate calculation for mobile
+                const gap = window.innerWidth <= 768 ? 20 : 32; // Adjust gap based on screen size
+                const effectiveCardWidth = cardWidth + gap;
+                const activeIndex = Math.round(scrollLeft / effectiveCardWidth);
 
                 dots.forEach((dot, index) => {
                     dot.classList.toggle('active', index === activeIndex);
                 });
-            }, 100));
+            };
 
-            // Dot click navigation
+            // Update active dot based on scroll position with improved calculation
+            container.addEventListener('scroll', this.debounce(updateScrollIndicators, 50));
+
+            // Dot click navigation with mobile-optimized positioning
             dots.forEach((dot, index) => {
                 dot.addEventListener('click', () => {
                     const cardWidth = container.querySelector('.platform-card')?.offsetWidth || 280;
-                    const gap = 32;
+                    const gap = window.innerWidth <= 768 ? 20 : 32;
                     const targetScroll = index * (cardWidth + gap);
 
                     container.scrollTo({
@@ -428,30 +436,101 @@ class CryptoAgregator {
                 });
             });
 
-            // Touch swipe for mobile
+            // Enhanced touch handling for mobile
+            let isPointerDown = false;
             let startX = 0;
             let startY = 0;
-            let isScrolling = false;
+            let startTime = 0;
+            let initialScrollLeft = 0;
 
-            container.addEventListener('touchstart', (e) => {
-                startX = e.touches[0].clientX;
-                startY = e.touches[0].clientY;
-                isScrolling = false;
-            }, { passive: true });
+            // Handle both touch and pointer events for better compatibility
+            const getClientX = (e) => e.touches ? e.touches[0].clientX : e.clientX;
+            const getClientY = (e) => e.touches ? e.touches[0].clientY : e.clientY;
 
-            container.addEventListener('touchmove', (e) => {
-                if (isScrolling) return;
+            // Start interaction
+            const handleStart = (e) => {
+                isPointerDown = true;
+                startX = getClientX(e);
+                startY = getClientY(e);
+                startTime = Date.now();
+                initialScrollLeft = container.scrollLeft;
 
-                const currentX = e.touches[0].clientX;
-                const currentY = e.touches[0].clientY;
+                // Prevent default on touch but allow on desktop
+                if (e.type === 'touchstart') {
+                    // Allow the browser to handle touch scrolling naturally
+                }
+            };
+
+            // Handle movement
+            const handleMove = (e) => {
+                if (!isPointerDown) return;
+
+                const currentX = getClientX(e);
+                const currentY = getClientY(e);
                 const diffX = Math.abs(currentX - startX);
                 const diffY = Math.abs(currentY - startY);
 
-                if (diffX > diffY) {
-                    isScrolling = true;
-                    e.preventDefault();
+                // If horizontal movement is greater, we're scrolling horizontally
+                if (diffX > diffY && diffX > 5) {
+                    // Prevent vertical scrolling during horizontal swipe
+                    if (e.cancelable) {
+                        e.preventDefault();
+                    }
                 }
-            }, { passive: false });
+            };
+
+            // End interaction
+            const handleEnd = (e) => {
+                isPointerDown = false;
+
+                // Optional: Add momentum/snap behavior for better UX
+                const endTime = Date.now();
+                const timeDiff = endTime - startTime;
+                const endX = e.changedTouches ? e.changedTouches[0].clientX : e.clientX;
+                const distance = endX - startX;
+                const velocity = Math.abs(distance / timeDiff);
+
+                // If it's a quick swipe, add some momentum
+                if (velocity > 0.5 && Math.abs(distance) > 50) {
+                    const cardWidth = container.querySelector('.platform-card')?.offsetWidth || 280;
+                    const gap = window.innerWidth <= 768 ? 20 : 32;
+                    const cardStep = cardWidth + gap;
+
+                    let targetScroll = container.scrollLeft;
+                    if (distance > 0) {
+                        // Swiped right (scroll left)
+                        targetScroll -= cardStep;
+                    } else {
+                        // Swiped left (scroll right)
+                        targetScroll += cardStep;
+                    }
+
+                    // Ensure we don't scroll beyond bounds
+                    targetScroll = Math.max(0, Math.min(targetScroll, container.scrollWidth - container.offsetWidth));
+
+                    container.scrollTo({
+                        left: targetScroll,
+                        behavior: 'smooth'
+                    });
+                }
+            };
+
+            // Touch events
+            container.addEventListener('touchstart', handleStart, { passive: false });
+            container.addEventListener('touchmove', handleMove, { passive: false });
+            container.addEventListener('touchend', handleEnd, { passive: true });
+
+            // Mouse events for desktop testing
+            container.addEventListener('mousedown', handleStart);
+            container.addEventListener('mousemove', handleMove);
+            container.addEventListener('mouseup', handleEnd);
+            container.addEventListener('mouseleave', handleEnd);
+
+            // Initialize scroll indicators
+            updateScrollIndicators();
+
+            // Update on window resize
+            window.addEventListener('resize', this.debounce(updateScrollIndicators, 250));
         });
     }
 
