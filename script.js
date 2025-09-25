@@ -282,29 +282,48 @@ class CryptoAgregator {
         const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
         const mobileMenuClose = document.getElementById('mobileMenuClose');
 
+        console.log('Mobile menu elements:', {
+            btn: !!mobileMenuBtn,
+            overlay: !!mobileMenuOverlay,
+            close: !!mobileMenuClose
+        });
+
         if (mobileMenuBtn && mobileMenuOverlay) {
             // Open mobile menu
-            mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Opening mobile menu');
                 mobileMenuOverlay.classList.add('active');
                 mobileMenuBtn.classList.add('active');
                 document.body.style.overflow = 'hidden';
             });
 
-            // Close mobile menu
-            const closeMobileMenu = () => {
+            // Close mobile menu function
+            const closeMobileMenu = (e) => {
+                if (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                }
+                console.log('Closing mobile menu');
                 mobileMenuOverlay.classList.remove('active');
                 mobileMenuBtn.classList.remove('active');
                 document.body.style.overflow = '';
             };
 
+            // Close button event listener
             if (mobileMenuClose) {
+                console.log('Adding close button listener');
                 mobileMenuClose.addEventListener('click', closeMobileMenu);
+                mobileMenuClose.addEventListener('touchend', closeMobileMenu);
+            } else {
+                console.error('Mobile menu close button not found!');
             }
 
             // Close on overlay click
             mobileMenuOverlay.addEventListener('click', (e) => {
                 if (e.target === mobileMenuOverlay) {
-                    closeMobileMenu();
+                    closeMobileMenu(e);
                 }
             });
 
@@ -317,9 +336,11 @@ class CryptoAgregator {
             // Close on ESC key
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape' && mobileMenuOverlay.classList.contains('active')) {
-                    closeMobileMenu();
+                    closeMobileMenu(e);
                 }
             });
+        } else {
+            console.error('Mobile menu elements not found!');
         }
     }
 
