@@ -1051,8 +1051,12 @@ body {
     .logo {
         flex: 1;
         min-width: 0;
-        margin-right: 2rem;
-        padding-right: 1rem;
+        margin-right: 30px;
+        padding-right: 20px;
+    }
+
+    .logo h1 {
+        margin-right: 20px;
     }
 
     .logo h1 {
