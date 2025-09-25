@@ -156,6 +156,7 @@ class CryptoAgregator {
     }
 
     init() {
+        this.setupThemeToggle();
         this.setupLanguageToggle();
         this.setupMobileMenu();
         this.setupSmoothScrolling();
@@ -232,23 +233,92 @@ class CryptoAgregator {
         localStorage.setItem('cryptoagregator_language', lang);
     }
 
+    // Theme Management
+    setupThemeToggle() {
+        const themeToggle = document.getElementById('themeToggle');
+        const currentTheme = this.getStoredTheme() || 'dark';
+
+        // Set initial theme
+        this.setTheme(currentTheme);
+
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                const newTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+                this.setTheme(newTheme);
+                this.storeTheme(newTheme);
+                this.trackThemeSwitch(newTheme);
+            });
+        }
+    }
+
+    setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+
+        // Update theme button appearance
+        const themeToggle = document.getElementById('themeToggle');
+        if (themeToggle) {
+            themeToggle.setAttribute('aria-label', theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme');
+        }
+    }
+
+    getStoredTheme() {
+        return localStorage.getItem('cryptoagregator_theme');
+    }
+
+    storeTheme(theme) {
+        localStorage.setItem('cryptoagregator_theme', theme);
+    }
+
+    trackThemeSwitch(theme) {
+        console.log('Theme switch tracked:', {
+            theme: theme,
+            timestamp: new Date().toISOString()
+        });
+    }
+
     // Mobile Menu
     setupMobileMenu() {
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navigation = document.querySelector('.navigation');
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
 
-        if (mobileMenuBtn && navigation) {
+        if (mobileMenuBtn && mobileMenuOverlay) {
+            // Open mobile menu
             mobileMenuBtn.addEventListener('click', () => {
-                navigation.classList.toggle('mobile-open');
-                mobileMenuBtn.classList.toggle('active');
+                mobileMenuOverlay.classList.add('active');
+                mobileMenuBtn.classList.add('active');
+                document.body.style.overflow = 'hidden';
             });
 
-            const navLinks = document.querySelectorAll('.nav-menu a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    navigation.classList.remove('mobile-open');
-                    mobileMenuBtn.classList.remove('active');
-                });
+            // Close mobile menu
+            const closeMobileMenu = () => {
+                mobileMenuOverlay.classList.remove('active');
+                mobileMenuBtn.classList.remove('active');
+                document.body.style.overflow = '';
+            };
+
+            if (mobileMenuClose) {
+                mobileMenuClose.addEventListener('click', closeMobileMenu);
+            }
+
+            // Close on overlay click
+            mobileMenuOverlay.addEventListener('click', (e) => {
+                if (e.target === mobileMenuOverlay) {
+                    closeMobileMenu();
+                }
+            });
+
+            // Close on navigation link click
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-list a');
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+
+            // Close on ESC key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && mobileMenuOverlay.classList.contains('active')) {
+                    closeMobileMenu();
+                }
             });
         }
     }
