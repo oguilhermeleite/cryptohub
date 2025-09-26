@@ -223,37 +223,8 @@ body {
     gap: 1rem;
 }
 
-/* Theme Toggle */
-.theme-toggle {
-    display: flex;
-    align-items: center;
-}
-
-.theme-btn {
-    background: var(--bg-card);
-    border: 1px solid var(--border-secondary);
-    color: var(--text-primary);
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.theme-btn:hover {
-    background: var(--accent-primary);
-    border-color: var(--accent-primary);
-    color: #000000;
-    transform: scale(1.05);
-}
-
+/* Theme icon states for mobile menu */
 .theme-icon {
-    position: absolute;
     font-size: 1.1rem;
     transition: all 0.3s ease;
 }
@@ -412,6 +383,52 @@ body {
     background: var(--accent-primary);
     color: #000000;
     transform: scale(1.05);
+}
+
+/* Mobile Theme Toggle */
+.mobile-theme-toggle {
+    padding: 1.5rem 1.5rem 1rem;
+}
+
+.mobile-theme-btn {
+    background: var(--bg-card);
+    border: 1px solid var(--border-secondary);
+    color: var(--text-primary);
+    width: 100%;
+    height: 50px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 0 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.mobile-theme-btn:hover {
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
+    color: #000000;
+}
+
+.mobile-theme-btn .theme-icon {
+    position: relative;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.mobile-theme-btn .theme-text {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.mobile-menu-separator {
+    height: 1px;
+    background: var(--border-primary);
+    margin: 0 1.5rem 1rem;
 }
 
 .mobile-menu-nav {

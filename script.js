@@ -8,11 +8,12 @@ class CryptoAgregator {
                 'hero-title': 'Sua Porta de Entrada Completa para o Mundo Cripto',
                 'hero-subtitle': 'Encontre a melhor forma de comprar, vender e usar criptomoedas com segurança',
                 'hero-cta': 'Começar Agora',
-                'nav-featured': 'Mais Acessados',
+                'nav-featured': 'Destaques',
                 'nav-cards': 'Cartões',
                 'nav-security': 'Segurança',
-                'featured-title': 'Mais Acessados',
-                'featured-subtitle': 'Plataformas mais populares da nossa comunidade',
+                'featured-title': 'Destaques',
+                'featured-subtitle': 'Plataforma em destaque da nossa comunidade',
+                'theme-toggle': 'Tema',
                 'p2p-subtitle': 'Compra e venda direto entre pessoas',
                 'exchanges-subtitle': 'Trading e conversão de criptomoedas',
                 'cards-title': 'Cartões Cripto',
@@ -29,11 +30,12 @@ class CryptoAgregator {
                 'hero-title': 'Your Complete Gateway to the Crypto World',
                 'hero-subtitle': 'Find the best way to buy, sell and use cryptocurrencies safely',
                 'hero-cta': 'Get Started',
-                'nav-featured': 'Most Accessed',
+                'nav-featured': 'Featured',
                 'nav-cards': 'Cards',
                 'nav-security': 'Security',
-                'featured-title': 'Most Accessed',
-                'featured-subtitle': 'Most popular platforms in our community',
+                'featured-title': 'Featured',
+                'featured-subtitle': 'Featured platform in our community',
+                'theme-toggle': 'Theme',
                 'p2p-subtitle': 'Direct buying and selling between people',
                 'exchanges-subtitle': 'Trading and cryptocurrency conversion',
                 'cards-title': 'Crypto Cards',
@@ -50,24 +52,14 @@ class CryptoAgregator {
 
         // Platform data with affiliate links and descriptions
         this.platformData = {
-            'mexc-featured': {
-                name: 'MEXC',
-                url: 'https://promote.mexc.com/a/Q26ooE1o',
-                logo: 'https://logo.clearbit.com/mexc.com',
-                fallbackLogo: 'https://www.google.com/s2/favicons?domain=mexc.com&sz=64',
+            'bitget-featured': {
+                name: 'Bitget Wallet',
+                url: 'https://newshare.bwb.global/pt_br/invite_earn_coin?inviteCode=VdkFyq&deepLinkType=card&utmSource=referral2.0_copyLink',
+                logo: 'https://logo.clearbit.com/bitget.com',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=bitget.com&sz=64',
                 description: {
-                    pt: 'Exchange global confiável com mais de 1500 criptomoedas. Trading avançado com taxas competitivas e alta liquidez.',
-                    en: 'Trusted global exchange with over 1500 cryptocurrencies. Advanced trading with competitive fees and high liquidity.'
-                }
-            },
-            'etherfi-featured': {
-                name: 'Ether.fi',
-                url: 'https://www.ether.fi/refer/6ad38ada',
-                logo: 'https://logo.clearbit.com/ether.fi',
-                fallbackLogo: 'https://www.google.com/s2/favicons?domain=ether.fi&sz=64',
-                description: {
-                    pt: 'Protocolo DeFi líder para staking líquido de Ethereum. Maximize seus rendimentos ETH com segurança e transparência.',
-                    en: 'Leading DeFi protocol for Ethereum liquid staking. Maximize your ETH yields with security and transparency.'
+                    pt: 'Carteira Web3 multi-chain líder com suporte completo a DeFi, NFTs e trading. Interface amigável para iniciantes e usuários avançados.',
+                    en: 'Leading multi-chain Web3 wallet with complete DeFi, NFTs and trading support. User-friendly interface for beginners and advanced users.'
                 }
             },
             'comprecripto': {
@@ -235,14 +227,15 @@ class CryptoAgregator {
 
     // Theme Management
     setupThemeToggle() {
-        const themeToggle = document.getElementById('themeToggle');
+        const mobileThemeToggle = document.getElementById('mobileThemeToggle');
         const currentTheme = this.getStoredTheme() || 'dark';
 
         // Set initial theme
         this.setTheme(currentTheme);
 
-        if (themeToggle) {
-            themeToggle.addEventListener('click', () => {
+        // Mobile theme toggle in hamburger menu
+        if (mobileThemeToggle) {
+            mobileThemeToggle.addEventListener('click', () => {
                 const newTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
                 this.setTheme(newTheme);
                 this.storeTheme(newTheme);
@@ -254,10 +247,10 @@ class CryptoAgregator {
     setTheme(theme) {
         document.documentElement.setAttribute('data-theme', theme);
 
-        // Update theme button appearance
-        const themeToggle = document.getElementById('themeToggle');
-        if (themeToggle) {
-            themeToggle.setAttribute('aria-label', theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme');
+        // Update mobile theme button appearance
+        const mobileThemeToggle = document.getElementById('mobileThemeToggle');
+        if (mobileThemeToggle) {
+            mobileThemeToggle.setAttribute('aria-label', theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme');
         }
     }
 

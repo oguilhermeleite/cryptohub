@@ -24,7 +24,7 @@
 
                 <nav class="navigation">
                     <ul class="nav-menu">
-                        <li><a href="#featured" data-section="featured"><span data-lang="nav-featured">Mais Acessados</span></a></li>
+                        <li><a href="#featured" data-section="featured"><span data-lang="nav-featured">Destaques</span></a></li>
                         <li><a href="#p2p" data-section="p2p">P2P</a></li>
                         <li><a href="#exchanges" data-section="exchanges">Exchanges</a></li>
                         <li><a href="#cards" data-section="cards"><span data-lang="nav-cards">Cartões</span></a></li>
@@ -33,12 +33,6 @@
                 </nav>
 
                 <div class="header-controls">
-                    <div class="theme-toggle">
-                        <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
-                            <span class="theme-icon theme-icon-dark">🌙</span>
-                            <span class="theme-icon theme-icon-light">☀️</span>
-                        </button>
-                    </div>
                     <div class="language-toggle">
                         <button class="lang-btn active" data-lang-switch="pt">🇧🇷 PT</button>
                         <button class="lang-btn" data-lang-switch="en">🇺🇸 EN</button>
@@ -62,8 +56,16 @@
                 <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">&times;</button>
             </div>
             <nav class="mobile-menu-nav">
+                <div class="mobile-theme-toggle">
+                    <button class="mobile-theme-btn" id="mobileThemeToggle" aria-label="Toggle theme">
+                        <span class="theme-icon theme-icon-dark">🌙</span>
+                        <span class="theme-icon theme-icon-light">☀️</span>
+                        <span class="theme-text" data-lang="theme-toggle">Tema</span>
+                    </button>
+                </div>
+                <div class="mobile-menu-separator"></div>
                 <ul class="mobile-nav-list">
-                    <li><a href="#featured" data-section="featured"><span data-lang="nav-featured">Mais Acessados</span></a></li>
+                    <li><a href="#featured" data-section="featured"><span data-lang="nav-featured">Destaques</span></a></li>
                     <li><a href="#p2p" data-section="p2p">P2P Trading</a></li>
                     <li><a href="#exchanges" data-section="exchanges">Exchanges</a></li>
                     <li><a href="#cards" data-section="cards"><span data-lang="nav-cards">Cartões</span></a></li>
@@ -81,13 +83,6 @@
                 <h2 class="hero-title" data-lang="hero-title">Sua Porta de Entrada Completa para o Mundo Cripto</h2>
                 <p class="hero-subtitle" data-lang="hero-subtitle">Encontre a melhor forma de comprar, vender e usar criptomoedas com segurança</p>
             </div>
-            <div class="hero-visual">
-                <div class="crypto-icons">
-                    <div class="crypto-icon bitcoin">₿</div>
-                    <div class="crypto-icon ethereum">Ξ</div>
-                    <div class="crypto-icon cardano">₳</div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -97,37 +92,25 @@
             <div class="section-header">
                 <h3 class="section-title">
                     <span class="section-icon">⭐</span>
-                    <span data-lang="featured-title">Mais Acessados</span>
+                    <span data-lang="featured-title">Destaques</span>
                 </h3>
-                <p class="section-subtitle" data-lang="featured-subtitle">Plataformas mais populares da nossa comunidade</p>
+                <p class="section-subtitle" data-lang="featured-subtitle">Plataforma em destaque da nossa comunidade</p>
             </div>
             <div class="horizontal-scroll-container">
                 <div class="horizontal-cards-grid">
-                    <!-- MEXC Featured -->
-                    <div class="platform-card featured-card" data-platform="mexc-featured">
+                    <!-- Bitget Wallet Featured -->
+                    <div class="platform-card featured-card" data-platform="bitget-featured">
                         <div class="card-content">
                             <div class="platform-logo">
-                                <img src="https://logo.clearbit.com/mexc.com" alt="MEXC" onerror="this.src='https://www.google.com/s2/favicons?domain=mexc.com&sz=64'">
+                                <img src="https://logo.clearbit.com/bitget.com" alt="Bitget Wallet" onerror="this.src='https://www.google.com/s2/favicons?domain=bitget.com&sz=64'">
                             </div>
-                            <h4 class="platform-name">MEXC</h4>
-                            <div class="platform-badge featured-badge">Featured</div>
-                        </div>
-                    </div>
-
-                    <!-- Ether.fi Featured -->
-                    <div class="platform-card featured-card" data-platform="etherfi-featured">
-                        <div class="card-content">
-                            <div class="platform-logo">
-                                <img src="https://logo.clearbit.com/ether.fi" alt="Ether.fi" onerror="this.src='https://www.google.com/s2/favicons?domain=ether.fi&sz=64'">
-                            </div>
-                            <h4 class="platform-name">Ether.fi</h4>
-                            <div class="platform-badge featured-badge">Featured</div>
+                            <h4 class="platform-name">Bitget Wallet</h4>
+                            <div class="platform-badge featured-badge">Destaque</div>
                         </div>
                     </div>
                 </div>
                 <div class="scroll-indicator">
                     <div class="scroll-dot active"></div>
-                    <div class="scroll-dot"></div>
                 </div>
             </div>
         </div>
@@ -194,20 +177,9 @@
                             <h4 class="platform-name">MEXC</h4>
                         </div>
                     </div>
-
-                    <!-- Bitget Wallet -->
-                    <div class="platform-card" data-platform="bitget">
-                        <div class="card-content">
-                            <div class="platform-logo">
-                                <img src="https://logo.clearbit.com/bitget.com" alt="Bitget Wallet" onerror="this.src='https://www.google.com/s2/favicons?domain=bitget.com&sz=64'">
-                            </div>
-                            <h4 class="platform-name">Bitget Wallet</h4>
-                        </div>
-                    </div>
                 </div>
                 <div class="scroll-indicator">
                     <div class="scroll-dot active"></div>
-                    <div class="scroll-dot"></div>
                 </div>
             </div>
         </div>
