@@ -223,6 +223,41 @@ body {
     gap: 1rem;
 }
 
+/* Desktop Theme Toggle */
+.desktop-theme-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.theme-btn {
+    background: var(--bg-card);
+    border: 1px solid var(--border-secondary);
+    color: var(--text-primary);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.theme-btn:hover {
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
+    color: #000000;
+    transform: scale(1.05);
+}
+
+.theme-btn .theme-icon {
+    position: absolute;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
 /* Theme icon states for mobile menu */
 .theme-icon {
     font-size: 1.1rem;
@@ -418,6 +453,8 @@ body {
     position: relative;
     font-size: 1.2rem;
     transition: all 0.3s ease;
+    display: inline-block;
+    margin-right: 0.5rem;
 }
 
 .mobile-theme-btn .theme-text {
@@ -1087,14 +1124,9 @@ body {
         align-items: center;
     }
 
-    .theme-toggle {
-        margin-right: 0.5rem;
-    }
-
-    .theme-btn {
-        width: 38px;
-        height: 38px;
-        font-size: 1rem;
+    /* Hide desktop theme toggle on mobile */
+    .desktop-theme-toggle {
+        display: none;
     }
 
     .language-toggle {

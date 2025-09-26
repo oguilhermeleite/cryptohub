@@ -227,31 +227,65 @@ class CryptoAgregator {
 
     // Theme Management
     setupThemeToggle() {
+        const desktopThemeToggle = document.getElementById('desktopThemeToggle');
         const mobileThemeToggle = document.getElementById('mobileThemeToggle');
         const currentTheme = this.getStoredTheme() || 'dark';
+
+        console.log('Theme toggle setup:', {
+            desktop: !!desktopThemeToggle,
+            mobile: !!mobileThemeToggle,
+            currentTheme
+        });
 
         // Set initial theme
         this.setTheme(currentTheme);
 
+        // Theme switching function
+        const toggleTheme = () => {
+            const newTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            console.log('Switching theme from', document.documentElement.getAttribute('data-theme'), 'to', newTheme);
+            this.setTheme(newTheme);
+            this.storeTheme(newTheme);
+            this.trackThemeSwitch(newTheme);
+        };
+
+        // Desktop theme toggle in header
+        if (desktopThemeToggle) {
+            console.log('Setting up desktop theme toggle');
+            desktopThemeToggle.addEventListener('click', toggleTheme);
+        }
+
         // Mobile theme toggle in hamburger menu
         if (mobileThemeToggle) {
-            mobileThemeToggle.addEventListener('click', () => {
-                const newTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-                this.setTheme(newTheme);
-                this.storeTheme(newTheme);
-                this.trackThemeSwitch(newTheme);
+            console.log('Setting up mobile theme toggle');
+            mobileThemeToggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Mobile theme toggle clicked');
+                toggleTheme();
             });
         }
     }
 
     setTheme(theme) {
+        console.log('Setting theme to:', theme);
         document.documentElement.setAttribute('data-theme', theme);
 
-        // Update mobile theme button appearance
+        // Update both desktop and mobile theme button appearance
+        const desktopThemeToggle = document.getElementById('desktopThemeToggle');
         const mobileThemeToggle = document.getElementById('mobileThemeToggle');
-        if (mobileThemeToggle) {
-            mobileThemeToggle.setAttribute('aria-label', theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme');
+
+        const ariaLabel = theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme';
+
+        if (desktopThemeToggle) {
+            desktopThemeToggle.setAttribute('aria-label', ariaLabel);
         }
+
+        if (mobileThemeToggle) {
+            mobileThemeToggle.setAttribute('aria-label', ariaLabel);
+        }
+
+        console.log('Theme applied successfully:', theme);
     }
 
     getStoredTheme() {
