@@ -10,6 +10,7 @@ class CryptoAgregator {
                 'hero-cta': 'Começar Agora',
                 'nav-featured': 'Destaques',
                 'nav-cards': 'Cartões',
+                'nav-banks': 'Bancos Digitais',
                 'nav-security': 'Segurança',
                 'featured-title': 'Destaques',
                 'featured-subtitle': 'Plataforma em destaque da nossa comunidade',
@@ -18,6 +19,8 @@ class CryptoAgregator {
                 'exchanges-subtitle': 'Trading e conversão de criptomoedas',
                 'cards-title': 'Cartões Cripto',
                 'cards-subtitle': 'Gaste cripto no dia a dia com cartões',
+                'banks-title': 'Bancos Digitais',
+                'banks-subtitle': 'Bancos digitais com recursos crypto integrados',
                 'security-title': 'Segurança',
                 'security-subtitle': 'Proteja seus investimentos com segurança máxima',
                 'visit-site': 'Visitar Site',
@@ -32,6 +35,7 @@ class CryptoAgregator {
                 'hero-cta': 'Get Started',
                 'nav-featured': 'Featured',
                 'nav-cards': 'Cards',
+                'nav-banks': 'Digital Banks',
                 'nav-security': 'Security',
                 'featured-title': 'Featured',
                 'featured-subtitle': 'Featured platform in our community',
@@ -40,6 +44,8 @@ class CryptoAgregator {
                 'exchanges-subtitle': 'Trading and cryptocurrency conversion',
                 'cards-title': 'Crypto Cards',
                 'cards-subtitle': 'Spend crypto daily with cards',
+                'banks-title': 'Digital Banks',
+                'banks-subtitle': 'Digital banks with integrated crypto features',
                 'security-title': 'Security',
                 'security-subtitle': 'Protect your investments with maximum security',
                 'visit-site': 'Visit Site',
@@ -82,6 +88,36 @@ class CryptoAgregator {
                     en: 'Global decentralized P2P marketplace. Trade cryptocurrencies directly with other users with security and privacy.'
                 }
             },
+            'binance': {
+                name: 'Binance',
+                url: 'https://www.binance.com/activity/referral-entry/CPA?ref=CPA_0001DCF8M6',
+                logo: 'https://logo.clearbit.com/binance.com',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=binance.com&sz=64',
+                description: {
+                    pt: 'Maior exchange de criptomoedas do mundo por volume. Plataforma completa com trading spot, futuros, staking e DeFi.',
+                    en: 'World\'s largest cryptocurrency exchange by volume. Complete platform with spot trading, futures, staking and DeFi.'
+                }
+            },
+            'bybit': {
+                name: 'Bybit',
+                url: 'https://www.bybit.com/invite?ref=YNAGP8',
+                logo: 'https://logo.clearbit.com/bybit.com',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=bybit.com&sz=64',
+                description: {
+                    pt: 'Exchange líder em derivativos cripto. Trading avançado com alavancagem, contratos perpétuos e ferramentas profissionais.',
+                    en: 'Leading crypto derivatives exchange. Advanced trading with leverage, perpetual contracts and professional tools.'
+                }
+            },
+            'kraken': {
+                name: 'Kraken',
+                url: 'https://invite.kraken.com/JDNW/de6w7cmj',
+                logo: 'https://logo.clearbit.com/kraken.com',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=kraken.com&sz=64',
+                description: {
+                    pt: 'Exchange americana regulamentada com alta segurança. Trading profissional com suporte a moedas fiduciárias e staking.',
+                    en: 'Regulated US exchange with high security. Professional trading with fiat currency support and staking.'
+                }
+            },
             'mexc': {
                 name: 'MEXC',
                 url: 'https://promote.mexc.com/a/Q26ooE1o',
@@ -105,7 +141,7 @@ class CryptoAgregator {
             'kast': {
                 name: 'Kast Finance',
                 url: 'https://kastfinance.app.link/CLE47K9D',
-                logo: 'https://logo.clearbit.com/kastfinance.com',
+                logo: 'https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/erkxwhl1gd48xfhe2yld',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=kastfinance.com&sz=64',
                 description: {
                     pt: 'Cartão de débito cripto brasileiro. Gaste suas criptomoedas no dia a dia com conversão automática para reais.',
@@ -130,6 +166,26 @@ class CryptoAgregator {
                 description: {
                     pt: 'Protocolo DeFi líder para staking líquido de Ethereum. Maximize seus rendimentos ETH com segurança e transparência.',
                     en: 'Leading DeFi protocol for Ethereum liquid staking. Maximize your ETH yields with security and transparency.'
+                }
+            },
+            'revolut': {
+                name: 'Revolut',
+                url: 'https://revolut.com/referral/?referral-code=waldir3l75!SEP1-25-AR-MDL-ROI&geo-redirect',
+                logo: 'https://logo.clearbit.com/revolut.com',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=revolut.com&sz=64',
+                description: {
+                    pt: 'Banco digital global com recursos avançados de criptomoedas. Compre, venda e transfira mais de 50 criptomoedas diretamente no app.',
+                    en: 'Global digital bank with advanced cryptocurrency features. Buy, sell and transfer over 50 cryptocurrencies directly in the app.'
+                }
+            },
+            'xverse': {
+                name: 'Xverse Wallet',
+                url: 'https://www.xverse.app/?utm_campaign=dogdamassa&fbclid=PAZnRzaANI0IBleHRuA2FlbQIxMQABpxeUZWEqzLu82FgMlCTcA4tRAwBA-H4ilQnR2PCxs4r78yqbldkLOKz4SvmN_aem_R_LGjSLfZSg96jqS-fbWwA',
+                logo: 'https://xverse.app/favicon.ico',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=xverse.app&sz=64',
+                description: {
+                    pt: 'Carteira Bitcoin e Ordinals com autocustódia. Gerencie Bitcoin, Stacks e NFTs Ordinals com total controle sobre suas chaves privadas.',
+                    en: 'Self-custody Bitcoin and Ordinals wallet. Manage Bitcoin, Stacks and Ordinals NFTs with full control over your private keys.'
                 }
             },
             'ledger': {
