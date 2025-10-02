@@ -668,14 +668,14 @@ body {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    font-size: 2.5rem;
+    font-size: 3.25rem;
     font-weight: 700;
     margin-bottom: 1rem;
     color: var(--text-primary);
 }
 
 .section-icon {
-    font-size: 2rem;
+    font-size: 2.75rem;
 }
 
 .section-subtitle {
@@ -1152,7 +1152,7 @@ body {
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 2.6rem;
     }
 
     /* Enhanced mobile horizontal scrolling */
@@ -1298,13 +1298,13 @@ body {
     }
 
     .section-title {
-        font-size: 1.75rem;
+        font-size: 2.3rem;
         flex-direction: column;
         gap: 0.5rem;
     }
 
     .section-icon {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     /* More visible scroll indicators on small screens */
