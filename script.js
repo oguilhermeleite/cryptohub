@@ -26,6 +26,12 @@ class CryptoAgregator {
                 'hot-wallets-subtitle': 'Carteiras online conectadas à internet para uso diário',
                 'cold-wallets-title': 'Cold Wallets',
                 'cold-wallets-subtitle': 'Carteiras físicas offline para máxima segurança',
+                'partner-badge': 'Parceiro Oficial',
+                'bitget-hero-description': 'Carteira Web3 multi-chain líder com suporte completo a DeFi, NFTs e trading. Milhões de usuários confiam na Bitget para gerenciar seus ativos digitais com segurança.',
+                'bitget-cta': 'Começar Agora',
+                'feature-secure': '100% Seguro',
+                'feature-fast': 'Ultra Rápido',
+                'feature-multichain': 'Multi-Chain',
                 'visit-site': 'Visitar Site',
                 'back': 'Voltar',
                 'footer-desc': 'Sua porta de entrada completa para o mundo cripto',
@@ -54,6 +60,12 @@ class CryptoAgregator {
                 'hot-wallets-subtitle': 'Online wallets connected to the internet for daily use',
                 'cold-wallets-title': 'Cold Wallets',
                 'cold-wallets-subtitle': 'Offline physical wallets for maximum security',
+                'partner-badge': 'Official Partner',
+                'bitget-hero-description': 'Leading multi-chain Web3 wallet with complete support for DeFi, NFTs and trading. Millions of users trust Bitget to manage their digital assets securely.',
+                'bitget-cta': 'Get Started',
+                'feature-secure': '100% Secure',
+                'feature-fast': 'Ultra Fast',
+                'feature-multichain': 'Multi-Chain',
                 'visit-site': 'Visit Site',
                 'back': 'Back',
                 'footer-desc': 'Your complete gateway to the crypto world',
@@ -147,8 +159,8 @@ class CryptoAgregator {
             'kast': {
                 name: 'Kast Finance',
                 url: 'https://kastfinance.app.link/CLE47K9D',
-                logo: 'https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/erkxwhl1gd48xfhe2yld',
-                fallbackLogo: 'https://www.google.com/s2/favicons?domain=kastfinance.com&sz=64',
+                logo: 'https://logo.clearbit.com/usekast.com',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=usekast.com&sz=64',
                 description: {
                     pt: 'Cartão de débito cripto brasileiro. Gaste suas criptomoedas no dia a dia com conversão automática para reais.',
                     en: 'Brazilian crypto debit card. Spend your cryptocurrencies daily with automatic conversion to Brazilian reals.'
@@ -218,6 +230,7 @@ class CryptoAgregator {
         this.setupModalSystem();
         this.setupHorizontalScrolling();
         this.setupPlatformCards();
+        this.setupPremiumBanner();
         this.updateLanguage(this.currentLang);
         this.trackPageView();
     }
@@ -608,6 +621,48 @@ class CryptoAgregator {
                 }
             }
         });
+    }
+
+    // Premium Banner Setup
+    setupPremiumBanner() {
+        const premiumBanner = document.querySelector('.premium-hero-banner');
+        const premiumCTA = document.querySelector('.premium-cta-button');
+
+        if (premiumBanner) {
+            const platformId = premiumBanner.dataset.platform;
+
+            // Banner click - open modal
+            premiumBanner.addEventListener('click', (e) => {
+                // Don't trigger modal if CTA button was clicked
+                if (!e.target.closest('.premium-cta-button')) {
+                    e.preventDefault();
+                    this.showModal(platformId);
+                }
+            });
+
+            // Add keyboard accessibility
+            premiumBanner.setAttribute('tabindex', '0');
+            premiumBanner.setAttribute('role', 'button');
+            premiumBanner.setAttribute('aria-label', 'Open Bitget Wallet details');
+
+            premiumBanner.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.showModal(platformId);
+                }
+            });
+        }
+
+        if (premiumCTA) {
+            premiumCTA.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const url = premiumCTA.dataset.url;
+                if (url) {
+                    this.trackAffiliateClick('Bitget Wallet', url);
+                    window.open(url, '_blank', 'noopener,noreferrer');
+                }
+            });
+        }
     }
 
     // Horizontal Scrolling

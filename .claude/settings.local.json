@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(start \"C:\\Users\\Guilherme\\Trae.ai\\CryptoHub\")",
-      "Bash(curl -s -I \"https://www.binance.com/activity/referral-entry/CPA?ref=CPA_0001DCF8M6\")"
+      "Bash(curl -s -I \"https://www.binance.com/activity/referral-entry/CPA?ref=CPA_0001DCF8M6\")",
+      "Bash(curl -s -I \"https://logo.clearbit.com/kastfinance.com\")"
     ],
     "deny": [],
     "ask": []
