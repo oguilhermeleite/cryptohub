@@ -226,6 +226,8 @@ class CryptoAgregator {
         this.setupLanguageToggle();
         this.setupMobileMenu();
         this.setupSmoothScrolling();
+        this.setupScrollAnimations();
+        this.setupLazyLoading();
         this.setupAnimations();
         this.setupModalSystem();
         this.setupHorizontalScrolling();
@@ -804,33 +806,64 @@ class CryptoAgregator {
         });
     }
 
-    // Animations and Interactions
-    setupAnimations() {
-        // Intersection Observer for card animations
-        const cards = document.querySelectorAll('.platform-card');
+    // Scroll Animations - Fade in sections as they appear
+    setupScrollAnimations() {
+        const sections = document.querySelectorAll('.platform-section, .premium-hero-section');
 
-        const cardObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }, index * 100);
-                    cardObserver.unobserve(entry.target);
+                    entry.target.classList.add('visible');
+                    // Unobserve after animation to improve performance
+                    sectionObserver.unobserve(entry.target);
                 }
             });
         }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0.15,
+            rootMargin: '0px 0px -100px 0px'
         });
 
-        cards.forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'all 0.6s ease';
-            cardObserver.observe(card);
+        sections.forEach(section => {
+            sectionObserver.observe(section);
+        });
+    }
+
+    // Lazy Loading for Images
+    setupLazyLoading() {
+        const images = document.querySelectorAll('.platform-logo img, .premium-hero-logo img');
+
+        const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+
+                    // Set loading attribute for native lazy loading
+                    img.loading = 'lazy';
+
+                    // Add loaded class when image loads
+                    if (img.complete) {
+                        img.classList.add('loaded');
+                    } else {
+                        img.addEventListener('load', () => {
+                            img.classList.add('loaded');
+                        });
+                    }
+
+                    imageObserver.unobserve(img);
+                }
+            });
+        }, {
+            threshold: 0.01,
+            rootMargin: '50px'
         });
 
+        images.forEach(img => {
+            imageObserver.observe(img);
+        });
+    }
+
+    // Animations and Interactions
+    setupAnimations() {
         // Header scroll effect
         this.setupHeaderEffect();
 
@@ -841,8 +874,9 @@ class CryptoAgregator {
     setupHeaderEffect() {
         let lastScrollY = window.scrollY;
         const header = document.querySelector('.header');
+        let ticking = false;
 
-        window.addEventListener('scroll', () => {
+        const updateHeader = () => {
             const currentScrollY = window.scrollY;
 
             if (currentScrollY > 100) {
@@ -861,7 +895,15 @@ class CryptoAgregator {
             }
 
             lastScrollY = currentScrollY;
-        });
+            ticking = false;
+        };
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(updateHeader);
+                ticking = true;
+            }
+        }, { passive: true });
     }
 
     addLoadingAnimation() {
