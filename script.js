@@ -28,7 +28,7 @@ class CryptoAgregator {
                 'cold-wallets-subtitle': 'Carteiras físicas offline para máxima segurança',
                 'partner-badge': 'Parceiro Oficial',
                 'bitget-hero-description': 'Carteira Web3 multi-chain líder com suporte completo a DeFi, NFTs e trading. Milhões de usuários confiam na Bitget para gerenciar seus ativos digitais com segurança.',
-                'bitget-cta': 'Começar Agora',
+                'bitget-cta': 'Acessar Agora',
                 'feature-secure': '100% Seguro',
                 'feature-fast': 'Ultra Rápido',
                 'feature-multichain': 'Multi-Chain',
@@ -62,7 +62,7 @@ class CryptoAgregator {
                 'cold-wallets-subtitle': 'Offline physical wallets for maximum security',
                 'partner-badge': 'Official Partner',
                 'bitget-hero-description': 'Leading multi-chain Web3 wallet with complete support for DeFi, NFTs and trading. Millions of users trust Bitget to manage their digital assets securely.',
-                'bitget-cta': 'Get Started',
+                'bitget-cta': 'Access Now',
                 'feature-secure': '100% Secure',
                 'feature-fast': 'Ultra Fast',
                 'feature-multichain': 'Multi-Chain',
@@ -139,8 +139,8 @@ class CryptoAgregator {
             'mexc': {
                 name: 'MEXC',
                 url: 'https://promote.mexc.com/a/Q26ooE1o',
-                logo: 'https://logo.clearbit.com/mexc.com',
-                fallbackLogo: 'https://www.google.com/s2/favicons?domain=mexc.com&sz=64',
+                logo: 'https://www.google.com/s2/favicons?domain=mexc.com&sz=128',
+                fallbackLogo: 'https://logo.clearbit.com/mexc.com',
                 description: {
                     pt: 'Exchange global confiável com mais de 1500 criptomoedas. Trading avançado com taxas competitivas e alta liquidez.',
                     en: 'Trusted global exchange with over 1500 cryptocurrencies. Advanced trading with competitive fees and high liquidity.'
@@ -159,8 +159,8 @@ class CryptoAgregator {
             'kast': {
                 name: 'Kast Finance',
                 url: 'https://kastfinance.app.link/CLE47K9D',
-                logo: 'https://logo.clearbit.com/usekast.com',
-                fallbackLogo: 'https://www.google.com/s2/favicons?domain=usekast.com&sz=64',
+                logo: 'https://www.google.com/s2/favicons?domain=kast.xyz&sz=128',
+                fallbackLogo: 'https://logo.clearbit.com/usekast.com',
                 description: {
                     pt: 'Cartão de débito cripto brasileiro. Gaste suas criptomoedas no dia a dia com conversão automática para reais.',
                     en: 'Brazilian crypto debit card. Spend your cryptocurrencies daily with automatic conversion to Brazilian reals.'
