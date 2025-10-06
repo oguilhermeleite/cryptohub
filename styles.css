@@ -518,12 +518,13 @@ body {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
     background: radial-gradient(ellipse at top, rgba(247, 147, 26, 0.1) 0%, transparent 70%);
+    padding: 6rem 0 4rem;
 }
 
 .hero::before {
@@ -1351,6 +1352,11 @@ body {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+    .hero {
+        min-height: 50vh;
+        padding: 5rem 0 3rem;
+    }
+
     .hero .container {
         grid-template-columns: 1fr;
         gap: 3rem;
@@ -1494,6 +1500,11 @@ body {
         font-size: 0.85rem;
     }
 
+    .hero {
+        min-height: 45vh;
+        padding: 4rem 0 2.5rem;
+    }
+
     .hero-title {
         font-size: 2.5rem;
     }
@@ -1605,6 +1616,11 @@ body {
 }
 
 @media (max-width: 480px) {
+    .hero {
+        min-height: 40vh;
+        padding: 3rem 0 2rem;
+    }
+
     .hero-title {
         font-size: 2rem;
     }

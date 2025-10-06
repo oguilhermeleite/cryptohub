@@ -5,8 +5,8 @@ class CryptoAgregator {
         this.currentLang = this.getStoredLanguage() || 'pt';
         this.translations = {
             pt: {
-                'hero-title': 'Sua Porta de Entrada Completa para o Mundo Cripto',
-                'hero-subtitle': 'Encontre a melhor forma de comprar, vender e usar criptomoedas com segurança',
+                'hero-title': 'Sua porta de entrada completa para o Mundo Cripto',
+                'hero-subtitle': 'Encontre a melhor forma de comprar, vender e usar criptomoedas com segurança.',
                 'hero-cta': 'Começar Agora',
                 'nav-featured': 'Destaques',
                 'nav-cards': 'Cartões',
@@ -19,7 +19,7 @@ class CryptoAgregator {
                 'p2p-subtitle': 'Compra e venda direto entre pessoas',
                 'exchanges-subtitle': 'Trading e conversão de criptomoedas',
                 'cards-title': 'Cartões Cripto',
-                'cards-subtitle': 'Gaste cripto no dia a dia com cartões',
+                'cards-subtitle': 'Use cripto no dia a dia com cartões',
                 'banks-title': 'Bancos Digitais',
                 'banks-subtitle': 'Bancos digitais com recursos crypto integrados',
                 'hot-wallets-title': 'Hot Wallets',
@@ -39,8 +39,8 @@ class CryptoAgregator {
                 'footer-rights': 'Todos os direitos reservados.'
             },
             en: {
-                'hero-title': 'Your Complete Gateway to the Crypto World',
-                'hero-subtitle': 'Find the best way to buy, sell and use cryptocurrencies safely',
+                'hero-title': 'Your complete gateway to the Crypto World',
+                'hero-subtitle': 'Find the best way to buy, sell and use cryptocurrencies safely.',
                 'hero-cta': 'Get Started',
                 'nav-featured': 'Featured',
                 'nav-cards': 'Cards',
@@ -53,7 +53,7 @@ class CryptoAgregator {
                 'p2p-subtitle': 'Direct buying and selling between people',
                 'exchanges-subtitle': 'Trading and cryptocurrency conversion',
                 'cards-title': 'Crypto Cards',
-                'cards-subtitle': 'Spend crypto daily with cards',
+                'cards-subtitle': 'Use crypto daily with cards',
                 'banks-title': 'Digital Banks',
                 'banks-subtitle': 'Digital banks with integrated crypto features',
                 'hot-wallets-title': 'Hot Wallets',
