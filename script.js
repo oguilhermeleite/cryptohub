@@ -106,6 +106,16 @@ class CryptoAgregator {
                     en: 'Global decentralized P2P marketplace. Trade cryptocurrencies directly with other users with security and privacy.'
                 }
             },
+            'camilap2p': {
+                name: 'Camila P2P',
+                url: 'https://camilap2p.com.br',
+                logo: 'https://logo.clearbit.com/camilap2p.com.br',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=camilap2p.com.br&sz=64',
+                description: {
+                    pt: 'Plataforma P2P brasileira para negociar criptomoedas de forma segura e rápida. Use o cupom MQM para desconto.',
+                    en: 'Brazilian P2P platform to trade cryptocurrencies safely and quickly. Use coupon MQM for discount.'
+                }
+            },
             'binance': {
                 name: 'Binance',
                 url: 'https://www.binance.com/activity/referral-entry/CPA?ref=CPA_0001DCF8M6',
