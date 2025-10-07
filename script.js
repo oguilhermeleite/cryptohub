@@ -122,8 +122,8 @@ class CryptoAgregator {
                 logo: 'https://logo.clearbit.com/binance.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=binance.com&sz=64',
                 description: {
-                    pt: 'Maior exchange de criptomoedas do mundo por volume. Plataforma completa com trading spot, futuros, staking e DeFi.',
-                    en: 'World\'s largest cryptocurrency exchange by volume. Complete platform with spot trading, futures, staking and DeFi.'
+                    pt: 'A Binance é a maior exchange de criptomoedas do mundo, atendendo mais de 270 milhões de usuários em mais de 180 países. Com taxas baixas e mais de 500 criptomoedas disponíveis.',
+                    en: 'Binance is the world\'s largest cryptocurrency exchange, serving 270+ million users in 180+ countries. Low fees and 500+ cryptocurrencies available.'
                 }
             },
             'bybit': {
@@ -132,8 +132,8 @@ class CryptoAgregator {
                 logo: 'https://logo.clearbit.com/bybit.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=bybit.com&sz=64',
                 description: {
-                    pt: 'Exchange líder em derivativos cripto. Trading avançado com alavancagem, contratos perpétuos e ferramentas profissionais.',
-                    en: 'Leading crypto derivatives exchange. Advanced trading with leverage, perpetual contracts and professional tools.'
+                    pt: 'Bybit é a segunda maior exchange de criptomoedas do mundo por volume de negociação, servindo mais de 60 milhões de usuários. Fundada em 2018, oferece mais de 650 criptomoedas com alta segurança e interface intuitiva.',
+                    en: 'Bybit is the world\'s second-largest cryptocurrency exchange by trading volume, serving over 60 million users. Founded in 2018, it offers 650+ cryptocurrencies with high security and intuitive interface.'
                 }
             },
             'kraken': {
@@ -142,8 +142,8 @@ class CryptoAgregator {
                 logo: 'https://logo.clearbit.com/kraken.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=kraken.com&sz=64',
                 description: {
-                    pt: 'Exchange americana regulamentada com alta segurança. Trading profissional com suporte a moedas fiduciárias e staking.',
-                    en: 'Regulated US exchange with high security. Professional trading with fiat currency support and staking.'
+                    pt: 'Kraken é uma das exchanges mais antigas e seguras do mundo, fundada em 2011. Atende mais de 10 milhões de usuários em 190+ países com mais de 200 criptomoedas e segurança de nível institucional.',
+                    en: 'Kraken is one of the world\'s oldest and most secure exchanges, founded in 2011. It serves 10+ million users in 190+ countries with 200+ cryptocurrencies and institutional-grade security.'
                 }
             },
             'mexc': {
@@ -152,8 +152,8 @@ class CryptoAgregator {
                 logo: 'https://www.google.com/s2/favicons?domain=mexc.com&sz=128',
                 fallbackLogo: 'https://logo.clearbit.com/mexc.com',
                 description: {
-                    pt: 'Exchange global confiável com mais de 1500 criptomoedas. Trading avançado com taxas competitivas e alta liquidez.',
-                    en: 'Trusted global exchange with over 1500 cryptocurrencies. Advanced trading with competitive fees and high liquidity.'
+                    pt: 'MEXC é uma exchange global estabelecida em 2018, servindo mais de 40 milhões de usuários em 170+ países. Conhecida por suas taxas extremamente baixas (0% maker fee) e mais de 3.000 criptomoedas disponíveis.',
+                    en: 'MEXC is a global exchange established in 2018, serving 40+ million users in 170+ countries. Known for its extremely low fees (0% maker fee) and 3,000+ cryptocurrencies available.'
                 }
             },
             'bitget': {
