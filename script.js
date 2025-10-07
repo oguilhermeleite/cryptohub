@@ -82,50 +82,8 @@ class CryptoAgregator {
                 logo: 'https://logo.clearbit.com/bitget.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=bitget.com&sz=64',
                 description: {
-                    pt: `💼 O que é:
-Carteira Web3 multi-chain líder mundial com suporte completo a DeFi, NFTs e trading. Milhões de usuários confiam na Bitget para gerenciar seus ativos digitais com segurança máxima.
-
-👥 Para quem é:
-Usuários que querem uma carteira completa para interagir com DeFi, colecionar NFTs e fazer trading diretamente do app.
-
-💎 O que oferece:
-- Suporte a 100+ blockchains diferentes
-- Trading integrado com DEX e CEX
-- Gerenciamento de NFTs e colecionáveis
-- Staking e yield farming simplificado
-- Backup em nuvem criptografado
-
-🎯 Diferencial:
-Interface intuitiva que une simplicidade para iniciantes com recursos avançados para usuários experientes. Tudo em um só lugar.
-
-⚠️ Bom saber:
-- Você controla suas chaves privadas (self-custody)
-- Sempre faça backup da seed phrase
-- Disponível para iOS, Android e extensão de navegador
-
-💰 Ideal para: Quem busca uma carteira moderna e completa para explorar todo o ecossistema Web3 com segurança.`,
-                    en: `💼 What it is:
-World-leading multi-chain Web3 wallet with complete support for DeFi, NFTs and trading. Millions of users trust Bitget to manage their digital assets with maximum security.
-
-👥 Who it's for:
-Users who want a complete wallet to interact with DeFi, collect NFTs and trade directly from the app.
-
-💎 What it offers:
-- Support for 100+ different blockchains
-- Integrated trading with DEX and CEX
-- NFT and collectibles management
-- Simplified staking and yield farming
-- Encrypted cloud backup
-
-🎯 Differentiator:
-Intuitive interface that combines simplicity for beginners with advanced features for experienced users. Everything in one place.
-
-⚠️ Good to know:
-- You control your private keys (self-custody)
-- Always backup your seed phrase
-- Available for iOS, Android and browser extension
-
-💰 Ideal for: Those seeking a modern and complete wallet to explore the entire Web3 ecosystem with security.`
+                    pt: 'Carteira Web3 multi-chain líder com suporte completo a DeFi, NFTs e trading. Interface amigável para iniciantes e usuários avançados.',
+                    en: 'Leading multi-chain Web3 wallet with complete DeFi, NFTs and trading support. User-friendly interface for beginners and advanced users.'
                 }
             },
             'comprecripto': {
@@ -134,50 +92,8 @@ Intuitive interface that combines simplicity for beginners with advanced feature
                 logo: 'https://logo.clearbit.com/comprecripto.io',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=comprecripto.io&sz=64',
                 description: {
-                    pt: `🤝 O que é:
-Plataforma brasileira P2P especializada em compra e venda de Bitcoin e criptomoedas. Conecta você diretamente com vendedores verificados para transações rápidas e seguras.
-
-👥 Para quem é:
-Brasileiros que querem comprar Bitcoin e outras criptos de forma simples, usando PIX, TED ou DOC.
-
-💎 O que oferece:
-- Compra instantânea via PIX
-- Vendedores verificados e avaliados
-- Suporte ao cliente em português
-- Proteção em todas as transações
-- Processo 100% online e desburocratizado
-
-🎯 Diferencial:
-Foco total em simplicidade para iniciantes. Interface limpa e processo de compra em poucos cliques, ideal para quem está começando.
-
-⚠️ Bom saber:
-- Use o cupom MQM para desconto nas taxas
-- Não precisa ter carteira própria para começar
-- Transações protegidas por sistema de garantia
-
-💰 Ideal para: Iniciantes que querem comprar sua primeira cripto de forma simples e segura, com suporte brasileiro.`,
-                    en: `🤝 What it is:
-Brazilian P2P platform specialized in buying and selling Bitcoin and cryptocurrencies. Connects you directly with verified sellers for fast and secure transactions.
-
-👥 Who it's for:
-Brazilians who want to buy Bitcoin and other cryptos simply, using PIX, TED or DOC.
-
-💎 What it offers:
-- Instant purchase via PIX
-- Verified and rated sellers
-- Customer support in Portuguese
-- Protection on all transactions
-- 100% online and unbureaucratic process
-
-🎯 Differentiator:
-Total focus on simplicity for beginners. Clean interface and purchase process in just a few clicks, ideal for those starting out.
-
-⚠️ Good to know:
-- Use coupon MQM for discount on fees
-- No need to have your own wallet to start
-- Transactions protected by guarantee system
-
-💰 Ideal for: Beginners who want to buy their first crypto simply and safely, with Brazilian support.`
+                    pt: 'Plataforma brasileira P2P para comprar Bitcoin e outras criptomoedas com PIX, TED e DOC de forma rápida e segura. Use o cupom MQM para desconto.',
+                    en: 'Brazilian P2P platform to buy Bitcoin and other cryptocurrencies with PIX, TED and DOC quickly and safely. Use coupon MQM for discount.'
                 }
             },
             'p2pme': {
@@ -186,50 +102,8 @@ Total focus on simplicity for beginners. Clean interface and purchase process in
                 logo: 'https://logo.clearbit.com/p2p.me',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=p2p.me&sz=64',
                 description: {
-                    pt: `🤝 O que é:
-Marketplace P2P global descentralizado que conecta compradores e vendedores de criptomoedas ao redor do mundo. Negocie direto com outras pessoas sem intermediários.
-
-👥 Para quem é:
-Usuários que valorizam privacidade, descentralização e querem negociar cripto diretamente com outros usuários globalmente.
-
-💎 O que oferece:
-- Trading P2P totalmente descentralizado
-- Múltiplas criptomoedas suportadas
-- Sem custódia de fundos pela plataforma
-- Sistema de reputação transparente
-- Várias opções de pagamento aceitas
-
-🎯 Diferencial:
-Plataforma verdadeiramente descentralizada onde você mantém controle total dos seus fundos. Sem KYC obrigatório para negociações básicas.
-
-⚠️ Bom saber:
-- Você é responsável pela segurança das suas chaves
-- Verifique sempre a reputação da contraparte
-- Disponível globalmente com suporte multilíngue
-
-💰 Ideal para: Quem busca máxima privacidade e descentralização nas negociações P2P de criptomoedas.`,
-                    en: `🤝 What it is:
-Global decentralized P2P marketplace that connects cryptocurrency buyers and sellers worldwide. Trade directly with other people without intermediaries.
-
-👥 Who it's for:
-Users who value privacy, decentralization and want to trade crypto directly with other users globally.
-
-💎 What it offers:
-- Fully decentralized P2P trading
-- Multiple cryptocurrencies supported
-- No custody of funds by the platform
-- Transparent reputation system
-- Various payment options accepted
-
-🎯 Differentiator:
-Truly decentralized platform where you maintain full control of your funds. No mandatory KYC for basic trading.
-
-⚠️ Good to know:
-- You are responsible for securing your keys
-- Always check the counterparty's reputation
-- Available globally with multilingual support
-
-💰 Ideal for: Those seeking maximum privacy and decentralization in P2P cryptocurrency trading.`
+                    pt: 'Marketplace P2P global descentralizado. Negocie criptomoedas diretamente com outros usuários com segurança e privacidade.',
+                    en: 'Global decentralized P2P marketplace. Trade cryptocurrencies directly with other users with security and privacy.'
                 }
             },
             'camilap2p': {
@@ -238,50 +112,8 @@ Truly decentralized platform where you maintain full control of your funds. No m
                 logo: 'https://www.google.com/s2/favicons?domain=camilap2p.com.br&sz=128',
                 fallbackLogo: 'https://logo.clearbit.com/camilap2p.com.br',
                 description: {
-                    pt: `🤝 O que é:
-Plataforma brasileira especializada em negociação P2P de Bitcoin e outras criptomoedas. Conecta compradores e vendedores diretamente com segurança e agilidade.
-
-👥 Para quem é:
-Brasileiros que querem comprar ou vender cripto com PIX, TED ou transferência, direto com outras pessoas.
-
-💎 O que oferece:
-- Negociação direta via PIX instantâneo
-- Suporte personalizado em português
-- Sistema de reputação de vendedores
-- Proteção contra golpes e disputas
-- Taxas competitivas do mercado brasileiro
-
-🎯 Diferencial:
-Atendimento humanizado e foco total no mercado brasileiro. Você negocia com pessoas reais e tem suporte quando precisar.
-
-⚠️ Bom saber:
-- Use o cupom MQM para ganhar desconto nas taxas
-- Verifique sempre a reputação do vendedor
-- Transações são protegidas por sistema de custódia
-
-💰 Ideal para: Quem prefere negociar direto com pessoas, com atendimento brasileiro e pagamento via PIX.`,
-                    en: `🤝 What it is:
-Brazilian platform specialized in P2P trading of Bitcoin and other cryptocurrencies. Connects buyers and sellers directly with security and agility.
-
-👥 Who it's for:
-Brazilians who want to buy or sell crypto with PIX, TED or transfer, directly with other people.
-
-💎 What it offers:
-- Direct trading via instant PIX
-- Personalized support in Portuguese
-- Seller reputation system
-- Protection against scams and disputes
-- Competitive fees in the Brazilian market
-
-🎯 Differentiator:
-Humanized service and total focus on the Brazilian market. You trade with real people and have support when you need it.
-
-⚠️ Good to know:
-- Use coupon MQM to get discount on fees
-- Always check seller reputation
-- Transactions protected by custody system
-
-💰 Ideal for: Those who prefer to trade directly with people, with Brazilian support and payment via PIX.`
+                    pt: 'Plataforma P2P brasileira para negociar criptomoedas de forma segura e rápida. Use o cupom MQM para desconto.',
+                    en: 'Brazilian P2P platform to trade cryptocurrencies safely and quickly. Use coupon MQM for discount.'
                 }
             },
             'binance': {
@@ -290,50 +122,8 @@ Humanized service and total focus on the Brazilian market. You trade with real p
                 logo: 'https://logo.clearbit.com/binance.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=binance.com&sz=64',
                 description: {
-                    pt: `🏆 O que é:
-Maior exchange de criptomoedas do mundo com mais de 150 milhões de usuários. Plataforma completa para comprar, vender, investir e ganhar com criptomoedas.
-
-👥 Para quem é:
-Desde iniciantes querendo comprar sua primeira cripto até traders profissionais que operam futuros e margin.
-
-💎 O que oferece:
-- Mais de 350 criptomoedas disponíveis
-- Trading spot, futuros e margin
-- Staking com rendimentos atrativos
-- P2P integrado para compra com PIX
-- Cartão Visa para gastar cripto no dia a dia
-
-🎯 Diferencial:
-Maior liquidez do mercado e variedade incomparável de produtos. Da compra simples com PIX até trading profissional avançado.
-
-⚠️ Bom saber:
-- Requer verificação de identidade (KYC)
-- Taxas competitivas a partir de 0.1%
-- Suporte em português 24/7
-
-💰 Ideal para: Quem quer a plataforma mais completa do mercado com todas as opções de investimento e trading em cripto.`,
-                    en: `🏆 What it is:
-World's largest cryptocurrency exchange with over 150 million users. Complete platform to buy, sell, invest and earn with cryptocurrencies.
-
-👥 Who it's for:
-From beginners wanting to buy their first crypto to professional traders operating futures and margin.
-
-💎 What it offers:
-- Over 350 cryptocurrencies available
-- Spot, futures and margin trading
-- Staking with attractive yields
-- Integrated P2P for PIX purchases
-- Visa card to spend crypto daily
-
-🎯 Differentiator:
-Highest market liquidity and unmatched variety of products. From simple PIX purchase to advanced professional trading.
-
-⚠️ Good to know:
-- Requires identity verification (KYC)
-- Competitive fees starting at 0.1%
-- 24/7 Portuguese support
-
-💰 Ideal for: Those who want the most complete platform on the market with all crypto investment and trading options.`
+                    pt: 'Maior exchange de criptomoedas do mundo por volume. Plataforma completa com trading spot, futuros, staking e DeFi.',
+                    en: 'World\'s largest cryptocurrency exchange by volume. Complete platform with spot trading, futures, staking and DeFi.'
                 }
             },
             'bybit': {
@@ -342,50 +132,8 @@ Highest market liquidity and unmatched variety of products. From simple PIX purc
                 logo: 'https://logo.clearbit.com/bybit.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=bybit.com&sz=64',
                 description: {
-                    pt: `🏆 O que é:
-Exchange global especializada em trading de derivativos e futuros de criptomoedas. Uma das maiores plataformas do mundo com milhões de traders ativos.
-
-👥 Para quem é:
-Traders intermediários a avançados que querem operar futuros, perpétuos e usar alavancagem em suas operações.
-
-💎 O que oferece:
-- Contratos futuros com alavancagem até 100x
-- Trading spot de criptomoedas principais
-- Copy trading para seguir traders experientes
-- Ferramentas avançadas de análise técnica
-- Programa de recompensas e cashback
-
-🎯 Diferencial:
-Líder em derivativos cripto com engine de trading ultra-rápida e sem delays. Interface profissional com ferramentas de análise de primeira linha.
-
-⚠️ Bom saber:
-- Trading com alavancagem envolve alto risco
-- Necessário completar verificação KYC
-- Taxas competitivas a partir de 0.1%
-
-💰 Ideal para: Traders que querem operar futuros e derivativos em uma plataforma profissional e confiável.`,
-                    en: `🏆 What it is:
-Global exchange specialized in cryptocurrency derivatives and futures trading. One of the world's largest platforms with millions of active traders.
-
-👥 Who it's for:
-Intermediate to advanced traders who want to trade futures, perpetuals and use leverage in their operations.
-
-💎 What it offers:
-- Futures contracts with leverage up to 100x
-- Spot trading of major cryptocurrencies
-- Copy trading to follow experienced traders
-- Advanced technical analysis tools
-- Rewards and cashback program
-
-🎯 Differentiator:
-Leader in crypto derivatives with ultra-fast trading engine and no delays. Professional interface with top-tier analysis tools.
-
-⚠️ Good to know:
-- Leveraged trading involves high risk
-- KYC verification required
-- Competitive fees starting at 0.1%
-
-💰 Ideal for: Traders who want to operate futures and derivatives on a professional and reliable platform.`
+                    pt: 'Exchange líder em derivativos cripto. Trading avançado com alavancagem, contratos perpétuos e ferramentas profissionais.',
+                    en: 'Leading crypto derivatives exchange. Advanced trading with leverage, perpetual contracts and professional tools.'
                 }
             },
             'kraken': {
@@ -394,50 +142,8 @@ Leader in crypto derivatives with ultra-fast trading engine and no delays. Profe
                 logo: 'https://logo.clearbit.com/kraken.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=kraken.com&sz=64',
                 description: {
-                    pt: `🏦 O que é:
-Exchange americana fundada em 2011, uma das mais antigas e confiáveis do mercado. Altamente regulamentada e reconhecida por sua segurança e transparência.
-
-👥 Para quem é:
-Investidores que valorizam segurança máxima, regulamentação e querem uma plataforma confiável para holdings de longo prazo.
-
-💎 O que oferece:
-- Mais de 200 criptomoedas listadas
-- Trading spot, margin e futuros
-- Staking com rendimentos competitivos
-- Depósitos em moedas fiduciárias (USD, EUR)
-- Segurança bancária com cold storage
-
-🎯 Diferencial:
-Exchange americana totalmente regulamentada com histórico impecável de segurança. Nunca sofreu hack em mais de 10 anos de operação.
-
-⚠️ Bom saber:
-- Requer verificação de identidade completa
-- Interface pode parecer complexa para iniciantes
-- Suporte multi-idioma disponível
-
-💰 Ideal para: Investidores sérios que querem máxima segurança e regulamentação para proteger seus investimentos cripto.`,
-                    en: `🏦 What it is:
-American exchange founded in 2011, one of the oldest and most trusted in the market. Highly regulated and recognized for its security and transparency.
-
-👥 Who it's for:
-Investors who value maximum security, regulation and want a reliable platform for long-term holdings.
-
-💎 What it offers:
-- Over 200 cryptocurrencies listed
-- Spot, margin and futures trading
-- Staking with competitive returns
-- Fiat currency deposits (USD, EUR)
-- Bank-grade security with cold storage
-
-🎯 Differentiator:
-Fully regulated American exchange with impeccable security track record. Never been hacked in over 10 years of operation.
-
-⚠️ Good to know:
-- Requires complete identity verification
-- Interface may seem complex for beginners
-- Multi-language support available
-
-💰 Ideal for: Serious investors who want maximum security and regulation to protect their crypto investments.`
+                    pt: 'Exchange americana regulamentada com alta segurança. Trading profissional com suporte a moedas fiduciárias e staking.',
+                    en: 'Regulated US exchange with high security. Professional trading with fiat currency support and staking.'
                 }
             },
             'mexc': {
@@ -446,50 +152,8 @@ Fully regulated American exchange with impeccable security track record. Never b
                 logo: 'https://www.google.com/s2/favicons?domain=mexc.com&sz=128',
                 fallbackLogo: 'https://logo.clearbit.com/mexc.com',
                 description: {
-                    pt: `🏆 O que é:
-Exchange global com foco em listagem rápida de novos projetos. Plataforma com mais de 1.500 criptomoedas e tokens, incluindo as mais recentes do mercado.
-
-👥 Para quem é:
-Traders que buscam acesso antecipado a novos tokens e projetos emergentes antes de chegarem nas grandes exchanges.
-
-💎 O que oferece:
-- Mais de 1.500 criptomoedas listadas
-- Lançamentos e IEOs de novos projetos
-- Trading spot, margin e futuros
-- Programa de Kickstarter para novas moedas
-- Alta liquidez e taxas competitivas
-
-🎯 Diferencial:
-Lista novos tokens muito mais rápido que outras exchanges. Perfeito para quem quer entrar cedo em projetos promissores.
-
-⚠️ Bom saber:
-- Novos tokens têm maior volatilidade e risco
-- Verificação KYC necessária para saques
-- App disponível para iOS e Android
-
-💰 Ideal para: Traders que querem acesso antecipado a novos projetos e maior variedade de criptomoedas disponíveis.`,
-                    en: `🏆 What it is:
-Global exchange focused on fast listing of new projects. Platform with over 1,500 cryptocurrencies and tokens, including the latest market launches.
-
-👥 Who it's for:
-Traders seeking early access to new tokens and emerging projects before they reach major exchanges.
-
-💎 What it offers:
-- Over 1,500 cryptocurrencies listed
-- New project launches and IEOs
-- Spot, margin and futures trading
-- Kickstarter program for new coins
-- High liquidity and competitive fees
-
-🎯 Differentiator:
-Lists new tokens much faster than other exchanges. Perfect for those who want to get in early on promising projects.
-
-⚠️ Good to know:
-- New tokens have higher volatility and risk
-- KYC verification required for withdrawals
-- App available for iOS and Android
-
-💰 Ideal for: Traders who want early access to new projects and greater variety of available cryptocurrencies.`
+                    pt: 'Exchange global confiável com mais de 1500 criptomoedas. Trading avançado com taxas competitivas e alta liquidez.',
+                    en: 'Trusted global exchange with over 1500 cryptocurrencies. Advanced trading with competitive fees and high liquidity.'
                 }
             },
             'bitget': {
@@ -508,50 +172,8 @@ Lists new tokens much faster than other exchanges. Perfect for those who want to
                 logo: 'https://www.google.com/s2/favicons?domain=kast.xyz&sz=128',
                 fallbackLogo: 'https://logo.clearbit.com/usekast.com',
                 description: {
-                    pt: `💳 O que é:
-Cartão de débito cripto brasileiro que permite gastar suas criptomoedas no dia a dia. Converta automaticamente crypto para reais e use em qualquer lugar.
-
-👥 Para quem é:
-Brasileiros que querem usar suas criptomoedas para compras do dia a dia sem precisar vender manualmente.
-
-💎 O que oferece:
-- Cartão de débito Mastercard internacional
-- Conversão automática crypto para BRL
-- Aceito em milhões de estabelecimentos
-- Cashback em criptomoedas
-- App completo para gestão dos gastos
-
-🎯 Diferencial:
-Solução 100% brasileira e regulamentada. Gaste crypto tão fácil quanto usar um cartão de débito normal, com suporte local.
-
-⚠️ Bom saber:
-- Necessário completar verificação KYC
-- Taxas de conversão se aplicam
-- Suporte em português disponível
-
-💰 Ideal para: Quem quer usar crypto no dia a dia para compras e pagamentos com a praticidade de um cartão.`,
-                    en: `💳 What it is:
-Brazilian crypto debit card that allows you to spend your cryptocurrencies daily. Automatically convert crypto to reais and use anywhere.
-
-👥 Who it's for:
-Brazilians who want to use their cryptocurrencies for daily purchases without having to manually sell.
-
-💎 What it offers:
-- International Mastercard debit card
-- Automatic crypto to BRL conversion
-- Accepted at millions of establishments
-- Cryptocurrency cashback
-- Complete app for expense management
-
-🎯 Differentiator:
-100% Brazilian and regulated solution. Spend crypto as easily as using a regular debit card, with local support.
-
-⚠️ Good to know:
-- KYC verification required
-- Conversion fees apply
-- Portuguese support available
-
-💰 Ideal for: Those who want to use crypto daily for purchases and payments with the convenience of a card.`
+                    pt: 'Cartão de débito cripto brasileiro. Gaste suas criptomoedas no dia a dia com conversão automática para reais.',
+                    en: 'Brazilian crypto debit card. Spend your cryptocurrencies daily with automatic conversion to Brazilian reals.'
                 }
             },
             'offramp': {
@@ -560,50 +182,8 @@ Brazilians who want to use their cryptocurrencies for daily purchases without ha
                 logo: 'https://logo.clearbit.com/offramp.xyz',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=offramp.xyz&sz=64',
                 description: {
-                    pt: `💳 O que é:
-Plataforma global para converter e gastar criptomoedas no mundo real. Solução completa que transforma crypto em dinheiro disponível para uso imediato.
-
-👥 Para quem é:
-Usuários de crypto que querem facilidade para gastar seus ativos digitais em compras do dia a dia, viagens e pagamentos.
-
-💎 O que oferece:
-- Conversão rápida crypto para moeda local
-- Cartão virtual e físico disponível
-- Aceito globalmente em milhões de locais
-- Sem taxas de manutenção mensal
-- Integração com principais blockchains
-
-🎯 Diferencial:
-Foco em experiência de usuário simplificada. Converta e gaste crypto em poucos cliques, sem complicação.
-
-⚠️ Bom saber:
-- Disponível em diversos países
-- Taxas de conversão transparentes
-- App intuitivo para iOS e Android
-
-💰 Ideal para: Nômades digitais e usuários crypto que querem liberdade para gastar seus ativos em qualquer lugar do mundo.`,
-                    en: `💳 What it is:
-Global platform to convert and spend cryptocurrencies in the real world. Complete solution that transforms crypto into money available for immediate use.
-
-👥 Who it's for:
-Crypto users who want ease in spending their digital assets on daily purchases, travel and payments.
-
-💎 What it offers:
-- Fast crypto to local currency conversion
-- Virtual and physical card available
-- Globally accepted at millions of locations
-- No monthly maintenance fees
-- Integration with major blockchains
-
-🎯 Differentiator:
-Focus on simplified user experience. Convert and spend crypto in a few clicks, without complication.
-
-⚠️ Good to know:
-- Available in several countries
-- Transparent conversion fees
-- Intuitive app for iOS and Android
-
-💰 Ideal for: Digital nomads and crypto users who want freedom to spend their assets anywhere in the world.`
+                    pt: 'Solução completa para gastos cripto. Converta facilmente suas criptomoedas para moeda local e gaste mundialmente.',
+                    en: 'Complete crypto spending solution. Easily convert your cryptocurrencies to local currency and spend worldwide.'
                 }
             },
             'etherfi': {
@@ -612,50 +192,8 @@ Focus on simplified user experience. Convert and spend crypto in a few clicks, w
                 logo: 'https://logo.clearbit.com/ether.fi',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=ether.fi&sz=64',
                 description: {
-                    pt: `💳 O que é:
-Protocolo DeFi focado em staking líquido de Ethereum e cartão cripto integrado. Ganhe rendimentos com ETH enquanto mantém liquidez e acesso aos seus fundos.
-
-👥 Para quem é:
-Holders de Ethereum que querem ganhar recompensas de staking sem perder acesso aos seus ETH, com bônus de cartão cripto.
-
-💎 O que oferece:
-- Staking líquido de Ethereum (eETH)
-- Cartão de débito cripto integrado
-- Rendimentos competitivos em ETH
-- Tokens líquidos negociáveis em DeFi
-- Protocolo descentralizado e seguro
-
-🎯 Diferencial:
-Combine staking de ETH com gastos no mundo real. Ganhe rendimentos enquanto tem um cartão para usar suas cryptos.
-
-⚠️ Bom saber:
-- Requer conhecimento básico de DeFi
-- Smart contracts auditados por empresas líderes
-- Disponível via aplicativo e extensão de navegador
-
-💰 Ideal para: Holders de Ethereum que querem maximizar rendimentos e ter flexibilidade de gastar crypto quando precisar.`,
-                    en: `💳 What it is:
-DeFi protocol focused on Ethereum liquid staking and integrated crypto card. Earn yields with ETH while maintaining liquidity and access to your funds.
-
-👥 Who it's for:
-Ethereum holders who want to earn staking rewards without losing access to their ETH, with crypto card bonus.
-
-💎 What it offers:
-- Ethereum liquid staking (eETH)
-- Integrated crypto debit card
-- Competitive ETH yields
-- Tradeable liquid tokens in DeFi
-- Decentralized and secure protocol
-
-🎯 Differentiator:
-Combine ETH staking with real-world spending. Earn yields while having a card to use your cryptos.
-
-⚠️ Good to know:
-- Requires basic DeFi knowledge
-- Smart contracts audited by leading firms
-- Available via app and browser extension
-
-💰 Ideal for: Ethereum holders who want to maximize yields and have flexibility to spend crypto when needed.`
+                    pt: 'Protocolo DeFi líder para staking líquido de Ethereum. Maximize seus rendimentos ETH com segurança e transparência.',
+                    en: 'Leading DeFi protocol for Ethereum liquid staking. Maximize your ETH yields with security and transparency.'
                 }
             },
             'revolut': {
@@ -664,50 +202,8 @@ Combine ETH staking with real-world spending. Earn yields while having a card to
                 logo: 'https://logo.clearbit.com/revolut.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=revolut.com&sz=64',
                 description: {
-                    pt: `🏦 O que é:
-Banco digital global com mais de 30 milhões de clientes que integra serviços bancários tradicionais com criptomoedas. Tudo em um único app moderno.
-
-👥 Para quem é:
-Pessoas que querem um banco completo e moderno que oferece tanto serviços tradicionais quanto acesso fácil a criptomoedas.
-
-💎 O que oferece:
-- Compra e venda de 50+ criptomoedas
-- Conta bancária internacional multimoeda
-- Cartão de débito e virtual
-- Investimentos em ações e commodities
-- Transferências internacionais baratas
-
-🎯 Diferencial:
-Banco digital completo que une mundo tradicional e cripto em um só lugar. Interface moderna e intuitiva para gerenciar tudo.
-
-⚠️ Bom saber:
-- Disponível em diversos países (verificar disponibilidade)
-- Planos gratuito e premium disponíveis
-- Crypto não pode ser enviada para carteiras externas
-
-💰 Ideal para: Quem quer uma solução all-in-one que combine banco digital moderno com acesso simples a criptomoedas.`,
-                    en: `🏦 What it is:
-Global digital bank with over 30 million customers that integrates traditional banking services with cryptocurrencies. Everything in a single modern app.
-
-👥 Who it's for:
-People who want a complete and modern bank that offers both traditional services and easy access to cryptocurrencies.
-
-💎 What it offers:
-- Buy and sell 50+ cryptocurrencies
-- International multi-currency bank account
-- Debit and virtual card
-- Stock and commodity investments
-- Cheap international transfers
-
-🎯 Differentiator:
-Complete digital bank that unites traditional and crypto worlds in one place. Modern and intuitive interface to manage everything.
-
-⚠️ Good to know:
-- Available in several countries (check availability)
-- Free and premium plans available
-- Crypto cannot be sent to external wallets
-
-💰 Ideal for: Those who want an all-in-one solution that combines modern digital banking with simple access to cryptocurrencies.`
+                    pt: 'Banco digital global com recursos avançados de criptomoedas. Compre, venda e transfira mais de 50 criptomoedas diretamente no app.',
+                    en: 'Global digital bank with advanced cryptocurrency features. Buy, sell and transfer over 50 cryptocurrencies directly in the app.'
                 }
             },
             'xverse': {
@@ -716,50 +212,8 @@ Complete digital bank that unites traditional and crypto worlds in one place. Mo
                 logo: 'https://xverse.app/favicon.ico',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=xverse.app&sz=64',
                 description: {
-                    pt: `🔥 O que é:
-Carteira Bitcoin focada em Ordinals e NFTs na rede Bitcoin. Solução moderna para explorar o novo universo de arte digital e colecionáveis no Bitcoin.
-
-👥 Para quem é:
-Entusiastas de Bitcoin que querem explorar Ordinals (NFTs do Bitcoin), Stacks e ter controle total de suas chaves privadas.
-
-💎 O que oferece:
-- Suporte completo a Bitcoin Ordinals e BRC-20
-- Integração com rede Stacks (STX)
-- Gerenciamento de NFTs do Bitcoin
-- Interface moderna e intuitiva
-- Autocustódia total das chaves privadas
-
-🎯 Diferencial:
-Líder em carteiras Bitcoin para Ordinals. Primeira a trazer suporte completo para NFTs e tokens na rede Bitcoin de forma simples.
-
-⚠️ Bom saber:
-- Você controla 100% das suas chaves (self-custody)
-- Sempre faça backup da seed phrase
-- Disponível para mobile e extensão de navegador
-
-💰 Ideal para: Bitcoiners que querem explorar Ordinals e o ecossistema de NFTs/tokens do Bitcoin com segurança.`,
-                    en: `🔥 What it is:
-Bitcoin wallet focused on Ordinals and NFTs on the Bitcoin network. Modern solution to explore the new universe of digital art and collectibles on Bitcoin.
-
-👥 Who it's for:
-Bitcoin enthusiasts who want to explore Ordinals (Bitcoin NFTs), Stacks and have full control of their private keys.
-
-💎 What it offers:
-- Full support for Bitcoin Ordinals and BRC-20
-- Integration with Stacks network (STX)
-- Bitcoin NFT management
-- Modern and intuitive interface
-- Full self-custody of private keys
-
-🎯 Differentiator:
-Leader in Bitcoin wallets for Ordinals. First to bring complete support for NFTs and tokens on Bitcoin network in a simple way.
-
-⚠️ Good to know:
-- You control 100% of your keys (self-custody)
-- Always backup your seed phrase
-- Available for mobile and browser extension
-
-💰 Ideal for: Bitcoiners who want to explore Ordinals and the Bitcoin NFT/token ecosystem with security.`
+                    pt: 'Carteira Bitcoin e Ordinals com autocustódia. Gerencie Bitcoin, Stacks e NFTs Ordinals com total controle sobre suas chaves privadas.',
+                    en: 'Self-custody Bitcoin and Ordinals wallet. Manage Bitcoin, Stacks and Ordinals NFTs with full control over your private keys.'
                 }
             },
             'ledger': {
@@ -768,50 +222,8 @@ Leader in Bitcoin wallets for Ordinals. First to bring complete support for NFTs
                 logo: 'https://logo.clearbit.com/ledger.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=ledger.com&sz=64',
                 description: {
-                    pt: `🔒 O que é:
-Hardware wallet líder mundial com mais de 6 milhões de unidades vendidas. Dispositivo físico que armazena suas criptomoedas offline com máxima segurança.
-
-👥 Para quem é:
-Investidores sérios que querem proteger seus investimentos cripto contra hackers com o mais alto nível de segurança possível.
-
-💎 O que oferece:
-- Armazenamento offline (cold storage)
-- Suporte a 5.500+ criptomoedas
-- Chip de segurança bancário certificado
-- Backup e recuperação de emergência
-- App Ledger Live para gerenciamento
-
-🎯 Diferencial:
-Padrão-ouro em segurança cripto. Suas chaves privadas nunca saem do dispositivo, protegendo você mesmo se o computador estiver infectado.
-
-⚠️ Bom saber:
-- Compre apenas na loja oficial (evite revendedores)
-- Guarde sua seed phrase em local seguro físico
-- Modelos: Nano S Plus (básico) e Nano X (bluetooth)
-
-💰 Ideal para: Quem tem investimentos significativos em crypto e quer a melhor proteção contra hackers e roubos.`,
-                    en: `🔒 What it is:
-World-leading hardware wallet with over 6 million units sold. Physical device that stores your cryptocurrencies offline with maximum security.
-
-👥 Who it's for:
-Serious investors who want to protect their crypto investments against hackers with the highest possible level of security.
-
-💎 What it offers:
-- Offline storage (cold storage)
-- Support for 5,500+ cryptocurrencies
-- Certified bank-grade security chip
-- Emergency backup and recovery
-- Ledger Live app for management
-
-🎯 Differentiator:
-Gold standard in crypto security. Your private keys never leave the device, protecting you even if your computer is infected.
-
-⚠️ Good to know:
-- Buy only from official store (avoid resellers)
-- Keep your seed phrase in a safe physical location
-- Models: Nano S Plus (basic) and Nano X (bluetooth)
-
-💰 Ideal for: Those with significant crypto investments who want the best protection against hackers and theft.`
+                    pt: 'Hardware wallet líder mundial. Proteja suas criptomoedas com a mais alta segurança offline contra hackers.',
+                    en: 'World-leading hardware wallet. Protect your cryptocurrencies with the highest offline security against hackers.'
                 }
             }
         };
