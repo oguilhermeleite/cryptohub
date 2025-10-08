@@ -92,8 +92,8 @@ class CryptoAgregator {
                 logo: 'https://logo.clearbit.com/comprecripto.io',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=comprecripto.io&sz=64',
                 description: {
-                    pt: 'Plataforma brasileira P2P para comprar Bitcoin e outras criptomoedas com PIX, TED e DOC de forma rápida e segura. Use o cupom MQM para desconto.',
-                    en: 'Brazilian P2P platform to buy Bitcoin and other cryptocurrencies with PIX, TED and DOC quickly and safely. Use coupon MQM for discount.'
+                    pt: 'Plataforma P2P para compra e venda direta de criptomoedas entre pessoas. Negocie Bitcoin, Ethereum e outras criptomoedas com segurança, sem intermediários, usando diversos métodos de pagamento e com taxas competitivas.',
+                    en: 'P2P platform for direct buying and selling of cryptocurrencies between people. Trade Bitcoin, Ethereum, and other cryptocurrencies securely, without intermediaries, using various payment methods and competitive fees.'
                 }
             },
             'p2pme': {
@@ -102,8 +102,8 @@ class CryptoAgregator {
                 logo: 'https://logo.clearbit.com/p2p.me',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=p2p.me&sz=64',
                 description: {
-                    pt: 'Marketplace P2P global descentralizado. Negocie criptomoedas diretamente com outros usuários com segurança e privacidade.',
-                    en: 'Global decentralized P2P marketplace. Trade cryptocurrencies directly with other users with security and privacy.'
+                    pt: 'P2P.me é uma plataforma descentralizada e não-custodial que permite trocar fiat por USDC usando QR codes. Com tecnologia zero-knowledge KYC (ZK-KYC), oferece transações seguras, resistentes a fraudes e privadas, permitindo pagamentos cripto no mundo real sem intermediários.',
+                    en: 'P2P.me is a decentralized, non-custodial platform that enables users to swap fiat and USDC using QR codes. Powered by zero-knowledge KYC (ZK-KYC), it ensures secure, fraud-resistant, and private transactions, enabling real-world crypto payments without intermediaries.'
                 }
             },
             'camilap2p': {
@@ -112,8 +112,8 @@ class CryptoAgregator {
                 logo: 'https://www.google.com/s2/favicons?domain=camilap2p.com.br&sz=128',
                 fallbackLogo: 'https://logo.clearbit.com/camilap2p.com.br',
                 description: {
-                    pt: 'Plataforma P2P brasileira para negociar criptomoedas de forma segura e rápida. Use o cupom MQM para desconto.',
-                    en: 'Brazilian P2P platform to trade cryptocurrencies safely and quickly. Use coupon MQM for discount.'
+                    pt: 'Camila P2P é especialista brasileira em compra e venda de criptomoedas com mais de 40 mil negociações realizadas. Oferece atendimento humanizado, taxas baixas, segurança total e suporte para mais de 1.000 criptomoedas incluindo Bitcoin e Ethereum. Use o cupom "MQM" e ganhe desconto especial!',
+                    en: 'Camila P2P is a Brazilian specialist in buying and selling cryptocurrencies with over 40,000 transactions completed. It offers personalized service, low fees, total security, and support for 1,000+ cryptocurrencies including Bitcoin and Ethereum. Use coupon code "MQM" and get a special discount!'
                 }
             },
             'binance': {
