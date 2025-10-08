@@ -202,8 +202,8 @@ class CryptoAgregator {
                 logo: 'https://logo.clearbit.com/revolut.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=revolut.com&sz=64',
                 description: {
-                    pt: 'Banco digital global com recursos avançados de criptomoedas. Compre, venda e transfira mais de 50 criptomoedas diretamente no app.',
-                    en: 'Global digital bank with advanced cryptocurrency features. Buy, sell and transfer over 50 cryptocurrencies directly in the app.'
+                    pt: 'Revolut é um banco digital all-in-one usado por mais de 60 milhões de clientes globalmente. Oferece serviços bancários, investimentos e trading de criptomoedas, permitindo comprar, vender e trocar mais de 210 criptomoedas com taxas competitivas e interface intuitiva.',
+                    en: 'Revolut is an all-in-one digital bank used by 60+ million customers globally. It offers banking services, investments, and crypto trading, allowing you to buy, sell, and exchange 210+ cryptocurrencies with competitive fees and intuitive interface.'
                 }
             },
             'xverse': {
@@ -212,8 +212,8 @@ class CryptoAgregator {
                 logo: 'https://xverse.app/favicon.ico',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=xverse.app&sz=64',
                 description: {
-                    pt: 'Carteira Bitcoin e Ordinals com autocustódia. Gerencie Bitcoin, Stacks e NFTs Ordinals com total controle sobre suas chaves privadas.',
-                    en: 'Self-custody Bitcoin and Ordinals wallet. Manage Bitcoin, Stacks and Ordinals NFTs with full control over your private keys.'
+                    pt: 'Xverse é a carteira Bitcoin mais avançada e fácil de usar, confiada por mais de 1,7 milhão de usuários. Suporta Bitcoin, Ordinals, Runes, BRC-20 e Layer 2s como Stacks e Starknet. Carteira não-custodial com segurança de nível institucional e interface amigável para iniciantes.',
+                    en: 'Xverse is the most advanced and user-friendly Bitcoin wallet, trusted by over 1.7 million users. It supports Bitcoin, Ordinals, Runes, BRC-20, and Layer 2s like Stacks and Starknet. Non-custodial wallet with institutional-grade security and beginner-friendly interface.'
                 }
             },
             'ledger': {
@@ -222,8 +222,8 @@ class CryptoAgregator {
                 logo: 'https://logo.clearbit.com/ledger.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=ledger.com&sz=64',
                 description: {
-                    pt: 'Hardware wallet líder mundial. Proteja suas criptomoedas com a mais alta segurança offline contra hackers.',
-                    en: 'World-leading hardware wallet. Protect your cryptocurrencies with the highest offline security against hackers.'
+                    pt: 'Ledger é a carteira de hardware líder mundial para armazenamento seguro de criptomoedas. Com milhões de dispositivos vendidos globalmente, oferece proteção offline com chip Secure Element, suportando mais de 5.500 moedas e tokens incluindo Bitcoin, Ethereum e Solana.',
+                    en: 'Ledger is the world\'s leading hardware wallet for secure cryptocurrency storage. With millions of devices sold globally, it offers offline protection with Secure Element chip, supporting 5,500+ coins and tokens including Bitcoin, Ethereum, and Solana.'
                 }
             }
         };
