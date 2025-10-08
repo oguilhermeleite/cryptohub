@@ -162,8 +162,8 @@ class CryptoAgregator {
                 logo: 'https://logo.clearbit.com/bitget.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=bitget.com&sz=64',
                 description: {
-                    pt: 'Carteira Web3 multi-chain com suporte a DeFi, NFTs e trading. Interface amigável para iniciantes e avançados.',
-                    en: 'Multi-chain Web3 wallet with DeFi, NFTs and trading support. User-friendly interface for beginners and advanced users.'
+                    pt: 'Bitget Wallet é uma carteira Web3 não-custodial líder, servindo mais de 80 milhões de usuários globalmente. Suporta +de 130 blockchains e milhões de tokens, oferecendo swaps, trading, staking, DApp browser e fundo de proteção de $300 milhões. Disponível para iOS, Android e extensão Chrome.',
+                    en: 'Bitget Wallet is a leading non-custodial Web3 wallet serving 80+ million users globally. It supports 130+ blockchains and millions of tokens, offering swaps, trading, staking, DApp browser, and a $300 million protection fund. Available for iOS, Android, and Chrome extension.'
                 }
             },
             'kast': {
