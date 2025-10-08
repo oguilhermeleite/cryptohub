@@ -172,8 +172,8 @@ class CryptoAgregator {
                 logo: 'https://www.google.com/s2/favicons?domain=kast.xyz&sz=128',
                 fallbackLogo: 'https://logo.clearbit.com/usekast.com',
                 description: {
-                    pt: 'Cartão de débito cripto brasileiro. Gaste suas criptomoedas no dia a dia com conversão automática para reais.',
-                    en: 'Brazilian crypto debit card. Spend your cryptocurrencies daily with automatic conversion to Brazilian reals.'
+                    pt: 'KAST é um cartão Visa global que permite gastar criptomoedas em mais de 170 países. Oferece conversão instantânea de USDC e USDT para USD com taxas de 0%, cashback de até 15%, e compatibilidade com Apple Pay e Google Pay. Limite de gastos ilimitado e suporte 24/7.',
+                    en: 'KAST is a global Visa card that lets you spend cryptocurrencies in 170+ countries. It offers instant conversion of USDC and USDT to USD with 0% fees, up to 15% cashback, and compatibility with Apple Pay and Google Pay. Unlimited spending limit and 24/7 support.'
                 }
             },
             'offramp': {
@@ -182,8 +182,8 @@ class CryptoAgregator {
                 logo: 'https://logo.clearbit.com/offramp.xyz',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=offramp.xyz&sz=64',
                 description: {
-                    pt: 'Solução completa para gastos cripto. Converta facilmente suas criptomoedas para moeda local e gaste mundialmente.',
-                    en: 'Complete crypto spending solution. Easily convert your cryptocurrencies to local currency and spend worldwide.'
+                    pt: 'Offramp é um cartão Visa virtual não-custodial que suporta mais de 4.000 criptomoedas em 190+ países. Oferece conversão de cripto para USD com apenas 0,5% de taxa, limite de gastos ilimitado, e compatibilidade com Apple Pay e Google Pay para pagamentos globais.',
+                    en: 'Offramp is a non-custodial virtual Visa card that supports 4,000+ cryptocurrencies in 190+ countries. It offers crypto-to-USD conversion with only 0.5% fee, unlimited spending limit, and compatibility with Apple Pay and Google Pay for global payments.'
                 }
             },
             'etherfi': {
@@ -192,8 +192,8 @@ class CryptoAgregator {
                 logo: 'https://logo.clearbit.com/ether.fi',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=ether.fi&sz=64',
                 description: {
-                    pt: 'Protocolo DeFi líder para staking líquido de Ethereum. Maximize seus rendimentos ETH com segurança e transparência.',
-                    en: 'Leading DeFi protocol for Ethereum liquid staking. Maximize your ETH yields with security and transparency.'
+                    pt: 'Ether.fi Cash é um cartão de crédito Visa não-custodial que permite usar cripto como garantia sem vendê-la. Oferece 3% de cashback em todas as compras, integração com DeFi, e compatibilidade com Apple Pay e Google Pay. Disponível em formatos virtual e físico para uso global.',
+                    en: 'Ether.fi Cash is a non-custodial Visa credit card that lets you use crypto as collateral without selling it. It offers 3% cashback on all purchases, DeFi integration, and compatibility with Apple Pay and Google Pay. Available in virtual and physical formats for global use.'
                 }
             },
             'revolut': {
