@@ -311,8 +311,9 @@ body {
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     font-weight: 500;
+    line-height: 1;
 }
 
 .lang-btn:hover,
