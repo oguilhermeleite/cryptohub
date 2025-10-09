@@ -156,6 +156,36 @@ class CryptoAgregator {
                     en: 'MEXC is a global exchange established in 2018, serving 40+ million users in 170+ countries. Known for its extremely low fees (0% maker fee) and 3,000+ cryptocurrencies available.'
                 }
             },
+            'gateio': {
+                name: 'Gate.io',
+                url: 'https://www.gate.com/signup/AVEXB1XE?ref_type=103&utm_cmp=PEYEQdSb',
+                logo: 'https://logo.clearbit.com/gate.io',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=gate.io&sz=64',
+                description: {
+                    pt: 'Gate é uma das maiores exchanges de criptomoedas do mundo, fundada em 2013, servindo mais de 23 milhões de usuários em 130+ países. Oferece mais de 3.800 criptomoedas para negociação, trading spot, futuros, margin, e produtos de wealth management. Com $10+ bilhões em reservas e ratio de 123%.',
+                    en: 'Gate is one of the world\'s largest cryptocurrency exchanges, founded in 2013, serving 23+ million users in 130+ countries. It offers 3,800+ cryptocurrencies for trading, spot trading, futures, margin, and wealth management products. With $10+ billion in reserves and 123% ratio.'
+                }
+            },
+            'coinbase': {
+                name: 'Coinbase',
+                url: 'https://coinbase.com/join/J5GUPYS?src=ios-link',
+                logo: 'https://logo.clearbit.com/coinbase.com',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=coinbase.com&sz=64',
+                description: {
+                    pt: 'Coinbase é uma das maiores exchanges de criptomoedas do mundo, fundada em 2012 e listada na Nasdaq desde 2021. Com mais de 100 milhões de usuários em 100+ países, oferece compra, venda e armazenamento de 150+ criptomoedas. Plataforma regulamentada nos EUA com suporte a depósitos fiat, carteira digital e API para traders institucionais.',
+                    en: 'Coinbase is one of the world\'s largest cryptocurrency exchanges, founded in 2012 and listed on Nasdaq since 2021. With over 100 million users in 100+ countries, it offers buying, selling and storing of 150+ cryptocurrencies. US-regulated platform with fiat deposits support, digital wallet and API for institutional traders.'
+                }
+            },
+            'okx': {
+                name: 'OKX',
+                url: 'https://okx.com/join/99171266',
+                logo: 'https://logo.clearbit.com/okx.com',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=okx.com&sz=64',
+                description: {
+                    pt: 'OKX é uma das maiores exchanges de criptomoedas do mundo, fundada em 2017 (anteriormente Okcoin desde 2013). Com mais de 60 milhões de usuários em 100+ países, oferece trading de 350+ criptomoedas com 500+ pares. Plataforma regulamentada nos EUA e outros, com trading spot, futuros, margin, copy trading, bots e ratio de reserva 1:1.',
+                    en: 'OKX is one of the world\'s largest cryptocurrency exchanges, founded in 2017 (formerly Okcoin since 2013). With over 60 million users in 100+ countries, it offers trading of 350+ cryptocurrencies with 500+ pairs. Regulated platform in US and others, with spot, futures, margin trading, copy trading, bots and 1:1 reserve ratio.'
+                }
+            },
             'bitget': {
                 name: 'Bitget Wallet',
                 url: 'https://newshare.bwb.global/pt_br/invite_earn_coin?inviteCode=VdkFyq&deepLinkType=card&utmSource=referral2.0_copyLink',
@@ -194,6 +224,16 @@ class CryptoAgregator {
                 description: {
                     pt: 'Ether.fi Cash é um cartão de crédito Visa não-custodial que permite usar cripto como garantia sem vendê-la. Oferece 3% de cashback em todas as compras, integração com DeFi, e compatibilidade com Apple Pay e Google Pay. Disponível em formatos virtual e físico para uso global.',
                     en: 'Ether.fi Cash is a non-custodial Visa credit card that lets you use crypto as collateral without selling it. It offers 3% cashback on all purchases, DeFi integration, and compatibility with Apple Pay and Google Pay. Available in virtual and physical formats for global use.'
+                }
+            },
+            'cypher': {
+                name: 'Cypher',
+                url: 'https://app.cypherhq.io/card/referral/VUBX7395',
+                logo: 'https://logo.clearbit.com/cypherhq.io',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=cypherhq.io&sz=64',
+                description: {
+                    pt: 'Cypher é um cartão cripto não-custodial apoiado pela Y Combinator, fundado em 2021. Permite gastar criptomoedas em 40+ milhões de comerciantes online e offline em 150+ países. Suporta 500+ tokens em 18+ blockchains (EVM, Solana, Cosmos, Tron) com swap e bridge integrados. Oferece cartão virtual e físico sem taxas mensais.',
+                    en: 'Cypher is a non-custodial crypto card backed by Y Combinator, founded in 2021. Allows spending crypto at 40+ million online and offline merchants in 150+ countries. Supports 500+ tokens across 18+ blockchains (EVM, Solana, Cosmos, Tron) with built-in swap and bridge. Offers virtual and physical cards with no monthly fees.'
                 }
             },
             'revolut': {
