@@ -159,11 +159,11 @@ class CryptoAgregator {
             'gateio': {
                 name: 'Gate.io',
                 url: 'https://www.gate.com/signup/AVEXB1XE?ref_type=103&utm_cmp=PEYEQdSb',
-                logo: 'https://logo.clearbit.com/gate.io',
-                fallbackLogo: 'https://www.google.com/s2/favicons?domain=gate.io&sz=64',
+                logo: 'https://www.google.com/s2/favicons?domain=gate.io&sz=128',
+                fallbackLogo: 'https://logo.clearbit.com/gate.io',
                 description: {
-                    pt: 'Gate é uma das maiores exchanges de criptomoedas do mundo, fundada em 2013, servindo mais de 23 milhões de usuários em 130+ países. Oferece mais de 3.800 criptomoedas para negociação, trading spot, futuros, margin, e produtos de wealth management. Com $10+ bilhões em reservas e ratio de 123%.',
-                    en: 'Gate is one of the world\'s largest cryptocurrency exchanges, founded in 2013, serving 23+ million users in 130+ countries. It offers 3,800+ cryptocurrencies for trading, spot trading, futures, margin, and wealth management products. With $10+ billion in reserves and 123% ratio.'
+                    pt: 'Gate é uma das maiores exchanges de criptomoedas do mundo, fundada em 2013, servindo mais de 23 milhões de usuários em 130+ países. Oferece mais de 3.800 criptomoedas com trading spot, futuros e margin.',
+                    en: 'Gate is one of the world\'s largest cryptocurrency exchanges, founded in 2013, serving 23+ million users in 130+ countries. Offers 3,800+ cryptocurrencies with spot, futures and margin trading.'
                 }
             },
             'coinbase': {
@@ -172,8 +172,8 @@ class CryptoAgregator {
                 logo: 'https://logo.clearbit.com/coinbase.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=coinbase.com&sz=64',
                 description: {
-                    pt: 'Coinbase é uma das maiores exchanges de criptomoedas do mundo, fundada em 2012 e listada na Nasdaq desde 2021. Com mais de 100 milhões de usuários em 100+ países, oferece compra, venda e armazenamento de 150+ criptomoedas. Plataforma regulamentada nos EUA com suporte a depósitos fiat, carteira digital e API para traders institucionais.',
-                    en: 'Coinbase is one of the world\'s largest cryptocurrency exchanges, founded in 2012 and listed on Nasdaq since 2021. With over 100 million users in 100+ countries, it offers buying, selling and storing of 150+ cryptocurrencies. US-regulated platform with fiat deposits support, digital wallet and API for institutional traders.'
+                    pt: 'Coinbase é uma das maiores exchanges do mundo, fundada em 2012 e listada na Nasdaq desde 2021. Com mais de 100 milhões de usuários, oferece compra e venda de 150+ criptomoedas com suporte a depósitos fiat.',
+                    en: 'Coinbase is one of the world\'s largest exchanges, founded in 2012 and listed on Nasdaq since 2021. With over 100 million users, offers buying and selling of 150+ cryptocurrencies with fiat deposits support.'
                 }
             },
             'okx': {
@@ -182,8 +182,8 @@ class CryptoAgregator {
                 logo: 'https://logo.clearbit.com/okx.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=okx.com&sz=64',
                 description: {
-                    pt: 'OKX é uma das maiores exchanges de criptomoedas do mundo, fundada em 2017 (anteriormente Okcoin desde 2013). Com mais de 60 milhões de usuários em 100+ países, oferece trading de 350+ criptomoedas com 500+ pares. Plataforma regulamentada nos EUA e outros, com trading spot, futuros, margin, copy trading, bots e ratio de reserva 1:1.',
-                    en: 'OKX is one of the world\'s largest cryptocurrency exchanges, founded in 2017 (formerly Okcoin since 2013). With over 60 million users in 100+ countries, it offers trading of 350+ cryptocurrencies with 500+ pairs. Regulated platform in US and others, with spot, futures, margin trading, copy trading, bots and 1:1 reserve ratio.'
+                    pt: 'OKX é uma das maiores exchanges do mundo, fundada em 2017. Com mais de 60 milhões de usuários em 100+ países, oferece trading de 350+ criptomoedas com spot, futuros, margin e copy trading.',
+                    en: 'OKX is one of the world\'s largest exchanges, founded in 2017. With over 60 million users in 100+ countries, offers trading of 350+ cryptocurrencies with spot, futures, margin and copy trading.'
                 }
             },
             'bitget': {
@@ -232,8 +232,8 @@ class CryptoAgregator {
                 logo: 'https://logo.clearbit.com/cypherhq.io',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=cypherhq.io&sz=64',
                 description: {
-                    pt: 'Cypher é um cartão cripto não-custodial apoiado pela Y Combinator, fundado em 2021. Permite gastar criptomoedas em 40+ milhões de comerciantes online e offline em 150+ países. Suporta 500+ tokens em 18+ blockchains (EVM, Solana, Cosmos, Tron) com swap e bridge integrados. Oferece cartão virtual e físico sem taxas mensais.',
-                    en: 'Cypher is a non-custodial crypto card backed by Y Combinator, founded in 2021. Allows spending crypto at 40+ million online and offline merchants in 150+ countries. Supports 500+ tokens across 18+ blockchains (EVM, Solana, Cosmos, Tron) with built-in swap and bridge. Offers virtual and physical cards with no monthly fees.'
+                    pt: 'Cypher é um cartão cripto não-custodial apoiado pela Y Combinator. Permite gastar criptomoedas em 40+ milhões de comerciantes em 150+ países. Suporta 500+ tokens em 18+ blockchains com swap integrado.',
+                    en: 'Cypher is a non-custodial crypto card backed by Y Combinator. Allows spending crypto at 40+ million merchants in 150+ countries. Supports 500+ tokens across 18+ blockchains with built-in swap.'
                 }
             },
             'revolut': {
