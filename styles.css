@@ -948,7 +948,7 @@ body {
 .horizontal-scroll-container {
     position: relative;
     width: 100%;
-    overflow: hidden;
+    overflow: visible; /* Changed from hidden to visible for desktop scrolling */
 }
 
 .horizontal-cards-grid {
@@ -958,9 +958,10 @@ body {
     overflow-x: auto;
     overflow-y: hidden;
     scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    scroll-snap-type: x proximity; /* Changed from mandatory to proximity for better desktop UX */
+    scrollbar-width: thin; /* Show thin scrollbar on desktop */
+    scrollbar-color: var(--accent-primary) transparent;
+    -ms-overflow-style: auto;
     /* Enable momentum scrolling on iOS */
     -webkit-overflow-scrolling: touch;
     /* Ensure the container takes full width */
@@ -976,10 +977,26 @@ body {
     -webkit-backface-visibility: hidden;
     perspective: 1000px;
     -webkit-perspective: 1000px;
+    /* Add padding for better edge visibility */
+    padding-right: 2rem;
 }
 
+/* Custom scrollbar styling for better desktop UX */
 .horizontal-cards-grid::-webkit-scrollbar {
-    display: none;
+    height: 8px;
+}
+
+.horizontal-cards-grid::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.horizontal-cards-grid::-webkit-scrollbar-thumb {
+    background: var(--accent-primary);
+    border-radius: 4px;
+}
+
+.horizontal-cards-grid::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-secondary);
 }
 
 /* Platform Card Styles - Floating Glassmorphism Design */
@@ -1545,6 +1562,13 @@ body {
         touch-action: pan-x;
         /* Prevent accidental vertical scroll */
         overscroll-behavior-x: contain;
+        /* Hide scrollbar on mobile */
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .horizontal-cards-grid::-webkit-scrollbar {
+        display: none;
     }
 
     .platform-card {
