@@ -122,11 +122,14 @@ body {
     .horizontal-scroll-container {
         max-width: 1200px;
         margin: 0 auto;
+        padding: 0; /* Remove padding to show all items from start */
     }
 
-    /* Center single cards (like Ledger) */
+    /* Ensure carousel starts at beginning on desktop */
     .horizontal-cards-grid {
-        justify-content: center;
+        justify-content: flex-start; /* Changed from center to flex-start to show first items */
+        padding-left: 0;
+        margin-left: 0;
     }
 
     /* When only one card, center it */
@@ -959,9 +962,8 @@ body {
     overflow-y: hidden;
     scroll-behavior: smooth;
     scroll-snap-type: x proximity; /* Changed from mandatory to proximity for better desktop UX */
-    scrollbar-width: thin; /* Show thin scrollbar on desktop */
-    scrollbar-color: var(--accent-primary) transparent;
-    -ms-overflow-style: auto;
+    scrollbar-width: none; /* Hide scrollbar completely */
+    -ms-overflow-style: none; /* Hide scrollbar on IE/Edge */
     /* Enable momentum scrolling on iOS */
     -webkit-overflow-scrolling: touch;
     /* Ensure the container takes full width */
@@ -979,24 +981,16 @@ body {
     -webkit-perspective: 1000px;
     /* Add padding for better edge visibility */
     padding-right: 2rem;
+    /* Ensure carousel starts at beginning */
+    padding-left: 0;
+    margin-left: 0;
 }
 
-/* Custom scrollbar styling for better desktop UX */
+/* Hide scrollbar on all browsers */
 .horizontal-cards-grid::-webkit-scrollbar {
-    height: 8px;
-}
-
-.horizontal-cards-grid::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.horizontal-cards-grid::-webkit-scrollbar-thumb {
-    background: var(--accent-primary);
-    border-radius: 4px;
-}
-
-.horizontal-cards-grid::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-secondary);
+    display: none;
+    width: 0;
+    height: 0;
 }
 
 /* Platform Card Styles - Floating Glassmorphism Design */
