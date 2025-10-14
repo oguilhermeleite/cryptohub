@@ -256,6 +256,56 @@ class CryptoAgregator {
                     en: 'Xverse is the most advanced and user-friendly Bitcoin wallet, trusted by over 1.7 million users. It supports Bitcoin, Ordinals, Runes, BRC-20, and Layer 2s like Stacks and Starknet. Non-custodial wallet with institutional-grade security and beginner-friendly interface.'
                 }
             },
+            'phantom': {
+                name: 'Phantom',
+                url: 'https://phantom.com',
+                logo: 'https://logo.clearbit.com/phantom.app',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=phantom.app&sz=64',
+                description: {
+                    pt: 'Phantom é uma carteira multi-chain não-custodial com mais de 80 milhões de usuários. Suporta Solana, Ethereum, Bitcoin, Polygon, Base e Sui com swaps, staking, NFTs e integração com DeFi em uma interface intuitiva.',
+                    en: 'Phantom is a non-custodial multi-chain wallet with 80+ million users. Supports Solana, Ethereum, Bitcoin, Polygon, Base and Sui with swaps, staking, NFTs and DeFi integration in an intuitive interface.'
+                }
+            },
+            'slush': {
+                name: 'Slush',
+                url: 'https://slush.app',
+                logo: 'https://logo.clearbit.com/slush.app',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=slush.app&sz=64',
+                description: {
+                    pt: 'Slush é a carteira oficial da blockchain Sui, desenvolvida pela Mysten Labs. Oferece login social via Google e Apple, swaps integrados, staking e acesso fácil ao ecossistema DeFi da Sui sem necessidade de seed phrase.',
+                    en: 'Slush is the official Sui blockchain wallet, developed by Mysten Labs. Offers social login via Google and Apple, integrated swaps, staking and easy access to Sui\'s DeFi ecosystem without seed phrase requirement.'
+                }
+            },
+            'magiceden': {
+                name: 'Magic Eden Wallet',
+                url: 'https://wallet.magiceden.io',
+                logo: 'https://logo.clearbit.com/magiceden.io',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=magiceden.io&sz=64',
+                description: {
+                    pt: 'Magic Eden Wallet é uma carteira multi-chain focada em NFTs e colecionáveis. Suporta Solana, Ethereum e Bitcoin com gestão de Ordinals, BRC-20, Runes e integração direta com o marketplace Magic Eden.',
+                    en: 'Magic Eden Wallet is a multi-chain wallet focused on NFTs and collectibles. Supports Solana, Ethereum and Bitcoin with Ordinals, BRC-20, Runes management and direct integration with Magic Eden marketplace.'
+                }
+            },
+            'rabby': {
+                name: 'Rabby',
+                url: 'https://rabby.io',
+                logo: 'https://logo.clearbit.com/rabby.io',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=rabby.io&sz=64',
+                description: {
+                    pt: 'Rabby é uma carteira open-source para Ethereum e 141+ blockchains EVM. Oferece troca automática de redes, scan de segurança pré-transação, preview de mudanças de saldo e compatibilidade com hardware wallets como Ledger.',
+                    en: 'Rabby is an open-source wallet for Ethereum and 141+ EVM blockchains. Offers automatic network switching, pre-transaction security scanning, balance change preview and compatibility with hardware wallets like Ledger.'
+                }
+            },
+            'unisat': {
+                name: 'UniSat',
+                url: 'https://unisat.io',
+                logo: 'https://logo.clearbit.com/unisat.io',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=unisat.io&sz=64',
+                description: {
+                    pt: 'UniSat é a primeira carteira open-source focada em Bitcoin, Ordinals e BRC-20. Não-custodial e 100% transparente no GitHub, suporta Runes, Alkanes, inscriptions e permite mint sem executar fullnode Bitcoin.',
+                    en: 'UniSat is the first open-source wallet focused on Bitcoin, Ordinals and BRC-20. Non-custodial and 100% transparent on GitHub, supports Runes, Alkanes, inscriptions and allows minting without running Bitcoin fullnode.'
+                }
+            },
             'ledger': {
                 name: 'Ledger',
                 url: 'https://shop.ledger.com/?r=9414e4bea285&tracker=MY_TRACKER',
