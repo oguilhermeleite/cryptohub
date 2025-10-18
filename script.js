@@ -9,6 +9,7 @@ class CryptoAgregator {
                 'hero-subtitle': 'Encontre a melhor forma de comprar, vender e usar criptomoedas com segurança.',
                 'hero-cta': 'Começar Agora',
                 'nav-featured': 'Destaques',
+                'nav-bridges': 'Bridges',
                 'nav-cards': 'Cartões',
                 'nav-banks': 'Bancos Digitais',
                 'nav-hot-wallets': 'Hot Wallets',
@@ -18,6 +19,8 @@ class CryptoAgregator {
                 'theme-toggle': 'Tema',
                 'p2p-subtitle': 'Compra e venda direto entre pessoas',
                 'exchanges-subtitle': 'Trading e conversão de criptomoedas',
+                'bridges-title': 'Bridges',
+                'bridges-subtitle': 'Transfira ativos entre diferentes blockchains',
                 'cards-title': 'Crypto Cards',
                 'cards-subtitle': 'Use cripto no dia a dia com cartões',
                 'banks-title': 'Digital Banks',
@@ -43,6 +46,7 @@ class CryptoAgregator {
                 'hero-subtitle': 'Find the best way to buy, sell and use cryptocurrencies safely.',
                 'hero-cta': 'Get Started',
                 'nav-featured': 'Featured',
+                'nav-bridges': 'Bridges',
                 'nav-cards': 'Cards',
                 'nav-banks': 'Digital Banks',
                 'nav-hot-wallets': 'Hot Wallets',
@@ -52,6 +56,8 @@ class CryptoAgregator {
                 'theme-toggle': 'Theme',
                 'p2p-subtitle': 'Direct buying and selling between people',
                 'exchanges-subtitle': 'Trading and cryptocurrency conversion',
+                'bridges-title': 'Bridges',
+                'bridges-subtitle': 'Transfer assets between different blockchains',
                 'cards-title': 'Crypto Cards',
                 'cards-subtitle': 'Use crypto daily with cards',
                 'banks-title': 'Digital Banks',
@@ -114,6 +120,16 @@ class CryptoAgregator {
                 description: {
                     pt: 'Camila P2P é especialista brasileira em compra e venda de criptomoedas com mais de 40 mil negociações realizadas. Oferece atendimento humanizado, taxas baixas, segurança total e suporte para mais de 1.000 criptomoedas incluindo Bitcoin e Ethereum. Use o cupom "MQM" e ganhe desconto especial!',
                     en: 'Camila P2P is a Brazilian specialist in buying and selling cryptocurrencies with over 40,000 transactions completed. It offers personalized service, low fees, total security, and support for 1,000+ cryptocurrencies including Bitcoin and Ethereum. Use coupon code "MQM" and get a special discount!'
+                }
+            },
+            'kryptera': {
+                name: 'Kryptera',
+                url: 'https://kryptera.io/',
+                logo: 'https://logo.clearbit.com/kryptera.io',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=kryptera.io&sz=64',
+                description: {
+                    pt: 'Kryptera é uma plataforma P2P brasileira que permite pagar boletos e Pix diretamente com criptomoedas, sem KYC e sem limites. Oferece saques instantâneos, conversão direta cripto-para-fiat e total liberdade financeira no uso de seus ativos.',
+                    en: 'Kryptera is a Brazilian P2P platform that allows paying bills and Pix directly with cryptocurrencies, without KYC and without limits. Offers instant withdrawals, direct crypto-to-fiat conversion and complete financial freedom in using your assets.'
                 }
             },
             'binance': {
@@ -186,6 +202,16 @@ class CryptoAgregator {
                     en: 'OKX is one of the world\'s largest exchanges, founded in 2017. With over 60 million users in 100+ countries, offers trading of 350+ cryptocurrencies with spot, futures, margin and copy trading.'
                 }
             },
+            'sideshift': {
+                name: 'SideShift.ai',
+                url: 'https://sideshift.ai/a/UvqWxk6QY',
+                logo: 'https://logo.clearbit.com/sideshift.ai',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=sideshift.ai&sz=64',
+                description: {
+                    pt: 'SideShift.ai é uma bridge não-custodial sem cadastro que permite transferências diretas entre 200+ criptomoedas em 42+ blockchains. Processou mais de $2 bilhões em volume com swaps instantâneos e liquidação direta para sua carteira.',
+                    en: 'SideShift.ai is a non-custodial bridge with no signup that enables direct transfers between 200+ cryptocurrencies across 42+ blockchains. Processed over $2 billion in volume with instant swaps and direct settlement to your wallet.'
+                }
+            },
             'bitget': {
                 name: 'Bitget Wallet',
                 url: 'https://newshare.bwb.global/pt_br/invite_earn_coin?inviteCode=VdkFyq&deepLinkType=card&utmSource=referral2.0_copyLink',
@@ -234,6 +260,16 @@ class CryptoAgregator {
                 description: {
                     pt: 'Cypher é um cartão cripto não-custodial apoiado pela Y Combinator. Permite gastar criptomoedas em 40+ milhões de comerciantes em 150+ países. Suporta 500+ tokens em 18+ blockchains com swap integrado.',
                     en: 'Cypher is a non-custodial crypto card backed by Y Combinator. Allows spending crypto at 40+ million merchants in 150+ countries. Supports 500+ tokens across 18+ blockchains with built-in swap.'
+                }
+            },
+            'orbitx': {
+                name: 'OrbitX',
+                url: 'https://orbitx.app.link/0597E2DA',
+                logo: 'https://logo.clearbit.com/orbitxpay.com',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=orbitxpay.com&sz=64',
+                description: {
+                    pt: 'OrbitX é um cartão Visa não-custodial powered by Web3 que permite gastar stablecoins em 100+ milhões de comerciantes globalmente. Oferece as menores taxas Forex (1%), saques em ATMs mundialmente e cartões físicos e virtuais premium.',
+                    en: 'OrbitX is a non-custodial Visa card powered by Web3 that enables spending stablecoins at 100+ million merchants globally. Offers lowest Forex fees (1%), ATM withdrawals worldwide and premium physical and virtual cards.'
                 }
             },
             'revolut': {
@@ -774,17 +810,34 @@ class CryptoAgregator {
         scrollContainers.forEach((container, containerIndex) => {
             const dots = container.parentElement.querySelectorAll('.scroll-dot');
 
-            // Enhanced scroll position tracking
+            // Enhanced scroll position tracking with better accuracy
             const updateScrollIndicators = () => {
                 const scrollLeft = container.scrollLeft;
                 const containerWidth = container.offsetWidth;
                 const scrollWidth = container.scrollWidth;
-                const cardWidth = container.querySelector('.platform-card')?.offsetWidth || 280;
+                const cards = container.querySelectorAll('.platform-card');
 
-                // More accurate calculation for mobile
-                const gap = window.innerWidth <= 768 ? 20 : 32; // Adjust gap based on screen size
-                const effectiveCardWidth = cardWidth + gap;
-                const activeIndex = Math.round(scrollLeft / effectiveCardWidth);
+                if (cards.length === 0) return;
+
+                // Find which card is most visible in the viewport
+                let activeIndex = 0;
+                let maxVisibility = 0;
+
+                cards.forEach((card, index) => {
+                    const cardRect = card.getBoundingClientRect();
+                    const containerRect = container.getBoundingClientRect();
+
+                    // Calculate how much of the card is visible
+                    const visibleLeft = Math.max(cardRect.left, containerRect.left);
+                    const visibleRight = Math.min(cardRect.right, containerRect.right);
+                    const visibleWidth = Math.max(0, visibleRight - visibleLeft);
+                    const visibility = visibleWidth / cardRect.width;
+
+                    if (visibility > maxVisibility) {
+                        maxVisibility = visibility;
+                        activeIndex = index;
+                    }
+                });
 
                 dots.forEach((dot, index) => {
                     dot.classList.toggle('active', index === activeIndex);
@@ -794,17 +847,23 @@ class CryptoAgregator {
             // Update active dot based on scroll position with improved calculation
             container.addEventListener('scroll', this.debounce(updateScrollIndicators, 50));
 
-            // Dot click navigation with mobile-optimized positioning
+            // Dot click navigation with improved positioning
             dots.forEach((dot, index) => {
                 dot.addEventListener('click', () => {
-                    const cardWidth = container.querySelector('.platform-card')?.offsetWidth || 280;
-                    const gap = window.innerWidth <= 768 ? 20 : 32;
-                    const targetScroll = index * (cardWidth + gap);
+                    const cards = container.querySelectorAll('.platform-card');
+                    const targetCard = cards[index];
 
-                    container.scrollTo({
-                        left: targetScroll,
-                        behavior: 'smooth'
-                    });
+                    if (targetCard) {
+                        // Scroll the target card into view
+                        targetCard.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'nearest',
+                            inline: 'center'
+                        });
+
+                        // Update indicators after scroll completes
+                        setTimeout(() => updateScrollIndicators(), 600);
+                    }
                 });
             });
 

@@ -125,20 +125,17 @@ body {
         padding: 0; /* Remove padding to show all items from start */
     }
 
-    /* Ensure carousel starts at beginning on desktop */
+    /* Desktop carousel alignment */
     .horizontal-cards-grid {
-        justify-content: flex-start; /* Changed from center to flex-start to show first items */
+        /* Auto-center when content doesn't overflow, flex-start when it does */
+        justify-content: flex-start;
         padding-left: 0;
         margin-left: 0;
     }
 
-    /* When only one card, center it */
-    .horizontal-cards-grid:has(.platform-card:only-child) {
-        justify-content: center;
-    }
-
-    /* For sections with single card, center the container */
-    .platform-section:has(.horizontal-cards-grid .platform-card:only-child) .horizontal-cards-grid {
+    /* Center carousels when they have few items that don't overflow */
+    .horizontal-cards-grid:has(.platform-card:only-child),
+    .horizontal-cards-grid:has(.platform-card:first-child:nth-last-child(-n+2)) {
         justify-content: center;
     }
 }
