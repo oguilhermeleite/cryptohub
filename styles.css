@@ -233,7 +233,7 @@ body {
 .header-controls {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 /* Desktop Theme Toggle */
@@ -301,6 +301,7 @@ body {
 .language-toggle {
     display: flex;
     gap: 0.5rem;
+    margin-left: 0.5rem;
 }
 
 .lang-btn {
