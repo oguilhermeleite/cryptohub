@@ -34,25 +34,13 @@
 <body>
     <!-- Header -->
     <header class="header">
-        <div class="container">
-            <div class="header-content">
+        <div class="header-content">
+            <!-- Top Row: Logo + Theme + Language -->
+            <div class="header-top-row">
                 <div class="logo">
                     <h1>Crypto Agregator</h1>
                     <span class="logo-icon">₿</span>
                 </div>
-
-                <nav class="navigation">
-                    <ul class="nav-menu">
-                        <li><a href="#featured" data-section="featured"><span data-lang="nav-featured">Destaques</span></a></li>
-                        <li><a href="#p2p" data-section="p2p">P2P</a></li>
-                        <li><a href="#exchanges" data-section="exchanges">Exchanges</a></li>
-                        <li><a href="#bridges" data-section="bridges"><span data-lang="nav-bridges">Bridges</span></a></li>
-                        <li><a href="#cards" data-section="cards"><span data-lang="nav-cards">Cartões</span></a></li>
-                        <li><a href="#banks" data-section="banks"><span data-lang="nav-banks">Bancos Digitais</span></a></li>
-                        <li><a href="#hot-wallets" data-section="hot-wallets"><span data-lang="nav-hot-wallets">Hot Wallets</span></a></li>
-                        <li><a href="#cold-wallets" data-section="cold-wallets"><span data-lang="nav-cold-wallets">Cold Wallets</span></a></li>
-                    </ul>
-                </nav>
 
                 <div class="header-controls">
                     <div class="theme-toggle desktop-theme-toggle">
@@ -73,6 +61,19 @@
                     <span></span>
                 </button>
             </div>
+
+            <!-- Bottom Row: Navigation Menu -->
+            <nav class="navigation">
+                <ul class="nav-menu">
+                    <li><a href="#featured" data-section="featured"><span data-lang="nav-home">Home</span></a></li>
+                    <li><a href="#p2p" data-section="p2p">P2P</a></li>
+                    <li><a href="#exchanges" data-section="exchanges">Exchanges</a></li>
+                    <li><a href="#bridges" data-section="bridges"><span data-lang="nav-bridges">Bridges</span></a></li>
+                    <li><a href="#cards" data-section="cards"><span data-lang="nav-cards">Cards</span></a></li>
+                    <li><a href="#banks" data-section="banks"><span data-lang="nav-banks">Banks</span></a></li>
+                    <li><a href="#hot-wallets" data-section="wallets"><span data-lang="nav-wallets">Wallets</span></a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -93,14 +94,13 @@
                 </div>
                 <div class="mobile-menu-separator"></div>
                 <ul class="mobile-nav-list">
-                    <li><a href="#featured" data-section="featured"><span data-lang="nav-featured">Destaques</span></a></li>
-                    <li><a href="#p2p" data-section="p2p">P2P Trading</a></li>
+                    <li><a href="#featured" data-section="featured"><span data-lang="nav-home">Home</span></a></li>
+                    <li><a href="#p2p" data-section="p2p">P2P</a></li>
                     <li><a href="#exchanges" data-section="exchanges">Exchanges</a></li>
                     <li><a href="#bridges" data-section="bridges"><span data-lang="nav-bridges">Bridges</span></a></li>
-                    <li><a href="#cards" data-section="cards"><span data-lang="nav-cards">Cartões</span></a></li>
-                    <li><a href="#banks" data-section="banks"><span data-lang="nav-banks">Bancos Digitais</span></a></li>
-                    <li><a href="#hot-wallets" data-section="hot-wallets"><span data-lang="nav-hot-wallets">Hot Wallets</span></a></li>
-                    <li><a href="#cold-wallets" data-section="cold-wallets"><span data-lang="nav-cold-wallets">Cold Wallets</span></a></li>
+                    <li><a href="#cards" data-section="cards"><span data-lang="nav-cards">Cards</span></a></li>
+                    <li><a href="#banks" data-section="banks"><span data-lang="nav-banks">Banks</span></a></li>
+                    <li><a href="#hot-wallets" data-section="wallets"><span data-lang="nav-wallets">Wallets</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -168,7 +168,6 @@
         <div class="container">
             <div class="section-header">
                 <h3 class="section-title">
-                    <span class="section-icon">🤝</span>
                     <span>P2P Trading</span>
                 </h3>
                 <p class="section-subtitle" data-lang="p2p-subtitle">Compra e venda direto entre pessoas</p>
@@ -230,7 +229,6 @@
         <div class="container">
             <div class="section-header">
                 <h3 class="section-title">
-                    <span class="section-icon">🏦</span>
                     <span>Exchanges</span>
                 </h3>
                 <p class="section-subtitle" data-lang="exchanges-subtitle">Trading e conversão de criptomoedas</p>
@@ -325,7 +323,6 @@
         <div class="container">
             <div class="section-header">
                 <h3 class="section-title">
-                    <span class="section-icon">🌉</span>
                     <span data-lang="bridges-title">Bridges</span>
                 </h3>
                 <p class="section-subtitle" data-lang="bridges-subtitle">Transfira ativos entre diferentes blockchains</p>
@@ -354,7 +351,6 @@
         <div class="container">
             <div class="section-header">
                 <h3 class="section-title">
-                    <span class="section-icon">💳</span>
                     <span data-lang="cards-title">Cartões Cripto</span>
                 </h3>
                 <p class="section-subtitle" data-lang="cards-subtitle">Use cripto no dia a dia com cartões</p>
@@ -427,7 +423,6 @@
         <div class="container">
             <div class="section-header">
                 <h3 class="section-title">
-                    <span class="section-icon">🏦</span>
                     <span data-lang="banks-title">Bancos Digitais</span>
                 </h3>
                 <p class="section-subtitle" data-lang="banks-subtitle">Bancos digitais com recursos crypto integrados</p>
@@ -456,7 +451,6 @@
         <div class="container">
             <div class="section-header">
                 <h3 class="section-title">
-                    <span class="section-icon">🔥</span>
                     <span data-lang="hot-wallets-title">Hot Wallets</span>
                 </h3>
                 <p class="section-subtitle" data-lang="hot-wallets-subtitle">Carteiras online conectadas à internet para uso diário</p>
@@ -540,7 +534,6 @@
         <div class="container">
             <div class="section-header">
                 <h3 class="section-title">
-                    <span class="section-icon">🔒</span>
                     <span data-lang="cold-wallets-title">Cold Wallets</span>
                 </h3>
                 <p class="section-subtitle" data-lang="cold-wallets-subtitle">Carteiras físicas offline para máxima segurança</p>
@@ -596,13 +589,13 @@
                     <div class="footer-section">
                         <h4 data-lang="footer-services">Serviços</h4>
                         <ul>
-                            <li><a href="#featured"><span data-lang="nav-featured">Destaques</span></a></li>
-                            <li><a href="#p2p">P2P Trading</a></li>
+                            <li><a href="#featured"><span data-lang="nav-home">Home</span></a></li>
+                            <li><a href="#p2p">P2P</a></li>
                             <li><a href="#exchanges">Exchanges</a></li>
-                            <li><a href="#cards"><span data-lang="nav-cards">Cartões</span></a></li>
-                            <li><a href="#banks"><span data-lang="nav-banks">Bancos Digitais</span></a></li>
-                            <li><a href="#hot-wallets"><span data-lang="nav-hot-wallets">Hot Wallets</span></a></li>
-                            <li><a href="#cold-wallets"><span data-lang="nav-cold-wallets">Cold Wallets</span></a></li>
+                            <li><a href="#bridges"><span data-lang="nav-bridges">Bridges</span></a></li>
+                            <li><a href="#cards"><span data-lang="nav-cards">Cards</span></a></li>
+                            <li><a href="#banks"><span data-lang="nav-banks">Banks</span></a></li>
+                            <li><a href="#hot-wallets"><span data-lang="nav-wallets">Wallets</span></a></li>
                         </ul>
                     </div>
                 </div>
