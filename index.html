@@ -11,6 +11,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>₿</text></svg>">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5S6MB3MSVV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5S6MB3MSVV');
+
+      // Track platform clicks
+      function trackPlatformClick(platform, category) {
+        gtag('event', 'platform_click', {
+          'platform_name': platform,
+          'category': category,
+          'device': /Mobile/i.test(navigator.userAgent) ? 'mobile' : 'desktop',
+          'timestamp': new Date().toISOString()
+        });
+      }
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -120,7 +139,7 @@
                         <p class="premium-hero-description" data-lang="bitget-hero-description">
                             Carteira Web3 multi-chain líder com suporte completo a DeFi, NFTs e trading. Milhões de usuários confiam na Bitget para gerenciar seus ativos digitais com segurança.
                         </p>
-                        <button class="premium-cta-button" data-url="https://newshare.bwb.global/pt_br/invite_earn_coin?inviteCode=VdkFyq&deepLinkType=card&utmSource=referral2.0_copyLink">
+                        <button class="premium-cta-button" data-url="https://newshare.bwb.global/pt_br/invite_earn_coin?inviteCode=VdkFyq&deepLinkType=card&utmSource=referral2.0_copyLink" onclick="trackPlatformClick('Bitget Wallet', 'Hot Wallet'); return true;">
                             <span data-lang="bitget-cta">Acessar Agora</span>
                             <span class="cta-arrow">→</span>
                         </button>
@@ -157,7 +176,7 @@
             <div class="horizontal-scroll-container">
                 <div class="horizontal-cards-grid">
                     <!-- Compre Cripto -->
-                    <div class="platform-card" data-platform="comprecripto">
+                    <div class="platform-card" data-platform="comprecripto" onclick="trackPlatformClick('Compre Cripto', 'P2P'); return true;">
                         <div class="card-content">
                             <div class="platform-logo">
                                 <img src="https://logo.clearbit.com/comprecripto.io" alt="Compre Cripto" onerror="this.src='https://www.google.com/s2/favicons?domain=comprecripto.io&sz=64'">
@@ -167,7 +186,7 @@
                     </div>
 
                     <!-- P2P.me -->
-                    <div class="platform-card" data-platform="p2pme">
+                    <div class="platform-card" data-platform="p2pme" onclick="trackPlatformClick('P2P.me', 'P2P'); return true;">
                         <div class="card-content">
                             <div class="platform-logo">
                                 <img src="https://logo.clearbit.com/p2p.me" alt="P2P.me" onerror="this.src='https://www.google.com/s2/favicons?domain=p2p.me&sz=64'">
@@ -177,7 +196,7 @@
                     </div>
 
                     <!-- Camila P2P -->
-                    <div class="platform-card" data-platform="camilap2p">
+                    <div class="platform-card" data-platform="camilap2p" onclick="trackPlatformClick('Camila P2P', 'P2P'); return true;">
                         <div class="card-content">
                             <div class="platform-logo">
                                 <img src="https://www.google.com/s2/favicons?domain=camilap2p.com.br&sz=128" alt="Camila P2P" onerror="this.src='https://logo.clearbit.com/camilap2p.com.br'">
@@ -187,7 +206,7 @@
                     </div>
 
                     <!-- Kryptera -->
-                    <div class="platform-card" data-platform="kryptera">
+                    <div class="platform-card" data-platform="kryptera" onclick="trackPlatformClick('Kryptera', 'P2P'); return true;">
                         <div class="card-content">
                             <div class="platform-logo">
                                 <img src="https://kryptera.io/favicon.ico" alt="Kryptera" onerror="this.src='https://www.google.com/s2/favicons?domain=kryptera.io&sz=256'">
@@ -219,7 +238,7 @@
             <div class="horizontal-scroll-container">
                 <div class="horizontal-cards-grid">
                     <!-- Binance -->
-                    <div class="platform-card" data-platform="binance">
+                    <div class="platform-card" data-platform="binance" onclick="trackPlatformClick('Binance', 'Exchange'); return true;">
                         <div class="card-content">
                             <div class="platform-logo">
                                 <img src="https://logo.clearbit.com/binance.com" alt="Binance" onerror="this.src='https://www.google.com/s2/favicons?domain=binance.com&sz=64'">
@@ -229,7 +248,7 @@
                     </div>
 
                     <!-- Bybit -->
-                    <div class="platform-card" data-platform="bybit">
+                    <div class="platform-card" data-platform="bybit" onclick="trackPlatformClick('Bybit', 'Exchange'); return true;">
                         <div class="card-content">
                             <div class="platform-logo">
                                 <img src="https://logo.clearbit.com/bybit.com" alt="Bybit" onerror="this.src='https://www.google.com/s2/favicons?domain=bybit.com&sz=64'">
@@ -239,7 +258,7 @@
                     </div>
 
                     <!-- Kraken -->
-                    <div class="platform-card" data-platform="kraken">
+                    <div class="platform-card" data-platform="kraken" onclick="trackPlatformClick('Kraken', 'Exchange'); return true;">
                         <div class="card-content">
                             <div class="platform-logo">
                                 <img src="https://logo.clearbit.com/kraken.com" alt="Kraken" onerror="this.src='https://www.google.com/s2/favicons?domain=kraken.com&sz=64'">
@@ -249,7 +268,7 @@
                     </div>
 
                     <!-- MEXC -->
-                    <div class="platform-card" data-platform="mexc">
+                    <div class="platform-card" data-platform="mexc" onclick="trackPlatformClick('MEXC', 'Exchange'); return true;">
                         <div class="card-content">
                             <div class="platform-logo">
                                 <img src="https://www.google.com/s2/favicons?domain=mexc.com&sz=128" alt="MEXC" onerror="this.src='https://logo.clearbit.com/mexc.com'">
@@ -259,7 +278,7 @@
                     </div>
 
                     <!-- Gate.io -->
-                    <div class="platform-card" data-platform="gateio">
+                    <div class="platform-card" data-platform="gateio" onclick="trackPlatformClick('Gate.io', 'Exchange'); return true;">
                         <div class="card-content">
                             <div class="platform-logo">
                                 <img src="https://www.google.com/s2/favicons?domain=gate.io&sz=128" alt="Gate.io" onerror="this.src='https://logo.clearbit.com/gate.io'">
@@ -269,7 +288,7 @@
                     </div>
 
                     <!-- Coinbase -->
-                    <div class="platform-card" data-platform="coinbase">
+                    <div class="platform-card" data-platform="coinbase" onclick="trackPlatformClick('Coinbase', 'Exchange'); return true;">
                         <div class="card-content">
                             <div class="platform-logo">
                                 <img src="https://logo.clearbit.com/coinbase.com" alt="Coinbase" onerror="this.src='https://www.google.com/s2/favicons?domain=coinbase.com&sz=64'">
@@ -279,7 +298,7 @@
                     </div>
 
                     <!-- OKX -->
-                    <div class="platform-card" data-platform="okx">
+                    <div class="platform-card" data-platform="okx" onclick="trackPlatformClick('OKX', 'Exchange'); return true;">
                         <div class="card-content">
                             <div class="platform-logo">
                                 <img src="https://logo.clearbit.com/okx.com" alt="OKX" onerror="this.src='https://www.google.com/s2/favicons?domain=okx.com&sz=64'">
@@ -314,7 +333,7 @@
             <div class="horizontal-scroll-container">
                 <div class="horizontal-cards-grid">
                     <!-- SideShift.ai -->
-                    <div class="platform-card" data-platform="sideshift">
+                    <div class="platform-card" data-platform="sideshift" onclick="trackPlatformClick('SideShift.ai', 'Bridge'); return true;">
                         <div class="card-content">
                             <div class="platform-logo">
                                 <img src="https://logo.clearbit.com/sideshift.ai" alt="SideShift.ai" onerror="this.src='https://www.google.com/s2/favicons?domain=sideshift.ai&sz=128'">
@@ -343,7 +362,7 @@
             <div class="horizontal-scroll-container">
                 <div class="horizontal-cards-grid">
                     <!-- Kast Finance -->
-                    <div class="platform-card" data-platform="kast">
+                    <div class="platform-card" data-platform="kast" onclick="trackPlatformClick('Kast Finance', 'Crypto Card'); return true;">
                         <div class="card-content">
                             <div class="platform-logo">
                                 <img src="https://www.google.com/s2/favicons?domain=kast.xyz&sz=128" alt="Kast Finance" onerror="this.src='https://logo.clearbit.com/usekast.com'">
@@ -353,7 +372,7 @@
                     </div>
 
                     <!-- Offramp -->
-                    <div class="platform-card" data-platform="offramp">
+                    <div class="platform-card" data-platform="offramp" onclick="trackPlatformClick('Offramp', 'Crypto Card'); return true;">
                         <div class="card-content">
                             <div class="platform-logo">
                                 <img src="https://logo.clearbit.com/offramp.xyz" alt="Offramp" onerror="this.src='https://www.google.com/s2/favicons?domain=offramp.xyz&sz=64'">
@@ -363,7 +382,7 @@
                     </div>
 
                     <!-- Ether.fi -->
-                    <div class="platform-card" data-platform="etherfi">
+                    <div class="platform-card" data-platform="etherfi" onclick="trackPlatformClick('Ether.fi', 'Crypto Card'); return true;">
                         <div class="card-content">
                             <div class="platform-logo">
                                 <img src="https://logo.clearbit.com/ether.fi" alt="Ether.fi" onerror="this.src='https://www.google.com/s2/favicons?domain=ether.fi&sz=64'">
@@ -373,7 +392,7 @@
                     </div>
 
                     <!-- Cypher -->
-                    <div class="platform-card" data-platform="cypher">
+                    <div class="platform-card" data-platform="cypher" onclick="trackPlatformClick('Cypher', 'Crypto Card'); return true;">
                         <div class="card-content">
                             <div class="platform-logo">
                                 <img src="https://logo.clearbit.com/cypherhq.io" alt="Cypher" onerror="this.src='https://www.google.com/s2/favicons?domain=cypherhq.io&sz=64'">
@@ -383,7 +402,7 @@
                     </div>
 
                     <!-- OrbitX -->
-                    <div class="platform-card" data-platform="orbitx">
+                    <div class="platform-card" data-platform="orbitx" onclick="trackPlatformClick('OrbitX', 'Crypto Card'); return true;">
                         <div class="card-content">
                             <div class="platform-logo">
                                 <img src="https://orbitxpay.com/favicon.ico" alt="OrbitX" onerror="this.src='https://logo.clearbit.com/orbitxpay.com'">
@@ -445,7 +464,7 @@
             <div class="horizontal-scroll-container">
                 <div class="horizontal-cards-grid">
                     <!-- Xverse Wallet -->
-                    <div class="platform-card" data-platform="xverse">
+                    <div class="platform-card" data-platform="xverse" onclick="trackPlatformClick('Xverse Wallet', 'Hot Wallet'); return true;">
                         <div class="card-content">
                             <div class="platform-logo">
                                 <img src="https://xverse.app/favicon.ico" alt="Xverse Wallet" onerror="this.src='https://www.google.com/s2/favicons?domain=xverse.app&sz=64'">
@@ -455,7 +474,7 @@
                     </div>
 
                     <!-- Phantom -->
-                    <div class="platform-card" data-platform="phantom">
+                    <div class="platform-card" data-platform="phantom" onclick="trackPlatformClick('Phantom', 'Hot Wallet'); return true;">
                         <div class="card-content">
                             <div class="platform-logo">
                                 <img src="https://logo.clearbit.com/phantom.app" alt="Phantom" onerror="this.src='https://www.google.com/s2/favicons?domain=phantom.app&sz=64'">
@@ -465,7 +484,7 @@
                     </div>
 
                     <!-- Slush -->
-                    <div class="platform-card" data-platform="slush">
+                    <div class="platform-card" data-platform="slush" onclick="trackPlatformClick('Slush', 'Hot Wallet'); return true;">
                         <div class="card-content">
                             <div class="platform-logo">
                                 <img src="https://logo.clearbit.com/slush.app" alt="Slush" onerror="this.src='https://www.google.com/s2/favicons?domain=slush.app&sz=64'">
@@ -475,7 +494,7 @@
                     </div>
 
                     <!-- Magic Eden Wallet -->
-                    <div class="platform-card" data-platform="magiceden">
+                    <div class="platform-card" data-platform="magiceden" onclick="trackPlatformClick('Magic Eden Wallet', 'Hot Wallet'); return true;">
                         <div class="card-content">
                             <div class="platform-logo">
                                 <img src="https://logo.clearbit.com/magiceden.io" alt="Magic Eden Wallet" onerror="this.src='https://www.google.com/s2/favicons?domain=magiceden.io&sz=64'">
@@ -485,7 +504,7 @@
                     </div>
 
                     <!-- Rabby -->
-                    <div class="platform-card" data-platform="rabby">
+                    <div class="platform-card" data-platform="rabby" onclick="trackPlatformClick('Rabby', 'Hot Wallet'); return true;">
                         <div class="card-content">
                             <div class="platform-logo">
                                 <img src="https://logo.clearbit.com/rabby.io" alt="Rabby" onerror="this.src='https://www.google.com/s2/favicons?domain=rabby.io&sz=64'">
@@ -495,7 +514,7 @@
                     </div>
 
                     <!-- UniSat -->
-                    <div class="platform-card" data-platform="unisat">
+                    <div class="platform-card" data-platform="unisat" onclick="trackPlatformClick('UniSat', 'Hot Wallet'); return true;">
                         <div class="card-content">
                             <div class="platform-logo">
                                 <img src="https://logo.clearbit.com/unisat.io" alt="UniSat" onerror="this.src='https://www.google.com/s2/favicons?domain=unisat.io&sz=64'">
