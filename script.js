@@ -29,7 +29,7 @@ class CryptoAgregator {
                 'cold-wallets-title': 'Cold Wallets',
                 'cold-wallets-subtitle': 'Carteiras físicas offline para máxima segurança',
                 'partner-badge': 'Parceiro Oficial',
-                'bitget-hero-description': 'Carteira Web3 multi-chain líder com suporte completo a DeFi, NFTs e trading. Milhões de usuários confiam na Bitget para gerenciar seus ativos digitais com segurança.',
+                'bitget-hero-description': 'Carteira Web3 multi-chain líder com suporte completo a DeFi, NFTs e trading. Mais de 60 milhões de usuários confiam na Bitget para gerenciar seus ativos digitais com segurança.',
                 'bitget-cta': 'Acessar Agora',
                 'feature-secure': '100% Seguro',
                 'feature-fast': 'Ultra Rápido',
@@ -65,7 +65,7 @@ class CryptoAgregator {
                 'cold-wallets-title': 'Cold Wallets',
                 'cold-wallets-subtitle': 'Offline physical wallets for maximum security',
                 'partner-badge': 'Official Partner',
-                'bitget-hero-description': 'Leading multi-chain Web3 wallet with complete support for DeFi, NFTs and trading. Millions of users trust Bitget to manage their digital assets securely.',
+                'bitget-hero-description': 'Leading Web3 multi-chain wallet with full DeFi, NFT and trading support. Over 60 million users trust Bitget to manage their digital assets securely.',
                 'bitget-cta': 'Access Now',
                 'feature-secure': '100% Secure',
                 'feature-fast': 'Ultra Fast',
@@ -82,12 +82,12 @@ class CryptoAgregator {
         this.platformData = {
             'bitget-featured': {
                 name: 'Bitget Wallet',
-                url: 'https://newshare.bwb.global/pt_br/invite_earn_coin?inviteCode=VdkFyq&deepLinkType=card&utmSource=referral2.0_copyLink',
+                url: 'https://newshare.bwb.global/en/invite_earn_coin?inviteCode=SJQDBe&deepLinkType=card&utmSource=referral2.0_copyLink',
                 logo: 'https://logo.clearbit.com/bitget.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=bitget.com&sz=64',
                 description: {
-                    pt: 'Carteira Web3 multi-chain líder com suporte completo a DeFi, NFTs e trading. Interface amigável para iniciantes e usuários avançados.',
-                    en: 'Leading multi-chain Web3 wallet with complete DeFi, NFTs and trading support. User-friendly interface for beginners and advanced users.'
+                    pt: 'Carteira Web3 multi-chain líder com suporte completo a DeFi, NFTs e trading. Mais de 60 milhões de usuários confiam na Bitget para gerenciar seus ativos digitais com segurança.',
+                    en: 'Leading Web3 multi-chain wallet with full DeFi, NFT and trading support. Over 60 million users trust Bitget to manage their digital assets securely.'
                 }
             },
             'comprecripto': {
