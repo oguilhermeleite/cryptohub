@@ -1131,13 +1131,56 @@ body {
     50% { transform: scale(1.05); }
 }
 
-/* Scroll Indicators */
+/* Carousel Navigation Container */
+.carousel-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto 0;
+    padding-bottom: 2rem;
+    gap: 20px;
+}
+
+/* Carousel Arrow Buttons */
+.carousel-arrow {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(247, 147, 26, 0.2);
+    border: 2px solid rgba(247, 147, 26, 0.5);
+    color: #f7931a;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.carousel-arrow:hover:not(:disabled) {
+    transform: scale(1.1);
+    background: rgba(247, 147, 26, 0.3);
+    border-color: rgba(247, 147, 26, 0.8);
+}
+
+.carousel-arrow:active:not(:disabled) {
+    transform: scale(1.05);
+}
+
+.carousel-arrow:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* Scroll Indicators (Dots) */
 .scroll-indicator {
     display: flex;
     justify-content: center;
     gap: 0.5rem;
-    margin-top: 2rem;
-    padding-bottom: 2rem;
+    flex: 1;
 }
 
 .scroll-dot {
@@ -1156,6 +1199,17 @@ body {
 
 .scroll-dot:hover {
     background: #f7931a;
+}
+
+/* Hide arrows on mobile, keep dots centered */
+@media (max-width: 768px) {
+    .carousel-arrow {
+        display: none;
+    }
+
+    .carousel-navigation {
+        justify-content: center;
+    }
 }
 
 /* Modal Styles */
@@ -1820,4 +1874,18 @@ a:focus,
         position: relative;
         overflow: visible;
     }
+}
+
+/* Desktop Carousel Drag Cursor */
+.horizontal-cards-grid {
+    cursor: grab;
+    user-select: none;
+}
+
+.horizontal-cards-grid.dragging {
+    cursor: grabbing;
+}
+
+.horizontal-cards-grid:active {
+    cursor: grabbing;
 }

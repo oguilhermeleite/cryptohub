@@ -960,6 +960,132 @@ class CryptoAgregator {
 
             // Update on window resize
             window.addEventListener('resize', this.debounce(updateScrollIndicators, 250));
+
+            // ===== ENHANCED DESKTOP CAROUSEL NAVIGATION =====
+
+            // 1. ARROW BUTTON NAVIGATION
+            const leftArrow = container.parentElement.querySelector('.carousel-arrow-left');
+            const rightArrow = container.parentElement.querySelector('.carousel-arrow-right');
+
+            const scrollOneCard = (direction) => {
+                const cards = container.querySelectorAll('.platform-card');
+                if (cards.length === 0) return;
+
+                const cardWidth = cards[0].offsetWidth;
+                const gap = window.innerWidth <= 768 ? 20 : 32;
+                const scrollAmount = cardWidth + gap;
+
+                const targetScroll = container.scrollLeft + (direction === 'right' ? scrollAmount : -scrollAmount);
+
+                container.scrollTo({
+                    left: targetScroll,
+                    behavior: 'smooth'
+                });
+
+                setTimeout(() => {
+                    updateScrollIndicators();
+                    updateArrowStates();
+                }, 400);
+            };
+
+            const updateArrowStates = () => {
+                if (!leftArrow || !rightArrow) return;
+
+                const isAtStart = container.scrollLeft <= 1;
+                const isAtEnd = container.scrollLeft >= container.scrollWidth - container.offsetWidth - 1;
+
+                leftArrow.disabled = isAtStart;
+                rightArrow.disabled = isAtEnd;
+            };
+
+            if (leftArrow) {
+                leftArrow.addEventListener('click', () => scrollOneCard('left'));
+            }
+
+            if (rightArrow) {
+                rightArrow.addEventListener('click', () => scrollOneCard('right'));
+            }
+
+            // Update arrow states on scroll
+            container.addEventListener('scroll', this.debounce(updateArrowStates, 50));
+            updateArrowStates();
+
+            // 2. MOUSE DRAG NAVIGATION (Desktop)
+            let isDragging = false;
+            let dragStartX = 0;
+            let dragScrollLeft = 0;
+
+            const handleDragStart = (e) => {
+                if (e.touches) return; // Skip for touch devices
+                isDragging = true;
+                dragStartX = e.pageX - container.offsetLeft;
+                dragScrollLeft = container.scrollLeft;
+                container.classList.add('dragging');
+            };
+
+            const handleDragMove = (e) => {
+                if (!isDragging || e.touches) return;
+                e.preventDefault();
+                const x = e.pageX - container.offsetLeft;
+                const walk = (x - dragStartX) * 2; // Scroll speed multiplier
+                container.scrollLeft = dragScrollLeft - walk;
+            };
+
+            const handleDragEnd = () => {
+                if (!isDragging) return;
+                isDragging = false;
+                container.classList.remove('dragging');
+            };
+
+            container.addEventListener('mousedown', handleDragStart);
+            container.addEventListener('mousemove', handleDragMove);
+            container.addEventListener('mouseup', handleDragEnd);
+            container.addEventListener('mouseleave', handleDragEnd);
+
+            // 3. MOUSE WHEEL HORIZONTAL SCROLLING
+            const handleWheel = (e) => {
+                // Only on desktop
+                if (window.innerWidth <= 768) return;
+
+                // Prevent default vertical scroll
+                if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+                    e.preventDefault();
+                    container.scrollLeft += e.deltaY;
+                    updateScrollIndicators();
+                    updateArrowStates();
+                }
+            };
+
+            container.addEventListener('wheel', handleWheel, { passive: false });
+
+            // 4. KEYBOARD NAVIGATION
+            const handleKeyboard = (e) => {
+                // Only when container is in viewport
+                const rect = container.getBoundingClientRect();
+                const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+
+                if (!isInView) return;
+
+                if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    scrollOneCard('left');
+                } else if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    scrollOneCard('right');
+                }
+            };
+
+            // Add keyboard listener when container is focused/visible
+            let keyboardListenerAdded = false;
+            const addKeyboardListener = () => {
+                if (!keyboardListenerAdded) {
+                    document.addEventListener('keydown', handleKeyboard);
+                    keyboardListenerAdded = true;
+                }
+            };
+
+            container.addEventListener('mouseenter', addKeyboardListener);
+            container.addEventListener('focus', addKeyboardListener);
         });
     }
 
