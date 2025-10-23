@@ -130,6 +130,16 @@ class CryptoAgregator {
                     en: 'Kryptera is a Brazilian P2P platform that allows paying bills and Pix directly with cryptocurrencies, without KYC and without limits. Offers instant withdrawals, direct crypto-to-fiat conversion and complete financial freedom in using your assets.'
                 }
             },
+            '4pfinance': {
+                name: '4P Finance',
+                url: 'https://4p.finance/DOGDAMASSA',
+                logo: 'https://www.google.com/s2/favicons?domain=4p.finance&sz=128',
+                fallbackLogo: 'https://logo.clearbit.com/4p.finance',
+                description: {
+                    pt: 'Maior plataforma P2P do Brasil. Compre e venda criptomoedas via Pix direto da blockchain para sua carteira sem custódia.',
+                    en: 'Brazil\'s largest P2P platform. Buy and sell crypto via Pix directly from blockchain to your wallet without custody.'
+                }
+            },
             'binance': {
                 name: 'Binance',
                 url: 'https://www.binance.com/activity/referral-entry/CPA?ref=CPA_0001DCF8M6',
