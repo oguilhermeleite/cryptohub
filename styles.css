@@ -135,7 +135,7 @@ body {
 
     /* Center carousels when they have few items that don't overflow */
     .horizontal-cards-grid:has(.platform-card:only-child),
-    .horizontal-cards-grid:has(.platform-card:first-child:nth-last-child(-n+2)) {
+    .horizontal-cards-grid:has(.platform-card:first-child:nth-last-child(-n+3)) {
         justify-content: center;
     }
 }
