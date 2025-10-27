@@ -290,6 +290,26 @@ class CryptoAgregator {
                     en: 'Revolut is an all-in-one digital bank used by 60+ million customers globally. It offers banking services, investments, and crypto trading, allowing you to buy, sell, and exchange 210+ cryptocurrencies with competitive fees and intuitive interface.'
                 }
             },
+            'bitybank': {
+                name: 'Bitybank',
+                url: 'https://bity.com.br/mgm/180879',
+                logo: 'https://www.google.com/s2/favicons?domain=bity.com.br&sz=128',
+                fallbackLogo: 'https://logo.clearbit.com/bity.com.br',
+                description: {
+                    pt: 'Banco cripto digital com cartão Mastercard, cashback de até 10% em Bitcoin e +100 criptomoedas. Maior volume de negociação do Brasil.',
+                    en: 'Digital crypto bank with Mastercard, up to 10% Bitcoin cashback and +100 cryptocurrencies. Brazil\'s highest Bitcoin trading volume.'
+                }
+            },
+            'neobankless': {
+                name: 'Neobankless',
+                url: 'https://neobankless.com/dogdamassa',
+                logo: 'https://www.google.com/s2/favicons?domain=neobankless.com&sz=128',
+                fallbackLogo: 'https://logo.clearbit.com/neobankless.com',
+                description: {
+                    pt: 'Conta global em dólar com rendimento automático, taxa de 0,5% e parcelamento em 12x. Dolarize via PIX com autocustódia total.',
+                    en: 'Global dollar account with automatic yield, 0.5% fee and 12x installments. Dollarize via PIX with full self-custody.'
+                }
+            },
             'xverse': {
                 name: 'Xverse Wallet',
                 url: 'https://www.xverse.app/?utm_campaign=dogdamassa&fbclid=PAZnRzaANI0IBleHRuA2FlbQIxMQABpxeUZWEqzLu82FgMlCTcA4tRAwBA-H4ilQnR2PCxs4r78yqbldkLOKz4SvmN_aem_R_LGjSLfZSg96jqS-fbWwA',
