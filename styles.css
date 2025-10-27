@@ -130,13 +130,23 @@ body {
         /* Auto-center when content doesn't overflow, flex-start when it does */
         justify-content: flex-start;
         padding-left: 0;
+        padding-right: 0;
         margin-left: 0;
+        margin-right: 0;
     }
 
     /* Center carousels when they have few items that don't overflow */
     .horizontal-cards-grid:has(.platform-card:only-child),
     .horizontal-cards-grid:has(.platform-card:first-child:nth-last-child(-n+3)) {
         justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+    }
+
+    /* Ensure cards don't shrink on desktop */
+    .platform-card {
+        flex-shrink: 0;
     }
 }
 
