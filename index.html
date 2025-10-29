@@ -68,10 +68,10 @@
                     <li><a href="#featured" data-section="featured"><span data-lang="nav-home">Home</span></a></li>
                     <li><a href="#p2p" data-section="p2p">P2P</a></li>
                     <li><a href="#exchanges" data-section="exchanges">Exchanges</a></li>
-                    <li><a href="#bridges" data-section="bridges"><span data-lang="nav-bridges">Bridges</span></a></li>
+                    <li><a href="#hot-wallets" data-section="wallets"><span data-lang="nav-wallets">Wallets</span></a></li>
                     <li><a href="#cards" data-section="cards"><span data-lang="nav-cards">Cards</span></a></li>
                     <li><a href="#banks" data-section="banks"><span data-lang="nav-banks">Banks</span></a></li>
-                    <li><a href="#hot-wallets" data-section="wallets"><span data-lang="nav-wallets">Wallets</span></a></li>
+                    <li><a href="#bridges" data-section="bridges"><span data-lang="nav-bridges">Bridges</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -97,10 +97,10 @@
                     <li><a href="#featured" data-section="featured"><span data-lang="nav-home">Home</span></a></li>
                     <li><a href="#p2p" data-section="p2p">P2P</a></li>
                     <li><a href="#exchanges" data-section="exchanges">Exchanges</a></li>
-                    <li><a href="#bridges" data-section="bridges"><span data-lang="nav-bridges">Bridges</span></a></li>
+                    <li><a href="#hot-wallets" data-section="wallets"><span data-lang="nav-wallets">Wallets</span></a></li>
                     <li><a href="#cards" data-section="cards"><span data-lang="nav-cards">Cards</span></a></li>
                     <li><a href="#banks" data-section="banks"><span data-lang="nav-banks">Banks</span></a></li>
-                    <li><a href="#hot-wallets" data-section="wallets"><span data-lang="nav-wallets">Wallets</span></a></li>
+                    <li><a href="#bridges" data-section="bridges"><span data-lang="nav-bridges">Bridges</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -345,35 +345,90 @@
         </div>
     </section>
 
-    <!-- Bridges Section -->
-    <section class="platform-section" id="bridges">
+    <!-- Hot Wallets Section -->
+    <section class="platform-section" id="hot-wallets">
         <div class="container">
             <div class="section-header">
                 <h3 class="section-title">
-                    <span data-lang="bridges-title">Bridges</span>
+                    <span data-lang="hot-wallets-title">Hot Wallets</span>
                 </h3>
-                <p class="section-subtitle" data-lang="bridges-subtitle">Transfira ativos entre diferentes blockchains</p>
+                <p class="section-subtitle" data-lang="hot-wallets-subtitle">Carteiras online conectadas à internet para uso diário</p>
             </div>
             <div class="horizontal-scroll-container">
                 <div class="horizontal-cards-grid">
-                    <!-- SideShift.ai -->
-                    <div class="platform-card" data-platform="sideshift" onclick="trackPlatformClick('SideShift.ai', 'Bridge'); return true;">
+                    <!-- Xverse Wallet -->
+                    <div class="platform-card" data-platform="xverse" onclick="trackPlatformClick('Xverse Wallet', 'Hot Wallet'); return true;">
                         <div class="card-content">
                             <div class="platform-logo">
-                                <img src="https://logo.clearbit.com/sideshift.ai" alt="SideShift.ai" onerror="this.src='https://www.google.com/s2/favicons?domain=sideshift.ai&sz=128'">
+                                <img src="https://xverse.app/favicon.ico" alt="Xverse Wallet" onerror="this.src='https://www.google.com/s2/favicons?domain=xverse.app&sz=64'">
                             </div>
-                            <h4 class="platform-name">SideShift.ai</h4>
+                            <h4 class="platform-name">Xverse Wallet</h4>
+                        </div>
+                    </div>
+
+                    <!-- Phantom -->
+                    <div class="platform-card" data-platform="phantom" onclick="trackPlatformClick('Phantom', 'Hot Wallet'); return true;">
+                        <div class="card-content">
+                            <div class="platform-logo">
+                                <img src="https://logo.clearbit.com/phantom.app" alt="Phantom" onerror="this.src='https://www.google.com/s2/favicons?domain=phantom.app&sz=64'">
+                            </div>
+                            <h4 class="platform-name">Phantom</h4>
+                        </div>
+                    </div>
+
+                    <!-- Slush -->
+                    <div class="platform-card" data-platform="slush" onclick="trackPlatformClick('Slush', 'Hot Wallet'); return true;">
+                        <div class="card-content">
+                            <div class="platform-logo">
+                                <img src="https://logo.clearbit.com/slush.app" alt="Slush" onerror="this.src='https://www.google.com/s2/favicons?domain=slush.app&sz=64'">
+                            </div>
+                            <h4 class="platform-name">Slush</h4>
+                        </div>
+                    </div>
+
+                    <!-- Magic Eden Wallet -->
+                    <div class="platform-card" data-platform="magiceden" onclick="trackPlatformClick('Magic Eden Wallet', 'Hot Wallet'); return true;">
+                        <div class="card-content">
+                            <div class="platform-logo">
+                                <img src="https://logo.clearbit.com/magiceden.io" alt="Magic Eden Wallet" onerror="this.src='https://www.google.com/s2/favicons?domain=magiceden.io&sz=64'">
+                            </div>
+                            <h4 class="platform-name">Magic Eden Wallet</h4>
+                        </div>
+                    </div>
+
+                    <!-- Rabby -->
+                    <div class="platform-card" data-platform="rabby" onclick="trackPlatformClick('Rabby', 'Hot Wallet'); return true;">
+                        <div class="card-content">
+                            <div class="platform-logo">
+                                <img src="https://logo.clearbit.com/rabby.io" alt="Rabby" onerror="this.src='https://www.google.com/s2/favicons?domain=rabby.io&sz=64'">
+                            </div>
+                            <h4 class="platform-name">Rabby</h4>
+                        </div>
+                    </div>
+
+                    <!-- UniSat -->
+                    <div class="platform-card" data-platform="unisat" onclick="trackPlatformClick('UniSat', 'Hot Wallet'); return true;">
+                        <div class="card-content">
+                            <div class="platform-logo">
+                                <img src="https://logo.clearbit.com/unisat.io" alt="UniSat" onerror="this.src='https://www.google.com/s2/favicons?domain=unisat.io&sz=64'">
+                            </div>
+                            <h4 class="platform-name">UniSat</h4>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-navigation">
-                    <button class="carousel-arrow carousel-arrow-left" aria-label="Previous" data-carousel="bridges">
+                    <button class="carousel-arrow carousel-arrow-left" aria-label="Previous" data-carousel="hot-wallets">
                         ←
                     </button>
                     <div class="scroll-indicator">
                         <div class="scroll-dot active"></div>
+                        <div class="scroll-dot"></div>
+                        <div class="scroll-dot"></div>
+                        <div class="scroll-dot"></div>
+                        <div class="scroll-dot"></div>
+                        <div class="scroll-dot"></div>
                     </div>
-                    <button class="carousel-arrow carousel-arrow-right" aria-label="Next" data-carousel="bridges">
+                    <button class="carousel-arrow carousel-arrow-right" aria-label="Next" data-carousel="hot-wallets">
                         →
                     </button>
                 </div>
@@ -519,97 +574,6 @@
         </div>
     </section>
 
-    <!-- Hot Wallets Section -->
-    <section class="platform-section" id="hot-wallets">
-        <div class="container">
-            <div class="section-header">
-                <h3 class="section-title">
-                    <span data-lang="hot-wallets-title">Hot Wallets</span>
-                </h3>
-                <p class="section-subtitle" data-lang="hot-wallets-subtitle">Carteiras online conectadas à internet para uso diário</p>
-            </div>
-            <div class="horizontal-scroll-container">
-                <div class="horizontal-cards-grid">
-                    <!-- Xverse Wallet -->
-                    <div class="platform-card" data-platform="xverse" onclick="trackPlatformClick('Xverse Wallet', 'Hot Wallet'); return true;">
-                        <div class="card-content">
-                            <div class="platform-logo">
-                                <img src="https://xverse.app/favicon.ico" alt="Xverse Wallet" onerror="this.src='https://www.google.com/s2/favicons?domain=xverse.app&sz=64'">
-                            </div>
-                            <h4 class="platform-name">Xverse Wallet</h4>
-                        </div>
-                    </div>
-
-                    <!-- Phantom -->
-                    <div class="platform-card" data-platform="phantom" onclick="trackPlatformClick('Phantom', 'Hot Wallet'); return true;">
-                        <div class="card-content">
-                            <div class="platform-logo">
-                                <img src="https://logo.clearbit.com/phantom.app" alt="Phantom" onerror="this.src='https://www.google.com/s2/favicons?domain=phantom.app&sz=64'">
-                            </div>
-                            <h4 class="platform-name">Phantom</h4>
-                        </div>
-                    </div>
-
-                    <!-- Slush -->
-                    <div class="platform-card" data-platform="slush" onclick="trackPlatformClick('Slush', 'Hot Wallet'); return true;">
-                        <div class="card-content">
-                            <div class="platform-logo">
-                                <img src="https://logo.clearbit.com/slush.app" alt="Slush" onerror="this.src='https://www.google.com/s2/favicons?domain=slush.app&sz=64'">
-                            </div>
-                            <h4 class="platform-name">Slush</h4>
-                        </div>
-                    </div>
-
-                    <!-- Magic Eden Wallet -->
-                    <div class="platform-card" data-platform="magiceden" onclick="trackPlatformClick('Magic Eden Wallet', 'Hot Wallet'); return true;">
-                        <div class="card-content">
-                            <div class="platform-logo">
-                                <img src="https://logo.clearbit.com/magiceden.io" alt="Magic Eden Wallet" onerror="this.src='https://www.google.com/s2/favicons?domain=magiceden.io&sz=64'">
-                            </div>
-                            <h4 class="platform-name">Magic Eden Wallet</h4>
-                        </div>
-                    </div>
-
-                    <!-- Rabby -->
-                    <div class="platform-card" data-platform="rabby" onclick="trackPlatformClick('Rabby', 'Hot Wallet'); return true;">
-                        <div class="card-content">
-                            <div class="platform-logo">
-                                <img src="https://logo.clearbit.com/rabby.io" alt="Rabby" onerror="this.src='https://www.google.com/s2/favicons?domain=rabby.io&sz=64'">
-                            </div>
-                            <h4 class="platform-name">Rabby</h4>
-                        </div>
-                    </div>
-
-                    <!-- UniSat -->
-                    <div class="platform-card" data-platform="unisat" onclick="trackPlatformClick('UniSat', 'Hot Wallet'); return true;">
-                        <div class="card-content">
-                            <div class="platform-logo">
-                                <img src="https://logo.clearbit.com/unisat.io" alt="UniSat" onerror="this.src='https://www.google.com/s2/favicons?domain=unisat.io&sz=64'">
-                            </div>
-                            <h4 class="platform-name">UniSat</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-navigation">
-                    <button class="carousel-arrow carousel-arrow-left" aria-label="Previous" data-carousel="hot-wallets">
-                        ←
-                    </button>
-                    <div class="scroll-indicator">
-                        <div class="scroll-dot active"></div>
-                        <div class="scroll-dot"></div>
-                        <div class="scroll-dot"></div>
-                        <div class="scroll-dot"></div>
-                        <div class="scroll-dot"></div>
-                        <div class="scroll-dot"></div>
-                    </div>
-                    <button class="carousel-arrow carousel-arrow-right" aria-label="Next" data-carousel="hot-wallets">
-                        →
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Cold Wallets Section -->
     <section class="platform-section" id="cold-wallets">
         <div class="container">
@@ -639,6 +603,42 @@
                         <div class="scroll-dot active"></div>
                     </div>
                     <button class="carousel-arrow carousel-arrow-right" aria-label="Next" data-carousel="cold-wallets">
+                        →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bridges Section -->
+    <section class="platform-section" id="bridges">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title">
+                    <span data-lang="bridges-title">Bridges</span>
+                </h3>
+                <p class="section-subtitle" data-lang="bridges-subtitle">Transfira ativos entre diferentes blockchains</p>
+            </div>
+            <div class="horizontal-scroll-container">
+                <div class="horizontal-cards-grid">
+                    <!-- SideShift.ai -->
+                    <div class="platform-card" data-platform="sideshift" onclick="trackPlatformClick('SideShift.ai', 'Bridge'); return true;">
+                        <div class="card-content">
+                            <div class="platform-logo">
+                                <img src="https://logo.clearbit.com/sideshift.ai" alt="SideShift.ai" onerror="this.src='https://www.google.com/s2/favicons?domain=sideshift.ai&sz=128'">
+                            </div>
+                            <h4 class="platform-name">SideShift.ai</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-navigation">
+                    <button class="carousel-arrow carousel-arrow-left" aria-label="Previous" data-carousel="bridges">
+                        ←
+                    </button>
+                    <div class="scroll-indicator">
+                        <div class="scroll-dot active"></div>
+                    </div>
+                    <button class="carousel-arrow carousel-arrow-right" aria-label="Next" data-carousel="bridges">
                         →
                     </button>
                 </div>
@@ -681,10 +681,10 @@
                             <li><a href="#featured"><span data-lang="nav-home">Home</span></a></li>
                             <li><a href="#p2p">P2P</a></li>
                             <li><a href="#exchanges">Exchanges</a></li>
-                            <li><a href="#bridges"><span data-lang="nav-bridges">Bridges</span></a></li>
+                            <li><a href="#hot-wallets"><span data-lang="nav-wallets">Wallets</span></a></li>
                             <li><a href="#cards"><span data-lang="nav-cards">Cards</span></a></li>
                             <li><a href="#banks"><span data-lang="nav-banks">Banks</span></a></li>
-                            <li><a href="#hot-wallets"><span data-lang="nav-wallets">Wallets</span></a></li>
+                            <li><a href="#bridges"><span data-lang="nav-bridges">Bridges</span></a></li>
                         </ul>
                     </div>
                 </div>
