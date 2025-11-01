@@ -38,7 +38,8 @@ class CryptoAgregator {
                 'back': 'Voltar',
                 'footer-desc': 'Sua porta de entrada completa para o mundo cripto',
                 'footer-services': 'Serviços',
-                'footer-rights': 'Todos os direitos reservados.'
+                'footer-rights': 'Todos os direitos reservados.',
+                'coming-soon': 'Em breve'
             },
             en: {
                 'hero-title': 'Your complete gateway to the Crypto World',
@@ -74,7 +75,8 @@ class CryptoAgregator {
                 'back': 'Back',
                 'footer-desc': 'Your complete gateway to the crypto world',
                 'footer-services': 'Services',
-                'footer-rights': 'All rights reserved.'
+                'footer-rights': 'All rights reserved.',
+                'coming-soon': 'Coming soon'
             }
         };
 
@@ -1347,6 +1349,61 @@ function setupPerformanceMonitoring() {
     }
 }
 
+// Connect Modal Management
+function setupConnectModal() {
+    const connectModal = document.getElementById('connectModal');
+    const connectButton = document.getElementById('connectButton');
+    const mobileConnectButton = document.getElementById('mobileConnectButton');
+
+    if (!connectModal || !connectButton || !mobileConnectButton) {
+        console.warn('Connect modal elements not found');
+        return;
+    }
+
+    // Function to open modal
+    function openConnectModal() {
+        connectModal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+    }
+
+    // Function to close modal
+    function closeConnectModal() {
+        connectModal.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+
+    // Desktop Connect button click
+    connectButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        openConnectModal();
+    });
+
+    // Mobile Connect button click
+    mobileConnectButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        openConnectModal();
+        // Also close mobile menu if open
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        if (mobileMenuOverlay && mobileMenuOverlay.classList.contains('active')) {
+            mobileMenuOverlay.classList.remove('active');
+        }
+    });
+
+    // Close modal when clicking outside (on backdrop)
+    connectModal.addEventListener('click', (e) => {
+        if (e.target === connectModal) {
+            closeConnectModal();
+        }
+    });
+
+    // Close modal on ESC key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && connectModal.classList.contains('active')) {
+            closeConnectModal();
+        }
+    });
+}
+
 // Theme Management
 function setupThemeManagement() {
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
@@ -1362,6 +1419,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.cryptoAgregator = new CryptoAgregator();
         setupPerformanceMonitoring();
         setupThemeManagement();
+        setupConnectModal();
 
         console.log('Crypto Agregator initialized successfully');
     } catch (error) {

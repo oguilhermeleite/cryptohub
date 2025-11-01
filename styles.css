@@ -210,8 +210,9 @@ body {
 /* Header Bottom Row - Navigation */
 .navigation {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .nav-menu {
@@ -219,6 +220,7 @@ body {
     list-style: none;
     gap: 40px;
     justify-content: center;
+    flex: 1;
 }
 
 .nav-menu a {
@@ -250,6 +252,32 @@ body {
 
 .nav-menu a:hover::after {
     width: 80%;
+}
+
+/* Connect Button - Desktop Header */
+.connect-button {
+    background: linear-gradient(135deg, #f7931a 0%, #ffb347 100%);
+    color: #000000;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(247, 147, 26, 0.3);
+    white-space: nowrap;
+    margin-left: 40px;
+}
+
+.connect-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(247, 147, 26, 0.5);
+    background: linear-gradient(135deg, #ffb347 0%, #f7931a 100%);
+}
+
+.connect-button:active {
+    transform: translateY(0);
 }
 
 /* Header Controls Container (Theme + Language) */
@@ -455,6 +483,27 @@ body {
     background: var(--accent-primary);
     color: #000000;
     transform: scale(1.05);
+}
+
+/* Mobile Connect Button */
+.mobile-connect-button {
+    background: linear-gradient(135deg, #f7931a 0%, #ffb347 100%);
+    color: #000000;
+    border: none;
+    width: calc(100% - 3rem);
+    margin: 0 1.5rem;
+    height: 50px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(247, 147, 26, 0.3);
+}
+
+.mobile-connect-button:hover {
+    background: linear-gradient(135deg, #ffb347 0%, #f7931a 100%);
+    box-shadow: 0 4px 12px rgba(247, 147, 26, 0.5);
 }
 
 /* Mobile Theme Toggle */
@@ -1222,6 +1271,51 @@ body {
     }
 }
 
+/* Connect Modal - Coming Soon */
+.connect-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2500;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.connect-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.connect-modal-content {
+    background: var(--bg-modal);
+    border: 1px solid var(--border-primary);
+    border-radius: 12px;
+    padding: 40px;
+    min-width: 280px;
+    text-align: center;
+    transform: scale(0.9);
+    transition: transform 0.25s ease;
+}
+
+.connect-modal-overlay.active .connect-modal-content {
+    transform: scale(1);
+}
+
+.connect-modal-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
 /* Modal Styles */
 .modal-overlay {
     position: fixed;
@@ -1468,6 +1562,11 @@ body {
 
     /* Hide desktop navigation on mobile */
     .navigation {
+        display: none;
+    }
+
+    /* Hide desktop connect button on mobile */
+    .connect-button {
         display: none;
     }
 
