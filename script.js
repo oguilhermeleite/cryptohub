@@ -1349,58 +1349,56 @@ function setupPerformanceMonitoring() {
     }
 }
 
-// Connect Modal Management
-function setupConnectModal() {
-    const connectModal = document.getElementById('connectModal');
+// Connect Message Management
+function setupConnectMessage() {
     const connectButton = document.getElementById('connectButton');
+    const connectMessage = document.getElementById('connectMessage');
     const mobileConnectButton = document.getElementById('mobileConnectButton');
+    const mobileConnectMessage = document.getElementById('mobileConnectMessage');
 
-    if (!connectModal || !connectButton || !mobileConnectButton) {
-        console.warn('Connect modal elements not found');
+    if (!connectButton || !connectMessage || !mobileConnectButton || !mobileConnectMessage) {
+        console.warn('Connect message elements not found');
         return;
     }
 
-    // Function to open modal
-    function openConnectModal() {
-        connectModal.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Prevent scrolling
-    }
+    let desktopTimeout = null;
+    let mobileTimeout = null;
 
-    // Function to close modal
-    function closeConnectModal() {
-        connectModal.classList.remove('active');
-        document.body.style.overflow = ''; // Restore scrolling
+    // Function to show message with 4-second timeout
+    function showMessage(messageElement, timeoutRef) {
+        // Clear any existing timeout
+        if (timeoutRef === 'desktop' && desktopTimeout) {
+            clearTimeout(desktopTimeout);
+        } else if (timeoutRef === 'mobile' && mobileTimeout) {
+            clearTimeout(mobileTimeout);
+        }
+
+        // Show message
+        messageElement.classList.add('show');
+
+        // Hide after 4 seconds
+        const timeout = setTimeout(() => {
+            messageElement.classList.remove('show');
+        }, 4000);
+
+        // Store timeout reference
+        if (timeoutRef === 'desktop') {
+            desktopTimeout = timeout;
+        } else if (timeoutRef === 'mobile') {
+            mobileTimeout = timeout;
+        }
     }
 
     // Desktop Connect button click
     connectButton.addEventListener('click', (e) => {
         e.preventDefault();
-        openConnectModal();
+        showMessage(connectMessage, 'desktop');
     });
 
     // Mobile Connect button click
     mobileConnectButton.addEventListener('click', (e) => {
         e.preventDefault();
-        openConnectModal();
-        // Also close mobile menu if open
-        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
-        if (mobileMenuOverlay && mobileMenuOverlay.classList.contains('active')) {
-            mobileMenuOverlay.classList.remove('active');
-        }
-    });
-
-    // Close modal when clicking outside (on backdrop)
-    connectModal.addEventListener('click', (e) => {
-        if (e.target === connectModal) {
-            closeConnectModal();
-        }
-    });
-
-    // Close modal on ESC key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && connectModal.classList.contains('active')) {
-            closeConnectModal();
-        }
+        showMessage(mobileConnectMessage, 'mobile');
     });
 }
 
@@ -1419,7 +1417,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.cryptoAgregator = new CryptoAgregator();
         setupPerformanceMonitoring();
         setupThemeManagement();
-        setupConnectModal();
+        setupConnectMessage();
 
         console.log('Crypto Agregator initialized successfully');
     } catch (error) {

@@ -73,9 +73,12 @@
                     <li><a href="#banks" data-section="banks"><span data-lang="nav-banks">Banks</span></a></li>
                     <li><a href="#bridges" data-section="bridges"><span data-lang="nav-bridges">Bridges</span></a></li>
                 </ul>
-                <button class="connect-button" id="connectButton" aria-label="Connect Wallet">
-                    Connect 🔗
-                </button>
+                <div class="connect-container">
+                    <button class="connect-button" id="connectButton" aria-label="Connect Wallet">
+                        Connect
+                    </button>
+                    <p class="connect-message" id="connectMessage" data-lang="coming-soon">Em breve</p>
+                </div>
             </nav>
         </div>
     </header>
@@ -96,9 +99,12 @@
                     </button>
                 </div>
                 <div class="mobile-menu-separator"></div>
-                <button class="mobile-connect-button" id="mobileConnectButton" aria-label="Connect Wallet">
-                    Connect 🔗
-                </button>
+                <div class="mobile-connect-container">
+                    <button class="mobile-connect-button" id="mobileConnectButton" aria-label="Connect Wallet">
+                        Connect
+                    </button>
+                    <p class="mobile-connect-message" id="mobileConnectMessage" data-lang="coming-soon">Em breve</p>
+                </div>
                 <div class="mobile-menu-separator"></div>
                 <ul class="mobile-nav-list">
                     <li><a href="#featured" data-section="featured"><span data-lang="nav-home">Home</span></a></li>
@@ -652,13 +658,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Connect Modal - Coming Soon -->
-    <div class="connect-modal-overlay" id="connectModal">
-        <div class="connect-modal-content">
-            <p class="connect-modal-text" data-lang="coming-soon">Em breve</p>
-        </div>
-    </div>
 
     <!-- Modal Overlay -->
     <div class="modal-overlay" id="platformModal">

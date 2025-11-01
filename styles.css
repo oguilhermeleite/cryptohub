@@ -254,30 +254,56 @@ body {
     width: 80%;
 }
 
+/* Connect Button Container - Desktop Header */
+.connect-container {
+    position: relative;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* Connect Button - Desktop Header */
 .connect-button {
-    background: linear-gradient(135deg, #f7931a 0%, #ffb347 100%);
-    color: #000000;
+    background: #F4B740;
+    color: #1a1a1a;
     border: none;
-    padding: 12px 20px;
+    padding: 12px 24px;
     border-radius: 14px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(247, 147, 26, 0.3);
+    transition: background-color 0.2s ease;
     white-space: nowrap;
-    margin-left: 40px;
 }
 
 .connect-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(247, 147, 26, 0.5);
-    background: linear-gradient(135deg, #ffb347 0%, #f7931a 100%);
+    background: #FFD166;
 }
 
 .connect-button:active {
-    transform: translateY(0);
+    background: #E5A830;
+}
+
+/* Connect Message - Appears below button */
+.connect-message {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: var(--text-tertiary);
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.connect-message.show {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Header Controls Container (Theme + Language) */
@@ -485,25 +511,53 @@ body {
     transform: scale(1.05);
 }
 
-/* Mobile Connect Button */
-.mobile-connect-button {
-    background: linear-gradient(135deg, #f7931a 0%, #ffb347 100%);
-    color: #000000;
-    border: none;
+/* Mobile Connect Button Container */
+.mobile-connect-container {
+    position: relative;
     width: calc(100% - 3rem);
     margin: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Mobile Connect Button */
+.mobile-connect-button {
+    background: #F4B740;
+    color: #1a1a1a;
+    border: none;
+    width: 100%;
     height: 50px;
     border-radius: 12px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.2s ease;
     font-size: 1rem;
     font-weight: 600;
-    box-shadow: 0 2px 8px rgba(247, 147, 26, 0.3);
 }
 
 .mobile-connect-button:hover {
-    background: linear-gradient(135deg, #ffb347 0%, #f7931a 100%);
-    box-shadow: 0 4px 12px rgba(247, 147, 26, 0.5);
+    background: #FFD166;
+}
+
+.mobile-connect-button:active {
+    background: #E5A830;
+}
+
+/* Mobile Connect Message */
+.mobile-connect-message {
+    font-size: 14px;
+    color: var(--text-tertiary);
+    margin: 10px 0 0 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease;
+    text-align: center;
+    pointer-events: none;
+}
+
+.mobile-connect-message.show {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Mobile Theme Toggle */
@@ -1271,51 +1325,6 @@ body {
     }
 }
 
-/* Connect Modal - Coming Soon */
-.connect-modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(10px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2500;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.25s ease, visibility 0.25s ease;
-}
-
-.connect-modal-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.connect-modal-content {
-    background: var(--bg-modal);
-    border: 1px solid var(--border-primary);
-    border-radius: 12px;
-    padding: 40px;
-    min-width: 280px;
-    text-align: center;
-    transform: scale(0.9);
-    transition: transform 0.25s ease;
-}
-
-.connect-modal-overlay.active .connect-modal-content {
-    transform: scale(1);
-}
-
-.connect-modal-text {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    margin: 0;
-}
-
 /* Modal Styles */
 .modal-overlay {
     position: fixed;
@@ -1566,7 +1575,7 @@ body {
     }
 
     /* Hide desktop connect button on mobile */
-    .connect-button {
+    .connect-container {
         display: none;
     }
 
