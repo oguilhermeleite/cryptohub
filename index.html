@@ -68,6 +68,7 @@
                     <li><a href="#featured" data-section="featured"><span data-lang="nav-home">Home</span></a></li>
                     <li><a href="#p2p" data-section="p2p">P2P</a></li>
                     <li><a href="#exchanges" data-section="exchanges">Exchanges</a></li>
+                    <li><a href="#dexs" data-section="dexs">DEXs</a></li>
                     <li><a href="#hot-wallets" data-section="wallets"><span data-lang="nav-wallets">Wallets</span></a></li>
                     <li><a href="#cards" data-section="cards"><span data-lang="nav-cards">Cards</span></a></li>
                     <li><a href="#banks" data-section="banks"><span data-lang="nav-banks">Banks</span></a></li>
@@ -110,6 +111,7 @@
                     <li><a href="#featured" data-section="featured"><span data-lang="nav-home">Home</span></a></li>
                     <li><a href="#p2p" data-section="p2p">P2P</a></li>
                     <li><a href="#exchanges" data-section="exchanges">Exchanges</a></li>
+                    <li><a href="#dexs" data-section="dexs">DEXs</a></li>
                     <li><a href="#hot-wallets" data-section="wallets"><span data-lang="nav-wallets">Wallets</span></a></li>
                     <li><a href="#cards" data-section="cards"><span data-lang="nav-cards">Cards</span></a></li>
                     <li><a href="#banks" data-section="banks"><span data-lang="nav-banks">Banks</span></a></li>
@@ -351,6 +353,97 @@
                         <div class="scroll-dot"></div>
                     </div>
                     <button class="carousel-arrow carousel-arrow-right" aria-label="Next" data-carousel="exchanges">
+                        →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEXs Section -->
+    <section class="platform-section" id="dexs">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title">
+                    <span>DEXs</span>
+                </h3>
+                <p class="section-subtitle" data-lang="dexs-subtitle">Exchanges descentralizadas para trading sem intermediários</p>
+            </div>
+            <div class="horizontal-scroll-container">
+                <div class="horizontal-cards-grid">
+                    <!-- Uniswap -->
+                    <div class="platform-card" data-platform="uniswap" onclick="trackPlatformClick('Uniswap', 'DEX'); return true;">
+                        <div class="card-content">
+                            <div class="platform-logo">
+                                <img src="https://logo.clearbit.com/uniswap.org" alt="Uniswap" onerror="this.src='https://www.google.com/s2/favicons?domain=uniswap.org&sz=128'">
+                            </div>
+                            <h4 class="platform-name">Uniswap</h4>
+                        </div>
+                    </div>
+
+                    <!-- Jupiter -->
+                    <div class="platform-card" data-platform="jupiter" onclick="trackPlatformClick('Jupiter', 'DEX'); return true;">
+                        <div class="card-content">
+                            <div class="platform-logo">
+                                <img src="https://logo.clearbit.com/jup.ag" alt="Jupiter" onerror="this.src='https://www.google.com/s2/favicons?domain=jup.ag&sz=128'">
+                            </div>
+                            <h4 class="platform-name">Jupiter</h4>
+                        </div>
+                    </div>
+
+                    <!-- Raydium -->
+                    <div class="platform-card" data-platform="raydium" onclick="trackPlatformClick('Raydium', 'DEX'); return true;">
+                        <div class="card-content">
+                            <div class="platform-logo">
+                                <img src="https://logo.clearbit.com/raydium.io" alt="Raydium" onerror="this.src='https://www.google.com/s2/favicons?domain=raydium.io&sz=128'">
+                            </div>
+                            <h4 class="platform-name">Raydium</h4>
+                        </div>
+                    </div>
+
+                    <!-- PancakeSwap -->
+                    <div class="platform-card" data-platform="pancakeswap" onclick="trackPlatformClick('PancakeSwap', 'DEX'); return true;">
+                        <div class="card-content">
+                            <div class="platform-logo">
+                                <img src="https://logo.clearbit.com/pancakeswap.finance" alt="PancakeSwap" onerror="this.src='https://www.google.com/s2/favicons?domain=pancakeswap.finance&sz=128'">
+                            </div>
+                            <h4 class="platform-name">PancakeSwap</h4>
+                        </div>
+                    </div>
+
+                    <!-- Meteora -->
+                    <div class="platform-card" data-platform="meteora" onclick="trackPlatformClick('Meteora', 'DEX'); return true;">
+                        <div class="card-content">
+                            <div class="platform-logo">
+                                <img src="https://logo.clearbit.com/meteora.ag" alt="Meteora" onerror="this.src='https://www.google.com/s2/favicons?domain=meteora.ag&sz=128'">
+                            </div>
+                            <h4 class="platform-name">Meteora</h4>
+                        </div>
+                    </div>
+
+                    <!-- Bitflow -->
+                    <div class="platform-card" data-platform="bitflow" onclick="trackPlatformClick('Bitflow', 'DEX'); return true;">
+                        <div class="card-content">
+                            <div class="platform-logo">
+                                <img src="https://logo.clearbit.com/bitflow.finance" alt="Bitflow" onerror="this.src='https://www.google.com/s2/favicons?domain=bitflow.finance&sz=128'">
+                            </div>
+                            <h4 class="platform-name">Bitflow</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-navigation">
+                    <button class="carousel-arrow carousel-arrow-left" aria-label="Previous" data-carousel="dexs">
+                        ←
+                    </button>
+                    <div class="scroll-indicator">
+                        <div class="scroll-dot active"></div>
+                        <div class="scroll-dot"></div>
+                        <div class="scroll-dot"></div>
+                        <div class="scroll-dot"></div>
+                        <div class="scroll-dot"></div>
+                        <div class="scroll-dot"></div>
+                    </div>
+                    <button class="carousel-arrow carousel-arrow-right" aria-label="Next" data-carousel="dexs">
                         →
                     </button>
                 </div>
@@ -694,6 +787,7 @@
                             <li><a href="#featured"><span data-lang="nav-home">Home</span></a></li>
                             <li><a href="#p2p">P2P</a></li>
                             <li><a href="#exchanges">Exchanges</a></li>
+                            <li><a href="#dexs">DEXs</a></li>
                             <li><a href="#hot-wallets"><span data-lang="nav-wallets">Wallets</span></a></li>
                             <li><a href="#cards"><span data-lang="nav-cards">Cards</span></a></li>
                             <li><a href="#banks"><span data-lang="nav-banks">Banks</span></a></li>

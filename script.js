@@ -18,6 +18,7 @@ class CryptoAgregator {
                 'theme-toggle': 'Tema',
                 'p2p-subtitle': 'Compra e venda direto entre pessoas',
                 'exchanges-subtitle': 'Trading e conversão de criptomoedas',
+                'dexs-subtitle': 'Exchanges descentralizadas para trading sem intermediários',
                 'bridges-title': 'Bridges',
                 'bridges-subtitle': 'Transfira ativos entre diferentes blockchains',
                 'cards-title': 'Crypto Cards',
@@ -55,6 +56,7 @@ class CryptoAgregator {
                 'theme-toggle': 'Theme',
                 'p2p-subtitle': 'Direct buying and selling between people',
                 'exchanges-subtitle': 'Trading and cryptocurrency conversion',
+                'dexs-subtitle': 'Decentralized exchanges for trading without intermediaries',
                 'bridges-title': 'Bridges',
                 'bridges-subtitle': 'Transfer assets between different blockchains',
                 'cards-title': 'Crypto Cards',
@@ -210,6 +212,66 @@ class CryptoAgregator {
                 description: {
                     pt: 'OKX é uma das maiores exchanges do mundo, fundada em 2017. Com mais de 60 milhões de usuários em 100+ países, oferece trading de 350+ criptomoedas com spot, futuros, margin e copy trading.',
                     en: 'OKX is one of the world\'s largest exchanges, founded in 2017. With over 60 million users in 100+ countries, offers trading of 350+ cryptocurrencies with spot, futures, margin and copy trading.'
+                }
+            },
+            'uniswap': {
+                name: 'Uniswap',
+                url: 'https://uniswap.org',
+                logo: 'https://logo.clearbit.com/uniswap.org',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=uniswap.org&sz=128',
+                description: {
+                    pt: 'A maior exchange descentralizada no Ethereum. Troque criptomoedas sem intermediários usando market makers automatizados e pools de liquidez. Acesse liquidez profunda em múltiplas blockchains com taxas mínimas.',
+                    en: 'The largest decentralized exchange on Ethereum. Swap crypto without intermediaries using automated market makers and liquidity pools. Access deep liquidity across multiple blockchains with minimal fees.'
+                }
+            },
+            'jupiter': {
+                name: 'Jupiter',
+                url: 'https://jup.ag',
+                logo: 'https://logo.clearbit.com/jup.ag',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=jup.ag&sz=128',
+                description: {
+                    pt: 'O principal agregador de DEX da Solana. Obtenha o melhor preço e taxas mais baixas roteando negociações entre várias exchanges. A exchange completa para todos.',
+                    en: 'Solana\'s leading DEX aggregator. Get the best price and lowest fees by routing trades across multiple exchanges. The everything exchange for everyone.'
+                }
+            },
+            'raydium': {
+                name: 'Raydium',
+                url: 'https://raydium.io',
+                logo: 'https://logo.clearbit.com/raydium.io',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=raydium.io&sz=128',
+                description: {
+                    pt: 'Um AMM de order book on-chain impulsionando a evolução do DeFi na Solana. Negocie, ganhe e forneça liquidez com transações ultrarrápidas e taxas mínimas.',
+                    en: 'An on-chain order book AMM powering the evolution of DeFi on Solana. Trade, earn and provide liquidity with lightning-fast transactions and minimal fees.'
+                }
+            },
+            'pancakeswap': {
+                name: 'PancakeSwap',
+                url: 'https://pancakeswap.finance',
+                logo: 'https://logo.clearbit.com/pancakeswap.finance',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=pancakeswap.finance&sz=128',
+                description: {
+                    pt: 'A principal DEX na BNB Chain. Negocie, ganhe e vença com as trocas mais rápidas e baratas. Mais de $2B em liquidez e 425.000+ transações diárias em múltiplas blockchains.',
+                    en: 'The leading DEX on BNB Chain. Trade, earn and win with the fastest and cheapest swaps. Over $2B in liquidity and 425,000+ daily transactions across multiple blockchains.'
+                }
+            },
+            'meteora': {
+                name: 'Meteora',
+                url: 'https://meteora.ag',
+                logo: 'https://logo.clearbit.com/meteora.ag',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=meteora.ag&sz=128',
+                description: {
+                    pt: 'Construindo a camada de rendimento mais segura, otimizada e componível na Solana. Uma DEX focada em eficiência de capital através de pools Dynamic Liquidity Market Maker e cofres dinâmicos.',
+                    en: 'Building the most secure, optimized and composable yield layer on Solana. A DEX focused on capital efficiency through Dynamic Liquidity Market Maker pools and dynamic vaults.'
+                }
+            },
+            'bitflow': {
+                name: 'Bitflow',
+                url: 'https://bitflow.finance',
+                logo: 'https://logo.clearbit.com/bitflow.finance',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=bitflow.finance&sz=128',
+                description: {
+                    pt: 'Uma exchange descentralizada para Bitcoiners na blockchain Stacks. Negocie e ganhe com Bitcoin sem intermediários maliciosos, usando contratos inteligentes e pools de liquidez descentralizadas para desbloquear o potencial total do BTC.',
+                    en: 'A decentralized exchange for Bitcoiners on the Stacks blockchain. Trade and earn with Bitcoin without malicious middlemen, using smart contracts and decentralized liquidity pools to unlock BTC\'s full potential.'
                 }
             },
             'sideshift': {
