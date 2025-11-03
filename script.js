@@ -247,8 +247,8 @@ class CryptoAgregator {
             'raydium': {
                 name: 'Raydium',
                 url: 'https://raydium.io',
-                logo: 'https://raydium.io/logo/logo-only-icon.svg',
-                fallbackLogo: 'https://logo.clearbit.com/raydium.io',
+                logo: 'https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R/logo.png',
+                fallbackLogo: 'https://raydium.io/logo/logo-text.svg',
                 description: {
                     pt: 'Um AMM de order book on-chain impulsionando a evolução do DeFi na Solana. Negocie, ganhe e forneça liquidez com transações ultrarrápidas e taxas mínimas.',
                     en: 'An on-chain order book AMM powering the evolution of DeFi on Solana. Trade, earn and provide liquidity with lightning-fast transactions and minimal fees.'
@@ -297,7 +297,7 @@ class CryptoAgregator {
             'jumper': {
                 name: 'Jumper',
                 url: 'https://jumper.exchange/pt',
-                logo: 'https://jumper.exchange/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fjumper-icon.a72e4f0a.png&w=256&q=75',
+                logo: 'https://avatars.githubusercontent.com/u/117061945?s=280&v=4',
                 fallbackLogo: 'https://logo.clearbit.com/jumper.exchange',
                 description: {
                     pt: 'A Exchange Completa de Cripto. Troque e faça bridge de forma integrada em mais de 25 blockchains. Agregando as melhores rotas para qualquer transação de token.',
