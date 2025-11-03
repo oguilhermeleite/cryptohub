@@ -297,8 +297,8 @@ class CryptoAgregator {
             'jumper': {
                 name: 'Jumper',
                 url: 'https://jumper.exchange/pt',
-                logo: 'https://avatars.githubusercontent.com/u/117061945?s=280&v=4',
-                fallbackLogo: 'https://logo.clearbit.com/jumper.exchange',
+                logo: 'https://jumper.exchange/jumper-learn.png',
+                fallbackLogo: 'https://jumper.exchange/favicon.ico',
                 description: {
                     pt: 'A Exchange Completa de Cripto. Troque e faça bridge de forma integrada em mais de 25 blockchains. Agregando as melhores rotas para qualquer transação de token.',
                     en: 'Crypto\'s Everything Exchange. Seamless swap and bridge transactions across 25+ blockchains. Aggregating the best routes for any token transaction.'
