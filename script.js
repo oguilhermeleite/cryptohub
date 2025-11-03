@@ -144,6 +144,16 @@ class CryptoAgregator {
                     en: 'Brazil\'s largest P2P platform. Buy and sell crypto via Pix directly from blockchain to your wallet without custody.'
                 }
             },
+            'pagcrypto': {
+                name: 'PagCrypto',
+                url: 'https://pagcrypto.finance/',
+                logo: 'https://logo.clearbit.com/pagcrypto.finance',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=pagcrypto.finance&sz=128',
+                description: {
+                    pt: 'Pague PIX e boletos brasileiros com criptomoedas. Pagamentos cripto rápidos, simples e seguros para pessoas e empresas na Solana.',
+                    en: 'Pay Brazilian PIX and boletos with cryptocurrency. Fast, simple and secure crypto payments for individuals and businesses on Solana.'
+                }
+            },
             'binance': {
                 name: 'Binance',
                 url: 'https://www.binance.com/activity/referral-entry/CPA?ref=CPA_0001DCF8M6',
@@ -282,6 +292,16 @@ class CryptoAgregator {
                 description: {
                     pt: 'SideShift.ai é uma bridge não-custodial sem cadastro que permite transferências diretas entre 200+ criptomoedas em 42+ blockchains. Processou mais de $2 bilhões em volume com swaps instantâneos e liquidação direta para sua carteira.',
                     en: 'SideShift.ai is a non-custodial bridge with no signup that enables direct transfers between 200+ cryptocurrencies across 42+ blockchains. Processed over $2 billion in volume with instant swaps and direct settlement to your wallet.'
+                }
+            },
+            'jumper': {
+                name: 'Jumper',
+                url: 'https://jumper.exchange/pt',
+                logo: 'https://logo.clearbit.com/jumper.exchange',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=jumper.exchange&sz=128',
+                description: {
+                    pt: 'A Exchange Completa de Cripto. Troque e faça bridge de forma integrada em mais de 25 blockchains. Agregando as melhores rotas para qualquer transação de token.',
+                    en: 'Crypto\'s Everything Exchange. Seamless swap and bridge transactions across 25+ blockchains. Aggregating the best routes for any token transaction.'
                 }
             },
             'bitget': {
