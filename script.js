@@ -284,6 +284,26 @@ class CryptoAgregator {
                     en: 'A decentralized exchange for Bitcoiners on the Stacks blockchain. Trade and earn with Bitcoin without malicious middlemen, using smart contracts and decentralized liquidity pools to unlock BTC\'s full potential.'
                 }
             },
+            'satsterminal': {
+                name: 'Sats Terminal',
+                url: 'https://app.satsterminal.com/en?ref=EVP69',
+                logo: 'https://logo.clearbit.com/satsterminal.com',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=satsterminal.com&sz=128',
+                description: {
+                    pt: 'Protocolo de agregação DeFi para Bitcoin. Negocie, faça stake e bridge de Bitcoin sem complicação. Acesse as melhores taxas de swap e rendimentos entre múltiplos protocolos em uma plataforma simples.',
+                    en: 'Bitcoin DeFi aggregation protocol. Trade, stake, and bridge Bitcoin seamlessly. Access the best swap rates and yields across multiple protocols in one simple platform.'
+                }
+            },
+            'liquidium': {
+                name: 'Liquidium',
+                url: 'https://app.liquidium.wtf/borrow/ordinals',
+                logo: 'https://logo.clearbit.com/liquidium.fi',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=liquidium.wtf&sz=128',
+                description: {
+                    pt: 'Principal protocolo de empréstimos P2P de Bitcoin. Tome emprestado BTC contra Ordinals, Runes e BRC-20. Ganhe até 380% APY emprestando Bitcoin. Não custodial e seguro na Layer-1 do Bitcoin.',
+                    en: 'Leading P2P Bitcoin lending protocol. Borrow BTC against Ordinals, Runes and BRC-20. Earn up to 380% APY by lending Bitcoin. Non-custodial and secure on Bitcoin Layer-1.'
+                }
+            },
             'sideshift': {
                 name: 'SideShift.ai',
                 url: 'https://sideshift.ai/a/UvqWxk6QY',
