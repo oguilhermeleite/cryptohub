@@ -297,8 +297,8 @@ class CryptoAgregator {
             'liquidium': {
                 name: 'Liquidium',
                 url: 'https://app.liquidium.wtf/borrow/ordinals',
-                logo: 'https://logo.clearbit.com/liquidium.fi',
-                fallbackLogo: 'https://www.google.com/s2/favicons?domain=liquidium.wtf&sz=128',
+                logo: 'https://framerusercontent.com/images/BdYCahxn4NVFtzsWOGpUWv3huZ0.png',
+                fallbackLogo: 'https://logo.clearbit.com/liquidium.fi',
                 description: {
                     pt: 'Principal protocolo de empréstimos P2P de Bitcoin. Tome emprestado BTC contra Ordinals, Runes e BRC-20. Ganhe até 380% APY emprestando Bitcoin. Não custodial e seguro na Layer-1 do Bitcoin.',
                     en: 'Leading P2P Bitcoin lending protocol. Borrow BTC against Ordinals, Runes and BRC-20. Earn up to 380% APY by lending Bitcoin. Non-custodial and secure on Bitcoin Layer-1.'
