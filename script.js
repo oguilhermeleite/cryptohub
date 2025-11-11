@@ -6,6 +6,7 @@ class CryptoAgregator {
         this.translations = {
             pt: {
                 'hero-title': 'Sua porta de entrada completa para o Mundo Cripto',
+                'hero-slogan': 'O Primeiro Agregador Off-Ramp de Criptomoedas',
                 'hero-subtitle': 'Encontre a melhor forma de comprar, vender e usar criptomoedas com segurança.',
                 'hero-cta': 'Começar Agora',
                 'nav-home': 'Home',
@@ -36,6 +37,7 @@ class CryptoAgregator {
                 'feature-fast': 'Ultra Rápido',
                 'feature-multichain': 'Multi-Chain',
                 'visit-site': 'Visitar Site',
+                'follow-on-x': 'Seguir no X',
                 'back': 'Voltar',
                 'footer-desc': 'Sua porta de entrada completa para o mundo cripto',
                 'footer-services': 'Serviços',
@@ -44,6 +46,7 @@ class CryptoAgregator {
             },
             en: {
                 'hero-title': 'Your complete gateway to the Crypto World',
+                'hero-slogan': 'The First Off-Ramp Crypto Aggregator',
                 'hero-subtitle': 'Find the best way to buy, sell and use cryptocurrencies safely.',
                 'hero-cta': 'Get Started',
                 'nav-home': 'Home',
@@ -74,6 +77,7 @@ class CryptoAgregator {
                 'feature-fast': 'Ultra Fast',
                 'feature-multichain': 'Multi-Chain',
                 'visit-site': 'Visit Site',
+                'follow-on-x': 'Follow on X',
                 'back': 'Back',
                 'footer-desc': 'Your complete gateway to the crypto world',
                 'footer-services': 'Services',
@@ -89,6 +93,7 @@ class CryptoAgregator {
                 url: 'https://newshare.bwb.global/en/invite_earn_coin?inviteCode=SJQDBe&deepLinkType=card&utmSource=referral2.0_copyLink',
                 logo: 'https://logo.clearbit.com/bitget.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=bitget.com&sz=64',
+                xProfile: 'https://x.com/BitgetWallet',
                 description: {
                     pt: 'Carteira Web3 multi-chain líder com suporte completo a DeFi, NFTs e trading. Mais de 60 milhões de usuários confiam na Bitget para gerenciar seus ativos digitais com segurança.',
                     en: 'Leading Web3 multi-chain wallet with full DeFi, NFT and trading support. Over 60 million users trust Bitget to manage their digital assets securely.'
@@ -99,6 +104,7 @@ class CryptoAgregator {
                 url: 'https://comprecripto.io/?ref=mqm',
                 logo: 'https://logo.clearbit.com/comprecripto.io',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=comprecripto.io&sz=64',
+                xProfile: null,
                 description: {
                     pt: 'Plataforma P2P para compra e venda direta de criptomoedas entre pessoas. Negocie Bitcoin, Ethereum e outras criptomoedas com segurança, sem intermediários, usando diversos métodos de pagamento e com taxas competitivas.',
                     en: 'P2P platform for direct buying and selling of cryptocurrencies between people. Trade Bitcoin, Ethereum, and other cryptocurrencies securely, without intermediaries, using various payment methods and competitive fees.'
@@ -109,6 +115,7 @@ class CryptoAgregator {
                 url: 'https://br.p2p.me/recommend?address=0xa4884FEA51387224e6039b6903EeeFE24Fab7251&nonce=559537&signature=0x9561591564c21ffb8be3a4d7a8ecf0d1d45cbae59469cb24359cbc70ffa4cde86aa2cb0151e158667a4622af32aba022d5d22427a2b250d8810a334e8a5714401b',
                 logo: 'https://logo.clearbit.com/p2p.me',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=p2p.me&sz=64',
+                xProfile: 'https://x.com/P2Pdotme',
                 description: {
                     pt: 'P2P.me é uma plataforma descentralizada e não-custodial que permite trocar fiat por USDC usando QR codes. Com tecnologia zero-knowledge KYC (ZK-KYC), oferece transações seguras, resistentes a fraudes e privadas, permitindo pagamentos cripto no mundo real sem intermediários.',
                     en: 'P2P.me is a decentralized, non-custodial platform that enables users to swap fiat and USDC using QR codes. Powered by zero-knowledge KYC (ZK-KYC), it ensures secure, fraud-resistant, and private transactions, enabling real-world crypto payments without intermediaries.'
@@ -119,6 +126,7 @@ class CryptoAgregator {
                 url: 'https://camilap2p.com.br',
                 logo: 'https://www.google.com/s2/favicons?domain=camilap2p.com.br&sz=128',
                 fallbackLogo: 'https://logo.clearbit.com/camilap2p.com.br',
+                xProfile: 'https://twitter.com/camila_p2p',
                 description: {
                     pt: 'Camila P2P é especialista brasileira em compra e venda de criptomoedas com mais de 40 mil negociações realizadas. Oferece atendimento humanizado, taxas baixas, segurança total e suporte para mais de 1.000 criptomoedas incluindo Bitcoin e Ethereum. Use o cupom "MQM" e ganhe desconto especial!',
                     en: 'Camila P2P is a Brazilian specialist in buying and selling cryptocurrencies with over 40,000 transactions completed. It offers personalized service, low fees, total security, and support for 1,000+ cryptocurrencies including Bitcoin and Ethereum. Use coupon code "MQM" and get a special discount!'
@@ -129,6 +137,7 @@ class CryptoAgregator {
                 url: 'https://kryptera.io/',
                 logo: 'https://logo.clearbit.com/kryptera.io',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=kryptera.io&sz=64',
+                xProfile: 'https://x.com/kryptera_solana',
                 description: {
                     pt: 'Kryptera é uma plataforma P2P brasileira que permite pagar boletos e Pix diretamente com criptomoedas, sem KYC e sem limites. Oferece saques instantâneos, conversão direta cripto-para-fiat e total liberdade financeira no uso de seus ativos.',
                     en: 'Kryptera is a Brazilian P2P platform that allows paying bills and Pix directly with cryptocurrencies, without KYC and without limits. Offers instant withdrawals, direct crypto-to-fiat conversion and complete financial freedom in using your assets.'
@@ -139,6 +148,7 @@ class CryptoAgregator {
                 url: 'https://4p.finance/DOGDAMASSA',
                 logo: 'https://www.google.com/s2/favicons?domain=4p.finance&sz=128',
                 fallbackLogo: 'https://logo.clearbit.com/4p.finance',
+                xProfile: 'https://twitter.com/4payFinance',
                 description: {
                     pt: 'Maior plataforma P2P do Brasil. Compre e venda criptomoedas via Pix direto da blockchain para sua carteira sem custódia.',
                     en: 'Brazil\'s largest P2P platform. Buy and sell crypto via Pix directly from blockchain to your wallet without custody.'
@@ -149,6 +159,7 @@ class CryptoAgregator {
                 url: 'https://pagcrypto.finance/',
                 logo: 'https://logo.clearbit.com/pagcrypto.finance',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=pagcrypto.finance&sz=128',
+                xProfile: null,
                 description: {
                     pt: 'Pague PIX e boletos brasileiros com criptomoedas. Pagamentos cripto rápidos, simples e seguros para pessoas e empresas na Solana.',
                     en: 'Pay Brazilian PIX and boletos with cryptocurrency. Fast, simple and secure crypto payments for individuals and businesses on Solana.'
@@ -159,6 +170,7 @@ class CryptoAgregator {
                 url: 'https://www.binance.com/activity/referral-entry/CPA?ref=CPA_0001DCF8M6',
                 logo: 'https://logo.clearbit.com/binance.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=binance.com&sz=64',
+                xProfile: 'https://x.com/binance',
                 description: {
                     pt: 'A Binance é a maior exchange de criptomoedas do mundo, atendendo mais de 270 milhões de usuários em mais de 180 países. Com taxas baixas e mais de 500 criptomoedas disponíveis.',
                     en: 'Binance is the world\'s largest cryptocurrency exchange, serving 270+ million users in 180+ countries. Low fees and 500+ cryptocurrencies available.'
@@ -169,6 +181,7 @@ class CryptoAgregator {
                 url: 'https://www.bybit.com/invite?ref=YNAGP8',
                 logo: 'https://logo.clearbit.com/bybit.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=bybit.com&sz=64',
+                xProfile: 'https://x.com/Bybit_Official',
                 description: {
                     pt: 'Bybit é a segunda maior exchange de criptomoedas do mundo por volume de negociação, servindo mais de 60 milhões de usuários. Fundada em 2018, oferece mais de 650 criptomoedas com alta segurança e interface intuitiva.',
                     en: 'Bybit is the world\'s second-largest cryptocurrency exchange by trading volume, serving over 60 million users. Founded in 2018, it offers 650+ cryptocurrencies with high security and intuitive interface.'
@@ -179,6 +192,7 @@ class CryptoAgregator {
                 url: 'https://invite.kraken.com/JDNW/de6w7cmj',
                 logo: 'https://logo.clearbit.com/kraken.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=kraken.com&sz=64',
+                xProfile: 'https://x.com/krakenfx',
                 description: {
                     pt: 'Kraken é uma das exchanges mais antigas e seguras do mundo, fundada em 2011. Atende mais de 10 milhões de usuários em 190+ países com mais de 200 criptomoedas e segurança de nível institucional.',
                     en: 'Kraken is one of the world\'s oldest and most secure exchanges, founded in 2011. It serves 10+ million users in 190+ countries with 200+ cryptocurrencies and institutional-grade security.'
@@ -189,6 +203,7 @@ class CryptoAgregator {
                 url: 'https://promote.mexc.com/a/Q26ooE1o',
                 logo: 'https://www.google.com/s2/favicons?domain=mexc.com&sz=128',
                 fallbackLogo: 'https://logo.clearbit.com/mexc.com',
+                xProfile: 'https://x.com/MEXC_Official',
                 description: {
                     pt: 'MEXC é uma exchange global estabelecida em 2018, servindo mais de 40 milhões de usuários em 170+ países. Conhecida por suas taxas extremamente baixas (0% maker fee) e mais de 3.000 criptomoedas disponíveis.',
                     en: 'MEXC is a global exchange established in 2018, serving 40+ million users in 170+ countries. Known for its extremely low fees (0% maker fee) and 3,000+ cryptocurrencies available.'
@@ -199,6 +214,7 @@ class CryptoAgregator {
                 url: 'https://www.gate.com/signup/AVEXB1XE?ref_type=103&utm_cmp=PEYEQdSb',
                 logo: 'https://www.google.com/s2/favicons?domain=gate.io&sz=128',
                 fallbackLogo: 'https://logo.clearbit.com/gate.io',
+                xProfile: 'https://x.com/gate_io',
                 description: {
                     pt: 'Gate é uma das maiores exchanges de criptomoedas do mundo, fundada em 2013, servindo mais de 23 milhões de usuários em 130+ países. Oferece mais de 3.800 criptomoedas com trading spot, futuros e margin.',
                     en: 'Gate is one of the world\'s largest cryptocurrency exchanges, founded in 2013, serving 23+ million users in 130+ countries. Offers 3,800+ cryptocurrencies with spot, futures and margin trading.'
@@ -209,6 +225,7 @@ class CryptoAgregator {
                 url: 'https://coinbase.com/join/J5GUPYS?src=ios-link',
                 logo: 'https://logo.clearbit.com/coinbase.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=coinbase.com&sz=64',
+                xProfile: 'https://x.com/coinbase',
                 description: {
                     pt: 'Coinbase é uma das maiores exchanges do mundo, fundada em 2012 e listada na Nasdaq desde 2021. Com mais de 100 milhões de usuários, oferece compra e venda de 150+ criptomoedas com suporte a depósitos fiat.',
                     en: 'Coinbase is one of the world\'s largest exchanges, founded in 2012 and listed on Nasdaq since 2021. With over 100 million users, offers buying and selling of 150+ cryptocurrencies with fiat deposits support.'
@@ -219,6 +236,7 @@ class CryptoAgregator {
                 url: 'https://okx.com/join/99171266',
                 logo: 'https://logo.clearbit.com/okx.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=okx.com&sz=64',
+                xProfile: 'https://twitter.com/okx',
                 description: {
                     pt: 'OKX é uma das maiores exchanges do mundo, fundada em 2017. Com mais de 60 milhões de usuários em 100+ países, oferece trading de 350+ criptomoedas com spot, futuros, margin e copy trading.',
                     en: 'OKX is one of the world\'s largest exchanges, founded in 2017. With over 60 million users in 100+ countries, offers trading of 350+ cryptocurrencies with spot, futures, margin and copy trading.'
@@ -229,6 +247,7 @@ class CryptoAgregator {
                 url: 'https://uniswap.org',
                 logo: 'https://logo.clearbit.com/uniswap.org',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=uniswap.org&sz=128',
+                xProfile: 'https://twitter.com/Uniswap',
                 description: {
                     pt: 'A maior exchange descentralizada no Ethereum. Troque criptomoedas sem intermediários usando market makers automatizados e pools de liquidez. Acesse liquidez profunda em múltiplas blockchains com taxas mínimas.',
                     en: 'The largest decentralized exchange on Ethereum. Swap crypto without intermediaries using automated market makers and liquidity pools. Access deep liquidity across multiple blockchains with minimal fees.'
@@ -239,6 +258,7 @@ class CryptoAgregator {
                 url: 'https://jup.ag',
                 logo: 'https://logo.clearbit.com/jup.ag',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=jup.ag&sz=128',
+                xProfile: 'https://x.com/JupiterExchange',
                 description: {
                     pt: 'O principal agregador de DEX da Solana. Obtenha o melhor preço e taxas mais baixas roteando negociações entre várias exchanges. A exchange completa para todos.',
                     en: 'Solana\'s leading DEX aggregator. Get the best price and lowest fees by routing trades across multiple exchanges. The everything exchange for everyone.'
@@ -249,6 +269,7 @@ class CryptoAgregator {
                 url: 'https://raydium.io',
                 logo: 'https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R/logo.png',
                 fallbackLogo: 'https://raydium.io/logo/logo-text.svg',
+                xProfile: 'https://x.com/RaydiumProtocol',
                 description: {
                     pt: 'Um AMM de order book on-chain impulsionando a evolução do DeFi na Solana. Negocie, ganhe e forneça liquidez com transações ultrarrápidas e taxas mínimas.',
                     en: 'An on-chain order book AMM powering the evolution of DeFi on Solana. Trade, earn and provide liquidity with lightning-fast transactions and minimal fees.'
@@ -259,6 +280,7 @@ class CryptoAgregator {
                 url: 'https://pancakeswap.finance',
                 logo: 'https://logo.clearbit.com/pancakeswap.finance',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=pancakeswap.finance&sz=128',
+                xProfile: 'https://twitter.com/pancakeswap',
                 description: {
                     pt: 'A principal DEX na BNB Chain. Negocie, ganhe e vença com as trocas mais rápidas e baratas. Mais de $2B em liquidez e 425.000+ transações diárias em múltiplas blockchains.',
                     en: 'The leading DEX on BNB Chain. Trade, earn and win with the fastest and cheapest swaps. Over $2B in liquidity and 425,000+ daily transactions across multiple blockchains.'
@@ -269,6 +291,7 @@ class CryptoAgregator {
                 url: 'https://meteora.ag',
                 logo: 'https://logo.clearbit.com/meteora.ag',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=meteora.ag&sz=128',
+                xProfile: 'https://x.com/MeteoraAG',
                 description: {
                     pt: 'Construindo a camada de rendimento mais segura, otimizada e componível na Solana. Uma DEX focada em eficiência de capital através de pools Dynamic Liquidity Market Maker e cofres dinâmicos.',
                     en: 'Building the most secure, optimized and composable yield layer on Solana. A DEX focused on capital efficiency through Dynamic Liquidity Market Maker pools and dynamic vaults.'
@@ -279,6 +302,7 @@ class CryptoAgregator {
                 url: 'https://bitflow.finance',
                 logo: 'https://logo.clearbit.com/bitflow.finance',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=bitflow.finance&sz=128',
+                xProfile: 'https://twitter.com/bitflow',
                 description: {
                     pt: 'Uma exchange descentralizada para Bitcoiners na blockchain Stacks. Negocie e ganhe com Bitcoin sem intermediários maliciosos, usando contratos inteligentes e pools de liquidez descentralizadas para desbloquear o potencial total do BTC.',
                     en: 'A decentralized exchange for Bitcoiners on the Stacks blockchain. Trade and earn with Bitcoin without malicious middlemen, using smart contracts and decentralized liquidity pools to unlock BTC\'s full potential.'
@@ -289,6 +313,7 @@ class CryptoAgregator {
                 url: 'https://app.satsterminal.com/en?ref=EVP69',
                 logo: 'https://logo.clearbit.com/satsterminal.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=satsterminal.com&sz=128',
+                xProfile: 'https://x.com/SatsTerminal',
                 description: {
                     pt: 'Protocolo de agregação DeFi para Bitcoin. Negocie, faça stake e bridge de Bitcoin sem complicação. Acesse as melhores taxas de swap e rendimentos entre múltiplos protocolos em uma plataforma simples.',
                     en: 'Bitcoin DeFi aggregation protocol. Trade, stake, and bridge Bitcoin seamlessly. Access the best swap rates and yields across multiple protocols in one simple platform.'
@@ -299,6 +324,7 @@ class CryptoAgregator {
                 url: 'https://app.liquidium.wtf/borrow/ordinals',
                 logo: 'https://framerusercontent.com/images/BdYCahxn4NVFtzsWOGpUWv3huZ0.png',
                 fallbackLogo: 'https://logo.clearbit.com/liquidium.fi',
+                xProfile: 'https://x.com/LiquidiumFi',
                 description: {
                     pt: 'Principal protocolo de empréstimos P2P de Bitcoin. Tome emprestado BTC contra Ordinals, Runes e BRC-20. Ganhe até 380% APY emprestando Bitcoin. Não custodial e seguro na Layer-1 do Bitcoin.',
                     en: 'Leading P2P Bitcoin lending protocol. Borrow BTC against Ordinals, Runes and BRC-20. Earn up to 380% APY by lending Bitcoin. Non-custodial and secure on Bitcoin Layer-1.'
@@ -309,6 +335,7 @@ class CryptoAgregator {
                 url: 'https://sideshift.ai/a/UvqWxk6QY',
                 logo: 'https://logo.clearbit.com/sideshift.ai',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=sideshift.ai&sz=64',
+                xProfile: 'https://twitter.com/sideshiftai',
                 description: {
                     pt: 'SideShift.ai é uma bridge não-custodial sem cadastro que permite transferências diretas entre 200+ criptomoedas em 42+ blockchains. Processou mais de $2 bilhões em volume com swaps instantâneos e liquidação direta para sua carteira.',
                     en: 'SideShift.ai is a non-custodial bridge with no signup that enables direct transfers between 200+ cryptocurrencies across 42+ blockchains. Processed over $2 billion in volume with instant swaps and direct settlement to your wallet.'
@@ -319,6 +346,7 @@ class CryptoAgregator {
                 url: 'https://jumper.exchange/pt',
                 logo: 'https://jumper.exchange/jumper-learn.png',
                 fallbackLogo: 'https://jumper.exchange/favicon.ico',
+                xProfile: 'https://x.com/JumperExchange',
                 description: {
                     pt: 'A Exchange Completa de Cripto. Troque e faça bridge de forma integrada em mais de 25 blockchains. Agregando as melhores rotas para qualquer transação de token.',
                     en: 'Crypto\'s Everything Exchange. Seamless swap and bridge transactions across 25+ blockchains. Aggregating the best routes for any token transaction.'
@@ -329,6 +357,7 @@ class CryptoAgregator {
                 url: 'https://newshare.bwb.global/pt_br/invite_earn_coin?inviteCode=VdkFyq&deepLinkType=card&utmSource=referral2.0_copyLink',
                 logo: 'https://logo.clearbit.com/bitget.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=bitget.com&sz=64',
+                xProfile: 'https://x.com/BitgetWallet',
                 description: {
                     pt: 'Bitget Wallet é uma carteira Web3 não-custodial líder com mais de 80 milhões de usuários. Suporta 130+ blockchains e 1 milhão de tokens, oferecendo swaps, DeFi, NFTs, pagamentos e fundo de proteção de $300 milhões.',
                     en: 'Bitget Wallet is a leading non-custodial Web3 wallet with 80+ million users. Supports 130+ blockchains and 1 million tokens, offering swaps, DeFi, NFTs, payments and $300 million protection fund.'
@@ -339,6 +368,7 @@ class CryptoAgregator {
                 url: 'https://kastfinance.app.link/CLE47K9D',
                 logo: 'https://www.google.com/s2/favicons?domain=kast.xyz&sz=128',
                 fallbackLogo: 'https://logo.clearbit.com/usekast.com',
+                xProfile: null,
                 description: {
                     pt: 'KAST é um cartão Visa global que permite gastar criptomoedas em mais de 170 países. Oferece conversão instantânea de USDC e USDT para USD com taxas de 0%, cashback de até 15%, e compatibilidade com Apple Pay e Google Pay. Limite de gastos ilimitado e suporte 24/7.',
                     en: 'KAST is a global Visa card that lets you spend cryptocurrencies in 170+ countries. It offers instant conversion of USDC and USDT to USD with 0% fees, up to 15% cashback, and compatibility with Apple Pay and Google Pay. Unlimited spending limit and 24/7 support.'
@@ -349,6 +379,7 @@ class CryptoAgregator {
                 url: 'https://app.offramp.xyz/login?referralCode=iokost',
                 logo: 'https://logo.clearbit.com/offramp.xyz',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=offramp.xyz&sz=64',
+                xProfile: 'https://x.com/offrampxyz',
                 description: {
                     pt: 'Offramp é um cartão Visa virtual não-custodial que suporta mais de 4.000 criptomoedas em 190+ países. Oferece conversão de cripto para USD com apenas 0,5% de taxa, limite de gastos ilimitado, e compatibilidade com Apple Pay e Google Pay para pagamentos globais.',
                     en: 'Offramp is a non-custodial virtual Visa card that supports 4,000+ cryptocurrencies in 190+ countries. It offers crypto-to-USD conversion with only 0.5% fee, unlimited spending limit, and compatibility with Apple Pay and Google Pay for global payments.'
@@ -359,6 +390,7 @@ class CryptoAgregator {
                 url: 'https://www.ether.fi/refer/6ad38ada',
                 logo: 'https://logo.clearbit.com/ether.fi',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=ether.fi&sz=64',
+                xProfile: 'https://x.com/ether_fi',
                 description: {
                     pt: 'Ether.fi Cash é um cartão de crédito Visa não-custodial que permite usar cripto como garantia sem vendê-la. Oferece 3% de cashback em todas as compras, integração com DeFi, e compatibilidade com Apple Pay e Google Pay. Disponível em formatos virtual e físico para uso global.',
                     en: 'Ether.fi Cash is a non-custodial Visa credit card that lets you use crypto as collateral without selling it. It offers 3% cashback on all purchases, DeFi integration, and compatibility with Apple Pay and Google Pay. Available in virtual and physical formats for global use.'
@@ -369,6 +401,7 @@ class CryptoAgregator {
                 url: 'https://app.cypherhq.io/card/referral/VUBX7395',
                 logo: 'https://logo.clearbit.com/cypherhq.io',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=cypherhq.io&sz=64',
+                xProfile: null,
                 description: {
                     pt: 'Cypher é um cartão cripto não-custodial apoiado pela Y Combinator. Permite gastar criptomoedas em 40+ milhões de comerciantes em 150+ países. Suporta 500+ tokens em 18+ blockchains com swap integrado.',
                     en: 'Cypher is a non-custodial crypto card backed by Y Combinator. Allows spending crypto at 40+ million merchants in 150+ countries. Supports 500+ tokens across 18+ blockchains with built-in swap.'
@@ -379,6 +412,7 @@ class CryptoAgregator {
                 url: 'https://orbitx.app.link/0597E2DA',
                 logo: 'https://logo.clearbit.com/orbitxpay.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=orbitxpay.com&sz=64',
+                xProfile: null,
                 description: {
                     pt: 'OrbitX é um cartão Visa não-custodial powered by Web3 que permite gastar stablecoins em 100+ milhões de comerciantes globalmente. Oferece as menores taxas Forex (1%), saques em ATMs mundialmente e cartões físicos e virtuais premium.',
                     en: 'OrbitX is a non-custodial Visa card powered by Web3 that enables spending stablecoins at 100+ million merchants globally. Offers lowest Forex fees (1%), ATM withdrawals worldwide and premium physical and virtual cards.'
@@ -389,6 +423,7 @@ class CryptoAgregator {
                 url: 'https://revolut.com/referral/?referral-code=waldir3l75!SEP1-25-AR-MDL-ROI&geo-redirect',
                 logo: 'https://logo.clearbit.com/revolut.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=revolut.com&sz=64',
+                xProfile: 'https://x.com/RevolutApp',
                 description: {
                     pt: 'Revolut é um banco digital all-in-one usado por mais de 60 milhões de clientes globalmente. Oferece serviços bancários, investimentos e trading de criptomoedas, permitindo comprar, vender e trocar mais de 210 criptomoedas com taxas competitivas e interface intuitiva.',
                     en: 'Revolut is an all-in-one digital bank used by 60+ million customers globally. It offers banking services, investments, and crypto trading, allowing you to buy, sell, and exchange 210+ cryptocurrencies with competitive fees and intuitive interface.'
@@ -399,6 +434,7 @@ class CryptoAgregator {
                 url: 'https://bity.com.br/mgm/180879',
                 logo: 'https://www.google.com/s2/favicons?domain=bity.com.br&sz=128',
                 fallbackLogo: 'https://logo.clearbit.com/bity.com.br',
+                xProfile: null,
                 description: {
                     pt: 'Banco cripto digital com cartão Mastercard, cashback de até 10% em Bitcoin e +100 criptomoedas. Maior volume de negociação do Brasil.',
                     en: 'Digital crypto bank with Mastercard, up to 10% Bitcoin cashback and +100 cryptocurrencies. Brazil\'s highest Bitcoin trading volume.'
@@ -409,6 +445,7 @@ class CryptoAgregator {
                 url: 'https://neobankless.com/dogdamassa',
                 logo: 'https://www.google.com/s2/favicons?domain=neobankless.com&sz=128',
                 fallbackLogo: 'https://logo.clearbit.com/neobankless.com',
+                xProfile: null,
                 description: {
                     pt: 'Conta global em dólar com rendimento automático, taxa de 0,5% e parcelamento em 12x. Dolarize via PIX com autocustódia total.',
                     en: 'Global dollar account with automatic yield, 0.5% fee and 12x installments. Dollarize via PIX with full self-custody.'
@@ -419,6 +456,7 @@ class CryptoAgregator {
                 url: 'https://www.xverse.app/?utm_campaign=dogdamassa&fbclid=PAZnRzaANI0IBleHRuA2FlbQIxMQABpxeUZWEqzLu82FgMlCTcA4tRAwBA-H4ilQnR2PCxs4r78yqbldkLOKz4SvmN_aem_R_LGjSLfZSg96jqS-fbWwA',
                 logo: 'https://xverse.app/favicon.ico',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=xverse.app&sz=64',
+                xProfile: 'https://x.com/XverseApp',
                 description: {
                     pt: 'Xverse é a carteira Bitcoin mais avançada e fácil de usar, confiada por mais de 1,7 milhão de usuários. Suporta Bitcoin, Ordinals, Runes, BRC-20 e Layer 2s como Stacks e Starknet. Carteira não-custodial com segurança de nível institucional e interface amigável para iniciantes.',
                     en: 'Xverse is the most advanced and user-friendly Bitcoin wallet, trusted by over 1.7 million users. It supports Bitcoin, Ordinals, Runes, BRC-20, and Layer 2s like Stacks and Starknet. Non-custodial wallet with institutional-grade security and beginner-friendly interface.'
@@ -429,6 +467,7 @@ class CryptoAgregator {
                 url: 'https://phantom.com',
                 logo: 'https://logo.clearbit.com/phantom.app',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=phantom.app&sz=64',
+                xProfile: 'https://x.com/phantom',
                 description: {
                     pt: 'Phantom é uma carteira multi-chain não-custodial com mais de 80 milhões de usuários. Suporta Solana, Ethereum, Bitcoin, Polygon, Base e Sui com swaps, staking, NFTs e integração com DeFi em uma interface intuitiva.',
                     en: 'Phantom is a non-custodial multi-chain wallet with 80+ million users. Supports Solana, Ethereum, Bitcoin, Polygon, Base and Sui with swaps, staking, NFTs and DeFi integration in an intuitive interface.'
@@ -439,6 +478,7 @@ class CryptoAgregator {
                 url: 'https://slush.app',
                 logo: 'https://logo.clearbit.com/slush.app',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=slush.app&sz=64',
+                xProfile: 'https://x.com/SlushWallet',
                 description: {
                     pt: 'Slush é a carteira oficial da blockchain Sui, desenvolvida pela Mysten Labs. Oferece login social via Google e Apple, swaps integrados, staking e acesso fácil ao ecossistema DeFi da Sui sem necessidade de seed phrase.',
                     en: 'Slush is the official Sui blockchain wallet, developed by Mysten Labs. Offers social login via Google and Apple, integrated swaps, staking and easy access to Sui\'s DeFi ecosystem without seed phrase requirement.'
@@ -449,6 +489,7 @@ class CryptoAgregator {
                 url: 'https://wallet.magiceden.io',
                 logo: 'https://logo.clearbit.com/magiceden.io',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=magiceden.io&sz=64',
+                xProfile: 'https://x.com/MagicEden',
                 description: {
                     pt: 'Magic Eden Wallet é uma carteira multi-chain focada em NFTs e colecionáveis. Suporta Solana, Ethereum e Bitcoin com gestão de Ordinals, BRC-20, Runes e integração direta com o marketplace Magic Eden.',
                     en: 'Magic Eden Wallet is a multi-chain wallet focused on NFTs and collectibles. Supports Solana, Ethereum and Bitcoin with Ordinals, BRC-20, Runes management and direct integration with Magic Eden marketplace.'
@@ -459,6 +500,7 @@ class CryptoAgregator {
                 url: 'https://rabby.io',
                 logo: 'https://logo.clearbit.com/rabby.io',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=rabby.io&sz=64',
+                xProfile: 'https://x.com/Rabby_io',
                 description: {
                     pt: 'Rabby é uma carteira open-source para Ethereum e 141+ blockchains EVM. Oferece troca automática de redes, scan de segurança pré-transação, preview de mudanças de saldo e compatibilidade com hardware wallets como Ledger.',
                     en: 'Rabby is an open-source wallet for Ethereum and 141+ EVM blockchains. Offers automatic network switching, pre-transaction security scanning, balance change preview and compatibility with hardware wallets like Ledger.'
@@ -469,6 +511,7 @@ class CryptoAgregator {
                 url: 'https://unisat.io',
                 logo: 'https://logo.clearbit.com/unisat.io',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=unisat.io&sz=64',
+                xProfile: 'https://x.com/unisat_wallet',
                 description: {
                     pt: 'UniSat é a primeira carteira open-source focada em Bitcoin, Ordinals e BRC-20. Não-custodial e 100% transparente no GitHub, suporta Runes, Alkanes, inscriptions e permite mint sem executar fullnode Bitcoin.',
                     en: 'UniSat is the first open-source wallet focused on Bitcoin, Ordinals and BRC-20. Non-custodial and 100% transparent on GitHub, supports Runes, Alkanes, inscriptions and allows minting without running Bitcoin fullnode.'
@@ -479,6 +522,7 @@ class CryptoAgregator {
                 url: 'https://shop.ledger.com/?r=9414e4bea285&tracker=MY_TRACKER',
                 logo: 'https://logo.clearbit.com/ledger.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=ledger.com&sz=64',
+                xProfile: 'https://x.com/Ledger',
                 description: {
                     pt: 'Ledger é a carteira de hardware líder mundial para armazenamento seguro de criptomoedas. Com milhões de dispositivos vendidos globalmente, oferece proteção offline com chip Secure Element, suportando mais de 5.500 moedas e tokens incluindo Bitcoin, Ethereum e Solana.',
                     en: 'Ledger is the world\'s leading hardware wallet for secure cryptocurrency storage. With millions of devices sold globally, it offers offline protection with Secure Element chip, supporting 5,500+ coins and tokens including Bitcoin, Ethereum, and Solana.'
@@ -827,8 +871,9 @@ class CryptoAgregator {
         const modalTitle = document.getElementById('modalTitle');
         const modalDescription = document.getElementById('modalDescription');
         const visitSite = document.getElementById('visitSite');
+        const modalFooter = modal.querySelector('.modal-footer');
 
-        if (modal && modalLogo && modalTitle && modalDescription && visitSite) {
+        if (modal && modalLogo && modalTitle && modalDescription && visitSite && modalFooter) {
             // Set modal content
             modalLogo.src = platform.logo;
             modalLogo.onerror = () => { modalLogo.src = platform.fallbackLogo; };
@@ -839,6 +884,42 @@ class CryptoAgregator {
 
             visitSite.dataset.url = platform.url;
             visitSite.dataset.platform = platform.name;
+
+            // Remove any existing X button
+            const existingXButton = modal.querySelector('.modal-x-btn');
+            if (existingXButton) {
+                existingXButton.remove();
+            }
+
+            // Add "Follow on X" button if xProfile exists
+            if (platform.xProfile) {
+                const xButton = document.createElement('a');
+                xButton.href = platform.xProfile;
+                xButton.target = '_blank';
+                xButton.rel = 'noopener noreferrer';
+                xButton.className = 'modal-x-btn';
+                xButton.dataset.platform = platform.name;
+
+                const xButtonText = document.createElement('span');
+                xButtonText.setAttribute('data-lang', 'follow-on-x');
+                xButtonText.textContent = this.translations[this.currentLang]['follow-on-x'];
+
+                const xButtonIcon = document.createElement('span');
+                xButtonIcon.className = 'x-icon';
+                xButtonIcon.textContent = '𝕏';
+
+                xButton.appendChild(xButtonText);
+                xButton.appendChild(xButtonIcon);
+
+                // Insert X button before the back button
+                const backButton = modal.querySelector('.modal-back-btn');
+                modalFooter.insertBefore(xButton, backButton);
+
+                // Add click event for tracking
+                xButton.addEventListener('click', () => {
+                    this.trackXProfileClick(platform.name, platform.xProfile);
+                });
+            }
 
             // Show modal with animation
             modal.classList.add('active');
@@ -1373,6 +1454,25 @@ class CryptoAgregator {
         const clickData = {
             platform,
             url,
+            language: this.currentLang,
+            timestamp: new Date().toISOString()
+        };
+
+        this.storeClickData(clickData);
+    }
+
+    trackXProfileClick(platform, xProfileUrl) {
+        console.log('X profile click tracked:', {
+            platform: platform,
+            xProfileUrl: xProfileUrl,
+            language: this.currentLang,
+            timestamp: new Date().toISOString()
+        });
+
+        const clickData = {
+            platform,
+            xProfileUrl,
+            type: 'x_profile',
             language: this.currentLang,
             timestamp: new Date().toISOString()
         };

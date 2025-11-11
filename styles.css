@@ -683,12 +683,23 @@ body {
     font-size: 3.5rem;
     font-weight: 800;
     line-height: 1.1;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem;
     background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: -0.02em;
+}
+
+.hero-slogan {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    opacity: 0.9;
+    line-height: 1.4;
 }
 
 .hero-subtitle {
@@ -1440,11 +1451,13 @@ body {
 .modal-footer {
     padding: 1rem 2rem 2rem;
     display: flex;
+    flex-direction: column;
     gap: 1rem;
     justify-content: center;
 }
 
 .modal-visit-btn,
+.modal-x-btn,
 .modal-back-btn {
     padding: 1rem 2rem;
     border-radius: 12px;
@@ -1453,12 +1466,16 @@ body {
     transition: all 0.3s ease;
     border: none;
     font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-decoration: none;
 }
 
 .modal-visit-btn {
     background: linear-gradient(135deg, #f7931a 0%, #ffb347 100%);
     color: #000000;
-    flex: 1;
 }
 
 .modal-visit-btn:hover {
@@ -1466,11 +1483,41 @@ body {
     box-shadow: 0 10px 25px rgba(247, 147, 26, 0.4);
 }
 
+/* Follow on X Button - Dark Theme */
+.modal-x-btn {
+    background: #000000;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.modal-x-btn:hover {
+    background: #1a1a1a;
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Follow on X Button - Light Theme */
+[data-theme="light"] .modal-x-btn {
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+}
+
+[data-theme="light"] .modal-x-btn:hover {
+    background: #f5f5f5;
+    border-color: #000000;
+}
+
+.x-icon {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
 .modal-back-btn {
     background: var(--border-primary);
     color: var(--text-primary);
     border: 1px solid var(--border-secondary);
-    flex: 1;
 }
 
 .modal-back-btn:hover {
@@ -1552,6 +1599,11 @@ body {
 
     .hero-title {
         font-size: 3rem;
+    }
+
+    .hero-slogan {
+        font-size: 1.1rem;
+        padding: 0 20px;
     }
 
     .horizontal-cards-grid {
@@ -1716,6 +1768,11 @@ body {
         font-size: 2.5rem;
     }
 
+    .hero-slogan {
+        font-size: 1rem;
+        padding: 0 16px;
+    }
+
     .hero-subtitle {
         font-size: 1.1rem;
     }
@@ -1827,6 +1884,18 @@ body {
         padding: 1rem 1.5rem 1.5rem;
         flex-direction: column;
     }
+
+    .modal-visit-btn,
+    .modal-x-btn,
+    .modal-back-btn {
+        width: 100%;
+        font-size: 0.95rem;
+        padding: 0.875rem 1.5rem;
+    }
+
+    .x-icon {
+        font-size: 1.1rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1838,6 +1907,11 @@ body {
 
     .hero-title {
         font-size: 2rem;
+    }
+
+    .hero-slogan {
+        font-size: 0.95rem;
+        padding: 0 12px;
     }
 
     .hero-subtitle {
