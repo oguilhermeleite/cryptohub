@@ -904,12 +904,7 @@ class CryptoAgregator {
                 xButtonText.setAttribute('data-lang', 'follow-on-x');
                 xButtonText.textContent = this.translations[this.currentLang]['follow-on-x'];
 
-                const xButtonIcon = document.createElement('span');
-                xButtonIcon.className = 'x-icon';
-                xButtonIcon.textContent = '𝕏';
-
                 xButton.appendChild(xButtonText);
-                xButton.appendChild(xButtonIcon);
 
                 // Insert X button before the back button
                 const backButton = modal.querySelector('.modal-back-btn');
