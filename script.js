@@ -6,7 +6,7 @@ class CryptoAgregator {
         this.translations = {
             pt: {
                 'hero-title': 'Sua porta de entrada completa para o Mundo Cripto',
-                'hero-slogan': 'O Primeiro Agregador Off-Ramp de Criptomoedas',
+                'hero-slogan': 'O Primeiro Agregador On-Ramp e Off-Ramp do Mercado',
                 'hero-subtitle': 'Encontre a melhor forma de comprar, vender e usar criptomoedas com segurança.',
                 'hero-cta': 'Começar Agora',
                 'nav-home': 'Home',
@@ -46,7 +46,7 @@ class CryptoAgregator {
             },
             en: {
                 'hero-title': 'Your complete gateway to the Crypto World',
-                'hero-slogan': 'The First Off-Ramp Crypto Aggregator',
+                'hero-slogan': 'The First On-Ramp and Off-Ramp Aggregator in the Market',
                 'hero-subtitle': 'Find the best way to buy, sell and use cryptocurrencies safely.',
                 'hero-cta': 'Get Started',
                 'nav-home': 'Home',
@@ -104,7 +104,7 @@ class CryptoAgregator {
                 url: 'https://comprecripto.io/?ref=mqm',
                 logo: 'https://logo.clearbit.com/comprecripto.io',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=comprecripto.io&sz=64',
-                xProfile: null,
+                xProfile: 'https://x.com/comprecripto_',
                 description: {
                     pt: 'Plataforma P2P para compra e venda direta de criptomoedas entre pessoas. Negocie Bitcoin, Ethereum e outras criptomoedas com segurança, sem intermediários, usando diversos métodos de pagamento e com taxas competitivas.',
                     en: 'P2P platform for direct buying and selling of cryptocurrencies between people. Trade Bitcoin, Ethereum, and other cryptocurrencies securely, without intermediaries, using various payment methods and competitive fees.'
@@ -159,7 +159,7 @@ class CryptoAgregator {
                 url: 'https://pagcrypto.finance/',
                 logo: 'https://logo.clearbit.com/pagcrypto.finance',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=pagcrypto.finance&sz=128',
-                xProfile: null,
+                xProfile: 'https://x.com/pagcryptofi',
                 description: {
                     pt: 'Pague PIX e boletos brasileiros com criptomoedas. Pagamentos cripto rápidos, simples e seguros para pessoas e empresas na Solana.',
                     en: 'Pay Brazilian PIX and boletos with cryptocurrency. Fast, simple and secure crypto payments for individuals and businesses on Solana.'
@@ -401,7 +401,7 @@ class CryptoAgregator {
                 url: 'https://app.cypherhq.io/card/referral/VUBX7395',
                 logo: 'https://logo.clearbit.com/cypherhq.io',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=cypherhq.io&sz=64',
-                xProfile: null,
+                xProfile: 'https://x.com/cypher_hq_',
                 description: {
                     pt: 'Cypher é um cartão cripto não-custodial apoiado pela Y Combinator. Permite gastar criptomoedas em 40+ milhões de comerciantes em 150+ países. Suporta 500+ tokens em 18+ blockchains com swap integrado.',
                     en: 'Cypher is a non-custodial crypto card backed by Y Combinator. Allows spending crypto at 40+ million merchants in 150+ countries. Supports 500+ tokens across 18+ blockchains with built-in swap.'
@@ -412,7 +412,7 @@ class CryptoAgregator {
                 url: 'https://orbitx.app.link/0597E2DA',
                 logo: 'https://logo.clearbit.com/orbitxpay.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=orbitxpay.com&sz=64',
-                xProfile: null,
+                xProfile: 'https://x.com/orbitx_pay',
                 description: {
                     pt: 'OrbitX é um cartão Visa não-custodial powered by Web3 que permite gastar stablecoins em 100+ milhões de comerciantes globalmente. Oferece as menores taxas Forex (1%), saques em ATMs mundialmente e cartões físicos e virtuais premium.',
                     en: 'OrbitX is a non-custodial Visa card powered by Web3 that enables spending stablecoins at 100+ million merchants globally. Offers lowest Forex fees (1%), ATM withdrawals worldwide and premium physical and virtual cards.'
@@ -434,7 +434,7 @@ class CryptoAgregator {
                 url: 'https://bity.com.br/mgm/180879',
                 logo: 'https://www.google.com/s2/favicons?domain=bity.com.br&sz=128',
                 fallbackLogo: 'https://logo.clearbit.com/bity.com.br',
-                xProfile: null,
+                xProfile: 'https://x.com/bitybank',
                 description: {
                     pt: 'Banco cripto digital com cartão Mastercard, cashback de até 10% em Bitcoin e +100 criptomoedas. Maior volume de negociação do Brasil.',
                     en: 'Digital crypto bank with Mastercard, up to 10% Bitcoin cashback and +100 cryptocurrencies. Brazil\'s highest Bitcoin trading volume.'
@@ -445,7 +445,7 @@ class CryptoAgregator {
                 url: 'https://neobankless.com/dogdamassa',
                 logo: 'https://www.google.com/s2/favicons?domain=neobankless.com&sz=128',
                 fallbackLogo: 'https://logo.clearbit.com/neobankless.com',
-                xProfile: null,
+                xProfile: 'https://x.com/neobankless',
                 description: {
                     pt: 'Conta global em dólar com rendimento automático, taxa de 0,5% e parcelamento em 12x. Dolarize via PIX com autocustódia total.',
                     en: 'Global dollar account with automatic yield, 0.5% fee and 12x installments. Dollarize via PIX with full self-custody.'

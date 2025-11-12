@@ -692,21 +692,23 @@ body {
 }
 
 .hero-slogan {
-    font-size: 1.2rem;
-    font-weight: 400;
+    font-size: 1.5rem;
+    font-weight: 500;
     color: var(--text-secondary);
     margin-top: 0.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     text-align: center;
     opacity: 0.9;
     line-height: 1.4;
 }
 
 .hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 1rem;
+    font-weight: 400;
     color: var(--text-secondary);
     margin-bottom: 2.5rem;
     line-height: 1.6;
+    opacity: 0.85;
 }
 
 .cta-button {
@@ -1602,7 +1604,7 @@ body {
     }
 
     .hero-slogan {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
         padding: 0 20px;
     }
 
@@ -1769,12 +1771,12 @@ body {
     }
 
     .hero-slogan {
-        font-size: 1rem;
+        font-size: 1.2rem;
         padding: 0 16px;
     }
 
     .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 0.95rem;
     }
 
     .featured-section,
@@ -1910,12 +1912,12 @@ body {
     }
 
     .hero-slogan {
-        font-size: 0.95rem;
+        font-size: 1.1rem;
         padding: 0 12px;
     }
 
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .cta-button {
