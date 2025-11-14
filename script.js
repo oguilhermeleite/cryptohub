@@ -179,8 +179,8 @@ class CryptoAgregator {
             'bybit': {
                 name: 'Bybit',
                 url: 'https://www.bybit.com/invite?ref=YNAGP8',
-                logo: 'https://upload.wikimedia.org/wikipedia/commons/4/43/Bybit_Logo.svg',
-                fallbackLogo: 'https://seeklogo.com/images/B/bybit-logo-3CCF6F1C32-seeklogo.com.png',
+                logo: 'https://static.bybit.com/web/v4/static/logo/Bybit_logo_circle.png',
+                fallbackLogo: 'https://upload.wikimedia.org/wikipedia/commons/4/43/Bybit_Logo.svg',
                 xProfile: 'https://x.com/Bybit_Official',
                 description: {
                     pt: 'Bybit é a segunda maior exchange de criptomoedas do mundo por volume de negociação, servindo mais de 60 milhões de usuários. Fundada em 2018, oferece mais de 650 criptomoedas com alta segurança e interface intuitiva.',
@@ -443,8 +443,8 @@ class CryptoAgregator {
             'bitybank': {
                 name: 'Bitybank',
                 url: 'https://bity.com.br/mgm/180879',
-                logo: 'https://www.bity.com.br/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.e8b4a906.png&w=640&q=100',
-                fallbackLogo: 'https://www.bity.com.br/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.e8b4a906.png&w=256&q=75',
+                logo: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=328,fit=crop,q=95/Aq20eV3zXpI13gLX/logo-m2WrzMLqvKuOjRz1.png',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=bity.com.br&sz=128',
                 xProfile: 'https://x.com/bitybank',
                 description: {
                     pt: 'Banco cripto digital com cartão Mastercard, cashback de até 10% em Bitcoin e +100 criptomoedas. Maior volume de negociação do Brasil.',
