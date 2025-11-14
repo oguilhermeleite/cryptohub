@@ -179,8 +179,8 @@ class CryptoAgregator {
             'bybit': {
                 name: 'Bybit',
                 url: 'https://www.bybit.com/invite?ref=YNAGP8',
-                logo: 'https://logo.clearbit.com/bybit.com',
-                fallbackLogo: 'https://www.google.com/s2/favicons?domain=bybit.com&sz=64',
+                logo: 'https://seeklogo.com/images/B/bybit-logo-3CCF6F1C32-seeklogo.com.png',
+                fallbackLogo: 'https://logo.clearbit.com/bybit.com',
                 xProfile: 'https://x.com/Bybit_Official',
                 description: {
                     pt: 'Bybit é a segunda maior exchange de criptomoedas do mundo por volume de negociação, servindo mais de 60 milhões de usuários. Fundada em 2018, oferece mais de 650 criptomoedas com alta segurança e interface intuitiva.',
@@ -322,8 +322,8 @@ class CryptoAgregator {
             'liquidium': {
                 name: 'Liquidium',
                 url: 'https://app.liquidium.wtf/borrow/ordinals',
-                logo: 'https://framerusercontent.com/images/BdYCahxn4NVFtzsWOGpUWv3huZ0.png',
-                fallbackLogo: 'https://logo.clearbit.com/liquidium.fi',
+                logo: 'https://liquidium.wtf/logo.svg',
+                fallbackLogo: 'https://framerusercontent.com/images/BdYCahxn4NVFtzsWOGpUWv3huZ0.png',
                 xProfile: 'https://x.com/LiquidiumFi',
                 description: {
                     pt: 'Principal protocolo de empréstimos P2P de Bitcoin. Tome emprestado BTC contra Ordinals, Runes e BRC-20. Ganhe até 380% APY emprestando Bitcoin. Não custodial e seguro na Layer-1 do Bitcoin.',
@@ -350,6 +350,17 @@ class CryptoAgregator {
                 description: {
                     pt: 'A Exchange Completa de Cripto. Troque e faça bridge de forma integrada em mais de 25 blockchains. Agregando as melhores rotas para qualquer transação de token.',
                     en: 'Crypto\'s Everything Exchange. Seamless swap and bridge transactions across 25+ blockchains. Aggregating the best routes for any token transaction.'
+                }
+            },
+            'fixedfloat': {
+                name: 'FixedFloat',
+                url: 'https://ff.io/',
+                logo: 'https://ff.io/images/logo.svg',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=ff.io&sz=64',
+                xProfile: 'https://x.com/FixedFloat',
+                description: {
+                    pt: 'Exchange instantâneo de criptomoedas com taxas fixas e flutuantes. Troque mais de 500 criptomoedas sem registro. Não custodial com taxa de 0.5-1%.',
+                    en: 'Instant cryptocurrency exchange with fixed and floating rates. Exchange 500+ cryptocurrencies without registration. Non-custodial with 0.5-1% fee.'
                 }
             },
             'bitget': {
@@ -432,8 +443,8 @@ class CryptoAgregator {
             'bitybank': {
                 name: 'Bitybank',
                 url: 'https://bity.com.br/mgm/180879',
-                logo: 'https://www.google.com/s2/favicons?domain=bity.com.br&sz=128',
-                fallbackLogo: 'https://logo.clearbit.com/bity.com.br',
+                logo: 'https://www.bity.com.br/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.e8b4a906.png&w=256&q=75',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=bity.com.br&sz=128',
                 xProfile: 'https://x.com/bitybank',
                 description: {
                     pt: 'Banco cripto digital com cartão Mastercard, cashback de até 10% em Bitcoin e +100 criptomoedas. Maior volume de negociação do Brasil.',
@@ -471,6 +482,17 @@ class CryptoAgregator {
                 description: {
                     pt: 'Phantom é uma carteira multi-chain não-custodial com mais de 80 milhões de usuários. Suporta Solana, Ethereum, Bitcoin, Polygon, Base e Sui com swaps, staking, NFTs e integração com DeFi em uma interface intuitiva.',
                     en: 'Phantom is a non-custodial multi-chain wallet with 80+ million users. Supports Solana, Ethereum, Bitcoin, Polygon, Base and Sui with swaps, staking, NFTs and DeFi integration in an intuitive interface.'
+                }
+            },
+            'metamask': {
+                name: 'MetaMask',
+                url: 'https://link.metamask.io/rewards?referral=W32GW0',
+                logo: 'https://upload.wikimedia.org/wikipedia/commons/3/36/MetaMask_Fox.svg',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=metamask.io&sz=64',
+                xProfile: 'https://x.com/MetaMask',
+                description: {
+                    pt: 'A carteira cripto mais popular do mundo. Extensão de navegador e app mobile seguro e fácil de usar. Armazene, envie e troque tokens no Ethereum e outras redes.',
+                    en: 'The world\'s most popular crypto wallet. Secure, easy-to-use browser extension and mobile app. Store, send, and swap tokens on Ethereum and other networks.'
                 }
             },
             'slush': {

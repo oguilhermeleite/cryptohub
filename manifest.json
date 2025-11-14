@@ -32,9 +32,9 @@
   ],
   "shortcuts": [
     {
-      "name": "P2P Trading",
+      "name": "P2P",
       "short_name": "P2P",
-      "description": "Access P2P trading platforms",
+      "description": "Access P2P platforms",
       "url": "/#p2p",
       "icons": [{ "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHZpZXdCb3g9IjAgMCA5NiA5NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHJ4PSIxMiIgZmlsbD0iI2Y3OTMxYSIvPjx0ZXh0IHg9IjQ4IiB5PSI0OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIGZpbGw9ImJsYWNrIiBmb250LXNpemU9IjQwIj7wn6KLPC90ZXh0Pjwvc3ZnPg==", "sizes": "96x96" }]
     },
