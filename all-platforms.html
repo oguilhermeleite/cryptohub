@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todas as Plataformas - Crypto Agregator</title>
+    <meta name="description" content="Explore todas as opções disponíveis no mercado cripto. P2P, Exchanges, Cartões Cripto, DEXs e muito mais.">
+    <meta name="keywords" content="bitcoin, criptomoedas, p2p, exchange, cartão cripto, dex, crypto agregator">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>₿</text></svg>">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5S6MB3MSVV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5S6MB3MSVV');
+
+      // Track platform clicks
+      function trackPlatformClick(platform, category) {
+        gtag('event', 'platform_click', {
+          'platform_name': platform,
+          'category': category,
+          'device': /Mobile/i.test(navigator.userAgent) ? 'mobile' : 'desktop',
+          'timestamp': new Date().toISOString()
+        });
+      }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <!-- Top Row: Logo + Theme + Language -->
+            <div class="header-top-row">
+                <div class="logo">
+                    <a href="index.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none;">
+                        <h1>Crypto Agregator</h1>
+                        <span class="logo-icon">₿</span>
+                    </a>
+                </div>
+
+                <div class="header-controls">
+                    <div class="theme-toggle desktop-theme-toggle">
+                        <button class="theme-btn" id="desktopThemeToggle" aria-label="Toggle theme">
+                            <span class="theme-icon theme-icon-dark">🌙</span>
+                            <span class="theme-icon theme-icon-light">☀️</span>
+                        </button>
+                    </div>
+                    <div class="language-toggle">
+                        <button class="lang-btn active" data-lang-switch="pt">🇧🇷</button>
+                        <button class="lang-btn" data-lang-switch="en">🇺🇸</button>
+                    </div>
+                </div>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <!-- Bottom Row: Navigation Menu -->
+            <nav class="navigation">
+                <ul class="nav-menu">
+                    <li><a href="index.html#featured" data-section="featured"><span data-lang="nav-home">Home</span></a></li>
+                    <li><a href="index.html#p2p" data-section="p2p">P2P</a></li>
+                    <li><a href="index.html#exchanges" data-section="exchanges">Exchanges</a></li>
+                    <li><a href="index.html#dexs" data-section="dexs">DEXs</a></li>
+                    <li><a href="index.html#bridges" data-section="bridges"><span data-lang="nav-bridges">Bridges</span></a></li>
+                    <li><a href="index.html#cards" data-section="cards"><span data-lang="nav-cards">Cards</span></a></li>
+                    <li><a href="index.html#banks" data-section="banks"><span data-lang="nav-banks">Banks</span></a></li>
+                    <li><a href="index.html#hot-wallets" data-section="wallets"><span data-lang="nav-wallets">Wallets</span></a></li>
+                    <li><a href="all-platforms.html" data-section="all-platforms"><span data-lang="nav-all-platforms">Todas as Plataformas</span></a></li>
+                </ul>
+                <div class="connect-container">
+                    <button class="connect-button" id="connectButton" aria-label="Connect Wallet">
+                        Connect
+                    </button>
+                    <p class="connect-message" id="connectMessage" data-lang="coming-soon">Em breve</p>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-header">
+                <h3>Menu</h3>
+                <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">&times;</button>
+            </div>
+            <nav class="mobile-menu-nav">
+                <div class="mobile-theme-toggle">
+                    <button class="mobile-theme-btn" id="mobileThemeToggle" aria-label="Toggle theme">
+                        <span class="theme-icon theme-icon-dark">🌙</span>
+                        <span class="theme-icon theme-icon-light">☀️</span>
+                        <span class="theme-text" data-lang="theme-toggle">Tema</span>
+                    </button>
+                </div>
+                <div class="mobile-menu-separator"></div>
+                <div class="mobile-connect-container">
+                    <button class="mobile-connect-button" id="mobileConnectButton" aria-label="Connect Wallet">
+                        Connect
+                    </button>
+                    <p class="mobile-connect-message" id="mobileConnectMessage" data-lang="coming-soon">Em breve</p>
+                </div>
+                <div class="mobile-menu-separator"></div>
+                <ul class="mobile-nav-list">
+                    <li><a href="index.html#featured" data-section="featured"><span data-lang="nav-home">Home</span></a></li>
+                    <li><a href="index.html#p2p" data-section="p2p">P2P</a></li>
+                    <li><a href="index.html#exchanges" data-section="exchanges">Exchanges</a></li>
+                    <li><a href="index.html#dexs" data-section="dexs">DEXs</a></li>
+                    <li><a href="index.html#bridges" data-section="bridges"><span data-lang="nav-bridges">Bridges</span></a></li>
+                    <li><a href="index.html#cards" data-section="cards"><span data-lang="nav-cards">Cards</span></a></li>
+                    <li><a href="index.html#banks" data-section="banks"><span data-lang="nav-banks">Banks</span></a></li>
+                    <li><a href="index.html#hot-wallets" data-section="wallets"><span data-lang="nav-wallets">Wallets</span></a></li>
+                    <li><a href="all-platforms.html" data-section="all-platforms"><span data-lang="nav-all-platforms">Todas as Plataformas</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title" data-lang="all-platforms-hero-title">Todas as Plataformas</h2>
+                <p class="hero-subtitle" data-lang="all-platforms-hero-subtitle">Explore todas as opções disponíveis no mercado cripto</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- P2P Section -->
+    <section class="platform-section" id="p2p">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title">
+                    <span>P2P</span>
+                </h3>
+                <p class="section-subtitle" data-lang="p2p-subtitle">Compra e venda direto entre pessoas</p>
+            </div>
+            <div class="horizontal-scroll-container">
+                <div class="horizontal-cards-grid">
+                    <!-- PagCrypto -->
+                    <div class="platform-card" data-platform="pagcrypto" onclick="trackPlatformClick('PagCrypto', 'P2P'); return true;">
+                        <div class="card-content">
+                            <div class="platform-logo">
+                                <img src="https://logo.clearbit.com/pagcrypto.finance" alt="PagCrypto" onerror="this.src='https://www.google.com/s2/favicons?domain=pagcrypto.finance&sz=128'">
+                            </div>
+                            <h4 class="platform-name">PagCrypto</h4>
+                        </div>
+                    </div>
+
+                    <!-- Kryptera -->
+                    <div class="platform-card" data-platform="kryptera" onclick="trackPlatformClick('Kryptera', 'P2P'); return true;">
+                        <div class="card-content">
+                            <div class="platform-logo">
+                                <img src="https://kryptera.io/favicon.ico" alt="Kryptera" onerror="this.src='https://www.google.com/s2/favicons?domain=kryptera.io&sz=256'">
+                            </div>
+                            <h4 class="platform-name">Kryptera</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-navigation">
+                    <button class="carousel-arrow carousel-arrow-left" aria-label="Previous" data-carousel="p2p">
+                        ←
+                    </button>
+                    <div class="scroll-indicator">
+                        <div class="scroll-dot active"></div>
+                        <div class="scroll-dot"></div>
+                    </div>
+                    <button class="carousel-arrow carousel-arrow-right" aria-label="Next" data-carousel="p2p">
+                        →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exchanges Section -->
+    <section class="platform-section" id="exchanges">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title">
+                    <span>Exchanges</span>
+                </h3>
+                <p class="section-subtitle" data-lang="exchanges-subtitle">Trading e conversão de criptomoedas</p>
+            </div>
+            <div class="horizontal-scroll-container">
+                <div class="horizontal-cards-grid">
+                    <!-- OKX -->
+                    <div class="platform-card" data-platform="okx" onclick="trackPlatformClick('OKX', 'Exchange'); return true;">
+                        <div class="card-content">
+                            <div class="platform-logo">
+                                <img src="https://logo.clearbit.com/okx.com" alt="OKX" onerror="this.src='https://www.google.com/s2/favicons?domain=okx.com&sz=64'">
+                            </div>
+                            <h4 class="platform-name">OKX</h4>
+                        </div>
+                    </div>
+
+                    <!-- Gate.io -->
+                    <div class="platform-card" data-platform="gateio" onclick="trackPlatformClick('Gate.io', 'Exchange'); return true;">
+                        <div class="card-content">
+                            <div class="platform-logo">
+                                <img src="https://www.google.com/s2/favicons?domain=gate.io&sz=128" alt="Gate.io" onerror="this.src='https://logo.clearbit.com/gate.io'">
+                            </div>
+                            <h4 class="platform-name">Gate.io</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-navigation">
+                    <button class="carousel-arrow carousel-arrow-left" aria-label="Previous" data-carousel="exchanges">
+                        ←
+                    </button>
+                    <div class="scroll-indicator">
+                        <div class="scroll-dot active"></div>
+                        <div class="scroll-dot"></div>
+                    </div>
+                    <button class="carousel-arrow carousel-arrow-right" aria-label="Next" data-carousel="exchanges">
+                        →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hot Wallets Section -->
+    <section class="platform-section" id="hot-wallets">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title">
+                    <span data-lang="hot-wallets-title">Hot Wallets</span>
+                </h3>
+                <p class="section-subtitle" data-lang="hot-wallets-subtitle">Carteiras online conectadas à internet para uso diário</p>
+            </div>
+            <div class="horizontal-scroll-container">
+                <div class="horizontal-cards-grid">
+                    <!-- Slush -->
+                    <div class="platform-card" data-platform="slush" onclick="trackPlatformClick('Slush', 'Hot Wallet'); return true;">
+                        <div class="card-content">
+                            <div class="platform-logo">
+                                <img src="https://logo.clearbit.com/slush.app" alt="Slush" onerror="this.src='https://www.google.com/s2/favicons?domain=slush.app&sz=64'">
+                            </div>
+                            <h4 class="platform-name">Slush</h4>
+                        </div>
+                    </div>
+
+                    <!-- UniSat -->
+                    <div class="platform-card" data-platform="unisat" onclick="trackPlatformClick('UniSat', 'Hot Wallet'); return true;">
+                        <div class="card-content">
+                            <div class="platform-logo">
+                                <img src="https://logo.clearbit.com/unisat.io" alt="UniSat" onerror="this.src='https://www.google.com/s2/favicons?domain=unisat.io&sz=64'">
+                            </div>
+                            <h4 class="platform-name">UniSat</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-navigation">
+                    <button class="carousel-arrow carousel-arrow-left" aria-label="Previous" data-carousel="hot-wallets">
+                        ←
+                    </button>
+                    <div class="scroll-indicator">
+                        <div class="scroll-dot active"></div>
+                        <div class="scroll-dot"></div>
+                    </div>
+                    <button class="carousel-arrow carousel-arrow-right" aria-label="Next" data-carousel="hot-wallets">
+                        →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Crypto Cards Section -->
+    <section class="platform-section" id="cards">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title">
+                    <span data-lang="cards-title">Cartões Cripto</span>
+                </h3>
+                <p class="section-subtitle" data-lang="cards-subtitle">Use cripto no dia a dia com cartões</p>
+            </div>
+            <div class="horizontal-scroll-container">
+                <div class="horizontal-cards-grid">
+                    <!-- Cypher -->
+                    <div class="platform-card" data-platform="cypher" onclick="trackPlatformClick('Cypher', 'Crypto Card'); return true;">
+                        <div class="card-content">
+                            <div class="platform-logo">
+                                <img src="https://logo.clearbit.com/cypherhq.io" alt="Cypher" onerror="this.src='https://www.google.com/s2/favicons?domain=cypherhq.io&sz=64'">
+                            </div>
+                            <h4 class="platform-name">Cypher</h4>
+                        </div>
+                    </div>
+
+                    <!-- OrbitX -->
+                    <div class="platform-card" data-platform="orbitx" onclick="trackPlatformClick('OrbitX', 'Crypto Card'); return true;">
+                        <div class="card-content">
+                            <div class="platform-logo">
+                                <img src="https://orbitxpay.com/favicon.ico" alt="OrbitX" onerror="this.src='https://logo.clearbit.com/orbitxpay.com'">
+                            </div>
+                            <h4 class="platform-name">OrbitX</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-navigation">
+                    <button class="carousel-arrow carousel-arrow-left" aria-label="Previous" data-carousel="cards">
+                        ←
+                    </button>
+                    <div class="scroll-indicator">
+                        <div class="scroll-dot active"></div>
+                        <div class="scroll-dot"></div>
+                    </div>
+                    <button class="carousel-arrow carousel-arrow-right" aria-label="Next" data-carousel="cards">
+                        →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEXs Section -->
+    <section class="platform-section" id="dexs">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title">
+                    <span>DEXs</span>
+                </h3>
+                <p class="section-subtitle" data-lang="dexs-subtitle">Exchanges descentralizadas para trading sem intermediários</p>
+            </div>
+            <div class="horizontal-scroll-container">
+                <div class="horizontal-cards-grid">
+                    <!-- PancakeSwap -->
+                    <div class="platform-card" data-platform="pancakeswap" onclick="trackPlatformClick('PancakeSwap', 'DEX'); return true;">
+                        <div class="card-content">
+                            <div class="platform-logo">
+                                <img src="https://logo.clearbit.com/pancakeswap.finance" alt="PancakeSwap" onerror="this.src='https://www.google.com/s2/favicons?domain=pancakeswap.finance&sz=128'">
+                            </div>
+                            <h4 class="platform-name">PancakeSwap</h4>
+                        </div>
+                    </div>
+
+                    <!-- Liquidium -->
+                    <div class="platform-card" data-platform="liquidium" onclick="trackPlatformClick('Liquidium', 'DEX'); return true;">
+                        <div class="card-content">
+                            <div class="platform-logo">
+                                <img src="https://liquidium.wtf/logo.svg" alt="Liquidium" onerror="this.src='https://framerusercontent.com/images/BdYCahxn4NVFtzsWOGpUWv3huZ0.png'">
+                            </div>
+                            <h4 class="platform-name">Liquidium</h4>
+                        </div>
+                    </div>
+
+                    <!-- Sats Terminal -->
+                    <div class="platform-card" data-platform="satsterminal" onclick="trackPlatformClick('Sats Terminal', 'DEX'); return true;">
+                        <div class="card-content">
+                            <div class="platform-logo">
+                                <img src="https://logo.clearbit.com/satsterminal.com" alt="Sats Terminal" onerror="this.src='https://www.google.com/s2/favicons?domain=satsterminal.com&sz=128'">
+                            </div>
+                            <h4 class="platform-name">Sats Terminal</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-navigation">
+                    <button class="carousel-arrow carousel-arrow-left" aria-label="Previous" data-carousel="dexs">
+                        ←
+                    </button>
+                    <div class="scroll-indicator">
+                        <div class="scroll-dot active"></div>
+                        <div class="scroll-dot"></div>
+                        <div class="scroll-dot"></div>
+                    </div>
+                    <button class="carousel-arrow carousel-arrow-right" aria-label="Next" data-carousel="dexs">
+                        →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="platformModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-logo">
+                    <img id="modalLogo" src="" alt="">
+                </div>
+                <h3 id="modalTitle"></h3>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="modalDescription"></p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-visit-btn" id="visitSite" data-lang="visit-site">Visitar Site</button>
+                <button class="modal-back-btn" id="backModal" data-lang="back">Voltar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Crypto Agregator</h3>
+                    <p data-lang="footer-desc">Sua porta de entrada completa para o mundo cripto</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4 data-lang="footer-services">Serviços</h4>
+                        <ul>
+                            <li><a href="index.html#featured"><span data-lang="nav-home">Home</span></a></li>
+                            <li><a href="index.html#p2p">P2P</a></li>
+                            <li><a href="index.html#exchanges">Exchanges</a></li>
+                            <li><a href="index.html#dexs">DEXs</a></li>
+                            <li><a href="index.html#bridges"><span data-lang="nav-bridges">Bridges</span></a></li>
+                            <li><a href="index.html#cards"><span data-lang="nav-cards">Cards</span></a></li>
+                            <li><a href="index.html#banks"><span data-lang="nav-banks">Banks</span></a></li>
+                            <li><a href="index.html#hot-wallets"><span data-lang="nav-wallets">Wallets</span></a></li>
+                            <li><a href="all-platforms.html"><span data-lang="nav-all-platforms">Todas as Plataformas</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Crypto Agregator. <span data-lang="footer-rights">Todos os direitos reservados.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

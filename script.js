@@ -42,7 +42,10 @@ class CryptoAgregator {
                 'footer-desc': 'Sua porta de entrada completa para o mundo cripto',
                 'footer-services': 'Serviços',
                 'footer-rights': 'Todos os direitos reservados.',
-                'coming-soon': 'Em breve'
+                'coming-soon': 'Em breve',
+                'nav-all-platforms': 'Todas as Plataformas',
+                'all-platforms-hero-title': 'Todas as Plataformas',
+                'all-platforms-hero-subtitle': 'Explore todas as opções disponíveis no mercado cripto'
             },
             en: {
                 'hero-title': 'Your complete gateway to the Crypto World',
@@ -82,7 +85,10 @@ class CryptoAgregator {
                 'footer-desc': 'Your complete gateway to the crypto world',
                 'footer-services': 'Services',
                 'footer-rights': 'All rights reserved.',
-                'coming-soon': 'Coming soon'
+                'coming-soon': 'Coming soon',
+                'nav-all-platforms': 'All Platforms',
+                'all-platforms-hero-title': 'All Platforms',
+                'all-platforms-hero-subtitle': 'Explore all available options in the crypto market'
             }
         };
 
