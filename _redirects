@@ -1,1 +1,6 @@
-# Netlify redirects - removed SPA redirect to fix all-platforms.html access
+# Force HTTPS redirect
+http://cryptoaggregator.io/* https://cryptoaggregator.io/:splat 301!
+http://www.cryptoaggregator.io/* https://cryptoaggregator.io/:splat 301!
+
+# Force www to non-www
+https://www.cryptoaggregator.io/* https://cryptoaggregator.io/:splat 301!
