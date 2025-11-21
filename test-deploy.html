@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deploy Test</title>
+    <style>
+        body {
+            background: #000;
+            color: #f7931a;
+            font-family: monospace;
+            padding: 50px;
+            text-align: center;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚀 DEPLOY TEST</h1>
+    <p>Timestamp: <?php echo date('Y-m-d H:i:s'); ?></p>
+    <p id="time"></p>
+    <script>
+        document.getElementById('time').textContent = 'Client Time: ' + new Date().toLocaleString('pt-BR');
+    </script>
+    <hr>
+    <p><a href="index.html" style="color: #f7931a;">← Voltar para Home</a></p>
+    <p><a href="all-platforms.html" style="color: #f7931a;">→ Ver All Platforms</a></p>
+</body>
+</html>
