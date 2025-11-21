@@ -11,6 +11,20 @@ html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* Performance optimizations */
+    text-rendering: optimizeSpeed;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Performance: GPU acceleration for animated elements */
+.platform-card,
+.premium-hero-banner,
+.header,
+.modal-content,
+.horizontal-cards-grid {
+    will-change: transform;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
 }
 
 /* CSS Custom Properties for Theme System */
@@ -82,7 +96,12 @@ body {
     /* Optimize rendering performance */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
+    text-rendering: optimizeSpeed;
+    /* Prevent scroll jank */
+    overscroll-behavior-y: none;
+    /* Hardware acceleration */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
 }
 
 /* Smooth scroll container optimization */
@@ -90,6 +109,25 @@ body {
 .platform-card,
 .premium-hero-banner {
     contain: layout style paint;
+}
+
+/* Optimize images for performance */
+img {
+    content-visibility: auto;
+    contain-intrinsic-size: 100px;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* Reduce repaints on hover */
+.platform-card,
+.nav-menu a,
+.lang-btn,
+.theme-btn {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
 }
 
 .container {
@@ -1134,18 +1172,20 @@ body {
     border: 1px solid var(--border-primary);
     border-radius: 24px;
     padding: 2rem;
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                border-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                background 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                background 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     cursor: pointer;
     overflow: hidden;
-    /* Hardware acceleration */
-    transform: translateZ(0);
+    /* Hardware acceleration - optimized */
+    transform: translate3d(0, 0, 0);
     will-change: transform;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+    /* Performance optimization */
+    contain: layout style paint;
 }
 
 .platform-card::before {
@@ -1986,6 +2026,17 @@ body {
         background: #f7931a;
         transform: scale(1.4);
     }
+}
+
+/* Stop animations during resize */
+.resize-animation-stopper * {
+    animation: none !important;
+    transition: none !important;
+}
+
+/* Optimize scrolling performance */
+.is-scrolling .platform-card {
+    pointer-events: none;
 }
 
 /* Accessibility */
