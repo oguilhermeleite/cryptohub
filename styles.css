@@ -728,9 +728,9 @@ img {
     display: flex;
     align-items: center;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     background: radial-gradient(ellipse at top, rgba(247, 147, 26, 0.1) 0%, transparent 70%);
-    padding: 6rem 0 4rem;
+    padding: 8rem 0 4rem;
     margin-top: 140px; /* Account for new header height (2 rows) */
 }
 
@@ -746,23 +746,28 @@ img {
 }
 
 .hero .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     position: relative;
     z-index: 2;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .hero-content {
     animation: fadeInUp 1s ease-out;
+    width: 100%;
+    max-width: 900px;
+    padding: 0 20px;
 }
 
 .hero-title {
     font-size: 3.5rem;
     font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 0.75rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
     background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -1679,14 +1684,16 @@ img {
 @media (max-width: 1024px) {
     .hero {
         min-height: 50vh;
-        padding: 5rem 0 3rem;
+        padding: 6rem 0 3rem;
         margin-top: 75px; /* Account for fixed header on tablet */
     }
 
     .hero .container {
-        grid-template-columns: 1fr;
-        gap: 3rem;
         text-align: center;
+    }
+
+    .hero-content {
+        max-width: 800px;
     }
 
     .hero-title {
