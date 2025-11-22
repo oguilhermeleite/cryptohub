@@ -734,7 +734,7 @@ img {
     background: radial-gradient(ellipse at top, rgba(247, 147, 26, 0.1) 0%, transparent 70%);
     padding-top: 5rem !important;
     padding-bottom: 4rem !important;
-    margin-top: 250px !important; /* CRITICAL: Ensure hero starts well below fixed header */
+    margin-top: 0 !important; /* REMOVED: Using spacer div in HTML instead */
 }
 
 .hero::before {
@@ -760,11 +760,13 @@ img {
 }
 
 .hero-content {
-    animation: fadeInUp 1s ease-out;
+    /* animation: fadeInUp 1s ease-out; */ /* DISABLED: Can cause positioning issues */
     width: 100% !important;
     max-width: 900px !important;
     padding: 3rem 20px 0 !important;
     margin-top: 0 !important;
+    opacity: 1 !important;
+    transform: none !important;
 }
 
 .hero-title {
