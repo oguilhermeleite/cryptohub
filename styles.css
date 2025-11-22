@@ -726,11 +726,11 @@ img {
 .hero {
     min-height: 60vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
     overflow: visible;
     background: radial-gradient(ellipse at top, rgba(247, 147, 26, 0.1) 0%, transparent 70%);
-    padding: 3rem 0 4rem;
+    padding: 4rem 0 4rem;
     margin-top: 200px; /* Ensure hero starts below fixed header (header height ~166px + spacing) */
 }
 
@@ -749,7 +749,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
     z-index: 2;
     width: 100%;
@@ -760,13 +760,15 @@ img {
     animation: fadeInUp 1s ease-out;
     width: 100%;
     max-width: 900px;
-    padding: 0 20px;
+    padding: 2rem 20px 0;
+    margin-top: 0;
 }
 
 .hero-title {
     font-size: 3.5rem;
     font-weight: 800;
     line-height: 1.2;
+    margin-top: 0;
     margin-bottom: 1rem;
     background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 100%);
     background-clip: text;
@@ -1684,7 +1686,7 @@ img {
 @media (max-width: 1024px) {
     .hero {
         min-height: 50vh;
-        padding: 3rem 0 3rem;
+        padding: 4rem 0 3rem;
         margin-top: 120px; /* Account for fixed header on tablet */
     }
 
@@ -1694,6 +1696,7 @@ img {
 
     .hero-content {
         max-width: 800px;
+        padding-top: 1.5rem;
     }
 
     .hero-title {
@@ -1859,8 +1862,12 @@ img {
 
     .hero {
         min-height: 45vh;
-        padding: 3rem 0 2.5rem;
+        padding: 3.5rem 0 2.5rem;
         margin-top: 80px; /* Account for fixed header on mobile */
+    }
+
+    .hero-content {
+        padding-top: 1rem;
     }
 
     .hero-title {
@@ -2000,8 +2007,12 @@ img {
 @media (max-width: 480px) {
     .hero {
         min-height: 40vh;
-        padding: 2.5rem 0 2rem;
+        padding: 3rem 0 2rem;
         margin-top: 75px; /* Account for fixed header on small mobile */
+    }
+
+    .hero-content {
+        padding-top: 0.75rem;
     }
 
     .hero-title {
