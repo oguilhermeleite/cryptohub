@@ -323,6 +323,35 @@ img {
     background: #E5A830;
 }
 
+/* "Todas as Plataformas" Button - Matches Connect Button */
+.nav-menu a.all-platforms-button {
+    background: #F4B740 !important;
+    color: #1a1a1a !important;
+    border: none !important;
+    padding: 12px 24px !important;
+    border-radius: 14px !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    transition: background-color 0.2s ease !important;
+    white-space: nowrap !important;
+    display: inline-block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.nav-menu a.all-platforms-button:hover {
+    background: #FFD166 !important;
+    color: #1a1a1a !important;
+}
+
+.nav-menu a.all-platforms-button:active {
+    background: #E5A830 !important;
+}
+
+.nav-menu a.all-platforms-button::after {
+    display: none !important;
+}
+
 /* Connect Message - Appears below button */
 .connect-message {
     position: absolute;
@@ -681,6 +710,18 @@ img {
     border-bottom: none;
 }
 
+/* Mobile "Todas as Plataformas" Special Styling */
+.mobile-nav-list a.mobile-all-platforms-button {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    background: rgba(247, 147, 26, 0.1) !important;
+    color: #f7931a !important;
+    font-weight: 600 !important;
+    border-left: 3px solid #f7931a !important;
+    padding-left: 2rem !important;
+}
+
 /* Hero Section */
 .hero {
     min-height: 60vh;
@@ -747,6 +788,15 @@ img {
     margin-bottom: 2.5rem;
     line-height: 1.6;
     opacity: 0.85;
+}
+
+/* Center hero text on desktop only */
+@media (min-width: 768px) {
+    .hero-title,
+    .hero-slogan,
+    .hero-subtitle {
+        text-align: center;
+    }
 }
 
 .cta-button {
