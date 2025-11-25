@@ -555,6 +555,72 @@ class CryptoAggregator {
                     pt: 'Ledger é a carteira de hardware líder mundial para armazenamento seguro de criptomoedas. Com milhões de dispositivos vendidos globalmente, oferece proteção offline com chip Secure Element, suportando mais de 5.500 moedas e tokens incluindo Bitcoin, Ethereum e Solana.',
                     en: 'Ledger is the world\'s leading hardware wallet for secure cryptocurrency storage. With millions of devices sold globally, it offers offline protection with Secure Element chip, supporting 5,500+ coins and tokens including Bitcoin, Ethereum, and Solana.'
                 }
+            },
+            'magiceden': {
+                name: 'Magic Eden Wallet',
+                url: 'https://wallet.magiceden.io/',
+                logo: 'https://logo.clearbit.com/magiceden.io',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=magiceden.io&sz=64',
+                xProfile: 'https://x.com/MagicEden',
+                description: {
+                    pt: 'Magic Eden Wallet é uma carteira multi-chain para Solana, Bitcoin, Ethereum e Polygon. Suporta NFTs, tokens e swaps com integração direta ao maior marketplace de NFTs.',
+                    en: 'Magic Eden Wallet is a multi-chain wallet for Solana, Bitcoin, Ethereum and Polygon. Supports NFTs, tokens and swaps with direct integration to the largest NFT marketplace.'
+                }
+            },
+            'slush': {
+                name: 'Slush',
+                url: 'https://slush.app/',
+                logo: 'https://logo.clearbit.com/slush.app',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=slush.app&sz=64',
+                xProfile: 'https://x.com/slushwallet',
+                description: {
+                    pt: 'Slush é uma carteira Bitcoin focada em privacidade e simplicidade. Oferece gestão não-custodial de Bitcoin com interface amigável e recursos avançados de privacidade.',
+                    en: 'Slush is a Bitcoin wallet focused on privacy and simplicity. Offers non-custodial Bitcoin management with user-friendly interface and advanced privacy features.'
+                }
+            },
+            'unisat': {
+                name: 'UniSat',
+                url: 'https://unisat.io/',
+                logo: 'https://logo.clearbit.com/unisat.io',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=unisat.io&sz=128',
+                xProfile: 'https://x.com/unisat_wallet',
+                description: {
+                    pt: 'UniSat é a carteira líder para Bitcoin Ordinals e BRC-20. Primeira carteira a suportar inscrições de Ordinals, oferece marketplace integrado e ferramentas completas para o ecossistema Bitcoin NFT.',
+                    en: 'UniSat is the leading wallet for Bitcoin Ordinals and BRC-20. First wallet to support Ordinals inscriptions, offers integrated marketplace and complete tools for the Bitcoin NFT ecosystem.'
+                }
+            },
+            'raydium': {
+                name: 'Raydium',
+                url: 'https://raydium.io/',
+                logo: 'https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R/logo.png',
+                fallbackLogo: 'https://raydium.io/logo/logo-text.svg',
+                xProfile: 'https://x.com/RaydiumProtocol',
+                description: {
+                    pt: 'Raydium é uma DEX AMM e provedor de liquidez na Solana. Oferece swaps rápidos, farms de yield, pools de liquidez e integração com o livro de ordens da Serum para máxima eficiência.',
+                    en: 'Raydium is an AMM DEX and liquidity provider on Solana. Offers fast swaps, yield farms, liquidity pools and integration with Serum order book for maximum efficiency.'
+                }
+            },
+            'bitflow': {
+                name: 'Bitflow',
+                url: 'https://www.bitflow.finance/',
+                logo: 'https://logo.clearbit.com/bitflow.finance',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=bitflow.finance&sz=128',
+                xProfile: 'https://x.com/bitflow_finance',
+                description: {
+                    pt: 'Bitflow é uma DEX na rede Stacks construída para Bitcoin. Permite trading descentralizado de ativos Bitcoin com swaps, pools de liquidez e yield farming nativamente conectado à rede Bitcoin.',
+                    en: 'Bitflow is a DEX on the Stacks network built for Bitcoin. Enables decentralized trading of Bitcoin assets with swaps, liquidity pools and yield farming natively connected to the Bitcoin network.'
+                }
+            },
+            'liquidium': {
+                name: 'Liquidium',
+                url: 'https://liquidium.fi/',
+                logo: 'https://liquidium.wtf/logo.svg',
+                fallbackLogo: 'https://framerusercontent.com/images/BdYCahxn4NVFtzsWOGpUWv3huZ0.png',
+                xProfile: 'https://x.com/liquidium_fi',
+                description: {
+                    pt: 'Liquidium é um protocolo de empréstimos peer-to-peer para Bitcoin Ordinals e BRC-20. Permite usar NFTs e tokens Bitcoin como colateral para empréstimos descentralizados sem intermediários.',
+                    en: 'Liquidium is a peer-to-peer lending protocol for Bitcoin Ordinals and BRC-20. Allows using Bitcoin NFTs and tokens as collateral for decentralized loans without intermediaries.'
+                }
             }
         };
 

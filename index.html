@@ -745,8 +745,32 @@
         </div>
     </footer>
 
-    <script src="script.js?v=20241125d"></script>
+    <!-- Platform Modal -->
+    <div class="modal-overlay" id="platformModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="modal-close" id="closeModal" aria-label="Close">×</button>
+                <div class="modal-logo">
+                    <img id="modalLogo" src="" alt="">
+                </div>
+                <h3 id="modalTitle"></h3>
+            </div>
+            <div class="modal-body">
+                <p id="modalDescription"></p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-visit-btn" id="visitSite">
+                    <span data-lang="visit-site">Visitar Site</span>
+                </button>
+                <button class="modal-back-btn" id="backModal">
+                    <span data-lang="back">Voltar</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js?v=20241125e"></script>
     <!-- Performance Optimization Script -->
-    <script src="performance.js?v=20241125d" defer></script>
+    <script src="performance.js?v=20241125e" defer></script>
 </body>
 </html>
