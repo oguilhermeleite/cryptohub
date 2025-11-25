@@ -1,4 +1,4 @@
-/* Crypto Agregator - Modern Horizontal Layout with Floating Cards + Theme System */
+/* CRYPTO AGGREGATOR - Modern Horizontal Layout with Floating Cards + Theme System */
 
 /* Reset and Base Styles */
 * {
@@ -84,6 +84,75 @@ html {
     --shadow-card: 0 25px 50px rgba(0, 0, 0, 0.1), 0 10px 30px rgba(247, 147, 26, 0.1);
     --shadow-button: 0 10px 30px rgba(247, 147, 26, 0.2);
     --shadow-button-hover: 0 15px 40px rgba(247, 147, 26, 0.3);
+}
+
+/* Light Theme Specific Adjustments for Better Visibility */
+[data-theme="light"] .platform-logo {
+    background: rgba(247, 147, 26, 0.08);
+    border: 2px solid rgba(247, 147, 26, 0.15);
+}
+
+[data-theme="light"] .platform-logo img {
+    filter: contrast(1.1) brightness(0.95);
+}
+
+[data-theme="light"] .platform-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .platform-card:hover {
+    border-color: rgba(247, 147, 26, 0.4);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(247, 147, 26, 0.2);
+}
+
+[data-theme="light"] .platform-name {
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+[data-theme="light"] .premium-hero-banner {
+    background: linear-gradient(135deg, rgba(247, 147, 26, 0.12) 0%, rgba(255, 255, 255, 0.95) 100%);
+    border: 2px solid rgba(247, 147, 26, 0.35);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 8px 16px rgba(247, 147, 26, 0.2);
+}
+
+[data-theme="light"] .premium-hero-logo {
+    background: rgba(247, 147, 26, 0.1);
+    border: 3px solid rgba(247, 147, 26, 0.4);
+}
+
+[data-theme="light"] .premium-hero-logo img {
+    filter: contrast(1.15) brightness(0.92);
+}
+
+[data-theme="light"] .hero-title {
+    background: linear-gradient(135deg, #1a1a1a 0%, #f7931a 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+[data-theme="light"] .hero-slogan,
+[data-theme="light"] .hero-subtitle {
+    color: #495057;
+}
+
+[data-theme="light"] .section-title {
+    color: #1a1a1a;
+}
+
+[data-theme="light"] .section-subtitle {
+    color: #495057;
+}
+
+[data-theme="light"] .modal-logo {
+    background: rgba(247, 147, 26, 0.1);
+}
+
+[data-theme="light"] .modal-logo img {
+    filter: contrast(1.1) brightness(0.95);
 }
 
 body {
@@ -274,8 +343,11 @@ img {
 }
 
 .nav-menu a:hover {
-    color: var(--accent-primary);
-    background: var(--border-accent);
+    color: #FDB813 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    transition: color 0.3s ease;
 }
 
 .nav-menu a::after {
@@ -803,12 +875,28 @@ img {
     opacity: 0.85;
 }
 
-/* Center hero text on desktop only */
+/* Center hero text on all devices */
+.hero-title,
+.hero-slogan,
+.hero-subtitle {
+    text-align: center;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+/* Ensure centering on desktop */
 @media (min-width: 768px) {
     .hero-title,
     .hero-slogan,
     .hero-subtitle {
         text-align: center;
+    }
+
+    .hero-content {
+        text-align: center;
+        margin: 0 auto;
     }
 }
 
