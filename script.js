@@ -848,6 +848,26 @@ class CryptoAggregator {
         });
     }
 
+    // Platform Cards Click Handlers
+    setupPlatformCards() {
+        const platformCards = document.querySelectorAll('.platform-card[data-platform]');
+
+        platformCards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                // Prevent click if user is dragging/scrolling
+                if (card.classList.contains('dragging')) return;
+
+                const platformId = card.dataset.platform;
+                if (platformId) {
+                    this.showModal(platformId);
+                }
+            });
+
+            // Add hover effect
+            card.style.cursor = 'pointer';
+        });
+    }
+
     // Modal System
     setupModalSystem() {
         const modal = document.getElementById('platformModal');
@@ -888,6 +908,9 @@ class CryptoAggregator {
                 }
             });
         }
+
+        // Setup platform card click handlers
+        this.setupPlatformCards();
     }
 
     showModal(platformId) {
@@ -1625,6 +1648,14 @@ function setupConnectMessage() {
         e.preventDefault();
         showMessage(mobileConnectMessage, 'mobile');
     });
+}
+
+// Global function for onclick handlers in HTML
+function trackPlatformClick(platformName, category) {
+    console.log('Platform clicked:', platformName, category);
+    // This function is called by onclick in HTML but actual modal opening
+    // is handled by the event listener in setupPlatformCards()
+    return true;
 }
 
 // Theme Management
