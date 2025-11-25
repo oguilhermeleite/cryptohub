@@ -1,6 +1,6 @@
-// Crypto Agregator - Enhanced JavaScript with Modal System and Horizontal Scrolling
+// CRYPTO AGGREGATOR - Enhanced JavaScript with Modal System and Horizontal Scrolling
 
-class CryptoAgregator {
+class CryptoAggregator {
     constructor() {
         this.currentLang = this.getStoredLanguage() || 'pt';
         this.translations = {
@@ -185,8 +185,8 @@ class CryptoAgregator {
             'bybit': {
                 name: 'Bybit',
                 url: 'https://www.bybit.com/invite?ref=YNAGP8',
-                logo: 'https://static.bybit.com/web/v4/static/logo/Bybit_logo_circle.png',
-                fallbackLogo: 'https://upload.wikimedia.org/wikipedia/commons/4/43/Bybit_Logo.svg',
+                logo: 'https://logo.clearbit.com/bybit.com',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=bybit.com&sz=128',
                 xProfile: 'https://x.com/Bybit_Official',
                 description: {
                     pt: 'Bybit é a segunda maior exchange de criptomoedas do mundo por volume de negociação, servindo mais de 60 milhões de usuários. Fundada em 2018, oferece mais de 650 criptomoedas com alta segurança e interface intuitiva.',
@@ -482,8 +482,8 @@ class CryptoAgregator {
             'phantom': {
                 name: 'Phantom',
                 url: 'https://phantom.com',
-                logo: 'https://logo.clearbit.com/phantom.app',
-                fallbackLogo: 'https://www.google.com/s2/favicons?domain=phantom.app&sz=64',
+                logo: 'https://avatars.githubusercontent.com/u/78782331',
+                fallbackLogo: 'https://www.google.com/s2/favicons?domain=phantom.app&sz=128',
                 xProfile: 'https://x.com/phantom',
                 description: {
                     pt: 'Phantom é uma carteira multi-chain não-custodial com mais de 80 milhões de usuários. Suporta Solana, Ethereum, Bitcoin, Polygon, Base e Sui com swaps, staking, NFTs e integração com DeFi em uma interface intuitiva.',
@@ -602,10 +602,10 @@ class CryptoAgregator {
 
         // Update page title and meta description
         if (lang === 'en') {
-            document.title = 'Crypto Agregator - Your Complete Gateway to the Crypto World';
+            document.title = 'CRYPTO AGGREGATOR - Your Complete Gateway to the Crypto World';
             document.querySelector('meta[name="description"]').content = 'Find the best way to buy, sell and use cryptocurrencies safely. P2P, Exchanges, Crypto Cards and Security.';
         } else {
-            document.title = 'Crypto Agregator - Sua Porta de Entrada Completa para o Mundo Cripto';
+            document.title = 'CRYPTO AGGREGATOR - Sua Porta de Entrada Completa para o Mundo Cripto';
             document.querySelector('meta[name="description"]').content = 'Encontre a melhor forma de comprar, vender e usar criptomoedas com segurança. P2P, Exchanges, Cartões Cripto e Segurança.';
         }
 
@@ -635,11 +635,11 @@ class CryptoAgregator {
     }
 
     getStoredLanguage() {
-        return localStorage.getItem('cryptoagregator_language');
+        return localStorage.getItem('cryptoaggregator_language');
     }
 
     storeLanguage(lang) {
-        localStorage.setItem('cryptoagregator_language', lang);
+        localStorage.setItem('cryptoaggregator_language', lang);
     }
 
     // Theme Management
@@ -706,11 +706,11 @@ class CryptoAgregator {
     }
 
     getStoredTheme() {
-        return localStorage.getItem('cryptoagregator_theme');
+        return localStorage.getItem('cryptoaggregator_theme');
     }
 
     storeTheme(theme) {
-        localStorage.setItem('cryptoagregator_theme', theme);
+        localStorage.setItem('cryptoaggregator_theme', theme);
     }
 
     trackThemeSwitch(theme) {
@@ -1504,14 +1504,14 @@ class CryptoAgregator {
     }
 
     storeClickData(data) {
-        const existingData = JSON.parse(localStorage.getItem('cryptoagregator_clicks') || '[]');
+        const existingData = JSON.parse(localStorage.getItem('cryptoaggregator_clicks') || '[]');
         existingData.push(data);
 
         if (existingData.length > 100) {
             existingData.slice(-100);
         }
 
-        localStorage.setItem('cryptoagregator_clicks', JSON.stringify(existingData));
+        localStorage.setItem('cryptoaggregator_clicks', JSON.stringify(existingData));
     }
 
     // Utility Methods
@@ -1529,7 +1529,7 @@ class CryptoAgregator {
 
     // Error Handling
     handleError(error, context) {
-        console.error(`Crypto Agregator Error in ${context}:`, error);
+        console.error(`CRYPTO AGGREGATOR Error in ${context}:`, error);
 
         const errorData = {
             error: error.message,
@@ -1538,14 +1538,14 @@ class CryptoAgregator {
             userAgent: navigator.userAgent
         };
 
-        const existingErrors = JSON.parse(localStorage.getItem('cryptoagregator_errors') || '[]');
+        const existingErrors = JSON.parse(localStorage.getItem('cryptoaggregator_errors') || '[]');
         existingErrors.push(errorData);
 
         if (existingErrors.length > 50) {
             existingErrors.slice(-50);
         }
 
-        localStorage.setItem('cryptoagregator_errors', JSON.stringify(existingErrors));
+        localStorage.setItem('cryptoaggregator_errors', JSON.stringify(existingErrors));
     }
 }
 
@@ -1639,14 +1639,14 @@ function setupThemeManagement() {
 // Initialize Application
 document.addEventListener('DOMContentLoaded', () => {
     try {
-        window.cryptoAgregator = new CryptoAgregator();
+        window.cryptoAggregator = new CryptoAggregator();
         setupPerformanceMonitoring();
         setupThemeManagement();
         setupConnectMessage();
 
-        console.log('Crypto Agregator initialized successfully');
+        console.log('CRYPTO AGGREGATOR initialized successfully');
     } catch (error) {
-        console.error('Failed to initialize Crypto Agregator:', error);
+        console.error('Failed to initialize CRYPTO AGGREGATOR:', error);
     }
 });
 
@@ -1665,5 +1665,5 @@ if ('serviceWorker' in navigator) {
 
 // Export for testing purposes
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { CryptoAgregator };
+    module.exports = { CryptoAggregator };
 }
