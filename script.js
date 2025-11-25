@@ -635,9 +635,8 @@ class CryptoAggregator {
         this.setupScrollAnimations();
         this.setupLazyLoading();
         this.setupAnimations();
-        this.setupModalSystem();
+        this.setupModalSystem(); // This already calls setupPlatformCards() internally
         this.setupHorizontalScrolling();
-        this.setupPlatformCards();
         this.setupPremiumBanner();
         this.updateLanguage(this.currentLang);
         this.trackPageView();
@@ -980,15 +979,22 @@ class CryptoAggregator {
     }
 
     showModal(platformId) {
+        console.log('showModal called with platformId:', platformId);
         const platform = this.platformData[platformId];
-        if (!platform) return;
+        if (!platform) {
+            console.error('Platform not found:', platformId);
+            return;
+        }
+        console.log('Platform data:', platform);
 
         const modal = document.getElementById('platformModal');
         const modalLogo = document.getElementById('modalLogo');
         const modalTitle = document.getElementById('modalTitle');
         const modalDescription = document.getElementById('modalDescription');
         const visitSite = document.getElementById('visitSite');
-        const modalFooter = modal.querySelector('.modal-footer');
+        const modalFooter = modal ? modal.querySelector('.modal-footer') : null;
+
+        console.log('Modal elements:', { modal: !!modal, modalLogo: !!modalLogo, modalTitle: !!modalTitle, modalDescription: !!modalDescription, visitSite: !!visitSite, modalFooter: !!modalFooter });
 
         if (modal && modalLogo && modalTitle && modalDescription && visitSite && modalFooter) {
             // Set modal content
@@ -998,6 +1004,7 @@ class CryptoAggregator {
 
             modalTitle.textContent = platform.name;
             modalDescription.textContent = platform.description[this.currentLang];
+            console.log('Modal content set:', { name: platform.name, description: platform.description[this.currentLang] });
 
             visitSite.dataset.url = platform.url;
             visitSite.dataset.platform = platform.name;
@@ -1050,41 +1057,6 @@ class CryptoAggregator {
         }
     }
 
-    // Platform Cards Setup
-    setupPlatformCards() {
-        const platformCards = document.querySelectorAll('.platform-card');
-
-        platformCards.forEach(card => {
-            const platformId = card.dataset.platform;
-
-            if (platformId && this.platformData[platformId]) {
-                card.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    this.showModal(platformId);
-                });
-
-                // Add keyboard accessibility
-                card.setAttribute('tabindex', '0');
-                card.setAttribute('role', 'button');
-                card.setAttribute('aria-label', `Open ${this.platformData[platformId].name} details`);
-
-                card.addEventListener('keydown', (e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        this.showModal(platformId);
-                    }
-                });
-
-                // Set up logo fallback
-                const img = card.querySelector('.platform-logo img');
-                if (img) {
-                    img.onerror = () => {
-                        img.src = this.platformData[platformId].fallbackLogo;
-                    };
-                }
-            }
-        });
-    }
 
     // Premium Banner Setup
     setupPremiumBanner() {
