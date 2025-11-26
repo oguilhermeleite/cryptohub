@@ -913,44 +913,23 @@ class CryptoAggregator {
         });
     }
 
-    // Platform Cards Click Handlers
+    // Platform Cards Click Handlers - SIMPLIFICADO
     setupPlatformCards() {
-        console.log('setupPlatformCards: Starting setup');
         const platformCards = document.querySelectorAll('.platform-card[data-platform]');
-        console.log('setupPlatformCards: Found', platformCards.length, 'cards');
 
-        platformCards.forEach((card, index) => {
-            console.log('setupPlatformCards: Setting up card', index, 'with platform:', card.dataset.platform);
+        platformCards.forEach(card => {
+            const platformId = card.dataset.platform;
 
-            card.addEventListener('click', (e) => {
-                console.log('CARD CLICKED:', card.dataset.platform);
-
-                // Prevent click if user is dragging/scrolling
-                if (card.classList.contains('dragging')) {
-                    console.log('Card is dragging, ignoring click');
-                    return;
-                }
-
-                const platformId = card.dataset.platform;
-                console.log('Platform ID:', platformId);
-
+            card.onclick = (e) => {
+                e.preventDefault();
+                e.stopPropagation();
                 if (platformId) {
-                    console.log('Calling showModal with:', platformId);
-                    try {
-                        this.showModal(platformId);
-                    } catch (error) {
-                        console.error('ERROR in showModal:', error);
-                    }
-                } else {
-                    console.warn('No platform ID found');
+                    this.showModal(platformId);
                 }
-            });
+            };
 
-            // Add hover effect
             card.style.cursor = 'pointer';
         });
-
-        console.log('setupPlatformCards: Setup complete');
     }
 
     // Modal System
@@ -999,98 +978,51 @@ class CryptoAggregator {
     }
 
     showModal(platformId) {
-        console.log('showModal called with platformId:', platformId);
         const platform = this.platformData[platformId];
-        if (!platform) {
-            console.error('Platform not found:', platformId);
-            return;
-        }
-        console.log('Platform data:', platform);
+        if (!platform) return;
 
         const modal = document.getElementById('platformModal');
+        if (!modal) return;
+
         const modalLogo = document.getElementById('modalLogo');
         const modalTitle = document.getElementById('modalTitle');
         const modalDescription = document.getElementById('modalDescription');
         const visitSite = document.getElementById('visitSite');
-        const modalFooter = modal ? modal.querySelector('.modal-footer') : null;
 
-        console.log('Modal elements:', { modal: !!modal, modalLogo: !!modalLogo, modalTitle: !!modalTitle, modalDescription: !!modalDescription, visitSite: !!visitSite, modalFooter: !!modalFooter });
-
-        if (modal && modalLogo && modalTitle && modalDescription && visitSite && modalFooter) {
-            console.log('All modal elements found, proceeding to open modal');
-
-            // Set modal content
+        // Set modal content - SIMPLES E DIRETO
+        if (modalLogo) {
             modalLogo.src = platform.logo;
             modalLogo.onerror = () => { modalLogo.src = platform.fallbackLogo; };
             modalLogo.alt = platform.name;
-
-            modalTitle.textContent = platform.name;
-            modalDescription.textContent = platform.description[this.currentLang];
-            console.log('Modal content set:', { name: platform.name, description: platform.description[this.currentLang] });
-
-            visitSite.dataset.url = platform.url;
-            visitSite.dataset.platform = platform.name;
-
-            // Remove any existing X button
-            const existingXButton = modal.querySelector('.modal-x-btn');
-            if (existingXButton) {
-                existingXButton.remove();
-            }
-
-            // Add "Follow on X" button if xProfile exists
-            if (platform.xProfile) {
-                const xButton = document.createElement('a');
-                xButton.href = platform.xProfile;
-                xButton.target = '_blank';
-                xButton.rel = 'noopener noreferrer';
-                xButton.className = 'modal-x-btn';
-                xButton.dataset.platform = platform.name;
-
-                const xButtonText = document.createElement('span');
-                xButtonText.setAttribute('data-lang', 'follow-on-x');
-                xButtonText.textContent = this.translations[this.currentLang]['follow-on-x'];
-
-                xButton.appendChild(xButtonText);
-
-                // Insert X button before the back button
-                const backButton = modal.querySelector('.modal-back-btn');
-                modalFooter.insertBefore(xButton, backButton);
-
-                // Add click event for tracking
-                xButton.addEventListener('click', () => {
-                    this.trackXProfileClick(platform.name, platform.xProfile);
-                });
-            }
-
-            // Prevent body scroll when modal is open
-            document.body.style.overflow = 'hidden';
-
-            // Show modal with animation
-            modal.classList.add('active');
-
-            // Track modal view
-            this.trackModalView(platform.name);
-
-            console.log('Modal opened successfully for:', platform.name);
-        } else {
-            console.error('CRITICAL: Missing modal elements!', {
-                modal: !!modal,
-                modalLogo: !!modalLogo,
-                modalTitle: !!modalTitle,
-                modalDescription: !!modalDescription,
-                visitSite: !!visitSite,
-                modalFooter: !!modalFooter
-            });
-            alert('Error: Modal elements not found. Please refresh the page.');
         }
+
+        if (modalTitle) {
+            modalTitle.textContent = platform.name;
+        }
+
+        if (modalDescription) {
+            modalDescription.textContent = platform.description[this.currentLang] || platform.description['pt'];
+        }
+
+        if (visitSite) {
+            visitSite.onclick = () => {
+                window.open(platform.url, '_blank', 'noopener,noreferrer');
+                this.closeModal();
+            };
+        }
+
+        // Scroll to top and prevent body scroll
+        window.scrollTo(0, 0);
+        document.body.style.overflow = 'hidden';
+
+        // Show modal
+        modal.classList.add('active');
     }
 
     closeModal() {
         const modal = document.getElementById('platformModal');
         if (modal) {
             modal.classList.remove('active');
-
-            // Restore body scroll
             document.body.style.overflow = 'auto';
         }
     }
