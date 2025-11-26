@@ -979,6 +979,11 @@ class CryptoAggregator {
 
     showModal(platformId) {
         console.log('🔍 Opening modal for:', platformId);
+
+        // CRITICAL: Save current scroll position FIRST
+        const scrollY = window.scrollY;
+        const scrollX = window.scrollX;
+
         const platform = this.platformData[platformId];
         if (!platform) {
             console.error('❌ Platform not found:', platformId);
@@ -1051,19 +1056,39 @@ class CryptoAggregator {
             };
         }
 
-        // Prevent body scroll (SEM SCROLL TO TOP!)
+        // CRITICAL: Lock scroll position
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${scrollY}px`;
+        document.body.style.left = `-${scrollX}px`;
+        document.body.style.width = '100%';
         document.body.style.overflow = 'hidden';
+
+        // Store scroll position for restoration
+        this.scrollPosition = { x: scrollX, y: scrollY };
 
         // Show modal
         modal.classList.add('active');
-        console.log('✅ Modal opened successfully');
+        console.log('✅ Modal opened successfully at scroll position:', scrollY);
     }
 
     closeModal() {
         const modal = document.getElementById('platformModal');
         if (modal) {
             modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
+
+            // CRITICAL: Restore scroll position
+            const scrollPos = this.scrollPosition || { x: 0, y: 0 };
+
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.left = '';
+            document.body.style.width = '';
+            document.body.style.overflow = '';
+
+            // Restore scroll position
+            window.scrollTo(scrollPos.x, scrollPos.y);
+
+            console.log('✅ Modal closed, scroll restored to:', scrollPos.y);
         }
     }
 
