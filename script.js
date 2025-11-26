@@ -722,8 +722,32 @@ class CryptoAggregator {
         // Set initial theme
         this.setTheme(currentTheme);
 
+        // CRITICAL: Monitor and block unwanted theme changes
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+                    if (this.blockThemeChange) {
+                        const currentTheme = this.getStoredTheme() || 'dark';
+                        console.log('🚫 BLOCKING unwanted theme change - restoring to:', currentTheme);
+                        document.documentElement.setAttribute('data-theme', currentTheme);
+                    }
+                }
+            });
+        });
+
+        observer.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ['data-theme']
+        });
+
         // Theme switching function
         const toggleTheme = () => {
+            // CRITICAL: Block if modal is opening
+            if (this.blockThemeChange) {
+                console.log('🚫 toggleTheme BLOCKED - modal is opening');
+                return;
+            }
+
             const newTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
             console.log('Switching theme from', document.documentElement.getAttribute('data-theme'), 'to', newTheme);
             this.setTheme(newTheme);
