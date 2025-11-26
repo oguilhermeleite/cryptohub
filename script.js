@@ -751,6 +751,7 @@ class CryptoAggregator {
 
     setTheme(theme) {
         console.log('Setting theme to:', theme);
+        console.trace('Theme change triggered by:');
         document.documentElement.setAttribute('data-theme', theme);
 
         // Update both desktop and mobile theme button appearance
