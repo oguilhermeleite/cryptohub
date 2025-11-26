@@ -750,6 +750,12 @@ class CryptoAggregator {
     }
 
     setTheme(theme) {
+        // CRITICAL: Block theme changes during modal operations
+        if (this.blockThemeChange) {
+            console.log('🚫 Theme change BLOCKED during modal operation');
+            return;
+        }
+
         console.log('Setting theme to:', theme);
         console.trace('Theme change triggered by:');
         document.documentElement.setAttribute('data-theme', theme);
@@ -981,6 +987,9 @@ class CryptoAggregator {
     showModal(platformId) {
         console.log('🔍 Opening modal for:', platformId);
 
+        // CRITICAL: Block theme changes during modal operations
+        this.blockThemeChange = true;
+
         // CRITICAL: Save current scroll position FIRST
         const scrollY = window.scrollY;
         const scrollX = window.scrollX;
@@ -988,6 +997,7 @@ class CryptoAggregator {
         const platform = this.platformData[platformId];
         if (!platform) {
             console.error('❌ Platform not found:', platformId);
+            this.blockThemeChange = false;
             return;
         }
         console.log('✅ Platform data:', platform);
@@ -1070,6 +1080,12 @@ class CryptoAggregator {
         // Show modal
         modal.classList.add('active');
         console.log('✅ Modal opened successfully at scroll position:', scrollY);
+
+        // Unblock theme changes after modal is fully opened
+        setTimeout(() => {
+            this.blockThemeChange = false;
+            console.log('✅ Theme changes unblocked');
+        }, 100);
     }
 
     closeModal() {
