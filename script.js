@@ -1040,9 +1040,11 @@ class CryptoAggregator {
                 });
             }
 
+            // Prevent body scroll when modal is open
+            document.body.style.overflow = 'hidden';
+
             // Show modal with animation
             modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
 
             // Track modal view
             this.trackModalView(platform.name);
@@ -1053,7 +1055,9 @@ class CryptoAggregator {
         const modal = document.getElementById('platformModal');
         if (modal) {
             modal.classList.remove('active');
-            document.body.style.overflow = '';
+
+            // Restore body scroll
+            document.body.style.overflow = 'auto';
         }
     }
 
