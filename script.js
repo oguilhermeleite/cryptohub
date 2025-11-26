@@ -915,22 +915,42 @@ class CryptoAggregator {
 
     // Platform Cards Click Handlers
     setupPlatformCards() {
+        console.log('setupPlatformCards: Starting setup');
         const platformCards = document.querySelectorAll('.platform-card[data-platform]');
+        console.log('setupPlatformCards: Found', platformCards.length, 'cards');
 
-        platformCards.forEach(card => {
+        platformCards.forEach((card, index) => {
+            console.log('setupPlatformCards: Setting up card', index, 'with platform:', card.dataset.platform);
+
             card.addEventListener('click', (e) => {
+                console.log('CARD CLICKED:', card.dataset.platform);
+
                 // Prevent click if user is dragging/scrolling
-                if (card.classList.contains('dragging')) return;
+                if (card.classList.contains('dragging')) {
+                    console.log('Card is dragging, ignoring click');
+                    return;
+                }
 
                 const platformId = card.dataset.platform;
+                console.log('Platform ID:', platformId);
+
                 if (platformId) {
-                    this.showModal(platformId);
+                    console.log('Calling showModal with:', platformId);
+                    try {
+                        this.showModal(platformId);
+                    } catch (error) {
+                        console.error('ERROR in showModal:', error);
+                    }
+                } else {
+                    console.warn('No platform ID found');
                 }
             });
 
             // Add hover effect
             card.style.cursor = 'pointer';
         });
+
+        console.log('setupPlatformCards: Setup complete');
     }
 
     // Modal System
@@ -997,6 +1017,8 @@ class CryptoAggregator {
         console.log('Modal elements:', { modal: !!modal, modalLogo: !!modalLogo, modalTitle: !!modalTitle, modalDescription: !!modalDescription, visitSite: !!visitSite, modalFooter: !!modalFooter });
 
         if (modal && modalLogo && modalTitle && modalDescription && visitSite && modalFooter) {
+            console.log('All modal elements found, proceeding to open modal');
+
             // Set modal content
             modalLogo.src = platform.logo;
             modalLogo.onerror = () => { modalLogo.src = platform.fallbackLogo; };
@@ -1048,6 +1070,18 @@ class CryptoAggregator {
 
             // Track modal view
             this.trackModalView(platform.name);
+
+            console.log('Modal opened successfully for:', platform.name);
+        } else {
+            console.error('CRITICAL: Missing modal elements!', {
+                modal: !!modal,
+                modalLogo: !!modalLogo,
+                modalTitle: !!modalTitle,
+                modalDescription: !!modalDescription,
+                visitSite: !!visitSite,
+                modalFooter: !!modalFooter
+            });
+            alert('Error: Modal elements not found. Please refresh the page.');
         }
     }
 
