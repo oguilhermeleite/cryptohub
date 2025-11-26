@@ -1683,6 +1683,11 @@ img {
     background: #000000;
     color: #ffffff;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    display: none !important;
+}
+
+.modal-x-btn.show {
+    display: flex !important;
 }
 
 .modal-x-btn:hover {

@@ -978,16 +978,33 @@ class CryptoAggregator {
     }
 
     showModal(platformId) {
+        console.log('🔍 Opening modal for:', platformId);
         const platform = this.platformData[platformId];
-        if (!platform) return;
+        if (!platform) {
+            console.error('❌ Platform not found:', platformId);
+            return;
+        }
+        console.log('✅ Platform data:', platform);
 
         const modal = document.getElementById('platformModal');
-        if (!modal) return;
+        if (!modal) {
+            console.error('❌ Modal element not found');
+            return;
+        }
 
         const modalLogo = document.getElementById('modalLogo');
         const modalTitle = document.getElementById('modalTitle');
         const modalDescription = document.getElementById('modalDescription');
         const visitSite = document.getElementById('visitSite');
+        const followOnX = document.getElementById('followOnX');
+
+        console.log('📦 Elements found:', {
+            logo: !!modalLogo,
+            title: !!modalTitle,
+            description: !!modalDescription,
+            visitSite: !!visitSite,
+            followOnX: !!followOnX
+        });
 
         // Set modal content - SIMPLES E DIRETO
         if (modalLogo) {
@@ -1004,6 +1021,29 @@ class CryptoAggregator {
             modalDescription.textContent = platform.description[this.currentLang] || platform.description['pt'];
         }
 
+        // Botão "Seguir no X" - SEMPRE limpar primeiro e depois mostrar se necessário
+        if (followOnX) {
+            // Remove a classe primeiro para garantir estado limpo
+            followOnX.classList.remove('show');
+
+            console.log('🐦 X Profile:', platform.xProfile);
+            if (platform.xProfile) {
+                console.log('✅ Showing X button for:', platform.name);
+                followOnX.classList.add('show');
+                followOnX.onclick = (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('🐦 Opening X profile:', platform.xProfile);
+                    window.open(platform.xProfile, '_blank', 'noopener,noreferrer');
+                    this.trackXProfileClick(platform.name, platform.xProfile);
+                };
+            } else {
+                console.log('❌ No X profile for:', platform.name);
+            }
+        } else {
+            console.error('❌ followOnX button not found in DOM');
+        }
+
         if (visitSite) {
             visitSite.onclick = () => {
                 window.open(platform.url, '_blank', 'noopener,noreferrer');
@@ -1011,12 +1051,12 @@ class CryptoAggregator {
             };
         }
 
-        // Scroll to top and prevent body scroll
-        window.scrollTo(0, 0);
+        // Prevent body scroll (SEM SCROLL TO TOP!)
         document.body.style.overflow = 'hidden';
 
         // Show modal
         modal.classList.add('active');
+        console.log('✅ Modal opened successfully');
     }
 
     closeModal() {
