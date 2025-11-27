@@ -1,7 +1,7 @@
 // CryptoHub Service Worker
 // Simple service worker for basic caching and offline functionality
 
-const CACHE_NAME = 'cryptohub-v1.0.0';
+const CACHE_NAME = 'cryptohub-v2024-11-26-FINAL';
 const urlsToCache = [
     '/',
     '/index.html',
