@@ -1552,10 +1552,10 @@ img {
 }
 
 .modal-content {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
     background: var(--bg-modal);
     border-radius: 20px;
     padding: 0;
