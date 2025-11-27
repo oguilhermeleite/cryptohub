@@ -1559,7 +1559,9 @@ img {
 }
 
 .modal-content {
-    position: relative !important;
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
     background: var(--bg-modal);
     backdrop-filter: blur(30px);
     border: 1px solid var(--border-primary);
@@ -1569,14 +1571,14 @@ img {
     max-height: 80vh;
     margin: 0 !important;
     overflow-y: auto;
-    transform: scale(0.9);
+    transform: translate(-50%, -50%) scale(0.9) !important;
     transition: transform 0.3s ease, opacity 0.3s ease;
     opacity: 0;
-    flex-shrink: 0;
+    z-index: 100000 !important;
 }
 
 .modal-overlay.active .modal-content {
-    transform: scale(1);
+    transform: translate(-50%, -50%) scale(1) !important;
     opacity: 1;
 }
 
