@@ -1014,10 +1014,6 @@ class CryptoAggregator {
         // CRITICAL: Block theme changes during modal operations
         this.blockThemeChange = true;
 
-        // CRITICAL: Save current scroll position FIRST
-        const scrollY = window.scrollY;
-        const scrollX = window.scrollX;
-
         const platform = this.platformData[platformId];
         if (!platform) {
             console.error('❌ Platform not found:', platformId);
@@ -1091,19 +1087,13 @@ class CryptoAggregator {
             };
         }
 
-        // CRITICAL: Lock scroll position
-        document.body.style.position = 'fixed';
-        document.body.style.top = `-${scrollY}px`;
-        document.body.style.left = `-${scrollX}px`;
-        document.body.style.width = '100%';
+        // CRITICAL: Lock scroll (WITHOUT position: fixed to avoid jump)
         document.body.style.overflow = 'hidden';
-
-        // Store scroll position for restoration
-        this.scrollPosition = { x: scrollX, y: scrollY };
+        document.body.style.paddingRight = '0px'; // Prevent layout shift
 
         // Show modal
         modal.classList.add('active');
-        console.log('✅ Modal opened successfully at scroll position:', scrollY);
+        console.log('✅ Modal opened successfully');
 
         // Unblock theme changes after modal is fully opened
         setTimeout(() => {
@@ -1117,19 +1107,11 @@ class CryptoAggregator {
         if (modal) {
             modal.classList.remove('active');
 
-            // CRITICAL: Restore scroll position
-            const scrollPos = this.scrollPosition || { x: 0, y: 0 };
-
-            document.body.style.position = '';
-            document.body.style.top = '';
-            document.body.style.left = '';
-            document.body.style.width = '';
+            // Restore body scroll
             document.body.style.overflow = '';
+            document.body.style.paddingRight = '';
 
-            // Restore scroll position
-            window.scrollTo(scrollPos.x, scrollPos.y);
-
-            console.log('✅ Modal closed, scroll restored to:', scrollPos.y);
+            console.log('✅ Modal closed');
         }
     }
 
