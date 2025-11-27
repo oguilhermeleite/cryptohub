@@ -944,20 +944,25 @@ class CryptoAggregator {
         });
     }
 
-    // Platform Cards Click Handlers - SIMPLIFICADO
+    // Platform Cards Click Handlers - FORCE PREVENT DEFAULT FIRST
     setupPlatformCards() {
         const platformCards = document.querySelectorAll('.platform-card[data-platform]');
 
         platformCards.forEach(card => {
             const platformId = card.dataset.platform;
 
-            card.onclick = (e) => {
+            // CRITICAL: Use addEventListener with capture to run BEFORE inline onclick
+            card.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
+                e.stopImmediatePropagation(); // Stop inline onclick too
+
+                console.log('🎯 Card clicked - preventing default');
+
                 if (platformId) {
                     this.showModal(platformId);
                 }
-            };
+            }, { capture: true }); // Capture phase = runs first!
 
             card.style.cursor = 'pointer';
         });
