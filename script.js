@@ -1014,24 +1014,17 @@ class CryptoAggregator {
     }
 
     showModal(platformId) {
-        console.log('🔍 Opening modal for:', platformId);
-
-        // CRITICAL: Block theme changes during modal operations
+        // Block theme changes during modal operations
         this.blockThemeChange = true;
 
         const platform = this.platformData[platformId];
         if (!platform) {
-            console.error('❌ Platform not found:', platformId);
             this.blockThemeChange = false;
             return;
         }
-        console.log('✅ Platform data:', platform);
 
         const modal = document.getElementById('platformModal');
-        if (!modal) {
-            console.error('❌ Modal element not found');
-            return;
-        }
+        if (!modal) return;
 
         const modalLogo = document.getElementById('modalLogo');
         const modalTitle = document.getElementById('modalTitle');
@@ -1039,15 +1032,7 @@ class CryptoAggregator {
         const visitSite = document.getElementById('visitSite');
         const followOnX = document.getElementById('followOnX');
 
-        console.log('📦 Elements found:', {
-            logo: !!modalLogo,
-            title: !!modalTitle,
-            description: !!modalDescription,
-            visitSite: !!visitSite,
-            followOnX: !!followOnX
-        });
-
-        // Set modal content - SIMPLES E DIRETO
+        // Set modal content
         if (modalLogo) {
             modalLogo.src = platform.logo;
             modalLogo.onerror = () => { modalLogo.src = platform.fallbackLogo; };
@@ -1062,27 +1047,18 @@ class CryptoAggregator {
             modalDescription.textContent = platform.description[this.currentLang] || platform.description['pt'];
         }
 
-        // Botão "Seguir no X" - SEMPRE limpar primeiro e depois mostrar se necessário
+        // Twitter/X button
         if (followOnX) {
-            // Remove a classe primeiro para garantir estado limpo
             followOnX.classList.remove('show');
-
-            console.log('🐦 X Profile:', platform.xProfile);
             if (platform.xProfile) {
-                console.log('✅ Showing X button for:', platform.name);
                 followOnX.classList.add('show');
                 followOnX.onclick = (e) => {
                     e.preventDefault();
                     e.stopPropagation();
-                    console.log('🐦 Opening X profile:', platform.xProfile);
                     window.open(platform.xProfile, '_blank', 'noopener,noreferrer');
                     this.trackXProfileClick(platform.name, platform.xProfile);
                 };
-            } else {
-                console.log('❌ No X profile for:', platform.name);
             }
-        } else {
-            console.error('❌ followOnX button not found in DOM');
         }
 
         if (visitSite) {
@@ -1092,18 +1068,15 @@ class CryptoAggregator {
             };
         }
 
-        // CRITICAL: Lock scroll (WITHOUT position: fixed to avoid jump)
-        document.body.style.overflow = 'hidden';
-        document.body.style.paddingRight = '0px'; // Prevent layout shift
+        // Lock body scroll - CLEAN VERSION
+        document.body.classList.add('modal-open');
 
         // Show modal
         modal.classList.add('active');
-        console.log('✅ Modal opened successfully');
 
-        // Unblock theme changes after modal is fully opened
+        // Unblock theme changes after modal opens
         setTimeout(() => {
             this.blockThemeChange = false;
-            console.log('✅ Theme changes unblocked');
         }, 100);
     }
 
@@ -1111,12 +1084,8 @@ class CryptoAggregator {
         const modal = document.getElementById('platformModal');
         if (modal) {
             modal.classList.remove('active');
-
-            // Restore body scroll
-            document.body.style.overflow = '';
-            document.body.style.paddingRight = '';
-
-            console.log('✅ Modal closed');
+            // Unlock body scroll
+            document.body.classList.remove('modal-open');
         }
     }
 
