@@ -203,13 +203,16 @@
 
         // Update links
         modalWebsite.href = data.website;
+        console.log('✅ Website link set:', data.website);
 
         // Show/hide Twitter button based on availability
         if (data.twitter) {
             modalTwitter.href = data.twitter;
             modalTwitter.style.display = 'flex';
+            console.log('✅ Twitter link set:', data.twitter);
         } else {
             modalTwitter.style.display = 'none';
+            console.log('ℹ️ No Twitter link for:', data.name);
         }
 
         // Scroll to top smoothly before showing modal
