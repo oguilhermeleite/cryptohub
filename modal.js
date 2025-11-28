@@ -212,6 +212,12 @@
             modalTwitter.style.display = 'none';
         }
 
+        // Scroll to top smoothly before showing modal
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+
         // Show modal
         modalOverlay.classList.add('active');
         document.body.classList.add('modal-open');
