@@ -188,7 +188,7 @@
     const modalWebsite = document.getElementById('modalWebsite');
 
     // Open modal function
-    function openModal(platformId, logoSrc, clickX, clickY) {
+    function openModal(platformId, logoSrc) {
         const data = platformsData[platformId];
         if (!data) {
             console.warn('Platform not found:', platformId);
@@ -212,15 +212,6 @@
             modalTwitter.style.display = 'none';
         }
 
-        // Position modal at click location
-        const modalContainer = document.querySelector('.modal-container');
-        if (clickX !== undefined && clickY !== undefined) {
-            modalContainer.style.position = 'fixed';
-            modalContainer.style.left = clickX + 'px';
-            modalContainer.style.top = clickY + 'px';
-            modalContainer.style.transform = 'translate(-50%, -50%)';
-        }
-
         // Show modal
         modalOverlay.classList.add('active');
         document.body.classList.add('modal-open');
@@ -240,13 +231,9 @@
             const logoImg = card.querySelector('.platform-logo img');
             const logoSrc = logoImg ? logoImg.src : '';
 
-            // Capture click position
-            const clickX = e.clientX;
-            const clickY = e.clientY;
-
             // Use setTimeout to ensure this runs after analytics
             setTimeout(() => {
-                openModal(platformId, logoSrc, clickX, clickY);
+                openModal(platformId, logoSrc);
             }, 10);
         }
     }, true); // Use capture phase
@@ -263,13 +250,9 @@
             const logoImg = banner.querySelector('.premium-hero-logo img');
             const logoSrc = logoImg ? logoImg.src : '';
 
-            // Capture click position
-            const clickX = e.clientX;
-            const clickY = e.clientY;
-
             // Use setTimeout to ensure this runs after analytics
             setTimeout(() => {
-                openModal(platformId, logoSrc, clickX, clickY);
+                openModal(platformId, logoSrc);
             }, 10);
         }
     }, true); // Use capture phase

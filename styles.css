@@ -1548,17 +1548,18 @@ img {
 }
 
 .modal-overlay.active {
-    display: block !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
 .modal-container {
-    position: fixed;
+    position: relative;
     width: 90%;
     max-width: 600px;
     max-height: 90vh;
     overflow-y: auto;
     margin: 0;
-    /* Position will be set by JavaScript based on click location */
 }
 
 .modal-content {
