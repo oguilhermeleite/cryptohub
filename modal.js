@@ -227,14 +227,16 @@
     document.addEventListener('click', function(e) {
         const card = e.target.closest('.platform-card');
         if (card) {
-            e.preventDefault();
-            e.stopPropagation();
             const platformId = card.getAttribute('data-platform');
             const logoImg = card.querySelector('.platform-logo img');
             const logoSrc = logoImg ? logoImg.src : '';
-            openModal(platformId, logoSrc);
+
+            // Use setTimeout to ensure this runs after analytics
+            setTimeout(() => {
+                openModal(platformId, logoSrc);
+            }, 10);
         }
-    });
+    }, true); // Use capture phase
 
     // Add click listener to premium banner
     document.addEventListener('click', function(e) {
@@ -244,14 +246,16 @@
             if (e.target.closest('.premium-cta-button')) {
                 return;
             }
-            e.preventDefault();
-            e.stopPropagation();
             const platformId = banner.getAttribute('data-platform');
             const logoImg = banner.querySelector('.premium-hero-logo img');
             const logoSrc = logoImg ? logoImg.src : '';
-            openModal(platformId, logoSrc);
+
+            // Use setTimeout to ensure this runs after analytics
+            setTimeout(() => {
+                openModal(platformId, logoSrc);
+            }, 10);
         }
-    });
+    }, true); // Use capture phase
 
     // Close modal events
     if (modalClose) modalClose.addEventListener('click', closeModal);
