@@ -1538,20 +1538,19 @@ img {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
     background: rgba(0, 0, 0, 0.85);
     z-index: 9999;
     backdrop-filter: blur(5px);
-    overflow-y: auto;
-    overflow-x: hidden;
 }
 
 .modal-overlay.active {
     display: flex !important;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 0;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
 .modal-content {
@@ -1566,7 +1565,6 @@ img {
     z-index: 10000;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
     border: 1px solid var(--border-primary);
-    margin: auto;
 }
 
 .modal-header {
