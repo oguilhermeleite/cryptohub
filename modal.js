@@ -17,19 +17,19 @@
             name: 'P2P.me',
             description: 'P2P.me é uma plataforma P2P confiável para compra e venda de criptomoedas com segurança e rapidez.',
             website: 'https://p2p.me',
-            twitter: null
+            twitter: 'https://twitter.com/p2pme_official'
         },
         'pagcrypto': {
             name: 'PagCrypto',
             description: 'PagCrypto oferece soluções completas para pagamentos com criptomoedas no Brasil.',
             website: 'https://pagcrypto.finance',
-            twitter: null
+            twitter: 'https://twitter.com/pagcrypto'
         },
         'comprecripto': {
             name: 'Compre Cripto',
             description: 'Compre Cripto facilita a compra de criptomoedas de forma simples e segura.',
             website: 'https://comprecripto.io',
-            twitter: null
+            twitter: 'https://twitter.com/comprecripto'
         },
         'binance': {
             name: 'Binance',
