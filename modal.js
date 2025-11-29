@@ -302,6 +302,12 @@
 
     // Add click listeners to all platform cards
     document.addEventListener('click', function(e) {
+        // CRITICAL: Don't interfere with modal link buttons
+        if (e.target.closest('#modalTwitter') || e.target.closest('#modalWebsite')) {
+            console.log('🔗 Link button clicked - allowing default navigation');
+            return; // Let the link work naturally
+        }
+
         const card = e.target.closest('.platform-card');
         if (card) {
             const platformId = card.getAttribute('data-platform');
@@ -317,6 +323,12 @@
 
     // Add click listener to premium banner
     document.addEventListener('click', function(e) {
+        // CRITICAL: Don't interfere with modal link buttons
+        if (e.target.closest('#modalTwitter') || e.target.closest('#modalWebsite')) {
+            console.log('🔗 Link button clicked - allowing default navigation');
+            return; // Let the link work naturally
+        }
+
         const banner = e.target.closest('.premium-hero-banner');
         if (banner) {
             // Don't open modal if clicking the CTA button
