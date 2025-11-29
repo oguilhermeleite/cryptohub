@@ -241,9 +241,11 @@
     function openModal(platformId, logoSrc) {
         const data = platformsData[platformId];
         if (!data) {
-            console.warn('Platform not found:', platformId);
+            console.warn('❌ Platform not found:', platformId);
             return;
         }
+
+        console.log('🚀 Opening modal for:', data.name);
 
         // Update modal content
         modalLogo.src = logoSrc;
@@ -251,19 +253,32 @@
         modalTitle.textContent = data.name;
         modalDescription.textContent = data.description;
 
-        // Update links
+        // CRITICAL: Update links FIRST, before showing modal
+        if (!modalWebsite || !modalTwitter) {
+            console.error('❌ Modal buttons not found!');
+            return;
+        }
+
+        // Set website link
         modalWebsite.href = data.website;
-        console.log('✅ Website link set:', data.website);
+        modalWebsite.setAttribute('href', data.website); // Double ensure
+        console.log('✅ Website link set:', modalWebsite.href);
 
         // Show/hide Twitter button based on availability
         if (data.twitter) {
             modalTwitter.href = data.twitter;
+            modalTwitter.setAttribute('href', data.twitter); // Double ensure
             modalTwitter.style.display = 'flex';
-            console.log('✅ Twitter link set:', data.twitter);
+            console.log('✅ Twitter link set:', modalTwitter.href);
         } else {
             modalTwitter.style.display = 'none';
+            modalTwitter.href = '#';
             console.log('ℹ️ No Twitter link for:', data.name);
         }
+
+        // Verify links are set correctly
+        console.log('🔗 Final check - Website:', modalWebsite.href);
+        console.log('🔗 Final check - Twitter:', modalTwitter.href);
 
         // Scroll to top smoothly before showing modal
         window.scrollTo({
@@ -271,9 +286,12 @@
             behavior: 'smooth'
         });
 
-        // Show modal
-        modalOverlay.classList.add('active');
-        document.body.classList.add('modal-open');
+        // Show modal with slight delay to ensure links are set
+        setTimeout(() => {
+            modalOverlay.classList.add('active');
+            document.body.classList.add('modal-open');
+            console.log('✅ Modal is now visible');
+        }, 50);
     }
 
     // Close modal function
