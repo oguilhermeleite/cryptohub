@@ -207,15 +207,35 @@
         }
     };
 
-    // Modal elements
-    const modalOverlay = document.getElementById('modalOverlay');
-    const modalClose = document.getElementById('modalClose');
-    const modalBack = document.getElementById('modalBack');
-    const modalLogo = document.getElementById('modalLogo');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalDescription = document.getElementById('modalDescription');
-    const modalTwitter = document.getElementById('modalTwitter');
-    const modalWebsite = document.getElementById('modalWebsite');
+    // Wait for DOM to be ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initModal);
+    } else {
+        initModal();
+    }
+
+    function initModal() {
+        // Modal elements
+        const modalOverlay = document.getElementById('modalOverlay');
+        const modalClose = document.getElementById('modalClose');
+        const modalBack = document.getElementById('modalBack');
+        const modalLogo = document.getElementById('modalLogo');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDescription = document.getElementById('modalDescription');
+        const modalTwitter = document.getElementById('modalTwitter');
+        const modalWebsite = document.getElementById('modalWebsite');
+
+        // Debug: Check if elements exist
+        console.log('🔍 Modal Elements Check:', {
+            overlay: !!modalOverlay,
+            close: !!modalClose,
+            back: !!modalBack,
+            logo: !!modalLogo,
+            title: !!modalTitle,
+            description: !!modalDescription,
+            twitter: !!modalTwitter,
+            website: !!modalWebsite
+        });
 
     // Open modal function
     function openModal(platformId, logoSrc) {
@@ -309,5 +329,7 @@
             closeModal();
         }
     });
+
+    } // End of initModal()
 
 })();

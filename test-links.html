@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧪 TESTE DE LINKS DO MODAL</title>
+    <link rel="stylesheet" href="styles.css?v=20241128-TEST">
+    <style>
+        body {
+            padding: 50px;
+            background: #0a0a0a;
+            color: white;
+        }
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .test-btn {
+            padding: 20px 40px;
+            background: #f7931a;
+            color: black;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 10px;
+            font-weight: bold;
+        }
+        .test-btn:hover {
+            background: #ffa500;
+        }
+        .status-box {
+            margin-top: 30px;
+            padding: 25px;
+            background: #1a1a1a;
+            border-radius: 12px;
+            border: 2px solid #333;
+        }
+        .check-item {
+            margin: 15px 0;
+            padding: 15px;
+            background: #2a2a2a;
+            border-radius: 8px;
+            border-left: 4px solid #4CAF50;
+        }
+        .check-item.warning {
+            border-left-color: #ff9800;
+        }
+        .check-item.error {
+            border-left-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🧪 TESTE DE LINKS DO MODAL</h1>
+        <p style="color: #aaa; margin-bottom: 30px;">Clique em uma plataforma para testar se os links estão funcionando corretamente</p>
+
+        <div>
+            <button class="test-btn" onclick="testPlatform('binance')">🟡 Binance (TEM Twitter)</button>
+            <button class="test-btn" onclick="testPlatform('kast')">💳 Kast (TEM Twitter)</button>
+            <button class="test-btn" onclick="testPlatform('p2pme')">🔄 P2P.me (SEM Twitter)</button>
+            <button class="test-btn" onclick="testPlatform('trezor')">🔐 Trezor (NOVO)</button>
+        </div>
+
+        <div class="status-box" id="statusBox">
+            <h3>📊 Status dos Testes:</h3>
+            <div id="results">Clique em uma plataforma acima para iniciar o teste...</div>
+        </div>
+    </div>
+
+    <!-- Modal (same as in index.html) -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-container">
+            <div class="modal-content">
+                <button class="modal-close" id="modalClose" aria-label="Fechar">×</button>
+
+                <div class="modal-header">
+                    <img src="" alt="" class="modal-logo" id="modalLogo">
+                </div>
+
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <p class="modal-description" id="modalDescription"></p>
+
+                <div class="modal-actions">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="modal-btn modal-btn-twitter" id="modalTwitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                        Seguir no X
+                    </a>
+
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="modal-btn modal-btn-primary" id="modalWebsite">
+                        Visitar Site
+                    </a>
+
+                    <button class="modal-btn modal-btn-secondary" id="modalBack">
+                        Voltar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="modal.js?v=20241128-NEW-PLATFORMS"></script>
+    <script>
+        function testPlatform(platformId) {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '<p style="color: #ffa500;">🔄 Testando ' + platformId + '...</p>';
+
+            // Get the platform data from modal.js
+            setTimeout(() => {
+                const modalTwitter = document.getElementById('modalTwitter');
+                const modalWebsite = document.getElementById('modalWebsite');
+
+                // Open the modal first
+                const fakeCard = document.createElement('div');
+                fakeCard.className = 'platform-card';
+                fakeCard.setAttribute('data-platform', platformId);
+                const fakeImg = document.createElement('img');
+                fakeImg.src = 'https://logo.clearbit.com/' + platformId + '.com';
+                fakeCard.appendChild(fakeImg);
+
+                // Trigger click
+                fakeCard.click();
+
+                // Wait for modal to open and check links
+                setTimeout(() => {
+                    const twitterHref = modalTwitter.href;
+                    const websiteHref = modalWebsite.href;
+                    const twitterVisible = window.getComputedStyle(modalTwitter).display !== 'none';
+
+                    let html = '<h4>Resultados para: ' + platformId.toUpperCase() + '</h4>';
+
+                    // Check Website Link
+                    html += '<div class="check-item ' + (websiteHref && websiteHref !== '#' && websiteHref !== window.location.href + '#' ? '' : 'error') + '">';
+                    html += '<strong>🌐 Botão "Visitar Site":</strong><br>';
+                    html += 'Link: <code>' + websiteHref + '</code><br>';
+                    html += websiteHref && websiteHref !== '#' && websiteHref !== window.location.href + '#' ? '✅ FUNCIONANDO!' : '❌ LINK INVÁLIDO!';
+                    html += '</div>';
+
+                    // Check Twitter Link
+                    html += '<div class="check-item ' + (twitterVisible && twitterHref && twitterHref.includes('twitter') || twitterHref.includes('x.com') ? '' : !twitterVisible ? 'warning' : 'error') + '">';
+                    html += '<strong>🐦 Botão "Seguir no X":</strong><br>';
+                    if (twitterVisible) {
+                        html += 'Link: <code>' + twitterHref + '</code><br>';
+                        html += twitterHref && (twitterHref.includes('twitter') || twitterHref.includes('x.com')) ? '✅ FUNCIONANDO!' : '❌ LINK INVÁLIDO!';
+                    } else {
+                        html += '⚠️ OCULTO (plataforma não tem Twitter)';
+                    }
+                    html += '</div>';
+
+                    html += '<div class="check-item">';
+                    html += '<strong>🎯 Teste de Clique:</strong><br>';
+                    html += 'Clique nos botões acima para verificar se abrem em nova aba!';
+                    html += '</div>';
+
+                    resultsDiv.innerHTML = html;
+                }, 500);
+            }, 100);
+        }
+    </script>
+</body>
+</html>
