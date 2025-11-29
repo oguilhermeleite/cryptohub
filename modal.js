@@ -40,13 +40,13 @@
         'bybit': {
             name: 'Bybit',
             description: 'Bybit é uma exchange líder em trading de derivativos de criptomoedas, oferecendo plataforma avançada e alta liquidez.',
-            website: 'https://bybit.com',
+            website: 'https://www.bybit.com/pt-BR/invite/brazil/?ref=YNAGP8',
             twitter: 'https://twitter.com/Bybit_Official'
         },
         'kraken': {
             name: 'Kraken',
             description: 'Kraken é uma das exchanges mais antigas e confiáveis, conhecida por sua segurança e conformidade regulatória.',
-            website: 'https://kraken.com',
+            website: 'https://invite.kraken.com/JDNW/de6w7cmj',
             twitter: 'https://twitter.com/krakenfx'
         },
         'mexc': {
@@ -76,7 +76,7 @@
         'xverse': {
             name: 'Xverse Wallet',
             description: 'Xverse é a principal carteira para Bitcoin, permitindo acesso a NFTs, DeFi e aplicativos Web3 no Bitcoin.',
-            website: 'https://xverse.app',
+            website: 'https://www.xverse.app/?utm_campaign=dogdamassa&fbclid=PAZnRzaANI0IBleHRuA2FlbQIxMQABpxeUZWEqzLu82FgMlCTcA4tRAwBA-H4ilQnR2PCxs4r',
             twitter: 'https://twitter.com/XverseApp'
         },
         'metamask': {
@@ -89,13 +89,13 @@
             name: 'Kast Finance',
             description: 'Kast oferece cartões cripto que permitem gastar suas criptomoedas no dia a dia com facilidade.',
             website: 'https://kast.xyz',
-            twitter: null
+            twitter: 'https://twitter.com/kastfinance'
         },
         'offramp': {
             name: 'Offramp',
             description: 'Offramp facilita a conversão de cripto para fiat com cartões e soluções de pagamento.',
             website: 'https://offramp.xyz',
-            twitter: null
+            twitter: 'https://twitter.com/OfframpMoney'
         },
         'etherfi': {
             name: 'Ether.fi',
@@ -106,20 +106,20 @@
         'revolut': {
             name: 'Revolut',
             description: 'Revolut é um banco digital que integra crypto, permitindo compra, venda e troca de criptomoedas.',
-            website: 'https://revolut.com',
+            website: 'https://revolut.com/referral/?referral-code=waldir3l75!SEP1-25-AR-MDL-ROI&geo-redirect',
             twitter: 'https://twitter.com/RevolutApp'
         },
         'bitybank': {
             name: 'Bitybank',
             description: 'Bitybank é um banco digital brasileiro com foco em criptomoedas e finanças descentralizadas.',
-            website: 'https://bity.com.br',
-            twitter: null
+            website: 'https://bity.com.br/mgm/180879',
+            twitter: 'https://twitter.com/BityPrePay'
         },
         'neobankless': {
             name: 'Neobankless',
             description: 'Neobankless é um banco digital com integração total de serviços cripto.',
             website: 'https://neobankless.com',
-            twitter: null
+            twitter: 'https://twitter.com/neobankless'
         },
         'ledger': {
             name: 'Ledger',
@@ -167,13 +167,43 @@
             name: 'FixedFloat',
             description: 'FixedFloat oferece swaps instantâneos entre criptomoedas com taxas fixas e transparentes.',
             website: 'https://ff.io',
-            twitter: null
+            twitter: 'https://twitter.com/FixedFloat'
         },
         'bitget-featured': {
             name: 'Bitget Wallet',
             description: 'Carteira Web3 multi-chain líder com suporte completo a DeFi, NFTs e trading. Mais de 60 milhões de usuários confiam na Bitget para gerenciar seus ativos digitais com segurança.',
             website: 'https://newshare.bwb.global/en/invite_earn_coin?inviteCode=SJQDBe&deepLinkType=card&utmSource=referral2.0_copyLink',
             twitter: 'https://twitter.com/BitgetWallet'
+        },
+        'trezor': {
+            name: 'Trezor',
+            description: 'Pioneira em hardware wallets, oferece máxima segurança para criptomoedas com código open-source.',
+            website: 'https://trezor.io',
+            twitter: 'https://twitter.com/Trezor'
+        },
+        'pumpfun': {
+            name: 'Pump.fun',
+            description: 'Plataforma líder para lançamento de memecoins em Solana, crie tokens em segundos.',
+            website: 'https://pump.fun',
+            twitter: 'https://twitter.com/pumpdotfun'
+        },
+        'layerswap': {
+            name: 'Layerswap',
+            description: 'Transferências rápidas entre exchanges e blockchains com taxas baixas.',
+            website: 'https://layerswap.io',
+            twitter: 'https://twitter.com/layerswap'
+        },
+        'bitso': {
+            name: 'Bitso',
+            description: 'Cartão cripto para gastar criptomoedas em qualquer lugar da América Latina.',
+            website: 'https://bitso.com',
+            twitter: 'https://twitter.com/Bitso'
+        },
+        'bitcard': {
+            name: 'Bitcard',
+            description: 'Cartão cripto para gastar Bitcoin diretamente com recompensas em cashback.',
+            website: 'https://bitcard.io',
+            twitter: 'https://twitter.com/bitcard_io'
         }
     };
 
