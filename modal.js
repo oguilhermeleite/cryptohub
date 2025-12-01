@@ -216,6 +216,84 @@
             description: 'Cartão cripto para gastar Bitcoin diretamente com recompensas em cashback.',
             website: 'https://bitcard.io',
             twitter: 'https://twitter.com/bitcard_io'
+        },
+        '4pfinance': {
+            name: '4P Finance',
+            description: 'Compre e Venda Criptomoedas via P2P direto na Blockchain. Pagamento de boletos com cripto através de instituições financeiras registradas.',
+            website: 'https://4p.finance',
+            twitter: 'https://twitter.com/4payFinance'
+        },
+        'kryptera': {
+            name: 'Kryptera',
+            description: 'Plataforma P2P para negociação de criptomoedas com segurança e praticidade.',
+            website: 'https://kryptera.com',
+            twitter: 'https://twitter.com/krypteratweets'
+        },
+        'okx': {
+            name: 'OKX',
+            description: 'Exchange global de criptomoedas com mais de 70 milhões de traders. Taxas baixas, alta segurança e trading avançado de spot, futuros e opções.',
+            website: 'https://www.okx.com',
+            twitter: 'https://twitter.com/okx'
+        },
+        'gateio': {
+            name: 'Gate.io',
+            description: 'Uma das top 10 exchanges globais com mais de 4.100 ativos digitais. Trading de spot, futuros, margin, staking e copy trading.',
+            website: 'https://www.gate.com',
+            twitter: 'https://x.com/gate_io'
+        },
+        'magiceden': {
+            name: 'Magic Eden Wallet',
+            description: 'Carteira multi-chain focada em NFTs com swaps instantâneos, gerenciamento de portfólio, suporte a Ordinals e BRC20. A única carteira que você precisa.',
+            website: 'https://wallet.magiceden.io',
+            twitter: 'https://twitter.com/MagicEden'
+        },
+        'slush': {
+            name: 'Slush',
+            description: 'Carteira simples, segura e elegante para todo o ecossistema Sui. Seu super app Sui para investir, fazer swap, stake e usar em DeFi.',
+            website: 'https://slush.app',
+            twitter: 'https://x.com/SlushWallet'
+        },
+        'unisat': {
+            name: 'UniSat',
+            description: 'Carteira Bitcoin com suporte a Alkanes, Ordinals e Runes. Extensão de navegador para gerenciar e negociar ativos digitais na rede Bitcoin.',
+            website: 'https://unisat.io',
+            twitter: 'https://twitter.com/unisat_wallet'
+        },
+        'cypher': {
+            name: 'Cypher',
+            description: 'Transforme cripto em moeda do dia a dia com Cypher Card. Recarregue com mais de 500 tokens das redes EVM, Cosmos, Solana e Tron.',
+            website: 'https://cypherhq.io',
+            twitter: 'https://x.com/Cypher_HQ_'
+        },
+        'orbitx': {
+            name: 'OrbitX',
+            description: 'O cartão cripto mais PREMIUM, powered by VISA Signature. Verdadeiramente self-custodial onde VOCÊ possui as chaves e benefícios premium. Stablecoins gastáveis!',
+            website: 'https://orbitxpay.com',
+            twitter: 'https://x.com/OrbitX_Pay'
+        },
+        'raydium': {
+            name: 'Raydium',
+            description: 'AMM on-chain com order book impulsionando a evolução do DeFi em Solana. Trading perp sem gas, até 40x alavancagem e taxas ultra-baixas.',
+            website: 'https://raydium.io',
+            twitter: 'https://x.com/RaydiumProtocol'
+        },
+        'bitflow': {
+            name: 'Bitflow',
+            description: 'A DEX para Bitcoiners com agregador potente garantindo as melhores taxas de swap na Stacks. Trading de Bitcoin, SIP10 tokens e Runes com yield.',
+            website: 'https://www.bitflow.finance',
+            twitter: 'https://twitter.com/bitflow'
+        },
+        'liquidium': {
+            name: 'Liquidium',
+            description: 'O primeiro protocolo de empréstimos cross-chain verdadeiramente descentralizado. Empreste ou pegue emprestado qualquer ativo entre Bitcoin, Ethereum e Solana.',
+            website: 'https://liquidium.fi',
+            twitter: 'https://x.com/liquidiumfi'
+        },
+        'satsterminal': {
+            name: 'Sats Terminal',
+            description: 'O melhor app para swaps, empréstimos e yield de Bitcoin. Agregação de liquidez para o ecossistema Bitcoin com o algoritmo SatStream.',
+            website: 'https://www.satsterminal.com',
+            twitter: 'https://x.com/SatsTerminal'
         }
     };
 
