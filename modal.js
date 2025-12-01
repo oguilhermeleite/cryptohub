@@ -31,6 +31,18 @@
             website: 'https://comprecripto.io',
             twitter: 'https://twitter.com/comprecripto'
         },
+        'crypix': {
+            name: 'Crypix',
+            description: 'Plataforma multi-chain para conversão de criptomoedas em PIX e pagamento de boletos. Sem burocracia, taxa de 2% e configuração em 2 minutos.',
+            website: 'https://crypix.me',
+            twitter: ''
+        },
+        'pixgo': {
+            name: 'Pixgo',
+            description: 'Receba PIX sem conta bancária. Plataforma de pagamentos digitais com PIX sem burocracia, taxa fixa de 2% e configuração em 2 minutos.',
+            website: 'https://pixgo.org',
+            twitter: ''
+        },
         'binance': {
             name: 'Binance',
             description: 'A Binance é a maior exchange de criptomoedas do mundo, atendendo mais de 270 milhões de usuários em mais de 180 países. Com taxas baixas e mais de 500 criptomoedas disponíveis.',
