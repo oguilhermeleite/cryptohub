@@ -438,29 +438,6 @@
         </div>
     </section>
 
-    <!-- Modal Overlay -->
-    <div class="modal-overlay" id="platformModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="modal-logo">
-                    <img id="modalLogo" src="" alt="">
-                </div>
-                <h3 id="modalTitle"></h3>
-                <button class="modal-close" id="closeModal">&times;</button>
-            </div>
-            <div class="modal-body">
-                <p id="modalDescription"></p>
-            </div>
-            <div class="modal-footer">
-                <button class="modal-x-btn" id="followOnX">
-                    <span data-lang="follow-on-x">Seguir no X</span>
-                </button>
-                <button class="modal-visit-btn" id="visitSite" data-lang="visit-site">Visitar Site</button>
-                <button class="modal-back-btn" id="backModal" data-lang="back">Voltar</button>
-            </div>
-        </div>
-    </div>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -492,34 +469,42 @@
         </div>
     </footer>
 
-    <!-- Platform Modal -->
-    <div class="modal-overlay" id="platformModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button class="modal-close" id="closeModal" aria-label="Close">×</button>
-                <div class="modal-logo">
-                    <img id="modalLogo" src="" alt="">
+    <!-- Modal System -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-container">
+            <div class="modal-content">
+                <button class="modal-close" id="modalClose" aria-label="Fechar">×</button>
+
+                <div class="modal-header">
+                    <img src="" alt="" class="modal-logo" id="modalLogo">
                 </div>
-                <h3 id="modalTitle"></h3>
-            </div>
-            <div class="modal-body">
-                <p id="modalDescription"></p>
-            </div>
-            <div class="modal-footer">
-                <button class="modal-x-btn" id="followOnX">
-                    <span data-lang="follow-on-x">Seguir no X</span>
-                </button>
-                <button class="modal-visit-btn" id="visitSite">
-                    <span data-lang="visit-site">Visitar Site</span>
-                </button>
-                <button class="modal-back-btn" id="backModal">
-                    <span data-lang="back">Voltar</span>
-                </button>
+
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <p class="modal-description" id="modalDescription"></p>
+
+                <div class="modal-actions">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="modal-btn modal-btn-twitter" id="modalTwitter" onclick="if(this.href && this.href !== '#' && this.href !== window.location.href + '#') { window.open(this.href, '_blank'); return false; }">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                        Seguir no X
+                    </a>
+
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="modal-btn modal-btn-primary" id="modalWebsite" onclick="if(this.href && this.href !== '#' && this.href !== window.location.href + '#') { window.open(this.href, '_blank'); return false; }">
+                        Visitar Site
+                    </a>
+
+                    <button class="modal-btn modal-btn-secondary" id="modalBack">
+                        Voltar
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 
-    <script src="script.js?v=20241126b"></script>
+    <script src="script.js?v=20241127-rebuild-v2"></script>
+    <!-- Modal System -->
+    <script src="modal.js?v=20241201-ALL-PLATFORMS-FIX"></script>
     <!-- Performance Optimization Script -->
     <script src="performance.js?v=20241125f" defer></script>
 </body>
