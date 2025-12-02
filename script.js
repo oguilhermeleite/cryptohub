@@ -96,7 +96,7 @@ class CryptoAggregator {
         this.platformData = {
             'bitget-featured': {
                 name: 'Bitget Wallet',
-                url: 'https://newshare.bwb.global/en/invite_earn_coin?inviteCode=SJQDBe&deepLinkType=card&utmSource=referral2.0_copyLink',
+                url: 'https://web3.bitget.com',
                 logo: 'https://logo.clearbit.com/bitget.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=bitget.com&sz=64',
                 xProfile: 'https://x.com/BitgetWallet',
@@ -107,7 +107,7 @@ class CryptoAggregator {
             },
             'comprecripto': {
                 name: 'Compre Cripto',
-                url: 'https://comprecripto.io/?ref=mqm',
+                url: 'https://comprecripto.io',
                 logo: 'https://logo.clearbit.com/comprecripto.io',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=comprecripto.io&sz=64',
                 xProfile: 'https://x.com/comprecripto_',
@@ -173,7 +173,7 @@ class CryptoAggregator {
             },
             'binance': {
                 name: 'Binance',
-                url: 'https://www.binance.com/activity/referral-entry/CPA?ref=CPA_0001DCF8M6',
+                url: 'https://www.binance.com',
                 logo: 'https://logo.clearbit.com/binance.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=binance.com&sz=64',
                 xProfile: 'https://x.com/binance',
@@ -184,7 +184,7 @@ class CryptoAggregator {
             },
             'bybit': {
                 name: 'Bybit',
-                url: 'https://www.bybit.com/invite?ref=YNAGP8',
+                url: 'https://www.bybit.com',
                 logo: 'https://logo.clearbit.com/bybit.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=bybit.com&sz=128',
                 xProfile: 'https://x.com/Bybit_Official',
@@ -195,7 +195,7 @@ class CryptoAggregator {
             },
             'kraken': {
                 name: 'Kraken',
-                url: 'https://invite.kraken.com/JDNW/de6w7cmj',
+                url: 'https://www.kraken.com',
                 logo: 'https://logo.clearbit.com/kraken.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=kraken.com&sz=64',
                 xProfile: 'https://x.com/krakenfx',
@@ -217,7 +217,7 @@ class CryptoAggregator {
             },
             'gateio': {
                 name: 'Gate.io',
-                url: 'https://www.gate.com/signup/AVEXB1XE?ref_type=103&utm_cmp=PEYEQdSb',
+                url: 'https://www.gate.com',
                 logo: 'https://www.google.com/s2/favicons?domain=gate.io&sz=128',
                 fallbackLogo: 'https://logo.clearbit.com/gate.io',
                 xProfile: 'https://x.com/gate_io',
@@ -316,7 +316,7 @@ class CryptoAggregator {
             },
             'satsterminal': {
                 name: 'Sats Terminal',
-                url: 'https://app.satsterminal.com/en?ref=EVP69',
+                url: 'https://www.satsterminal.com',
                 logo: 'https://logo.clearbit.com/satsterminal.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=satsterminal.com&sz=128',
                 xProfile: 'https://x.com/SatsTerminal',
@@ -371,7 +371,7 @@ class CryptoAggregator {
             },
             'bitget': {
                 name: 'Bitget Wallet',
-                url: 'https://newshare.bwb.global/pt_br/invite_earn_coin?inviteCode=VdkFyq&deepLinkType=card&utmSource=referral2.0_copyLink',
+                url: 'https://web3.bitget.com',
                 logo: 'https://logo.clearbit.com/bitget.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=bitget.com&sz=64',
                 xProfile: 'https://x.com/BitgetWallet',
@@ -393,7 +393,7 @@ class CryptoAggregator {
             },
             'offramp': {
                 name: 'Offramp',
-                url: 'https://app.offramp.xyz/login?referralCode=iokost',
+                url: 'https://offramp.xyz',
                 logo: 'https://logo.clearbit.com/offramp.xyz',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=offramp.xyz&sz=64',
                 xProfile: 'https://x.com/offrampxyz',
@@ -415,7 +415,7 @@ class CryptoAggregator {
             },
             'cypher': {
                 name: 'Cypher',
-                url: 'https://app.cypherhq.io/card/referral/VUBX7395',
+                url: 'https://cypherhq.io',
                 logo: 'https://logo.clearbit.com/cypherhq.io',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=cypherhq.io&sz=64',
                 xProfile: 'https://x.com/cypher_hq_',
@@ -437,7 +437,7 @@ class CryptoAggregator {
             },
             'revolut': {
                 name: 'Revolut',
-                url: 'https://revolut.com/referral/?referral-code=waldir3l75!SEP1-25-AR-MDL-ROI&geo-redirect',
+                url: 'https://www.revolut.com',
                 logo: 'https://logo.clearbit.com/revolut.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=revolut.com&sz=64',
                 xProfile: 'https://x.com/RevolutApp',
@@ -448,7 +448,7 @@ class CryptoAggregator {
             },
             'bitybank': {
                 name: 'Bitybank',
-                url: 'https://bity.com.br/mgm/180879',
+                url: 'https://bity.com.br',
                 logo: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=328,fit=crop,q=95/Aq20eV3zXpI13gLX/logo-m2WrzMLqvKuOjRz1.png',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=bity.com.br&sz=128',
                 xProfile: 'https://x.com/bitybank',
@@ -470,7 +470,7 @@ class CryptoAggregator {
             },
             'xverse': {
                 name: 'Xverse Wallet',
-                url: 'https://www.xverse.app/?utm_campaign=dogdamassa&fbclid=PAZnRzaANI0IBleHRuA2FlbQIxMQABpxeUZWEqzLu82FgMlCTcA4tRAwBA-H4ilQnR2PCxs4r78yqbldkLOKz4SvmN_aem_R_LGjSLfZSg96jqS-fbWwA',
+                url: 'https://www.xverse.app',
                 logo: 'https://xverse.app/favicon.ico',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=xverse.app&sz=64',
                 xProfile: 'https://x.com/XverseApp',
@@ -492,7 +492,7 @@ class CryptoAggregator {
             },
             'metamask': {
                 name: 'MetaMask',
-                url: 'https://link.metamask.io/rewards?referral=W32GW0',
+                url: 'https://metamask.io',
                 logo: 'https://upload.wikimedia.org/wikipedia/commons/3/36/MetaMask_Fox.svg',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=metamask.io&sz=64',
                 xProfile: 'https://x.com/MetaMask',

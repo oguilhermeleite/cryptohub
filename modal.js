@@ -46,19 +46,19 @@
         'binance': {
             name: 'Binance',
             description: 'A Binance é a maior exchange de criptomoedas do mundo, atendendo mais de 270 milhões de usuários em mais de 180 países. Com taxas baixas e mais de 500 criptomoedas disponíveis.',
-            website: 'https://www.binance.com/activity/referral-entry/CPA?ref=CPA_0001DCF8M6',
+            website: 'https://www.binance.com',
             twitter: 'https://twitter.com/binance'
         },
         'bybit': {
             name: 'Bybit',
             description: 'Bybit é uma exchange líder em trading de derivativos de criptomoedas, oferecendo plataforma avançada e alta liquidez.',
-            website: 'https://www.bybit.com/pt-BR/invite/brazil/?ref=YNAGP8',
+            website: 'https://www.bybit.com',
             twitter: 'https://twitter.com/Bybit_Official'
         },
         'kraken': {
             name: 'Kraken',
             description: 'Kraken é uma das exchanges mais antigas e confiáveis, conhecida por sua segurança e conformidade regulatória.',
-            website: 'https://invite.kraken.com/JDNW/de6w7cmj',
+            website: 'https://www.kraken.com',
             twitter: 'https://twitter.com/krakenfx'
         },
         'mexc': {
@@ -88,7 +88,7 @@
         'xverse': {
             name: 'Xverse Wallet',
             description: 'Xverse é a principal carteira para Bitcoin, permitindo acesso a NFTs, DeFi e aplicativos Web3 no Bitcoin.',
-            website: 'https://www.xverse.app/?utm_campaign=dogdamassa&fbclid=PAZnRzaANI0IBleHRuA2FlbQIxMQABpxeUZWEqzLu82FgMlCTcA4tRAwBA-H4ilQnR2PCxs4r',
+            website: 'https://www.xverse.app',
             twitter: 'https://twitter.com/XverseApp'
         },
         'metamask': {
@@ -118,13 +118,13 @@
         'revolut': {
             name: 'Revolut',
             description: 'Revolut é um banco digital que integra crypto, permitindo compra, venda e troca de criptomoedas.',
-            website: 'https://revolut.com/referral/?referral-code=waldir3l75!SEP1-25-AR-MDL-ROI&geo-redirect',
+            website: 'https://www.revolut.com',
             twitter: 'https://twitter.com/RevolutApp'
         },
         'bitybank': {
             name: 'Bitybank',
             description: 'Bitybank é um banco digital brasileiro com foco em criptomoedas e finanças descentralizadas.',
-            website: 'https://bity.com.br/mgm/180879',
+            website: 'https://bity.com.br',
             twitter: 'https://twitter.com/BityPrePay'
         },
         'neobankless': {
@@ -184,7 +184,7 @@
         'bitget-featured': {
             name: 'Bitget Wallet',
             description: 'Carteira Web3 multi-chain líder com suporte completo a DeFi, NFTs e trading. Mais de 60 milhões de usuários confiam na Bitget para gerenciar seus ativos digitais com segurança.',
-            website: 'https://newshare.bwb.global/en/invite_earn_coin?inviteCode=SJQDBe&deepLinkType=card&utmSource=referral2.0_copyLink',
+            website: 'https://web3.bitget.com',
             twitter: 'https://twitter.com/BitgetWallet'
         },
         'trezor': {
