@@ -1,0 +1,14 @@
+# CRYPTO AGGREGATOR - Legitimate Cryptocurrency Information Platform
+# This is NOT a phishing site
+# We provide information and links to official cryptocurrency platforms
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap
+Sitemap: https://cryptoaggregator.io/sitemap.xml
+
+# Contact
+# GitHub: https://github.com/oguilhermeleite/cryptohub

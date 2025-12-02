@@ -1,0 +1,10 @@
+Contact: https://github.com/oguilhermeleite/cryptohub/issues
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: pt-BR, en
+Canonical: https://cryptoaggregator.io/.well-known/security.txt
+
+# CRYPTO AGGREGATOR - Legitimate Platform
+# This is NOT a phishing site
+# We do NOT collect passwords, private keys, or sensitive data
+# All links point to official cryptocurrency platforms
+# No wallet connection, no login required
