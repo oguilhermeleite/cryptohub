@@ -46,55 +46,55 @@
         'binance': {
             name: 'Binance',
             description: 'A Binance é a maior exchange de criptomoedas do mundo, atendendo mais de 270 milhões de usuários em mais de 180 países. Com taxas baixas e mais de 500 criptomoedas disponíveis.',
-            website: 'https://www.binance.com',
+            website: 'https://www.binance.com/activity/referral-entry/CPA?ref=CPA_0001DCF8M6',
             twitter: 'https://twitter.com/binance'
         },
         'bybit': {
             name: 'Bybit',
             description: 'Bybit é uma exchange líder em trading de derivativos de criptomoedas, oferecendo plataforma avançada e alta liquidez.',
-            website: 'https://www.bybit.com',
+            website: 'https://www.bybit.com/invite?ref=YNAGP8',
             twitter: 'https://twitter.com/Bybit_Official'
         },
         'kraken': {
             name: 'Kraken',
             description: 'Kraken é uma das exchanges mais antigas e confiáveis, conhecida por sua segurança e conformidade regulatória.',
-            website: 'https://www.kraken.com',
+            website: 'https://www.kraken.com/invite/JDNW',
             twitter: 'https://twitter.com/krakenfx'
         },
         'mexc': {
             name: 'MEXC',
             description: 'MEXC é uma exchange global com ampla seleção de altcoins e trading de futuros.',
-            website: 'https://mexc.com',
+            website: 'https://www.mexc.com/register?inviteCode=mexc-1eLdR',
             twitter: 'https://twitter.com/MEXC_Official'
         },
         'coinbase': {
             name: 'Coinbase',
             description: 'Coinbase é a exchange mais amigável para iniciantes, com interface simples e alta segurança.',
-            website: 'https://coinbase.com',
+            website: 'https://www.coinbase.com/join/COINBASE2024',
             twitter: 'https://twitter.com/coinbase'
         },
         'phantom': {
             name: 'Phantom',
             description: 'Phantom é uma carteira Web3 amigável e segura para Solana e Ethereum. Gerencia NFTs, acessa DeFi e troca tokens diretamente na carteira.',
-            website: 'https://phantom.app',
+            website: 'https://phantom.app/download',
             twitter: 'https://twitter.com/phantom'
         },
         'rabby': {
             name: 'Rabby',
             description: 'Rabby é uma carteira multi-chain moderna focada em segurança e experiência do usuário em DeFi.',
-            website: 'https://rabby.io',
+            website: 'https://rabby.io/download',
             twitter: 'https://twitter.com/Rabby_io'
         },
         'xverse': {
             name: 'Xverse Wallet',
             description: 'Xverse é a principal carteira para Bitcoin, permitindo acesso a NFTs, DeFi e aplicativos Web3 no Bitcoin.',
-            website: 'https://www.xverse.app',
+            website: 'https://www.xverse.app/download',
             twitter: 'https://twitter.com/XverseApp'
         },
         'metamask': {
             name: 'MetaMask',
             description: 'MetaMask é a carteira mais popular para Ethereum e redes EVM, com suporte completo a DApps e NFTs.',
-            website: 'https://metamask.io',
+            website: 'https://metamask.io/download/',
             twitter: 'https://twitter.com/MetaMask'
         },
         'kast': {
@@ -118,13 +118,13 @@
         'revolut': {
             name: 'Revolut',
             description: 'Revolut é um banco digital que integra crypto, permitindo compra, venda e troca de criptomoedas.',
-            website: 'https://www.revolut.com',
+            website: 'https://revolut.com/referral/?referral-code=waldir3l75',
             twitter: 'https://twitter.com/RevolutApp'
         },
         'bitybank': {
             name: 'Bitybank',
             description: 'Bitybank é um banco digital brasileiro com foco em criptomoedas e finanças descentralizadas.',
-            website: 'https://bity.com.br',
+            website: 'https://bity.com.br/mgm/180879',
             twitter: 'https://twitter.com/BityPrePay'
         },
         'neobankless': {
@@ -136,31 +136,31 @@
         'ledger': {
             name: 'Ledger',
             description: 'Ledger oferece hardware wallets de máxima segurança para armazenamento de criptomoedas offline.',
-            website: 'https://ledger.com',
+            website: 'https://shop.ledger.com/?r=cryptohub',
             twitter: 'https://twitter.com/Ledger'
         },
         'uniswap': {
             name: 'Uniswap',
             description: 'Uniswap é a maior DEX do Ethereum, permitindo trocas descentralizadas sem intermediários.',
-            website: 'https://uniswap.org',
+            website: 'https://app.uniswap.org',
             twitter: 'https://twitter.com/Uniswap'
         },
         'jupiter': {
             name: 'Jupiter',
             description: 'Jupiter é a principal DEX agregadora em Solana, oferecendo as melhores rotas de swap.',
-            website: 'https://jup.ag',
+            website: 'https://jup.ag/swap',
             twitter: 'https://twitter.com/JupiterExchange'
         },
         'meteora': {
             name: 'Meteora',
             description: 'Meteora é uma DEX inovadora em Solana com pools dinâmicos e alta eficiência de capital.',
-            website: 'https://meteora.ag',
+            website: 'https://app.meteora.ag',
             twitter: 'https://twitter.com/MeteoraAG'
         },
         'pancakeswap': {
             name: 'PancakeSwap',
             description: 'PancakeSwap é a maior DEX da BNB Chain com yields competitivos e diversas features DeFi.',
-            website: 'https://pancakeswap.finance',
+            website: 'https://pancakeswap.finance/swap',
             twitter: 'https://twitter.com/PancakeSwap'
         },
         'sideshift': {
@@ -184,13 +184,13 @@
         'bitget-featured': {
             name: 'Bitget Wallet',
             description: 'Carteira Web3 multi-chain líder com suporte completo a DeFi, NFTs e trading. Mais de 60 milhões de usuários confiam na Bitget para gerenciar seus ativos digitais com segurança.',
-            website: 'https://web3.bitget.com',
+            website: 'https://web3.bitget.com/invite?code=SJQDBe',
             twitter: 'https://twitter.com/BitgetWallet'
         },
         'trezor': {
             name: 'Trezor',
             description: 'Pioneira em hardware wallets, oferece máxima segurança para criptomoedas com código open-source.',
-            website: 'https://trezor.io',
+            website: 'https://trezor.io/trezor-model-one?offer_id=15&aff_id=17068',
             twitter: 'https://twitter.com/Trezor'
         },
         'pumpfun': {
@@ -232,19 +232,19 @@
         'okx': {
             name: 'OKX',
             description: 'Exchange global de criptomoedas com mais de 70 milhões de traders. Taxas baixas, alta segurança e trading avançado de spot, futuros e opções.',
-            website: 'https://www.okx.com',
+            website: 'https://www.okx.com/join/CRYPTOHUB',
             twitter: 'https://twitter.com/okx'
         },
         'gateio': {
             name: 'Gate.io',
             description: 'Uma das top 10 exchanges globais com mais de 4.100 ativos digitais. Trading de spot, futuros, margin, staking e copy trading.',
-            website: 'https://www.gate.com',
+            website: 'https://www.gate.io/signup/PEYEQdSb',
             twitter: 'https://x.com/gate_io'
         },
         'magiceden': {
             name: 'Magic Eden Wallet',
             description: 'Carteira multi-chain focada em NFTs com swaps instantâneos, gerenciamento de portfólio, suporte a Ordinals e BRC20. A única carteira que você precisa.',
-            website: 'https://wallet.magiceden.io',
+            website: 'https://wallet.magiceden.io/download',
             twitter: 'https://twitter.com/MagicEden'
         },
         'slush': {
@@ -256,25 +256,25 @@
         'unisat': {
             name: 'UniSat',
             description: 'Carteira Bitcoin com suporte a Alkanes, Ordinals e Runes. Extensão de navegador para gerenciar e negociar ativos digitais na rede Bitcoin.',
-            website: 'https://unisat.io',
+            website: 'https://unisat.io/download',
             twitter: 'https://twitter.com/unisat_wallet'
         },
         'cypher': {
             name: 'Cypher',
             description: 'Transforme cripto em moeda do dia a dia com Cypher Card. Recarregue com mais de 500 tokens das redes EVM, Cosmos, Solana e Tron.',
-            website: 'https://cypherhq.io',
+            website: 'https://cypherhq.io/card',
             twitter: 'https://x.com/Cypher_HQ_'
         },
         'orbitx': {
             name: 'OrbitX',
             description: 'O cartão cripto mais PREMIUM, powered by VISA Signature. Verdadeiramente self-custodial onde VOCÊ possui as chaves e benefícios premium. Stablecoins gastáveis!',
-            website: 'https://orbitxpay.com',
+            website: 'https://orbitxpay.com/get-card',
             twitter: 'https://x.com/OrbitX_Pay'
         },
         'raydium': {
             name: 'Raydium',
             description: 'AMM on-chain com order book impulsionando a evolução do DeFi em Solana. Trading perp sem gas, até 40x alavancagem e taxas ultra-baixas.',
-            website: 'https://raydium.io',
+            website: 'https://raydium.io/swap',
             twitter: 'https://x.com/RaydiumProtocol'
         },
         'bitflow': {

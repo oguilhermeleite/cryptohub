@@ -96,7 +96,7 @@ class CryptoAggregator {
         this.platformData = {
             'bitget-featured': {
                 name: 'Bitget Wallet',
-                url: 'https://web3.bitget.com',
+                url: 'https://web3.bitget.com/invite?code=SJQDBe',
                 logo: 'https://logo.clearbit.com/bitget.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=bitget.com&sz=64',
                 xProfile: 'https://x.com/BitgetWallet',
@@ -173,7 +173,7 @@ class CryptoAggregator {
             },
             'binance': {
                 name: 'Binance',
-                url: 'https://www.binance.com',
+                url: 'https://www.binance.com/activity/referral-entry/CPA?ref=CPA_0001DCF8M6',
                 logo: 'https://logo.clearbit.com/binance.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=binance.com&sz=64',
                 xProfile: 'https://x.com/binance',
@@ -184,7 +184,7 @@ class CryptoAggregator {
             },
             'bybit': {
                 name: 'Bybit',
-                url: 'https://www.bybit.com',
+                url: 'https://www.bybit.com/invite?ref=YNAGP8',
                 logo: 'https://logo.clearbit.com/bybit.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=bybit.com&sz=128',
                 xProfile: 'https://x.com/Bybit_Official',
@@ -195,7 +195,7 @@ class CryptoAggregator {
             },
             'kraken': {
                 name: 'Kraken',
-                url: 'https://www.kraken.com',
+                url: 'https://www.kraken.com/invite/JDNW',
                 logo: 'https://logo.clearbit.com/kraken.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=kraken.com&sz=64',
                 xProfile: 'https://x.com/krakenfx',
@@ -206,7 +206,7 @@ class CryptoAggregator {
             },
             'mexc': {
                 name: 'MEXC',
-                url: 'https://promote.mexc.com/a/Q26ooE1o',
+                url: 'https://www.mexc.com/register?inviteCode=mexc-1eLdR',
                 logo: 'https://www.google.com/s2/favicons?domain=mexc.com&sz=128',
                 fallbackLogo: 'https://logo.clearbit.com/mexc.com',
                 xProfile: 'https://x.com/MEXC_Official',
@@ -217,7 +217,7 @@ class CryptoAggregator {
             },
             'gateio': {
                 name: 'Gate.io',
-                url: 'https://www.gate.com',
+                url: 'https://www.gate.io/signup/PEYEQdSb',
                 logo: 'https://www.google.com/s2/favicons?domain=gate.io&sz=128',
                 fallbackLogo: 'https://logo.clearbit.com/gate.io',
                 xProfile: 'https://x.com/gate_io',
@@ -228,7 +228,7 @@ class CryptoAggregator {
             },
             'coinbase': {
                 name: 'Coinbase',
-                url: 'https://coinbase.com/join/J5GUPYS?src=ios-link',
+                url: 'https://www.coinbase.com/join/COINBASE2024',
                 logo: 'https://logo.clearbit.com/coinbase.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=coinbase.com&sz=64',
                 xProfile: 'https://x.com/coinbase',
@@ -239,7 +239,7 @@ class CryptoAggregator {
             },
             'okx': {
                 name: 'OKX',
-                url: 'https://okx.com/join/99171266',
+                url: 'https://www.okx.com/join/CRYPTOHUB',
                 logo: 'https://logo.clearbit.com/okx.com',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=okx.com&sz=64',
                 xProfile: 'https://twitter.com/okx',
@@ -250,7 +250,7 @@ class CryptoAggregator {
             },
             'uniswap': {
                 name: 'Uniswap',
-                url: 'https://uniswap.org',
+                url: 'https://app.uniswap.org',
                 logo: 'https://logo.clearbit.com/uniswap.org',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=uniswap.org&sz=128',
                 xProfile: 'https://twitter.com/Uniswap',
@@ -261,7 +261,7 @@ class CryptoAggregator {
             },
             'jupiter': {
                 name: 'Jupiter',
-                url: 'https://jup.ag',
+                url: 'https://jup.ag/swap',
                 logo: 'https://logo.clearbit.com/jup.ag',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=jup.ag&sz=128',
                 xProfile: 'https://x.com/JupiterExchange',
@@ -272,7 +272,7 @@ class CryptoAggregator {
             },
             'raydium': {
                 name: 'Raydium',
-                url: 'https://raydium.io',
+                url: 'https://raydium.io/swap',
                 logo: 'https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R/logo.png',
                 fallbackLogo: 'https://raydium.io/logo/logo-text.svg',
                 xProfile: 'https://x.com/RaydiumProtocol',
@@ -283,7 +283,7 @@ class CryptoAggregator {
             },
             'pancakeswap': {
                 name: 'PancakeSwap',
-                url: 'https://pancakeswap.finance',
+                url: 'https://pancakeswap.finance/swap',
                 logo: 'https://logo.clearbit.com/pancakeswap.finance',
                 fallbackLogo: 'https://www.google.com/s2/favicons?domain=pancakeswap.finance&sz=128',
                 xProfile: 'https://twitter.com/pancakeswap',
