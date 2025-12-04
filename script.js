@@ -3,6 +3,7 @@
 class CryptoAggregator {
     constructor() {
         this.currentLang = this.getStoredLanguage() || 'pt';
+        this.blockThemeChange = false; // Initialize theme change blocker
         this.translations = {
             pt: {
                 'hero-title': 'Sua porta de entrada completa para o Mundo Cripto',
@@ -1087,6 +1088,8 @@ class CryptoAggregator {
             // Unlock body scroll
             document.body.classList.remove('modal-open');
         }
+        // Ensure theme changes are unblocked when modal closes
+        this.blockThemeChange = false;
     }
 
 
