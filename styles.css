@@ -135,11 +135,12 @@ html {
 }
 
 [data-theme="light"] .hero-title {
-    color: #0f0f0f !important;
-    background: none !important;
-    -webkit-text-fill-color: #0f0f0f !important;
-    text-shadow: none;
+    background: linear-gradient(135deg, #d47c12 0%, #e88a1a 50%, #ff9f3a 100%) !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
     font-weight: 800;
+    filter: drop-shadow(0 2px 3px rgba(212, 124, 18, 0.25));
 }
 
 [data-theme="light"] .hero-slogan,
@@ -248,17 +249,20 @@ html {
     backdrop-filter: blur(20px);
 }
 
-/* Light Theme - Header Logo - Solid Black Text */
+/* Light Theme - Header Logo - Golden Gradient */
 [data-theme="light"] .logo h1 {
-    color: #0f0f0f !important;
-    background: none !important;
-    -webkit-text-fill-color: #0f0f0f !important;
+    background: linear-gradient(135deg, #d47c12 0%, #e88a1a 50%, #ff9f3a 100%) !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
     font-weight: 900;
+    filter: drop-shadow(0 1px 2px rgba(212, 124, 18, 0.3));
 }
 
 [data-theme="light"] .logo-icon {
     color: #e88a1a;
     font-weight: bold;
+    filter: drop-shadow(0 1px 2px rgba(232, 138, 26, 0.4));
 }
 
 /* Light Theme - Header Controls (Theme + Language buttons) */
