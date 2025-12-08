@@ -135,27 +135,30 @@ html {
 }
 
 [data-theme="light"] .hero-title {
-    background: linear-gradient(135deg, #0f0f0f 0%, #e88a1a 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.4);
+    color: #0f0f0f !important;
+    background: none !important;
+    -webkit-text-fill-color: #0f0f0f !important;
+    text-shadow: none;
+    font-weight: 800;
 }
 
 [data-theme="light"] .hero-slogan,
 [data-theme="light"] .hero-subtitle {
-    color: #2a2a2a;
-    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
+    color: #1a1a1a !important;
+    text-shadow: none;
+    font-weight: 600;
 }
 
 [data-theme="light"] .section-title {
-    color: #0f0f0f;
-    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.6);
+    color: #0f0f0f !important;
+    text-shadow: none;
+    font-weight: 800;
 }
 
 [data-theme="light"] .section-subtitle {
-    color: #2a2a2a;
-    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+    color: #1a1a1a !important;
+    text-shadow: none;
+    font-weight: 600;
 }
 
 [data-theme="light"] .modal-overlay {
@@ -238,16 +241,17 @@ html {
     background: #e88a1a;
 }
 
-/* Light Theme - Header Logo */
+/* Light Theme - Header Logo - Solid Black Text */
 [data-theme="light"] .logo h1 {
-    background: linear-gradient(135deg, #e88a1a 0%, #ff9f3a 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #0f0f0f !important;
+    background: none !important;
+    -webkit-text-fill-color: #0f0f0f !important;
+    font-weight: 900;
 }
 
 [data-theme="light"] .logo-icon {
     color: #e88a1a;
+    font-weight: bold;
 }
 
 /* Light Theme - Header Controls (Theme + Language buttons) */
@@ -271,15 +275,55 @@ html {
 }
 
 [data-theme="light"] .footer-links a {
-    color: #2a2a2a;
+    color: #1a1a1a !important;
+    font-weight: 600;
 }
 
 [data-theme="light"] .footer-links a:hover {
-    color: #e88a1a;
+    color: #e88a1a !important;
 }
 
 [data-theme="light"] .footer-bottom p {
-    color: #4a4a4a;
+    color: #2a2a2a !important;
+    font-weight: 500;
+}
+
+/* Light Theme - ALL TEXT ELEMENTS - Force Black for Visibility */
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] h5,
+[data-theme="light"] h6 {
+    color: #0f0f0f !important;
+}
+
+[data-theme="light"] p,
+[data-theme="light"] span,
+[data-theme="light"] a {
+    color: #1a1a1a !important;
+}
+
+/* Light Theme - Category Titles and Badges */
+[data-theme="light"] .category-title,
+[data-theme="light"] .category-badge,
+[data-theme="light"] .badge {
+    color: #0f0f0f !important;
+    font-weight: 700;
+}
+
+/* Light Theme - Premium Hero Banner Text */
+[data-theme="light"] .premium-hero-title {
+    color: #0f0f0f !important;
+    font-weight: 900;
+    text-shadow: none;
+}
+
+[data-theme="light"] .premium-hero-subtitle,
+[data-theme="light"] .premium-hero-description {
+    color: #1a1a1a !important;
+    font-weight: 600;
+    text-shadow: none;
 }
 
 body {
