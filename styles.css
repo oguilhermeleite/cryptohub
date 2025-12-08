@@ -241,6 +241,13 @@ html {
     background: #e88a1a;
 }
 
+/* Light Theme - Header Background - FORCE Light Theme */
+[data-theme="light"] .header {
+    background: rgba(252, 250, 247, 0.97) !important;
+    border-bottom: 1px solid rgba(180, 160, 140, 0.22) !important;
+    backdrop-filter: blur(20px);
+}
+
 /* Light Theme - Header Logo - Solid Black Text */
 [data-theme="light"] .logo h1 {
     color: #0f0f0f !important;
