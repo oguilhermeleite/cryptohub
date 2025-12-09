@@ -11,7 +11,7 @@
             name: 'Camila P2P',
             description: 'Camila P2P é especialista brasileira em compra e venda de criptomoedas com mais de 40 mil negociações realizadas. Oferece atendimento humanizado, taxas baixas, segurança total e suporte para mais de 1.000 criptomoedas incluindo Bitcoin e Ethereum.',
             website: 'https://camilap2p.com',
-            twitter: 'https://twitter.com/camilap2p'
+            twitter: ''
         },
         'p2pme': {
             name: 'P2P.me',

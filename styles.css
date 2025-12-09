@@ -484,8 +484,6 @@ img {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: -0.02em;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .logo-icon {
@@ -2077,10 +2075,11 @@ body.modal-open {
         width: 100%;
     }
 
-    /* Mobile logo - smaller font size to fit */
+    /* Mobile logo - smaller font size to fit complete name */
     .logo h1 {
-        font-size: 1.1rem;
+        font-size: 0.95rem;
         white-space: nowrap;
+        letter-spacing: -0.03em;
     }
 
     .logo-icon {
@@ -2164,17 +2163,6 @@ body.modal-open {
     .logo {
         flex: 1;
         min-width: 0;
-        margin-right: 30px;
-        padding-right: 20px;
-    }
-
-    .logo h1 {
-        margin-right: 20px;
-    }
-
-    .logo h1 {
-        font-size: 1.4rem;
-        margin-right: 0.75rem;
     }
 
     .header-controls {
@@ -2348,6 +2336,16 @@ body.modal-open {
 
     .cta-button {
         padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    /* Extra small screens - ensure full logo text visible */
+    .logo h1 {
+        font-size: 0.85rem;
+        letter-spacing: -0.04em;
+    }
+
+    .logo-icon {
         font-size: 1rem;
     }
 
