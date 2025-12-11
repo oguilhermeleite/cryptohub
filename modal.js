@@ -190,7 +190,7 @@
         'trezor': {
             name: 'Trezor',
             description: 'Pioneira em hardware wallets, oferece máxima segurança para criptomoedas com código open-source.',
-            website: 'https://trezor.io/trezor-model-one?offer_id=15&aff_id=17068',
+            website: 'https://trezor.io',
             twitter: 'https://twitter.com/Trezor'
         },
         'pumpfun': {
