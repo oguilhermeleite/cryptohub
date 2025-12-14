@@ -161,42 +161,134 @@
             <div class="horizontal-scroll-container">
                 <div class="horizontal-cards-grid">
                     <!-- 4P Finance -->
-                    <div class="platform-card" data-platform="4pfinance" onclick="trackPlatformClick('4P Finance', 'P2P'); return true;">
-                        <div class="card-content">
-                            <div class="platform-logo">
-                                <img src="https://www.google.com/s2/favicons?domain=4p.finance&sz=128" alt="4P Finance" onerror="this.src='https://logo.clearbit.com/4p.finance'">
+                    <div class="platform-card" data-platform="4pfinance">
+                        <div class="card-inner">
+                            <!-- Front Face -->
+                            <div class="card-front">
+                                <div class="card-content">
+                                    <div class="platform-logo">
+                                        <img src="https://www.google.com/s2/favicons?domain=4p.finance&sz=128" alt="4P Finance" onerror="this.src='https://logo.clearbit.com/4p.finance'">
+                                    </div>
+                                    <h4 class="platform-name">4P Finance</h4>
+                                </div>
                             </div>
-                            <h4 class="platform-name">4P Finance</h4>
+                            <!-- Back Face -->
+                            <div class="card-back">
+                                <div class="card-back-header">
+                                    <h3 class="card-back-title">4P Finance</h3>
+                                    <p class="card-back-description">Compre e Venda Criptomoedas via P2P direto na Blockchain. Pagamento de boletos com cripto através de instituições financeiras registradas.</p>
+                                </div>
+                                <div class="card-back-buttons">
+                                    <a href="https://4p.finance" target="_blank" rel="noopener noreferrer" class="card-btn-primary" onclick="trackPlatformClick('4P Finance', 'P2P'); event.stopPropagation();">
+                                        🌐 Site Oficial
+                                    </a>
+                                    <a href="https://twitter.com/4payFinance" target="_blank" rel="noopener noreferrer" class="card-btn-secondary" onclick="event.stopPropagation();">
+                                        🐦 X / Twitter
+                                    </a>
+                                    <button class="card-btn-secondary" onclick="event.stopPropagation(); this.closest('.platform-card').classList.remove('flipped');">
+                                        ⬅️ Voltar
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Kryptera -->
-                    <div class="platform-card" data-platform="kryptera" onclick="trackPlatformClick('Kryptera', 'P2P'); return true;">
-                        <div class="card-content">
-                            <div class="platform-logo">
-                                <img src="https://kryptera.io/favicon.ico" alt="Kryptera" onerror="this.src='https://www.google.com/s2/favicons?domain=kryptera.io&sz=256'">
+                    <div class="platform-card" data-platform="kryptera">
+                        <div class="card-inner">
+                            <!-- Front Face -->
+                            <div class="card-front">
+                                <div class="card-content">
+                                    <div class="platform-logo">
+                                        <img src="https://kryptera.io/favicon.ico" alt="Kryptera" onerror="this.src='https://www.google.com/s2/favicons?domain=kryptera.io&sz=256'">
+                                    </div>
+                                    <h4 class="platform-name">Kryptera</h4>
+                                </div>
                             </div>
-                            <h4 class="platform-name">Kryptera</h4>
+                            <!-- Back Face -->
+                            <div class="card-back">
+                                <div class="card-back-header">
+                                    <h3 class="card-back-title">Kryptera</h3>
+                                    <p class="card-back-description">Plataforma P2P para negociação de criptomoedas com segurança e praticidade.</p>
+                                </div>
+                                <div class="card-back-buttons">
+                                    <a href="https://kryptera.com" target="_blank" rel="noopener noreferrer" class="card-btn-primary" onclick="trackPlatformClick('Kryptera', 'P2P'); event.stopPropagation();">
+                                        🌐 Site Oficial
+                                    </a>
+                                    <a href="https://twitter.com/krypteratweets" target="_blank" rel="noopener noreferrer" class="card-btn-secondary" onclick="event.stopPropagation();">
+                                        🐦 X / Twitter
+                                    </a>
+                                    <button class="card-btn-secondary" onclick="event.stopPropagation(); this.closest('.platform-card').classList.remove('flipped');">
+                                        ⬅️ Voltar
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Crypix -->
-                    <div class="platform-card" data-platform="crypix" onclick="trackPlatformClick('Crypix', 'P2P'); return true;">
-                        <div class="card-content">
-                            <div class="platform-logo">
-                                <img src="https://logo.clearbit.com/crypix.me" alt="Crypix" onerror="this.src='https://www.google.com/s2/favicons?domain=crypix.me&sz=128'">
+                    <div class="platform-card" data-platform="crypix">
+                        <div class="card-inner">
+                            <!-- Front Face -->
+                            <div class="card-front">
+                                <div class="card-content">
+                                    <div class="platform-logo">
+                                        <img src="https://logo.clearbit.com/crypix.me" alt="Crypix" onerror="this.src='https://www.google.com/s2/favicons?domain=crypix.me&sz=128'">
+                                    </div>
+                                    <h4 class="platform-name">Crypix</h4>
+                                </div>
                             </div>
-                            <h4 class="platform-name">Crypix</h4>
+                            <!-- Back Face -->
+                            <div class="card-back">
+                                <div class="card-back-header">
+                                    <h3 class="card-back-title">Crypix</h3>
+                                    <p class="card-back-description">Plataforma multi-chain para conversão de criptomoedas em PIX e pagamento de boletos. Sem burocracia, taxa de 2% e configuração em 2 minutos.</p>
+                                </div>
+                                <div class="card-back-buttons">
+                                    <a href="https://crypix.me" target="_blank" rel="noopener noreferrer" class="card-btn-primary" onclick="trackPlatformClick('Crypix', 'P2P'); event.stopPropagation();">
+                                        🌐 Site Oficial
+                                    </a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer" class="card-btn-secondary" onclick="event.stopPropagation();" style="display: none;">
+                                        🐦 X / Twitter
+                                    </a>
+                                    <button class="card-btn-secondary" onclick="event.stopPropagation(); this.closest('.platform-card').classList.remove('flipped');">
+                                        ⬅️ Voltar
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Pixgo -->
-                    <div class="platform-card" data-platform="pixgo" onclick="trackPlatformClick('Pixgo', 'P2P'); return true;">
-                        <div class="card-content">
-                            <div class="platform-logo">
-                                <img src="https://logo.clearbit.com/pixgo.org" alt="Pixgo" onerror="this.src='https://www.google.com/s2/favicons?domain=pixgo.org&sz=128'">
+                    <div class="platform-card" data-platform="pixgo">
+                        <div class="card-inner">
+                            <!-- Front Face -->
+                            <div class="card-front">
+                                <div class="card-content">
+                                    <div class="platform-logo">
+                                        <img src="https://logo.clearbit.com/pixgo.org" alt="Pixgo" onerror="this.src='https://www.google.com/s2/favicons?domain=pixgo.org&sz=128'">
+                                    </div>
+                                    <h4 class="platform-name">Pixgo</h4>
+                                </div>
                             </div>
-                            <h4 class="platform-name">Pixgo</h4>
+                            <!-- Back Face -->
+                            <div class="card-back">
+                                <div class="card-back-header">
+                                    <h3 class="card-back-title">Pixgo</h3>
+                                    <p class="card-back-description">Receba PIX sem conta bancária. Plataforma de pagamentos digitais com PIX sem burocracia, taxa fixa de 2% e configuração em 2 minutos.</p>
+                                </div>
+                                <div class="card-back-buttons">
+                                    <a href="https://pixgo.org" target="_blank" rel="noopener noreferrer" class="card-btn-primary" onclick="trackPlatformClick('Pixgo', 'P2P'); event.stopPropagation();">
+                                        🌐 Site Oficial
+                                    </a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer" class="card-btn-secondary" onclick="event.stopPropagation();" style="display: none;">
+                                        🐦 X / Twitter
+                                    </a>
+                                    <button class="card-btn-secondary" onclick="event.stopPropagation(); this.closest('.platform-card').classList.remove('flipped');">
+                                        ⬅️ Voltar
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -228,22 +320,68 @@
             <div class="horizontal-scroll-container">
                 <div class="horizontal-cards-grid">
                     <!-- OKX -->
-                    <div class="platform-card" data-platform="okx" onclick="trackPlatformClick('OKX', 'Exchange'); return true;">
-                        <div class="card-content">
-                            <div class="platform-logo">
-                                <img src="https://logo.clearbit.com/okx.com" alt="OKX" onerror="this.src='https://www.google.com/s2/favicons?domain=okx.com&sz=64'">
+                    <div class="platform-card" data-platform="okx">
+                        <div class="card-inner">
+                            <!-- Front Face -->
+                            <div class="card-front">
+                                <div class="card-content">
+                                    <div class="platform-logo">
+                                        <img src="https://logo.clearbit.com/okx.com" alt="OKX" onerror="this.src='https://www.google.com/s2/favicons?domain=okx.com&sz=64'">
+                                    </div>
+                                    <h4 class="platform-name">OKX</h4>
+                                </div>
                             </div>
-                            <h4 class="platform-name">OKX</h4>
+                            <!-- Back Face -->
+                            <div class="card-back">
+                                <div class="card-back-header">
+                                    <h3 class="card-back-title">OKX</h3>
+                                    <p class="card-back-description">Exchange global de criptomoedas com mais de 70 milhões de traders. Taxas baixas, alta segurança e trading avançado de spot, futuros e opções.</p>
+                                </div>
+                                <div class="card-back-buttons">
+                                    <a href="https://www.okx.com/join/CRYPTOHUB" target="_blank" rel="noopener noreferrer" class="card-btn-primary" onclick="trackPlatformClick('OKX', 'Exchange'); event.stopPropagation();">
+                                        🌐 Site Oficial
+                                    </a>
+                                    <a href="https://twitter.com/okx" target="_blank" rel="noopener noreferrer" class="card-btn-secondary" onclick="event.stopPropagation();">
+                                        🐦 X / Twitter
+                                    </a>
+                                    <button class="card-btn-secondary" onclick="event.stopPropagation(); this.closest('.platform-card').classList.remove('flipped');">
+                                        ⬅️ Voltar
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Gate.io -->
-                    <div class="platform-card" data-platform="gateio" onclick="trackPlatformClick('Gate.io', 'Exchange'); return true;">
-                        <div class="card-content">
-                            <div class="platform-logo">
-                                <img src="https://www.google.com/s2/favicons?domain=gate.io&sz=128" alt="Gate.io" onerror="this.src='https://logo.clearbit.com/gate.io'">
+                    <div class="platform-card" data-platform="gateio">
+                        <div class="card-inner">
+                            <!-- Front Face -->
+                            <div class="card-front">
+                                <div class="card-content">
+                                    <div class="platform-logo">
+                                        <img src="https://www.google.com/s2/favicons?domain=gate.io&sz=128" alt="Gate.io" onerror="this.src='https://logo.clearbit.com/gate.io'">
+                                    </div>
+                                    <h4 class="platform-name">Gate.io</h4>
+                                </div>
                             </div>
-                            <h4 class="platform-name">Gate.io</h4>
+                            <!-- Back Face -->
+                            <div class="card-back">
+                                <div class="card-back-header">
+                                    <h3 class="card-back-title">Gate.io</h3>
+                                    <p class="card-back-description">Uma das top 10 exchanges globais com mais de 4.100 ativos digitais. Trading de spot, futuros, margin, staking e copy trading.</p>
+                                </div>
+                                <div class="card-back-buttons">
+                                    <a href="https://www.gate.io/signup/PEYEQdSb" target="_blank" rel="noopener noreferrer" class="card-btn-primary" onclick="trackPlatformClick('Gate.io', 'Exchange'); event.stopPropagation();">
+                                        🌐 Site Oficial
+                                    </a>
+                                    <a href="https://x.com/gate_io" target="_blank" rel="noopener noreferrer" class="card-btn-secondary" onclick="event.stopPropagation();">
+                                        🐦 X / Twitter
+                                    </a>
+                                    <button class="card-btn-secondary" onclick="event.stopPropagation(); this.closest('.platform-card').classList.remove('flipped');">
+                                        ⬅️ Voltar
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -275,32 +413,101 @@
             <div class="horizontal-scroll-container">
                 <div class="horizontal-cards-grid">
                     <!-- Magic Eden Wallet -->
-                    <div class="platform-card" data-platform="magiceden" onclick="trackPlatformClick('Magic Eden Wallet', 'Hot Wallet'); return true;">
-                        <div class="card-content">
-                            <div class="platform-logo">
-                                <img src="https://logo.clearbit.com/magiceden.io" alt="Magic Eden Wallet" onerror="this.src='https://www.google.com/s2/favicons?domain=magiceden.io&sz=64'">
+                    <div class="platform-card" data-platform="magiceden">
+                        <div class="card-inner">
+                            <!-- Front Face -->
+                            <div class="card-front">
+                                <div class="card-content">
+                                    <div class="platform-logo">
+                                        <img src="https://logo.clearbit.com/magiceden.io" alt="Magic Eden Wallet" onerror="this.src='https://www.google.com/s2/favicons?domain=magiceden.io&sz=64'">
+                                    </div>
+                                    <h4 class="platform-name">Magic Eden Wallet</h4>
+                                </div>
                             </div>
-                            <h4 class="platform-name">Magic Eden Wallet</h4>
+                            <!-- Back Face -->
+                            <div class="card-back">
+                                <div class="card-back-header">
+                                    <h3 class="card-back-title">Magic Eden Wallet</h3>
+                                    <p class="card-back-description">Carteira multi-chain focada em NFTs com swaps instantâneos, gerenciamento de portfólio, suporte a Ordinals e BRC20. A única carteira que você precisa.</p>
+                                </div>
+                                <div class="card-back-buttons">
+                                    <a href="https://wallet.magiceden.io/download" target="_blank" rel="noopener noreferrer" class="card-btn-primary" onclick="trackPlatformClick('Magic Eden Wallet', 'Hot Wallet'); event.stopPropagation();">
+                                        🌐 Site Oficial
+                                    </a>
+                                    <a href="https://twitter.com/MagicEden" target="_blank" rel="noopener noreferrer" class="card-btn-secondary" onclick="event.stopPropagation();">
+                                        🐦 X / Twitter
+                                    </a>
+                                    <button class="card-btn-secondary" onclick="event.stopPropagation(); this.closest('.platform-card').classList.remove('flipped');">
+                                        ⬅️ Voltar
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Slush -->
-                    <div class="platform-card" data-platform="slush" onclick="trackPlatformClick('Slush', 'Hot Wallet'); return true;">
-                        <div class="card-content">
-                            <div class="platform-logo">
-                                <img src="https://logo.clearbit.com/slush.app" alt="Slush" onerror="this.src='https://www.google.com/s2/favicons?domain=slush.app&sz=64'">
+                    <div class="platform-card" data-platform="slush">
+                        <div class="card-inner">
+                            <!-- Front Face -->
+                            <div class="card-front">
+                                <div class="card-content">
+                                    <div class="platform-logo">
+                                        <img src="https://logo.clearbit.com/slush.app" alt="Slush" onerror="this.src='https://www.google.com/s2/favicons?domain=slush.app&sz=64'">
+                                    </div>
+                                    <h4 class="platform-name">Slush</h4>
+                                </div>
                             </div>
-                            <h4 class="platform-name">Slush</h4>
+                            <!-- Back Face -->
+                            <div class="card-back">
+                                <div class="card-back-header">
+                                    <h3 class="card-back-title">Slush</h3>
+                                    <p class="card-back-description">Carteira simples, segura e elegante para todo o ecossistema Sui. Seu super app Sui para investir, fazer swap, stake e usar em DeFi.</p>
+                                </div>
+                                <div class="card-back-buttons">
+                                    <a href="https://slush.app" target="_blank" rel="noopener noreferrer" class="card-btn-primary" onclick="trackPlatformClick('Slush', 'Hot Wallet'); event.stopPropagation();">
+                                        🌐 Site Oficial
+                                    </a>
+                                    <a href="https://x.com/SlushWallet" target="_blank" rel="noopener noreferrer" class="card-btn-secondary" onclick="event.stopPropagation();">
+                                        🐦 X / Twitter
+                                    </a>
+                                    <button class="card-btn-secondary" onclick="event.stopPropagation(); this.closest('.platform-card').classList.remove('flipped');">
+                                        ⬅️ Voltar
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- UniSat -->
-                    <div class="platform-card" data-platform="unisat" onclick="trackPlatformClick('UniSat', 'Hot Wallet'); return true;">
-                        <div class="card-content">
-                            <div class="platform-logo">
-                                <img src="https://logo.clearbit.com/unisat.io" alt="UniSat" onerror="this.src='https://www.google.com/s2/favicons?domain=unisat.io&sz=64'">
+                    <div class="platform-card" data-platform="unisat">
+                        <div class="card-inner">
+                            <!-- Front Face -->
+                            <div class="card-front">
+                                <div class="card-content">
+                                    <div class="platform-logo">
+                                        <img src="https://logo.clearbit.com/unisat.io" alt="UniSat" onerror="this.src='https://www.google.com/s2/favicons?domain=unisat.io&sz=64'">
+                                    </div>
+                                    <h4 class="platform-name">UniSat</h4>
+                                </div>
                             </div>
-                            <h4 class="platform-name">UniSat</h4>
+                            <!-- Back Face -->
+                            <div class="card-back">
+                                <div class="card-back-header">
+                                    <h3 class="card-back-title">UniSat</h3>
+                                    <p class="card-back-description">Carteira Bitcoin com suporte a Alkanes, Ordinals e Runes. Extensão de navegador para gerenciar e negociar ativos digitais na rede Bitcoin.</p>
+                                </div>
+                                <div class="card-back-buttons">
+                                    <a href="https://unisat.io/download" target="_blank" rel="noopener noreferrer" class="card-btn-primary" onclick="trackPlatformClick('UniSat', 'Hot Wallet'); event.stopPropagation();">
+                                        🌐 Site Oficial
+                                    </a>
+                                    <a href="https://twitter.com/unisat_wallet" target="_blank" rel="noopener noreferrer" class="card-btn-secondary" onclick="event.stopPropagation();">
+                                        🐦 X / Twitter
+                                    </a>
+                                    <button class="card-btn-secondary" onclick="event.stopPropagation(); this.closest('.platform-card').classList.remove('flipped');">
+                                        ⬅️ Voltar
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -333,22 +540,68 @@
             <div class="horizontal-scroll-container">
                 <div class="horizontal-cards-grid">
                     <!-- Cypher -->
-                    <div class="platform-card" data-platform="cypher" onclick="trackPlatformClick('Cypher', 'Crypto Card'); return true;">
-                        <div class="card-content">
-                            <div class="platform-logo">
-                                <img src="https://logo.clearbit.com/cypherhq.io" alt="Cypher" onerror="this.src='https://www.google.com/s2/favicons?domain=cypherhq.io&sz=64'">
+                    <div class="platform-card" data-platform="cypher">
+                        <div class="card-inner">
+                            <!-- Front Face -->
+                            <div class="card-front">
+                                <div class="card-content">
+                                    <div class="platform-logo">
+                                        <img src="https://logo.clearbit.com/cypherhq.io" alt="Cypher" onerror="this.src='https://www.google.com/s2/favicons?domain=cypherhq.io&sz=64'">
+                                    </div>
+                                    <h4 class="platform-name">Cypher</h4>
+                                </div>
                             </div>
-                            <h4 class="platform-name">Cypher</h4>
+                            <!-- Back Face -->
+                            <div class="card-back">
+                                <div class="card-back-header">
+                                    <h3 class="card-back-title">Cypher</h3>
+                                    <p class="card-back-description">Transforme cripto em moeda do dia a dia com Cypher Card. Recarregue com mais de 500 tokens das redes EVM, Cosmos, Solana e Tron.</p>
+                                </div>
+                                <div class="card-back-buttons">
+                                    <a href="https://cypherhq.io/card" target="_blank" rel="noopener noreferrer" class="card-btn-primary" onclick="trackPlatformClick('Cypher', 'Crypto Card'); event.stopPropagation();">
+                                        🌐 Site Oficial
+                                    </a>
+                                    <a href="https://x.com/Cypher_HQ_" target="_blank" rel="noopener noreferrer" class="card-btn-secondary" onclick="event.stopPropagation();">
+                                        🐦 X / Twitter
+                                    </a>
+                                    <button class="card-btn-secondary" onclick="event.stopPropagation(); this.closest('.platform-card').classList.remove('flipped');">
+                                        ⬅️ Voltar
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- OrbitX -->
-                    <div class="platform-card" data-platform="orbitx" onclick="trackPlatformClick('OrbitX', 'Crypto Card'); return true;">
-                        <div class="card-content">
-                            <div class="platform-logo">
-                                <img src="https://orbitxpay.com/favicon.ico" alt="OrbitX" onerror="this.src='https://logo.clearbit.com/orbitxpay.com'">
+                    <div class="platform-card" data-platform="orbitx">
+                        <div class="card-inner">
+                            <!-- Front Face -->
+                            <div class="card-front">
+                                <div class="card-content">
+                                    <div class="platform-logo">
+                                        <img src="https://orbitxpay.com/favicon.ico" alt="OrbitX" onerror="this.src='https://logo.clearbit.com/orbitxpay.com'">
+                                    </div>
+                                    <h4 class="platform-name">OrbitX</h4>
+                                </div>
                             </div>
-                            <h4 class="platform-name">OrbitX</h4>
+                            <!-- Back Face -->
+                            <div class="card-back">
+                                <div class="card-back-header">
+                                    <h3 class="card-back-title">OrbitX</h3>
+                                    <p class="card-back-description">O cartão cripto mais PREMIUM, powered by VISA Signature. Verdadeiramente self-custodial onde VOCÊ possui as chaves e benefícios premium. Stablecoins gastáveis!</p>
+                                </div>
+                                <div class="card-back-buttons">
+                                    <a href="https://orbitxpay.com/get-card" target="_blank" rel="noopener noreferrer" class="card-btn-primary" onclick="trackPlatformClick('OrbitX', 'Crypto Card'); event.stopPropagation();">
+                                        🌐 Site Oficial
+                                    </a>
+                                    <a href="https://x.com/OrbitX_Pay" target="_blank" rel="noopener noreferrer" class="card-btn-secondary" onclick="event.stopPropagation();">
+                                        🐦 X / Twitter
+                                    </a>
+                                    <button class="card-btn-secondary" onclick="event.stopPropagation(); this.closest('.platform-card').classList.remove('flipped');">
+                                        ⬅️ Voltar
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -380,52 +633,167 @@
             <div class="horizontal-scroll-container">
                 <div class="horizontal-cards-grid">
                     <!-- Raydium -->
-                    <div class="platform-card" data-platform="raydium" onclick="trackPlatformClick('Raydium', 'DEX'); return true;">
-                        <div class="card-content">
-                            <div class="platform-logo">
-                                <img src="https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R/logo.png" alt="Raydium" onerror="this.src='https://raydium.io/logo/logo-text.svg'">
+                    <div class="platform-card" data-platform="raydium">
+                        <div class="card-inner">
+                            <!-- Front Face -->
+                            <div class="card-front">
+                                <div class="card-content">
+                                    <div class="platform-logo">
+                                        <img src="https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R/logo.png" alt="Raydium" onerror="this.src='https://raydium.io/logo/logo-text.svg'">
+                                    </div>
+                                    <h4 class="platform-name">Raydium</h4>
+                                </div>
                             </div>
-                            <h4 class="platform-name">Raydium</h4>
+                            <!-- Back Face -->
+                            <div class="card-back">
+                                <div class="card-back-header">
+                                    <h3 class="card-back-title">Raydium</h3>
+                                    <p class="card-back-description">AMM on-chain com order book impulsionando a evolução do DeFi em Solana. Trading perp sem gas, até 40x alavancagem e taxas ultra-baixas.</p>
+                                </div>
+                                <div class="card-back-buttons">
+                                    <a href="https://raydium.io/swap" target="_blank" rel="noopener noreferrer" class="card-btn-primary" onclick="trackPlatformClick('Raydium', 'DEX'); event.stopPropagation();">
+                                        🌐 Site Oficial
+                                    </a>
+                                    <a href="https://x.com/RaydiumProtocol" target="_blank" rel="noopener noreferrer" class="card-btn-secondary" onclick="event.stopPropagation();">
+                                        🐦 X / Twitter
+                                    </a>
+                                    <button class="card-btn-secondary" onclick="event.stopPropagation(); this.closest('.platform-card').classList.remove('flipped');">
+                                        ⬅️ Voltar
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Bitflow -->
-                    <div class="platform-card" data-platform="bitflow" onclick="trackPlatformClick('Bitflow', 'DEX'); return true;">
-                        <div class="card-content">
-                            <div class="platform-logo">
-                                <img src="https://logo.clearbit.com/bitflow.finance" alt="Bitflow" onerror="this.src='https://www.google.com/s2/favicons?domain=bitflow.finance&sz=128'">
+                    <div class="platform-card" data-platform="bitflow">
+                        <div class="card-inner">
+                            <!-- Front Face -->
+                            <div class="card-front">
+                                <div class="card-content">
+                                    <div class="platform-logo">
+                                        <img src="https://logo.clearbit.com/bitflow.finance" alt="Bitflow" onerror="this.src='https://www.google.com/s2/favicons?domain=bitflow.finance&sz=128'">
+                                    </div>
+                                    <h4 class="platform-name">Bitflow</h4>
+                                </div>
                             </div>
-                            <h4 class="platform-name">Bitflow</h4>
+                            <!-- Back Face -->
+                            <div class="card-back">
+                                <div class="card-back-header">
+                                    <h3 class="card-back-title">Bitflow</h3>
+                                    <p class="card-back-description">A DEX para Bitcoiners com agregador potente garantindo as melhores taxas de swap na Stacks. Trading de Bitcoin, SIP10 tokens e Runes com yield.</p>
+                                </div>
+                                <div class="card-back-buttons">
+                                    <a href="https://www.bitflow.finance" target="_blank" rel="noopener noreferrer" class="card-btn-primary" onclick="trackPlatformClick('Bitflow', 'DEX'); event.stopPropagation();">
+                                        🌐 Site Oficial
+                                    </a>
+                                    <a href="https://twitter.com/bitflow" target="_blank" rel="noopener noreferrer" class="card-btn-secondary" onclick="event.stopPropagation();">
+                                        🐦 X / Twitter
+                                    </a>
+                                    <button class="card-btn-secondary" onclick="event.stopPropagation(); this.closest('.platform-card').classList.remove('flipped');">
+                                        ⬅️ Voltar
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Liquidium -->
-                    <div class="platform-card" data-platform="liquidium" onclick="trackPlatformClick('Liquidium', 'DEX'); return true;">
-                        <div class="card-content">
-                            <div class="platform-logo">
-                                <img src="https://liquidium.wtf/logo.svg" alt="Liquidium" onerror="this.src='https://framerusercontent.com/images/BdYCahxn4NVFtzsWOGpUWv3huZ0.png'">
+                    <div class="platform-card" data-platform="liquidium">
+                        <div class="card-inner">
+                            <!-- Front Face -->
+                            <div class="card-front">
+                                <div class="card-content">
+                                    <div class="platform-logo">
+                                        <img src="https://liquidium.wtf/logo.svg" alt="Liquidium" onerror="this.src='https://framerusercontent.com/images/BdYCahxn4NVFtzsWOGpUWv3huZ0.png'">
+                                    </div>
+                                    <h4 class="platform-name">Liquidium</h4>
+                                </div>
                             </div>
-                            <h4 class="platform-name">Liquidium</h4>
+                            <!-- Back Face -->
+                            <div class="card-back">
+                                <div class="card-back-header">
+                                    <h3 class="card-back-title">Liquidium</h3>
+                                    <p class="card-back-description">O primeiro protocolo de empréstimos cross-chain verdadeiramente descentralizado. Empreste ou pegue emprestado qualquer ativo entre Bitcoin, Ethereum e Solana.</p>
+                                </div>
+                                <div class="card-back-buttons">
+                                    <a href="https://liquidium.fi" target="_blank" rel="noopener noreferrer" class="card-btn-primary" onclick="trackPlatformClick('Liquidium', 'DEX'); event.stopPropagation();">
+                                        🌐 Site Oficial
+                                    </a>
+                                    <a href="https://x.com/liquidiumfi" target="_blank" rel="noopener noreferrer" class="card-btn-secondary" onclick="event.stopPropagation();">
+                                        🐦 X / Twitter
+                                    </a>
+                                    <button class="card-btn-secondary" onclick="event.stopPropagation(); this.closest('.platform-card').classList.remove('flipped');">
+                                        ⬅️ Voltar
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Sats Terminal -->
-                    <div class="platform-card" data-platform="satsterminal" onclick="trackPlatformClick('Sats Terminal', 'DEX'); return true;">
-                        <div class="card-content">
-                            <div class="platform-logo">
-                                <img src="https://logo.clearbit.com/satsterminal.com" alt="Sats Terminal" onerror="this.src='https://www.google.com/s2/favicons?domain=satsterminal.com&sz=128'">
+                    <div class="platform-card" data-platform="satsterminal">
+                        <div class="card-inner">
+                            <!-- Front Face -->
+                            <div class="card-front">
+                                <div class="card-content">
+                                    <div class="platform-logo">
+                                        <img src="https://logo.clearbit.com/satsterminal.com" alt="Sats Terminal" onerror="this.src='https://www.google.com/s2/favicons?domain=satsterminal.com&sz=128'">
+                                    </div>
+                                    <h4 class="platform-name">Sats Terminal</h4>
+                                </div>
                             </div>
-                            <h4 class="platform-name">Sats Terminal</h4>
+                            <!-- Back Face -->
+                            <div class="card-back">
+                                <div class="card-back-header">
+                                    <h3 class="card-back-title">Sats Terminal</h3>
+                                    <p class="card-back-description">O melhor app para swaps, empréstimos e yield de Bitcoin. Agregação de liquidez para o ecossistema Bitcoin com o algoritmo SatStream.</p>
+                                </div>
+                                <div class="card-back-buttons">
+                                    <a href="https://www.satsterminal.com" target="_blank" rel="noopener noreferrer" class="card-btn-primary" onclick="trackPlatformClick('Sats Terminal', 'DEX'); event.stopPropagation();">
+                                        🌐 Site Oficial
+                                    </a>
+                                    <a href="https://x.com/SatsTerminal" target="_blank" rel="noopener noreferrer" class="card-btn-secondary" onclick="event.stopPropagation();">
+                                        🐦 X / Twitter
+                                    </a>
+                                    <button class="card-btn-secondary" onclick="event.stopPropagation(); this.closest('.platform-card').classList.remove('flipped');">
+                                        ⬅️ Voltar
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Pump.fun -->
-                    <div class="platform-card" data-platform="pumpfun" onclick="trackPlatformClick('Pump.fun', 'Launchpad'); return true;">
-                        <div class="card-content">
-                            <div class="platform-logo">
-                                <img src="https://logo.clearbit.com/pump.fun" alt="Pump.fun" onerror="this.src='https://www.google.com/s2/favicons?domain=pump.fun&sz=128'">
+                    <div class="platform-card" data-platform="pumpfun">
+                        <div class="card-inner">
+                            <!-- Front Face -->
+                            <div class="card-front">
+                                <div class="card-content">
+                                    <div class="platform-logo">
+                                        <img src="https://logo.clearbit.com/pump.fun" alt="Pump.fun" onerror="this.src='https://www.google.com/s2/favicons?domain=pump.fun&sz=128'">
+                                    </div>
+                                    <h4 class="platform-name">Pump.fun</h4>
+                                </div>
                             </div>
-                            <h4 class="platform-name">Pump.fun</h4>
+                            <!-- Back Face -->
+                            <div class="card-back">
+                                <div class="card-back-header">
+                                    <h3 class="card-back-title">Pump.fun</h3>
+                                    <p class="card-back-description">Plataforma líder para lançamento de memecoins em Solana, crie tokens em segundos.</p>
+                                </div>
+                                <div class="card-back-buttons">
+                                    <a href="https://pump.fun" target="_blank" rel="noopener noreferrer" class="card-btn-primary" onclick="trackPlatformClick('Pump.fun', 'Launchpad'); event.stopPropagation();">
+                                        🌐 Site Oficial
+                                    </a>
+                                    <a href="https://twitter.com/pumpdotfun" target="_blank" rel="noopener noreferrer" class="card-btn-secondary" onclick="event.stopPropagation();">
+                                        🐦 X / Twitter
+                                    </a>
+                                    <button class="card-btn-secondary" onclick="event.stopPropagation(); this.closest('.platform-card').classList.remove('flipped');">
+                                        ⬅️ Voltar
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -478,42 +846,9 @@
         </div>
     </footer>
 
-    <!-- Modal System -->
-    <div class="modal-overlay" id="modalOverlay">
-        <div class="modal-container">
-            <div class="modal-content">
-                <button class="modal-close" id="modalClose" aria-label="Fechar">×</button>
-
-                <div class="modal-header">
-                    <img src="" alt="" class="modal-logo" id="modalLogo">
-                </div>
-
-                <h2 class="modal-title" id="modalTitle"></h2>
-                <p class="modal-description" id="modalDescription"></p>
-
-                <div class="modal-actions">
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="modal-btn modal-btn-twitter" id="modalTwitter" onclick="if(this.href && this.href !== '#' && this.href !== window.location.href + '#') { window.open(this.href, '_blank'); return false; }">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                        </svg>
-                        Seguir no X
-                    </a>
-
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="modal-btn modal-btn-primary" id="modalWebsite" onclick="if(this.href && this.href !== '#' && this.href !== window.location.href + '#') { window.open(this.href, '_blank'); return false; }">
-                        Visitar Site
-                    </a>
-
-                    <button class="modal-btn modal-btn-secondary" id="modalBack">
-                        Voltar
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script src="script.js?v=20241127-rebuild-v2"></script>
-    <!-- Modal System -->
-    <script src="modal.js?v=20241201-ALL-PLATFORMS-FIX"></script>
+    <!-- Card Flip System -->
+    <script src="card-flip.js?v=20241214-CARD-FLIP"></script>
     <!-- Performance Optimization Script -->
     <script src="performance.js?v=20241125f" defer></script>
 </body>

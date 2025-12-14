@@ -1,9 +1,8 @@
-// CRYPTO AGGREGATOR - Enhanced JavaScript with Modal System and Horizontal Scrolling
+// CRYPTO AGGREGATOR - Enhanced JavaScript with Card Flip System and Horizontal Scrolling
 
 class CryptoAggregator {
     constructor() {
         this.currentLang = this.getStoredLanguage() || 'pt';
-        this.blockThemeChange = false; // Initialize theme change blocker
         this.translations = {
             pt: {
                 'hero-title': 'Sua porta de entrada completa para o Mundo Cripto',
@@ -636,7 +635,6 @@ class CryptoAggregator {
         this.setupScrollAnimations();
         this.setupLazyLoading();
         this.setupAnimations();
-        this.setupModalSystem(); // This already calls setupPlatformCards() internally
         this.setupHorizontalScrolling();
         this.setupPremiumBanner();
         this.updateLanguage(this.currentLang);
@@ -723,32 +721,8 @@ class CryptoAggregator {
         // Set initial theme
         this.setTheme(currentTheme);
 
-        // CRITICAL: Monitor and block unwanted theme changes
-        const observer = new MutationObserver((mutations) => {
-            mutations.forEach((mutation) => {
-                if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
-                    if (this.blockThemeChange) {
-                        const currentTheme = this.getStoredTheme() || 'dark';
-                        console.log('🚫 BLOCKING unwanted theme change - restoring to:', currentTheme);
-                        document.documentElement.setAttribute('data-theme', currentTheme);
-                    }
-                }
-            });
-        });
-
-        observer.observe(document.documentElement, {
-            attributes: true,
-            attributeFilter: ['data-theme']
-        });
-
         // Theme switching function
         const toggleTheme = () => {
-            // CRITICAL: Block if modal is opening
-            if (this.blockThemeChange) {
-                console.log('🚫 toggleTheme BLOCKED - modal is opening');
-                return;
-            }
-
             const newTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
             console.log('Switching theme from', document.documentElement.getAttribute('data-theme'), 'to', newTheme);
             this.setTheme(newTheme);
@@ -775,14 +749,7 @@ class CryptoAggregator {
     }
 
     setTheme(theme) {
-        // CRITICAL: Block theme changes during modal operations
-        if (this.blockThemeChange) {
-            console.log('🚫 Theme change BLOCKED during modal operation');
-            return;
-        }
-
         console.log('Setting theme to:', theme);
-        console.trace('Theme change triggered by:');
         document.documentElement.setAttribute('data-theme', theme);
 
         // Update both desktop and mobile theme button appearance
@@ -945,183 +912,10 @@ class CryptoAggregator {
         });
     }
 
-    // Platform Cards Click Handlers - FORCE PREVENT DEFAULT FIRST
-    setupPlatformCards() {
-        const platformCards = document.querySelectorAll('.platform-card[data-platform]');
-
-        platformCards.forEach(card => {
-            const platformId = card.dataset.platform;
-
-            // CRITICAL: Use addEventListener with capture to run BEFORE inline onclick
-            card.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                e.stopImmediatePropagation(); // Stop inline onclick too
-
-                console.log('🎯 Card clicked - preventing default');
-
-                if (platformId) {
-                    this.showModal(platformId);
-                }
-            }, { capture: true }); // Capture phase = runs first!
-
-            card.style.cursor = 'pointer';
-        });
-    }
-
-    // Modal System
-    setupModalSystem() {
-        const modal = document.getElementById('platformModal');
-        const closeModal = document.getElementById('closeModal');
-        const backModal = document.getElementById('backModal');
-        const visitSite = document.getElementById('visitSite');
-
-        if (closeModal) {
-            closeModal.addEventListener('click', () => this.closeModal());
-        }
-
-        if (backModal) {
-            backModal.addEventListener('click', () => this.closeModal());
-        }
-
-        if (modal) {
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    this.closeModal();
-                }
-            });
-        }
-
-        // ESC key to close modal
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
-                this.closeModal();
-            }
-        });
-
-        if (visitSite) {
-            visitSite.addEventListener('click', () => {
-                const url = visitSite.dataset.url;
-                if (url) {
-                    this.trackAffiliateClick(visitSite.dataset.platform, url);
-                    window.open(url, '_blank', 'noopener,noreferrer');
-                    this.closeModal();
-                }
-            });
-        }
-
-        // Setup platform card click handlers
-        this.setupPlatformCards();
-    }
-
-    showModal(platformId) {
-        // Block theme changes during modal operations
-        this.blockThemeChange = true;
-
-        const platform = this.platformData[platformId];
-        if (!platform) {
-            this.blockThemeChange = false;
-            return;
-        }
-
-        const modal = document.getElementById('platformModal');
-        if (!modal) return;
-
-        const modalLogo = document.getElementById('modalLogo');
-        const modalTitle = document.getElementById('modalTitle');
-        const modalDescription = document.getElementById('modalDescription');
-        const visitSite = document.getElementById('visitSite');
-        const followOnX = document.getElementById('followOnX');
-
-        // Set modal content
-        if (modalLogo) {
-            modalLogo.src = platform.logo;
-            modalLogo.onerror = () => { modalLogo.src = platform.fallbackLogo; };
-            modalLogo.alt = platform.name;
-        }
-
-        if (modalTitle) {
-            modalTitle.textContent = platform.name;
-        }
-
-        if (modalDescription) {
-            modalDescription.textContent = platform.description[this.currentLang] || platform.description['pt'];
-        }
-
-        // Twitter/X button
-        if (followOnX) {
-            followOnX.classList.remove('show');
-            if (platform.xProfile) {
-                followOnX.classList.add('show');
-                followOnX.onclick = (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    window.open(platform.xProfile, '_blank', 'noopener,noreferrer');
-                    this.trackXProfileClick(platform.name, platform.xProfile);
-                };
-            }
-        }
-
-        if (visitSite) {
-            visitSite.onclick = () => {
-                window.open(platform.url, '_blank', 'noopener,noreferrer');
-                this.closeModal();
-            };
-        }
-
-        // Lock body scroll - CLEAN VERSION
-        document.body.classList.add('modal-open');
-
-        // Show modal
-        modal.classList.add('active');
-
-        // Unblock theme changes after modal opens
-        setTimeout(() => {
-            this.blockThemeChange = false;
-        }, 100);
-    }
-
-    closeModal() {
-        const modal = document.getElementById('platformModal');
-        if (modal) {
-            modal.classList.remove('active');
-            // Unlock body scroll
-            document.body.classList.remove('modal-open');
-        }
-        // Ensure theme changes are unblocked when modal closes
-        this.blockThemeChange = false;
-    }
-
 
     // Premium Banner Setup
     setupPremiumBanner() {
-        const premiumBanner = document.querySelector('.premium-hero-banner');
         const premiumCTA = document.querySelector('.premium-cta-button');
-
-        if (premiumBanner) {
-            const platformId = premiumBanner.dataset.platform;
-
-            // Banner click - open modal
-            premiumBanner.addEventListener('click', (e) => {
-                // Don't trigger modal if CTA button was clicked
-                if (!e.target.closest('.premium-cta-button')) {
-                    e.preventDefault();
-                    this.showModal(platformId);
-                }
-            });
-
-            // Add keyboard accessibility
-            premiumBanner.setAttribute('tabindex', '0');
-            premiumBanner.setAttribute('role', 'button');
-            premiumBanner.setAttribute('aria-label', 'Open Bitget Wallet details');
-
-            premiumBanner.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    this.showModal(platformId);
-                }
-            });
-        }
 
         if (premiumCTA) {
             premiumCTA.addEventListener('click', (e) => {
@@ -1549,14 +1343,6 @@ class CryptoAggregator {
     trackNavigation(section) {
         console.log('Navigation tracked:', {
             section: section.replace('#', ''),
-            language: this.currentLang,
-            timestamp: new Date().toISOString()
-        });
-    }
-
-    trackModalView(platform) {
-        console.log('Modal view tracked:', {
-            platform: platform,
             language: this.currentLang,
             timestamp: new Date().toISOString()
         });
