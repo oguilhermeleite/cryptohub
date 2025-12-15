@@ -1549,6 +1549,86 @@ img {
     justify-content: center;
     transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
                 border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+/* Rating Badge - Top Left Corner */
+.rating-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+}
+
+.rating-badge .stars {
+    color: #FFD700;
+    font-size: 12px;
+}
+
+.rating-badge .score {
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+[data-theme="light"] .rating-badge {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(180, 160, 140, 0.18);
+}
+
+[data-theme="light"] .rating-badge .score {
+    color: #0f0f0f;
+}
+
+/* Platform Tags - Below Name */
+.platform-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 12px;
+    padding: 0 15px;
+}
+
+.tag {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    background: rgba(247, 147, 26, 0.2);
+    border-color: rgba(247, 147, 26, 0.4);
+    color: #f7931a;
+}
+
+[data-theme="light"] .tag {
+    background: rgba(232, 138, 26, 0.08);
+    border: 1px solid rgba(180, 160, 140, 0.22);
+    color: #4a4a4a;
+}
+
+[data-theme="light"] .tag:hover {
+    background: rgba(232, 138, 26, 0.16);
+    border-color: rgba(232, 138, 26, 0.38);
+    color: #e88a1a;
 }
 
 .platform-card:hover .card-front {
