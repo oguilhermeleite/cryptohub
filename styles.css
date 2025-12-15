@@ -1496,9 +1496,9 @@ img {
 
 /* Platform Card Styles - 3D Card Flip Design */
 .platform-card {
-    min-width: 280px;
-    max-width: 320px;
-    min-height: 320px;
+    min-width: 340px;
+    max-width: 400px;
+    min-height: 400px;
     scroll-snap-align: start;
     position: relative;
     cursor: pointer;
@@ -1513,7 +1513,7 @@ img {
     position: relative;
     width: 100%;
     height: 100%;
-    min-height: 320px;
+    min-height: 400px;
     transition: transform 0.6s;
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
@@ -1531,7 +1531,7 @@ img {
     position: absolute;
     width: 100%;
     height: 100%;
-    min-height: 320px;
+    min-height: 400px;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     border-radius: 24px;
@@ -1595,35 +1595,36 @@ img {
 }
 
 .card-back-title {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
 .card-back-description {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.6;
     color: var(--text-secondary);
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     text-align: center;
     overflow-y: auto;
-    max-height: 120px;
+    max-height: 150px;
 }
 
 .card-back-buttons {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
 }
 
 /* Button Styles for Card Back */
 .card-btn-primary {
     background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
     color: white;
-    padding: 14px;
+    padding: 16px;
     border-radius: 12px;
     font-weight: 600;
+    font-size: 15px;
     text-align: center;
     text-decoration: none;
     border: none;
@@ -1645,13 +1646,13 @@ img {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: white;
-    padding: 12px;
+    padding: 14px;
     border-radius: 10px;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 14px;
+    font-size: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1723,8 +1724,8 @@ img {
 }
 
 .platform-logo {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     margin: 0 auto 1.5rem;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
@@ -1743,8 +1744,8 @@ img {
 }
 
 .platform-logo img {
-    width: 48px;
-    height: 48px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
     border-radius: 8px;
     opacity: 0;
@@ -1760,7 +1761,7 @@ img {
 }
 
 .platform-name {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 0.5rem;
