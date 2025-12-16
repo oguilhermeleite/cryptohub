@@ -1644,57 +1644,6 @@ img {
     color: #e88a1a;
 }
 
-/* Crypto Price Ticker */
-.crypto-ticker {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    padding: 8px 20px;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 13px;
-}
-
-.ticker-item {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.crypto-icon {
-    font-size: 16px;
-}
-
-.crypto-name {
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.crypto-price {
-    font-weight: 700;
-    color: #FF6B35;
-}
-
-[data-theme="light"] .crypto-ticker {
-    background: rgba(252, 250, 247, 0.95);
-    border-bottom: 1px solid rgba(180, 160, 140, 0.22);
-}
-
-[data-theme="light"] .ticker-item {
-    color: #0f0f0f;
-}
-
-[data-theme="light"] .crypto-name {
-    color: #4a4a4a;
-}
-
-[data-theme="light"] .crypto-price {
-    color: #e88a1a;
-}
-
 /* KYC Badges */
 .kyc-badge {
     position: absolute;
@@ -2398,17 +2347,6 @@ body.modal-open {
 @media (max-width: 768px) {
     .container {
         padding: 0 15px;
-    }
-
-    /* Mobile crypto ticker */
-    .crypto-ticker {
-        gap: 15px;
-        font-size: 11px;
-        padding: 6px 15px;
-    }
-
-    .crypto-icon {
-        font-size: 14px;
     }
 
     /* Hide desktop navigation on mobile */
