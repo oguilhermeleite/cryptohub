@@ -1535,9 +1535,11 @@ img {
     border-radius: 24px;
     border: 1px solid var(--border-primary);
     overflow: hidden;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
-/* Only hide backface on card-front */
+/* Both faces hide their backside */
 .card-front {
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
@@ -1717,8 +1719,6 @@ img {
     justify-content: space-between;
     border: 2px solid rgba(247, 147, 26, 0.3);
     z-index: 2;
-    backface-visibility: visible;
-    -webkit-backface-visibility: visible;
 }
 
 [data-theme="light"] .card-back {
