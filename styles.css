@@ -1567,6 +1567,15 @@ img {
     gap: 6px;
     z-index: 10;
     backdrop-filter: blur(10px);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+/* Hide badges when card is flipped */
+.platform-card.flipped .rating-badge,
+.platform-card.flipped .kyc-badge {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .rating-badge .stars {
@@ -1695,6 +1704,8 @@ img {
     letter-spacing: 0.5px;
     z-index: 10;
     backdrop-filter: blur(10px);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .kyc-required {
@@ -1752,6 +1763,7 @@ img {
     flex-direction: column;
     justify-content: space-between;
     border: 2px solid rgba(247, 147, 26, 0.3);
+    z-index: 20;
 }
 
 [data-theme="light"] .card-back {
