@@ -2939,7 +2939,7 @@ a:focus,
 }
 
 .gradient-text {
-    background: linear-gradient(135deg, #FF6B35 0%, #a855f7 100%);
+    background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -3174,7 +3174,7 @@ a:focus,
 }
 
 [data-theme="light"] .gradient-text {
-    background: linear-gradient(135deg, #e8651a 0%, #7c3aed 100%);
+    background: linear-gradient(135deg, #e8651a 0%, #e88a1a 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
