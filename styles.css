@@ -3077,3 +3077,11 @@ a:focus,
         padding: 30px 20px;
     }
 }
+
+.hero-description {
+    font-size: clamp(0.95rem, 1.8vw, 1.125rem);
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.65);
+    max-width: 800px;
+    margin: 20px auto 0;
+}
