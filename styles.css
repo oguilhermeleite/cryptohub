@@ -90,6 +90,31 @@ html {
     --shadow-button-hover: 0 8px 26px rgba(232, 138, 26, 0.32);
 }
 
+/* Light Theme - Body Background Override */
+[data-theme="light"] body {
+    background: linear-gradient(
+        180deg,
+        #fdfcfb 0%,
+        #f8f6f3 50%,
+        #fdfcfb 100%
+    ) !important;
+    background-attachment: fixed;
+}
+
+/* Light Theme - Gradient Overlay */
+[data-theme="light"] body::before {
+    background: radial-gradient(
+        circle at 20% 50%,
+        rgba(232, 138, 26, 0.03) 0%,
+        transparent 50%
+    ),
+    radial-gradient(
+        circle at 80% 50%,
+        rgba(168, 85, 247, 0.02) 0%,
+        transparent 50%
+    ) !important;
+}
+
 /* Light Theme Specific Adjustments for Better Visibility */
 [data-theme="light"] .platform-logo {
     background: linear-gradient(135deg, rgba(232, 138, 26, 0.06) 0%, rgba(255, 159, 58, 0.04) 100%);
@@ -3084,4 +3109,73 @@ a:focus,
     color: rgba(255, 255, 255, 0.65);
     max-width: 800px;
     margin: 20px auto 0;
+}
+
+/* ============================================
+   LIGHT THEME - SECURITY SECTION
+   ============================================ */
+
+[data-theme="light"] .security-title {
+    color: #0f0f0f;
+}
+
+[data-theme="light"] .security-description {
+    color: #4a4a4a;
+}
+
+[data-theme="light"] .security-card {
+    background: rgba(255, 254, 252, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1.5px solid rgba(180, 160, 140, 0.2);
+    box-shadow: 0 4px 16px rgba(100, 85, 70, 0.08);
+}
+
+[data-theme="light"] .security-card:hover {
+    border-color: rgba(232, 138, 26, 0.4);
+    box-shadow: 0 8px 28px rgba(232, 138, 26, 0.15);
+}
+
+[data-theme="light"] .security-card h3 {
+    color: #0f0f0f;
+}
+
+[data-theme="light"] .security-card p {
+    color: #4a4a4a;
+}
+
+[data-theme="light"] .education-box {
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.08) 0%, rgba(139, 92, 246, 0.06) 100%);
+    border: 2px solid rgba(168, 85, 247, 0.25);
+}
+
+[data-theme="light"] .education-box h4 {
+    color: #7c3aed;
+}
+
+[data-theme="light"] .education-box p {
+    color: #2a2a2a;
+}
+
+/* ============================================
+   LIGHT THEME - HERO SECTION
+   ============================================ */
+
+[data-theme="light"] .hero-section .hero-title {
+    color: #0f0f0f;
+}
+
+[data-theme="light"] .hero-section .hero-subtitle {
+    color: #4a4a4a;
+}
+
+[data-theme="light"] .hero-section .hero-description {
+    color: #4a4a4a;
+}
+
+[data-theme="light"] .gradient-text {
+    background: linear-gradient(135deg, #00b574 0%, #7c3aed 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
