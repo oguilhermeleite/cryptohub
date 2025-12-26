@@ -612,36 +612,38 @@ img {
 
 /* Connect Button - Desktop Header */
 .connect-button {
-    background: #F4B740;
-    color: #1a1a1a;
+    background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);
+    color: #ffffff;
     border: none;
     padding: 12px 24px;
     border-radius: 14px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: all 0.2s ease;
     white-space: nowrap;
 }
 
 .connect-button:hover {
-    background: #FFD166;
+    background: linear-gradient(135deg, #9333ea 0%, #7e22ce 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(168, 85, 247, 0.4);
 }
 
 .connect-button:active {
-    background: #E5A830;
+    transform: translateY(0);
 }
 
-/* "Todas as Plataformas" Button - Matches Connect Button */
+/* "Todas as Plataformas" Button - Green Style */
 .nav-menu a.all-platforms-button {
-    background: #F4B740 !important;
-    color: #1a1a1a !important;
+    background: linear-gradient(135deg, #00f5a0 0%, #00d084 100%) !important;
+    color: #000000 !important;
     border: none !important;
     padding: 12px 24px !important;
     border-radius: 14px !important;
     font-size: 1rem !important;
     font-weight: 600 !important;
-    transition: background-color 0.2s ease !important;
+    transition: all 0.2s ease !important;
     white-space: nowrap !important;
     display: inline-block !important;
     opacity: 1 !important;
@@ -649,12 +651,14 @@ img {
 }
 
 .nav-menu a.all-platforms-button:hover {
-    background: #FFD166 !important;
-    color: #1a1a1a !important;
+    background: linear-gradient(135deg, #00d084 0%, #00b872 100%) !important;
+    color: #000000 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 245, 160, 0.4);
 }
 
 .nav-menu a.all-platforms-button:active {
-    background: #E5A830 !important;
+    transform: translateY(0) !important;
 }
 
 .nav-menu a.all-platforms-button::after {
@@ -899,24 +903,25 @@ img {
 
 /* Mobile Connect Button */
 .mobile-connect-button {
-    background: #F4B740;
-    color: #1a1a1a;
+    background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);
+    color: #ffffff;
     border: none;
     width: 100%;
     height: 50px;
     border-radius: 12px;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: all 0.2s ease;
     font-size: 1rem;
     font-weight: 600;
 }
 
 .mobile-connect-button:hover {
-    background: #FFD166;
+    background: linear-gradient(135deg, #9333ea 0%, #7e22ce 100%);
+    box-shadow: 0 8px 20px rgba(168, 85, 247, 0.4);
 }
 
 .mobile-connect-button:active {
-    background: #E5A830;
+    transform: scale(0.98);
 }
 
 /* Mobile Connect Message */
