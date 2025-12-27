@@ -3166,6 +3166,131 @@ a:focus,
     color: #4a4a4a;
 }
 
+/* ============================================
+   CATEGORY EXPLANATION CARDS SECTION
+   ============================================ */
+
+.category-info-section {
+    padding: 80px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.category-info-container {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.category-info-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.category-info-subtitle {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.category-info-subtitle::before {
+    content: "✓";
+    color: var(--accent-primary);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.category-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.category-card {
+    background: rgba(30, 30, 30, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0, 245, 160, 0.3);
+    box-shadow: 0 16px 48px rgba(0, 245, 160, 0.15);
+}
+
+.category-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+    filter: grayscale(0.3);
+}
+
+.category-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.category-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .category-info-section {
+        padding: 60px 20px;
+    }
+
+    .category-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* ============================================
+   LIGHT THEME - CATEGORY CARDS
+   ============================================ */
+
+[data-theme="light"] .category-info-title {
+    color: #0f0f0f;
+}
+
+[data-theme="light"] .category-info-subtitle {
+    color: #4a4a4a;
+}
+
+[data-theme="light"] .category-card {
+    background: rgba(255, 254, 252, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1.5px solid rgba(180, 160, 140, 0.2);
+    box-shadow: 0 4px 16px rgba(100, 85, 70, 0.08);
+}
+
+[data-theme="light"] .category-card:hover {
+    border-color: rgba(0, 184, 114, 0.4);
+    box-shadow: 0 8px 28px rgba(0, 184, 114, 0.15);
+}
+
+[data-theme="light"] .category-card h3 {
+    color: #0f0f0f;
+}
+
+[data-theme="light"] .category-card p {
+    color: #4a4a4a;
+}
+
 [data-theme="light"] .education-box {
     background: linear-gradient(135deg, rgba(168, 85, 247, 0.08) 0%, rgba(139, 92, 246, 0.06) 100%);
     border: 2px solid rgba(168, 85, 247, 0.25);
