@@ -1559,9 +1559,9 @@ img {
 
 /* Platform Card Container */
 .platform-card {
-    min-width: 340px;
-    max-width: 400px;
-    min-height: 400px;
+    min-width: 420px;
+    max-width: 480px;
+    min-height: 480px;
     scroll-snap-align: start;
     position: relative;
     cursor: pointer;
@@ -1607,7 +1607,7 @@ img {
     position: relative;
     width: 100%;
     height: 100%;
-    min-height: 400px;
+    min-height: 480px;
     /* Smooth rotation transition */
     transition: transform 0.6s ease-in-out;
     /* Enable 3D transforms */
@@ -1633,7 +1633,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    min-height: 400px;
+    min-height: 480px;
     border-radius: 24px;
     overflow: hidden;
     /* CRITICAL: Hide the back of each face */
@@ -1650,7 +1650,7 @@ img {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
     backdrop-filter: blur(20px);
     border: 1px solid var(--border-primary);
-    padding: 2rem;
+    padding: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1663,13 +1663,13 @@ img {
     top: 15px;
     left: 15px;
     background: rgba(0, 0, 0, 0.8);
-    padding: 6px 12px;
+    padding: 8px 14px;
     border-radius: 20px;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 600;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
     z-index: 10;
     backdrop-filter: blur(10px);
     backface-visibility: hidden;
@@ -1685,12 +1685,12 @@ img {
 
 .rating-badge .stars {
     color: #FFD700;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .rating-badge .score {
     color: white;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 700;
 }
 
@@ -1717,9 +1717,9 @@ img {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: rgba(255, 255, 255, 0.8);
-    padding: 5px 12px;
+    padding: 6px 14px;
     border-radius: 6px;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -1750,9 +1750,9 @@ img {
     position: absolute;
     top: 15px;
     right: 15px;
-    padding: 6px 12px;
+    padding: 8px 14px;
     border-radius: 20px;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -1815,7 +1815,7 @@ img {
     /* Styling */
     background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
     border: 2px solid rgba(0, 245, 160, 0.3);
-    padding: 30px 20px;
+    padding: 35px 25px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1829,24 +1829,24 @@ img {
 
 .card-back-header {
     text-align: center;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
 .card-back-title {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 .card-back-description {
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.6;
     color: var(--text-secondary);
-    margin-bottom: 24px;
+    margin-bottom: 28px;
     text-align: center;
     overflow-y: auto;
-    max-height: 150px;
+    max-height: 180px;
 }
 
 .card-back-buttons {
@@ -1859,16 +1859,15 @@ img {
 .card-btn-primary {
     background: linear-gradient(135deg, #00f5a0 0%, #00d084 100%);
     color: white;
-    padding: 16px;
+    padding: 18px;
     border-radius: 12px;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 17px;
     text-align: center;
     text-decoration: none;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1884,13 +1883,13 @@ img {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: white;
-    padding: 14px;
+    padding: 16px;
     border-radius: 10px;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 15px;
+    font-size: 17px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1962,8 +1961,8 @@ img {
 }
 
 .platform-logo {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     margin: 0 auto 1.5rem;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
@@ -1982,8 +1981,8 @@ img {
 }
 
 .platform-logo img {
-    width: 60px;
-    height: 60px;
+    width: 72px;
+    height: 72px;
     object-fit: contain;
     border-radius: 8px;
     opacity: 0;
@@ -1999,7 +1998,7 @@ img {
 }
 
 .platform-name {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 0.5rem;
@@ -2442,8 +2441,8 @@ body.modal-open {
     }
 
     .platform-card {
-        min-width: 250px;
-        max-width: 280px;
+        min-width: 340px;
+        max-width: 380px;
     }
 }
 
@@ -2653,9 +2652,9 @@ body.modal-open {
 
     .platform-card {
         /* Optimized mobile card size */
-        min-width: 260px;
-        max-width: 280px;
-        padding: 1.5rem;
+        min-width: 300px;
+        max-width: 340px;
+        padding: 1.75rem;
         /* Ensure cards snap properly */
         scroll-snap-align: start;
         /* Prevent card shrinking */
@@ -2663,13 +2662,13 @@ body.modal-open {
     }
 
     .platform-logo {
-        width: 60px;
-        height: 60px;
+        width: 90px;
+        height: 90px;
     }
 
     .platform-logo img {
-        width: 36px;
-        height: 36px;
+        width: 54px;
+        height: 54px;
     }
 
     /* Enhanced scroll indicators for mobile */
@@ -2769,9 +2768,9 @@ body.modal-open {
 
     .platform-card {
         /* Smaller cards for tiny screens but still swipeable */
-        min-width: 240px;
-        max-width: 260px;
-        padding: 1.25rem;
+        min-width: 280px;
+        max-width: 310px;
+        padding: 1.5rem;
         /* Critical: prevent shrinking */
         flex-shrink: 0;
         /* Ensure smooth snapping */
@@ -2779,13 +2778,13 @@ body.modal-open {
     }
 
     .platform-logo {
-        width: 50px;
-        height: 50px;
+        width: 80px;
+        height: 80px;
     }
 
     .platform-logo img {
-        width: 30px;
-        height: 30px;
+        width: 48px;
+        height: 48px;
     }
 
     .section-title {
