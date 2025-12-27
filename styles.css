@@ -1706,10 +1706,10 @@ img {
 /* Platform Tags - Below Name */
 .platform-tags {
     display: flex;
-    gap: 8px;
+    gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 12px;
+    margin-top: 16px;
     padding: 0 15px;
 }
 
@@ -1717,9 +1717,9 @@ img {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: rgba(255, 255, 255, 0.8);
-    padding: 6px 14px;
-    border-radius: 6px;
-    font-size: 13px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 15px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -1961,8 +1961,8 @@ img {
 }
 
 .platform-logo {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     margin: 0 auto 1.5rem;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
@@ -1981,8 +1981,8 @@ img {
 }
 
 .platform-logo img {
-    width: 72px;
-    height: 72px;
+    width: 84px;
+    height: 84px;
     object-fit: contain;
     border-radius: 8px;
     opacity: 0;
@@ -1998,10 +1998,10 @@ img {
 }
 
 .platform-name {
-    font-size: 1.7rem;
+    font-size: 2rem;
     font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     transition: color 0.3s ease;
 }
 
@@ -2662,13 +2662,22 @@ body.modal-open {
     }
 
     .platform-logo {
-        width: 90px;
-        height: 90px;
+        width: 110px;
+        height: 110px;
     }
 
     .platform-logo img {
-        width: 54px;
-        height: 54px;
+        width: 66px;
+        height: 66px;
+    }
+
+    .platform-name {
+        font-size: 1.6rem;
+    }
+
+    .tag {
+        font-size: 13px;
+        padding: 7px 14px;
     }
 
     /* Enhanced scroll indicators for mobile */
@@ -2778,13 +2787,22 @@ body.modal-open {
     }
 
     .platform-logo {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
     }
 
     .platform-logo img {
-        width: 48px;
-        height: 48px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .platform-name {
+        font-size: 1.5rem;
+    }
+
+    .tag {
+        font-size: 12px;
+        padding: 6px 12px;
     }
 
     .section-title {
