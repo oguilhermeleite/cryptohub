@@ -2743,6 +2743,125 @@ body.modal-open {
         top: 90px;
     }
 
+    /* ========================================
+       MOBILE CARD OPTIMIZATION
+       ======================================== */
+
+    /* PART 1: Compact Rating Badge - 1 Star + Score */
+    .rating-badge {
+        padding: 6px 12px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .rating-badge .stars {
+        display: none; /* Hide all 5 stars */
+    }
+
+    /* Show only ONE star before score */
+    .rating-badge::before {
+        content: "⭐";
+        font-size: 16px;
+    }
+
+    .rating-badge .score {
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    /* PART 2: Reduce Card Height - More Compact */
+    .platform-card {
+        height: 320px;
+        max-height: 320px;
+        min-height: 320px;
+    }
+
+    .card-front,
+    .card-back {
+        padding: 16px;
+    }
+
+    /* Logo smaller */
+    .platform-logo {
+        width: 70px !important;
+        height: 70px !important;
+        margin-bottom: 12px;
+    }
+
+    .platform-logo img {
+        width: 70px !important;
+        height: 70px !important;
+    }
+
+    /* Platform name */
+    .platform-name {
+        font-size: 18px !important;
+        margin-bottom: 10px;
+    }
+
+    /* Tags container */
+    .platform-tags {
+        gap: 6px;
+        margin-top: 10px;
+    }
+
+    .platform-tags .tag {
+        padding: 4px 10px;
+        font-size: 11px;
+    }
+
+    /* KYC badge */
+    .kyc-badge {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+
+    /* Card back description */
+    .card-back p,
+    .card-back-description {
+        font-size: 13px !important;
+        line-height: 1.5;
+        margin-bottom: 12px;
+    }
+
+    /* CTA buttons */
+    .card-back button,
+    .card-back a,
+    .card-btn-primary,
+    .card-btn-secondary {
+        padding: 10px 20px !important;
+        font-size: 14px !important;
+    }
+
+    /* PART 3: Proportional Spacing */
+    .platforms-grid {
+        gap: 16px;
+        padding: 16px 12px;
+    }
+
+    /* Ensure cards fill width properly */
+    .platform-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Card inner content alignment */
+    .card-front {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Back card content spacing */
+    .card-back {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -2856,6 +2975,89 @@ body.modal-open {
     .scroll-dot.active {
         background: #00f5a0;
         transform: scale(1.4);
+    }
+
+    /* ========================================
+       SMALL MOBILE CARD OPTIMIZATION (480px)
+       ======================================== */
+
+    /* Compact Rating Badge - 1 Star + Score */
+    .rating-badge {
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+
+    .rating-badge .stars {
+        display: none;
+    }
+
+    .rating-badge::before {
+        content: "⭐";
+        font-size: 15px;
+    }
+
+    .rating-badge .score {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    /* Reduce Card Height */
+    .platform-card {
+        height: 300px !important;
+        max-height: 300px !important;
+        min-height: 300px !important;
+    }
+
+    .card-front,
+    .card-back {
+        padding: 14px;
+    }
+
+    /* Logo smaller for tiny screens */
+    .platform-logo {
+        width: 65px !important;
+        height: 65px !important;
+        margin-bottom: 10px;
+    }
+
+    .platform-logo img {
+        width: 65px !important;
+        height: 65px !important;
+    }
+
+    /* Platform name */
+    .platform-name {
+        font-size: 17px !important;
+        margin-bottom: 8px;
+    }
+
+    /* Tags */
+    .platform-tags .tag {
+        padding: 3px 8px;
+        font-size: 10px;
+    }
+
+    /* KYC badge */
+    .kyc-badge {
+        padding: 4px 8px;
+        font-size: 10px;
+    }
+
+    /* Card back */
+    .card-back p,
+    .card-back-description {
+        font-size: 12px !important;
+        line-height: 1.4;
+        margin-bottom: 10px;
+    }
+
+    /* Buttons */
+    .card-back button,
+    .card-back a,
+    .card-btn-primary,
+    .card-btn-secondary {
+        padding: 8px 16px !important;
+        font-size: 13px !important;
     }
 }
 
