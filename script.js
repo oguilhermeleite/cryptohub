@@ -1509,6 +1509,41 @@ function setupConnectMessage() {
     });
 }
 
+// PRO Message Management
+function setupProMessage() {
+    const proButton = document.getElementById('proButton');
+    const proMessage = document.getElementById('proMessage');
+
+    if (!proButton || !proMessage) {
+        console.warn('PRO message elements not found');
+        return;
+    }
+
+    let proTimeout = null;
+
+    // Function to show message with 4-second timeout
+    function showMessage(messageElement) {
+        // Clear any existing timeout
+        if (proTimeout) {
+            clearTimeout(proTimeout);
+        }
+
+        // Show message
+        messageElement.classList.add('show');
+
+        // Hide after 4 seconds
+        proTimeout = setTimeout(() => {
+            messageElement.classList.remove('show');
+        }, 4000);
+    }
+
+    // PRO button click
+    proButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        showMessage(proMessage);
+    });
+}
+
 // Global function for onclick handlers in HTML
 function trackPlatformClick(platformName, category) {
     console.log('Platform clicked:', platformName, category);
@@ -1533,6 +1568,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setupPerformanceMonitoring();
         setupThemeManagement();
         setupConnectMessage();
+        setupProMessage();
 
         console.log('CRYPTO AGGREGATOR initialized successfully');
     } catch (error) {

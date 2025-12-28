@@ -713,10 +713,71 @@ img {
     display: none;
 }
 
+/* Header Buttons Container - PRO + Connect */
+.header-buttons-container {
+    display: flex;
+    gap: 16px;
+    margin-left: 40px;
+    align-items: center;
+}
+
+/* PRO Button Container */
+.pro-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* PRO Button - Golden Gradient */
+.pro-button {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+}
+
+.pro-button:hover {
+    background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(245, 158, 11, 0.5);
+}
+
+.pro-button:active {
+    transform: translateY(0);
+}
+
+/* PRO Message - Appears below button */
+.pro-message {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: var(--text-tertiary);
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.pro-container:hover .pro-message {
+    opacity: 1;
+    visibility: visible;
+}
+
 /* Connect Button Container - Desktop Header */
 .connect-container {
     position: relative;
-    margin-left: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2568,8 +2629,8 @@ body.modal-open {
         display: none;
     }
 
-    /* Hide desktop connect button on mobile */
-    .connect-container {
+    /* Hide desktop buttons (PRO + Connect) on mobile */
+    .header-buttons-container {
         display: none;
     }
 
