@@ -14,6 +14,12 @@ html {
     /* Performance optimizations */
     text-rendering: optimizeSpeed;
     -webkit-tap-highlight-color: transparent;
+    /* Enhanced smooth scrolling */
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /* Hardware acceleration for entire page */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
 }
 
 /* Performance: GPU acceleration for animated elements */
@@ -24,6 +30,91 @@ html {
     will-change: transform;
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
+}
+
+/* ========================================
+   PERFORMANCE OPTIMIZATIONS - SMOOTH SCROLL
+   ======================================== */
+
+/* Optimize body scrolling */
+body {
+    overflow-x: hidden;
+    /* Enable GPU acceleration */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    /* Optimize repaints */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+}
+
+/* Optimize all sections for smooth scrolling */
+section {
+    /* GPU acceleration for sections */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    /* Optimize rendering */
+    contain: layout style paint;
+    /* Improve scroll performance */
+    content-visibility: auto;
+}
+
+/* Optimize images for lazy loading and smooth scroll */
+img {
+    /* Prevent layout shifts */
+    display: block;
+    max-width: 100%;
+    height: auto;
+    /* GPU acceleration */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    /* Smooth rendering */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* Optimize cards container scrolling */
+.horizontal-scroll-container {
+    /* Enable hardware acceleration */
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    /* Smooth scrolling */
+    -webkit-overflow-scrolling: touch;
+    /* Optimize scroll performance */
+    overscroll-behavior-x: contain;
+}
+
+/* Optimize card animations */
+.platform-card,
+.card-inner,
+.card-front,
+.card-back {
+    /* GPU acceleration */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+    /* Optimize transforms */
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+}
+
+/* Optimize header for fixed positioning */
+.header {
+    /* GPU acceleration for fixed header */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /* Smooth transforms */
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+/* Reduce paint on scroll */
+* {
+    /* Optimize animations */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 /* CSS Custom Properties for Theme System */

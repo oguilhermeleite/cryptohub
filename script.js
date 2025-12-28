@@ -971,7 +971,7 @@ class CryptoAggregator {
             };
 
             // Update active dot based on scroll position with improved calculation
-            container.addEventListener('scroll', this.debounce(updateScrollIndicators, 50));
+            container.addEventListener('scroll', this.debounce(updateScrollIndicators, 50), { passive: true });
 
             // Dot click navigation with improved positioning
             dots.forEach((dot, index) => {
@@ -1135,7 +1135,7 @@ class CryptoAggregator {
             }
 
             // Update arrow states on scroll
-            container.addEventListener('scroll', this.debounce(updateArrowStates, 50));
+            container.addEventListener('scroll', this.debounce(updateArrowStates, 50), { passive: true });
             updateArrowStates();
 
             // 2. MOUSE DRAG NAVIGATION (Desktop)
