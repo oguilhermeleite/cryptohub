@@ -546,6 +546,22 @@ img {
     animation: pulse 2s infinite;
 }
 
+.logo-svg {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: var(--accent-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.02em;
+}
+
 @keyframes pulse {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.1); }
@@ -2487,6 +2503,16 @@ body.modal-open {
 
     .logo-icon {
         font-size: 1.1rem;
+    }
+
+    .logo-svg {
+        height: 40px;
+    }
+
+    .logo-text {
+        font-size: 0.95rem;
+        white-space: nowrap;
+        letter-spacing: -0.03em;
     }
 
     /* Premium Hero Banner Mobile */
