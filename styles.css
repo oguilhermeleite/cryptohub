@@ -342,20 +342,23 @@ img {
     border-color: rgba(180, 160, 140, 0.38);
 }
 
-/* Light Theme - Navigation Menu with High Contrast */
+/* Light Theme - Navigation Menu Buttons */
 [data-theme="light"] .nav-menu a {
-    color: #0f0f0f !important;
+    background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);
+    color: #ffffff !important;
     font-weight: 600;
     text-shadow: none;
 }
 
 [data-theme="light"] .nav-menu a:hover {
-    color: #00b872 !important;
-    background: rgba(0, 184, 114, 0.06) !important;
+    background: linear-gradient(135deg, #9333ea 0%, #7e22ce 100%) !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(168, 85, 247, 0.4) !important;
 }
 
 [data-theme="light"] .nav-menu a::after {
-    background: #00b872;
+    display: none;
 }
 
 /* Light Theme - Header Background - FORCE Light Theme */
@@ -669,43 +672,45 @@ img {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 40px;
+    gap: 16px;
     justify-content: center;
     flex: 1;
 }
 
+/* Navigation Menu Items - Button Style like Connect */
 .nav-menu a {
-    color: var(--text-primary);
+    /* Button appearance */
+    background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);
+    color: #ffffff !important;
     text-decoration: none;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 12px 20px;
+    border-radius: 12px;
+    transition: all 0.2s ease;
     position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    /* Remove underline effect */
+    text-shadow: none;
+    border: none;
+    cursor: pointer;
 }
 
 .nav-menu a:hover {
-    color: #FDB813 !important;
-    background: transparent !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-    transition: color 0.3s ease;
+    background: linear-gradient(135deg, #9333ea 0%, #7e22ce 100%) !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(168, 85, 247, 0.4) !important;
 }
 
+.nav-menu a:active {
+    transform: translateY(0);
+}
+
+/* Remove underline effect for button-style menu */
 .nav-menu a::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background: var(--accent-primary);
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-}
-
-.nav-menu a:hover::after {
-    width: 80%;
+    display: none;
 }
 
 /* Connect Button Container - Desktop Header */
