@@ -3824,3 +3824,67 @@ a:focus,
         background: #0a0a0a !important;
     }
 }
+
+/* ============================================
+   DESKTOP HEADER ALIGNMENT
+   ============================================ */
+
+@media (min-width: 769px) {
+    /* Main header container */
+    .header {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 16px 24px !important;
+    }
+
+    .header-content {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        gap: 24px !important;
+    }
+
+    .header-top-row {
+        display: flex !important;
+        align-items: center !important;
+        gap: 24px !important;
+    }
+
+    /* Right side controls container */
+    .desktop-theme-toggle,
+    .language-toggle,
+    .header-buttons-container {
+        display: flex !important;
+        align-items: center !important;
+        gap: 16px !important;
+    }
+
+    /* Ensure all interactive elements same height */
+    .theme-btn,
+    .lang-btn {
+        height: 40px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .theme-btn {
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    /* Button consistency */
+    .header-buttons-container .connect-btn,
+    .header-buttons-container .pro-btn {
+        height: 40px !important;
+        padding: 10px 24px !important;
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+}
