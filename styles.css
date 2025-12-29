@@ -3712,28 +3712,43 @@ a:focus,
 }
 
 /* ============================================
-   MOBILE CARDS - MATCH DESKTOP LAYOUT
+   MOBILE CARDS - FIX 3D PERSPECTIVE & DISPLAY
    ============================================ */
 
 @media (max-width: 768px) {
-    /* Match desktop card behavior - auto height, no fixed constraints */
+    /* Remove 3D issues on mobile - prevents double background */
     .platform-card {
+        perspective: none !important;
         height: auto !important;
         min-height: fit-content !important;
     }
 
-    /* Card faces - match desktop proportions */
+    /* Flatten card inner - fix 3D transform issues */
+    .card-inner {
+        transform-style: flat !important;
+        height: auto !important;
+        min-height: 400px !important;
+    }
+
+    /* Card faces - relative positioning, visible backface */
     .card-front,
     .card-back {
+        position: relative !important;
+        backface-visibility: visible !important;
         padding: 24px !important;
         height: auto !important;
-        min-height: 360px !important;
+        min-height: 380px !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: space-around !important;
     }
 
-    /* Ensure all content visible - proper spacing */
+    /* Ensure no overflow cutting */
+    .horizontal-cards-grid {
+        overflow: visible !important;
+    }
+
+    /* Proper spacing for content */
     .platform-card img {
         margin: 16px auto !important;
     }
