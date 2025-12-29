@@ -3710,3 +3710,31 @@ a:focus,
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+
+/* ============================================
+   MOBILE CARDS - FULL CONTENT DISPLAY
+   ============================================ */
+
+@media (max-width: 768px) {
+    /* FIX: Show full card content without cutting */
+    .platform-card {
+        height: auto !important;
+        min-height: 400px !important;
+    }
+
+    /* FIX: Card faces - proper layout and spacing */
+    .card-front,
+    .card-back {
+        padding: 20px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        height: 100% !important;
+        min-height: 380px !important;
+    }
+
+    /* Ensure dark mode background works */
+    body:not([data-theme="light"]) {
+        background: #0a0a0a !important;
+    }
+}
