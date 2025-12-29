@@ -3787,9 +3787,26 @@ a:focus,
         z-index: 1 !important;
     }
 
-    /* Ensure no overflow cutting */
+    /* FIX: Enable horizontal carousel scrolling */
+    .horizontal-scroll-container {
+        overflow-x: auto !important;
+        overflow-y: visible !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+
     .horizontal-cards-grid {
-        overflow: visible !important;
+        display: flex !important;
+        overflow-x: auto !important;
+        overflow-y: visible !important;
+        scroll-snap-type: x mandatory !important;
+        -webkit-overflow-scrolling: touch !important;
+        /* Allow both horizontal scroll AND vertical page scroll */
+        touch-action: pan-x pan-y !important;
+    }
+
+    /* FIX: Allow page scroll when touching cards */
+    .platform-card {
+        touch-action: pan-x pan-y !important;
     }
 
     /* Proper spacing for content */
