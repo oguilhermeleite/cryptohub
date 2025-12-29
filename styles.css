@@ -3743,6 +3743,27 @@ a:focus,
         justify-content: space-around !important;
     }
 
+    /* FIX: Card back - hidden by default, no rotation inversion */
+    .card-back {
+        transform: rotateY(0deg) !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+
+    /* FIX: When flipped, hide front and show back */
+    .platform-card.flipped .card-front {
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+
+    .platform-card.flipped .card-back {
+        opacity: 1 !important;
+        pointer-events: auto !important;
+    }
+
     /* Ensure no overflow cutting */
     .horizontal-cards-grid {
         overflow: visible !important;
