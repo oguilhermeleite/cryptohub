@@ -3751,17 +3751,25 @@ a:focus,
         left: 0 !important;
         opacity: 0 !important;
         pointer-events: none !important;
+        transition: opacity 0.3s ease !important;
     }
 
-    /* FIX: When flipped, hide front and show back */
-    .platform-card.flipped .card-front {
-        opacity: 0 !important;
-        pointer-events: none !important;
+    /* FIX: Card front - smooth transition */
+    .card-front {
+        opacity: 1 !important;
+        transition: opacity 0.3s ease !important;
     }
 
+    /* FIX: When flipped - show back, hide front */
     .platform-card.flipped .card-back {
         opacity: 1 !important;
         pointer-events: auto !important;
+        z-index: 2 !important;
+    }
+
+    .platform-card.flipped .card-front {
+        opacity: 0 !important;
+        pointer-events: none !important;
     }
 
     /* Ensure no overflow cutting */
