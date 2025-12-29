@@ -3726,15 +3726,23 @@ a:focus,
     /* Flatten card inner - fix 3D transform issues */
     .card-inner {
         transform-style: flat !important;
+        transform: none !important;
         height: auto !important;
         min-height: 400px !important;
         position: relative !important;
+    }
+
+    /* CRITICAL: Prevent card-inner from rotating on mobile */
+    .platform-card.flipped .card-inner {
+        transform: none !important;
+        -webkit-transform: none !important;
     }
 
     /* Card front - default visible */
     .card-front {
         position: relative !important;
         backface-visibility: visible !important;
+        transform: none !important;
         padding: 24px !important;
         height: auto !important;
         min-height: 380px !important;
