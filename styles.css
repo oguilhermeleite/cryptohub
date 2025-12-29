@@ -3712,25 +3712,35 @@ a:focus,
 }
 
 /* ============================================
-   MOBILE CARDS - FULL CONTENT DISPLAY
+   MOBILE CARDS - MATCH DESKTOP LAYOUT
    ============================================ */
 
 @media (max-width: 768px) {
-    /* FIX: Show full card content without cutting */
+    /* Match desktop card behavior - auto height, no fixed constraints */
     .platform-card {
         height: auto !important;
-        min-height: 400px !important;
+        min-height: fit-content !important;
     }
 
-    /* FIX: Card faces - proper layout and spacing */
+    /* Card faces - match desktop proportions */
     .card-front,
     .card-back {
-        padding: 20px !important;
+        padding: 24px !important;
+        height: auto !important;
+        min-height: 360px !important;
         display: flex !important;
         flex-direction: column !important;
-        justify-content: space-between !important;
-        height: 100% !important;
-        min-height: 380px !important;
+        justify-content: space-around !important;
+    }
+
+    /* Ensure all content visible - proper spacing */
+    .platform-card img {
+        margin: 16px auto !important;
+    }
+
+    .platform-tags {
+        margin-top: 16px !important;
+        margin-bottom: 16px !important;
     }
 
     /* Ensure dark mode background works */
