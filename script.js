@@ -811,12 +811,18 @@ class CryptoAggregator {
             closeBtn: !!mobileMenuClose
         });
 
-        // Open mobile menu
+        // Toggle mobile menu (open/close)
         if (mobileMenuBtn) {
             mobileMenuBtn.addEventListener('click', (e) => {
                 e.preventDefault();
-                console.log('Opening mobile menu');
-                if (mobileMenuOverlay) {
+                const isOpen = mobileMenuOverlay && mobileMenuOverlay.classList.contains('active');
+
+                if (isOpen) {
+                    console.log('Closing mobile menu');
+                    mobileMenuOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                } else {
+                    console.log('Opening mobile menu');
                     mobileMenuOverlay.classList.add('active');
                     document.body.style.overflow = 'hidden';
                 }
@@ -831,6 +837,21 @@ class CryptoAggregator {
                 document.body.style.overflow = '';
             }
         };
+
+        // PRO Button Mobile - Show "Em breve" message
+        const mobileProButton = document.getElementById('mobileProButton');
+        const mobileProMessage = document.getElementById('mobileProMessage');
+
+        if (mobileProButton && mobileProMessage) {
+            mobileProButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                console.log('Mobile PRO button clicked');
+                mobileProMessage.classList.add('show');
+                setTimeout(() => {
+                    mobileProMessage.classList.remove('show');
+                }, 2000);
+            });
+        }
 
         // Close button - Multiple event types for maximum compatibility
         if (mobileMenuClose) {
