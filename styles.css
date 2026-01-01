@@ -576,9 +576,9 @@ img {
         width: 100%;
     }
 
-    /* Center carousels when they have few items that don't need scrolling - EXCEPT banks and cold-wallets */
-    section:not(#banks):not(#cold-wallets) .horizontal-cards-grid:has(.platform-card:only-child),
-    section:not(#banks):not(#cold-wallets) .horizontal-cards-grid:has(.platform-card:first-child:nth-last-child(-n+4)) {
+    /* Center carousels when they have few items that don't need scrolling - EXCEPT specified sections */
+    section:not(#banks):not(#cold-wallets):not(#p2p):not(#hot-wallets):not(#cards):not(#dexs):not(#bridges) .horizontal-cards-grid:has(.platform-card:only-child),
+    section:not(#banks):not(#cold-wallets):not(#p2p):not(#hot-wallets):not(#cards):not(#dexs):not(#bridges) .horizontal-cards-grid:has(.platform-card:first-child:nth-last-child(-n+4)) {
         justify-content: center;
         margin-left: auto;
         margin-right: auto;
