@@ -6,10 +6,10 @@
 
     // Mapping of platform names to DeFiLlama protocol slugs
     const DEFI_PROTOCOLS = {
-        'uniswap': 'parent#uniswap',
+        'uniswap': 'uniswap',
         'jupiter': 'jupiter-aggregator-v6',
         'meteora': 'meteora',
-        'pancakeswap': 'parent#pancakeswap'
+        'pancakeswap': 'pancakeswap'
     };
 
     // Cache duration: 5 minutes
