@@ -4,6 +4,8 @@
 (function() {
     'use strict';
 
+    console.log('DeFiLlama integration loaded');
+
     // Mapping of platform names to DeFiLlama protocol slugs
     const DEFI_PROTOCOLS = {
         'uniswap': 'uniswap',
@@ -39,6 +41,7 @@
             if (cached) {
                 const data = JSON.parse(cached);
                 if (Date.now() - data.timestamp < CACHE_DURATION) {
+                    console.log(`Using cached data for ${key}`);
                     return data.value;
                 }
             }
@@ -73,6 +76,8 @@
             return cached;
         }
 
+        console.log(`Fetching data for ${slug}...`);
+
         try {
             const response = await fetch(`https://api.llama.fi/protocol/${slug}`);
             if (!response.ok) {
@@ -80,11 +85,24 @@
             }
             const data = await response.json();
 
+            console.log(`Data received for ${slug}:`, data);
+
+            // Calculate TVL from currentChainTvls
+            let tvl = 0;
+            if (data.currentChainTvls) {
+                tvl = Object.values(data.currentChainTvls).reduce((sum, val) => {
+                    // Skip 'staking' entries
+                    return typeof val === 'number' ? sum + val : sum;
+                }, 0);
+            }
+
             // Extract relevant data
             const protocolData = {
-                tvl: data.currentChainTvls ? Object.values(data.currentChainTvls).reduce((a, b) => a + b, 0) : data.tvl || 0,
+                tvl: tvl || data.tvl || 0,
                 change24h: data.change_1d || 0
             };
+
+            console.log(`Processed data for ${slug}:`, protocolData);
 
             // Cache the data
             setCachedData(slug, protocolData);
@@ -100,10 +118,20 @@
      * Update DEX card with DeFiLlama data
      */
     function updateDexCard(platformName, data) {
-        if (!data) return;
+        if (!data) {
+            console.warn(`No data for ${platformName}`);
+            return;
+        }
+
+        console.log(`Updating card for ${platformName}`);
 
         const card = document.querySelector(`[data-platform="${platformName}"] .card-front .card-content`);
-        if (!card) return;
+        if (!card) {
+            console.error(`Card not found for ${platformName}`);
+            return;
+        }
+
+        console.log(`Card found for ${platformName}`, card);
 
         // Check if stats already exist
         let statsContainer = card.querySelector('.defi-stats');
@@ -127,17 +155,24 @@
                 <span class="stat-value ${change24hClass}">${change24hSymbol}${data.change24h.toFixed(2)}%</span>
             </div>
         `;
+
+        console.log(`Card updated for ${platformName}`);
     }
 
     /**
      * Initialize DeFiLlama integration for all DEX cards
      */
     async function initDeFiLlamaData() {
+        console.log('Initializing DeFiLlama data...');
+
         // Wait for DOM to be ready
         if (document.readyState === 'loading') {
+            console.log('DOM still loading, waiting...');
             document.addEventListener('DOMContentLoaded', initDeFiLlamaData);
             return;
         }
+
+        console.log('DOM ready, fetching data...');
 
         // Fetch data for all DEXs
         for (const [platformName, slug] of Object.entries(DEFI_PROTOCOLS)) {
@@ -150,6 +185,8 @@
                 console.error(`Error updating ${platformName}:`, error);
             }
         }
+
+        console.log('DeFiLlama integration complete');
     }
 
     // Initialize when DOM is ready
