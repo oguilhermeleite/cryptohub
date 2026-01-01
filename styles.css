@@ -576,6 +576,15 @@ img {
         width: 100%;
     }
 
+    /* Center carousels when they have few items that don't need scrolling - EXCEPT banks */
+    section:not(#banks) .horizontal-cards-grid:has(.platform-card:only-child),
+    section:not(#banks) .horizontal-cards-grid:has(.platform-card:first-child:nth-last-child(-n+4)) {
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+    }
+
     /* Ensure cards don't shrink on desktop */
     .platform-card {
         flex-shrink: 0;
@@ -601,8 +610,8 @@ img {
         overflow-x: scroll !important;
         overflow-y: hidden !important;
         justify-content: flex-start !important;
-        /* Increased padding to ensure last card is fully visible */
-        padding-right: 80vw !important;
+        /* Padding to show last card fully, then stop scrolling */
+        padding-right: calc(100vw - 530px) !important;
         scroll-behavior: smooth !important;
         -webkit-overflow-scrolling: touch !important;
         pointer-events: auto !important;
