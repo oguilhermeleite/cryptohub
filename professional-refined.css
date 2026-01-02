@@ -1,0 +1,810 @@
+/* ═══════════════════════════════════════════════════════════════
+   CRYPTO AGGREGATOR - PROFESSIONAL REFINED DESIGN
+   Premium fintech aesthetic with sophisticated polish
+   Inspired by: Apple, Stripe, Linear, Mercury
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   REFINED COLOR PALETTE - Professional Tones
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root {
+    /* Refined Professional Palette */
+    --emerald-50: #ecfdf5;
+    --emerald-100: #d1fae5;
+    --emerald-400: #34d399;
+    --emerald-500: #10b981;
+    --emerald-600: #059669;
+    --emerald-700: #047857;
+
+    --cyan-50: #ecfeff;
+    --cyan-100: #cffafe;
+    --cyan-400: #22d3ee;
+    --cyan-500: #06b6d4;
+    --cyan-600: #0891b2;
+
+    --violet-50: #f5f3ff;
+    --violet-100: #ede9fe;
+    --violet-400: #a78bfa;
+    --violet-500: #8b5cf6;
+    --violet-600: #7c3aed;
+
+    /* Neutral palette */
+    --slate-50: #f8fafc;
+    --slate-100: #f1f5f9;
+    --slate-200: #e2e8f0;
+    --slate-300: #cbd5e1;
+    --slate-400: #94a3b8;
+    --slate-500: #64748b;
+    --slate-600: #475569;
+    --slate-700: #334155;
+    --slate-800: #1e293b;
+    --slate-900: #0f172a;
+    --slate-950: #020617;
+}
+
+/* Dark theme refinement */
+:root {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #334155;
+    --bg-elevated: rgba(255, 255, 255, 0.05);
+
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-tertiary: #94a3b8;
+
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-medium: rgba(255, 255, 255, 0.12);
+    --border-strong: rgba(255, 255, 255, 0.18);
+
+    --accent-emerald: var(--emerald-500);
+    --accent-cyan: var(--cyan-500);
+    --accent-violet: var(--violet-500);
+
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+}
+
+/* Light theme */
+[data-theme="light"] {
+    --bg-primary: #ffffff;
+    --bg-secondary: var(--slate-50);
+    --bg-tertiary: var(--slate-100);
+    --bg-elevated: rgba(255, 255, 255, 0.9);
+
+    --text-primary: var(--slate-900);
+    --text-secondary: var(--slate-600);
+    --text-tertiary: var(--slate-500);
+
+    --border-subtle: rgba(15, 23, 42, 0.06);
+    --border-medium: rgba(15, 23, 42, 0.10);
+    --border-strong: rgba(15, 23, 42, 0.15);
+
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   TYPOGRAPHY - Professional & Refined
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.011em;
+}
+
+/* Display headings - DM Sans for elegance */
+h1, h2, h3,
+.hero-title,
+.section-title,
+.premium-hero-title {
+    font-family: 'DM Sans', 'Inter', sans-serif !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.03em !important;
+    line-height: 1.1 !important;
+}
+
+/* Accent font for special moments */
+.hero-subtitle,
+.premium-hero-subtitle {
+    font-family: 'Instrument Serif', 'Georgia', serif !important;
+    font-style: italic;
+    font-weight: 400 !important;
+    letter-spacing: 0.01em !important;
+}
+
+/* Platform names and card titles */
+.platform-name,
+.card-back-title,
+.modal-title {
+    font-family: 'DM Sans', sans-serif !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.02em !important;
+}
+
+/* Technical elements stay clean */
+.rating-badge,
+.kyc-badge,
+.tag {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 500 !important;
+    letter-spacing: -0.01em !important;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   BACKGROUND - Clean & Minimal (Remove Cyber Effects)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* Remove grid and scan line effects */
+body::after,
+body::before {
+    display: none !important;
+}
+
+body {
+    background: var(--bg-primary) !important;
+    background-image:
+        radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.05) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.05) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(6, 182, 212, 0.05) 0px, transparent 50%) !important;
+    background-attachment: fixed;
+}
+
+[data-theme="light"] body {
+    background: var(--bg-primary) !important;
+    background-image:
+        radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.03) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.03) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(6, 182, 212, 0.03) 0px, transparent 50%) !important;
+    background-attachment: fixed;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   HEADER - Refined Navigation
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.header {
+    background: rgba(15, 23, 42, 0.8) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    border-bottom: 1px solid var(--border-subtle) !important;
+    box-shadow: var(--shadow-sm) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="light"] .header {
+    background: rgba(255, 255, 255, 0.8) !important;
+    border-bottom-color: var(--border-medium) !important;
+}
+
+/* Logo - subtle elegance */
+.logo-text {
+    text-shadow: none !important;
+    background: linear-gradient(135deg, var(--emerald-500), var(--cyan-500));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.logo:hover .logo-text {
+    background: linear-gradient(135deg, var(--emerald-400), var(--cyan-400));
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.logo-svg {
+    filter: drop-shadow(0 2px 8px rgba(16, 185, 129, 0.2));
+    transition: filter 0.3s ease;
+}
+
+.logo:hover .logo-svg {
+    filter: drop-shadow(0 2px 12px rgba(16, 185, 129, 0.3));
+}
+
+/* Navigation - clean buttons */
+.nav-menu a {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 8px;
+    padding: 8px 16px;
+    background: transparent;
+}
+
+.nav-menu a::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--emerald-500), var(--cyan-500));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
+}
+
+.nav-menu a:hover::before {
+    opacity: 0.1;
+}
+
+.nav-menu a:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   HERO SECTION - Sophisticated Entrance
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.hero-section {
+    padding: 120px 0 80px;
+}
+
+.hero-title {
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: 700;
+    margin-bottom: 24px;
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gradient-text {
+    background: linear-gradient(
+        135deg,
+        var(--emerald-500) 0%,
+        var(--cyan-500) 50%,
+        var(--violet-500) 100%
+    ) !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    text-shadow: none !important;
+    filter: none !important;
+}
+
+.hero-subtitle {
+    font-size: clamp(18px, 2.5vw, 24px);
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+.hero-description {
+    font-size: clamp(16px, 2vw, 18px);
+    color: var(--text-tertiary);
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   PREMIUM HERO BANNER - Glassmorphism
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.premium-hero-banner {
+    background: var(--bg-elevated) !important;
+    backdrop-filter: blur(24px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+    border: 1px solid var(--border-medium) !important;
+    border-radius: 24px;
+    padding: 48px;
+    box-shadow: var(--shadow-xl) !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.premium-hero-banner::before {
+    display: none !important;
+}
+
+.premium-hero-banner:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-2xl) !important;
+    border-color: var(--border-strong) !important;
+}
+
+/* Premium logo - clean elevation */
+.premium-hero-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-medium) !important;
+    box-shadow: var(--shadow-lg) !important;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+.premium-hero-banner:hover .premium-hero-logo {
+    box-shadow: var(--shadow-xl) !important;
+    border-color: var(--border-strong) !important;
+}
+
+/* CTA button - refined gradient */
+.premium-cta-button {
+    background: linear-gradient(135deg, var(--emerald-500), var(--cyan-500)) !important;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 32px;
+    font-weight: 600;
+    font-size: 16px;
+    color: white !important;
+    box-shadow: var(--shadow-lg) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.premium-cta-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--emerald-400), var(--cyan-400));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.premium-cta-button:hover::before {
+    opacity: 1;
+}
+
+.premium-cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl) !important;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   SECTION TITLES - Refined Hierarchy
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.section-title {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    font-size: clamp(28px, 4vw, 40px);
+    margin-bottom: 48px;
+}
+
+.section-title::before,
+.section-title::after {
+    display: none !important;
+}
+
+.section-title span {
+    text-shadow: none !important;
+    background: linear-gradient(135deg, var(--emerald-500), var(--cyan-500));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: var(--text-tertiary);
+    margin-top: -40px;
+    margin-bottom: 40px;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   PLATFORM CARDS - Premium Glassmorphism
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.platform-card {
+    background: var(--bg-elevated) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    border: 1px solid var(--border-medium) !important;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: var(--shadow-lg) !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: cardFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes cardFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stagger */
+.platform-card:nth-child(1) { animation-delay: 0.05s; }
+.platform-card:nth-child(2) { animation-delay: 0.1s; }
+.platform-card:nth-child(3) { animation-delay: 0.15s; }
+.platform-card:nth-child(4) { animation-delay: 0.2s; }
+.platform-card:nth-child(5) { animation-delay: 0.25s; }
+.platform-card:nth-child(6) { animation-delay: 0.3s; }
+
+/* Remove holographic effect */
+.platform-card::before {
+    display: none !important;
+}
+
+.platform-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-2xl) !important;
+    border-color: var(--border-strong) !important;
+}
+
+/* Platform logo - refined */
+.platform-logo {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle) !important;
+    box-shadow: var(--shadow-md) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+.platform-card:hover .platform-logo {
+    box-shadow: var(--shadow-lg) !important;
+    border-color: var(--border-medium) !important;
+}
+
+/* Rating badge - elegant */
+.rating-badge {
+    background: linear-gradient(135deg, var(--emerald-500), var(--cyan-500)) !important;
+    border: none !important;
+    border-radius: 8px;
+    padding: 6px 12px;
+    box-shadow: var(--shadow-md) !important;
+    text-shadow: none !important;
+    color: white !important;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* KYC badges - refined colors */
+.kyc-badge {
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: var(--shadow-sm);
+}
+
+.kyc-free {
+    background: rgba(16, 185, 129, 0.1) !important;
+    border: 1px solid var(--emerald-500) !important;
+    color: var(--emerald-500) !important;
+    text-shadow: none !important;
+}
+
+.kyc-required {
+    background: rgba(251, 146, 60, 0.1) !important;
+    border: 1px solid #fb923c !important;
+    color: #fb923c !important;
+    text-shadow: none !important;
+}
+
+/* Tags - minimalist */
+.tag {
+    background: var(--bg-elevated) !important;
+    border: 1px solid var(--border-subtle) !important;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-secondary) !important;
+    text-shadow: none !important;
+    transition: all 0.2s ease;
+}
+
+.tag:hover {
+    background: var(--bg-tertiary) !important;
+    border-color: var(--border-medium) !important;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   CARD BACK - Refined CTAs
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.card-btn-primary {
+    background: linear-gradient(135deg, var(--emerald-500), var(--cyan-500)) !important;
+    border: none !important;
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-weight: 600;
+    color: white !important;
+    box-shadow: var(--shadow-md) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-btn-primary::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--emerald-400), var(--cyan-400));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-btn-primary:hover::after {
+    opacity: 1;
+}
+
+.card-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg) !important;
+}
+
+.card-btn-secondary {
+    background: transparent !important;
+    border: 1px solid var(--border-medium) !important;
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-weight: 500;
+    color: var(--text-secondary) !important;
+    transition: all 0.3s ease;
+}
+
+.card-btn-secondary:hover {
+    background: var(--bg-elevated) !important;
+    border-color: var(--border-strong) !important;
+    color: var(--text-primary) !important;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   CAROUSEL CONTROLS - Minimalist
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.carousel-arrow {
+    width: 40px;
+    height: 40px;
+    background: var(--bg-elevated) !important;
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border-medium) !important;
+    border-radius: 10px;
+    color: var(--text-primary) !important;
+    box-shadow: var(--shadow-md) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-arrow:hover {
+    background: var(--bg-tertiary) !important;
+    border-color: var(--border-strong) !important;
+    transform: scale(1.05);
+    box-shadow: var(--shadow-lg) !important;
+}
+
+.scroll-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--border-medium) !important;
+    border: none !important;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.scroll-dot.active {
+    background: linear-gradient(135deg, var(--emerald-500), var(--cyan-500)) !important;
+    width: 24px;
+    border-radius: 4px;
+    box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   BUTTONS - Professional Polish
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.theme-btn, .lang-btn {
+    background: var(--bg-elevated) !important;
+    border: 1px solid var(--border-subtle) !important;
+    border-radius: 8px;
+    padding: 8px 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-btn::before,
+.lang-btn::before {
+    display: none !important;
+}
+
+.theme-btn:hover,
+.lang-btn:hover {
+    background: var(--bg-tertiary) !important;
+    border-color: var(--border-medium) !important;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.lang-btn.active {
+    background: linear-gradient(135deg, var(--emerald-500), var(--cyan-500)) !important;
+    color: white !important;
+    border-color: transparent !important;
+}
+
+/* Connect and PRO buttons */
+.connect-button, .pro-button,
+.mobile-connect-button, .mobile-pro-button {
+    background: linear-gradient(135deg, var(--violet-500), var(--violet-600)) !important;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 600;
+    color: white !important;
+    box-shadow: var(--shadow-md) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.connect-button:hover, .pro-button:hover,
+.mobile-connect-button:hover, .mobile-pro-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg) !important;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   PREMIUM ELEMENTS - Refined Versions
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* Trust badges - professional */
+.trust-badge {
+    background: var(--bg-elevated) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid var(--border-medium) !important;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg) !important;
+}
+
+.trust-badge::before {
+    display: none !important;
+}
+
+.trust-badge:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl) !important;
+    border-color: var(--border-strong) !important;
+}
+
+.badge-title {
+    color: var(--text-primary) !important;
+    text-shadow: none !important;
+}
+
+.badge-icon {
+    filter: none !important;
+    font-size: 42px;
+}
+
+/* FAB - refined */
+.fab-button {
+    background: linear-gradient(135deg, var(--emerald-500), var(--cyan-500)) !important;
+    box-shadow: var(--shadow-xl) !important;
+}
+
+.fab-button:hover {
+    box-shadow: var(--shadow-2xl) !important;
+}
+
+.fab-menu-item {
+    background: var(--bg-elevated) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid var(--border-medium) !important;
+    box-shadow: var(--shadow-lg) !important;
+}
+
+/* Toast - refined */
+.toast {
+    background: var(--bg-elevated) !important;
+    backdrop-filter: blur(24px) saturate(180%) !important;
+    border: 1px solid var(--border-medium) !important;
+    border-radius: 12px;
+    box-shadow: var(--shadow-xl) !important;
+}
+
+.toast-title {
+    text-shadow: none !important;
+}
+
+/* Modal - glassmorphism */
+.premium-modal {
+    background: var(--bg-elevated) !important;
+    backdrop-filter: blur(32px) saturate(200%) !important;
+    border: 1px solid var(--border-medium) !important;
+    border-radius: 24px;
+    box-shadow: var(--shadow-2xl) !important;
+}
+
+.premium-modal::before {
+    display: none !important;
+}
+
+.premium-modal-title {
+    color: var(--text-primary) !important;
+    text-shadow: none !important;
+}
+
+/* Tooltips - minimal */
+[data-tech-tooltip]::before {
+    background: var(--bg-elevated) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid var(--border-medium) !important;
+    box-shadow: var(--shadow-lg) !important;
+    text-shadow: none !important;
+    color: var(--text-primary) !important;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   RESPONSIVE REFINEMENTS
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 80px 0 60px;
+    }
+
+    .premium-hero-banner {
+        padding: 32px 24px;
+        border-radius: 20px;
+    }
+
+    .section-title {
+        margin-bottom: 32px;
+    }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   SMOOTH MICRO-INTERACTIONS
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* Smooth all transitions */
+* {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Focus states - accessible and beautiful */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 2px solid var(--emerald-500);
+    outline-offset: 2px;
+}
+
+/* Selection colors */
+::selection {
+    background: rgba(16, 185, 129, 0.2);
+    color: var(--text-primary);
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   END OF PROFESSIONAL REFINED DESIGN
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */

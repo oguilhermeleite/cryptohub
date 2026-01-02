@@ -23,6 +23,8 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com;">
 
     <link rel="stylesheet" href="styles.css?v=20241127-viewport-center">
+    <link rel="stylesheet" href="professional-refined.css?v=refined-2026">
+    <link rel="stylesheet" href="premium-elements.css?v=premium-2026">
     <!-- Preconnect para melhorar performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1941,6 +1943,22 @@
         </div>
     </section>
 
+    <!-- ═══════════════════════════════════════════════════════
+         FLOATING ACTION BUTTON (FAB) - Premium Element
+         ═══════════════════════════════════════════════════════ -->
+    <div class="fab-container">
+        <button class="fab-button" aria-label="Menu de ações rápidas">
+            ⚡
+        </button>
+        <div class="fab-menu">
+            <button class="fab-menu-item" data-action="theme" data-tooltip="Alterar Tema">🌙</button>
+            <button class="fab-menu-item" data-action="share" data-tooltip="Compartilhar">📤</button>
+            <button class="fab-menu-item" data-action="favorites" data-tooltip="Favoritos">⭐</button>
+            <button class="fab-menu-item" data-action="settings" data-tooltip="Config">⚙️</button>
+            <button class="fab-menu-item" data-action="help" data-tooltip="Ajuda">❓</button>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -1979,5 +1997,7 @@
     <script src="performance.js?v=20241126" defer></script>
     <!-- DeFiLlama Integration -->
     <script src="js/defillama.js?v=20260101"></script>
+    <!-- Premium Elements System -->
+    <script src="premium-elements.js?v=premium-2026"></script>
 </body>
 </html>
