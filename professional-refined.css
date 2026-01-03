@@ -806,5 +806,32 @@ input:focus-visible {
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   SCROLL FIX - Prevent cards from blocking page scroll
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* Prevent cards from capturing scroll events on desktop */
+.platform-card {
+    pointer-events: auto;
+}
+
+.platform-card * {
+    pointer-events: auto;
+}
+
+/* Allow page scroll to pass through */
+body, html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.platforms-grid {
+    pointer-events: none;
+}
+
+.platform-card {
+    pointer-events: auto;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    END OF PROFESSIONAL REFINED DESIGN
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
