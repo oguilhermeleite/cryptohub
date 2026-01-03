@@ -806,30 +806,19 @@ input:focus-visible {
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   SCROLL FIX - Prevent cards from blocking page scroll
+   SCROLL FIX - Smooth scroll without white scrollbar
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 
-/* Prevent cards from capturing scroll events on desktop */
-.platform-card {
-    pointer-events: auto;
+/* Ensure page scrolls smoothly */
+body {
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
-.platform-card * {
-    pointer-events: auto;
-}
-
-/* Allow page scroll to pass through */
-body, html {
-    overflow-y: scroll;
+/* Remove forced scrollbar */
+html {
+    overflow-y: auto !important;
     scroll-behavior: smooth;
-}
-
-.platforms-grid {
-    pointer-events: none;
-}
-
-.platform-card {
-    pointer-events: auto;
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
