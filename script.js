@@ -5,7 +5,7 @@ class CryptoAggregator {
         this.currentLang = this.getStoredLanguage() || 'pt';
         this.translations = {
             pt: {
-                'hero-title': 'Sua entrada e saída para o mundo cripto',
+                'hero-title': 'Sua porta de entrada e saída para o mundo cripto',
                 'hero-slogan': 'O Primeiro Agregador On-Ramp e Off-Ramp do Mercado',
                 'hero-subtitle': 'Encontre a melhor forma de comprar, vender e usar criptomoedas com segurança.',
                 'hero-cta': 'Começar Agora',
@@ -39,7 +39,7 @@ class CryptoAggregator {
                 'visit-site': 'Visitar Site',
                 'follow-on-x': 'Seguir no X',
                 'back': 'Voltar',
-                'footer-desc': 'Sua entrada e saída para o mundo cripto',
+                'footer-desc': 'Sua porta de entrada e saída para o mundo cripto',
                 'footer-services': 'Serviços',
                 'footer-rights': 'Todos os direitos reservados.',
                 'coming-soon': 'Em breve',

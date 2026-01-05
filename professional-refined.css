@@ -858,18 +858,25 @@ input:focus-visible {
 /* Featured cards grid - 3 columns responsive */
 .featured-cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 32px;
-    max-width: 1200px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 40px 20px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
 /* Featured card - larger than normal */
 .featured-card {
+    width: 100%;
+    max-width: 380px;
     min-height: 380px;
+    margin: 0 auto;
     transform-origin: center;
     position: relative;
+}
+
+.featured-section .platform-card {
+    margin: 0;
 }
 
 /* Featured badge - top ribbon */
@@ -972,11 +979,12 @@ input:focus-visible {
     .featured-cards-grid {
         grid-template-columns: 1fr;
         gap: 24px;
-        padding: 0 16px;
+        padding: 24px 16px;
     }
 
     .featured-card {
         min-height: 360px;
+        max-width: 100%;
     }
 
     .featured-card .platform-logo {
