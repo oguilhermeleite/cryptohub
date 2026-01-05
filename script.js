@@ -5,7 +5,7 @@ class CryptoAggregator {
         this.currentLang = this.getStoredLanguage() || 'pt';
         this.translations = {
             pt: {
-                'hero-title': 'Sua porta de entrada completa para o Mundo Cripto',
+                'hero-title': 'Sua entrada e saída para o mundo cripto',
                 'hero-slogan': 'O Primeiro Agregador On-Ramp e Off-Ramp do Mercado',
                 'hero-subtitle': 'Encontre a melhor forma de comprar, vender e usar criptomoedas com segurança.',
                 'hero-cta': 'Começar Agora',
@@ -39,7 +39,7 @@ class CryptoAggregator {
                 'visit-site': 'Visitar Site',
                 'follow-on-x': 'Seguir no X',
                 'back': 'Voltar',
-                'footer-desc': 'Sua porta de entrada completa para o mundo cripto',
+                'footer-desc': 'Sua entrada e saída para o mundo cripto',
                 'footer-services': 'Serviços',
                 'footer-rights': 'Todos os direitos reservados.',
                 'coming-soon': 'Em breve',
@@ -48,7 +48,7 @@ class CryptoAggregator {
                 'all-platforms-hero-subtitle': 'Explore todas as opções disponíveis no mercado cripto'
             },
             en: {
-                'hero-title': 'Your complete gateway to the Crypto World',
+                'hero-title': 'Your gateway in and out of the crypto world',
                 'hero-slogan': 'The First On-Ramp and Off-Ramp Aggregator in the Market',
                 'hero-subtitle': 'Find the best way to buy, sell and use cryptocurrencies safely.',
                 'hero-cta': 'Get Started',
@@ -82,7 +82,7 @@ class CryptoAggregator {
                 'visit-site': 'Visit Site',
                 'follow-on-x': 'Follow on X',
                 'back': 'Back',
-                'footer-desc': 'Your complete gateway to the crypto world',
+                'footer-desc': 'Your gateway in and out of the crypto world',
                 'footer-services': 'Services',
                 'footer-rights': 'All rights reserved.',
                 'coming-soon': 'Coming soon',
