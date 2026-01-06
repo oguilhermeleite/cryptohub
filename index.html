@@ -353,6 +353,12 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Featured Navigation Arrows -->
+            <div class="featured-navigation">
+                <button class="featured-arrow featured-arrow-left" aria-label="Anterior">◄</button>
+                <button class="featured-arrow featured-arrow-right" aria-label="Próximo">►</button>
+            </div>
         </div>
     </section>
 
@@ -2082,5 +2088,25 @@
     <script src="js/defillama.js?v=20260101"></script>
     <!-- Premium Elements System -->
     <script src="premium-elements.js?v=premium-2026"></script>
+
+    <!-- Featured Carousel Navigation Script -->
+    <script>
+        // Add carousel scroll functionality for featured section
+        document.addEventListener('DOMContentLoaded', () => {
+            const featuredGrid = document.querySelector('.featured-cards-grid');
+            const leftArrow = document.querySelector('.featured-arrow-left');
+            const rightArrow = document.querySelector('.featured-arrow-right');
+
+            if (leftArrow && rightArrow && featuredGrid) {
+                leftArrow.addEventListener('click', () => {
+                    featuredGrid.scrollBy({ left: -400, behavior: 'smooth' });
+                });
+
+                rightArrow.addEventListener('click', () => {
+                    featuredGrid.scrollBy({ left: 400, behavior: 'smooth' });
+                });
+            }
+        });
+    </script>
 </body>
 </html>
