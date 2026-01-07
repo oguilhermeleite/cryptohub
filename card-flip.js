@@ -18,44 +18,62 @@ console.log('🎴 Card Flip JS Loading...');
         console.log('🎴 Card Flip System Initialized');
         console.log('📦 Total platform cards found:', document.querySelectorAll('.platform-card').length);
 
-        // Add click listener to document - USE BUBBLE PHASE (not capture)
-        document.addEventListener('click', function(e) {
-            // Check if click was on a button or link FIRST
-            const isButton = e.target.closest('.card-btn-primary') ||
-                           e.target.closest('.card-btn-secondary') ||
-                           e.target.closest('a') ||
-                           e.target.closest('button');
+        // Add click listener to EACH CARD individually
+        document.querySelectorAll('.platform-card').forEach(card => {
+            // Handle card flip
+            card.addEventListener('click', function(e) {
+                // Check if click was on a button, link, or inside card-back-buttons
+                const isInsideButtons = e.target.closest('.card-back-buttons');
+                const isButton = e.target.closest('.card-btn-primary') ||
+                               e.target.closest('.card-btn-secondary') ||
+                               e.target.closest('a') ||
+                               e.target.closest('button');
 
-            if (isButton) {
-                console.log('🔘 Click was on button/link - allowing default action');
-                return; // Let the button/link work normally
+                if (isButton || isInsideButtons) {
+                    console.log('🔘 Click was on button/link - NOT flipping card');
+                    e.stopPropagation(); // Stop the event from propagating
+                    return;
+                }
+
+                console.log('🖱️ Click detected on card:', card.getAttribute('data-platform'));
+
+                // Toggle the flipped state
+                const wasFlipped = card.classList.contains('flipped');
+                card.classList.toggle('flipped');
+
+                console.log('🔄 Card', card.getAttribute('data-platform'),
+                           wasFlipped ? 'flipped BACK to front' : 'flipped TO back');
+
+                // Log the card-inner transform
+                const cardInner = card.querySelector('.card-inner');
+                if (cardInner) {
+                    const transform = window.getComputedStyle(cardInner).transform;
+                    console.log('📐 Card-inner transform:', transform);
+                }
+            });
+
+            // Handle "Voltar" button
+            const backButton = card.querySelector('.card-btn-back');
+            if (backButton) {
+                backButton.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    card.classList.remove('flipped');
+                    console.log('⬅️ Voltar button clicked - flipping card back');
+                });
             }
 
-            // Find if click was on or inside a platform card
-            const card = e.target.closest('.platform-card');
-
-            if (!card) {
-                return; // Click was not on a card
-            }
-
-            console.log('🖱️ Click detected on card:', card.getAttribute('data-platform'));
-
-            // Toggle the flipped state
-            const wasFlipped = card.classList.contains('flipped');
-            card.classList.toggle('flipped');
-            const isFlipped = card.classList.contains('flipped');
-
-            console.log('🔄 Card', card.getAttribute('data-platform'),
-                       wasFlipped ? 'flipped BACK to front' : 'flipped TO back');
-
-            // Log the card-inner transform
-            const cardInner = card.querySelector('.card-inner');
-            if (cardInner) {
-                const transform = window.getComputedStyle(cardInner).transform;
-                console.log('📐 Card-inner transform:', transform);
-            }
-
-        }, false); // Use BUBBLE phase to allow buttons to work
+            // Handle tracking for primary links
+            const primaryLinks = card.querySelectorAll('a[data-track]');
+            primaryLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const trackData = this.getAttribute('data-track');
+                    if (trackData && typeof trackPlatformClick === 'function') {
+                        const [platform, category] = trackData.split('|');
+                        trackPlatformClick(platform, category);
+                    }
+                });
+            });
+        });
 
         // ESC key to flip all cards back
         document.addEventListener('keydown', function(e) {
