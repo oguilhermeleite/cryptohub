@@ -1,0 +1,190 @@
+/* ============================================
+   NUCLEAR FIX: Remove ALL Click Blockers
+   This file MUST be loaded LAST
+   ============================================ */
+
+/* CRITICAL: Remove transform-style that breaks clicks */
+.platform-card,
+.featured-card,
+.card-inner {
+  transform-style: flat !important;
+  -webkit-transform-style: flat !important;
+}
+
+/* CRITICAL: card-inner must allow clicks through */
+.card-inner {
+  pointer-events: auto !important;
+}
+
+/* CRITICAL: Both faces must be clickable */
+.card-front,
+.card-back {
+  pointer-events: auto !important;
+  backface-visibility: hidden !important;
+  -webkit-backface-visibility: hidden !important;
+}
+
+/* ============================================
+   DESKTOP: Hover to flip
+   ============================================ */
+
+@media (min-width: 769px) {
+  /* Default state - show front */
+  .platform-card .card-inner {
+    transform: rotateY(0deg);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .platform-card .card-front {
+    opacity: 1;
+    z-index: 2;
+    pointer-events: auto !important;
+  }
+
+  .platform-card .card-back {
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none !important;
+  }
+
+  /* Hover state - show back */
+  .platform-card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .platform-card:hover .card-front {
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none !important;
+  }
+
+  .platform-card:hover .card-back {
+    opacity: 1;
+    z-index: 2;
+    pointer-events: auto !important;
+  }
+
+  /* Featured cards - same behavior */
+  .featured-card .card-inner {
+    transform: rotateY(0deg);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .featured-card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .featured-card:hover .card-front {
+    opacity: 0;
+    pointer-events: none !important;
+  }
+
+  .featured-card:hover .card-back {
+    opacity: 1;
+    pointer-events: auto !important;
+  }
+}
+
+/* ============================================
+   MOBILE: Click to flip
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* Default state - show front */
+  .platform-card .card-inner {
+    transform: rotateY(0deg);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .platform-card .card-front {
+    opacity: 1;
+    z-index: 2;
+    pointer-events: auto !important;
+  }
+
+  .platform-card .card-back {
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none !important;
+  }
+
+  /* Flipped state - show back */
+  .platform-card.flipped .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .platform-card.flipped .card-front {
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none !important;
+  }
+
+  .platform-card.flipped .card-back {
+    opacity: 1;
+    z-index: 2;
+    pointer-events: auto !important;
+  }
+
+  /* Featured cards */
+  .featured-card.flipped .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .featured-card.flipped .card-front {
+    opacity: 0;
+    pointer-events: none !important;
+  }
+
+  .featured-card.flipped .card-back {
+    opacity: 1;
+    pointer-events: auto !important;
+  }
+}
+
+/* ============================================
+   FORCE ALL BUTTONS TO BE CLICKABLE
+   ============================================ */
+
+.card-back {
+  pointer-events: auto !important;
+  z-index: 10 !important;
+}
+
+.card-back a,
+.card-back button,
+.card-back .card-btn-primary,
+.card-back .card-btn-secondary,
+.card-back .btn-visit,
+.card-back .btn-social,
+.card-back .btn-back,
+.card-back .card-btn-back,
+.card-back .card-back-buttons,
+.card-back .card-back-buttons a,
+.card-back .card-back-buttons button {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  z-index: 99999 !important;
+  position: relative !important;
+  display: flex !important;
+}
+
+/* Featured cards */
+.featured-card .card-back,
+.featured-card .card-back a,
+.featured-card .card-back button {
+  pointer-events: auto !important;
+  z-index: 99999 !important;
+}
+
+/* ============================================
+   ENSURE FRONT FACE DOESN'T BLOCK
+   ============================================ */
+
+.platform-card:hover .card-front,
+.platform-card.flipped .card-front,
+.featured-card:hover .card-front,
+.featured-card.flipped .card-front {
+  pointer-events: none !important;
+  z-index: -1 !important;
+  opacity: 0 !important;
+}
