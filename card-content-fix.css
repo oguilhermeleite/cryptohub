@@ -1,0 +1,112 @@
+/* ============================================
+   EMERGENCY FIX: Ensure All Card Content Visible
+   ============================================ */
+
+/* FORCE all card content to be visible */
+.card-front *,
+.card-back * {
+  visibility: visible !important;
+}
+
+/* FORCE logos to show */
+.platform-logo,
+.platform-logo img,
+.card-back-logo {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* FORCE card content containers to show */
+.card-content,
+.card-back-header,
+.card-back-buttons {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* FORCE text content to show */
+.platform-name,
+.card-back-title,
+.card-back-description {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* FORCE buttons to show */
+.card-btn-primary,
+.card-btn-secondary,
+.btn-visit,
+.btn-social,
+.btn-back,
+.card-back-buttons a,
+.card-back-buttons button {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* FORCE platform tags to show */
+.platform-tags,
+.platform-tags .tag {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* FORCE rating and KYC badges to show */
+.rating-badge,
+.kyc-badge {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Fix: backface-visibility must be HIDDEN so back faces don't show */
+.card-front,
+.card-back {
+  backface-visibility: hidden !important;
+  -webkit-backface-visibility: hidden !important;
+}
+
+/* Fix: Ensure card-front is visible when NOT flipped/hovered */
+.platform-card:not(:hover):not(.flipped) .card-front,
+.featured-card:not(:hover):not(.flipped) .card-front {
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 2 !important;
+  pointer-events: auto !important;
+}
+
+/* Fix: Ensure card-back is hidden when NOT flipped/hovered */
+.platform-card:not(:hover):not(.flipped) .card-back,
+.featured-card:not(:hover):not(.flipped) .card-back {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+}
+
+/* Fix: Ensure card-back is visible when flipped/hovered */
+.platform-card:hover .card-back,
+.platform-card.flipped .card-back,
+.featured-card:hover .card-back,
+.featured-card.flipped .card-back {
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 2 !important;
+  pointer-events: auto !important;
+}
+
+/* Fix: Ensure card-front is hidden when flipped/hovered */
+.platform-card:hover .card-front,
+.platform-card.flipped .card-front,
+.featured-card:hover .card-front,
+.featured-card.flipped .card-front {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+}
