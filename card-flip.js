@@ -16,49 +16,58 @@ console.log('🎴 Card Flip JS Loading...');
 
     function initCardFlip() {
         console.log('🎴 Card Flip System Initialized');
-        console.log('📦 Total platform cards found:', document.querySelectorAll('.platform-card').length);
 
-        // Add click listener to EACH CARD individually
-        document.querySelectorAll('.platform-card').forEach(card => {
-            // Handle card flip
-            card.addEventListener('click', function(e) {
-                // Check if click was on a button, link, or inside card-back-buttons
-                const isInsideButtons = e.target.closest('.card-back-buttons');
-                const isButton = e.target.closest('.card-btn-primary') ||
-                               e.target.closest('.card-btn-secondary') ||
-                               e.target.closest('a') ||
-                               e.target.closest('button');
+        const cards = document.querySelectorAll('.platform-card');
+        console.log('📦 Total platform cards found:', cards.length);
 
-                if (isButton || isInsideButtons) {
-                    console.log('🔘 Click was on button/link - NOT flipping card');
-                    e.stopPropagation(); // Stop the event from propagating
-                    return;
-                }
+        // Prevent duplicate initialization
+        if (window.cardFlipInitialized) {
+            console.log('⚠️ Card flip already initialized, skipping');
+            return;
+        }
+        window.cardFlipInitialized = true;
 
-                console.log('🖱️ Click detected on card:', card.getAttribute('data-platform'));
+        cards.forEach((card, index) => {
+            console.log(`🎴 Setting up card ${index + 1}:`, card.getAttribute('data-platform'));
 
-                // Toggle the flipped state
-                const wasFlipped = card.classList.contains('flipped');
-                card.classList.toggle('flipped');
+            // Add click listener to card-front and card-back separately
+            const cardFront = card.querySelector('.card-front');
+            const cardBack = card.querySelector('.card-back');
 
-                console.log('🔄 Card', card.getAttribute('data-platform'),
-                           wasFlipped ? 'flipped BACK to front' : 'flipped TO back');
+            // Click on FRONT flips the card
+            if (cardFront) {
+                cardFront.addEventListener('click', function(e) {
+                    console.log('👆 Click on FRONT - flipping to back');
+                    card.classList.add('flipped');
+                });
+            }
 
-                // Log the card-inner transform
-                const cardInner = card.querySelector('.card-inner');
-                if (cardInner) {
-                    const transform = window.getComputedStyle(cardInner).transform;
-                    console.log('📐 Card-inner transform:', transform);
-                }
-            });
+            // Click on BACK (but not on buttons) flips back
+            if (cardBack) {
+                cardBack.addEventListener('click', function(e) {
+                    // Check if click was on a button or link
+                    const clickedElement = e.target;
+                    const isLink = clickedElement.tagName === 'A' || clickedElement.closest('a');
+                    const isButton = clickedElement.tagName === 'BUTTON' || clickedElement.closest('button');
 
-            // Handle "Voltar" button
+                    if (isLink || isButton) {
+                        console.log('🔗 Click on link/button - NOT flipping, allowing default action');
+                        return; // Let the link/button work normally
+                    }
+
+                    console.log('👆 Click on BACK area - flipping to front');
+                    card.classList.remove('flipped');
+                });
+            }
+
+            // Handle "Voltar" button specifically
             const backButton = card.querySelector('.card-btn-back');
             if (backButton) {
                 backButton.addEventListener('click', function(e) {
                     e.stopPropagation();
+                    e.preventDefault();
+                    console.log('⬅️ Voltar button clicked');
                     card.classList.remove('flipped');
-                    console.log('⬅️ Voltar button clicked - flipping card back');
                 });
             }
 
@@ -66,11 +75,22 @@ console.log('🎴 Card Flip JS Loading...');
             const primaryLinks = card.querySelectorAll('a[data-track]');
             primaryLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
+                    e.stopPropagation(); // Prevent card flip
                     const trackData = this.getAttribute('data-track');
                     if (trackData && typeof trackPlatformClick === 'function') {
                         const [platform, category] = trackData.split('|');
                         trackPlatformClick(platform, category);
                     }
+                    console.log('📊 Tracked click on:', trackData);
+                });
+            });
+
+            // Handle all other links (Twitter, etc)
+            const allLinks = card.querySelectorAll('.card-back a');
+            allLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.stopPropagation(); // Prevent card flip
+                    console.log('🔗 Link clicked:', this.href);
                 });
             });
         });
