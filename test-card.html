@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Card Back - Debug</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="professional-refined.css">
+    <link rel="stylesheet" href="premium-elements.css">
+    <link rel="stylesheet" href="card-buttons-fix.css">
+    <link rel="stylesheet" href="card-back-redesign.css">
+    <link rel="stylesheet" href="card-content-fix.css">
+    <link rel="stylesheet" href="card-fix-nuclear.css">
+    <link rel="stylesheet" href="card-back-force-visible.css">
+    <style>
+        body {
+            background: #0a0a0f;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .test-container {
+            max-width: 400px;
+        }
+        .debug-info {
+            background: #1a1a1a;
+            color: #00f5a0;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            font-family: monospace;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <div class="debug-info">
+            <h3>🔍 DEBUG - Teste de Card</h3>
+            <p>1. Passe o mouse sobre o card (Desktop)</p>
+            <p>2. Clique no card (Mobile)</p>
+            <p>3. Verifique se o VERSO aparece com:</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>✓ Logo da plataforma</li>
+                <li>✓ Nome da plataforma</li>
+                <li>✓ Descrição completa</li>
+                <li>✓ Botão "Site Oficial"</li>
+                <li>✓ Botão "X / Twitter"</li>
+                <li>✓ Botão "Voltar"</li>
+            </ul>
+        </div>
+
+        <!-- Test Card -->
+        <div class="platform-card featured-card" data-platform="test-card">
+            <div class="card-inner">
+                <!-- Front Face -->
+                <div class="card-front">
+                    <div class="rating-badge">
+                        <span class="stars">⭐⭐⭐⭐⭐</span>
+                        <span class="score">5.0</span>
+                    </div>
+                    <div class="kyc-badge kyc-free">SEM KYC</div>
+                    <div class="card-content">
+                        <div class="platform-logo">
+                            <img src="https://logo.clearbit.com/binance.com" alt="Test Platform" loading="lazy">
+                        </div>
+                        <h4 class="platform-name">Test Platform</h4>
+                        <div class="platform-tags">
+                            <span class="tag">TESTE</span>
+                            <span class="tag">DEBUG</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Back Face -->
+                <div class="card-back">
+                    <div class="card-back-header">
+                        <h3 class="card-back-title">Test Platform</h3>
+                        <p class="card-back-description">Esta é uma descrição de teste para verificar se o conteúdo do verso do card está aparecendo corretamente. Se você está vendo este texto, o card-back está funcionando!</p>
+                    </div>
+                    <div class="card-back-buttons">
+                        <a href="https://binance.com" target="_blank" rel="noopener noreferrer" class="card-btn-primary">
+                            🌐 Site Oficial
+                        </a>
+                        <a href="https://twitter.com/binance" target="_blank" rel="noopener noreferrer" class="card-btn-secondary">
+                            🐦 X / Twitter
+                        </a>
+                        <button class="card-btn-secondary card-btn-back">
+                            ⬅️ Voltar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="card-flip.js?v=20250107-BUTTONS-WORKING"></script>
+    <script>
+        // Debug: Log when card is clicked/hovered
+        const card = document.querySelector('.platform-card');
+
+        card.addEventListener('mouseenter', () => {
+            console.log('🖱️ Mouse ENTROU no card');
+        });
+
+        card.addEventListener('mouseleave', () => {
+            console.log('🖱️ Mouse SAIU do card');
+        });
+
+        // Debug: Check if card-back content exists
+        const cardBack = document.querySelector('.card-back');
+        const cardBackTitle = document.querySelector('.card-back-title');
+        const cardBackDescription = document.querySelector('.card-back-description');
+        const cardBackButtons = document.querySelector('.card-back-buttons');
+
+        console.log('=== DEBUG INFO ===');
+        console.log('Card Back exists:', !!cardBack);
+        console.log('Title exists:', !!cardBackTitle);
+        console.log('Title text:', cardBackTitle?.textContent);
+        console.log('Description exists:', !!cardBackDescription);
+        console.log('Description text:', cardBackDescription?.textContent);
+        console.log('Buttons container exists:', !!cardBackButtons);
+        console.log('Number of buttons:', cardBackButtons?.children.length);
+
+        // Check CSS properties
+        if (cardBack) {
+            const styles = window.getComputedStyle(cardBack);
+            console.log('=== CARD BACK CSS ===');
+            console.log('Display:', styles.display);
+            console.log('Visibility:', styles.visibility);
+            console.log('Opacity:', styles.opacity);
+            console.log('Transform:', styles.transform);
+            console.log('Backface visibility:', styles.backfaceVisibility);
+        }
+    </script>
+</body>
+</html>
