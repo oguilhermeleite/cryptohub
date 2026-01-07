@@ -65,49 +65,55 @@
     </script>
 
     <!-- ============================================
-         ULTRA FIX: Force card buttons to WORK
-         MAXIMUM PRIORITY - Links MUST be clickable
+         MODAL SYSTEM: Force perfect centering
+         MAXIMUM PRIORITY - Override all CSS
          ============================================ -->
     <style>
-        /* Force card-back to be interactive when visible */
-        .platform-card.flipped .card-back,
-        .platform-card:hover .card-back,
-        .featured-card.flipped .card-back,
-        .featured-card:hover .card-back {
-            pointer-events: auto !important;
-            z-index: 100 !important;
+        /* CRITICAL: Modal overlay MUST be fixed and centered */
+        .modal-overlay {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            z-index: 999999 !important;
+            margin: 0 !important;
+            padding: 20px !important;
+            background: rgba(0, 0, 0, 0.85) !important;
+            backdrop-filter: blur(8px) !important;
+            -webkit-backdrop-filter: blur(8px) !important;
         }
 
-        /* Force ALL links and buttons to be clickable */
-        .card-back a,
-        .card-back button,
-        .card-back .card-btn-primary,
-        .card-back .card-btn-secondary,
-        .card-back .card-back-buttons,
-        .card-back .card-back-buttons a,
-        .card-back .card-back-buttons button,
-        .platform-card.flipped .card-back *,
-        .platform-card.flipped .card-back a,
-        .platform-card.flipped .card-back button,
-        .platform-card:hover .card-back a,
-        .platform-card:hover .card-back button,
-        .featured-card.flipped .card-back *,
-        .featured-card.flipped .card-back a,
-        .featured-card.flipped .card-back button,
-        .featured-card:hover .card-back a,
-        .featured-card:hover .card-back button {
+        /* Modal content centered */
+        .modal-content {
+            position: relative !important;
+            max-width: 560px !important;
+            width: 100% !important;
+            max-height: 90vh !important;
+            overflow-y: auto !important;
+            margin: auto !important;
+        }
+
+        /* Prevent body scroll when modal open */
+        body.modal-open {
+            overflow: hidden !important;
+            position: fixed !important;
+            width: 100% !important;
+        }
+
+        /* Modal buttons must work */
+        .modal-btn,
+        .modal-btn-primary,
+        .modal-btn-secondary,
+        .modal-close {
             pointer-events: auto !important;
             cursor: pointer !important;
             z-index: 99999 !important;
-            position: relative !important;
-        }
-
-        /* Ensure no overlay blocks clicks */
-        .card-inner::before,
-        .card-inner::after,
-        .card-back::before,
-        .card-back::after {
-            pointer-events: none !important;
         }
     </style>
 </head>
