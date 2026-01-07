@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste - Sistema Card + Modal</title>
+    <link rel="stylesheet" href="cards-modal.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0f;
+            padding: 50px 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #00f5a0;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 36px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
+
+        .info-box {
+            background: rgba(0, 245, 160, 0.1);
+            border: 2px solid rgba(0, 245, 160, 0.3);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 40px;
+            color: #00f5a0;
+        }
+
+        .info-box h2 {
+            margin-top: 0;
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+
+        .info-box ul {
+            margin: 12px 0;
+            padding-left: 24px;
+            line-height: 1.8;
+        }
+
+        .info-box p {
+            margin-top: 16px;
+            font-size: 16px;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Sistema Card + Modal</h1>
+        <p class="subtitle">Clique nos cards para abrir o modal com botões funcionais</p>
+
+        <div class="info-box">
+            <h2>✅ Por que este sistema funciona 100%:</h2>
+            <ul>
+                <li><strong>Cards mostram preview:</strong> Logo, nome, tags, rating</li>
+                <li><strong>Click abre modal:</strong> Popup bonito com descrição completa</li>
+                <li><strong>Botões são links HTML puros:</strong> Sem JavaScript interferindo</li>
+                <li><strong>Modal tem backdrop blur:</strong> Visual moderno e profissional</li>
+                <li><strong>Fecha com ESC ou clicando fora:</strong> UX intuitiva</li>
+                <li><strong>100% responsivo:</strong> Funciona em mobile e desktop</li>
+            </ul>
+            <p><strong>👇 CLIQUE nos cards abaixo para testar o modal:</strong></p>
+        </div>
+
+        <div class="cards-grid">
+            <!-- Card 1: Binance -->
+            <div class="platform-card-modal"
+                 data-name="Binance"
+                 data-description="Maior exchange do mundo com +270 milhões de usuários. Oferece taxas competitivas, alta liquidez e mais de 500 criptomoedas disponíveis para negociação. Plataforma completa com spot, futuros, staking e muito mais."
+                 data-logo="https://logo.clearbit.com/binance.com"
+                 data-domain="binance.com"
+                 data-site-url="https://www.binance.com/activity/referral-entry/CPA?ref=CPA_0001DCF8M6"
+                 data-twitter-url="https://twitter.com/binance"
+                 data-rating="⭐⭐⭐⭐⭐ 4.8"
+                 data-kyc="SEM KYC">
+
+                <div class="card-header-badges">
+                    <span class="card-badge card-badge-rating">⭐⭐⭐⭐⭐ 4.8</span>
+                    <span class="card-badge card-badge-kyc">SEM KYC</span>
+                </div>
+
+                <div class="card-preview-logo">
+                    <img src="https://logo.clearbit.com/binance.com" alt="Binance" onerror="this.src='https://www.google.com/s2/favicons?domain=binance.com&sz=128'">
+                </div>
+
+                <h3 class="card-preview-title">Binance</h3>
+
+                <div class="card-preview-tags">
+                    <span class="card-preview-tag">EXCHANGE</span>
+                    <span class="card-preview-tag">CEX</span>
+                    <span class="card-preview-tag">GLOBAL</span>
+                </div>
+            </div>
+
+            <!-- Card 2: Bybit -->
+            <div class="platform-card-modal"
+                 data-name="Bybit"
+                 data-description="Exchange líder em trading de derivativos de criptomoedas. Oferece plataforma avançada com alta liquidez, ferramentas profissionais de trading e bônus atrativos para novos usuários. Ideal para traders experientes."
+                 data-logo="https://logo.clearbit.com/bybit.com"
+                 data-domain="bybit.com"
+                 data-site-url="https://www.bybit.com"
+                 data-twitter-url="https://twitter.com/bybit_official"
+                 data-rating="⭐⭐⭐⭐⭐ 4.6"
+                 data-kyc="KYC PARCIAL">
+
+                <div class="card-header-badges">
+                    <span class="card-badge card-badge-rating">⭐⭐⭐⭐⭐ 4.6</span>
+                    <span class="card-badge card-badge-kyc">KYC PARCIAL</span>
+                </div>
+
+                <div class="card-preview-logo">
+                    <img src="https://logo.clearbit.com/bybit.com" alt="Bybit">
+                </div>
+
+                <h3 class="card-preview-title">Bybit</h3>
+
+                <div class="card-preview-tags">
+                    <span class="card-preview-tag">EXCHANGE</span>
+                    <span class="card-preview-tag">DERIVATIVOS</span>
+                    <span class="card-preview-tag">TRADING</span>
+                </div>
+            </div>
+
+            <!-- Card 3: Phantom -->
+            <div class="platform-card-modal"
+                 data-name="Phantom"
+                 data-description="Carteira Web3 popular para Solana e Ethereum. Interface amigável e intuitiva, suporte completo a NFTs, integração nativa com aplicativos DeFi e gerenciamento seguro de múltiplas carteiras."
+                 data-logo="https://logo.clearbit.com/phantom.app"
+                 data-domain="phantom.app"
+                 data-site-url="https://phantom.app"
+                 data-twitter-url="https://twitter.com/phantom"
+                 data-rating="⭐⭐⭐⭐⭐ 4.7"
+                 data-kyc="SEM KYC">
+
+                <div class="card-header-badges">
+                    <span class="card-badge card-badge-rating">⭐⭐⭐⭐⭐ 4.7</span>
+                    <span class="card-badge card-badge-kyc">SEM KYC</span>
+                </div>
+
+                <div class="card-preview-logo">
+                    <img src="https://logo.clearbit.com/phantom.app" alt="Phantom">
+                </div>
+
+                <h3 class="card-preview-title">Phantom</h3>
+
+                <div class="card-preview-tags">
+                    <span class="card-preview-tag">WALLET</span>
+                    <span class="card-preview-tag">SOLANA</span>
+                    <span class="card-preview-tag">WEB3</span>
+                </div>
+            </div>
+
+            <!-- Card 4: Kraken -->
+            <div class="platform-card-modal"
+                 data-name="Kraken"
+                 data-description="Uma das exchanges mais antigas e confiáveis do mercado. Conhecida por sua segurança robusta, conformidade regulatória e suporte a uma ampla variedade de criptomoedas e pares de trading."
+                 data-logo="https://logo.clearbit.com/kraken.com"
+                 data-domain="kraken.com"
+                 data-site-url="https://www.kraken.com"
+                 data-twitter-url="https://twitter.com/krakenfx"
+                 data-rating="⭐⭐⭐⭐ 4.5"
+                 data-kyc="KYC COMPLETO">
+
+                <div class="card-header-badges">
+                    <span class="card-badge card-badge-rating">⭐⭐⭐⭐ 4.5</span>
+                    <span class="card-badge card-badge-kyc">KYC COMPLETO</span>
+                </div>
+
+                <div class="card-preview-logo">
+                    <img src="https://logo.clearbit.com/kraken.com" alt="Kraken">
+                </div>
+
+                <h3 class="card-preview-title">Kraken</h3>
+
+                <div class="card-preview-tags">
+                    <span class="card-preview-tag">EXCHANGE</span>
+                    <span class="card-preview-tag">SEGURA</span>
+                    <span class="card-preview-tag">REGULADA</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="cards-modal.js"></script>
+    <script>
+        // Debug logging
+        console.log('🧪 Test page loaded');
+        console.log('📦 Total cards:', document.querySelectorAll('.platform-card-modal').length);
+
+        // Test modal programmatically
+        window.testModal = function() {
+            const card = document.querySelector('.platform-card-modal');
+            if (card) {
+                card.click();
+                console.log('✅ Test modal opened');
+            }
+        };
+
+        console.log('💡 Tip: Type testModal() in console to open first modal');
+    </script>
+</body>
+</html>
