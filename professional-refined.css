@@ -661,7 +661,7 @@ body {
     cursor: pointer !important;
     text-decoration: none;
     position: relative;
-    z-index: 10;
+    z-index: 1000;
 }
 
 .card-btn-primary {
@@ -1116,7 +1116,7 @@ input:focus-visible {
 .featured-card .card-back a,
 .featured-card .card-back button {
     pointer-events: auto !important;
-    z-index: 100;
+    z-index: 1000;
     cursor: pointer !important;
 }
 

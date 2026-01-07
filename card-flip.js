@@ -18,8 +18,19 @@ console.log('🎴 Card Flip JS Loading...');
         console.log('🎴 Card Flip System Initialized');
         console.log('📦 Total platform cards found:', document.querySelectorAll('.platform-card').length);
 
-        // Add click listener to document to catch all clicks
+        // Add click listener to document - USE BUBBLE PHASE (not capture)
         document.addEventListener('click', function(e) {
+            // Check if click was on a button or link FIRST
+            const isButton = e.target.closest('.card-btn-primary') ||
+                           e.target.closest('.card-btn-secondary') ||
+                           e.target.closest('a') ||
+                           e.target.closest('button');
+
+            if (isButton) {
+                console.log('🔘 Click was on button/link - allowing default action');
+                return; // Let the button/link work normally
+            }
+
             // Find if click was on or inside a platform card
             const card = e.target.closest('.platform-card');
 
@@ -28,17 +39,6 @@ console.log('🎴 Card Flip JS Loading...');
             }
 
             console.log('🖱️ Click detected on card:', card.getAttribute('data-platform'));
-
-            // Check if click was on a button or link
-            const isButton = e.target.closest('.card-btn-primary') ||
-                           e.target.closest('.card-btn-secondary') ||
-                           e.target.closest('a') ||
-                           e.target.closest('button');
-
-            if (isButton) {
-                console.log('🔘 Click was on button/link - not flipping');
-                return; // Let the button/link work normally
-            }
 
             // Toggle the flipped state
             const wasFlipped = card.classList.contains('flipped');
@@ -55,7 +55,7 @@ console.log('🎴 Card Flip JS Loading...');
                 console.log('📐 Card-inner transform:', transform);
             }
 
-        }, true); // Use capture phase to catch clicks early
+        }, false); // Use BUBBLE phase to allow buttons to work
 
         // ESC key to flip all cards back
         document.addEventListener('keydown', function(e) {
