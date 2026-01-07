@@ -1,0 +1,56 @@
+/* ============================================
+   CRITICAL FIX: Card Buttons Not Clickable
+   ============================================ */
+
+/* Ensure card back is fully interactive when flipped */
+.platform-card .card-back {
+  pointer-events: auto !important;
+  z-index: 2;
+}
+
+.platform-card.flipped .card-back,
+.platform-card:hover .card-back {
+  pointer-events: auto !important;
+  z-index: 10;
+}
+
+/* Ensure all links and buttons are clickable */
+.card-back a,
+.card-back button,
+.card-back .platform-link,
+.card-back .social-link,
+.card-back .card-btn-primary,
+.card-back .card-btn-secondary,
+.card-back .card-back-buttons,
+.card-back .card-back-buttons a,
+.card-back .card-back-buttons button {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  position: relative;
+  z-index: 100;
+}
+
+/* Remove any blocking overlays */
+.card-inner {
+  pointer-events: none;
+}
+
+.card-front,
+.card-back {
+  pointer-events: auto;
+}
+
+/* Featured cards same fix */
+.featured-card .card-back,
+.featured-card .card-back a,
+.featured-card .card-back button {
+  pointer-events: auto !important;
+  z-index: 100 !important;
+}
+
+/* Ensure card-front doesn't block when flipped */
+.platform-card.flipped .card-front,
+.featured-card.flipped .card-front {
+  pointer-events: none !important;
+  z-index: -1 !important;
+}

@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="styles.css?v=20241127-viewport-center">
     <link rel="stylesheet" href="professional-refined.css?v=refined-2026">
     <link rel="stylesheet" href="premium-elements.css?v=premium-2026">
+    <!-- CRITICAL FIX: Card Buttons Clickable - MUST BE LAST CSS -->
+    <link rel="stylesheet" href="card-buttons-fix.css?v=critical-fix-001">
     <!-- Preconnect para melhorar performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,6 +63,34 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "ug118e6101");
     </script>
+
+    <!-- ============================================
+         CRITICAL FIX: Force card buttons to work
+         MAXIMUM PRIORITY - Must be last CSS rule
+         ============================================ -->
+    <style>
+        .platform-card.flipped .card-back,
+        .featured-card.flipped .card-back {
+            pointer-events: auto !important;
+            z-index: 100 !important;
+        }
+
+        .platform-card.flipped .card-back *,
+        .platform-card.flipped .card-back a,
+        .platform-card.flipped .card-back button,
+        .platform-card.flipped .card-back .card-btn-primary,
+        .platform-card.flipped .card-back .card-btn-secondary,
+        .platform-card.flipped .card-back .card-back-buttons,
+        .platform-card.flipped .card-back .card-back-buttons *,
+        .featured-card.flipped .card-back *,
+        .featured-card.flipped .card-back a,
+        .featured-card.flipped .card-back button {
+            pointer-events: auto !important;
+            cursor: pointer !important;
+            z-index: 9999 !important;
+            position: relative !important;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -2079,6 +2109,8 @@
     <script src="script.js?v=20241127-rebuild-v2"></script>
     <!-- Card Flip System -->
     <script src="card-flip.js?v=20241216-COMPLETE-REWRITE"></script>
+    <!-- CRITICAL FIX: Card Buttons Clickable -->
+    <script src="card-buttons-fix.js?v=critical-fix-001"></script>
     <!-- Performance Optimization Script -->
     <script src="performance.js?v=20241126" defer></script>
     <!-- DeFiLlama Integration -->
