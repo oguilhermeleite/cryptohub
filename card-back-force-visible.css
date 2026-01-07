@@ -1,0 +1,141 @@
+/* ============================================
+   FORCE CARD BACK CONTENT TO BE VISIBLE
+   This file MUST be loaded LAST to override all other CSS
+   ============================================ */
+
+/* FORCE card-back to preserve 3D for proper flipping */
+.platform-card,
+.featured-card {
+  perspective: 1000px !important;
+}
+
+.card-inner {
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+  transform-style: preserve-3d !important;
+  -webkit-transform-style: preserve-3d !important;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* FORCE card faces to show/hide properly */
+.card-front,
+.card-back {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  backface-visibility: hidden !important;
+  -webkit-backface-visibility: hidden !important;
+}
+
+.card-front {
+  transform: rotateY(0deg) !important;
+  -webkit-transform: rotateY(0deg) !important;
+}
+
+.card-back {
+  transform: rotateY(180deg) !important;
+  -webkit-transform: rotateY(180deg) !important;
+}
+
+/* FORCE all card-back content to be visible */
+.card-back,
+.card-back * {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* FORCE card-back structure */
+.card-back {
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 36px 28px !important;
+}
+
+.card-back-header {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  margin-bottom: 20px !important;
+}
+
+.card-back-title {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  font-size: 28px !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  margin-bottom: 16px !important;
+}
+
+.card-back-description {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  margin-bottom: 24px !important;
+  text-align: center !important;
+}
+
+.card-back-buttons {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.card-back-buttons a,
+.card-back-buttons button,
+.card-btn-primary,
+.card-btn-secondary,
+.btn-visit,
+.btn-social,
+.btn-back {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+
+/* DESKTOP: Hover to flip */
+@media (min-width: 769px) {
+  .platform-card:hover .card-inner,
+  .featured-card:hover .card-inner {
+    transform: rotateY(180deg) !important;
+    -webkit-transform: rotateY(180deg) !important;
+  }
+}
+
+/* MOBILE: Click to flip */
+@media (max-width: 768px) {
+  .platform-card.flipped .card-inner,
+  .featured-card.flipped .card-inner {
+    transform: rotateY(180deg) !important;
+    -webkit-transform: rotateY(180deg) !important;
+  }
+}
+
+/* CRITICAL: Ensure card-back is clickable when visible */
+.platform-card:hover .card-back,
+.platform-card.flipped .card-back,
+.featured-card:hover .card-back,
+.featured-card.flipped .card-back {
+  pointer-events: auto !important;
+  z-index: 100 !important;
+}
+
+/* CRITICAL: Disable card-front when flipped */
+.platform-card:hover .card-front,
+.platform-card.flipped .card-front,
+.featured-card:hover .card-front,
+.featured-card.flipped .card-front {
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
