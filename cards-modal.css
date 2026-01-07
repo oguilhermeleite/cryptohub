@@ -4,85 +4,67 @@
    ============================================ */
 
 /* ============================================
-   CARD PREVIEW
+   CARD PREVIEW - ONLY LOGO
    ============================================ */
 
 .platform-card-modal {
   background: linear-gradient(135deg, rgba(20, 25, 35, 0.95) 0%, rgba(15, 20, 30, 0.97) 100%);
   border: 1px solid rgba(0, 245, 160, 0.2);
   border-radius: 20px;
-  padding: 24px;
+  padding: 40px;
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  align-items: center;
+  justify-content: center;
   transition: all 0.3s ease;
   cursor: pointer;
   position: relative;
-  min-height: 320px;
+  min-height: 240px;
+  aspect-ratio: 1 / 1;
 }
 
 .platform-card-modal:hover {
   border-color: rgba(0, 245, 160, 0.5);
-  transform: translateY(-6px);
+  transform: translateY(-6px) scale(1.02);
   box-shadow: 0 16px 48px rgba(0, 245, 160, 0.25);
 }
 
 /* Click hint */
 .platform-card-modal::after {
-  content: 'Clique para ver detalhes';
+  content: 'Clique para mais detalhes';
   position: absolute;
-  bottom: 16px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
   opacity: 0;
   transition: opacity 0.3s ease;
+  white-space: nowrap;
 }
 
 .platform-card-modal:hover::after {
   opacity: 1;
 }
 
-/* Card badges */
-.card-header-badges {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.card-badge {
-  padding: 6px 12px;
-  border-radius: 8px;
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.card-badge-rating {
-  background: rgba(255, 215, 0, 0.2);
-  color: #FFD700;
-  border: 1px solid rgba(255, 215, 0, 0.3);
-}
-
-.card-badge-kyc {
-  background: rgba(0, 245, 160, 0.2);
-  color: #00f5a0;
-  border: 1px solid rgba(0, 245, 160, 0.3);
-}
-
-/* Card logo */
+/* Card logo - ONLY THING VISIBLE */
 .card-preview-logo {
-  width: 90px;
-  height: 90px;
-  margin: 16px auto;
+  width: 120px;
+  height: 120px;
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 18px;
-  padding: 14px;
+  border-radius: 20px;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(0, 245, 160, 0.15);
+  transition: all 0.3s ease;
+}
+
+.platform-card-modal:hover .card-preview-logo {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(0, 245, 160, 0.3);
+  transform: scale(1.05);
 }
 
 .card-preview-logo img {
@@ -91,33 +73,11 @@
   object-fit: contain;
 }
 
-/* Card title */
-.card-preview-title {
-  font-size: 26px;
-  font-weight: 700;
-  color: #ffffff;
-  text-align: center;
-  margin: 0;
-}
-
-/* Card tags */
+/* Hide everything else on card */
+.card-header-badges,
+.card-preview-title,
 .card-preview-tags {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 8px;
-}
-
-.card-preview-tag {
-  padding: 6px 12px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 6px;
-  font-size: 11px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.8);
-  text-transform: uppercase;
+  display: none !important;
 }
 
 /* ============================================
@@ -338,16 +298,14 @@
   }
 
   .platform-card-modal {
-    min-height: 280px;
+    min-height: 200px;
+    padding: 30px;
   }
 
   .card-preview-logo {
-    width: 70px;
-    height: 70px;
-  }
-
-  .card-preview-title {
-    font-size: 22px;
+    width: 100px;
+    height: 100px;
+    padding: 16px;
   }
 }
 

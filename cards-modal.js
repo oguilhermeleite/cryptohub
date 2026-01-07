@@ -30,7 +30,6 @@ console.log('🎴 Card Modal System Loading...');
                     </div>
                     <h2 class="modal-title">${platformData.name}</h2>
                     <div class="modal-badges">
-                        ${platformData.rating ? `<span class="card-badge card-badge-rating">${platformData.rating}</span>` : ''}
                         ${platformData.kyc ? `<span class="card-badge card-badge-kyc">${platformData.kyc}</span>` : ''}
                     </div>
                 </div>
