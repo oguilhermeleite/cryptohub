@@ -1,0 +1,224 @@
+/* ============================================
+   CARDS FINAL - Complete Info, No Modal/Flip
+   Everything visible at once
+   ============================================ */
+
+/* Card Container */
+.platform-card-final {
+  background: linear-gradient(135deg, rgba(20, 25, 35, 0.98) 0%, rgba(15, 20, 30, 0.98) 100%);
+  border: 1px solid rgba(0, 245, 160, 0.25);
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: visible;
+  min-height: 420px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.platform-card-final:hover {
+  border-color: rgba(0, 245, 160, 0.5);
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(0, 245, 160, 0.25);
+}
+
+/* Logo Container */
+.card-logo-container {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+  border-radius: 24px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(0, 245, 160, 0.2);
+  box-shadow:
+    0 0 0 1px rgba(0, 245, 160, 0.1),
+    0 8px 32px rgba(0, 245, 160, 0.15),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+}
+
+.platform-card-final:hover .card-logo-container {
+  transform: translateY(-4px) scale(1.05);
+  border-color: rgba(0, 245, 160, 0.4);
+  box-shadow:
+    0 0 0 1px rgba(0, 245, 160, 0.3),
+    0 12px 48px rgba(0, 245, 160, 0.3),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+}
+
+.card-logo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Card Title */
+.card-final-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+  line-height: 1.2;
+  background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.9) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Card Description */
+.card-final-description {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  flex: 1;
+  margin: 8px 0;
+  min-height: 80px;
+}
+
+/* Buttons Container */
+.card-final-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.card-final-btn {
+  flex: 1;
+  padding: 16px 24px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+  white-space: nowrap;
+}
+
+/* Primary Button - Visit Site */
+.card-final-btn-primary {
+  background: linear-gradient(135deg, #00f5a0 0%, #00d9ff 100%);
+  color: #0a0a0f;
+  box-shadow: 0 6px 20px rgba(0, 245, 160, 0.35);
+}
+
+.card-final-btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 32px rgba(0, 245, 160, 0.5);
+  filter: brightness(1.1);
+}
+
+.card-final-btn-primary:active {
+  transform: translateY(-1px);
+}
+
+/* Secondary Button - Follow on X */
+.card-final-btn-secondary {
+  background: rgba(0, 245, 160, 0.1);
+  border: 2px solid rgba(0, 245, 160, 0.4);
+  color: #00f5a0;
+}
+
+.card-final-btn-secondary:hover {
+  background: rgba(0, 245, 160, 0.2);
+  border-color: rgba(0, 245, 160, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 245, 160, 0.25);
+}
+
+.card-final-btn-secondary:active {
+  transform: translateY(0);
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+  .platform-card-final {
+    padding: 28px 24px;
+    min-height: 400px;
+  }
+
+  .card-logo-container {
+    width: 100px;
+    height: 100px;
+    padding: 16px;
+  }
+
+  .card-final-title {
+    font-size: 24px;
+  }
+
+  .card-final-description {
+    font-size: 14px;
+    min-height: 70px;
+  }
+
+  .card-final-buttons {
+    flex-direction: column;
+  }
+
+  .card-final-btn {
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .platform-card-final {
+    padding: 24px 20px;
+  }
+
+  .card-logo-container {
+    width: 90px;
+    height: 90px;
+  }
+
+  .card-final-title {
+    font-size: 22px;
+  }
+
+  .card-final-description {
+    font-size: 13px;
+  }
+
+  .card-final-btn {
+    font-size: 14px;
+  }
+}
+
+/* Grid Layout for Cards */
+.cards-final-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 28px;
+  padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .cards-final-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* Accessibility */
+.card-final-btn:focus-visible {
+  outline: 3px solid #00f5a0;
+  outline-offset: 4px;
+}

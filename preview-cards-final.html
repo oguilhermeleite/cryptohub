@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview - Cards Final (Tudo Visível)</title>
+    <link rel="stylesheet" href="cards-final.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0f;
+            padding: 60px 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #00f5a0;
+            text-align: center;
+            margin-bottom: 16px;
+            font-size: 42px;
+            background: linear-gradient(135deg, #00f5a0 0%, #00d9ff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 50px;
+            font-size: 18px;
+        }
+
+        .info-box {
+            background: rgba(0, 245, 160, 0.08);
+            border: 2px solid rgba(0, 245, 160, 0.3);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 50px;
+            color: #00f5a0;
+        }
+
+        .info-box h2 {
+            margin-top: 0;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .info-box ul {
+            margin: 16px 0;
+            padding-left: 28px;
+            line-height: 2;
+        }
+
+        .info-box strong {
+            color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+            }
+
+            .info-box {
+                padding: 24px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Cards Completos - Tudo Visível</h1>
+        <p class="subtitle">Design final sem modal/flip - Tudo aparece de uma vez</p>
+
+        <div class="info-box">
+            <h2>✅ Novo Design - Simples e Funcional:</h2>
+            <ul>
+                <li><strong>Logo grande e bonita</strong> no topo (120px com hover effect)</li>
+                <li><strong>Nome da plataforma</strong> com gradiente elegante</li>
+                <li><strong>Descrição completa</strong> visível sempre</li>
+                <li><strong>2 botões lado a lado:</strong> "Visitar Site" (destaque) + "Seguir no X"</li>
+                <li><strong>Sem modal, sem flip</strong> - Tudo funciona 100%</li>
+                <li><strong>Hover suave</strong> com elevação e glow</li>
+                <li><strong>100% responsivo</strong> - Mobile e desktop</li>
+            </ul>
+        </div>
+
+        <div class="cards-final-grid">
+            <!-- Card 1: Binance -->
+            <div class="platform-card-final">
+                <div class="card-logo-container">
+                    <img src="https://logo.clearbit.com/binance.com"
+                         alt="Binance"
+                         onerror="this.src='https://www.google.com/s2/favicons?domain=binance.com&sz=128'">
+                </div>
+
+                <h3 class="card-final-title">Binance</h3>
+
+                <p class="card-final-description">
+                    Maior exchange do mundo com +270 milhões de usuários. Taxas baixas, alta liquidez e mais de 500 criptomoedas disponíveis.
+                </p>
+
+                <div class="card-final-buttons">
+                    <a href="https://www.binance.com/activity/referral-entry/CPA?ref=CPA_0001DCF8M6"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="card-final-btn card-final-btn-primary">
+                        🌐 Visitar Site
+                    </a>
+                    <a href="https://twitter.com/binance"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="card-final-btn card-final-btn-secondary">
+                        𝕏 Seguir no X
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 2: Bybit -->
+            <div class="platform-card-final">
+                <div class="card-logo-container">
+                    <img src="https://logo.clearbit.com/bybit.com" alt="Bybit">
+                </div>
+
+                <h3 class="card-final-title">Bybit</h3>
+
+                <p class="card-final-description">
+                    Exchange líder em trading de derivativos. Plataforma avançada, alta liquidez e bônus para novos usuários.
+                </p>
+
+                <div class="card-final-buttons">
+                    <a href="https://www.bybit.com"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="card-final-btn card-final-btn-primary">
+                        🌐 Visitar Site
+                    </a>
+                    <a href="https://twitter.com/bybit_official"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="card-final-btn card-final-btn-secondary">
+                        𝕏 Seguir no X
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 3: Kraken -->
+            <div class="platform-card-final">
+                <div class="card-logo-container">
+                    <img src="https://logo.clearbit.com/kraken.com" alt="Kraken">
+                </div>
+
+                <h3 class="card-final-title">Kraken</h3>
+
+                <p class="card-final-description">
+                    Uma das exchanges mais antigas e confiáveis. Conhecida por segurança robusta e conformidade regulatória.
+                </p>
+
+                <div class="card-final-buttons">
+                    <a href="https://www.kraken.com"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="card-final-btn card-final-btn-primary">
+                        🌐 Visitar Site
+                    </a>
+                    <a href="https://twitter.com/krakenfx"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="card-final-btn card-final-btn-secondary">
+                        𝕏 Seguir no X
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 4: Phantom -->
+            <div class="platform-card-final">
+                <div class="card-logo-container">
+                    <img src="https://logo.clearbit.com/phantom.app" alt="Phantom">
+                </div>
+
+                <h3 class="card-final-title">Phantom</h3>
+
+                <p class="card-final-description">
+                    Carteira Web3 para Solana e Ethereum. Interface amigável, suporte a NFTs e integração completa com DeFi.
+                </p>
+
+                <div class="card-final-buttons">
+                    <a href="https://phantom.app"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="card-final-btn card-final-btn-primary">
+                        🌐 Visitar Site
+                    </a>
+                    <a href="https://twitter.com/phantom"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="card-final-btn card-final-btn-secondary">
+                        𝕏 Seguir no X
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 5: Camila P2P -->
+            <div class="platform-card-final">
+                <div class="card-logo-container">
+                    <img src="https://www.google.com/s2/favicons?domain=camilap2p.com&sz=128"
+                         alt="Camila P2P"
+                         onerror="this.src='https://logo.clearbit.com/camilap2p.com'">
+                </div>
+
+                <h3 class="card-final-title">Camila P2P</h3>
+
+                <p class="card-final-description">
+                    Especialista brasileira em P2P com +40 mil negociações. Atendimento humanizado e suporte para +1.000 criptomoedas.
+                </p>
+
+                <div class="card-final-buttons">
+                    <a href="https://camilap2p.com"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="card-final-btn card-final-btn-primary">
+                        🌐 Visitar Site
+                    </a>
+                    <a href="https://twitter.com/camila_p2p"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="card-final-btn card-final-btn-secondary">
+                        𝕏 Seguir no X
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 6: MetaMask -->
+            <div class="platform-card-final">
+                <div class="card-logo-container">
+                    <img src="https://logo.clearbit.com/metamask.io" alt="MetaMask">
+                </div>
+
+                <h3 class="card-final-title">MetaMask</h3>
+
+                <p class="card-final-description">
+                    Carteira mais popular para Ethereum e redes EVM. Suporte completo a DApps, NFTs e milhões de usuários globalmente.
+                </p>
+
+                <div class="card-final-buttons">
+                    <a href="https://metamask.io"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="card-final-btn card-final-btn-primary">
+                        🌐 Visitar Site
+                    </a>
+                    <a href="https://twitter.com/MetaMask"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="card-final-btn card-final-btn-secondary">
+                        𝕏 Seguir no X
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
