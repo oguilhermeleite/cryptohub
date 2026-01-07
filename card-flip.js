@@ -1,8 +1,8 @@
 // ============================================
-// CARD FLIP SYSTEM - COMPLETE REWRITE
+// CARD FLIP SYSTEM - ULTRA SIMPLIFIED VERSION
 // ============================================
 
-console.log('🎴 Card Flip JS Loading...');
+console.log('🎴 Card Flip JS Loading (Simplified)...');
 
 (function() {
     'use strict';
@@ -15,7 +15,7 @@ console.log('🎴 Card Flip JS Loading...');
     }
 
     function initCardFlip() {
-        console.log('🎴 Card Flip System Initialized');
+        console.log('🎴 Card Flip System Initialized (Simplified)');
 
         const cards = document.querySelectorAll('.platform-card');
         console.log('📦 Total platform cards found:', cards.length);
@@ -30,70 +30,57 @@ console.log('🎴 Card Flip JS Loading...');
         cards.forEach((card, index) => {
             console.log(`🎴 Setting up card ${index + 1}:`, card.getAttribute('data-platform'));
 
-            // Add click listener to card-front and card-back separately
             const cardFront = card.querySelector('.card-front');
             const cardBack = card.querySelector('.card-back');
 
-            // Click on FRONT flips the card
+            // SIMPLE: Click on FRONT flips the card
             if (cardFront) {
                 cardFront.addEventListener('click', function(e) {
+                    // Don't flip if clicking a link/button on the front
+                    if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON' ||
+                        e.target.closest('a') || e.target.closest('button')) {
+                        return;
+                    }
+
                     console.log('👆 Click on FRONT - flipping to back');
                     card.classList.add('flipped');
+
+                    // CRITICAL: Push card-front behind
+                    if (cardFront) {
+                        cardFront.style.pointerEvents = 'none';
+                        cardFront.style.zIndex = '-1';
+                        cardFront.style.visibility = 'hidden';
+                    }
+
+                    // CRITICAL: Force all back elements to be clickable
+                    forceBackClickable(card);
                 });
             }
 
-            // Click on BACK (but not on buttons) flips back
+            // SIMPLE: Click ONLY on card-back background (not on links/buttons) flips back
             if (cardBack) {
                 cardBack.addEventListener('click', function(e) {
-                    // Check if click was on a button or link
-                    const clickedElement = e.target;
-                    const isLink = clickedElement.tagName === 'A' || clickedElement.closest('a');
-                    const isButton = clickedElement.tagName === 'BUTTON' || clickedElement.closest('button');
-
-                    if (isLink || isButton) {
-                        console.log('🔗 Click on link/button - NOT flipping, allowing default action');
-                        return; // Let the link/button work normally
+                    // ONLY flip back if clicking the background itself
+                    if (e.target === cardBack || e.target.classList.contains('card-back-header') ||
+                        e.target.classList.contains('card-back-description')) {
+                        console.log('👆 Click on BACK background - flipping to front');
+                        card.classList.remove('flipped');
                     }
-
-                    console.log('👆 Click on BACK area - flipping to front');
-                    card.classList.remove('flipped');
+                    // If clicking a link/button, do NOTHING - let it work normally
                 });
             }
-
-            // Handle "Voltar" button specifically
-            const backButton = card.querySelector('.card-btn-back');
-            if (backButton) {
-                backButton.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    e.preventDefault();
-                    console.log('⬅️ Voltar button clicked');
-                    card.classList.remove('flipped');
-                });
-            }
-
-            // Handle tracking for primary links
-            const primaryLinks = card.querySelectorAll('a[data-track]');
-            primaryLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.stopPropagation(); // Prevent card flip
-                    const trackData = this.getAttribute('data-track');
-                    if (trackData && typeof trackPlatformClick === 'function') {
-                        const [platform, category] = trackData.split('|');
-                        trackPlatformClick(platform, category);
-                    }
-                    console.log('📊 Tracked click on:', trackData);
-                });
-            });
-
-            // Handle all other links (Twitter, etc)
-            const allLinks = card.querySelectorAll('.card-back a');
-            allLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.stopPropagation(); // Prevent card flip
-                    console.log('🔗 Link clicked:', this.href);
-                });
-            });
         });
+
+        // FORCE all card-back links to be clickable immediately
+        setTimeout(() => {
+            document.querySelectorAll('.card-back a, .card-back button').forEach(elem => {
+                elem.style.pointerEvents = 'auto';
+                elem.style.cursor = 'pointer';
+                elem.style.zIndex = '9999';
+                elem.style.position = 'relative';
+            });
+            console.log('✅ Forced all card-back links to be clickable on page load');
+        }, 500);
 
         // ESC key to flip all cards back
         document.addEventListener('keydown', function(e) {
@@ -106,28 +93,44 @@ console.log('🎴 Card Flip JS Loading...');
             }
         });
 
-        console.log('✅ Card flip event listeners attached successfully');
+        console.log('✅ Card flip system ready');
+    }
 
-        // Test if CSS is loaded correctly
-        const testCard = document.querySelector('.platform-card');
-        if (testCard) {
-            const testInner = testCard.querySelector('.card-inner');
-            if (testInner) {
-                const style = window.getComputedStyle(testInner);
-                console.log('🎨 Card-inner transform-style:', style.transformStyle);
-                console.log('🎨 Card-inner transition:', style.transition);
+    // Helper function to force card-back elements to be clickable
+    function forceBackClickable(card) {
+        setTimeout(() => {
+            const cardBack = card.querySelector('.card-back');
+
+            if (cardBack) {
+                // Force card-back itself
+                cardBack.style.pointerEvents = 'auto';
+                cardBack.style.zIndex = '100';
             }
 
-            const testFront = testCard.querySelector('.card-front');
-            const testBack = testCard.querySelector('.card-back');
-            if (testFront && testBack) {
-                console.log('🎨 Card-front backface-visibility:', window.getComputedStyle(testFront).backfaceVisibility);
-                console.log('🎨 Card-back backface-visibility:', window.getComputedStyle(testBack).backfaceVisibility);
-                console.log('🎨 Card-back transform:', window.getComputedStyle(testBack).transform);
-            }
-        }
+            // Force ALL interactive elements
+            const interactiveElements = card.querySelectorAll(
+                '.card-back a, ' +
+                '.card-back button, ' +
+                '.card-back .card-btn-primary, ' +
+                '.card-back .card-btn-secondary, ' +
+                '.card-back .card-back-buttons'
+            );
+
+            interactiveElements.forEach(elem => {
+                elem.style.pointerEvents = 'auto';
+                elem.style.cursor = 'pointer';
+                elem.style.zIndex = '9999';
+                elem.style.position = 'relative';
+
+                // Remove any event listeners that might block clicks
+                const newElem = elem.cloneNode(true);
+                elem.parentNode.replaceChild(newElem, elem);
+            });
+
+            console.log('✅ Forced', interactiveElements.length, 'elements to be clickable in card', card.getAttribute('data-platform'));
+        }, 100);
     }
 
 })();
 
-console.log('🎴 Card Flip JS Loaded Successfully');
+console.log('🎴 Card Flip JS Loaded Successfully (Simplified)');

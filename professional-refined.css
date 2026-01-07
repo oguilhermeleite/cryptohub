@@ -1505,5 +1505,36 @@ html {
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   CRITICAL CARD BUTTON FIX - Ensure buttons always work
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* Maximum priority fix to ensure ALL card buttons work when flipped */
+.platform-card.flipped .card-back,
+.featured-card.flipped .card-back {
+    pointer-events: auto !important;
+    z-index: 100 !important;
+}
+
+.platform-card.flipped .card-back a,
+.platform-card.flipped .card-back button,
+.platform-card.flipped .card-back .card-btn-primary,
+.platform-card.flipped .card-back .card-btn-secondary,
+.platform-card.flipped .card-back .card-back-buttons,
+.platform-card.flipped .card-back .card-back-buttons a,
+.platform-card.flipped .card-back .card-back-buttons button,
+.featured-card.flipped .card-back a,
+.featured-card.flipped .card-back button,
+.featured-card.flipped .card-back .card-btn-primary,
+.featured-card.flipped .card-back .card-btn-secondary,
+.featured-card.flipped .card-back .card-back-buttons,
+.featured-card.flipped .card-back .card-back-buttons a,
+.featured-card.flipped .card-back .card-back-buttons button {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    z-index: 1001 !important;
+    position: relative !important;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    END OF PROFESSIONAL REFINED DESIGN
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */

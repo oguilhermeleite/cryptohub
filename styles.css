@@ -1898,6 +1898,33 @@ img {
     -webkit-transform: rotateY(180deg);
 }
 
+/* CRITICAL FIX: Ensure all buttons/links work when card is flipped */
+.platform-card.flipped .card-back {
+    pointer-events: auto !important;
+    z-index: 10 !important;
+}
+
+.platform-card.flipped .card-back a,
+.platform-card.flipped .card-back button,
+.platform-card.flipped .card-back .card-btn-primary,
+.platform-card.flipped .card-back .card-btn-secondary,
+.platform-card.flipped .card-back .card-back-buttons,
+.platform-card.flipped .card-back .card-back-buttons a,
+.platform-card.flipped .card-back .card-back-buttons button {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    z-index: 1000 !important;
+    position: relative !important;
+}
+
+/* CRITICAL: Push card-front BEHIND when flipped */
+.platform-card.flipped .card-front {
+    pointer-events: none !important;
+    z-index: -1 !important;
+    visibility: hidden !important;
+    transform: translateZ(-100px) !important;
+}
+
 /* ============================================
    CARD FACES - FRONT AND BACK
    ============================================ */
@@ -3980,10 +4007,26 @@ a:focus,
         z-index: 10 !important;
     }
 
+    /* CRITICAL: Force all buttons and links in card-back to be clickable */
+    .platform-card.flipped .card-back a,
+    .platform-card.flipped .card-back button,
+    .platform-card.flipped .card-back .card-btn-primary,
+    .platform-card.flipped .card-back .card-btn-secondary,
+    .platform-card.flipped .card-back .card-back-buttons,
+    .platform-card.flipped .card-back .card-back-buttons a,
+    .platform-card.flipped .card-back .card-back-buttons button {
+        pointer-events: auto !important;
+        cursor: pointer !important;
+        z-index: 1000 !important;
+        position: relative !important;
+    }
+
     .platform-card.flipped .card-front {
         opacity: 0 !important;
         pointer-events: none !important;
-        z-index: 1 !important;
+        z-index: -1 !important;
+        visibility: hidden !important;
+        transform: translateZ(-100px) !important;
     }
 
     /* FIX: Enable horizontal carousel scrolling */
