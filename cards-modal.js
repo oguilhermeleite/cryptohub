@@ -52,12 +52,21 @@ console.log('🎴 Card Modal System Loading...');
             </div>
         `;
 
+        // CRITICAL: Save current scroll position
+        const scrollY = window.scrollY;
+
         // Add to body
         document.body.appendChild(modal);
         currentModal = modal;
 
         // Add body class to prevent scrolling
         document.body.classList.add('modal-open');
+
+        // CRITICAL: Force body to stay at current scroll position
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${scrollY}px`;
+        document.body.style.width = '100%';
+        document.body.style.overflow = 'hidden';
 
         // Animate in
         setTimeout(() => {
@@ -86,6 +95,14 @@ console.log('🎴 Card Modal System Loading...');
 
         currentModal.classList.remove('active');
         document.body.classList.remove('modal-open');
+
+        // CRITICAL: Restore scroll position
+        const scrollY = document.body.style.top;
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        document.body.style.overflow = '';
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
 
         setTimeout(() => {
             if (currentModal) {
