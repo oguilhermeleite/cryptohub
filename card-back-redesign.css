@@ -1,0 +1,533 @@
+/* ============================================
+   CARD BACK REDESIGN - Cyber-Luxury Glass
+   Bold, functional, distinctive
+   ============================================ */
+
+/* Import distinctive fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+/* ============================================
+   CARD BACK CONTAINER
+   ============================================ */
+
+.card-back {
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 36px 28px 32px 28px;
+  height: 100%;
+  text-align: center;
+
+  /* Glassmorphism Background */
+  background: linear-gradient(
+    135deg,
+    rgba(15, 20, 30, 0.97) 0%,
+    rgba(20, 25, 35, 0.95) 50%,
+    rgba(15, 20, 30, 0.97) 100%
+  );
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+
+  /* Border with gradient */
+  border: 1px solid transparent;
+  background-image:
+    linear-gradient(rgba(15, 20, 30, 0.97), rgba(15, 20, 30, 0.97)),
+    linear-gradient(135deg, rgba(0, 245, 160, 0.3), rgba(0, 217, 255, 0.2));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+
+  /* Subtle inner glow */
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.05),
+    inset 0 0 60px 0 rgba(0, 245, 160, 0.03),
+    0 20px 60px -10px rgba(0, 0, 0, 0.5);
+
+  /* Critical for clicks */
+  pointer-events: auto !important;
+  z-index: 10 !important;
+  position: relative;
+
+  /* Smooth transitions */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================
+   CARD BACK LOGO
+   ============================================ */
+
+.card-back-logo {
+  /* Size */
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+  margin-bottom: 20px;
+
+  /* Styling */
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.04) 100%
+  );
+  padding: 14px;
+
+  /* Premium border */
+  border: 1px solid rgba(0, 245, 160, 0.15);
+
+  /* Glow effect */
+  box-shadow:
+    0 0 0 1px rgba(0, 245, 160, 0.1),
+    0 8px 32px -8px rgba(0, 245, 160, 0.2),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+
+  /* Smooth animation */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-back-logo:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow:
+    0 0 0 1px rgba(0, 245, 160, 0.25),
+    0 12px 48px -8px rgba(0, 245, 160, 0.35),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+}
+
+/* ============================================
+   CARD BACK HEADER
+   ============================================ */
+
+.card-back-header {
+  flex: 0 0 auto;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+/* ============================================
+   CARD BACK TITLE
+   ============================================ */
+
+.card-back-title {
+  /* Typography */
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+
+  /* Color with gradient */
+  color: #ffffff;
+  background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.9) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Spacing */
+  margin: 0 0 16px 0;
+  padding: 0;
+
+  /* Subtle text shadow for depth */
+  filter: drop-shadow(0 2px 8px rgba(0, 245, 160, 0.1));
+}
+
+/* ============================================
+   CARD BACK DESCRIPTION
+   ============================================ */
+
+.card-back-description {
+  /* Typography */
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14.5px;
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+
+  /* Color */
+  color: rgba(255, 255, 255, 0.75);
+
+  /* Layout */
+  margin: 0 auto 28px auto;
+  padding: 0;
+  max-width: 92%;
+
+  /* Flex */
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Ensure readable */
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+/* ============================================
+   CARD BACK BUTTONS CONTAINER
+   ============================================ */
+
+.card-back-buttons {
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+
+  /* Critical for clicks */
+  pointer-events: auto !important;
+  z-index: 999 !important;
+  position: relative;
+}
+
+/* ============================================
+   PRIMARY BUTTON - Visitar Site
+   ============================================ */
+
+.card-btn-primary,
+.btn-visit {
+  /* Layout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 17px 32px;
+  width: 100%;
+
+  /* Typography */
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+
+  /* Gradient background */
+  background: linear-gradient(
+    135deg,
+    #00f5a0 0%,
+    #00d9ff 100%
+  );
+  color: #0a0a0f;
+
+  /* Border */
+  border: none;
+  border-radius: 14px;
+
+  /* Premium shadow */
+  box-shadow:
+    0 0 0 1px rgba(0, 245, 160, 0.3),
+    0 8px 24px -6px rgba(0, 245, 160, 0.4),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
+
+  /* Critical for clicks */
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  z-index: 9999 !important;
+  position: relative;
+
+  /* Smooth transition */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Transform origin */
+  transform: translateY(0) scale(1);
+  transform-origin: center;
+}
+
+.card-btn-primary:hover,
+.btn-visit:hover {
+  /* Lift effect */
+  transform: translateY(-3px) scale(1.01);
+
+  /* Enhanced glow */
+  box-shadow:
+    0 0 0 1px rgba(0, 245, 160, 0.5),
+    0 16px 40px -8px rgba(0, 245, 160, 0.6),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.4);
+
+  /* Slightly brighter */
+  filter: brightness(1.05);
+}
+
+.card-btn-primary:active,
+.btn-visit:active {
+  transform: translateY(-1px) scale(0.99);
+  box-shadow:
+    0 0 0 1px rgba(0, 245, 160, 0.4),
+    0 4px 16px -4px rgba(0, 245, 160, 0.5),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
+}
+
+/* ============================================
+   SECONDARY BUTTON - Seguir no X
+   ============================================ */
+
+.card-btn-secondary:not(.card-btn-back),
+.btn-social {
+  /* Layout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 32px;
+  width: 100%;
+
+  /* Typography */
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+
+  /* Outline style */
+  background: rgba(0, 245, 160, 0.05);
+  color: #00f5a0;
+
+  /* Border with gradient */
+  border: 2px solid transparent;
+  border-radius: 14px;
+  background-image:
+    linear-gradient(rgba(15, 20, 30, 0.8), rgba(15, 20, 30, 0.8)),
+    linear-gradient(135deg, #00f5a0, #00d9ff);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+
+  /* Subtle shadow */
+  box-shadow:
+    0 4px 16px -4px rgba(0, 245, 160, 0.15),
+    inset 0 1px 0 0 rgba(0, 245, 160, 0.1);
+
+  /* Critical for clicks */
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  z-index: 9999 !important;
+  position: relative;
+
+  /* Smooth transition */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(0);
+}
+
+.card-btn-secondary:not(.card-btn-back):hover,
+.btn-social:hover {
+  /* Lift effect */
+  transform: translateY(-2px);
+
+  /* Brighter background */
+  background: rgba(0, 245, 160, 0.12);
+
+  /* Enhanced shadow */
+  box-shadow:
+    0 8px 24px -6px rgba(0, 245, 160, 0.25),
+    inset 0 1px 0 0 rgba(0, 245, 160, 0.15);
+}
+
+.card-btn-secondary:not(.card-btn-back):active,
+.btn-social:active {
+  transform: translateY(0);
+  background: rgba(0, 245, 160, 0.08);
+}
+
+/* ============================================
+   BACK BUTTON - Voltar
+   ============================================ */
+
+.card-btn-back,
+.btn-back {
+  /* Layout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 14px 24px;
+  width: auto;
+  margin: 4px auto 0 auto;
+
+  /* Typography */
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+
+  /* Minimal style */
+  background: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 8px;
+
+  /* Critical for clicks */
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  z-index: 9999 !important;
+  position: relative;
+
+  /* Smooth transition */
+  transition: all 0.25s ease;
+}
+
+.card-btn-back:hover,
+.btn-back:hover {
+  color: #00f5a0;
+  background: rgba(0, 245, 160, 0.06);
+  transform: translateX(-2px);
+}
+
+.card-btn-back:active,
+.btn-back:active {
+  color: #00d9ff;
+  background: rgba(0, 217, 255, 0.08);
+}
+
+/* ============================================
+   FORCE ALL INTERACTIONS TO WORK
+   ============================================ */
+
+.card-back a,
+.card-back button,
+.card-back .card-btn-primary,
+.card-back .card-btn-secondary,
+.card-back .btn-visit,
+.card-back .btn-social,
+.card-back .btn-back {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  z-index: 9999 !important;
+  position: relative !important;
+}
+
+/* Ensure card-back itself is clickable */
+.platform-card.flipped .card-back,
+.featured-card.flipped .card-back {
+  pointer-events: auto !important;
+  z-index: 10 !important;
+}
+
+/* Push card-front behind when flipped */
+.platform-card.flipped .card-front,
+.featured-card.flipped .card-front {
+  pointer-events: none !important;
+  z-index: -1 !important;
+  opacity: 0 !important;
+}
+
+/* ============================================
+   MOBILE RESPONSIVENESS
+   ============================================ */
+
+@media (max-width: 768px) {
+  .card-back {
+    padding: 30px 24px 28px 24px;
+  }
+
+  .card-back-logo {
+    width: 76px;
+    height: 76px;
+    margin-bottom: 16px;
+    padding: 12px;
+    border-radius: 18px;
+  }
+
+  .card-back-title {
+    font-size: 26px;
+    margin-bottom: 14px;
+  }
+
+  .card-back-description {
+    font-size: 13.5px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    max-width: 95%;
+  }
+
+  .card-btn-primary,
+  .btn-visit,
+  .card-btn-secondary:not(.card-btn-back),
+  .btn-social {
+    padding: 15px 28px;
+    font-size: 15px;
+  }
+
+  .card-btn-back,
+  .btn-back {
+    padding: 12px 20px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-back {
+    padding: 26px 20px 24px 20px;
+  }
+
+  .card-back-logo {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 14px;
+    padding: 10px;
+  }
+
+  .card-back-title {
+    font-size: 24px;
+  }
+
+  .card-back-description {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .card-btn-primary,
+  .btn-visit,
+  .card-btn-secondary:not(.card-btn-back),
+  .btn-social {
+    padding: 14px 24px;
+    font-size: 14.5px;
+    gap: 8px;
+  }
+}
+
+/* ============================================
+   LOADING STATE (OPTIONAL)
+   ============================================ */
+
+.card-back-loading {
+  opacity: 0.6;
+  pointer-events: none !important;
+}
+
+.card-back-loading .card-btn-primary,
+.card-back-loading .btn-visit {
+  animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+.card-back a:focus-visible,
+.card-back button:focus-visible {
+  outline: 2px solid #00f5a0;
+  outline-offset: 3px;
+  border-radius: 14px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .card-back,
+  .card-back *,
+  .card-btn-primary,
+  .card-btn-secondary,
+  .btn-visit,
+  .btn-social,
+  .btn-back {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
