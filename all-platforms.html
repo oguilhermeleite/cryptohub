@@ -63,6 +63,53 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "ug118e6101");
     </script>
+
+    <!-- ============================================
+         ULTRA FIX: Force card buttons to WORK
+         MAXIMUM PRIORITY - Links MUST be clickable
+         ============================================ -->
+    <style>
+        /* Force card-back to be interactive when visible */
+        .platform-card.flipped .card-back,
+        .platform-card:hover .card-back,
+        .featured-card.flipped .card-back,
+        .featured-card:hover .card-back {
+            pointer-events: auto !important;
+            z-index: 100 !important;
+        }
+
+        /* Force ALL links and buttons to be clickable */
+        .card-back a,
+        .card-back button,
+        .card-back .card-btn-primary,
+        .card-back .card-btn-secondary,
+        .card-back .card-back-buttons,
+        .card-back .card-back-buttons a,
+        .card-back .card-back-buttons button,
+        .platform-card.flipped .card-back *,
+        .platform-card.flipped .card-back a,
+        .platform-card.flipped .card-back button,
+        .platform-card:hover .card-back a,
+        .platform-card:hover .card-back button,
+        .featured-card.flipped .card-back *,
+        .featured-card.flipped .card-back a,
+        .featured-card.flipped .card-back button,
+        .featured-card:hover .card-back a,
+        .featured-card:hover .card-back button {
+            pointer-events: auto !important;
+            cursor: pointer !important;
+            z-index: 99999 !important;
+            position: relative !important;
+        }
+
+        /* Ensure no overlay blocks clicks */
+        .card-inner::before,
+        .card-inner::after,
+        .card-back::before,
+        .card-back::after {
+            pointer-events: none !important;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->

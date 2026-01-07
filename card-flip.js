@@ -1,5 +1,6 @@
 // ============================================
-// CARD FLIP SYSTEM - BUTTONS WORKING VERSION
+// CARD FLIP SYSTEM - SIMPLE & FUNCTIONAL
+// Buttons MUST work!
 // ============================================
 
 console.log('🎴 Card Flip JS Loading...');
@@ -33,24 +34,21 @@ console.log('🎴 Card Flip JS Loading...');
 
             const cardFront = card.querySelector('.card-front');
             const cardBack = card.querySelector('.card-back');
-            const backButtons = card.querySelectorAll('.card-back a, .card-back button');
 
             // Setup card front click (flip to back)
             if (cardFront) {
                 cardFront.addEventListener('click', function(e) {
                     // Don't flip if clicking a link/button
                     if (e.target.closest('a') || e.target.closest('button')) {
-                        console.log('🔗 Click on link/button - not flipping');
                         return;
                     }
 
                     console.log('👆 Click on FRONT - flipping to back');
-                    e.stopPropagation();
                     card.classList.add('flipped');
                 });
             }
 
-            // Setup "Voltar" button click
+            // Setup "Voltar" button ONLY
             const backButton = card.querySelector('.card-btn-back, .btn-back');
             if (backButton) {
                 backButton.addEventListener('click', function(e) {
@@ -61,44 +59,19 @@ console.log('🎴 Card Flip JS Loading...');
                 });
             }
 
-            // CRITICAL: Make sure all buttons are clickable
-            backButtons.forEach(btn => {
-                // Don't block link/button clicks
-                btn.addEventListener('click', function(e) {
-                    // If it's a "Voltar" button, flip back
-                    if (btn.classList.contains('card-btn-back') || btn.classList.contains('btn-back')) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        card.classList.remove('flipped');
-                        console.log('⬅️ Voltar button clicked');
-                    } else {
-                        // It's a normal link - let it work!
-                        // Stop propagation so card doesn't flip
-                        e.stopPropagation();
-                        console.log('🔗 Link clicked:', btn.href || btn.textContent);
-                    }
-                });
-
-                // Force button to be clickable
-                btn.style.pointerEvents = 'auto';
-                btn.style.cursor = 'pointer';
-                btn.style.position = 'relative';
-                btn.style.zIndex = '99999';
+            // CRITICAL: Just ensure links have proper styles
+            // DO NOT add any event listeners to links!
+            const allLinks = card.querySelectorAll('.card-back a:not(.card-btn-back)');
+            allLinks.forEach(link => {
+                // Force styles only - NO event listeners!
+                link.style.pointerEvents = 'auto';
+                link.style.cursor = 'pointer';
+                link.style.position = 'relative';
+                link.style.zIndex = '99999';
             });
 
-            // Click on card-back background (not buttons) to flip back
-            if (cardBack) {
-                cardBack.addEventListener('click', function(e) {
-                    // Only flip if clicking the background itself, not buttons/links
-                    if (e.target === cardBack ||
-                        e.target.classList.contains('card-back-header') ||
-                        e.target.classList.contains('card-back-title') ||
-                        e.target.classList.contains('card-back-description')) {
-                        console.log('👆 Click on background - flipping to front');
-                        card.classList.remove('flipped');
-                    }
-                });
-            }
+            // NO event listener on card-back!
+            // Links MUST work without interference
         });
 
         // ESC key to flip all cards back
@@ -112,7 +85,7 @@ console.log('🎴 Card Flip JS Loading...');
             }
         });
 
-        console.log('✅ Card flip system ready - buttons are clickable!');
+        console.log('✅ Card flip system ready - links work naturally!');
     }
 
 })();
