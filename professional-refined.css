@@ -486,6 +486,24 @@ body {
     border-color: var(--border-strong) !important;
 }
 
+/* Desktop: Hover to flip cards */
+@media (min-width: 769px) {
+    .platform-card {
+        cursor: default;
+    }
+
+    .platform-card:hover .card-inner {
+        transform: rotateY(180deg) !important;
+    }
+}
+
+/* Mobile: Click to flip cards */
+@media (max-width: 768px) {
+    .platform-card {
+        cursor: pointer;
+    }
+}
+
 /* Platform logo - refined and even larger for better visibility */
 .platform-logo {
     width: 104px;
@@ -563,8 +581,82 @@ body {
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   CARD FRONT - LOGO ONLY REDESIGN
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* Hide rating badge, KYC badge, and tags on front */
+.card-front .rating-badge,
+.card-front .kyc-badge,
+.card-front .platform-tags {
+    display: none !important;
+}
+
+/* Card front - centered logo + name only */
+.card-front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px !important;
+    gap: 20px;
+}
+
+.card-front .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Logo - clean, no circle background */
+.card-front .platform-logo {
+    width: 120px !important;
+    height: 120px !important;
+    padding: 0 !important;
+    background: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-front .platform-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Platform name - centered */
+.card-front .platform-name {
+    font-size: 24px !important;
+    font-weight: 600 !important;
+    color: var(--text-primary);
+    margin: 0 !important;
+    text-align: center;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    CARD BACK - Refined CTAs
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* Ensure card back is fully functional */
+.card-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.card-back a,
+.card-back button {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    text-decoration: none;
+}
 
 .card-btn-primary {
     background: linear-gradient(135deg, var(--emerald-500), var(--cyan-500)) !important;
@@ -577,6 +669,9 @@ body {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
+    display: block;
+    width: 100%;
+    text-align: center;
 }
 
 .card-btn-primary::after {
@@ -1011,6 +1106,18 @@ input:focus-visible {
     justify-content: space-between;
 }
 
+/* Fix featured section links - ensure they work */
+.featured-card .card-back a,
+.featured-card .card-back button {
+    pointer-events: auto !important;
+    z-index: 100;
+    cursor: pointer !important;
+}
+
+.featured-card.flipped .card-back {
+    pointer-events: auto !important;
+}
+
 /* When flipped, rotate the entire card-inner */
 .featured-card.flipped .card-inner {
     transform: rotateY(180deg);
@@ -1043,19 +1150,33 @@ input:focus-visible {
         rgba(139, 92, 246, 0.6) 100%);
 }
 
-/* Featured card logo - premium size with refined shadow */
-.featured-card .platform-logo {
-    width: 128px;
-    height: 128px;
-    padding: 22px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+/* Featured card logo - clean, no background */
+.featured-card .card-front .platform-logo {
+    width: 120px !important;
+    height: 120px !important;
+    padding: 0 !important;
+    background: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
 }
 
-.featured-card:hover .platform-logo {
-    transform: scale(1.05);
-    box-shadow:
-        0 8px 16px rgba(16, 185, 129, 0.15),
-        0 4px 8px rgba(0, 0, 0, 0.1);
+/* Featured cards - desktop hover flip */
+@media (min-width: 769px) {
+    .featured-card {
+        cursor: default;
+    }
+
+    .featured-card:hover .card-inner {
+        transform: rotateY(180deg) !important;
+    }
+}
+
+/* Featured cards - mobile click flip */
+@media (max-width: 768px) {
+    .featured-card {
+        cursor: pointer;
+    }
 }
 
 /* Featured card name - refined typography */

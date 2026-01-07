@@ -20,6 +20,11 @@ console.log('🎴 Card Flip JS Loading...');
 
         // Add click listener to document to catch all clicks
         document.addEventListener('click', function(e) {
+            // Desktop: Hover to flip (no click) - Mobile: Click to flip
+            if (window.innerWidth > 768) {
+                return; // Desktop uses hover, not click
+            }
+
             // Find if click was on or inside a platform card
             const card = e.target.closest('.platform-card');
 
@@ -27,7 +32,7 @@ console.log('🎴 Card Flip JS Loading...');
                 return; // Click was not on a card
             }
 
-            console.log('🖱️ Click detected on card:', card.getAttribute('data-platform'));
+            console.log('🖱️ Click detected on card (mobile):', card.getAttribute('data-platform'));
 
             // Check if click was on a button or link
             const isButton = e.target.closest('.card-btn-primary') ||
@@ -40,7 +45,7 @@ console.log('🎴 Card Flip JS Loading...');
                 return; // Let the button/link work normally
             }
 
-            // Toggle the flipped state
+            // Toggle the flipped state (mobile only)
             const wasFlipped = card.classList.contains('flipped');
             card.classList.toggle('flipped');
             const isFlipped = card.classList.contains('flipped');
