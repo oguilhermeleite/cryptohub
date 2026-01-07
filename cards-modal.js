@@ -29,9 +29,6 @@ console.log('🎴 Card Modal System Loading...');
                         <img src="${platformData.logo}" alt="${platformData.name}" onerror="this.src='https://www.google.com/s2/favicons?domain=${platformData.domain}&sz=128'">
                     </div>
                     <h2 class="modal-title">${platformData.name}</h2>
-                    <div class="modal-badges">
-                        ${platformData.kyc ? `<span class="card-badge card-badge-kyc">${platformData.kyc}</span>` : ''}
-                    </div>
                 </div>
 
                 <p class="modal-description">${platformData.description}</p>
