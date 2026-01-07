@@ -486,44 +486,20 @@ body {
     border-color: var(--border-strong) !important;
 }
 
-/* Desktop: Hover to flip cards */
-@media (min-width: 769px) {
-    .platform-card {
-        cursor: default;
-    }
-
-    .platform-card:hover .card-inner {
-        transform: rotateY(180deg) !important;
-    }
-
-    /* Ensure card-back is interactive on hover */
-    .platform-card:hover .card-back {
-        pointer-events: auto !important;
-    }
-
-    .platform-card:hover .card-back a,
-    .platform-card:hover .card-back button {
-        pointer-events: auto !important;
-        cursor: pointer !important;
-    }
+/* Click to flip cards - Desktop and Mobile */
+.platform-card {
+    cursor: pointer;
 }
 
-/* Mobile: Click to flip cards */
-@media (max-width: 768px) {
-    .platform-card {
-        cursor: pointer;
-    }
+/* Ensure card-back is interactive when flipped */
+.platform-card.flipped .card-back {
+    pointer-events: auto !important;
+}
 
-    /* Ensure card-back is interactive when flipped */
-    .platform-card.flipped .card-back {
-        pointer-events: auto !important;
-    }
-
-    .platform-card.flipped .card-back a,
-    .platform-card.flipped .card-back button {
-        pointer-events: auto !important;
-        cursor: pointer !important;
-    }
+.platform-card.flipped .card-back a,
+.platform-card.flipped .card-back button {
+    pointer-events: auto !important;
+    cursor: pointer !important;
 }
 
 /* Platform logo - refined and even larger for better visibility */
@@ -674,9 +650,8 @@ body {
     pointer-events: none;
 }
 
-/* Enable interactions when card is flipped or hovered */
-.platform-card.flipped .card-back,
-.platform-card:hover .card-back {
+/* Enable interactions when card is flipped */
+.platform-card.flipped .card-back {
     pointer-events: auto !important;
 }
 
@@ -1192,44 +1167,20 @@ input:focus-visible {
     border: none !important;
 }
 
-/* Featured cards - desktop hover flip */
-@media (min-width: 769px) {
-    .featured-card {
-        cursor: default;
-    }
-
-    .featured-card:hover .card-inner {
-        transform: rotateY(180deg) !important;
-    }
-
-    /* Ensure featured card-back is interactive on hover */
-    .featured-card:hover .card-back {
-        pointer-events: auto !important;
-    }
-
-    .featured-card:hover .card-back a,
-    .featured-card:hover .card-back button {
-        pointer-events: auto !important;
-        cursor: pointer !important;
-    }
+/* Featured cards - click to flip */
+.featured-card {
+    cursor: pointer;
 }
 
-/* Featured cards - mobile click flip */
-@media (max-width: 768px) {
-    .featured-card {
-        cursor: pointer;
-    }
+/* Ensure featured card-back is interactive when flipped */
+.featured-card.flipped .card-back {
+    pointer-events: auto !important;
+}
 
-    /* Ensure featured card-back is interactive when flipped */
-    .featured-card.flipped .card-back {
-        pointer-events: auto !important;
-    }
-
-    .featured-card.flipped .card-back a,
-    .featured-card.flipped .card-back button {
-        pointer-events: auto !important;
-        cursor: pointer !important;
-    }
+.featured-card.flipped .card-back a,
+.featured-card.flipped .card-back button {
+    pointer-events: auto !important;
+    cursor: pointer !important;
 }
 
 /* Featured card name - refined typography */
