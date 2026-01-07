@@ -495,12 +495,34 @@ body {
     .platform-card:hover .card-inner {
         transform: rotateY(180deg) !important;
     }
+
+    /* Ensure card-back is interactive on hover */
+    .platform-card:hover .card-back {
+        pointer-events: auto !important;
+    }
+
+    .platform-card:hover .card-back a,
+    .platform-card:hover .card-back button {
+        pointer-events: auto !important;
+        cursor: pointer !important;
+    }
 }
 
 /* Mobile: Click to flip cards */
 @media (max-width: 768px) {
     .platform-card {
         cursor: pointer;
+    }
+
+    /* Ensure card-back is interactive when flipped */
+    .platform-card.flipped .card-back {
+        pointer-events: auto !important;
+    }
+
+    .platform-card.flipped .card-back a,
+    .platform-card.flipped .card-back button {
+        pointer-events: auto !important;
+        cursor: pointer !important;
     }
 }
 
@@ -649,6 +671,13 @@ body {
     flex-direction: column;
     justify-content: space-between;
     padding: 30px;
+    pointer-events: none;
+}
+
+/* Enable interactions when card is flipped or hovered */
+.platform-card.flipped .card-back,
+.platform-card:hover .card-back {
+    pointer-events: auto !important;
 }
 
 .card-back a,
@@ -656,6 +685,8 @@ body {
     pointer-events: auto !important;
     cursor: pointer !important;
     text-decoration: none;
+    position: relative;
+    z-index: 10;
 }
 
 .card-btn-primary {
@@ -1170,12 +1201,34 @@ input:focus-visible {
     .featured-card:hover .card-inner {
         transform: rotateY(180deg) !important;
     }
+
+    /* Ensure featured card-back is interactive on hover */
+    .featured-card:hover .card-back {
+        pointer-events: auto !important;
+    }
+
+    .featured-card:hover .card-back a,
+    .featured-card:hover .card-back button {
+        pointer-events: auto !important;
+        cursor: pointer !important;
+    }
 }
 
 /* Featured cards - mobile click flip */
 @media (max-width: 768px) {
     .featured-card {
         cursor: pointer;
+    }
+
+    /* Ensure featured card-back is interactive when flipped */
+    .featured-card.flipped .card-back {
+        pointer-events: auto !important;
+    }
+
+    .featured-card.flipped .card-back a,
+    .featured-card.flipped .card-back button {
+        pointer-events: auto !important;
+        cursor: pointer !important;
     }
 }
 
