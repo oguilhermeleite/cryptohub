@@ -1,5 +1,6 @@
 // ============================================
-// CRITICAL FIX: Ensure clicks pass through to links
+// CRITICAL FIX: Ensure buttons are clickable
+// DO NOT CLONE - Just force styles
 // ============================================
 
 console.log('🔧 Card Buttons Fix Loading...');
@@ -8,23 +9,23 @@ console.log('🔧 Card Buttons Fix Loading...');
     'use strict';
 
     function enableCardButtons() {
-        console.log('🔧 Enabling card buttons...');
+        console.log('🔧 Forcing button styles to be clickable...');
 
-        // Ensure clicks pass through to links
-        document.querySelectorAll('.card-back a, .card-back button').forEach(link => {
-            // Remove any previous listeners by cloning
-            const newLink = link.cloneNode(true);
-            link.parentNode.replaceChild(newLink, link);
-
-            // Add simple click handler
-            newLink.addEventListener('click', (e) => {
-                e.stopPropagation(); // Prevent card from capturing click
-                console.log('🔗 Button clicked:', newLink.textContent.trim(), newLink.href || 'button');
-                // Let default link behavior work
-            });
+        // Just force CSS styles - DO NOT clone or add listeners
+        document.querySelectorAll('.card-back a, .card-back button').forEach(elem => {
+            // Force clickable styles
+            elem.style.pointerEvents = 'auto';
+            elem.style.cursor = 'pointer';
+            elem.style.position = 'relative';
+            elem.style.zIndex = '99999';
         });
 
-        console.log('✅ Card buttons enabled');
+        // Force card-back containers to be clickable
+        document.querySelectorAll('.card-back, .card-back-buttons').forEach(elem => {
+            elem.style.pointerEvents = 'auto';
+        });
+
+        console.log('✅ Button styles applied');
     }
 
     // Run on load
@@ -35,9 +36,11 @@ console.log('🔧 Card Buttons Fix Loading...');
     }
 
     // Re-run when cards are flipped
+    let flipTimeout;
     document.addEventListener('click', function(e) {
         if (e.target.closest('.platform-card') || e.target.closest('.card-front')) {
-            setTimeout(enableCardButtons, 100);
+            clearTimeout(flipTimeout);
+            flipTimeout = setTimeout(enableCardButtons, 100);
         }
     });
 
