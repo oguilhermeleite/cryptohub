@@ -171,11 +171,7 @@ console.log('🎴 Card Modal System Loading...');
             </div>
         `;
 
-        // CRITICAL: Add to body LAST (after all content)
-        document.body.appendChild(modal);
-        currentModal = modal;
-
-        // CRITICAL: Lock body scroll IMMEDIATELY
+        // CRITICAL: Lock body scroll BEFORE adding modal
         document.documentElement.style.overflow = 'hidden';
         document.body.style.overflow = 'hidden';
         document.body.style.position = 'fixed';
@@ -185,6 +181,19 @@ console.log('🎴 Card Modal System Loading...');
         document.body.style.width = '100%';
 
         console.log('🔒 Body locked at scroll position:', scrollY);
+
+        // Add to body AFTER locking scroll
+        document.body.appendChild(modal);
+        currentModal = modal;
+
+        // FORCE scroll to stay at current position (prevent auto-scroll)
+        window.scrollTo(0, scrollY);
+
+        // Double-check: Force scroll again after a micro-delay
+        setTimeout(() => {
+            window.scrollTo(0, scrollY);
+            console.log('🔒 Forced scroll back to:', scrollY);
+        }, 0);
 
         // Animate in
         requestAnimationFrame(() => {
