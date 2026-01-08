@@ -1304,23 +1304,62 @@
     <!-- Premium Elements System -->
     <script src="premium-elements.js?v=premium-2026"></script>
 
-    <!-- Featured Carousel Navigation Script -->
+    <!-- Universal Carousel Navigation Script -->
     <script>
-        // Add carousel scroll functionality for featured section
         document.addEventListener('DOMContentLoaded', () => {
+            // Featured section carousel
             const featuredGrid = document.querySelector('.featured-cards-grid');
-            const leftArrow = document.querySelector('.featured-arrow-left');
-            const rightArrow = document.querySelector('.featured-arrow-right');
+            const featuredLeftArrow = document.querySelector('.featured-arrow-left');
+            const featuredRightArrow = document.querySelector('.featured-arrow-right');
 
-            if (leftArrow && rightArrow && featuredGrid) {
-                leftArrow.addEventListener('click', () => {
-                    featuredGrid.scrollBy({ left: -400, behavior: 'smooth' });
+            if (featuredLeftArrow && featuredRightArrow && featuredGrid) {
+                featuredLeftArrow.addEventListener('click', () => {
+                    featuredGrid.scrollBy({ left: -374, behavior: 'smooth' });
                 });
 
-                rightArrow.addEventListener('click', () => {
-                    featuredGrid.scrollBy({ left: 400, behavior: 'smooth' });
+                featuredRightArrow.addEventListener('click', () => {
+                    featuredGrid.scrollBy({ left: 374, behavior: 'smooth' });
                 });
             }
+
+            // All other sections with carousel-arrow
+            const carouselArrows = document.querySelectorAll('.carousel-arrow');
+
+            carouselArrows.forEach(arrow => {
+                arrow.addEventListener('click', () => {
+                    const carouselId = arrow.getAttribute('data-carousel');
+                    const isLeft = arrow.classList.contains('carousel-arrow-left');
+
+                    // Find the grid container in the same section
+                    const section = arrow.closest('.platform-section');
+                    const grid = section?.querySelector('.cards-final-grid');
+
+                    if (grid) {
+                        const scrollAmount = 374; // Card width (350px) + gap (24px)
+                        grid.scrollBy({
+                            left: isLeft ? -scrollAmount : scrollAmount,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Update scroll indicators on scroll
+            document.querySelectorAll('.cards-final-grid').forEach(grid => {
+                grid.addEventListener('scroll', () => {
+                    const section = grid.closest('.platform-section') || grid.closest('.featured-section');
+                    const dots = section?.querySelectorAll('.scroll-dot');
+
+                    if (dots && dots.length > 0) {
+                        const scrollPercentage = (grid.scrollLeft / (grid.scrollWidth - grid.clientWidth)) * 100;
+                        const activeIndex = Math.round((scrollPercentage / 100) * (dots.length - 1));
+
+                        dots.forEach((dot, index) => {
+                            dot.classList.toggle('active', index === activeIndex);
+                        });
+                    }
+                });
+            });
         });
     </script>
 </body>

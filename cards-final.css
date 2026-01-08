@@ -8,14 +8,18 @@
   background: linear-gradient(135deg, rgba(20, 25, 35, 0.98) 0%, rgba(15, 20, 30, 0.98) 100%);
   border: 1px solid rgba(0, 245, 160, 0.25);
   border-radius: 24px;
-  padding: 32px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: visible;
-  min-height: 420px;
+  flex: 0 0 350px;
+  min-width: 350px;
+  height: auto;
+  min-height: 480px;
+  scroll-snap-align: center;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -29,12 +33,12 @@
 
 /* Logo Container */
 .card-logo-container {
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
   margin: 0 auto;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
-  border-radius: 24px;
-  padding: 20px;
+  border-radius: 20px;
+  padding: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,6 +48,7 @@
     0 8px 32px rgba(0, 245, 160, 0.15),
     inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
   transition: all 0.4s ease;
+  flex-shrink: 0;
 }
 
 .platform-card-final:hover .card-logo-container {
@@ -63,7 +68,7 @@
 
 /* Card Title */
 .card-final-title {
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 700;
   color: #ffffff;
   text-align: center;
@@ -77,27 +82,31 @@
 
 /* Card Description */
 .card-final-description {
-  font-size: 15px;
-  line-height: 1.7;
+  font-size: 13px;
+  line-height: 1.5;
   color: rgba(255, 255, 255, 0.75);
   text-align: center;
   flex: 1;
-  margin: 8px 0;
-  min-height: 80px;
+  margin: 4px 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 /* Buttons Container */
 .card-final-buttons {
   display: flex;
-  gap: 12px;
+  flex-direction: column;
+  gap: 10px;
   margin-top: auto;
 }
 
 .card-final-btn {
-  flex: 1;
-  padding: 16px 24px;
-  border-radius: 14px;
-  font-size: 16px;
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 14px;
   font-weight: 700;
   text-decoration: none;
   text-align: center;
@@ -107,7 +116,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 6px;
   position: relative;
   white-space: nowrap;
 }
@@ -148,72 +157,72 @@
 }
 
 /* Responsive - Mobile */
-@media (max-width: 768px) {
-  .platform-card-final {
-    padding: 28px 24px;
-    min-height: 400px;
-  }
-
-  .card-logo-container {
-    width: 100px;
-    height: 100px;
-    padding: 16px;
-  }
-
-  .card-final-title {
-    font-size: 24px;
-  }
-
-  .card-final-description {
-    font-size: 14px;
-    min-height: 70px;
-  }
-
-  .card-final-buttons {
-    flex-direction: column;
-  }
-
-  .card-final-btn {
-    padding: 14px 20px;
-    font-size: 15px;
-  }
-}
-
 @media (max-width: 480px) {
   .platform-card-final {
-    padding: 24px 20px;
+    padding: 20px;
+    min-height: 450px;
   }
 
   .card-logo-container {
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
+    padding: 14px;
   }
 
   .card-final-title {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .card-final-description {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .card-final-btn {
-    font-size: 14px;
+    padding: 10px 16px;
+    font-size: 13px;
   }
 }
 
-/* Grid Layout for Cards */
+/* Horizontal Carousel Layout for Cards */
 .cards-final-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: 28px;
-  padding: 20px 0;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 24px;
+  padding: 20px;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
 }
 
+/* Custom Scrollbar */
+.cards-final-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.cards-final-grid::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.cards-final-grid::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #00f5a0, #00d9ff);
+  border-radius: 10px;
+}
+
+.cards-final-grid::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #00d9ff, #00f5a0);
+}
+
+/* Mobile - One Card Per View */
 @media (max-width: 768px) {
+  .platform-card-final {
+    flex: 0 0 85%;
+    min-width: 85%;
+  }
+
   .cards-final-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 16px;
+    padding: 16px;
   }
 }
 
@@ -221,4 +230,101 @@
 .card-final-btn:focus-visible {
   outline: 3px solid #00f5a0;
   outline-offset: 4px;
+}
+
+/* ============================================
+   CAROUSEL NAVIGATION - Arrow Buttons
+   ============================================ */
+
+.carousel-navigation,
+.featured-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.carousel-arrow,
+.carousel-arrow-left,
+.carousel-arrow-right,
+.featured-arrow,
+.featured-arrow-left,
+.featured-arrow-right {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(0, 245, 160, 0.15) 0%, rgba(0, 217, 255, 0.15) 100%);
+  border: 2px solid rgba(0, 245, 160, 0.4);
+  color: #00f5a0;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.carousel-arrow:hover,
+.carousel-arrow-left:hover,
+.carousel-arrow-right:hover,
+.featured-arrow:hover,
+.featured-arrow-left:hover,
+.featured-arrow-right:hover {
+  background: linear-gradient(135deg, rgba(0, 245, 160, 0.25) 0%, rgba(0, 217, 255, 0.25) 100%);
+  border-color: rgba(0, 245, 160, 0.6);
+  transform: scale(1.1);
+  box-shadow: 0 8px 24px rgba(0, 245, 160, 0.3);
+}
+
+.carousel-arrow:active,
+.carousel-arrow-left:active,
+.carousel-arrow-right:active,
+.featured-arrow:active,
+.featured-arrow-left:active,
+.featured-arrow-right:active {
+  transform: scale(0.95);
+}
+
+/* Scroll Indicators (Dots) */
+.scroll-indicator {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.scroll-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.scroll-dot.active {
+  width: 24px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #00f5a0, #00d9ff);
+}
+
+@media (max-width: 768px) {
+  .carousel-arrow,
+  .carousel-arrow-left,
+  .carousel-arrow-right,
+  .featured-arrow,
+  .featured-arrow-left,
+  .featured-arrow-right {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .carousel-navigation,
+  .featured-navigation {
+    margin-top: 16px;
+    gap: 12px;
+  }
 }
