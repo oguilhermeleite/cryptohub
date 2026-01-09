@@ -1,15 +1,15 @@
 /* ============================================
-   PREMIUM CARDS - Refined Financial Minimalism
-   Professional crypto platform design
+   PREMIUM CARDS - Black/Orange Brutalist Theme
+   Vibrant crypto platform design
    ============================================ */
 
-/* Card Container - Premium Glass Morphism */
+/* Card Container - Pure Black Glass */
 .platform-card-final {
   background: linear-gradient(135deg,
-    rgba(20, 25, 35, 0.95) 0%,
-    rgba(15, 20, 30, 0.98) 100%
+    #1a1a1a 0%,
+    #000000 100%
   );
-  border: 1.5px solid rgba(0, 245, 160, 0.2);
+  border: 1.5px solid #2a2a2a;
   border-radius: 20px;
   padding: 32px 28px;
   display: flex;
@@ -27,8 +27,8 @@
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.03) inset,
-    0 4px 16px rgba(0, 0, 0, 0.4),
-    0 8px 32px rgba(0, 0, 0, 0.2);
+    0 4px 16px rgba(0, 0, 0, 0.5),
+    0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .platform-card-final::before {
@@ -38,9 +38,9 @@
   border-radius: 20px;
   padding: 1.5px;
   background: linear-gradient(135deg,
-    rgba(0, 245, 160, 0.15) 0%,
-    rgba(0, 217, 255, 0.1) 50%,
-    rgba(0, 245, 160, 0.05) 100%
+    rgba(255, 107, 53, 0.15) 0%,
+    rgba(255, 140, 66, 0.1) 50%,
+    rgba(255, 107, 53, 0.05) 100%
   );
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -51,20 +51,20 @@
 }
 
 .platform-card-final:hover {
-  border-color: rgba(0, 245, 160, 0.4);
+  border-color: rgba(255, 107, 53, 0.4);
   transform: translateY(-6px);
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.06) inset,
-    0 8px 24px rgba(0, 0, 0, 0.3),
-    0 16px 48px rgba(0, 245, 160, 0.15),
-    0 0 80px rgba(0, 245, 160, 0.08);
+    0 8px 24px rgba(0, 0, 0, 0.4),
+    0 16px 48px rgba(255, 107, 53, 0.2),
+    0 0 80px rgba(255, 107, 53, 0.12);
 }
 
 .platform-card-final:hover::before {
   opacity: 1;
 }
 
-/* Logo Container - Premium Depth */
+/* Logo Container - Orange Accent Depth */
 .card-logo-container {
   width: 96px;
   height: 96px;
@@ -78,11 +78,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1.5px solid rgba(0, 245, 160, 0.15);
+  border: 1.5px solid rgba(255, 107, 53, 0.15);
   box-shadow:
-    0 0 0 1px rgba(0, 245, 160, 0.08) inset,
-    0 4px 16px rgba(0, 245, 160, 0.08),
-    0 8px 32px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(255, 107, 53, 0.08) inset,
+    0 4px 16px rgba(255, 107, 53, 0.08),
+    0 8px 32px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
   transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
   flex-shrink: 0;
@@ -95,7 +95,7 @@
   inset: -1px;
   border-radius: 18px;
   background: linear-gradient(135deg,
-    rgba(0, 245, 160, 0.2) 0%,
+    rgba(255, 107, 53, 0.25) 0%,
     transparent 50%
   );
   opacity: 0;
@@ -105,11 +105,11 @@
 
 .platform-card-final:hover .card-logo-container {
   transform: translateY(-2px) scale(1.03);
-  border-color: rgba(0, 245, 160, 0.3);
+  border-color: rgba(255, 107, 53, 0.35);
   box-shadow:
-    0 0 0 1px rgba(0, 245, 160, 0.15) inset,
-    0 6px 20px rgba(0, 245, 160, 0.15),
-    0 12px 40px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(255, 107, 53, 0.2) inset,
+    0 6px 20px rgba(255, 107, 53, 0.2),
+    0 12px 40px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
 }
 
@@ -121,10 +121,10 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
 }
 
-/* Card Title - Premium Typography */
+/* Card Title - Bold White Typography */
 .card-final-title {
   font-size: 24px;
   font-weight: 600;
@@ -143,12 +143,12 @@
   text-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
 }
 
-/* Card Description - Refined Readability */
+/* Card Description - Light Grey Readability */
 .card-final-description {
   font-size: 14px;
   line-height: 1.65;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.7);
+  color: #B0B0B0;
   text-align: center;
   flex: 1;
   margin: 0 0 28px;
@@ -168,7 +168,7 @@
   padding-top: 8px;
 }
 
-/* Button Base - Premium Interaction */
+/* Button Base - Vibrant Interaction */
 .card-final-btn {
   width: 100%;
   padding: 14px 24px;
@@ -208,12 +208,12 @@
   opacity: 1;
 }
 
-/* Primary Button - Visit Site */
+/* Primary Button - Vibrant Orange */
 .card-final-btn-primary {
-  background: linear-gradient(135deg, #00f5a0 0%, #00d9ff 100%);
-  color: #0a0a0f;
+  background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+  color: #FFFFFF;
   box-shadow:
-    0 4px 16px rgba(0, 245, 160, 0.3),
+    0 4px 16px rgba(255, 107, 53, 0.4),
     0 1px 0 rgba(255, 255, 255, 0.2) inset;
   position: relative;
   overflow: hidden;
@@ -237,9 +237,10 @@
 .card-final-btn-primary:hover {
   transform: translateY(-2px);
   box-shadow:
-    0 6px 24px rgba(0, 245, 160, 0.45),
-    0 1px 0 rgba(255, 255, 255, 0.3) inset;
-  filter: brightness(1.08);
+    0 6px 24px rgba(255, 107, 53, 0.6),
+    0 1px 0 rgba(255, 255, 255, 0.3) inset,
+    0 0 40px rgba(255, 107, 53, 0.3);
+  filter: brightness(1.12);
 }
 
 .card-final-btn-primary:hover::after {
@@ -249,34 +250,34 @@
 .card-final-btn-primary:active {
   transform: translateY(-1px);
   box-shadow:
-    0 4px 16px rgba(0, 245, 160, 0.35),
+    0 4px 16px rgba(255, 107, 53, 0.45),
     0 1px 0 rgba(255, 255, 255, 0.2) inset;
 }
 
-/* Secondary Button - Follow on X */
+/* Secondary Button - Orange Outline */
 .card-final-btn-secondary {
-  background: rgba(0, 245, 160, 0.08);
-  border: 1.5px solid rgba(0, 245, 160, 0.35);
-  color: #00f5a0;
+  background: rgba(255, 107, 53, 0.08);
+  border: 1.5px solid rgba(255, 107, 53, 0.35);
+  color: #FF6B35;
   box-shadow:
-    0 0 0 1px rgba(0, 245, 160, 0.1) inset,
-    0 2px 8px rgba(0, 0, 0, 0.15);
+    0 0 0 1px rgba(255, 107, 53, 0.1) inset,
+    0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .card-final-btn-secondary:hover {
-  background: rgba(0, 245, 160, 0.15);
-  border-color: rgba(0, 245, 160, 0.5);
+  background: rgba(255, 107, 53, 0.15);
+  border-color: rgba(255, 107, 53, 0.5);
   transform: translateY(-2px);
   box-shadow:
-    0 0 0 1px rgba(0, 245, 160, 0.15) inset,
-    0 4px 16px rgba(0, 245, 160, 0.2),
-    0 8px 32px rgba(0, 245, 160, 0.1);
-  color: #00ffb3;
+    0 0 0 1px rgba(255, 107, 53, 0.15) inset,
+    0 4px 16px rgba(255, 107, 53, 0.25),
+    0 8px 32px rgba(255, 107, 53, 0.15);
+  color: #FFA466;
 }
 
 .card-final-btn-secondary:active {
   transform: translateY(0);
-  background: rgba(0, 245, 160, 0.12);
+  background: rgba(255, 107, 53, 0.12);
 }
 
 /* Responsive - Mobile Optimization */
@@ -321,7 +322,7 @@
   scroll-behavior: smooth;
 }
 
-/* Premium Scrollbar */
+/* Orange Scrollbar */
 .cards-final-grid::-webkit-scrollbar {
   height: 6px;
 }
@@ -333,14 +334,14 @@
 }
 
 .cards-final-grid::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #00f5a0, #00d9ff);
+  background: linear-gradient(135deg, #FF6B35, #FF8C42);
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 245, 160, 0.3);
+  box-shadow: 0 0 10px rgba(255, 107, 53, 0.4);
 }
 
 .cards-final-grid::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #00d9ff, #00f5a0);
-  box-shadow: 0 0 15px rgba(0, 245, 160, 0.5);
+  background: linear-gradient(135deg, #FF8C42, #FF6B35);
+  box-shadow: 0 0 15px rgba(255, 107, 53, 0.6);
 }
 
 /* Mobile - One Card Per View */
@@ -356,17 +357,17 @@
   }
 }
 
-/* Accessibility - Premium Focus States */
+/* Accessibility - Orange Focus States */
 .card-final-btn:focus-visible {
-  outline: 2px solid #00f5a0;
+  outline: 2px solid #FF6B35;
   outline-offset: 3px;
   box-shadow:
-    0 0 0 4px rgba(0, 245, 160, 0.2),
-    0 6px 24px rgba(0, 245, 160, 0.4);
+    0 0 0 4px rgba(255, 107, 53, 0.25),
+    0 6px 24px rgba(255, 107, 53, 0.5);
 }
 
 /* ============================================
-   CAROUSEL NAVIGATION - Premium Controls
+   CAROUSEL NAVIGATION - Orange Controls
    ============================================ */
 
 .carousel-navigation,
@@ -388,11 +389,11 @@
   height: 48px;
   border-radius: 12px;
   background: linear-gradient(135deg,
-    rgba(0, 245, 160, 0.12) 0%,
-    rgba(0, 217, 255, 0.08) 100%
+    rgba(255, 107, 53, 0.12) 0%,
+    rgba(255, 140, 66, 0.08) 100%
   );
-  border: 1.5px solid rgba(0, 245, 160, 0.3);
-  color: #00f5a0;
+  border: 1.5px solid rgba(255, 107, 53, 0.3);
+  color: #FF6B35;
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
@@ -403,8 +404,8 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow:
-    0 0 0 1px rgba(0, 245, 160, 0.1) inset,
-    0 4px 12px rgba(0, 0, 0, 0.2);
+    0 0 0 1px rgba(255, 107, 53, 0.1) inset,
+    0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .carousel-arrow:hover,
@@ -414,15 +415,15 @@
 .featured-arrow-left:hover,
 .featured-arrow-right:hover {
   background: linear-gradient(135deg,
-    rgba(0, 245, 160, 0.2) 0%,
-    rgba(0, 217, 255, 0.15) 100%
+    rgba(255, 107, 53, 0.2) 0%,
+    rgba(255, 140, 66, 0.15) 100%
   );
-  border-color: rgba(0, 245, 160, 0.5);
+  border-color: rgba(255, 107, 53, 0.5);
   transform: translateY(-2px);
   box-shadow:
-    0 0 0 1px rgba(0, 245, 160, 0.15) inset,
-    0 6px 20px rgba(0, 245, 160, 0.25),
-    0 0 40px rgba(0, 245, 160, 0.1);
+    0 0 0 1px rgba(255, 107, 53, 0.15) inset,
+    0 6px 20px rgba(255, 107, 53, 0.3),
+    0 0 40px rgba(255, 107, 53, 0.15);
 }
 
 .carousel-arrow:active,
@@ -433,11 +434,11 @@
 .featured-arrow-right:active {
   transform: translateY(0);
   box-shadow:
-    0 0 0 1px rgba(0, 245, 160, 0.12) inset,
-    0 2px 8px rgba(0, 0, 0, 0.25);
+    0 0 0 1px rgba(255, 107, 53, 0.12) inset,
+    0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Scroll Indicators (Dots) - Refined */
+/* Scroll Indicators (Dots) - Orange Accent */
 .scroll-indicator {
   display: flex;
   gap: 8px;
@@ -450,16 +451,17 @@
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.25);
   transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
 }
 
 .scroll-dot.active {
   width: 20px;
   border-radius: 3px;
-  background: linear-gradient(135deg, #00f5a0, #00d9ff);
+  background: linear-gradient(135deg, #FF6B35, #FF8C42);
   box-shadow:
-    0 0 0 1px rgba(0, 245, 160, 0.3),
-    0 2px 8px rgba(0, 245, 160, 0.3);
+    0 0 0 1px rgba(255, 107, 53, 0.4),
+    0 2px 8px rgba(255, 107, 53, 0.4),
+    0 0 16px rgba(255, 107, 53, 0.2);
 }
 
 @media (max-width: 768px) {
