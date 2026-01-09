@@ -3,13 +3,10 @@
    Vibrant crypto platform design
    ============================================ */
 
-/* Card Container - Dark Blue Glass with Gold */
+/* Card Container - Dark Grey with Orange Border */
 .platform-card-final {
-  background: linear-gradient(135deg,
-    rgba(20, 30, 50, 0.9) 0%,
-    rgba(10, 14, 39, 0.95) 100%
-  );
-  border: 1.5px solid rgba(255, 215, 0, 0.3);
+  background: #1a1a1a;
+  border: 1.5px solid #333333;
   border-radius: 20px;
   padding: 32px 28px;
   display: flex;
@@ -38,9 +35,9 @@
   border-radius: 20px;
   padding: 1.5px;
   background: linear-gradient(135deg,
-    rgba(255, 107, 53, 0.15) 0%,
-    rgba(255, 140, 66, 0.1) 50%,
-    rgba(255, 107, 53, 0.05) 100%
+    rgba(255, 165, 0, 0.15) 0%,
+    rgba(255, 140, 0, 0.1) 50%,
+    rgba(255, 165, 0, 0.05) 100%
   );
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -51,13 +48,13 @@
 }
 
 .platform-card-final:hover {
-  border-color: rgba(255, 107, 53, 0.4);
+  border-color: #FFA500;
   transform: translateY(-6px);
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.06) inset,
     0 8px 24px rgba(0, 0, 0, 0.4),
-    0 16px 48px rgba(255, 107, 53, 0.2),
-    0 0 80px rgba(255, 107, 53, 0.12);
+    0 16px 48px rgba(255, 165, 0, 0.2),
+    0 0 80px rgba(255, 165, 0, 0.12);
 }
 
 .platform-card-final:hover::before {
@@ -208,12 +205,12 @@
   opacity: 1;
 }
 
-/* Primary Button - Vibrant Orange */
+/* Primary Button - Orange Gradient */
 .card-final-btn-primary {
-  background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
-  color: #FFFFFF;
+  background: linear-gradient(135deg, #FFA500 0%, #FF8C00 100%);
+  color: #000000;
   box-shadow:
-    0 4px 16px rgba(255, 107, 53, 0.4),
+    0 4px 16px rgba(255, 165, 0, 0.4),
     0 1px 0 rgba(255, 255, 255, 0.2) inset;
   position: relative;
   overflow: hidden;
@@ -237,9 +234,9 @@
 .card-final-btn-primary:hover {
   transform: translateY(-2px);
   box-shadow:
-    0 6px 24px rgba(255, 107, 53, 0.6),
+    0 6px 24px rgba(255, 165, 0, 0.6),
     0 1px 0 rgba(255, 255, 255, 0.3) inset,
-    0 0 40px rgba(255, 107, 53, 0.3);
+    0 0 40px rgba(255, 165, 0, 0.3);
   filter: brightness(1.12);
 }
 
@@ -250,34 +247,34 @@
 .card-final-btn-primary:active {
   transform: translateY(-1px);
   box-shadow:
-    0 4px 16px rgba(255, 107, 53, 0.45),
+    0 4px 16px rgba(255, 165, 0, 0.45),
     0 1px 0 rgba(255, 255, 255, 0.2) inset;
 }
 
-/* Secondary Button - Orange Outline */
+/* Secondary Button - Transparent with White Border */
 .card-final-btn-secondary {
-  background: rgba(255, 107, 53, 0.08);
-  border: 1.5px solid rgba(255, 107, 53, 0.35);
-  color: #FF6B35;
+  background: transparent;
+  border: 2px solid #FFFFFF;
+  color: #FFFFFF;
   box-shadow:
-    0 0 0 1px rgba(255, 107, 53, 0.1) inset,
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset,
     0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .card-final-btn-secondary:hover {
-  background: rgba(255, 107, 53, 0.15);
-  border-color: rgba(255, 107, 53, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #FFFFFF;
   transform: translateY(-2px);
   box-shadow:
-    0 0 0 1px rgba(255, 107, 53, 0.15) inset,
-    0 4px 16px rgba(255, 107, 53, 0.25),
-    0 8px 32px rgba(255, 107, 53, 0.15);
-  color: #FFA466;
+    0 0 0 1px rgba(255, 255, 255, 0.2) inset,
+    0 4px 16px rgba(255, 255, 255, 0.15),
+    0 8px 32px rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
 }
 
 .card-final-btn-secondary:active {
   transform: translateY(0);
-  background: rgba(255, 107, 53, 0.12);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 /* Responsive - Mobile Optimization */

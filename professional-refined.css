@@ -38,23 +38,23 @@
     --slate-950: #020617;
 }
 
-/* Dark theme refinement - Original blue gradient */
+/* Dark theme refinement - Pure Black with Orange */
 :root {
-    --bg-primary: #0a0e27;
-    --bg-secondary: #141a35;
-    --bg-tertiary: #1a1f3a;
-    --bg-elevated: rgba(20, 30, 50, 0.8);
+    --bg-primary: #000000;
+    --bg-secondary: #0a0a0a;
+    --bg-tertiary: #1a1a1a;
+    --bg-elevated: #1a1a1a;
 
-    --text-primary: #f8fafc;
-    --text-secondary: #cbd5e1;
-    --text-tertiary: #94a3b8;
+    --text-primary: #ffffff;
+    --text-secondary: #CCCCCC;
+    --text-tertiary: #999999;
 
-    --border-subtle: rgba(255, 255, 255, 0.08);
-    --border-medium: rgba(255, 255, 255, 0.12);
-    --border-strong: rgba(255, 255, 255, 0.18);
+    --border-subtle: #333333;
+    --border-medium: #444444;
+    --border-strong: #555555;
 
-    --accent-orange: var(--orange-500);
-    --accent-orange-light: var(--orange-light-500);
+    --accent-orange: #FFA500;
+    --accent-orange-light: #FF8C00;
 
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
@@ -156,9 +156,9 @@ section::after {
 }
 
 body {
-    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%) !important;
+    background: #000000 !important;
     background-attachment: fixed !important;
-    background-image: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%) !important;
+    background-image: none !important;
 }
 
 [data-theme="light"] body {

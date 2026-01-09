@@ -47,8 +47,8 @@ body {
     backface-visibility: hidden;
     -webkit-perspective: 1000;
     perspective: 1000;
-    /* ORIGINAL BLUE GRADIENT BACKGROUND */
-    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%) !important;
+    /* PURE BLACK BACKGROUND */
+    background: #000000 !important;
     background-attachment: fixed !important;
 }
 
@@ -124,32 +124,32 @@ img {
 
 /* CSS Custom Properties for Theme System */
 :root {
-    /* Dark Theme (Default) - DARK BLUE WITH GOLD ACCENTS */
-    --bg-primary: #0a0e27;
-    --bg-secondary: #141a35;
-    --bg-card: rgba(20, 30, 50, 0.8);
-    --bg-card-hover: rgba(20, 30, 50, 0.95);
-    --bg-modal: rgba(10, 14, 39, 0.95);
-    --bg-header: rgba(10, 14, 39, 0.95);
-    --bg-header-scroll: rgba(10, 14, 39, 0.98);
+    /* Dark Theme (Default) - PURE BLACK WITH ORANGE ACCENTS */
+    --bg-primary: #000000;
+    --bg-secondary: #0a0a0a;
+    --bg-card: #1a1a1a;
+    --bg-card-hover: #222222;
+    --bg-modal: #1a1a1a;
+    --bg-header: #000000;
+    --bg-header-scroll: rgba(0, 0, 0, 0.98);
 
     --text-primary: #ffffff;
-    --text-secondary: rgba(255, 255, 255, 0.8);
-    --text-tertiary: rgba(255, 255, 255, 0.7);
-    --text-quaternary: rgba(255, 255, 255, 0.6);
+    --text-secondary: #CCCCCC;
+    --text-tertiary: #999999;
+    --text-quaternary: #666666;
 
-    --border-primary: rgba(255, 255, 255, 0.1);
-    --border-secondary: rgba(255, 255, 255, 0.2);
-    --border-accent: rgba(255, 215, 0, 0.3);
-    --border-accent-hover: rgba(255, 215, 0, 0.5);
+    --border-primary: #333333;
+    --border-secondary: #444444;
+    --border-accent: #FFA500;
+    --border-accent-hover: #FF8C00;
 
-    --accent-primary: #FFD700;
-    --accent-secondary: #FFA500;
-    --accent-gradient: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    --accent-primary: #FFA500;
+    --accent-secondary: #FF8C00;
+    --accent-gradient: linear-gradient(135deg, #FFA500 0%, #FF8C00 100%);
 
-    --shadow-card: 0 25px 50px rgba(0, 0, 0, 0.4), 0 10px 30px rgba(255, 215, 0, 0.2);
-    --shadow-button: 0 10px 30px rgba(255, 215, 0, 0.3);
-    --shadow-button-hover: 0 15px 40px rgba(255, 215, 0, 0.4);
+    --shadow-card: 0 25px 50px rgba(0, 0, 0, 0.6), 0 10px 30px rgba(255, 165, 0, 0.15);
+    --shadow-button: 0 10px 30px rgba(255, 165, 0, 0.4);
+    --shadow-button-hover: 0 15px 40px rgba(255, 165, 0, 0.5);
 }
 
 /* Light Theme - Ultra Soft Eye Comfort */
@@ -463,8 +463,8 @@ img {
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    /* ORIGINAL BLUE GRADIENT BACKGROUND */
-    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%) !important;
+    /* PURE BLACK BACKGROUND */
+    background: #000000 !important;
     background-attachment: fixed !important;
     color: var(--text-primary);
     line-height: 1.6;
@@ -493,12 +493,12 @@ body::before {
     bottom: 0;
     background: radial-gradient(
         circle at 20% 50%,
-        rgba(255, 215, 0, 0.05) 0%,
+        rgba(255, 165, 0, 0.03) 0%,
         transparent 50%
     ),
     radial-gradient(
         circle at 80% 50%,
-        rgba(255, 165, 0, 0.05) 0%,
+        rgba(255, 140, 0, 0.03) 0%,
         transparent 50%
     );
     pointer-events: none;
@@ -1845,9 +1845,9 @@ img {
     /* 3D perspective for flip effect */
     perspective: 1000px;
     -webkit-perspective: 1000px;
-    /* Glassmorphism effect - Dark blue background with gold border */
-    background: rgba(20, 30, 50, 0.8);
-    border: 1px solid rgba(255, 215, 0, 0.3);
+    /* Glassmorphism effect - Dark grey background with orange border */
+    background: #1a1a1a;
+    border: 1px solid #333333;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 24px;
