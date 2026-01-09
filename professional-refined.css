@@ -24,12 +24,6 @@
     --orange-light-500: #FF8C42;
     --orange-light-600: #FF6B35;
 
-    --violet-50: #f5f3ff;
-    --violet-100: #ede9fe;
-    --violet-400: #a78bfa;
-    --violet-500: #8b5cf6;
-    --violet-600: #7c3aed;
-
     /* Neutral palette */
     --slate-50: #f8fafc;
     --slate-100: #f1f5f9;
@@ -61,7 +55,6 @@
 
     --accent-orange: var(--orange-500);
     --accent-orange-light: var(--orange-light-500);
-    --accent-violet: var(--violet-500);
 
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
@@ -301,8 +294,7 @@ body {
     background: linear-gradient(
         135deg,
         var(--orange-500) 0%,
-        var(--orange-400) 50%,
-        var(--violet-500) 100%
+        var(--orange-400) 100%
     ) !important;
     background-clip: text !important;
     -webkit-background-clip: text !important;
@@ -817,7 +809,7 @@ body {
 /* Connect and PRO buttons */
 .connect-button, .pro-button,
 .mobile-connect-button, .mobile-pro-button {
-    background: linear-gradient(135deg, var(--violet-500), var(--violet-600)) !important;
+    background: linear-gradient(135deg, var(--orange-500), var(--orange-400)) !important;
     border: none;
     border-radius: 10px;
     padding: 10px 20px;
@@ -1101,7 +1093,7 @@ input:focus-visible {
     background: linear-gradient(135deg,
         rgba(255, 107, 53, 0.4) 0%,
         rgba(255, 140, 66, 0.3) 50%,
-        rgba(139, 92, 246, 0.4) 100%);
+        rgba(255, 140, 66, 0.3) 100%);
     -webkit-mask:
         linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
@@ -1180,7 +1172,7 @@ input:focus-visible {
     background: linear-gradient(135deg,
         rgba(255, 107, 53, 0.6) 0%,
         rgba(255, 140, 66, 0.5) 50%,
-        rgba(139, 92, 246, 0.6) 100%);
+        rgba(255, 140, 66, 0.4) 100%);
 }
 
 /* Featured card logo - clean, no background */

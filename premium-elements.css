@@ -57,7 +57,7 @@
     content: '';
     position: absolute;
     inset: -2px;
-    background: linear-gradient(135deg, #FF6B35, #FF8C42, #a855f7);
+    background: linear-gradient(135deg, #FF6B35, #FF8C42, #FF6B35);
     border-radius: 16px;
     opacity: 0;
     transition: opacity 0.4s ease;
@@ -216,7 +216,7 @@
 }
 
 .fab-button.active {
-    background: linear-gradient(135deg, #a855f7 0%, #FF6B35 100%);
+    background: linear-gradient(135deg, #FF8C42 0%, #FF6B35 100%);
     transform: rotate(45deg);
 }
 
@@ -476,11 +476,11 @@
 }
 
 .toast.toast-premium {
-    border-color: rgba(168, 85, 247, 0.6);
+    border-color: rgba(255, 140, 66, 0.6);
 }
 
 .toast.toast-premium .toast-icon {
-    color: #a855f7;
+    color: #FF8C42;
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -535,7 +535,7 @@
     content: '';
     position: absolute;
     inset: -3px;
-    background: linear-gradient(135deg, #FF6B35, #FF8C42, #a855f7, #FF6B35);
+    background: linear-gradient(135deg, #FF6B35, #FF8C42, #FF6B35, #FF8C42);
     background-size: 300% 300%;
     border-radius: 24px;
     opacity: 0;
