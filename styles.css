@@ -47,6 +47,10 @@ body {
     backface-visibility: hidden;
     -webkit-perspective: 1000;
     perspective: 1000;
+    /* FORCE PURE BLACK BACKGROUND */
+    background: #000000 !important;
+    background-color: #000000 !important;
+    background-image: none !important;
 }
 
 /* Optimize all sections for smooth scrolling */
@@ -58,6 +62,10 @@ section {
     contain: layout style paint;
     /* Improve scroll performance */
     content-visibility: auto;
+    /* FORCE BLACK BACKGROUND ON ALL SECTIONS */
+    background: #000000 !important;
+    background-color: #000000 !important;
+    background-image: none !important;
 }
 
 /* Optimize images for lazy loading and smooth scroll */
@@ -119,14 +127,14 @@ img {
 
 /* CSS Custom Properties for Theme System */
 :root {
-    /* Dark Theme (Default) */
-    --bg-primary: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
-    --bg-secondary: rgba(0, 0, 0, 0.5);
-    --bg-card: rgba(255, 255, 255, 0.05);
-    --bg-card-hover: rgba(255, 255, 255, 0.08);
-    --bg-modal: rgba(20, 20, 20, 0.95);
-    --bg-header: rgba(10, 10, 10, 0.95);
-    --bg-header-scroll: rgba(10, 10, 10, 0.98);
+    /* Dark Theme (Default) - PURE BLACK */
+    --bg-primary: #000000;
+    --bg-secondary: #0a0a0a;
+    --bg-card: rgba(255, 255, 255, 0.03);
+    --bg-card-hover: rgba(255, 255, 255, 0.05);
+    --bg-modal: rgba(0, 0, 0, 0.95);
+    --bg-header: #000000;
+    --bg-header-scroll: #000000;
 
     --text-primary: #ffffff;
     --text-secondary: rgba(255, 255, 255, 0.8);
@@ -458,14 +466,10 @@ img {
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    /* Premium gradient background */
-    background: linear-gradient(
-        180deg,
-        #0a0a0a 0%,
-        #1a1a1a 50%,
-        #0a0a0a 100%
-    );
-    background-attachment: fixed;
+    /* PURE BLACK BACKGROUND - NO GRADIENTS */
+    background: #000000 !important;
+    background-color: #000000 !important;
+    background-image: none !important;
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
@@ -483,26 +487,9 @@ body {
     padding-top: 0 !important;
 }
 
-/* Subtle animated gradient overlay */
+/* REMOVED: Pure black only - no gradient overlays */
 body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(
-        circle at 20% 50%,
-        rgba(255, 107, 53, 0.05) 0%,
-        transparent 50%
-    ),
-    radial-gradient(
-        circle at 80% 50%,
-        rgba(168, 85, 247, 0.05) 0%,
-        transparent 50%
-    );
-    pointer-events: none;
-    z-index: -1;
+    display: none !important;
 }
 
 /* Smooth scroll container optimization */
@@ -3560,6 +3547,9 @@ a:focus,
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
+    background: #000000 !important;
+    background-color: #000000 !important;
+    background-image: none !important;
 }
 
 .hero-title {
