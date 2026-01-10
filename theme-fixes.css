@@ -1,0 +1,234 @@
+/* ========================================
+   THEME FIXES - Critical Corrections
+   1. Language buttons same style as section buttons
+   2. Card descriptions visible in light theme
+   3. Mobile background dark in dark theme
+   ======================================== */
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   FIX 1: LANGUAGE BUTTONS - Same style as section buttons
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* Desktop language buttons - Same gradient as section buttons */
+.language-selector .lang-btn {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%) !important;
+    border: none !important;
+    color: #FFFFFF !important;
+    padding: 12px 20px !important;
+    border-radius: 12px !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3) !important;
+}
+
+.language-selector .lang-btn:hover {
+    background: linear-gradient(135deg, #FFA500 0%, #FFD700 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4) !important;
+}
+
+.language-selector .lang-btn.active {
+    background: linear-gradient(135deg, #FFA500 0%, #FFD700 100%) !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.5) !important;
+}
+
+/* Mobile language buttons - Same style */
+.mobile-language-selector .lang-btn {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%) !important;
+    border: none !important;
+    color: #FFFFFF !important;
+    padding: 12px 20px !important;
+    border-radius: 12px !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3) !important;
+}
+
+.mobile-language-selector .lang-btn:hover {
+    background: linear-gradient(135deg, #FFA500 0%, #FFD700 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4) !important;
+}
+
+.mobile-language-selector .lang-btn.active {
+    background: linear-gradient(135deg, #FFA500 0%, #FFD700 100%) !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.5) !important;
+}
+
+/* Light theme - Keep same gradient */
+[data-theme="light"] .language-selector .lang-btn,
+[data-theme="light"] .mobile-language-selector .lang-btn {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%) !important;
+    color: #FFFFFF !important;
+}
+
+[data-theme="light"] .language-selector .lang-btn:hover,
+[data-theme="light"] .mobile-language-selector .lang-btn:hover {
+    background: linear-gradient(135deg, #FFA500 0%, #FFD700 100%) !important;
+    color: #FFFFFF !important;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   FIX 2: CARD DESCRIPTIONS - Visible in light theme
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* Card descriptions in light theme - Force dark text for visibility */
+[data-theme="light"] .card-final-description {
+    color: #1a1a1a !important;
+    font-weight: 500 !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Platform card descriptions in light theme */
+[data-theme="light"] .platform-card .card-description,
+[data-theme="light"] .featured-card .card-description {
+    color: #1a1a1a !important;
+    font-weight: 500 !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Modal descriptions in light theme */
+[data-theme="light"] .modal-description {
+    color: #2a2a2a !important;
+    font-weight: 500 !important;
+    text-shadow: none !important;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   FIX 3: MOBILE BACKGROUND - Dark in dark theme
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* Ensure body is always dark in dark theme - ALL DEVICES */
+body {
+    background: #000000 !important;
+    background-color: #000000 !important;
+    background-image: none !important;
+}
+
+/* Ensure sections are transparent to show body background */
+section {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* Mobile menu in dark theme - Should be dark */
+.mobile-menu-overlay {
+    background: rgba(0, 0, 0, 0.95) !important;
+}
+
+.mobile-menu-content {
+    background: rgba(26, 26, 26, 0.98) !important;
+    backdrop-filter: blur(30px) !important;
+}
+
+/* Light theme - Override only when light theme is active */
+[data-theme="light"] body {
+    background: linear-gradient(
+        180deg,
+        #fdfcfb 0%,
+        #f8f6f3 50%,
+        #fdfcfb 100%
+    ) !important;
+    background-attachment: fixed !important;
+}
+
+[data-theme="light"] section {
+    background: transparent !important;
+}
+
+[data-theme="light"] .mobile-menu-overlay {
+    background: rgba(248, 246, 243, 0.93) !important;
+}
+
+[data-theme="light"] .mobile-menu-content {
+    background: rgba(255, 254, 252, 0.98) !important;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   MOBILE SPECIFIC FIXES
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+@media (max-width: 768px) {
+    /* CRITICAL: Force dark background on mobile in dark theme */
+    body {
+        background: #000000 !important;
+        background-color: #000000 !important;
+    }
+
+    /* Ensure all sections are transparent */
+    section,
+    .platform-section,
+    .featured-section,
+    .hero-section {
+        background: transparent !important;
+        background-color: transparent !important;
+    }
+
+    /* Light theme mobile */
+    [data-theme="light"] body {
+        background: linear-gradient(
+            180deg,
+            #fdfcfb 0%,
+            #f8f6f3 50%,
+            #fdfcfb 100%
+        ) !important;
+        background-attachment: fixed !important;
+    }
+
+    /* Mobile cards - Keep proper backgrounds */
+    .platform-card-final {
+        background: #1a1a1a !important;
+    }
+
+    [data-theme="light"] .platform-card-final {
+        background: rgba(255, 254, 252, 0.96) !important;
+    }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   ADDITIONAL CONSISTENCY FIXES
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* Connect and Pro buttons - Ensure they match section buttons */
+.connect-button,
+.pro-button,
+.mobile-connect-button,
+.mobile-pro-button {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    font-weight: 600 !important;
+}
+
+.connect-button:hover,
+.pro-button:hover,
+.mobile-connect-button:hover,
+.mobile-pro-button:hover {
+    background: linear-gradient(135deg, #FFA500 0%, #FFD700 100%) !important;
+    color: #ffffff !important;
+}
+
+/* Light theme - All buttons keep same gradient */
+[data-theme="light"] .connect-button,
+[data-theme="light"] .pro-button,
+[data-theme="light"] .mobile-connect-button,
+[data-theme="light"] .mobile-pro-button {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%) !important;
+    color: #ffffff !important;
+}
+
+[data-theme="light"] .connect-button:hover,
+[data-theme="light"] .pro-button:hover,
+[data-theme="light"] .mobile-connect-button:hover,
+[data-theme="light"] .mobile-pro-button:hover {
+    background: linear-gradient(135deg, #FFA500 0%, #FFD700 100%) !important;
+    color: #ffffff !important;
+}
