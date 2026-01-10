@@ -758,20 +758,13 @@ body {
     box-shadow: var(--shadow-lg) !important;
 }
 
+/* HIDE scroll indicators - only keep arrows */
 .scroll-dot {
-    width: 8px;
-    height: 8px;
-    background: var(--border-medium) !important;
-    border: none !important;
-    border-radius: 50%;
-    transition: all 0.3s ease;
+    display: none !important;
 }
 
 .scroll-dot.active {
-    background: linear-gradient(135deg, var(--orange-500), var(--orange-400)) !important;
-    width: 24px;
-    border-radius: 4px;
-    box-shadow: 0 0 12px rgba(255, 107, 53, 0.4);
+    display: none !important;
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

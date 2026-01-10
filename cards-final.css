@@ -436,29 +436,17 @@
 }
 
 /* Scroll Indicators (Dots) - Orange Accent */
+/* HIDE scroll indicators - only keep arrows */
 .scroll-indicator {
-  display: flex;
-  gap: 8px;
-  align-items: center;
+  display: none !important;
 }
 
 .scroll-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.25);
-  transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+  display: none !important;
 }
 
 .scroll-dot.active {
-  width: 20px;
-  border-radius: 3px;
-  background: linear-gradient(135deg, #FF6B35, #FF8C42);
-  box-shadow:
-    0 0 0 1px rgba(255, 107, 53, 0.4),
-    0 2px 8px rgba(255, 107, 53, 0.4),
-    0 0 16px rgba(255, 107, 53, 0.2);
+  display: none !important;
 }
 
 @media (max-width: 768px) {
@@ -481,11 +469,10 @@
   }
 
   .scroll-dot {
-    width: 5px;
-    height: 5px;
+    display: none !important;
   }
 
   .scroll-dot.active {
-    width: 16px;
+    display: none !important;
   }
 }
