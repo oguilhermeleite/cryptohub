@@ -27,6 +27,37 @@
     <link rel="stylesheet" href="premium-elements.css?v=premium-2026">
     <!-- FINAL CARDS: Complete info visible, no modal/flip -->
     <link rel="stylesheet" href="cards-final.css?v=20250109-orange">
+
+    <!-- FORCE HIDE ALL SCROLLBARS - CRITICAL CSS -->
+    <style>
+        /* Hide ALL scrollbars completely */
+        .horizontal-cards-grid::-webkit-scrollbar,
+        .horizontal-scroll-container::-webkit-scrollbar,
+        section::-webkit-scrollbar,
+        .platform-section::-webkit-scrollbar,
+        .featured-section::-webkit-scrollbar,
+        *::-webkit-scrollbar {
+            display: none !important;
+            width: 0 !important;
+            height: 0 !important;
+        }
+
+        .horizontal-cards-grid,
+        .horizontal-scroll-container {
+            scrollbar-width: none !important;
+            -ms-overflow-style: none !important;
+        }
+
+        /* Hide scroll indicators and dots */
+        .scroll-indicator,
+        .scroll-dot,
+        .scroll-dot.active {
+            display: none !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+        }
+    </style>
+
     <!-- Preconnect para melhorar performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
