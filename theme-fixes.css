@@ -76,13 +76,19 @@
    FIX 2: CARD DESCRIPTIONS - Visible in light theme
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 
-/* Card descriptions in light theme - Force dark text for visibility */
-[data-theme="light"] .card-final-description {
+/* MAXIMUM PRIORITY - Card descriptions MUST be visible in light theme */
+[data-theme="light"] .card-final-description,
+[data-theme="light"] p.card-final-description,
+[data-theme="light"] .platform-card-final .card-final-description,
+[data-theme="light"] .cards-final-grid .card-final-description {
     color: #1a1a1a !important;
     font-weight: 500 !important;
     text-shadow: none !important;
     opacity: 1 !important;
     visibility: visible !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 4 !important;
+    -webkit-box-orient: vertical !important;
 }
 
 /* Platform card descriptions in light theme */
@@ -102,21 +108,49 @@
     text-shadow: none !important;
 }
 
+/* ALL paragraphs in cards in light theme */
+[data-theme="light"] .platform-card-final p,
+[data-theme="light"] .cards-final-grid p {
+    color: #1a1a1a !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    FIX 3: MOBILE BACKGROUND - Dark in dark theme
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 
-/* Ensure body is always dark in dark theme - ALL DEVICES */
+/* CRITICAL: Ensure body is PURE BLACK in dark theme - ALL DEVICES */
 body {
     background: #000000 !important;
     background-color: #000000 !important;
     background-image: none !important;
 }
 
-/* Ensure sections are transparent to show body background */
-section {
+/* CRITICAL: Ensure ALL sections are transparent */
+section,
+.hero-section,
+.platform-section,
+.featured-section,
+.p2p-section,
+.exchanges-section,
+.hot-wallets-section,
+.crypto-cards-section,
+.digital-banks-section,
+.cold-wallets-section,
+.dexs-section,
+.bridges-section {
     background: transparent !important;
     background-color: transparent !important;
+    background-image: none !important;
+}
+
+/* Remove any gradient overlays */
+body::before,
+body::after,
+section::before,
+section::after {
+    display: none !important;
 }
 
 /* Mobile menu in dark theme - Should be dark */
@@ -140,7 +174,10 @@ section {
     background-attachment: fixed !important;
 }
 
-[data-theme="light"] section {
+[data-theme="light"] section,
+[data-theme="light"] .hero-section,
+[data-theme="light"] .platform-section,
+[data-theme="light"] .featured-section {
     background: transparent !important;
 }
 
@@ -150,6 +187,26 @@ section {
 
 [data-theme="light"] .mobile-menu-content {
     background: rgba(255, 254, 252, 0.98) !important;
+}
+
+/* Light theme - restore gradient overlays */
+[data-theme="light"] body::before {
+    display: block !important;
+    content: '' !important;
+    position: fixed !important;
+    inset: 0 !important;
+    background: radial-gradient(
+        circle at 20% 50%,
+        rgba(255, 215, 0, 0.03) 0%,
+        transparent 50%
+    ),
+    radial-gradient(
+        circle at 80% 50%,
+        rgba(255, 165, 0, 0.02) 0%,
+        transparent 50%
+    ) !important;
+    pointer-events: none !important;
+    z-index: 1 !important;
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
