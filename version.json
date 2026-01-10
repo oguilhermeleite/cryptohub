@@ -1,10 +1,10 @@
 ﻿{
     "changes":  [
-                    "Botoes Connect, Pro e Idioma atualizados com gradiente laranja",
-                    "Correcoes de tema claro nas descricoes dos cards",
-                    "Fundo mobile corrigido no tema escuro",
-                    "Sistema de auto-atualizacao implementado"
+                    "Correcoes FORTES de CSS",
+                    "Descricoes dos cards agora SEMPRE visiveis no tema claro",
+                    "Fundo mobile agora PRETO PURO no tema escuro",
+                    "Regras CSS com maxima prioridade"
                 ],
-    "buildDate":  "2026-01-10T18:11:56.415Z",
-    "version":  "1.0.2"
+    "buildDate":  "2026-01-10T18:24:09.848Z",
+    "version":  "1.0.3"
 }
