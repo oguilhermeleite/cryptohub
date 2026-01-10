@@ -272,7 +272,7 @@ img {
 }
 
 [data-theme="light"] .section-title {
-    color: #0f0f0f !important;
+    color: #FFA500 !important;
     text-shadow: none;
     font-weight: 800;
 }
@@ -699,10 +699,7 @@ img {
 .logo-text {
     font-size: 1.5rem;
     font-weight: 800;
-    background: var(--accent-gradient);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #FFFFFF;
     letter-spacing: -0.02em;
 }
 
@@ -1242,6 +1239,19 @@ img {
     color: #000000;
 }
 
+/* Mobile Language Selector */
+.mobile-language-selector {
+    padding: 0 1.5rem 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.mobile-language-selector .lang-btn {
+    flex: 1;
+    max-width: 150px;
+}
+
 .mobile-theme-btn .theme-icon {
     position: relative;
     font-size: 1.2rem;
@@ -1360,7 +1370,7 @@ img {
     margin-top: 0 !important;
     margin-bottom: 1rem !important;
     padding-top: 0 !important;
-    background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 100%);
+    background: linear-gradient(135deg, #FFFEF5 0%, #FFF9E6 25%, #FFE58F 50%, #FFD700 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1769,7 +1779,7 @@ img {
     font-size: 3.25rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: var(--text-primary);
+    color: #FFFFFF;
 }
 
 .section-subtitle {
