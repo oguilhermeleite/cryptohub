@@ -185,10 +185,10 @@ body {
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 
 .header {
-    background: rgba(15, 23, 42, 0.8) !important;
+    background: rgba(0, 0, 0, 0.95) !important;
     backdrop-filter: blur(20px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-    border-bottom: 1px solid var(--border-subtle) !important;
+    border-bottom: 1px solid #FFA500 !important;
     box-shadow: var(--shadow-sm) !important;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -208,17 +208,13 @@ body {
 /* Logo - subtle elegance */
 .logo-text {
     text-shadow: none !important;
-    background: linear-gradient(135deg, var(--orange-500), var(--orange-400));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #FFFFFF !important;
     transition: all 0.3s ease;
 }
 
+/* Logo text stays white on hover */
 .logo:hover .logo-text {
-    background: linear-gradient(135deg, var(--orange-400), var(--orange-light-400));
-    background-clip: text;
-    -webkit-background-clip: text;
+    color: #FFFFFF !important;
 }
 
 .logo-svg {
@@ -235,28 +231,30 @@ body {
     position: relative;
     overflow: hidden;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border-radius: 8px;
-    padding: 8px 16px;
-    background: transparent;
+    border-radius: 12px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%) !important;
+    color: #FFFFFF !important;
+    font-weight: 600;
 }
 
 .nav-menu a::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, var(--orange-500), var(--orange-400));
+    background: linear-gradient(135deg, #FFA500, #FFD700);
     opacity: 0;
     transition: opacity 0.3s ease;
-    border-radius: 8px;
+    border-radius: 12px;
 }
 
 .nav-menu a:hover::before {
-    opacity: 0.1;
+    opacity: 1;
 }
 
 .nav-menu a:hover {
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 165, 0, 0.4) !important;
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -414,12 +412,16 @@ body {
     display: none !important;
 }
 
+/* Section titles - white in dark mode, orange in light mode */
+.section-title,
 .section-title span {
     text-shadow: none !important;
-    background: linear-gradient(135deg, var(--orange-500), var(--orange-400));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #FFFFFF !important;
+}
+
+[data-theme="light"] .section-title,
+[data-theme="light"] .section-title span {
+    color: #FFA500 !important;
 }
 
 .section-subtitle {
