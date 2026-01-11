@@ -710,7 +710,7 @@ img {
 /* Navigation Menu Items - Button Style like Connect */
 .nav-menu a {
     /* Button appearance */
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    background: linear-gradient(90deg, #01dba2 0%, #a9d9df 100%);
     color: #ffffff !important;
     text-decoration: none;
     font-weight: 600;
@@ -728,10 +728,10 @@ img {
 }
 
 .nav-menu a:hover {
-    background: linear-gradient(135deg, #FFA500 0%, #FFD700 100%) !important;
+    background: linear-gradient(90deg, #a9d9df 0%, #01dba2 100%) !important;
     color: #ffffff !important;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(168, 85, 247, 0.4) !important;
+    box-shadow: 0 8px 20px rgba(1, 219, 162, 0.4) !important;
 }
 
 .nav-menu a:active {
@@ -759,9 +759,9 @@ img {
     align-items: center;
 }
 
-/* PRO Button - Purple Gradient (Same as Connect) */
+/* PRO Button - Turquoise Gradient */
 .pro-button {
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    background: linear-gradient(90deg, #01dba2 0%, #a9d9df 100%);
     color: #ffffff;
     border: none;
     padding: 12px 24px;
@@ -774,9 +774,9 @@ img {
 }
 
 .pro-button:hover {
-    background: linear-gradient(135deg, #FFA500 0%, #FFD700 100%);
+    background: linear-gradient(90deg, #a9d9df 0%, #01dba2 100%);
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(168, 85, 247, 0.4);
+    box-shadow: 0 8px 20px rgba(1, 219, 162, 0.4);
 }
 
 .pro-button:active {
@@ -814,7 +814,7 @@ img {
 
 /* Connect Button - Desktop Header */
 .connect-button {
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    background: linear-gradient(90deg, #01dba2 0%, #a9d9df 100%);
     color: #ffffff;
     border: none;
     padding: 12px 24px;
@@ -827,9 +827,9 @@ img {
 }
 
 .connect-button:hover {
-    background: linear-gradient(135deg, #FFA500 0%, #FFD700 100%);
+    background: linear-gradient(90deg, #a9d9df 0%, #01dba2 100%);
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(168, 85, 247, 0.4);
+    box-shadow: 0 8px 20px rgba(1, 219, 162, 0.4);
 }
 
 .connect-button:active {
@@ -838,8 +838,8 @@ img {
 
 /* "Todas as Plataformas" Button - Green Style */
 .nav-menu a.all-platforms-button {
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%) !important;
-    color: #000000 !important;
+    background: linear-gradient(90deg, #01dba2 0%, #a9d9df 100%) !important;
+    color: #ffffff !important;
     border: none !important;
     padding: 12px 24px !important;
     border-radius: 14px !important;
@@ -853,10 +853,10 @@ img {
 }
 
 .nav-menu a.all-platforms-button:hover {
-    background: linear-gradient(135deg, #FFA500 0%, #FFD700 100%) !important;
-    color: #000000 !important;
+    background: linear-gradient(90deg, #a9d9df 0%, #01dba2 100%) !important;
+    color: #ffffff !important;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+    box-shadow: 0 8px 20px rgba(1, 219, 162, 0.4);
 }
 
 .nav-menu a.all-platforms-button:active {
@@ -977,9 +977,9 @@ img {
 
 .lang-btn:hover,
 .lang-btn.active {
-    background: var(--accent-primary);
-    border-color: var(--accent-primary);
-    color: #000000;
+    background: linear-gradient(90deg, #01dba2 0%, #a9d9df 100%);
+    border-color: #01dba2;
+    color: #ffffff;
 }
 
 /* Mobile Menu Button */
@@ -1105,7 +1105,7 @@ img {
 
 /* Mobile Connect Button */
 .mobile-connect-button {
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    background: linear-gradient(90deg, #01dba2 0%, #a9d9df 100%);
     color: #ffffff;
     border: none;
     width: 100%;
@@ -1118,8 +1118,8 @@ img {
 }
 
 .mobile-connect-button:hover {
-    background: linear-gradient(135deg, #FFA500 0%, #FFD700 100%);
-    box-shadow: 0 8px 20px rgba(168, 85, 247, 0.4);
+    background: linear-gradient(90deg, #a9d9df 0%, #01dba2 100%);
+    box-shadow: 0 8px 20px rgba(1, 219, 162, 0.4);
 }
 
 .mobile-connect-button:active {
@@ -1155,7 +1155,7 @@ img {
 
 /* Mobile PRO Button */
 .mobile-pro-button {
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    background: linear-gradient(90deg, #01dba2 0%, #a9d9df 100%);
     color: #ffffff;
     border: none;
     width: 100%;
@@ -1168,8 +1168,8 @@ img {
 }
 
 .mobile-pro-button:hover {
-    background: linear-gradient(135deg, #FFA500 0%, #FFD700 100%);
-    box-shadow: 0 8px 20px rgba(168, 85, 247, 0.4);
+    background: linear-gradient(90deg, #a9d9df 0%, #01dba2 100%);
+    box-shadow: 0 8px 20px rgba(1, 219, 162, 0.4);
 }
 
 .mobile-pro-button:active {
@@ -1280,8 +1280,8 @@ img {
 }
 
 .mobile-nav-list a:hover {
-    background: var(--bg-card);
-    color: var(--accent-primary);
+    background: linear-gradient(90deg, rgba(1, 219, 162, 0.1) 0%, rgba(169, 217, 223, 0.1) 100%);
+    color: #01dba2;
     padding-left: 2rem;
 }
 
@@ -1294,10 +1294,10 @@ img {
     display: block !important;
     opacity: 1 !important;
     visibility: visible !important;
-    background: rgba(255, 215, 0, 0.1) !important;
-    color: #FFD700 !important;
+    background: linear-gradient(90deg, rgba(1, 219, 162, 0.15) 0%, rgba(169, 217, 223, 0.15) 100%) !important;
+    color: #01dba2 !important;
     font-weight: 600 !important;
-    border-left: 3px solid #FFD700 !important;
+    border-left: 3px solid #01dba2 !important;
     padding-left: 2rem !important;
 }
 
@@ -3498,6 +3498,14 @@ a:focus,
 
 .gradient-text {
     background: linear-gradient(135deg, #FFD700 0%, #FFD700 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.gradient-text-full {
+    background: linear-gradient(90deg, #01dba2 0%, #a9d9df 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
