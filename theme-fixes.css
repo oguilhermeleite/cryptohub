@@ -11,7 +11,7 @@
 
 /* Desktop language buttons - Same gradient as section buttons */
 .language-selector .lang-btn {
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%) !important;
+    background: linear-gradient(135deg, #01dba2 0%, #a9d9df 100%) !important;
     border: none !important;
     color: #FFFFFF !important;
     padding: 12px 20px !important;
@@ -19,24 +19,24 @@
     font-size: 1rem !important;
     font-weight: 600 !important;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3) !important;
+    box-shadow: 0 4px 12px rgba(1, 219, 162, 0.3) !important;
 }
 
 .language-selector .lang-btn:hover {
-    background: linear-gradient(135deg, #FFA500 0%, #FFD700 100%) !important;
+    background: linear-gradient(135deg, #a9d9df 0%, #01dba2 100%) !important;
     transform: translateY(-2px) !important;
-    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4) !important;
+    box-shadow: 0 8px 20px rgba(1, 219, 162, 0.4) !important;
 }
 
 .language-selector .lang-btn.active {
-    background: linear-gradient(135deg, #FFA500 0%, #FFD700 100%) !important;
+    background: linear-gradient(135deg, #a9d9df 0%, #01dba2 100%) !important;
     color: #FFFFFF !important;
-    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.5) !important;
+    box-shadow: 0 8px 20px rgba(1, 219, 162, 0.5) !important;
 }
 
 /* Mobile language buttons - Same style */
 .mobile-language-selector .lang-btn {
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%) !important;
+    background: linear-gradient(135deg, #01dba2 0%, #a9d9df 100%) !important;
     border: none !important;
     color: #FFFFFF !important;
     padding: 12px 20px !important;
@@ -44,31 +44,31 @@
     font-size: 1rem !important;
     font-weight: 600 !important;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3) !important;
+    box-shadow: 0 4px 12px rgba(1, 219, 162, 0.3) !important;
 }
 
 .mobile-language-selector .lang-btn:hover {
-    background: linear-gradient(135deg, #FFA500 0%, #FFD700 100%) !important;
+    background: linear-gradient(135deg, #a9d9df 0%, #01dba2 100%) !important;
     transform: translateY(-2px) !important;
-    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4) !important;
+    box-shadow: 0 8px 20px rgba(1, 219, 162, 0.4) !important;
 }
 
 .mobile-language-selector .lang-btn.active {
-    background: linear-gradient(135deg, #FFA500 0%, #FFD700 100%) !important;
+    background: linear-gradient(135deg, #a9d9df 0%, #01dba2 100%) !important;
     color: #FFFFFF !important;
-    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.5) !important;
+    box-shadow: 0 8px 20px rgba(1, 219, 162, 0.5) !important;
 }
 
 /* Light theme - Keep same gradient */
 [data-theme="light"] .language-selector .lang-btn,
 [data-theme="light"] .mobile-language-selector .lang-btn {
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%) !important;
+    background: linear-gradient(135deg, #01dba2 0%, #a9d9df 100%) !important;
     color: #FFFFFF !important;
 }
 
 [data-theme="light"] .language-selector .lang-btn:hover,
 [data-theme="light"] .mobile-language-selector .lang-btn:hover {
-    background: linear-gradient(135deg, #FFA500 0%, #FFD700 100%) !important;
+    background: linear-gradient(135deg, #a9d9df 0%, #01dba2 100%) !important;
     color: #FFFFFF !important;
 }
 
@@ -259,7 +259,7 @@ section::after {
 .pro-button,
 .mobile-connect-button,
 .mobile-pro-button {
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%) !important;
+    background: linear-gradient(135deg, #01dba2 0%, #a9d9df 100%) !important;
     color: #ffffff !important;
     border: none !important;
     font-weight: 600 !important;
@@ -269,7 +269,7 @@ section::after {
 .pro-button:hover,
 .mobile-connect-button:hover,
 .mobile-pro-button:hover {
-    background: linear-gradient(135deg, #FFA500 0%, #FFD700 100%) !important;
+    background: linear-gradient(135deg, #a9d9df 0%, #01dba2 100%) !important;
     color: #ffffff !important;
 }
 
@@ -278,7 +278,7 @@ section::after {
 [data-theme="light"] .pro-button,
 [data-theme="light"] .mobile-connect-button,
 [data-theme="light"] .mobile-pro-button {
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%) !important;
+    background: linear-gradient(135deg, #01dba2 0%, #a9d9df 100%) !important;
     color: #ffffff !important;
 }
 
@@ -286,6 +286,6 @@ section::after {
 [data-theme="light"] .pro-button:hover,
 [data-theme="light"] .mobile-connect-button:hover,
 [data-theme="light"] .mobile-pro-button:hover {
-    background: linear-gradient(135deg, #FFA500 0%, #FFD700 100%) !important;
+    background: linear-gradient(135deg, #a9d9df 0%, #01dba2 100%) !important;
     color: #ffffff !important;
 }

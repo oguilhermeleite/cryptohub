@@ -349,17 +349,17 @@ img {
 
 /* Light Theme - Navigation Menu Buttons */
 [data-theme="light"] .nav-menu a {
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    background: linear-gradient(135deg, #01dba2 0%, #a9d9df 100%);
     color: #ffffff !important;
     font-weight: 600;
     text-shadow: none;
 }
 
 [data-theme="light"] .nav-menu a:hover {
-    background: linear-gradient(135deg, #FFA500 0%, #FFD700 100%) !important;
+    background: linear-gradient(135deg, #a9d9df 0%, #01dba2 100%) !important;
     color: #ffffff !important;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(168, 85, 247, 0.4) !important;
+    box-shadow: 0 8px 20px rgba(1, 219, 162, 0.4) !important;
 }
 
 [data-theme="light"] .nav-menu a::after {

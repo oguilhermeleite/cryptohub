@@ -233,7 +233,7 @@ body {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 12px;
     padding: 12px 20px;
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%) !important;
+    background: linear-gradient(135deg, #01dba2 0%, #a9d9df 100%) !important;
     color: #FFFFFF !important;
     font-weight: 600;
 }
@@ -242,7 +242,7 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, #FFA500, #FFD700);
+    background: linear-gradient(135deg, #a9d9df, #01dba2);
     opacity: 0;
     transition: opacity 0.3s ease;
     border-radius: 12px;
@@ -254,7 +254,7 @@ body {
 
 .nav-menu a:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(255, 165, 0, 0.4) !important;
+    box-shadow: 0 8px 20px rgba(1, 219, 162, 0.4) !important;
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -793,7 +793,7 @@ body {
 }
 
 .lang-btn.active {
-    background: linear-gradient(135deg, var(--orange-500), var(--orange-400)) !important;
+    background: linear-gradient(135deg, #01dba2, #a9d9df) !important;
     color: white !important;
     border-color: transparent !important;
 }
@@ -801,7 +801,7 @@ body {
 /* Connect and PRO buttons */
 .connect-button, .pro-button,
 .mobile-connect-button, .mobile-pro-button {
-    background: linear-gradient(135deg, var(--orange-500), var(--orange-400)) !important;
+    background: linear-gradient(135deg, #01dba2 0%, #a9d9df 100%) !important;
     border: none;
     border-radius: 10px;
     padding: 10px 20px;
