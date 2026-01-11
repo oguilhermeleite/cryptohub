@@ -648,16 +648,12 @@ img {
 }
 
 .logo-svg {
-    height: 50px;
+    height: 40px;
     width: auto;
-    margin-right: 10px;
 }
 
 .logo-text {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #FFFFFF;
-    letter-spacing: -0.02em;
+    display: none;
 }
 
 @keyframes pulse {
@@ -2791,13 +2787,11 @@ body.modal-open {
     }
 
     .logo-svg {
-        height: 40px;
+        height: 32px;
     }
 
     .logo-text {
-        font-size: 0.95rem;
-        white-space: nowrap;
-        letter-spacing: -0.03em;
+        display: none;
     }
 
     /* Premium Hero Banner Mobile */

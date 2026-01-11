@@ -108,21 +108,16 @@
             <!-- Top Row: Logo + Theme + Language -->
             <div class="header-top-row">
                 <div class="logo">
-                    <svg width="120" height="60" viewBox="0 0 500 250" class="logo-svg">
+                    <svg width="280" height="40" viewBox="0 0 700 100" class="logo-svg" xmlns="http://www.w3.org/2000/svg">
                         <defs>
-                            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#FFD700" />
-                                <stop offset="100%" stop-color="#FFA500" />
-                            </linearGradient>
+                            <style>
+                                .crypto-text { fill: #FFFFFF; font-family: 'Inter', 'Arial', sans-serif; font-size: 80px; font-weight: 300; letter-spacing: 8px; }
+                                .aggregator-text { fill: #00F5A0; font-family: 'Inter', 'Arial', sans-serif; font-size: 80px; font-weight: 300; letter-spacing: 8px; }
+                            </style>
                         </defs>
-
-                        <!-- Right Arrow -->
-                        <path d="M 50,60 L 350,60 C 365,60 375,70 375,85 C 375,100 365,110 350,110 L 50,110 C 35,110 25,100 25,85 C 25,70 35,60 50,60 Z M 375,50 L 450,85 L 375,120 C 370,117 370,93 370,85 C 370,77 370,53 375,50 Z" fill="url(#logoGrad)"/>
-
-                        <!-- Left Arrow -->
-                        <path d="M 450,140 L 150,140 C 135,140 125,150 125,165 C 125,180 135,190 150,190 L 450,190 C 465,190 475,180 475,165 C 475,150 465,140 450,140 Z M 125,130 L 50,165 L 125,200 C 130,197 130,173 130,165 C 130,157 130,133 125,130 Z" fill="url(#logoGrad)"/>
+                        <text x="10" y="70" class="crypto-text">CRYPTO</text>
+                        <text x="340" y="70" class="aggregator-text">AGGREGATOR</text>
                     </svg>
-                    <span class="logo-text">Crypto Aggregator</span>
                 </div>
 
                 <div class="header-controls">
