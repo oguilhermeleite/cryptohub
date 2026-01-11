@@ -14,7 +14,7 @@ class AutoUpdateManager {
     }
 
     async init() {
-        console.log('🔄 Auto-Update System initialized');
+        console.log('[Auto-Update] System initialized');
 
         // Get current version
         await this.loadCurrentVersion();
@@ -43,12 +43,12 @@ class AutoUpdateManager {
             const response = await fetch(this.versionCheckUrl + '?t=' + Date.now());
             const data = await response.json();
             this.currentVersion = data.version;
-            console.log('📦 Current version:', this.currentVersion);
+            console.log('[Auto-Update] Current version:', this.currentVersion);
 
             // Store version in localStorage
             localStorage.setItem('app_version', this.currentVersion);
         } catch (error) {
-            console.warn('⚠️ Could not load version:', error);
+            console.warn('[Auto-Update] Could not load version:', error);
         }
     }
 
@@ -79,11 +79,11 @@ class AutoUpdateManager {
 
             // Compare versions
             if (this.currentVersion && latestVersion !== this.currentVersion) {
-                console.log('🆕 New version available:', latestVersion);
+                console.log('[Auto-Update] New version available:', latestVersion);
                 this.showUpdateNotification(data);
             }
         } catch (error) {
-            console.warn('⚠️ Version check failed:', error);
+            console.warn('[Auto-Update] Version check failed:', error);
         }
     }
 
@@ -91,18 +91,17 @@ class AutoUpdateManager {
         if (this.updateNotificationShown) return;
         this.updateNotificationShown = true;
 
-        // Create elegant notification
+        // Create professional notification
         const notification = document.createElement('div');
         notification.className = 'auto-update-notification';
         notification.innerHTML = `
             <div class="auto-update-content">
-                <div class="auto-update-icon">🚀</div>
                 <div class="auto-update-text">
-                    <h4>Nova versão disponível!</h4>
-                    <p>Versão ${versionData.version} está pronta</p>
+                    <h4>Nova versão disponível</h4>
+                    <p>v${versionData.version}</p>
                 </div>
                 <button class="auto-update-btn" onclick="autoUpdateManager.performUpdate()">
-                    Atualizar Agora
+                    Atualizar
                 </button>
                 <button class="auto-update-close" onclick="autoUpdateManager.closeNotification()">
                     ✕
@@ -126,17 +125,16 @@ class AutoUpdateManager {
     }
 
     async performUpdate() {
-        console.log('🔄 Performing update...');
+        console.log('[Auto-Update] Performing update...');
 
         // Show loading state
         const notification = document.querySelector('.auto-update-notification');
         if (notification) {
             notification.innerHTML = `
-                <div class="auto-update-content">
-                    <div class="auto-update-icon">⏳</div>
+                <div class="auto-update-content loading">
                     <div class="auto-update-text">
                         <h4>Atualizando...</h4>
-                        <p>Por favor, aguarde</p>
+                        <p>Aguarde um momento</p>
                     </div>
                 </div>
             `;
@@ -165,7 +163,7 @@ class AutoUpdateManager {
             // Reload page with cache bust
             window.location.reload(true);
         } catch (error) {
-            console.error('❌ Update failed:', error);
+            console.error('[Auto-Update] Update failed:', error);
             this.closeNotification();
         }
     }
@@ -193,7 +191,7 @@ class AutoUpdateManager {
 
                     newWorker.addEventListener('statechange', () => {
                         if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                            console.log('🆕 New service worker installed');
+                            console.log('[Auto-Update] New service worker installed');
                             // New version is available
                             this.checkForUpdates();
                         }

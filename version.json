@@ -1,12 +1,11 @@
-﻿{
-    "changes":  [
-                    "Card Featured mais compacto e elegante",
-                    "Fundo dourado mais leve e transparente",
-                    "Borda dourada forte (#DAA520)",
-                    "Adicionado botao Seguir no X",
-                    "Elementos proporcionalmente menores",
-                    "Melhor hierarquia visual"
-                ],
-    "buildDate":  "2026-01-11T02:17:16.017Z",
-    "version":  "1.0.6"
+{
+    "version": "1.0.7",
+    "buildDate": "2026-01-11T03:45:00.000Z",
+    "changes": [
+        "Sistema de auto-update 100% funcional e profissional",
+        "Notificação aparece abaixo dos botões CONNECT e PRO",
+        "Design limpo sem emojis",
+        "Seção de bancos digitais corrigida - cards no padrão",
+        "Badge PARCEIRO OFICIAL agora dentro do card featured"
+    ]
 }
