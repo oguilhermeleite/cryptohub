@@ -13,7 +13,7 @@
   max-width: 500px !important;
   margin: 40px auto !important;
   position: relative;
-  overflow: visible;
+  overflow: hidden;
 }
 
 /* Remove any conflicting backgrounds */
@@ -33,15 +33,18 @@
   align-items: center !important;
   justify-content: center !important;
   gap: 8px !important;
-  margin-bottom: 24px !important;
+  margin-bottom: 20px !important;
   box-shadow: 0 6px 16px rgba(255, 165, 0, 0.3) !important;
-  position: absolute;
-  top: -15px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: none;
   white-space: nowrap;
   text-transform: uppercase;
   letter-spacing: 1px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Featured Logo Container */
@@ -73,6 +76,7 @@
   flex-direction: column;
   align-items: center;
   gap: 0;
+  padding-top: 0;
 }
 
 .featured-section .premium-hero-text {
