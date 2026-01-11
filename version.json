@@ -1,12 +1,12 @@
 ﻿{
     "changes":  [
-                    "Design dourado luxuoso para card Featured",
-                    "Gradiente golden com borda laranja brilhante",
-                    "Animacao de brilho para efeito premium",
-                    "Logo circular com moldura dourada",
-                    "Botao CTA com hover 3D",
-                    "Totalmente responsivo"
+                    "Card Featured mais compacto e elegante",
+                    "Fundo dourado mais leve e transparente",
+                    "Borda dourada forte (#DAA520)",
+                    "Adicionado botao Seguir no X",
+                    "Elementos proporcionalmente menores",
+                    "Melhor hierarquia visual"
                 ],
-    "buildDate":  "2026-01-11T01:55:21.252Z",
-    "version":  "1.0.5"
+    "buildDate":  "2026-01-11T02:17:16.017Z",
+    "version":  "1.0.6"
 }
