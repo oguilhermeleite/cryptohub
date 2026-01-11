@@ -9,10 +9,7 @@
   border: 3px solid #DAA520 !important;
   border-radius: 20px !important;
   padding: 36px !important;
-  box-shadow:
-    0 15px 40px rgba(218, 165, 32, 0.3),
-    0 8px 20px rgba(0, 0, 0, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 15px 40px rgba(218, 165, 32, 0.3) !important;
   max-width: 500px !important;
   margin: 40px auto !important;
   position: relative;
