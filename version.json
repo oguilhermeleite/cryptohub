@@ -1,11 +1,11 @@
 {
-    "version": "1.0.7",
-    "buildDate": "2026-01-11T03:45:00.000Z",
+    "version": "1.0.8",
+    "buildDate": "2026-01-11T04:15:00.000Z",
     "changes": [
-        "Sistema de auto-update 100% funcional e profissional",
-        "Notificação aparece abaixo dos botões CONNECT e PRO",
-        "Design limpo sem emojis",
-        "Seção de bancos digitais corrigida - cards no padrão",
-        "Badge PARCEIRO OFICIAL agora dentro do card featured"
+        "Nova logo profissional CRYPTOAGGREGATOR",
+        "Design em SVG com fundo transparente",
+        "CRYPTO em branco + AGGREGATOR em verde ciano",
+        "Logo otimizada para desktop e mobile",
+        "Sistema de auto-update 100% funcional"
     ]
 }
