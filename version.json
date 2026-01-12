@@ -1,11 +1,6 @@
 {
-    "version": "1.0.9",
-    "buildDate": "2026-01-11T05:30:00.000Z",
-    "changes": [
-        "Gradiente turquesa aplicado em toda interface",
-        "Botões de navegação com novo gradiente #01dba2 → #a9d9df",
-        "Botões de idioma (PT/EN) atualizados",
-        "Botões PRO e CONNECT com nova cor turquesa",
-        "Interface consistente em temas claro e escuro"
-    ]
+  "version": "1.0.10",
+  "buildDate": "2026-01-11T22:40:00Z",
+  "hash": "104655f",
+  "forceUpdate": true
 }
