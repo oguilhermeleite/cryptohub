@@ -94,9 +94,11 @@
                     return;
                 }
 
-                // Se a versão mudou OU forceUpdate está ativo
-                if (serverVersion !== this.state.currentVersion || data.forceUpdate) {
+                // IMPORTANTE: Só atualiza se a versão for DIFERENTE
+                // Ignora o forceUpdate para evitar loops infinitos
+                if (serverVersion !== this.state.currentVersion) {
                     console.log('[AutoUpdater] 🔄 Nova versão detectada! Atualizando...');
+                    console.log('[AutoUpdater]    De:', this.state.currentVersion, '→ Para:', serverVersion);
                     this.performUpdate(serverVersion);
                 } else {
                     console.log('[AutoUpdater] ✅ Versão atual está atualizada');
