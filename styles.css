@@ -640,24 +640,23 @@ img {
 
 .logo-text {
     font-family: 'Orbitron', sans-serif;
-    font-weight: 300;
-    font-size: 32px;
-    letter-spacing: 5px;
+    font-weight: 300; /* Light weight as specified */
+    font-size: 2.5rem; /* 40px - Larger for desktop */
+    letter-spacing: 3px;
     margin: 0;
     display: inline-flex;
     align-items: center;
     white-space: nowrap;
+    text-transform: uppercase;
 }
 
 .logo-white {
-    color: #FFFFFF;
+    color: #FFFFFF; /* White for "CRYPTO" */
 }
 
 .logo-gradient {
-    background: linear-gradient(90deg, #01dba2 0%, #a9d9df 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #00ffb3; /* Cyan/green solid color for "AGGREGATOR" as per reference */
+    /* Removed gradient effect for cleaner look matching reference */
 }
 
 .logo-icon {
@@ -677,18 +676,24 @@ img {
     transition: transform 0.3s ease;
 }
 
-/* Responsive logo */
+/* Responsive logo - Orbitron Light */
 @media (max-width: 768px) {
     .logo-text {
-        font-size: 24px;
-        letter-spacing: 3px;
+        font-family: 'Orbitron', sans-serif;
+        font-weight: 300; /* Light weight */
+        font-size: 1.2rem; /* 19.2px - scaled for mobile */
+        letter-spacing: 1px;
+        text-transform: uppercase;
     }
 }
 
 @media (max-width: 480px) {
     .logo-text {
-        font-size: 18px;
-        letter-spacing: 2px;
+        font-family: 'Orbitron', sans-serif;
+        font-weight: 300; /* Light weight */
+        font-size: 1rem; /* 16px - scaled for small mobile */
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
     }
 }
 
@@ -2842,23 +2847,24 @@ body.modal-open {
         display: inline-flex !important;
         visibility: visible !important;
         opacity: 1 !important;
-        font-size: 14px !important; /* Reduced from 18px to prevent overlap */
+        font-family: 'Orbitron', sans-serif !important; /* Ensure Orbitron Light on mobile */
+        font-weight: 300 !important; /* Light weight */
+        font-size: 1.2rem !important; /* Responsive sizing for mobile (approx 19.2px) */
         letter-spacing: 1px !important; /* Reduced letter spacing */
         white-space: nowrap !important;
+        text-transform: uppercase !important;
     }
 
     /* Force logo text colors to be visible */
     .logo-white {
-        color: #FFFFFF !important;
+        color: #FFFFFF !important; /* White for "CRYPTO" */
         opacity: 1 !important;
     }
 
     .logo-gradient {
-        background: linear-gradient(90deg, #01dba2 0%, #a9d9df 100%) !important;
-        -webkit-background-clip: text !important;
-        -webkit-text-fill-color: transparent !important;
-        background-clip: text !important;
+        color: #00ffb3 !important; /* Solid cyan/green for "AGGREGATOR" */
         opacity: 1 !important;
+        /* Removed gradient for consistency with desktop */
     }
 
     /* Premium Hero Banner Mobile */
@@ -3216,8 +3222,11 @@ body.modal-open {
     /* Extra small screens - make logo even smaller */
     .logo h1,
     .logo-text {
-        font-size: 12px !important; /* Even smaller on very small screens */
+        font-family: 'Orbitron', sans-serif !important;
+        font-weight: 300 !important; /* Keep Light weight */
+        font-size: 1rem !important; /* Even smaller on very small screens (16px) */
         letter-spacing: 0.5px !important;
+        text-transform: uppercase !important;
     }
 
     /* Scale down header controls even more */
