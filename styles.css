@@ -676,13 +676,13 @@ img {
     transition: transform 0.3s ease;
 }
 
-/* Responsive logo - Orbitron Light */
+/* Responsive logo - Orbitron Light with dynamic sizing */
 @media (max-width: 768px) {
     .logo-text {
         font-family: 'Orbitron', sans-serif;
         font-weight: 300; /* Light weight */
-        font-size: 1.2rem; /* 19.2px - scaled for mobile */
-        letter-spacing: 1px;
+        font-size: clamp(14px, 4vw, 18px); /* Dynamic sizing to prevent truncation */
+        letter-spacing: 0px; /* Tight spacing on mobile to fit full text */
         text-transform: uppercase;
     }
 }
@@ -691,8 +691,8 @@ img {
     .logo-text {
         font-family: 'Orbitron', sans-serif;
         font-weight: 300; /* Light weight */
-        font-size: 1rem; /* 16px - scaled for small mobile */
-        letter-spacing: 0.5px;
+        font-size: clamp(12px, 3.5vw, 16px); /* Smaller dynamic sizing for small screens */
+        letter-spacing: 0px; /* No letter spacing to maximize fit */
         text-transform: uppercase;
     }
 }
@@ -2789,8 +2789,8 @@ body.modal-open {
 
     /* Mobile header adjustments */
     .header {
-        padding: 12px 16px !important;
-        gap: 12px !important;
+        padding: 10px 12px !important; /* Reduced padding to maximize logo space */
+        gap: 8px !important; /* Reduced gap */
     }
 
     .header-content {
@@ -2805,11 +2805,12 @@ body.modal-open {
         gap: 8px !important; /* Add gap between logo, controls, and menu */
     }
 
-    /* FIX: Logo spacing - allow shrinking to prevent overlap */
+    /* FIX: Logo spacing - allow shrinking to prevent truncation */
     .logo {
         flex-shrink: 1 !important; /* Allow logo to shrink if needed */
         min-width: 0 !important; /* Allow flex item to shrink below content size */
-        overflow: hidden !important;
+        max-width: 65% !important; /* Leave 35% for buttons/menu */
+        overflow: visible !important; /* Changed from hidden to prevent truncation */
     }
 
     /* FIX: Language toggle spacing */
@@ -2849,8 +2850,8 @@ body.modal-open {
         opacity: 1 !important;
         font-family: 'Orbitron', sans-serif !important; /* Ensure Orbitron Light on mobile */
         font-weight: 300 !important; /* Light weight */
-        font-size: 1.2rem !important; /* Responsive sizing for mobile (approx 19.2px) */
-        letter-spacing: 1px !important; /* Reduced letter spacing */
+        font-size: clamp(14px, 4vw, 18px) !important; /* Dynamic sizing to prevent truncation */
+        letter-spacing: 0px !important; /* Tighten spacing to save horizontal space */
         white-space: nowrap !important;
         text-transform: uppercase !important;
     }
@@ -2966,6 +2967,7 @@ body.modal-open {
     .language-selector {
         gap: 4px !important; /* Reduced gap between buttons */
         padding: 3px !important; /* Reduced padding around buttons */
+        flex-shrink: 0 !important; /* Prevent buttons from shrinking */
     }
 
     .lang-btn {
@@ -3219,13 +3221,13 @@ body.modal-open {
 }
 
 @media (max-width: 480px) {
-    /* Extra small screens - make logo even smaller */
+    /* Extra small screens - dynamic sizing to prevent truncation */
     .logo h1,
     .logo-text {
         font-family: 'Orbitron', sans-serif !important;
         font-weight: 300 !important; /* Keep Light weight */
-        font-size: 1rem !important; /* Even smaller on very small screens (16px) */
-        letter-spacing: 0.5px !important;
+        font-size: clamp(12px, 3.5vw, 16px) !important; /* Dynamic sizing for small screens */
+        letter-spacing: 0px !important; /* No letter spacing to maximize fit */
         text-transform: uppercase !important;
     }
 
