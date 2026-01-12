@@ -2826,18 +2826,36 @@ body.modal-open {
         height: 32px;
     }
 
-    /* FIX: Make logo visible on mobile */
-    .logo,
-    .logo-text {
-        display: inline-flex !important;
+    /* FIX: Force logo visibility on mobile - CRITICAL */
+    .logo {
+        display: flex !important;
         position: relative !important;
         z-index: 1001 !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 
-    /* Ensure logo text is properly sized for mobile */
+    .logo h1,
     .logo-text {
+        display: inline-flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
         font-size: 18px !important;
         letter-spacing: 2px !important;
+    }
+
+    /* Force logo text colors to be visible */
+    .logo-white {
+        color: #FFFFFF !important;
+        opacity: 1 !important;
+    }
+
+    .logo-gradient {
+        background: linear-gradient(90deg, #01dba2 0%, #a9d9df 100%) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        background-clip: text !important;
+        opacity: 1 !important;
     }
 
     /* Premium Hero Banner Mobile */
