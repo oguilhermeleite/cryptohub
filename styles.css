@@ -4001,10 +4001,19 @@ a:focus,
         margin-bottom: 16px !important;
     }
 
-    /* Ensure dark mode background works - Original blue gradient */
-    body:not([data-theme="light"]) {
-        background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%) !important;
+    /* Ensure dark mode background works - Force black background on mobile */
+    body:not([data-theme="light"]),
+    body:not([data-theme="light"]) .hero-section,
+    body:not([data-theme="light"]) section {
+        background: #000000 !important;
         background-attachment: fixed !important;
+    }
+
+    /* Section backgrounds - ensure all sections are black in dark mode */
+    body:not([data-theme="light"]) .p2p-section,
+    body:not([data-theme="light"]) .exchanges-section,
+    body:not([data-theme="light"]) .featured-section {
+        background: #000000 !important;
     }
 }
 
