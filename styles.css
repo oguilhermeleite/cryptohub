@@ -2826,8 +2826,18 @@ body.modal-open {
         height: 32px;
     }
 
+    /* FIX: Make logo visible on mobile */
+    .logo,
     .logo-text {
-        display: none;
+        display: inline-flex !important;
+        position: relative !important;
+        z-index: 1001 !important;
+    }
+
+    /* Ensure logo text is properly sized for mobile */
+    .logo-text {
+        font-size: 18px !important;
+        letter-spacing: 2px !important;
     }
 
     /* Premium Hero Banner Mobile */
