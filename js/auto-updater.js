@@ -13,15 +13,18 @@
             checkInterval: 30000, // Verifica a cada 30 segundos
             versionFile: '/version.json',
             storageKey: 'site_version',
+            lastUpdateKey: 'site_last_update',
             forceReloadDelay: 1000,
-            maxRetries: 3
+            maxRetries: 3,
+            minUpdateInterval: 60000 // Mínimo de 60s entre atualizações
         },
 
         // Estado
         state: {
             currentVersion: null,
             checking: false,
-            retries: 0
+            retries: 0,
+            hasUpdatedThisSession: false
         },
 
         /**
@@ -59,6 +62,22 @@
          * Verifica se há nova versão disponível
          */
         async checkVersion() {
+            // Não verifica se já atualizou nesta sessão
+            if (this.state.hasUpdatedThisSession) {
+                console.log('[AutoUpdater] Já foi atualizado nesta sessão. Aguardando próximo carregamento natural.');
+                return;
+            }
+
+            // Verifica se passou tempo suficiente desde última atualização
+            const lastUpdate = localStorage.getItem(this.config.lastUpdateKey);
+            if (lastUpdate) {
+                const timeSinceUpdate = Date.now() - parseInt(lastUpdate);
+                if (timeSinceUpdate < this.config.minUpdateInterval) {
+                    console.log('[AutoUpdater] Atualização recente detectada. Aguardando intervalo mínimo.');
+                    return;
+                }
+            }
+
             if (this.state.checking) return;
 
             this.state.checking = true;
@@ -122,15 +141,23 @@
          */
         async performUpdate(newVersion) {
             try {
+                // Marca que já atualizou nesta sessão
+                this.state.hasUpdatedThisSession = true;
+
+                // Registra timestamp da atualização
+                localStorage.setItem(this.config.lastUpdateKey, Date.now().toString());
+
+                // Salva nova versão ANTES de limpar caches
+                localStorage.setItem(this.config.storageKey, newVersion);
+                this.state.currentVersion = newVersion;
+
+                console.log('[AutoUpdater] Nova versão registrada:', newVersion);
+
                 // Limpa todos os caches
                 await this.clearAllCaches();
 
                 // Atualiza Service Worker
                 await this.updateServiceWorker();
-
-                // Salva nova versão
-                localStorage.setItem(this.config.storageKey, newVersion);
-                this.state.currentVersion = newVersion;
 
                 // Mostra notificação ao usuário
                 this.showUpdateNotification();
@@ -143,7 +170,10 @@
 
             } catch (error) {
                 console.error('[AutoUpdater] Erro ao executar atualização:', error);
-                // Mesmo com erro, tenta recarregar a página
+                // Mesmo com erro, salva a versão para não tentar novamente
+                localStorage.setItem(this.config.storageKey, newVersion);
+                localStorage.setItem(this.config.lastUpdateKey, Date.now().toString());
+                // Tenta recarregar a página
                 setTimeout(() => window.location.reload(true), this.config.forceReloadDelay);
             }
         },
