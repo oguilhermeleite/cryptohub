@@ -159,18 +159,15 @@
 /* Light Theme - Dark text for visibility */
 [data-theme="light"] .card-final-title {
   color: #1a1a1a !important;
-  background: linear-gradient(135deg,
-    #1a1a1a 0%,
-    #2a2a2a 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: none;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  text-shadow: none !important;
 }
 
 [data-theme="light"] .card-final-description {
-  color: #2a2a2a !important;
+  color: #1a1a1a !important;
 }
 
 /* Buttons Container - Perfect Spacing */
