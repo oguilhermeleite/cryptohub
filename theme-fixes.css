@@ -76,64 +76,66 @@
    FIX 2: CARD TEXT - Visible in light theme (Titles + Descriptions)
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 
-/* MAXIMUM PRIORITY - Card titles MUST be visible in light theme */
+/* MAXIMUM PRIORITY - Card titles WHITE on cyan background */
 [data-theme="light"] .card-final-title,
 [data-theme="light"] h3.card-final-title,
 [data-theme="light"] .platform-card-final .card-final-title,
 [data-theme="light"] .cards-final-grid .card-final-title {
-    color: #1a1a1a !important;
+    color: #ffffff !important;
     background: none !important;
     -webkit-background-clip: unset !important;
     background-clip: unset !important;
-    -webkit-text-fill-color: #1a1a1a !important;
+    -webkit-text-fill-color: #ffffff !important;
     font-weight: 600 !important;
-    text-shadow: none !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
     opacity: 1 !important;
     visibility: visible !important;
 }
 
-/* MAXIMUM PRIORITY - Card descriptions MUST be visible in light theme */
+/* MAXIMUM PRIORITY - Card descriptions WHITE on cyan background */
 [data-theme="light"] .card-final-description,
 [data-theme="light"] p.card-final-description,
 [data-theme="light"] .platform-card-final .card-final-description,
 [data-theme="light"] .cards-final-grid .card-final-description {
-    color: #1a1a1a !important;
-    font-weight: 500 !important;
-    text-shadow: none !important;
-    opacity: 1 !important;
+    color: #ffffff !important;
+    font-weight: 400 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+    opacity: 0.95 !important;
     visibility: visible !important;
     display: -webkit-box !important;
     -webkit-line-clamp: 4 !important;
     -webkit-box-orient: vertical !important;
 }
 
-/* CRITICAL: Card backgrounds and borders MUST be light in light theme */
+/* CRITICAL: Card backgrounds use BRAND CYAN COLOR in light theme */
 [data-theme="light"] .platform-card-final,
 [data-theme="light"] .cards-final-grid .platform-card-final {
-    background: #ffffff !important;
-    background-color: #ffffff !important;
-    border: 1.5px solid rgba(0, 0, 0, 0.12) !important;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+    background: linear-gradient(135deg, #00ffb3 0%, #00cc8f 100%) !important;
+    background-color: #00ffb3 !important;
+    border: 1.5px solid rgba(0, 255, 179, 0.4) !important;
+    box-shadow: 0 4px 16px rgba(0, 255, 179, 0.3), 0 2px 8px rgba(0, 204, 143, 0.2) !important;
 }
 
 [data-theme="light"] .platform-card-final:hover {
-    border-color: rgba(255, 165, 0, 0.4) !important;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(255, 165, 0, 0.15) !important;
+    border-color: rgba(0, 255, 179, 0.6) !important;
+    box-shadow: 0 8px 24px rgba(0, 255, 179, 0.4), 0 4px 12px rgba(0, 204, 143, 0.3) !important;
+    transform: translateY(-6px) !important;
 }
 
-/* Logo container in light mode */
+/* Logo container in light mode - White background for contrast */
 [data-theme="light"] .card-logo-container {
-    background: linear-gradient(135deg, rgba(255, 165, 0, 0.06) 0%, rgba(255, 165, 0, 0.02) 100%) !important;
-    border-color: rgba(255, 107, 53, 0.2) !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-color: rgba(255, 255, 255, 0.6) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* Platform card descriptions in light theme */
+/* Platform card descriptions in light theme - WHITE on cyan */
 [data-theme="light"] .platform-card .card-description,
 [data-theme="light"] .featured-card .card-description {
-    color: #1a1a1a !important;
-    font-weight: 500 !important;
-    text-shadow: none !important;
-    opacity: 1 !important;
+    color: #ffffff !important;
+    font-weight: 400 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+    opacity: 0.95 !important;
     visibility: visible !important;
 }
 
@@ -144,15 +146,16 @@
     text-shadow: none !important;
 }
 
-/* ALL paragraphs in cards in light theme */
+/* ALL paragraphs in cards in light theme - WHITE on cyan */
 [data-theme="light"] .platform-card-final p,
 [data-theme="light"] .cards-final-grid p {
-    color: #1a1a1a !important;
-    opacity: 1 !important;
+    color: #ffffff !important;
+    opacity: 0.95 !important;
     visibility: visible !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* COMPREHENSIVE: ALL text elements in cards must be dark in light theme */
+/* COMPREHENSIVE: ALL text elements in cards WHITE on cyan in light theme */
 [data-theme="light"] .platform-card-final h1,
 [data-theme="light"] .platform-card-final h2,
 [data-theme="light"] .platform-card-final h3,
@@ -169,9 +172,10 @@
 [data-theme="light"] .cards-final-grid h6,
 [data-theme="light"] .cards-final-grid span,
 [data-theme="light"] .cards-final-grid li {
-    color: #1a1a1a !important;
-    opacity: 1 !important;
+    color: #ffffff !important;
+    opacity: 0.95 !important;
     visibility: visible !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

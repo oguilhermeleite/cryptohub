@@ -156,18 +156,48 @@
   letter-spacing: 0.2px;
 }
 
-/* Light Theme - Dark text for visibility */
+/* Light Theme - WHITE text on CYAN background for visibility */
 [data-theme="light"] .card-final-title {
-  color: #1a1a1a !important;
+  color: #ffffff !important;
   background: none !important;
   -webkit-background-clip: unset !important;
   background-clip: unset !important;
-  -webkit-text-fill-color: #1a1a1a !important;
-  text-shadow: none !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
 }
 
 [data-theme="light"] .card-final-description {
-  color: #1a1a1a !important;
+  color: #ffffff !important;
+  opacity: 0.95 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Light Theme - Button adjustments for cyan card background */
+[data-theme="light"] .card-final-btn-primary {
+  background: #ffffff !important;
+  color: #00ffb3 !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.3) !important;
+}
+
+[data-theme="light"] .card-final-btn-primary:hover {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #00cc8f !important;
+  box-shadow: 0 6px 24px rgba(255, 255, 255, 0.4) !important;
+}
+
+[data-theme="light"] .card-final-btn-secondary {
+  background: transparent !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+[data-theme="light"] .card-final-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.2) !important;
 }
 
 /* Buttons Container - Perfect Spacing */
