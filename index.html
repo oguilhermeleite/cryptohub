@@ -1253,10 +1253,13 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
+                <!-- Brand Column -->
                 <div class="footer-brand">
-                    <h3>CRYPTO AGGREGATOR</h3>
-                    <p data-lang="footer-desc">Sua porta de entrada completa para o mundo cripto</p>
+                    <h3 class="footer-logo">CRYPTO AGGREGATOR</h3>
+                    <p class="footer-slogan" data-lang="footer-desc">Sua porta de entrada e saída para o mundo cripto</p>
                 </div>
+
+                <!-- Links Column -->
                 <div class="footer-links">
                     <div class="footer-section">
                         <h4 data-lang="footer-services">Serviços</h4>
@@ -1273,9 +1276,28 @@
                         </ul>
                     </div>
                 </div>
+
+                <!-- Newsletter Column -->
+                <div class="footer-newsletter">
+                    <h4 data-lang="footer-newsletter-title">Fique Atualizado</h4>
+                    <p class="newsletter-description" data-lang="footer-newsletter-desc">Receba as melhores oportunidades e notícias do mundo cripto.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email"
+                               class="newsletter-input"
+                               placeholder="Seu melhor e-mail"
+                               data-lang-placeholder="footer-newsletter-placeholder"
+                               required
+                               aria-label="Email para newsletter">
+                        <button type="submit" class="newsletter-button" data-lang="footer-newsletter-button">
+                            Inscrever-se
+                        </button>
+                    </form>
+                    <p class="newsletter-success hidden" id="newsletterSuccess">✓ Obrigado por se inscrever!</p>
+                </div>
             </div>
+
             <div class="footer-bottom">
-                <p>&copy; 2024 CRYPTO AGGREGATOR. <span data-lang="footer-rights">Todos os direitos reservados.</span></p>
+                <p>&copy; 2025 CRYPTO AGGREGATOR. <span data-lang="footer-rights">Todos os direitos reservados.</span></p>
             </div>
         </div>
     </footer>
@@ -1406,6 +1428,45 @@
                 });
             });
         }
+    </script>
+
+    <!-- Newsletter Form Handler -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const newsletterForm = document.getElementById('newsletterForm');
+            const successMessage = document.getElementById('newsletterSuccess');
+
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+
+                    const emailInput = newsletterForm.querySelector('.newsletter-input');
+                    const email = emailInput.value.trim();
+
+                    if (email) {
+                        // Log the email (for now, frontend-only)
+                        console.log('[Newsletter] Subscription:', email);
+
+                        // Show success message
+                        successMessage.classList.remove('hidden');
+                        emailInput.value = '';
+
+                        // Hide success message after 5 seconds
+                        setTimeout(() => {
+                            successMessage.classList.add('hidden');
+                        }, 5000);
+
+                        // Track with analytics if available
+                        if (typeof gtag === 'function') {
+                            gtag('event', 'newsletter_subscription', {
+                                'email': email,
+                                'timestamp': new Date().toISOString()
+                            });
+                        }
+                    }
+                });
+            }
+        });
     </script>
 </body>
 </html>
