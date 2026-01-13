@@ -11,7 +11,17 @@
       "Bash(curl:*)",
       "WebFetch(domain:cryptoaggregator.io)",
       "Bash(/dev/null)",
-      "Bash(node:*)"
+      "Bash(node:*)",
+      "WebFetch(domain:app.comprecripto.io)",
+      "WebFetch(domain:www.bybit.com)",
+      "WebFetch(domain:www.kraken.com)",
+      "WebFetch(domain:www.mexc.com)",
+      "WebFetch(domain:ff.io)",
+      "WebFetch(domain:bity.com.br)",
+      "WebFetch(domain:www.xverse.app)",
+      "WebFetch(domain:kastfinance.com)",
+      "WebFetch(domain:phantom.app)",
+      "Bash(python -m http.server:*)"
     ],
     "deny": [],
     "ask": []

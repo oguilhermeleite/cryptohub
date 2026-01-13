@@ -1,99 +1,100 @@
-// CryptoHub Service Worker - Enhanced Auto-Update Version
-// Advanced service worker with intelligent caching and auto-update support
+// ⚠️ IMPORTANT: Increment this version for EVERY update!
+// This triggers the Service Worker update cycle
+const CACHE_NAME = 'crypto-aggregator-v1';
 
-const CACHE_VERSION = '1.0.10';
-const CACHE_NAME = `cryptohub-v${CACHE_VERSION_TIMESTAMP}`;
-
-// Dynamic cache name with timestamp to force updates
-const timestamp = new Date().getTime();
-const RUNTIME_CACHE = `cryptohub-runtime-${timestamp}`;
-
-const urlsToCache = [
-    '/',
-    '/index.html',
-    '/styles.css',
-    '/script.js',
-    '/version.json'
+// Assets to cache
+const ASSETS = [
+  '/',
+  '/index.html',
+  '/all-platforms.html',
+  '/styles.css',
+  '/professional-refined.css',
+  '/premium-elements.css',
+  '/cards-final.css',
+  '/theme-fixes.css',
+  '/auto-update.css',
+  '/featured-golden.css',
+  '/script.js',
+  '/performance.js',
+  '/premium-elements.js',
+  '/auto-update.js',
+  '/js/defillama.js'
 ];
 
-// Install event - cache resources and skip waiting
+// Install event - cache all assets
 self.addEventListener('install', (event) => {
-    console.log('[SW] Installing service worker...');
-
-    event.waitUntil(
-        caches.open(CACHE_NAME)
-            .then((cache) => {
-                console.log('[SW] Caching files');
-                return cache.addAll(urlsToCache);
-            })
-            .then(() => {
-                // Força o SW a se tornar ativo imediatamente
-                return self.skipWaiting();
-            })
-    );
-});
-
-// Fetch event - Network first, then cache
-self.addEventListener('fetch', (event) => {
-    // Ignora requisições que não são HTTP/HTTPS
-    if (!event.request.url.startsWith('http')) {
-        return;
-    }
-
-    // Para version.json, SEMPRE busca da rede (nunca do cache)
-    if (event.request.url.includes('version.json')) {
-        event.respondWith(
-            fetch(event.request, {
-                cache: 'no-store',
-                headers: {
-                    'Cache-Control': 'no-cache, no-store, must-revalidate',
-                    'Pragma': 'no-cache'
-                }
-            }).catch(() => {
-                // Se falhar, retorna versão vazia
-                return new Response(JSON.stringify({
-                    version: "0.0.0",
-                    buildDate: new Date().toISOString(),
-                    hash: "unknown",
-                    forceUpdate: false
-                }), {
-                    headers: { 'Content-Type': 'application/json' }
-                });
-            })
-        );
-        return;
-    }
-
-    // Para outros recursos, usa estratégia normal
-    event.respondWith(
-        caches.match(event.request)
-            .then((response) => {
-                return response || fetch(event.request);
-            })
-    );
+  console.log('[Service Worker] Installing v' + CACHE_NAME);
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => {
+        console.log('[Service Worker] Caching assets');
+        return cache.addAll(ASSETS);
+      })
+      .catch((error) => {
+        console.error('[Service Worker] Cache failed:', error);
+      })
+  );
 });
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
-    event.waitUntil(
-        caches.keys().then((cacheNames) => {
-            return Promise.all(
-                cacheNames.map((cacheName) => {
-                    if (cacheName !== CACHE_NAME) {
-                        console.log('Deleting old cache:', cacheName);
-                        return caches.delete(cacheName);
-                    }
-                })
-            );
+  console.log('[Service Worker] Activating v' + CACHE_NAME);
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (cacheName !== CACHE_NAME) {
+            console.log('[Service Worker] Deleting old cache:', cacheName);
+            return caches.delete(cacheName);
+          }
         })
-    );
-    // Força o Service Worker a assumir controle imediatamente
-    self.clients.claim();
+      );
+    }).then(() => {
+      console.log('[Service Worker] Claiming clients');
+      return self.clients.claim();
+    })
+  );
 });
 
-// Escuta mensagem de SKIP_WAITING do auto-updater
+// Fetch event - cache first strategy
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((cachedResponse) => {
+        if (cachedResponse) {
+          return cachedResponse;
+        }
+
+        return fetch(event.request)
+          .then((response) => {
+            // Don't cache non-successful responses
+            if (!response || response.status !== 200 || response.type === 'error') {
+              return response;
+            }
+
+            // Clone the response
+            const responseToCache = response.clone();
+
+            // Cache the fetched response for future use
+            caches.open(CACHE_NAME)
+              .then((cache) => {
+                cache.put(event.request, responseToCache);
+              });
+
+            return response;
+          })
+          .catch((error) => {
+            console.error('[Service Worker] Fetch failed:', error);
+            throw error;
+          });
+      })
+  );
+});
+
+// Message event - handle skipWaiting
 self.addEventListener('message', (event) => {
-    if (event.data && event.data.type === 'SKIP_WAITING') {
-        self.skipWaiting();
-    }
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    console.log('[Service Worker] Skipping waiting');
+    self.skipWaiting();
+  }
 });

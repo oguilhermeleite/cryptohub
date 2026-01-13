@@ -1,0 +1,94 @@
+                    <!-- Raydium -->
+                    <div class="platform-card-final">
+                        <div class="card-logo-container">
+                            <img src="https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R/logo.png" alt="Raydium" onerror="this.src='https://raydium.io/logo/logo-text.svg'">
+                        </div>
+                        <h3 class="card-final-title">Raydium</h3>
+                        <p class="card-final-description">
+                            AMM on-chain com order book em Solana. Trading perp sem gas, até 40x alavancagem.
+                        </p>
+                        <div class="card-final-buttons">
+                            <a href="https://raydium.io/swap" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('Raydium', 'DEX')">
+                                Visitar Site
+                            </a>
+                            <a href="https://x.com/RaydiumProtocol" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary">
+                                Seguir no X
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Bitflow -->
+                    <div class="platform-card-final">
+                        <div class="card-logo-container">
+                            <img src="https://logo.clearbit.com/bitflow.finance" alt="Bitflow" onerror="this.src='https://www.google.com/s2/favicons?domain=bitflow.finance&sz=128'">
+                        </div>
+                        <h3 class="card-final-title">Bitflow</h3>
+                        <p class="card-final-description">
+                            DEX para Bitcoiners na Stacks. Melhores taxas de swap para Bitcoin, SIP10 tokens e Runes.
+                        </p>
+                        <div class="card-final-buttons">
+                            <a href="https://www.bitflow.finance" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('Bitflow', 'DEX')">
+                                Visitar Site
+                            </a>
+                            <a href="https://twitter.com/bitflow" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary">
+                                Seguir no X
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Liquidium -->
+                    <div class="platform-card-final">
+                        <div class="card-logo-container">
+                            <img src="https://liquidium.wtf/logo.svg" alt="Liquidium" onerror="this.src='https://framerusercontent.com/images/BdYCahxn4NVFtzsWOGpUWv3huZ0.png'">
+                        </div>
+                        <h3 class="card-final-title">Liquidium</h3>
+                        <p class="card-final-description">
+                            Protocolo de empréstimos cross-chain descentralizado. Empreste ativos entre Bitcoin, Ethereum e Solana.
+                        </p>
+                        <div class="card-final-buttons">
+                            <a href="https://liquidium.fi" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('Liquidium', 'DEX')">
+                                Visitar Site
+                            </a>
+                            <a href="https://x.com/liquidiumfi" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary">
+                                Seguir no X
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Sats Terminal -->
+                    <div class="platform-card-final">
+                        <div class="card-logo-container">
+                            <img src="https://logo.clearbit.com/satsterminal.com" alt="Sats Terminal" onerror="this.src='https://www.google.com/s2/favicons?domain=satsterminal.com&sz=128'">
+                        </div>
+                        <h3 class="card-final-title">Sats Terminal</h3>
+                        <p class="card-final-description">
+                            Swaps, empréstimos e yield de Bitcoin. Agregação de liquidez no ecossistema Bitcoin.
+                        </p>
+                        <div class="card-final-buttons">
+                            <a href="https://www.satsterminal.com" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('Sats Terminal', 'DEX')">
+                                Visitar Site
+                            </a>
+                            <a href="https://x.com/SatsTerminal" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary">
+                                Seguir no X
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Pump.fun -->
+                    <div class="platform-card-final">
+                        <div class="card-logo-container">
+                            <img src="https://logo.clearbit.com/pump.fun" alt="Pump.fun" onerror="this.src='https://www.google.com/s2/favicons?domain=pump.fun&sz=128'">
+                        </div>
+                        <h3 class="card-final-title">Pump.fun</h3>
+                        <p class="card-final-description">
+                            Plataforma líder para lançamento de memecoins em Solana, crie tokens em segundos.
+                        </p>
+                        <div class="card-final-buttons">
+                            <a href="https://pump.fun" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('Pump.fun', 'Launchpad')">
+                                Visitar Site
+                            </a>
+                            <a href="https://twitter.com/pumpdotfun" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary">
+                                Seguir no X
+                            </a>
+                        </div>
+                    </div>

@@ -1350,5 +1350,62 @@
             });
         });
     </script>
+
+    <!-- PWA Update Toast Notification -->
+    <div id="update-toast" class="update-toast hidden">
+        <div class="toast-content">
+            <span>Nova versão disponível!</span>
+            <button id="reload-btn">Atualizar</button>
+        </div>
+    </div>
+
+    <!-- Service Worker Registration & Auto-Update System -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js').then((reg) => {
+                console.log('[PWA] Service Worker registered');
+
+                // Check for updates on page load
+                reg.update();
+
+                // Listen for new service worker installation
+                reg.addEventListener('updatefound', () => {
+                    const newWorker = reg.installing;
+                    console.log('[PWA] New Service Worker found');
+
+                    newWorker.addEventListener('statechange', () => {
+                        if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                            // New service worker is ready, show update notification
+                            console.log('[PWA] New version available');
+                            document.getElementById('update-toast').classList.remove('hidden');
+                        }
+                    });
+                });
+            }).catch((error) => {
+                console.error('[PWA] Service Worker registration failed:', error);
+            });
+
+            // Handle controller change (when new SW takes over)
+            let refreshing;
+            navigator.serviceWorker.addEventListener('controllerchange', () => {
+                if (refreshing) return;
+                console.log('[PWA] Reloading page for new version');
+                window.location.reload();
+                refreshing = true;
+            });
+
+            // Reload button click handler
+            document.addEventListener('DOMContentLoaded', () => {
+                document.getElementById('reload-btn').addEventListener('click', () => {
+                    navigator.serviceWorker.getRegistration().then((reg) => {
+                        if (reg && reg.waiting) {
+                            console.log('[PWA] Activating new Service Worker');
+                            reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+                        }
+                    });
+                });
+            });
+        }
+    </script>
 </body>
 </html>
