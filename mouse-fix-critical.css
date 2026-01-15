@@ -1,0 +1,101 @@
+/* ============================================
+   CRITICAL FIX: Mouse/Trackpad Interaction
+   ============================================
+   This file ensures all mouse and trackpad
+   interactions work correctly by fixing
+   z-index layering issues.
+   ============================================ */
+
+/* CRITICAL: Ensure body and html allow scrolling */
+html {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+
+body {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+
+/* CRITICAL: All background overlays must be behind content */
+body::before,
+body::after,
+[data-theme="light"] body::before,
+[data-theme="light"] body::after {
+    z-index: -1 !important;
+    pointer-events: none !important;
+}
+
+/* CRITICAL: All interactive content must be above backgrounds */
+header,
+.header,
+main,
+section,
+.platform-section,
+.hero-section,
+.featured-section,
+.container,
+.footer,
+nav,
+.navigation,
+a,
+button,
+.platform-card,
+.platform-card-final,
+.card-final-btn {
+    position: relative;
+    z-index: 10 !important;
+}
+
+/* Ensure all links and buttons are clickable */
+a,
+button,
+.card-final-btn,
+.carousel-arrow,
+.nav-menu a,
+.mobile-menu-btn,
+.theme-btn,
+.lang-btn {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+/* Ensure cards are interactive */
+.platform-card,
+.platform-card-final {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+/* Fix for any overlay that might be blocking */
+.mobile-menu-overlay:not(.active),
+.modal-overlay:not(.active) {
+    pointer-events: none !important;
+    z-index: -999 !important;
+}
+
+/* Active overlays should be on top */
+.mobile-menu-overlay.active,
+.modal-overlay.active {
+    z-index: 9999 !important;
+    pointer-events: auto !important;
+}
+
+/* Ensure header is always on top */
+.header {
+    z-index: 1000 !important;
+}
+
+/* CRITICAL: Fix scroll containers */
+.horizontal-scroll-container,
+.cards-final-grid {
+    pointer-events: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+}
+
+/* Ensure page content is scrollable */
+body,
+html {
+    scroll-behavior: smooth !important;
+    -webkit-overflow-scrolling: touch !important;
+}
