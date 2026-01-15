@@ -63,6 +63,9 @@ section {
     content-visibility: auto;
     /* Transparent - let body gradient show through */
     background: transparent !important;
+    /* Ensure content is above background overlays */
+    position: relative;
+    z-index: 10;
 }
 
 /* Optimize images for lazy loading and smooth scroll */
@@ -541,6 +544,8 @@ img {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
+    position: relative;
+    z-index: 10;
 }
 
 /* Desktop Layout Centering (768px and above) */
@@ -2677,6 +2682,8 @@ body.modal-open {
     background: var(--footer-background);
     border-top: 1px solid var(--border-primary);
     padding: 4rem 0 1.5rem;
+    position: relative;
+    z-index: 10;
 }
 
 .footer-content {
@@ -3690,6 +3697,8 @@ a:focus,
     max-width: 1200px;
     margin: 0 auto;
     background: transparent !important;
+    position: relative;
+    z-index: 10;
 }
 
 .hero-title {

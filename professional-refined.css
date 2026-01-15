@@ -175,7 +175,7 @@ body {
     background-image:
         repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(42, 37, 32, 0.008) 2px, rgba(42, 37, 32, 0.008) 4px);
     pointer-events: none;
-    z-index: 1;
+    z-index: -1;
     mix-blend-mode: multiply;
     opacity: 0.5;
 }

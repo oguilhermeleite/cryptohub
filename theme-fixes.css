@@ -268,7 +268,7 @@ section::after {
         transparent 50%
     ) !important;
     pointer-events: none !important;
-    z-index: 1 !important;
+    z-index: -1 !important;
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
