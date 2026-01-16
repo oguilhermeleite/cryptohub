@@ -20,15 +20,11 @@
     <!-- FINAL CARDS: Complete info visible, no modal/flip -->
     <link rel="stylesheet" href="cards-final.css?v=20250109-card-descriptions">
 
-    <!-- FORCE HIDE ALL SCROLLBARS - CRITICAL CSS -->
+    <!-- SCROLLBAR FIX: Only hide horizontal scrollbars on card containers -->
     <style>
-        /* Hide ALL scrollbars completely */
+        /* Hide ONLY horizontal scrollbars on card containers (NOT the main page scrollbar!) */
         .horizontal-cards-grid::-webkit-scrollbar,
-        .horizontal-scroll-container::-webkit-scrollbar,
-        section::-webkit-scrollbar,
-        .platform-section::-webkit-scrollbar,
-        .featured-section::-webkit-scrollbar,
-        *::-webkit-scrollbar {
+        .horizontal-scroll-container::-webkit-scrollbar {
             display: none !important;
             width: 0 !important;
             height: 0 !important;
@@ -40,13 +36,46 @@
             -ms-overflow-style: none !important;
         }
 
-        /* Hide scroll indicators and dots */
+        /* CRITICAL: Ensure main page scrollbar is VISIBLE and FUNCTIONAL */
+        html::-webkit-scrollbar {
+            width: 12px !important;
+            display: block !important;
+        }
+
+        html::-webkit-scrollbar-track {
+            background: #1a1a1a !important;
+        }
+
+        html::-webkit-scrollbar-thumb {
+            background: #555 !important;
+            border-radius: 6px !important;
+        }
+
+        html::-webkit-scrollbar-thumb:hover {
+            background: #777 !important;
+        }
+
+        /* Hide scroll indicator dots only */
         .scroll-indicator,
         .scroll-dot,
         .scroll-dot.active {
             display: none !important;
             opacity: 0 !important;
             visibility: hidden !important;
+        }
+
+        /* NUCLEAR: Force page scroll to work */
+        html {
+            overflow-y: scroll !important;
+            overflow-x: hidden !important;
+            height: 100% !important;
+        }
+
+        body {
+            overflow-y: auto !important;
+            overflow-x: hidden !important;
+            min-height: 100vh !important;
+            height: auto !important;
         }
     </style>
 
@@ -101,12 +130,14 @@
                 </div>
 
                 <div class="header-controls">
+                    <!-- THEME TOGGLE TEMPORARIAMENTE DESABILITADO - Manter código para reimplementação futura
                     <div class="theme-toggle desktop-theme-toggle">
                         <button class="theme-btn" id="desktopThemeToggle" aria-label="Toggle theme">
                             <span class="theme-icon theme-icon-dark">🌙</span>
                             <span class="theme-icon theme-icon-light">☀️</span>
                         </button>
                     </div>
+                    -->
                     <div class="language-selector">
                         <button class="lang-btn active" data-lang-switch="pt">PT</button>
                         <button class="lang-btn" data-lang-switch="en">EN</button>
@@ -159,6 +190,7 @@
                 <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">&times;</button>
             </div>
             <nav class="mobile-menu-nav">
+                <!-- THEME TOGGLE TEMPORARIAMENTE DESABILITADO - Manter código para reimplementação futura
                 <div class="mobile-theme-toggle">
                     <button class="mobile-theme-btn" id="mobileThemeToggle" aria-label="Toggle theme">
                         <span class="theme-icon theme-icon-dark">🌙</span>
@@ -167,6 +199,7 @@
                     </button>
                 </div>
                 <div class="mobile-menu-separator"></div>
+                -->
                 <div class="mobile-language-selector">
                     <button class="lang-btn active" data-lang-switch="pt">PT</button>
                     <button class="lang-btn" data-lang-switch="en">EN</button>
