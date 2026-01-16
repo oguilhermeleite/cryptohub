@@ -20,7 +20,7 @@
     <meta name="author" content="CRYPTO AGGREGATOR">
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="cryptoaggregator-legitimate-platform">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://*.clarity.ms; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://*.clarity.ms;">
 
     <link rel="stylesheet" href="styles.css?v=20250111-turquoise">
     <link rel="stylesheet" href="professional-refined.css?v=20250111-turquoise">
@@ -114,12 +114,19 @@
 
       // Track platform clicks
       function trackPlatformClick(platform, category) {
-        gtag('event', 'platform_click', {
-          'platform_name': platform,
-          'category': category,
-          'device': /Mobile/i.test(navigator.userAgent) ? 'mobile' : 'desktop',
-          'timestamp': new Date().toISOString()
-        });
+        console.log('[Analytics] Tracking click:', platform, category);
+
+        if (typeof gtag === 'function') {
+          gtag('event', 'platform_click', {
+            'platform_name': platform,
+            'category': category,
+            'device': /Mobile/i.test(navigator.userAgent) ? 'mobile' : 'desktop',
+            'timestamp': new Date().toISOString()
+          });
+          console.log('[Analytics] Event sent to GA4');
+        } else {
+          console.error('[Analytics] gtag function not available');
+        }
       }
     </script>
 
