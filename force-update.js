@@ -3,6 +3,8 @@
 // Sistema de atualização forçada para usuários com cache antigo
 // =====================================================
 
+console.log('[Force Update] 🚀 Script loaded successfully!');
+
 class ForceUpdateManager {
     constructor() {
         this.currentVersion = null;
@@ -64,16 +66,24 @@ class ForceUpdateManager {
     }
 
     needsUpdate(forceUpdate) {
+        console.log('[Force Update] Checking if update needed...');
+        console.log('[Force Update] - Stored:', this.storedVersion);
+        console.log('[Force Update] - Current:', this.currentVersion);
+        console.log('[Force Update] - Force enabled:', forceUpdate);
+
         // Se não tem versão armazenada, é primeira vez - não mostrar
         if (!this.storedVersion) {
+            console.log('[Force Update] ❌ No stored version (first visit) - skipping modal');
             return false;
         }
 
         // Se forceUpdate está ativado E as versões são diferentes
         if (forceUpdate && this.storedVersion !== this.currentVersion) {
+            console.log('[Force Update] ✅ UPDATE NEEDED!');
             return true;
         }
 
+        console.log('[Force Update] ℹ️ No update needed');
         return false;
     }
 
@@ -179,14 +189,18 @@ class ForceUpdateManager {
 }
 
 // Inicializar quando DOM estiver pronto
+console.log('[Force Update] Document readyState:', document.readyState);
 let forceUpdateManager;
+
 if (document.readyState === 'loading') {
+    console.log('[Force Update] Waiting for DOMContentLoaded...');
     document.addEventListener('DOMContentLoaded', () => {
+        console.log('[Force Update] DOM ready, initializing manager...');
         forceUpdateManager = new ForceUpdateManager();
+        window.forceUpdateManager = forceUpdateManager;
     });
 } else {
+    console.log('[Force Update] DOM already loaded, initializing immediately...');
     forceUpdateManager = new ForceUpdateManager();
+    window.forceUpdateManager = forceUpdateManager;
 }
-
-// Tornar globalmente acessível para onclick
-window.forceUpdateManager = forceUpdateManager;
