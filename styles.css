@@ -672,12 +672,19 @@ img {
 }
 
 .logo-white {
-    color: #FFFFFF; /* White for "CRYPTO" */
+    /* Changed from white to orange gradient to match site branding */
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .logo-gradient {
-    color: #00ffb3; /* Cyan/green solid color for "AGGREGATOR" as per reference */
-    /* Removed gradient effect for cleaner look matching reference */
+    /* Orange gradient to match "CRYPTO" and site branding */
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .logo-icon {
@@ -3011,16 +3018,21 @@ body.modal-open {
         text-transform: uppercase !important;
     }
 
-    /* Force logo text colors to be visible */
+    /* Force logo text colors to be visible with orange gradient */
     .logo-white {
-        color: #FFFFFF !important; /* White for "CRYPTO" */
+        background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        background-clip: text !important;
         opacity: 1 !important;
     }
 
     .logo-gradient {
-        color: #00ffb3 !important; /* Solid cyan/green for "AGGREGATOR" */
+        background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        background-clip: text !important;
         opacity: 1 !important;
-        /* Removed gradient for consistency with desktop */
     }
 
     /* Premium Hero Banner Mobile */

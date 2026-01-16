@@ -6,9 +6,10 @@
 class AutoUpdateManager {
     constructor() {
         this.currentVersion = null;
-        this.checkInterval = 60000; // Check every 60 seconds
+        this.checkInterval = 600000; // Check every 10 minutes (600 seconds) - LESS FREQUENT
         this.versionCheckUrl = '/version.json';
         this.updateNotificationShown = false;
+        this.isUpdating = false; // Prevent multiple simultaneous updates
 
         this.init();
     }
@@ -63,6 +64,11 @@ class AutoUpdateManager {
     }
 
     async checkForUpdates() {
+        // Prevent duplicate checks
+        if (this.isUpdating || this.updateNotificationShown) {
+            return;
+        }
+
         try {
             // Bypass cache with timestamp
             const response = await fetch(this.versionCheckUrl + '?t=' + Date.now(), {
@@ -74,6 +80,10 @@ class AutoUpdateManager {
                 }
             });
 
+            if (!response.ok) {
+                throw new Error('Version check failed');
+            }
+
             const data = await response.json();
             const latestVersion = data.version;
 
@@ -83,7 +93,8 @@ class AutoUpdateManager {
                 this.showUpdateNotification(data);
             }
         } catch (error) {
-            console.warn('[Auto-Update] Version check failed:', error);
+            console.warn('[Auto-Update] Version check failed (silent):', error);
+            // Silent fail - don't bother user with errors
         }
     }
 
@@ -125,6 +136,12 @@ class AutoUpdateManager {
     }
 
     async performUpdate() {
+        // Prevent multiple simultaneous updates
+        if (this.isUpdating) {
+            return;
+        }
+
+        this.isUpdating = true;
         console.log('[Auto-Update] Performing update...');
 
         // Show loading state
@@ -164,6 +181,7 @@ class AutoUpdateManager {
             window.location.reload(true);
         } catch (error) {
             console.error('[Auto-Update] Update failed:', error);
+            this.isUpdating = false;
             this.closeNotification();
         }
     }
