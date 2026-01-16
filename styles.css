@@ -14,9 +14,11 @@ html {
     /* Performance optimizations */
     text-rendering: optimizeSpeed;
     -webkit-tap-highlight-color: transparent;
-    /* Enhanced smooth scrolling */
+    /* CRITICAL: Force scroll enabled */
+    overflow-y: auto !important;
     overflow-x: hidden;
-    overflow-y: scroll;
+    height: auto !important;
+    pointer-events: auto !important;
     /* Hardware acceleration for entire page */
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
@@ -38,7 +40,11 @@ html {
 
 /* Optimize body scrolling */
 body {
+    /* CRITICAL: Force scroll enabled */
+    overflow-y: auto !important;
     overflow-x: hidden;
+    height: auto !important;
+    pointer-events: auto !important;
     /* Enable GPU acceleration */
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
@@ -492,6 +498,16 @@ body {
     padding-top: 0 !important;
 }
 
+/* CRITICAL: Fix potential background blockers - CLICKS MUST PASS THROUGH */
+#particles-js,
+canvas,
+.background,
+body::before,
+body::after {
+    pointer-events: none !important;
+    z-index: -1 !important;
+}
+
 /* Subtle animated gradient overlay */
 body::before {
     content: '';
@@ -510,8 +526,8 @@ body::before {
         rgba(255, 140, 0, 0.03) 0%,
         transparent 50%
     );
-    pointer-events: none;
-    z-index: -1;
+    pointer-events: none !important;
+    z-index: -1 !important;
 }
 
 /* Smooth scroll container optimization */
@@ -4454,3 +4470,37 @@ a:focus,
     }
 }
 
+
+/* ========================================
+   EMERGENCY FIX: FORCE INTERACTION ON KEY ELEMENTS
+   Force all interactive elements to sit ABOVE any background layer
+   ======================================== */
+
+main,
+section,
+header,
+footer,
+.container,
+.platform-card,
+.platform-card-final,
+.card-final-btn,
+.card-final-btn-primary,
+.card-final-btn-secondary,
+a,
+button {
+    position: relative !important;
+    z-index: 10 !important;
+    pointer-events: auto !important;
+}
+
+/* Force clicks to work on all interactive elements */
+a,
+button,
+.carousel-arrow,
+.nav-menu a,
+input,
+textarea,
+select {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+}
