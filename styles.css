@@ -672,19 +672,11 @@ img {
 }
 
 .logo-white {
-    /* Changed from white to orange gradient to match site branding */
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #FFFFFF; /* White for "CRYPTO" */
 }
 
 .logo-gradient {
-    /* Orange gradient to match "CRYPTO" and site branding */
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #00ffb3; /* Cyan/green solid color for "AGGREGATOR" */
 }
 
 .logo-icon {
@@ -3018,20 +3010,14 @@ body.modal-open {
         text-transform: uppercase !important;
     }
 
-    /* Force logo text colors to be visible with orange gradient */
+    /* Force logo text colors to be visible */
     .logo-white {
-        background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%) !important;
-        -webkit-background-clip: text !important;
-        -webkit-text-fill-color: transparent !important;
-        background-clip: text !important;
+        color: #FFFFFF !important; /* White for "CRYPTO" */
         opacity: 1 !important;
     }
 
     .logo-gradient {
-        background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%) !important;
-        -webkit-background-clip: text !important;
-        -webkit-text-fill-color: transparent !important;
-        background-clip: text !important;
+        color: #00ffb3 !important; /* Cyan/green for "AGGREGATOR" */
         opacity: 1 !important;
     }
 
