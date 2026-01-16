@@ -4502,3 +4502,193 @@ select {
     cursor: pointer !important;
     pointer-events: auto !important;
 }
+
+/* =====================================================
+   FORCE UPDATE MODAL - Sistema de atualização forçada
+   ===================================================== */
+
+.force-update-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+}
+
+.force-update-overlay.show {
+    opacity: 1;
+}
+
+.force-update-modal {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    border: 2px solid #00ffb3;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 255, 179, 0.3);
+    animation: slideUp 0.4s ease;
+    overflow: hidden;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.force-update-header {
+    background: linear-gradient(135deg, #00ffb3 0%, #00dca5 100%);
+    padding: 30px 20px;
+    text-align: center;
+    color: #000;
+}
+
+.force-update-icon {
+    font-size: 60px;
+    margin-bottom: 10px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.force-update-header h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 800;
+    color: #000;
+}
+
+.force-update-body {
+    padding: 30px;
+    color: #fff;
+}
+
+.force-update-version {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #00ffb3;
+}
+
+.force-update-version strong {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.force-update-message {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.force-update-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.force-update-benefits li {
+    padding: 10px;
+    font-size: 15px;
+    background: rgba(0, 255, 179, 0.1);
+    margin-bottom: 8px;
+    border-radius: 8px;
+    border-left: 3px solid #00ffb3;
+}
+
+.force-update-footer {
+    padding: 20px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.force-update-btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.force-update-btn-primary {
+    background: linear-gradient(135deg, #00ffb3 0%, #00dca5 100%);
+    color: #000;
+    box-shadow: 0 4px 15px rgba(0, 255, 179, 0.4);
+}
+
+.force-update-btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 255, 179, 0.6);
+}
+
+.force-update-btn-primary:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.force-update-btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #555;
+}
+
+.force-update-btn-secondary:hover {
+    border-color: #00ffb3;
+    color: #00ffb3;
+}
+
+/* Responsive para mobile */
+@media (max-width: 768px) {
+    .force-update-modal {
+        max-width: 90%;
+    }
+
+    .force-update-header h2 {
+        font-size: 22px;
+    }
+
+    .force-update-icon {
+        font-size: 50px;
+    }
+
+    .force-update-body {
+        padding: 20px;
+    }
+
+    .force-update-message {
+        font-size: 14px;
+    }
+
+    .force-update-benefits li {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .force-update-btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
