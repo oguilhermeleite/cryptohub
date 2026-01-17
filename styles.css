@@ -4692,3 +4692,38 @@ select {
         font-size: 14px;
     }
 }
+
+/* Botão de fechar (X) no modal de atualização */
+.force-update-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    z-index: 1000000;
+}
+
+.force-update-close-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(90deg);
+}
+
+/* Garantir que o modal esteja acima de tudo */
+.force-update-overlay {
+    z-index: 999999 !important;
+}
+
+.force-update-modal {
+    position: relative;
+    z-index: 1000000 !important;
+}

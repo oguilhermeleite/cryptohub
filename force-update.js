@@ -91,11 +91,14 @@ class ForceUpdateManager {
         if (this.modalShown) return;
         this.modalShown = true;
 
+        console.log('[Force Update] 🎨 Creating modal overlay...');
+
         // Criar overlay
         const overlay = document.createElement('div');
         overlay.className = 'force-update-overlay';
         overlay.innerHTML = `
             <div class="force-update-modal">
+                <button class="force-update-close-btn" onclick="window.forceUpdateManager.dismissModal()" title="Fechar (ESC)">✕</button>
                 <div class="force-update-header">
                     <div class="force-update-icon">🚀</div>
                     <h2>Nova Versão Disponível!</h2>
@@ -114,10 +117,10 @@ class ForceUpdateManager {
                     </ul>
                 </div>
                 <div class="force-update-footer">
-                    <button class="force-update-btn force-update-btn-primary" onclick="forceUpdateManager.performUpdate()">
+                    <button class="force-update-btn force-update-btn-primary" onclick="window.forceUpdateManager.performUpdate()">
                         Atualizar Agora
                     </button>
-                    <button class="force-update-btn force-update-btn-secondary" onclick="forceUpdateManager.dismissModal()">
+                    <button class="force-update-btn force-update-btn-secondary" onclick="window.forceUpdateManager.dismissModal()">
                         Atualizar Depois
                     </button>
                 </div>
@@ -125,10 +128,22 @@ class ForceUpdateManager {
         `;
 
         document.body.appendChild(overlay);
+        console.log('[Force Update] ✅ Modal added to DOM');
+
+        // Adicionar listener para ESC
+        const escListener = (e) => {
+            if (e.key === 'Escape') {
+                console.log('[Force Update] ESC pressed - closing modal');
+                this.dismissModal();
+                document.removeEventListener('keydown', escListener);
+            }
+        };
+        document.addEventListener('keydown', escListener);
 
         // Mostrar com animação
         setTimeout(() => {
             overlay.classList.add('show');
+            console.log('[Force Update] 🎉 Modal visible!');
         }, 100);
     }
 
