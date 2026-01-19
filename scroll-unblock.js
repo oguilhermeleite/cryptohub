@@ -1,53 +1,32 @@
 /**
- * NUCLEAR FIX: Force wheel scroll to work - MOST AGGRESSIVE APPROACH
- * Captures wheel events BEFORE any other script can block them
+ * SCROLL FIX: Ultra-smooth native scroll
+ * Simply ensures nothing blocks the native browser scroll
  */
 
 (function() {
     'use strict';
 
-    console.log('[SCROLL UNBLOCK] NUCLEAR MODE Initializing...');
+    console.log('[SCROLL FIX] Enabling smooth native scroll...');
 
-    // IMMEDIATE: Add wheel listener in CAPTURE phase (before any other listeners)
-    // This runs FIRST before any other wheel handlers
-    document.addEventListener('wheel', function(e) {
-        // Check if we're inside a horizontal scroll container
-        const isInHorizontalContainer = e.target.closest('.horizontal-scroll-container, .cards-final-grid, .horizontal-cards-grid');
-
-        if (isInHorizontalContainer) {
-            // Allow horizontal scrolling on these containers
-            console.log('[SCROLL UNBLOCK] Allowing horizontal scroll on container');
-            return;
-        }
-
-        // CRITICAL: For main page scroll, STOP propagation to prevent other scripts from blocking it
-        e.stopImmediatePropagation();
-
-        // Force the scroll manually
-        const delta = e.deltaY || e.detail || e.wheelDelta;
-        window.scrollBy({
-            top: delta,
-            behavior: 'auto' // Instant scroll, smooth might not work in emergency mode
-        });
-
-        console.log('[SCROLL UNBLOCK] FORCED SCROLL:', delta);
-
-    }, { capture: true, passive: false }); // capture: true = run FIRST, passive: false = can stopPropagation
-
-    // FORCE scroll styles
-    function forceScrollStyles() {
-        document.documentElement.style.overflowY = 'scroll !important';
-        document.body.style.overflowY = 'auto !important';
-        document.body.style.height = 'auto !important';
-        document.body.style.minHeight = '100vh !important';
-        console.log('[SCROLL UNBLOCK] Forced scroll styles');
+    // Ensure CSS scroll is enabled
+    function enableScroll() {
+        document.documentElement.style.cssText = 'overflow-y: scroll !important; scroll-behavior: smooth;';
+        document.body.style.cssText = 'overflow-y: auto !important; min-height: 100vh !important; scroll-behavior: smooth;';
     }
 
-    forceScrollStyles();
+    // Apply immediately
+    enableScroll();
 
-    // Keep forcing styles
-    setInterval(forceScrollStyles, 1000);
+    // Reapply after DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', enableScroll);
+    }
 
-    console.log('[SCROLL UNBLOCK] ✓✓✓ NUCLEAR MODE ACTIVE - Scroll WILL work ✓✓✓');
+    // Final check after everything loads
+    window.addEventListener('load', () => {
+        setTimeout(enableScroll, 100);
+    });
+
+    console.log('[SCROLL FIX] ✓ Native smooth scroll active');
 
 })();
