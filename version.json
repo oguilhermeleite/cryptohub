@@ -1,6 +1,13 @@
 {
-  "version": "1.1.0",
-  "buildDate": "2026-01-16T23:00:00Z",
-  "hash": "8d77b2c",
-  "forceUpdate": false
+  "version": "1.1.1",
+  "buildDate": "2026-01-16T23:30:00Z",
+  "hash": "62b4967",
+  "forceUpdate": true,
+  "changelog": [
+    "Scroll suave e fluido corrigido",
+    "Modal de atualização com botão fechar",
+    "Tecla ESC para fechar modal",
+    "Analytics tracking completo",
+    "Ícones atualizados para ciano"
+  ]
 }
