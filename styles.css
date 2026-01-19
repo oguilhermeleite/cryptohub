@@ -4727,3 +4727,105 @@ select {
     position: relative;
     z-index: 1000000 !important;
 }
+
+/* =====================================================
+   UPDATE BADGE - Notificação discreta de atualização
+   ===================================================== */
+
+.update-badge {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background: linear-gradient(135deg, #01dba2, #a9d9df);
+    padding: 12px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 15px rgba(1, 219, 162, 0.3);
+    z-index: 999999;
+    animation: slideIn 0.3s ease;
+    opacity: 0;
+}
+
+.update-badge.show {
+    opacity: 1;
+}
+
+.update-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.update-icon {
+    font-size: 18px;
+}
+
+.update-text {
+    color: #000;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.update-btn {
+    background: #000;
+    color: #01dba2;
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.3s;
+}
+
+.update-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.update-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+/* Mobile responsivo */
+@media (max-width: 768px) {
+    .update-badge {
+        top: 70px;
+        right: 10px;
+        padding: 10px 16px;
+    }
+    
+    .update-text {
+        font-size: 12px;
+    }
+    
+    .update-btn {
+        padding: 5px 12px;
+        font-size: 11px;
+    }
+}

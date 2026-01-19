@@ -91,70 +91,53 @@ class ForceUpdateManager {
         if (this.modalShown) return;
         this.modalShown = true;
 
-        console.log('[Force Update] 🎨 Creating modal overlay...');
+        console.log('[Force Update] 🎨 Creating update badge...');
 
-        // Criar overlay
-        const overlay = document.createElement('div');
-        overlay.className = 'force-update-overlay';
-        overlay.innerHTML = `
-            <div class="force-update-modal">
-                <button class="force-update-close-btn" onclick="window.forceUpdateManager.dismissModal()" title="Fechar (ESC)">✕</button>
-                <div class="force-update-header">
-                    <div class="force-update-icon">🚀</div>
-                    <h2>Nova Versão Disponível!</h2>
-                </div>
-                <div class="force-update-body">
-                    <p class="force-update-version">Versão <strong>${this.currentVersion}</strong></p>
-                    <p class="force-update-message">
-                        Detectamos que você está usando uma versão desatualizada do site.
-                        Por favor, atualize para ter acesso às melhorias mais recentes e garantir o melhor desempenho.
-                    </p>
-                    <ul class="force-update-benefits">
-                        <li>✅ Novas funcionalidades</li>
-                        <li>✅ Melhor desempenho</li>
-                        <li>✅ Correções de bugs</li>
-                        <li>✅ Interface atualizada</li>
-                    </ul>
-                </div>
-                <div class="force-update-footer">
-                    <button class="force-update-btn force-update-btn-primary" onclick="window.forceUpdateManager.performUpdate()">
-                        Atualizar Agora
-                    </button>
-                    <button class="force-update-btn force-update-btn-secondary" onclick="window.forceUpdateManager.dismissModal()">
-                        Atualizar Depois
-                    </button>
-                </div>
+        // Criar badge discreto
+        const badge = document.createElement('div');
+        badge.className = 'update-badge';
+        badge.id = 'updateBadge';
+        badge.innerHTML = `
+            <div class="update-content">
+                <span class="update-icon">🚀</span>
+                <span class="update-text">Versão ${this.currentVersion}</span>
             </div>
+            <button class="update-btn" onclick="window.forceUpdateManager.performUpdate()">
+                Atualizar
+            </button>
         `;
 
-        document.body.appendChild(overlay);
-        console.log('[Force Update] ✅ Modal added to DOM');
-
-        // Adicionar listener para ESC
-        const escListener = (e) => {
-            if (e.key === 'Escape') {
-                console.log('[Force Update] ESC pressed - closing modal');
-                this.dismissModal();
-                document.removeEventListener('keydown', escListener);
-            }
-        };
-        document.addEventListener('keydown', escListener);
+        document.body.appendChild(badge);
+        console.log('[Force Update] ✅ Badge added to DOM');
 
         // Mostrar com animação
         setTimeout(() => {
-            overlay.classList.add('show');
-            console.log('[Force Update] 🎉 Modal visible!');
+            badge.classList.add('show');
+            console.log('[Force Update] 🎉 Badge visible!');
         }, 100);
+
+        // Auto-hide após 15 segundos (dar tempo do usuário ver)
+        setTimeout(() => {
+            if (badge && badge.parentNode) {
+                badge.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => {
+                    if (badge.parentNode) {
+                        badge.remove();
+                        this.modalShown = false;
+                    }
+                }, 300);
+            }
+        }, 15000);
     }
 
     async performUpdate() {
         console.log('[Force Update] Starting update process...');
 
-        // Mudar botão para loading
-        const primaryBtn = document.querySelector('.force-update-btn-primary');
-        if (primaryBtn) {
-            primaryBtn.innerHTML = '⏳ Atualizando...';
-            primaryBtn.disabled = true;
+        // Mudar badge para loading
+        const updateBtn = document.querySelector('.update-btn');
+        if (updateBtn) {
+            updateBtn.innerHTML = '⏳ Atualizando...';
+            updateBtn.disabled = true;
         }
 
         try {
@@ -191,12 +174,12 @@ class ForceUpdateManager {
     }
 
     dismissModal() {
-        console.log('[Force Update] User dismissed modal');
-        const overlay = document.querySelector('.force-update-overlay');
-        if (overlay) {
-            overlay.classList.remove('show');
+        console.log('[Force Update] User dismissed badge');
+        const badge = document.getElementById('updateBadge');
+        if (badge) {
+            badge.style.animation = 'slideOut 0.3s ease';
             setTimeout(() => {
-                overlay.remove();
+                badge.remove();
             }, 300);
         }
         this.modalShown = false;
