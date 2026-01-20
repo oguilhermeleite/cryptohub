@@ -1,6 +1,6 @@
 // ⚠️ IMPORTANT: Increment this version for EVERY update!
 // This triggers the Service Worker update cycle
-const CACHE_NAME = 'crypto-aggregator-v5';
+const CACHE_NAME = 'crypto-aggregator-v6-2min-cache';
 
 // Assets to cache
 const ASSETS = [

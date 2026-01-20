@@ -6,7 +6,7 @@
 class AutoUpdateManager {
     constructor() {
         this.currentVersion = null;
-        this.checkInterval = 600000; // Check every 10 minutes (600 seconds) - LESS FREQUENT
+        this.checkInterval = 120000; // Check every 2 minutes (120 seconds) - FAST UPDATES
         this.versionCheckUrl = '/version.json';
         this.updateNotificationShown = false;
         this.isUpdating = false; // Prevent multiple simultaneous updates
