@@ -91,54 +91,19 @@ class ForceUpdateManager {
         if (this.modalShown) return;
         this.modalShown = true;
 
-        console.log('[Force Update] 🎨 Creating update badge...');
+        console.log('[Force Update] 🔄 Auto-refresh triggered - updating silently...');
+        console.log('[Force Update] New version detected:', this.currentVersion);
+        console.log('[Force Update] Auto-refreshing in 3 seconds...');
 
-        // Criar badge discreto
-        const badge = document.createElement('div');
-        badge.className = 'update-badge';
-        badge.id = 'updateBadge';
-        badge.innerHTML = `
-            <div class="update-content">
-                <span class="update-icon">🚀</span>
-                <span class="update-text">Versão ${this.currentVersion}</span>
-            </div>
-            <button class="update-btn" onclick="window.forceUpdateManager.performUpdate()">
-                Atualizar
-            </button>
-        `;
-
-        document.body.appendChild(badge);
-        console.log('[Force Update] ✅ Badge added to DOM');
-
-        // Mostrar com animação
+        // AUTO-REFRESH: Atualiza automaticamente após 3 segundos
+        // Sem mostrar badge ou modal - totalmente silencioso
         setTimeout(() => {
-            badge.classList.add('show');
-            console.log('[Force Update] 🎉 Badge visible!');
-        }, 100);
-
-        // Auto-hide após 15 segundos (dar tempo do usuário ver)
-        setTimeout(() => {
-            if (badge && badge.parentNode) {
-                badge.style.animation = 'slideOut 0.3s ease';
-                setTimeout(() => {
-                    if (badge.parentNode) {
-                        badge.remove();
-                        this.modalShown = false;
-                    }
-                }, 300);
-            }
-        }, 15000);
+            this.performUpdate();
+        }, 3000);
     }
 
     async performUpdate() {
-        console.log('[Force Update] Starting update process...');
-
-        // Mudar badge para loading
-        const updateBtn = document.querySelector('.update-btn');
-        if (updateBtn) {
-            updateBtn.innerHTML = '⏳ Atualizando...';
-            updateBtn.disabled = true;
-        }
+        console.log('[Force Update] 🔄 Starting silent auto-refresh...');
 
         try {
             // 1. Limpar Service Worker cache
@@ -163,13 +128,15 @@ class ForceUpdateManager {
             localStorage.setItem('site_version', this.currentVersion);
             console.log('[Force Update] Saved new version:', this.currentVersion);
 
-            // 4. Recarregar página com cache bust
-            console.log('[Force Update] Reloading page...');
+            // 4. Recarregar página com cache bust - SILENCIOSO
+            console.log('[Force Update] ✅ Reloading page silently...');
             window.location.href = window.location.href.split('?')[0] + '?v=' + Date.now();
 
         } catch (error) {
-            console.error('[Force Update] Update failed:', error);
-            alert('Erro ao atualizar. Por favor, recarregue a página manualmente (Ctrl+Shift+R)');
+            // Falha silenciosa - apenas log no console, sem alertas
+            console.error('[Force Update] ⚠️ Silent update failed:', error);
+            console.log('[Force Update] User can manually refresh with Ctrl+Shift+R');
+            // NÃO mostrar alert - manter silencioso
         }
     }
 

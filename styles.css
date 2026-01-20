@@ -4829,3 +4829,8 @@ select {
         font-size: 11px;
     }
 }
+
+/* TEMPORARIAMENTE DESABILITADO - Badge escondido para usar auto-refresh silencioso */
+.update-badge {
+    display: none !important;
+}
