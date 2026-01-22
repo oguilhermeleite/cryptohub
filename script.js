@@ -1195,18 +1195,21 @@ class CryptoAggregator {
             container.addEventListener('mouseup', handleDragEnd);
             container.addEventListener('mouseleave', handleDragEnd);
 
-            // 3. MOUSE WHEEL HORIZONTAL SCROLLING
+            // 3. MOUSE WHEEL HORIZONTAL SCROLLING (only with Shift key)
+            // Note: Regular vertical page scroll is preserved - user can scroll page normally
             const handleWheel = (e) => {
                 // Only on desktop
                 if (window.innerWidth <= 768) return;
 
-                // Prevent default vertical scroll
-                if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+                // Only convert to horizontal scroll when Shift is held
+                // This preserves normal page vertical scrolling
+                if (e.shiftKey && Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
                     e.preventDefault();
                     container.scrollLeft += e.deltaY;
                     updateScrollIndicators();
                     updateArrowStates();
                 }
+                // Without Shift, let the page scroll normally (don't preventDefault)
             };
 
             container.addEventListener('wheel', handleWheel, { passive: false });
