@@ -1046,19 +1046,6 @@ class CryptoAggregator {
             // Handle movement
             const handleMove = (e) => {
                 if (!isPointerDown) return;
-
-                const currentX = getClientX(e);
-                const currentY = getClientY(e);
-                const diffX = Math.abs(currentX - startX);
-                const diffY = Math.abs(currentY - startY);
-
-                // If horizontal movement is greater, we're scrolling horizontally
-                if (diffX > diffY && diffX > 5) {
-                    // Prevent vertical scrolling during horizontal swipe
-                    if (e.cancelable) {
-                        e.preventDefault();
-                    }
-                }
             };
 
             // End interaction
@@ -1098,8 +1085,8 @@ class CryptoAggregator {
             };
 
             // Touch events
-            container.addEventListener('touchstart', handleStart, { passive: false });
-            container.addEventListener('touchmove', handleMove, { passive: false });
+            container.addEventListener('touchstart', handleStart, { passive: true });
+            container.addEventListener('touchmove', handleMove, { passive: true });
             container.addEventListener('touchend', handleEnd, { passive: true });
 
             // Mouse events for desktop testing
@@ -1196,23 +1183,16 @@ class CryptoAggregator {
             container.addEventListener('mouseleave', handleDragEnd);
 
             // 3. MOUSE WHEEL HORIZONTAL SCROLLING (only with Shift key)
-            // Note: Regular vertical page scroll is preserved - user can scroll page normally
             const handleWheel = (e) => {
-                // Only on desktop
                 if (window.innerWidth <= 768) return;
-
-                // Only convert to horizontal scroll when Shift is held
-                // This preserves normal page vertical scrolling
                 if (e.shiftKey && Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-                    e.preventDefault();
                     container.scrollLeft += e.deltaY;
                     updateScrollIndicators();
                     updateArrowStates();
                 }
-                // Without Shift, let the page scroll normally (don't preventDefault)
             };
 
-            container.addEventListener('wheel', handleWheel, { passive: false });
+            container.addEventListener('wheel', handleWheel, { passive: true });
 
             // 4. KEYBOARD NAVIGATION
             const handleKeyboard = (e) => {

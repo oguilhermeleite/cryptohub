@@ -19,16 +19,12 @@ html {
     overflow-x: hidden;
     height: auto !important;
     pointer-events: auto !important;
-    /* Hardware acceleration for entire page */
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
 }
 
 /* Performance: GPU acceleration for animated elements */
 .platform-card,
 .premium-hero-banner,
-.header,
-.horizontal-cards-grid {
+.header {
     will-change: transform;
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
@@ -45,17 +41,8 @@ body {
     overflow-x: hidden;
     height: auto !important;
     pointer-events: auto !important;
-    /* Enable GPU acceleration */
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    /* Optimize repaints */
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-perspective: 1000;
-    perspective: 1000;
     /* PURE BLACK BACKGROUND */
     background: #000000 !important;
-    background-attachment: fixed !important;
 }
 
 /* Optimize all sections for smooth scrolling */
@@ -480,7 +467,6 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     /* PURE BLACK BACKGROUND */
     background: #000000 !important;
-    background-attachment: fixed !important;
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
@@ -489,11 +475,6 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeSpeed;
-    /* Prevent scroll jank */
-    overscroll-behavior-y: none;
-    /* Hardware acceleration */
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
     /* FALLBACK: Ensure content starts below fixed header */
     padding-top: 0 !important;
 }
@@ -1824,17 +1805,8 @@ img {
     -webkit-overflow-scrolling: touch;
     /* Ensure the container takes full width */
     width: 100%;
-    /* Allow touch scrolling */
-    touch-action: pan-x;
-    /* Hardware acceleration for smooth scrolling */
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-    will-change: scroll-position;
-    /* Optimize rendering */
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    perspective: 1000px;
-    -webkit-perspective: 1000px;
+    /* Allow both horizontal carousel scroll and vertical page scroll */
+    touch-action: pan-x pan-y;
     /* Add padding for better edge visibility - ensure all cards are visible when scrolled */
     padding-right: calc(100vw - 420px);
     /* Ensure carousel starts at beginning */
@@ -3177,9 +3149,8 @@ body.modal-open {
         overflow-y: hidden;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
-        /* Allow touch pan only horizontally */
-        touch-action: pan-x;
-        /* Prevent accidental vertical scroll */
+        /* Allow both horizontal carousel and vertical page scroll */
+        touch-action: pan-x pan-y;
         overscroll-behavior-x: contain;
         /* Hide scrollbar on mobile */
         scrollbar-width: none;
@@ -3646,7 +3617,7 @@ a:focus,
         overflow-y: hidden !important;
         -webkit-overflow-scrolling: touch !important;
         scroll-snap-type: x mandatory !important;
-        touch-action: pan-x !important;
+        touch-action: pan-x pan-y !important;
         /* Ensure content doesn't get cut off */
         padding-right: 20px !important;
     }
@@ -4323,150 +4294,7 @@ a:focus,
 }
 
 
-/* ========================================
-   DeFiLlama Stats Integration
-   ======================================== */
 
-.defi-stats {
-    display: flex;
-    gap: 0.75rem;
-    margin-top: 0.5rem;
-    padding-top: 0.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.stat-item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex: 1;
-}
-
-.stat-label {
-    font-size: 0.65rem;
-    color: rgba(255, 255, 255, 0.6);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 0.15rem;
-    font-weight: 600;
-}
-
-.stat-value {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: #fff;
-}
-
-.stat-value.positive {
-    color: #10b981;
-}
-
-.stat-value.negative {
-    color: #ef4444;
-}
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
-    .defi-stats {
-        gap: 0.5rem;
-    }
-
-    .stat-label {
-        font-size: 0.6rem;
-    }
-
-    .stat-value {
-        font-size: 0.8rem;
-    }
-}
-
-
-/* ========================================
-   PWA AUTO-UPDATE TOAST NOTIFICATION
-   ======================================== */
-
-.update-toast {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #111;
-    border: 1px solid #00ffb3;
-    color: #fff;
-    border-radius: 8px;
-    z-index: 99999;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-    transition: transform 0.3s ease-in-out, opacity 0.3s;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.update-toast.hidden {
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(20px);
-}
-
-.toast-content {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 12px 20px;
-}
-
-.toast-content span {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-#reload-btn {
-    background: #00ffb3;
-    color: #000;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    font-weight: 700;
-    cursor: pointer;
-    font-family: 'Orbitron', sans-serif;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    transition: all 0.2s ease;
-}
-
-#reload-btn:hover {
-    background: #00cc8f;
-    transform: scale(1.05);
-}
-
-#reload-btn:active {
-    transform: scale(0.95);
-}
-
-/* Mobile responsive styles */
-@media (max-width: 768px) {
-    .update-toast {
-        bottom: 15px;
-        right: 15px;
-        left: 15px;
-        max-width: calc(100% - 30px);
-    }
-
-    .toast-content {
-        padding: 10px 15px;
-        gap: 10px;
-    }
-
-    .toast-content span {
-        font-size: 0.85rem;
-        flex: 1;
-    }
-
-    #reload-btn {
-        padding: 6px 12px;
-        font-size: 0.75rem;
-        white-space: nowrap;
-    }
-}
 
 
 /* ========================================

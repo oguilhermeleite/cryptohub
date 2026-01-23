@@ -29,8 +29,6 @@
     <link rel="stylesheet" href="cards-final.css?v=20250109-card-descriptions">
     <!-- THEME FIXES: Critical corrections for buttons, descriptions, and mobile background -->
     <link rel="stylesheet" href="theme-fixes.css?v=20250111-turquoise">
-    <!-- AUTO UPDATE SYSTEM: Professional cache busting and auto-update -->
-    <link rel="stylesheet" href="auto-update.css?v=20250110">
     <!-- FEATURED GOLDEN: Beautiful golden design for featured card -->
     <link rel="stylesheet" href="featured-golden.css?v=20250110-golden">
     <!-- MOUSE FIX: Critical z-index and interaction fixes -->
@@ -80,18 +78,12 @@
             visibility: hidden !important;
         }
 
-        /* NUCLEAR: Force page scroll to work */
-        html {
-            overflow-y: scroll !important;
-            overflow-x: hidden !important;
-            height: 100% !important;
-        }
-
-        body {
+        /* Force page scroll to work */
+        html, body {
             overflow-y: auto !important;
             overflow-x: hidden !important;
-            min-height: 100vh !important;
             height: auto !important;
+            min-height: 100vh;
         }
     </style>
 
@@ -1352,17 +1344,8 @@
     <script src="script.js?v=20241127-rebuild-v2"></script>
     <!-- Performance Optimization Script -->
     <script src="performance.js?v=20241126" defer></script>
-    <!-- DeFiLlama Integration -->
-    <script src="js/defillama.js?v=20260101"></script>
     <!-- Premium Elements System -->
     <script src="premium-elements.js?v=premium-2026"></script>
-    <!-- AUTO-UPDATER: Sistema inteligente de atualização automática (DESATIVADO TEMPORARIAMENTE) -->
-    <!-- <script src="js/auto-updater.js?v=1.0.0"></script> -->
-    <!-- AUTO UPDATE SYSTEM: Professional cache busting and version control -->
-    <script src="auto-update.js?v=20250111"></script>
-
-    <!-- FORCE UPDATE SYSTEM: Auto-refresh silencioso -->
-    <script src="force-update.js?v=20260116-autorefresh"></script>
 
     <!-- Universal Carousel Navigation Script -->
     <script>
@@ -1423,59 +1406,22 @@
         });
     </script>
 
-    <!-- PWA Update Toast Notification -->
-    <div id="update-toast" class="update-toast hidden">
-        <div class="toast-content">
-            <span>Nova versão disponível!</span>
-            <button id="reload-btn">Atualizar</button>
-        </div>
-    </div>
-
-    <!-- Service Worker Registration & Auto-Update System -->
+    <!-- Service Worker Registration -->
     <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/sw.js').then((reg) => {
                 console.log('[PWA] Service Worker registered');
-
-                // Check for updates on page load
                 reg.update();
-
-                // Listen for new service worker installation
-                reg.addEventListener('updatefound', () => {
-                    const newWorker = reg.installing;
-                    console.log('[PWA] New Service Worker found');
-
-                    newWorker.addEventListener('statechange', () => {
-                        if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                            // New service worker is ready, show update notification
-                            console.log('[PWA] New version available');
-                            document.getElementById('update-toast').classList.remove('hidden');
-                        }
-                    });
-                });
             }).catch((error) => {
-                console.error('[PWA] Service Worker registration failed:', error);
+                console.error('[PWA] SW registration failed:', error);
             });
 
-            // Handle controller change (when new SW takes over)
+            // Auto-reload when new SW takes control
             let refreshing;
             navigator.serviceWorker.addEventListener('controllerchange', () => {
                 if (refreshing) return;
-                console.log('[PWA] Reloading page for new version');
-                window.location.reload();
                 refreshing = true;
-            });
-
-            // Reload button click handler
-            document.addEventListener('DOMContentLoaded', () => {
-                document.getElementById('reload-btn').addEventListener('click', () => {
-                    navigator.serviceWorker.getRegistration().then((reg) => {
-                        if (reg && reg.waiting) {
-                            console.log('[PWA] Activating new Service Worker');
-                            reg.waiting.postMessage({ type: 'SKIP_WAITING' });
-                        }
-                    });
-                });
+                window.location.reload();
             });
         }
     </script>

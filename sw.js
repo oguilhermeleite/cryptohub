@@ -1,9 +1,9 @@
-// ⚠️ IMPORTANT: Increment this version for EVERY update!
-// This triggers the Service Worker update cycle
-const CACHE_NAME = 'crypto-aggregator-v6-2min-cache';
+// Service Worker - Stale While Revalidate Strategy
+// Assets are served from cache instantly, then updated in background.
+// Next page load always has the latest version.
+const CACHE_NAME = 'crypto-aggregator-v8';
 
-// Assets to cache
-const ASSETS = [
+const PRECACHE_ASSETS = [
   '/',
   '/index.html',
   '/all-platforms.html',
@@ -12,89 +12,86 @@ const ASSETS = [
   '/premium-elements.css',
   '/cards-final.css',
   '/theme-fixes.css',
-  '/auto-update.css',
   '/featured-golden.css',
+  '/mouse-fix-critical.css',
   '/script.js',
   '/performance.js',
   '/premium-elements.js',
-  '/auto-update.js',
-  '/js/defillama.js'
+  '/scroll-unblock.js',
+  '/mouse-fix-force.js'
 ];
 
-// Install event - cache all assets
+// Install: pre-cache assets and activate immediately
 self.addEventListener('install', (event) => {
-  console.log('[Service Worker] Installing v' + CACHE_NAME);
+  console.log('[SW] Installing', CACHE_NAME);
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then((cache) => {
-        console.log('[Service Worker] Caching assets');
-        return cache.addAll(ASSETS);
-      })
-      .catch((error) => {
-        console.error('[Service Worker] Cache failed:', error);
-      })
+      .then((cache) => cache.addAll(PRECACHE_ASSETS))
+      .then(() => self.skipWaiting())
   );
 });
 
-// Activate event - clean up old caches
+// Activate: clean old caches and take control immediately
 self.addEventListener('activate', (event) => {
-  console.log('[Service Worker] Activating v' + CACHE_NAME);
+  console.log('[SW] Activating', CACHE_NAME);
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
-            console.log('[Service Worker] Deleting old cache:', cacheName);
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    }).then(() => {
-      console.log('[Service Worker] Claiming clients');
-      return self.clients.claim();
-    })
+    caches.keys()
+      .then((keys) => Promise.all(
+        keys.filter((key) => key !== CACHE_NAME)
+            .map((key) => caches.delete(key))
+      ))
+      .then(() => self.clients.claim())
   );
 });
 
-// Fetch event - cache first strategy
+// Fetch: Stale-While-Revalidate for assets, Network-First for HTML
 self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-      .then((cachedResponse) => {
-        if (cachedResponse) {
-          return cachedResponse;
-        }
+  const { request } = event;
+  const url = new URL(request.url);
 
-        return fetch(event.request)
-          .then((response) => {
-            // Don't cache non-successful responses
-            if (!response || response.status !== 200 || response.type === 'error') {
-              return response;
-            }
-
-            // Clone the response
-            const responseToCache = response.clone();
-
-            // Cache the fetched response for future use
-            caches.open(CACHE_NAME)
-              .then((cache) => {
-                cache.put(event.request, responseToCache);
-              });
-
-            return response;
-          })
-          .catch((error) => {
-            console.error('[Service Worker] Fetch failed:', error);
-            throw error;
-          });
-      })
-  );
-});
-
-// Message event - handle skipWaiting
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'SKIP_WAITING') {
-    console.log('[Service Worker] Skipping waiting');
-    self.skipWaiting();
+  // Only handle same-origin requests
+  if (url.origin !== self.location.origin) {
+    return;
   }
+
+  // HTML pages: Network First (always try to get latest)
+  if (request.mode === 'navigate' || request.headers.get('accept')?.includes('text/html')) {
+    event.respondWith(networkFirst(request));
+    return;
+  }
+
+  // All other assets (JS, CSS, images): Stale While Revalidate
+  event.respondWith(staleWhileRevalidate(request));
 });
+
+// Network First: try network, fall back to cache (for HTML)
+async function networkFirst(request) {
+  try {
+    const networkResponse = await fetch(request);
+    if (networkResponse.ok) {
+      const cache = await caches.open(CACHE_NAME);
+      cache.put(request, networkResponse.clone());
+    }
+    return networkResponse;
+  } catch (error) {
+    const cached = await caches.match(request);
+    return cached || new Response('Offline', { status: 503 });
+  }
+}
+
+// Stale While Revalidate: serve cache immediately, update in background
+async function staleWhileRevalidate(request) {
+  const cache = await caches.open(CACHE_NAME);
+  const cached = await cache.match(request);
+
+  // Fetch fresh version in background (don't await if we have cache)
+  const fetchPromise = fetch(request).then((networkResponse) => {
+    if (networkResponse.ok) {
+      cache.put(request, networkResponse.clone());
+    }
+    return networkResponse;
+  }).catch(() => null);
+
+  // Return cached version immediately, or wait for network if no cache
+  return cached || fetchPromise;
+}
