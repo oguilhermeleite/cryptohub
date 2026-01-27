@@ -373,80 +373,132 @@
     // ==========================================
     const RESPONSES = {
         greetings: [
-            "E ai! Sou o CryptoBot, seu guia no mundo cripto. Como posso te ajudar hoje?",
-            "Opa! Bem-vindo ao Crypto Aggregator! To aqui pra te ajudar a navegar nesse universo. Bora?",
-            "Fala! Sou o assistente do Crypto Aggregator. Quer conhecer as melhores plataformas de cripto? Chega mais!"
+            "E ai! Sou o CryptoBot, to aqui pra te ajudar a entrar no mundo cripto de forma simples. Bora?",
+            "Opa! Bem-vindo! To aqui pra te guiar no universo cripto sem complicacao. Como posso ajudar?",
+            "Fala! Sou seu assistente cripto. Pode perguntar qualquer coisa que eu explico de um jeito facil!"
         ],
 
-        levelQuestion: "Massa! Pra te ajudar melhor, me conta: qual seu nivel de experiencia com cripto?",
+        levelQuestion: "Pra eu te ajudar do melhor jeito, me conta: qual seu nivel com cripto?",
 
         levels: {
             beginner: {
-                response: "Show! Iniciante, ne? Sem stress, todo mundo comeca de algum lugar. Vou te indicar as opcoes mais faceis e seguras!",
-                focus: ['exchanges', 'p2p', 'banks', 'hotWallets']
+                response: "Show! Iniciante, ne? Relaxa que todo mundo comeca assim! Vou te explicar tudo tim-tim por tim-tim, sem enrolacao. O que voce quer fazer primeiro?",
+                focus: ['exchanges', 'p2p', 'banks', 'hotWallets'],
+                followUpText: "Pra comecar no mundo cripto, voce basicamente precisa de 2 coisas:\n\n1. Um lugar pra COMPRAR cripto (tipo uma loja)\n2. Um lugar pra GUARDAR cripto (tipo uma carteira)\n\nQuer comecar por qual?"
             },
             intermediate: {
-                response: "Beleza! Ja tem uma nocao boa entao. Posso te mostrar opcoes mais completas com funcionalidades avancadas!",
+                response: "Beleza! Ja tem uma base entao. Posso te mostrar opcoes mais completas pra voce evoluir!",
                 focus: ['exchanges', 'p2p', 'dexs', 'hotWallets', 'coldWallets']
             },
             advanced: {
-                response: "Ah, um veterano! Ai sim! Vou te mostrar as ferramentas mais poderosas do mercado. Bora pro proximo nivel?",
+                response: "Ah, um veterano! Ai sim! Bora direto pro que interessa entao.",
                 focus: ['dexs', 'bridges', 'coldWallets', 'exchanges']
+            }
+        },
+
+        // Explicacoes simples para iniciantes
+        explanations: {
+            p2p: {
+                title: "O que e P2P?",
+                simple: "P2P e tipo um Mercado Livre de cripto! Voce compra direto de outra pessoa, geralmente pagando via PIX. E rapido, facil e nao precisa de cadastro complicado.",
+                tip: "Dica: Otimo pra quem quer comprar rapido sem burocracia!"
+            },
+            exchange: {
+                title: "O que e Exchange?",
+                simple: "Exchange e tipo uma corretora, so que de cripto. Voce cria uma conta, deposita reais (via PIX ou TED) e compra suas moedas la dentro. Da pra comprar, vender e ate fazer trade.",
+                tip: "Dica: Ideal pra quem quer ter mais controle e ver graficos!"
+            },
+            wallet: {
+                title: "O que e Carteira (Wallet)?",
+                simple: "Carteira e onde voce guarda suas criptos. Funciona tipo o app do seu banco, so que pra cripto. Tem dois tipos: Hot (no celular/PC) e Cold (um pendrive especial, super seguro).",
+                tip: "Dica: Pra valores pequenos, Hot Wallet resolve. Pra valores maiores, Cold e mais seguro!"
+            },
+            hotWallet: {
+                title: "O que e Hot Wallet?",
+                simple: "Hot Wallet e uma carteira digital que fica no seu celular ou computador. E tipo o app do banco no seu celular - pratica e sempre com voce. Exemplos: Phantom, MetaMask.",
+                tip: "Dica: Perfeita pra usar no dia a dia e valores menores!"
+            },
+            coldWallet: {
+                title: "O que e Cold Wallet?",
+                simple: "Cold Wallet e um dispositivo fisico (tipo um pendrive) que guarda suas criptos offline. E o cofre do mundo cripto - super seguro porque nao ta conectado na internet.",
+                tip: "Dica: Essencial se voce tem valores maiores. A Ledger e a mais famosa!"
+            },
+            bank: {
+                title: "O que e Banco Cripto?",
+                simple: "Sao bancos digitais que ja vem com cripto integrado. Voce tem conta em reais E em cripto no mesmo app. Da pra receber salario, pagar contas e ainda investir em cripto!",
+                tip: "Dica: Perfeito pra quem quer o melhor dos dois mundos!"
+            },
+            card: {
+                title: "O que e Cartao Cripto?",
+                simple: "E um cartao de debito/credito que voce carrega com cripto e gasta em qualquer lugar! Voce paga em Bitcoin, por exemplo, e a maquininha recebe em reais. Magico, ne?",
+                tip: "Dica: Alguns dao cashback em Bitcoin. Dinheiro de volta em cripto!"
+            },
+            dex: {
+                title: "O que e DEX?",
+                simple: "DEX (Exchange Descentralizada) e uma exchange sem dono. Voce conecta sua carteira e troca moedas direto, sem intermediario. Mais privacidade e controle!",
+                tip: "Dica: Mais avancado, recomendo depois que pegar experiencia."
+            },
+            bridge: {
+                title: "O que e Bridge?",
+                simple: "Bridge e uma ponte entre blockchains diferentes. Imagina que voce tem Ethereum mas quer usar na rede Solana - a bridge faz essa transferencia pra voce.",
+                tip: "Dica: So vai precisar disso quando for mais avancado!"
             }
         },
 
         categories: {
             buy: {
-                keywords: ['comprar', 'compra', 'buy', 'adquirir', 'pix', 'reais'],
-                response: "Quer comprar cripto? Boa escolha! Deixa eu te mostrar as melhores opcoes:",
+                keywords: ['comprar', 'compra', 'buy', 'adquirir', 'pix', 'reais', 'primeiro', 'comecar'],
+                response: "Boa! Pra comprar cripto voce tem duas opcoes principais:\n\n🏪 P2P - Tipo Mercado Livre de cripto. Compra direto de outra pessoa via PIX. Super rapido!\n\n🏦 Exchange - Tipo corretora. Deposita reais e compra la dentro.\n\nQual te parece mais facil?",
+                responseAdvanced: "Beleza! Aqui as melhores opcoes pra comprar:",
                 platforms: ['p2p', 'exchanges']
             },
             trade: {
                 keywords: ['trade', 'trading', 'trocar', 'converter', 'swap'],
-                response: "Bora fazer trade! Aqui estao as melhores plataformas pra isso:",
+                response: "Trade e basicamente comprar e vender cripto pra tentar lucrar com a variacao de preco. Tipo comprar na baixa e vender na alta!\n\nPra isso voce precisa de uma Exchange. Aqui as melhores:",
                 platforms: ['exchanges', 'dexs']
             },
             store: {
                 keywords: ['guardar', 'armazenar', 'carteira', 'wallet', 'seguro', 'seguranca'],
-                response: "Seguranca em primeiro lugar! Olha as melhores opcoes pra guardar suas cripto:",
+                response: "Guardar cripto e super importante! Funciona assim:\n\n📱 Hot Wallet - App no celular, pratico pro dia a dia\n🔐 Cold Wallet - Dispositivo fisico, tipo cofre, pra valores maiores\n\nQual voce prefere?",
+                responseAdvanced: "Aqui as melhores carteiras:",
                 platforms: ['coldWallets', 'hotWallets']
             },
             bank: {
                 keywords: ['banco', 'bank', 'conta', 'digital', 'fiat'],
-                response: "Quer um banco que entende cripto? Tenho otimas opcoes:",
+                response: "Banco cripto e demais! E um banco digital normal, mas que ja vem com cripto integrado. Voce pode:\n\n- Ter conta em reais E cripto\n- Pagar boletos\n- Receber PIX\n- Investir em cripto\n\nTudo no mesmo app! Olha nossa recomendacao:",
                 platforms: ['banks']
             },
             card: {
                 keywords: ['cartao', 'card', 'gastar', 'pagar', 'cashback'],
-                response: "Cartao cripto e vida! Gaste suas moedas no dia a dia:",
+                response: "Cartao cripto e muito legal! Voce carrega com Bitcoin ou outra moeda, e gasta em qualquer lugar que aceita cartao. O comerciante recebe em reais, voce paga em cripto!\n\nAlguns ainda dao cashback em Bitcoin. Olha so:",
                 platforms: ['cryptoCards']
             },
             dex: {
                 keywords: ['dex', 'descentralizada', 'defi', 'liquidity', 'pool'],
-                response: "DEX e pra quem gosta de autonomia! Confere essas:",
+                response: "DEX e uma exchange sem intermediario. Voce conecta sua carteira e troca moedas direto! Mais privacidade e controle total.\n\n⚠️ E mais avancado, recomendo ter experiencia antes. Aqui as principais:",
                 platforms: ['dexs']
             },
             bridge: {
                 keywords: ['bridge', 'transferir', 'rede', 'chain', 'layer'],
-                response: "Precisa mover cripto entre redes? Essas bridges resolvem:",
+                response: "Bridge e uma ponte entre redes diferentes. Tipo: voce tem ETH na Ethereum mas quer usar na Solana. A bridge transfere pra voce!\n\n⚠️ Isso e bem avancado. Se ta comecando, nao precisa se preocupar com isso agora. Mas aqui estao:",
                 platforms: ['bridges']
             }
         },
 
         fallback: [
-            "Hmm, nao entendi muito bem. Pode reformular? Ou escolhe uma das opcoes ai embaixo!",
-            "Opa, essa eu nao peguei. Tenta de novo ou usa os botoes ai!",
-            "Desculpa, nao captei. Que tal escolher uma das categorias?"
+            "Hmm, nao entendi direito. Tenta de outro jeito ou escolhe uma opcao ai embaixo!",
+            "Essa eu nao peguei. Usa os botoes que fica mais facil!",
+            "Nao captei, mas relaxa! Escolhe uma das opcoes ai que eu te ajudo."
         ],
 
-        limitReached: "Eita! Voce atingiu o limite de mensagens por hoje (25). Volta amanha que to aqui te esperando!",
+        limitReached: "Eita! Ja batemos papo bastante hoje (25 mensagens). Volta amanha que continuo te ajudando!",
 
-        platformIntro: "Deixa eu te apresentar essa plataforma incrivel:",
+        platformIntro: "Essa aqui e top! Deixa eu te explicar:",
 
         siteInfo: {
-            about: "O Crypto Aggregator e o seu hub de cripto! Reunimos as melhores plataformas de P2P, exchanges, carteiras, cartoes e muito mais. Tudo num lugar so, com links verificados e recomendacoes da comunidade!",
-            mission: "Nossa missao e simplificar o mundo cripto pra voce. Nada de perder tempo pesquisando - a gente ja fez isso! So escolher e usar.",
-            partner: "Nossas plataformas parceiras sao verificadas e confiáveis. O destaque vai pro Neobankless, nosso parceiro oficial que oferece o melhor dos dois mundos: banco tradicional + cripto!"
+            about: "O Crypto Aggregator e tipo um shopping de cripto! A gente reuniu as melhores plataformas - exchanges, carteiras, bancos, tudo! - pra voce nao precisar ficar pesquisando. So escolher e usar!",
+            mission: "A ideia e simples: facilitar sua vida no mundo cripto. A gente ja pesquisou tudo, testou, e trouxe so o que presta.",
+            partner: "Nossas plataformas parceiras sao verificadas e confiaveis. Destaque pro Neobankless, nosso parceiro oficial - e um banco que junta o tradicional com cripto!"
         }
     };
 
@@ -505,12 +557,49 @@
         }
 
         // Verifica perguntas sobre o site
-        if (/(sobre o site|o que e|como funciona|missao|objetivo)/.test(lowerMsg)) {
+        if (/(sobre o site|o que e isso|como funciona o site|missao|objetivo)/.test(lowerMsg)) {
             return { type: 'siteInfo', subtype: 'about' };
         }
 
         if (/(parceiro|destaque|recomendado|melhor opcao)/.test(lowerMsg)) {
             return { type: 'featured' };
+        }
+
+        // Verifica escolhas especificas de subcategorias (para iniciantes)
+        if (/(usar p2p|quero p2p|p2p pra mim)/.test(lowerMsg)) {
+            return { type: 'showSubcategory', subcategory: 'p2p' };
+        }
+        if (/(usar exchange|quero exchange|exchange pra mim)/.test(lowerMsg)) {
+            return { type: 'showSubcategory', subcategory: 'exchange' };
+        }
+        if (/(hot wallet|carteira no celular|carteira digital)/.test(lowerMsg)) {
+            return { type: 'showSubcategory', subcategory: 'hotWallet' };
+        }
+        if (/(cold wallet|carteira fisica|ledger|trezor|cofre)/.test(lowerMsg)) {
+            return { type: 'showSubcategory', subcategory: 'coldWallet' };
+        }
+
+        // Verifica pedidos de explicacao
+        if (/(explica.*p2p|explica.*exchange|diferenca.*p2p|diferenca.*exchange)/.test(lowerMsg)) {
+            return { type: 'explain', topic: 'buy' };
+        }
+        if (/(explica.*carteira|explica.*wallet|diferenca.*hot|diferenca.*cold)/.test(lowerMsg)) {
+            return { type: 'explain', topic: 'wallet' };
+        }
+        if (/(o que e p2p|oque e p2p)/.test(lowerMsg)) {
+            return { type: 'explain', topic: 'p2p' };
+        }
+        if (/(o que e exchange|oque e exchange)/.test(lowerMsg)) {
+            return { type: 'explain', topic: 'exchange' };
+        }
+        if (/(o que e carteira|oque e carteira|o que e wallet)/.test(lowerMsg)) {
+            return { type: 'explain', topic: 'wallet' };
+        }
+        if (/(o que e banco|oque e banco cripto)/.test(lowerMsg)) {
+            return { type: 'explain', topic: 'bank' };
+        }
+        if (/(o que e dex|oque e dex)/.test(lowerMsg)) {
+            return { type: 'explain', topic: 'dex' };
         }
 
         // Verifica categorias
@@ -622,6 +711,27 @@
             case 'setLevel':
                 state.userLevel = intent.level;
                 const levelData = RESPONSES.levels[intent.level];
+
+                // Para iniciantes, adiciona explicacao de follow-up
+                if (intent.level === 'beginner') {
+                    return {
+                        text: levelData.response,
+                        quickReplies: [
+                            { text: 'Comprar Cripto', value: 'quero comprar cripto' },
+                            { text: 'Guardar Cripto', value: 'preciso de uma carteira' },
+                            { text: 'Banco com Cripto', value: 'quero um banco com cripto' }
+                        ],
+                        followUp: {
+                            delay: 2000,
+                            text: levelData.followUpText,
+                            quickReplies: [
+                                { text: 'Comprar primeiro', value: 'quero comprar cripto' },
+                                { text: 'Guardar primeiro', value: 'preciso de uma carteira' }
+                            ]
+                        }
+                    };
+                }
+
                 return {
                     text: levelData.response,
                     quickReplies: [
@@ -647,6 +757,30 @@
                 const catData = RESPONSES.categories[intent.category];
                 const platforms = getPlatformsForCategory(catData.platforms);
 
+                // Para iniciantes em categorias de compra, mostra explicacao primeiro sem plataformas
+                if (state.userLevel === 'beginner' && ['buy', 'store'].includes(intent.category)) {
+                    if (intent.category === 'buy') {
+                        return {
+                            text: catData.response,
+                            quickReplies: [
+                                { text: 'P2P (mais facil)', value: 'quero usar p2p' },
+                                { text: 'Exchange (mais completo)', value: 'quero usar exchange' },
+                                { text: 'Me explica melhor', value: 'explica p2p e exchange' }
+                            ]
+                        };
+                    }
+                    if (intent.category === 'store') {
+                        return {
+                            text: catData.response,
+                            quickReplies: [
+                                { text: 'Hot Wallet (celular)', value: 'quero hot wallet' },
+                                { text: 'Cold Wallet (cofre)', value: 'quero cold wallet' },
+                                { text: 'Me explica melhor', value: 'explica carteiras' }
+                            ]
+                        };
+                    }
+                }
+
                 // Sempre mostra o destaque primeiro se relevante
                 let html = '';
                 if (['buy', 'bank'].includes(intent.category)) {
@@ -660,12 +794,98 @@
                 });
 
                 return {
-                    text: catData.response,
+                    text: state.userLevel === 'beginner' ? catData.response : (catData.responseAdvanced || catData.response),
                     html: html,
                     quickReplies: [
                         { text: 'Ver Destaque', value: 'qual o parceiro destaque' },
                         { text: 'Outra categoria', value: 'quero ver outras categorias' }
                     ]
+                };
+
+            case 'showSubcategory':
+                // Mostra plataformas de uma subcategoria especifica com explicacao
+                const subCatMap = {
+                    'p2p': { platforms: ['p2p'], intro: RESPONSES.explanations.p2p.simple + '\n\n' + RESPONSES.explanations.p2p.tip + '\n\nAqui as melhores opcoes:' },
+                    'exchange': { platforms: ['exchanges'], intro: RESPONSES.explanations.exchange.simple + '\n\n' + RESPONSES.explanations.exchange.tip + '\n\nAqui as melhores:' },
+                    'hotWallet': { platforms: ['hotWallets'], intro: RESPONSES.explanations.hotWallet.simple + '\n\n' + RESPONSES.explanations.hotWallet.tip + '\n\nMinhas recomendacoes:' },
+                    'coldWallet': { platforms: ['coldWallets'], intro: RESPONSES.explanations.coldWallet.simple + '\n\n' + RESPONSES.explanations.coldWallet.tip + '\n\nAs melhores do mercado:' }
+                };
+
+                const subCatData = subCatMap[intent.subcategory];
+                const subPlatforms = getPlatformsForCategory(subCatData.platforms);
+
+                let subHtml = '';
+                // Para P2P e banco, mostra destaque primeiro
+                if (['p2p'].includes(intent.subcategory)) {
+                    subHtml += createPlatformCard(PLATFORMS.featured.neobankless, true);
+                }
+
+                subPlatforms.slice(0, 2).forEach(p => {
+                    if (p.name !== 'Neobankless') {
+                        subHtml += createPlatformCard(p);
+                    }
+                });
+
+                return {
+                    text: subCatData.intro,
+                    html: subHtml,
+                    quickReplies: [
+                        { text: 'Ver mais opcoes', value: 'quero ver outras opcoes' },
+                        { text: 'Voltar ao inicio', value: 'oi' }
+                    ]
+                };
+
+            case 'explain':
+                // Explicacoes detalhadas para iniciantes
+                const explainMap = {
+                    'buy': {
+                        text: "Vou te explicar direitinho!\n\n🏪 P2P (Peer-to-Peer):\n" + RESPONSES.explanations.p2p.simple + "\n\n🏦 Exchange:\n" + RESPONSES.explanations.exchange.simple + "\n\nPra quem ta comecando, P2P costuma ser mais facil. Qual voce prefere?",
+                        replies: [
+                            { text: 'Quero P2P', value: 'quero usar p2p' },
+                            { text: 'Quero Exchange', value: 'quero usar exchange' }
+                        ]
+                    },
+                    'wallet': {
+                        text: "Deixa eu te explicar!\n\n📱 Hot Wallet:\n" + RESPONSES.explanations.hotWallet.simple + "\n\n🔐 Cold Wallet:\n" + RESPONSES.explanations.coldWallet.simple + "\n\nPra comecar, Hot Wallet no celular ja resolve! Quer ver as opcoes?",
+                        replies: [
+                            { text: 'Ver Hot Wallets', value: 'quero hot wallet' },
+                            { text: 'Ver Cold Wallets', value: 'quero cold wallet' }
+                        ]
+                    },
+                    'p2p': {
+                        text: RESPONSES.explanations.p2p.simple + "\n\n" + RESPONSES.explanations.p2p.tip,
+                        replies: [
+                            { text: 'Ver opcoes de P2P', value: 'quero usar p2p' },
+                            { text: 'Ver Exchanges', value: 'quero usar exchange' }
+                        ]
+                    },
+                    'exchange': {
+                        text: RESPONSES.explanations.exchange.simple + "\n\n" + RESPONSES.explanations.exchange.tip,
+                        replies: [
+                            { text: 'Ver Exchanges', value: 'quero usar exchange' },
+                            { text: 'Ver P2P', value: 'quero usar p2p' }
+                        ]
+                    },
+                    'bank': {
+                        text: RESPONSES.explanations.bank.simple + "\n\n" + RESPONSES.explanations.bank.tip,
+                        replies: [
+                            { text: 'Ver Bancos Cripto', value: 'quero banco com cripto' },
+                            { text: 'Ver Destaque', value: 'qual o parceiro destaque' }
+                        ]
+                    },
+                    'dex': {
+                        text: RESPONSES.explanations.dex.simple + "\n\n" + RESPONSES.explanations.dex.tip,
+                        replies: [
+                            { text: 'Ver DEXs', value: 'quero ver dex' },
+                            { text: 'Voltar ao basico', value: 'sou iniciante' }
+                        ]
+                    }
+                };
+
+                const explainData = explainMap[intent.topic] || explainMap['buy'];
+                return {
+                    text: explainData.text,
+                    quickReplies: explainData.replies
                 };
 
             case 'platform':
