@@ -10,7 +10,7 @@
     // CONFIGURACOES
     // ==========================================
     const CONFIG = {
-        botName: 'CryptoBot',
+        botName: 'Crypto Aggregator - Suporte',
         dailyMessageLimit: 25,
         typingDelay: 800,
         messageDelay: 400
