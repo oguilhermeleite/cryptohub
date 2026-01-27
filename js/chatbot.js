@@ -879,13 +879,7 @@
         // Verifica limite diario
         checkDailyLimit();
 
-        // Insere HTML
-        const container = document.createElement('div');
-        container.id = 'chatbot-container';
-        container.innerHTML = createChatbotHTML();
-        document.body.appendChild(container);
-
-        // Event listeners
+        // HTML ja esta no index.html, apenas configura event listeners
         const toggleBtn = document.getElementById('chatbotToggle');
         const closeBtn = document.getElementById('chatbotClose');
         const sendBtn = document.getElementById('chatbotSend');
