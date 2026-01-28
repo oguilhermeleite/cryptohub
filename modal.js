@@ -130,7 +130,7 @@
         'neobankless': {
             name: 'Neobankless',
             description: 'Neobankless é um banco digital com integração total de serviços cripto.',
-            website: 'https://neobankless.com',
+            website: 'https://neobankless.com/MQM',
             twitter: 'https://twitter.com/neobankless'
         },
         'ledger': {

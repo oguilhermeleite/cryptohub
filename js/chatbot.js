@@ -26,7 +26,7 @@
                 name: 'Neobankless',
                 category: 'Banco Digital',
                 description: 'Banco digital com integracao total de servicos cripto. O melhor dos dois mundos!',
-                link: 'https://neobankless.com',
+                link: 'https://neobankless.com/MQM',
                 logo: 'https://logo.clearbit.com/neobankless.com',
                 badge: 'PARCEIRO OFICIAL',
                 practicality: 95,
