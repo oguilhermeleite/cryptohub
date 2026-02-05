@@ -136,41 +136,17 @@
 <body>
     <!-- Header -->
     <header class="header">
-        <div class="header-content">
-            <!-- Top Row: Logo + Theme + Language -->
-            <div class="header-top-row">
-                <div class="logo">
-                    <h1 class="logo-text">
-                        <span class="logo-white">CRYPTO</span><span class="logo-gradient">AGGREGATOR</span>
-                    </h1>
-                </div>
-
-                <div class="header-controls">
-                    <!-- THEME TOGGLE TEMPORARIAMENTE DESABILITADO - Manter código para reimplementação futura
-                    <div class="theme-toggle desktop-theme-toggle">
-                        <button class="theme-btn" id="desktopThemeToggle" aria-label="Toggle theme">
-                            <span class="theme-icon theme-icon-dark">🌙</span>
-                            <span class="theme-icon theme-icon-light">☀️</span>
-                        </button>
-                    </div>
-                    -->
-                    <div class="language-selector">
-                        <button class="lang-btn active" data-lang-switch="pt">PT</button>
-                        <button class="lang-btn" data-lang-switch="en">EN</button>
-                    </div>
-                </div>
-
-                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+        <div class="header-content header-single-row">
+            <!-- Left: Logo -->
+            <div class="logo">
+                <h1 class="logo-text">
+                    <span class="logo-white">CRYPTO</span><span class="logo-gradient">AGGREGATOR</span>
+                </h1>
             </div>
 
-            <!-- Bottom Row: Navigation Menu -->
+            <!-- Center: Navigation Menu -->
             <nav class="navigation">
                 <ul class="nav-menu">
-                    <li><a href="#featured" data-section="featured"><span data-lang="nav-home">Home</span></a></li>
                     <li><a href="#p2p" data-section="p2p">P2P</a></li>
                     <li><a href="#exchanges" data-section="exchanges">Exchanges</a></li>
                     <li><a href="#dexs" data-section="dexs">DEXs</a></li>
@@ -185,6 +161,21 @@
                     </li>
                 </ul>
             </nav>
+
+            <!-- Right: Language Buttons -->
+            <div class="header-controls">
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang-switch="pt">PT</button>
+                    <button class="lang-btn" data-lang-switch="en">EN</button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Button (hidden on desktop) -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
@@ -212,7 +203,6 @@
                 </div>
                 <div class="mobile-menu-separator"></div>
                 <ul class="mobile-nav-list">
-                    <li><a href="#featured" data-section="featured"><span data-lang="nav-home">Home</span></a></li>
                     <li><a href="#p2p" data-section="p2p">P2P</a></li>
                     <li><a href="#exchanges" data-section="exchanges">Exchanges</a></li>
                     <li><a href="#dexs" data-section="dexs">DEXs</a></li>

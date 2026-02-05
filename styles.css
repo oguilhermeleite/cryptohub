@@ -626,7 +626,15 @@ img {
     margin: 0 auto;
 }
 
-/* Header Top Row */
+/* Header Single Row Layout (Desktop) */
+.header-content.header-single-row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+/* Header Top Row (legacy - kept for compatibility) */
 .header-top-row {
     display: flex;
     justify-content: space-between;
@@ -706,17 +714,20 @@ img {
 /* Header Bottom Row - Navigation */
 .navigation {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 100%;
+    flex: 1;
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 32px;
+    gap: 24px;
     justify-content: center;
-    flex: 1;
+    align-items: center;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
 }
 
 /* Navigation Menu Items - Minimalist Text Style */
@@ -918,6 +929,45 @@ img {
     display: flex;
     align-items: center;
     gap: 24px;
+    flex-shrink: 0;
+}
+
+/* Single-row header - Logo styling */
+.header-single-row .logo {
+    flex-shrink: 0;
+}
+
+/* Single-row header - Navigation centering */
+.header-single-row .navigation {
+    flex: 1;
+    justify-content: center;
+    min-width: 0;
+}
+
+/* Responsive: Shrink nav gaps on smaller screens */
+@media (max-width: 1200px) {
+    .header-single-row .nav-menu {
+        gap: 16px;
+    }
+
+    .nav-menu a {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header-single-row .nav-menu {
+        gap: 12px;
+    }
+
+    .nav-menu a {
+        font-size: 0.8rem;
+    }
+
+    /* Hide "TODAS AS PLATAFORMAS" on smaller screens to save space */
+    .header-single-row .all-platforms-button {
+        display: none !important;
+    }
 }
 
 /* Desktop Theme Toggle */
@@ -2934,6 +2984,14 @@ body.modal-open {
 
     .header-content {
         gap: 0;
+    }
+
+    /* Mobile: Single-row header becomes row with logo, controls, menu btn */
+    .header-content.header-single-row {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
     }
 
     .header-top-row {
