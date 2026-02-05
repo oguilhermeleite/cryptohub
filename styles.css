@@ -4282,57 +4282,68 @@ a:focus,
 }
 
 /* ============================================
-   DESKTOP HEADER ALIGNMENT
+   DESKTOP HEADER ALIGNMENT - SINGLE ROW
    ============================================ */
 
 @media (min-width: 769px) {
     /* Main header container */
     .header {
-        padding: 16px 24px !important;
+        padding: 16px 40px !important;
     }
 
-    .header-content {
+    /* CRITICAL: Single row layout for header */
+    .header-content,
+    .header-content.header-single-row {
         display: flex !important;
-        flex-direction: column !important;
-        gap: 12px !important;
-    }
-
-    /* Top row: Logo on left, Theme + Language on right */
-    .header-top-row {
-        display: flex !important;
+        flex-direction: row !important;
         align-items: center !important;
         justify-content: space-between !important;
-        width: 100% !important;
+        gap: 24px !important;
+        flex-wrap: nowrap !important;
+        max-width: 1400px !important;
+        margin: 0 auto !important;
     }
 
-    /* Right side controls - Theme + Language in same row */
-    .header-top-row > div:last-child {
-        display: flex !important;
-        align-items: center !important;
-        gap: 12px !important;
+    /* Logo - stays on the left */
+    .header-content .logo,
+    .header-single-row .logo {
+        flex-shrink: 0 !important;
+        order: 1 !important;
     }
 
-    .desktop-theme-toggle,
-    .language-toggle {
+    /* Navigation - centered */
+    .header-content .navigation,
+    .header-single-row .navigation {
+        flex: 1 !important;
         display: flex !important;
+        justify-content: center !important;
         align-items: center !important;
-        gap: 8px !important;
+        order: 2 !important;
     }
 
-    /* Bottom row: Navigation + Buttons aligned */
-    .navigation {
+    /* Nav menu - horizontal links */
+    .nav-menu {
         display: flex !important;
+        flex-direction: row !important;
         align-items: center !important;
-        justify-content: space-between !important;
-        width: 100% !important;
+        justify-content: center !important;
+        gap: 24px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
+        white-space: nowrap !important;
     }
 
-    /* Buttons container on the right */
-    .header-buttons-container {
-        display: flex !important;
-        align-items: center !important;
-        gap: 12px !important;
-        margin-left: auto !important;
+    /* Language controls - stays on the right */
+    .header-content .header-controls,
+    .header-single-row .header-controls {
+        flex-shrink: 0 !important;
+        order: 3 !important;
+    }
+
+    /* Mobile menu button - hidden on desktop */
+    .mobile-menu-btn {
+        display: none !important;
     }
 
     /* Ensure all elements same height (40px) */
