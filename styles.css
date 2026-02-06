@@ -630,8 +630,6 @@ img {
 .header-content.header-single-row {
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    gap: 24px;
 }
 
 /* Header Top Row (legacy - kept for compatibility) */
@@ -722,7 +720,7 @@ img {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 24px;
+    gap: 30px;
     justify-content: center;
     align-items: center;
     white-space: nowrap;
@@ -736,8 +734,8 @@ img {
     background: transparent;
     color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
-    font-weight: 500;
-    font-size: 0.95rem;
+    font-weight: 600;
+    font-size: 1.1rem;
     padding: 8px 4px;
     border-radius: 0;
     transition: color 0.2s ease;
@@ -935,6 +933,11 @@ img {
 /* Single-row header - Logo styling */
 .header-single-row .logo {
     flex-shrink: 0;
+    margin-right: auto;
+}
+
+.header-single-row .header-controls {
+    margin-left: auto;
 }
 
 /* Single-row header - Navigation centering */
