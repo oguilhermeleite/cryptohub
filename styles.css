@@ -628,8 +628,10 @@ img {
 
 /* Header Single Row Layout (Desktop) */
 .header-content.header-single-row {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* Left (1 part), Center (auto), Right (1 part) */
     align-items: center;
+    gap: 20px; /* Add some gap between grid items */
 }
 
 /* Header Top Row (legacy - kept for compatibility) */
@@ -734,8 +736,8 @@ img {
     background: transparent;
     color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
+    font-weight: 700;
+    font-size: 1.25rem;
     padding: 8px 4px;
     border-radius: 0;
     transition: color 0.2s ease;
@@ -933,18 +935,16 @@ img {
 /* Single-row header - Logo styling */
 .header-single-row .logo {
     flex-shrink: 0;
-    margin-right: auto;
+    justify-self: start;
 }
 
 .header-single-row .header-controls {
-    margin-left: auto;
+    justify-self: end;
 }
 
 /* Single-row header - Navigation centering */
 .header-single-row .navigation {
-    flex: 1;
-    justify-content: center;
-    min-width: 0;
+    justify-self: center;
 }
 
 /* Responsive: Shrink nav gaps on smaller screens */
