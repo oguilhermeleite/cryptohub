@@ -1044,23 +1044,42 @@ img {
 }
 
 .lang-btn {
-    background: var(--bg-card);
-    border: 1px solid var(--border-secondary);
-    color: var(--text-primary);
-    padding: 0.5rem 1rem;
+    background: transparent;
+    border: none;
+    color: transparent;
+    padding: 0;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 0; /* Hide any residual text */
+    font-weight: normal; /* Reset font weight */
     line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .lang-btn:hover,
 .lang-btn.active {
-    background: linear-gradient(90deg, #01dba2 0%, #a9d9df 100%) !important;
-    border-color: #01dba2 !important;
-    color: #ffffff !important;
+    /* Visual effects moved to .lang-flag */
+}
+
+.lang-flag {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lang-flag:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 8px rgba(1, 219, 162, 0.6);
+}
+
+.lang-btn.active .lang-flag {
+    box-shadow: 0 0 0 3px #01dba2; /* Green ring for active state */
 }
 
 /* Mobile Menu Button */
