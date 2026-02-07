@@ -4864,3 +4864,15 @@ select {
     align-items: center;
     gap: 12px; /* Maintain existing gap for multiple buttons if they are ever added */
 }
+
+/* Ensure platform-card-final uses flexbox for balanced content distribution */
+.platform-card-final {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Ensure all platform-card-final elements have equal height */
+.horizontal-cards-grid .platform-card-final {
+    height: 100%;
+}
