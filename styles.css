@@ -4356,56 +4356,25 @@ a:focus,
         max-width: unset !important; /* Remove max-width */
         margin: unset !important; /* Remove margin */
     }
-    /* COLUMN 1: Logo */
-    .header-single-row .logo { justify-self: start !important; order: unset !important; flex-shrink: unset !important; }
+    /* POSITION 1: LOGO (Left) */
+    .header-single-row .logo {
+        justify-self: start !important;
+    }
 
-    /* COLUMN 2: Nav */
-    .header-single-row .navigation { justify-self: center !important; order: unset !important; flex: unset !important; }
+    /* POSITION 2: NAV MENU (Center) */
+    .nav-menu {
+        justify-self: center !important;
+        /* Ensure it's visible on desktop */
+        display: block !important;
+    }
 
-    /* COLUMN 3: Flags - FORCE RIGHT */
-    .header-single-row .header-right-group, .header-single-row .language-selector { /* Updated selector */
+    /* POSITION 3: FLAGS (Right) */
+    .header-single-row .header-right-group,
+    .header-single-row .header-controls,
+    .header-single-row .language-selector {
         justify-self: end !important;
         display: flex !important;
         gap: 15px !important;
-        order: unset !important;
-        flex-shrink: unset !important;
-    }
-
-    /* Logo - stays on the left */
-    .header-content .logo,
-    .header-single-row .logo {
-        flex-shrink: 0 !important;
-        order: 1 !important;
-    }
-
-    /* Navigation - centered */
-    .header-content .navigation,
-    .header-single-row .navigation {
-        flex: 1 !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        order: 2 !important;
-    }
-
-    /* Nav menu - horizontal links */
-    .nav-menu {
-        display: flex !important;
-        flex-direction: row !important;
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 24px !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        list-style: none !important;
-        white-space: nowrap !important;
-    }
-
-    /* Language controls - stays on the right */
-    .header-content .header-controls,
-    .header-single-row .header-controls {
-        flex-shrink: 0 !important;
-        order: 3 !important;
     }
 
     /* Mobile menu button - hidden on desktop */
@@ -4823,6 +4792,7 @@ select {
         width: auto; /* Reset width to allow flex to manage it */
         box-sizing: content-box; /* Reset box-sizing if necessary */
     }
+    .nav-menu { display: none !important; } /* Hide desktop menu on mobile */
 
     /* Group 1: Logo (Left) */
     .header-single-row .logo {
