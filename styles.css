@@ -4856,3 +4856,11 @@ select {
 }
 
 
+
+/* Custom rule to center single button in .card-final-buttons */
+.card-final-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px; /* Maintain existing gap for multiple buttons if they are ever added */
+}
