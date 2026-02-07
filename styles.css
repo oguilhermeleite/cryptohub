@@ -3206,10 +3206,13 @@ body.modal-open {
         margin-left: 0 !important;
     }
 
+    /* Ensure Flags appear in mobile too */
     .language-selector {
-        gap: 4px !important; /* Reduced gap between buttons */
-        padding: 3px !important; /* Reduced padding around buttons */
-        flex-shrink: 0 !important; /* Prevent buttons from shrinking */
+        display: flex !important; /* Added */
+        gap: 10px !important; /* Changed from 4px to 10px */
+        padding: 3px !important; /* Keep existing padding */
+        flex-shrink: 0 !important; /* Keep existing flex-shrink */
+        align-items: center !important; /* Added to ensure vertical alignment */
     }
 
     .lang-btn {
@@ -4340,11 +4343,13 @@ a:focus,
     /* CRITICAL: Single row layout for header (GRID as per new instruction) */
     .header-content.header-single-row { /* Specificity for header-single-row */
         display: grid !important;
-        grid-template-columns: 200px 1fr 200px; /* Left (Logo), Center (Nav), Right (Flags) */
-        align-items: center !important; /* Keep align-items */
-        width: 100% !important; /* Force width */
-        padding: 15px 4% !important; /* Force padding */
-        gap: 0 !important; /* Remove flex gap */
+        /* Column 1 (Logo), Column 2 (Nav - takes available space), Column 3 (Flags) */
+        grid-template-columns: auto 1fr auto !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 15px 4% !important;
+        box-sizing: border-box !important; /* Added */
+        gap: 0 !important; /* Explicitly set to 0 for clarity, as not defined in instruction */
         flex-direction: unset !important; /* Remove flex direction */
         justify-content: unset !important; /* Remove flex justify */
         flex-wrap: unset !important; /* Remove flex wrap */
@@ -4358,7 +4363,7 @@ a:focus,
     .header-single-row .navigation { justify-self: center !important; order: unset !important; flex: unset !important; }
 
     /* COLUMN 3: Flags - FORCE RIGHT */
-    .header-single-row .header-right-group {
+    .header-single-row .header-right-group, .header-single-row .language-selector { /* Updated selector */
         justify-self: end !important;
         display: flex !important;
         gap: 15px !important;
