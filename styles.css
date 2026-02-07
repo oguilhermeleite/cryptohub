@@ -4785,3 +4785,54 @@ select {
 .update-badge {
     display: none !important;
 }
+
+@media (max-width: 768px) {
+    .header-content.header-single-row {
+        /* Reset the 3-column desktop grid */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px; /* Smaller padding for mobile */
+        gap: 0; /* Remove gap from desktop grid */
+        width: auto; /* Reset width to allow flex to manage it */
+        box-sizing: content-box; /* Reset box-sizing if necessary */
+    }
+
+    .header-single-row .logo {
+        justify-self: auto; /* Reset justify-self from grid */
+    }
+
+    /* Ensure Desktop Nav is HIDDEN */
+    .navigation {
+        display: none;
+    }
+
+    /* Ensure Mobile Menu Button is Visible */
+    .mobile-menu-btn {
+        display: flex; /* Make hamburger visible (it's flex for lines) */
+    }
+
+    .header-controls {
+        margin-left: auto; /* Push flags to the right, next to hamburger */
+        justify-self: auto; /* Reset justify-self from grid */
+        /* gap: 15px; Adjust gap for flags on mobile if needed. Already 15px on .language-selector */
+    }
+
+    /* TAME Mobile Typography Layout */
+    .hero {
+        padding: 60px 20px !important; /* Reduce vertical "air" and add horizontal padding */
+        text-align: center;
+    }
+    .hero-title {
+        font-size: 2.2rem !important; /* Much smaller than desktop 4.5rem */
+        line-height: 1.2 !important;
+    }
+    .hero-slogan,
+    .hero-description {
+        font-size: 1rem !important;
+        max-width: 100% !important; /* Allow it to take full width on mobile */
+        margin-left: 0 !important; /* Remove auto margins */
+        margin-right: 0 !important; /* Remove auto margins */
+    }
+}
+
