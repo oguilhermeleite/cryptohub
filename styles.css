@@ -4364,8 +4364,14 @@ a:focus,
     /* POSITION 2: NAV MENU (Center) */
     .nav-menu {
         justify-self: center !important;
-        /* Ensure it's visible on desktop */
-        display: block !important;
+        /* Ensure it's visible and horizontal on desktop */
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 30px !important;
+        list-style: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        justify-content: center !important; /* Added !important */
     }
 
     /* POSITION 3: FLAGS (Right) */
@@ -4842,6 +4848,11 @@ select {
         margin-left: 0 !important; /* Remove auto margins */
         margin-right: 0 !important; /* Remove auto margins */
     }
+}
+
+/* Ensure list items don't block width */
+.nav-menu li {
+    display: inline-block;
 }
 
 
