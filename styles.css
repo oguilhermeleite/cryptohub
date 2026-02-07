@@ -941,13 +941,16 @@ img {
     justify-self: start;
 }
 
-.header-single-row .header-controls {
-    justify-self: end;
-}
+
 
 /* Single-row header - Navigation centering */
 .header-single-row .navigation {
     justify-self: center;
+}
+
+/* Ensure the right group is justified to the end on desktop */
+.header-single-row .header-right-group {
+    justify-self: end;
 }
 
 /* Responsive: Shrink nav gaps on smaller screens */
@@ -4846,4 +4849,5 @@ select {
         margin-right: 0 !important; /* Remove auto margins */
     }
 }
+
 
