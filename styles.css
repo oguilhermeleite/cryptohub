@@ -1048,6 +1048,8 @@ img {
 
 .lang-btn {
     background: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
     border: none !important;
     color: transparent !important;
     padding: 0 !important;
@@ -1071,6 +1073,7 @@ img {
     width: 30px;
     height: 30px;
     border-radius: 50%;
+    display: block; /* Added */
     object-fit: cover;
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -1078,11 +1081,11 @@ img {
 
 .lang-flag:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 8px rgba(1, 219, 162, 0.6);
+    box-shadow: none !important; /* Removed */
 }
 
 .lang-btn.active .lang-flag {
-    box-shadow: 0 0 0 3px #01dba2; /* Green ring for active state */
+    box-shadow: none !important; /* Removed */
 }
 
 /* Mobile Menu Button */
@@ -3007,7 +3010,7 @@ body.modal-open {
 
     /* Hide desktop navigation on mobile */
     .navigation {
-        display: none;
+        display: none !important;
     }
 
     /* Hide desktop buttons (PRO + Connect) on mobile */
@@ -4334,17 +4337,33 @@ a:focus,
         padding: 16px 40px !important;
     }
 
-    /* CRITICAL: Single row layout for header */
-    .header-content,
-    .header-content.header-single-row {
+    /* CRITICAL: Single row layout for header (GRID as per new instruction) */
+    .header-content.header-single-row { /* Specificity for header-single-row */
+        display: grid !important;
+        grid-template-columns: 200px 1fr 200px; /* Left (Logo), Center (Nav), Right (Flags) */
+        align-items: center !important; /* Keep align-items */
+        width: 100% !important; /* Force width */
+        padding: 15px 4% !important; /* Force padding */
+        gap: 0 !important; /* Remove flex gap */
+        flex-direction: unset !important; /* Remove flex direction */
+        justify-content: unset !important; /* Remove flex justify */
+        flex-wrap: unset !important; /* Remove flex wrap */
+        max-width: unset !important; /* Remove max-width */
+        margin: unset !important; /* Remove margin */
+    }
+    /* COLUMN 1: Logo */
+    .header-single-row .logo { justify-self: start !important; order: unset !important; flex-shrink: unset !important; }
+
+    /* COLUMN 2: Nav */
+    .header-single-row .navigation { justify-self: center !important; order: unset !important; flex: unset !important; }
+
+    /* COLUMN 3: Flags - FORCE RIGHT */
+    .header-single-row .header-right-group {
+        justify-self: end !important;
         display: flex !important;
-        flex-direction: row !important;
-        align-items: center !important;
-        justify-content: space-between !important;
-        gap: 24px !important;
-        flex-wrap: nowrap !important;
-        max-width: 1400px !important;
-        margin: 0 auto !important;
+        gap: 15px !important;
+        order: unset !important;
+        flex-shrink: unset !important;
     }
 
     /* Logo - stays on the left */
