@@ -388,9 +388,9 @@ img {
 /* Light Theme - Header Controls (Theme + Language buttons) */
 [data-theme="light"] .theme-btn,
 [data-theme="light"] .lang-btn {
-    background: rgba(1, 219, 162, 0.08);
-    border: 1.5px solid rgba(1, 219, 162, 0.22);
-    color: #0f0f0f;
+    background: transparent !important;
+    border: none !important;
+    color: transparent !important;
 }
 
 [data-theme="light"] .theme-btn:hover,
@@ -1044,10 +1044,10 @@ img {
 }
 
 .lang-btn {
-    background: transparent;
-    border: none;
-    color: transparent;
-    padding: 0;
+    background: transparent !important;
+    border: none !important;
+    color: transparent !important;
+    padding: 0 !important;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -4788,34 +4788,45 @@ select {
 
 @media (max-width: 768px) {
     .header-content.header-single-row {
-        /* Reset the 3-column desktop grid */
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 20px; /* Smaller padding for mobile */
+        display: flex !important; /* Override any Grid settings */
+        justify-content: space-between !important; /* Push items to edges */
+        align-items: center !important;
+        padding: 15px 20px !important;
         gap: 0; /* Remove gap from desktop grid */
         width: auto; /* Reset width to allow flex to manage it */
         box-sizing: content-box; /* Reset box-sizing if necessary */
     }
 
+    /* Group 1: Logo (Left) */
     .header-single-row .logo {
+        flex: 0 0 auto; /* Do not shrink */
         justify-self: auto; /* Reset justify-self from grid */
     }
 
-    /* Ensure Desktop Nav is HIDDEN */
-    .navigation {
-        display: none;
+    /* Group 2: Controls (Right) - Flags + Hamburger */
+    .header-right-group {
+        display: flex;
+        align-items: center;
+        gap: 15px; /* Space between flags and hamburger */
+        margin-left: auto; /* Push to right */
     }
 
-    /* Ensure Mobile Menu Button is Visible */
-    .mobile-menu-btn {
-        display: flex; /* Make hamburger visible (it's flex for lines) */
-    }
-
+    /* Ensure Flags are visible and aligned */
     .header-controls {
-        margin-left: auto; /* Push flags to the right, next to hamburger */
+        display: flex; /* Ensure it's a flex container for the flags */
+        gap: 10px; /* Space between individual flags */
         justify-self: auto; /* Reset justify-self from grid */
-        /* gap: 15px; Adjust gap for flags on mobile if needed. Already 15px on .language-selector */
+    }
+
+    /* Ensure Hamburger is visible */
+    .mobile-menu-btn {
+        display: block !important; /* Make hamburger visible */
+        margin-left: 10px; /* Space between flags and hamburger */
+    }
+
+    /* Hide Desktop Nav */
+    .navigation {
+        display: none !important; /* Hide desktop navigation */
     }
 
     /* TAME Mobile Typography Layout */
