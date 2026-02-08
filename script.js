@@ -762,12 +762,25 @@ class CryptoAggregator {
 
         const ariaLabel = theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme';
 
+        const currentThemeIconClass = theme === 'light' ? 'fa-sun' : 'fa-moon';
+        const newThemeIconClass = theme === 'light' ? 'fa-moon' : 'fa-sun';
+
         if (desktopThemeToggle) {
             desktopThemeToggle.setAttribute('aria-label', ariaLabel);
+            const icon = desktopThemeToggle.querySelector('i');
+            if (icon) {
+                icon.classList.remove('fa-sun', 'fa-moon');
+                icon.classList.add(newThemeIconClass);
+            }
         }
 
         if (mobileThemeToggle) {
             mobileThemeToggle.setAttribute('aria-label', ariaLabel);
+            const icon = mobileThemeToggle.querySelector('i');
+            if (icon) {
+                icon.classList.remove('fa-sun', 'fa-moon');
+                icon.classList.add(newThemeIconClass);
+            }
         }
 
         console.log('Theme applied successfully:', theme);
@@ -1560,21 +1573,13 @@ function trackPlatformClick(platformName, category) {
     return true;
 }
 
-// Theme Management
-function setupThemeManagement() {
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
-    prefersDarkScheme.addEventListener('change', (e) => {
-        console.log('System theme changed to:', e.matches ? 'dark' : 'light');
-    });
-}
 
 // Initialize Application
 document.addEventListener('DOMContentLoaded', () => {
     try {
         window.cryptoAggregator = new CryptoAggregator();
         setupPerformanceMonitoring();
-        setupThemeManagement();
         setupConnectMessage();
         setupProMessage();
 

@@ -9,86 +9,6 @@
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap');
 
-:root {
-    /* Black/Orange Professional Palette */
-    --orange-50: #fff7ed;
-    --orange-100: #ffedd5;
-    --orange-400: #FF8C42;
-    --orange-500: #FF6B35;
-    --orange-600: #E85D2A;
-    --orange-700: #D24F1F;
-
-    --orange-light-50: #fff7ed;
-    --orange-light-100: #ffedd5;
-    --orange-light-400: #FFA466;
-    --orange-light-500: #FF8C42;
-    --orange-light-600: #FF6B35;
-
-    /* Neutral palette */
-    --slate-50: #f8fafc;
-    --slate-100: #f1f5f9;
-    --slate-200: #e2e8f0;
-    --slate-300: #cbd5e1;
-    --slate-400: #94a3b8;
-    --slate-500: #64748b;
-    --slate-600: #475569;
-    --slate-700: #334155;
-    --slate-800: #1e293b;
-    --slate-900: #0f172a;
-    --slate-950: #020617;
-}
-
-/* Dark theme refinement - Pure Black with Orange */
-:root {
-    --bg-primary: #000000;
-    --bg-secondary: #0a0a0a;
-    --bg-tertiary: #1a1a1a;
-    --bg-elevated: #1a1a1a;
-
-    --text-primary: #ffffff;
-    --text-secondary: #CCCCCC;
-    --text-tertiary: #999999;
-
-    --border-subtle: #333333;
-    --border-medium: #444444;
-    --border-strong: #555555;
-
-    --accent-orange: #FFA500;
-    --accent-orange-light: #FF8C00;
-
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
-    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
-}
-
-/* Light theme - LUXURY MINIMAL with Warm Cream Aesthetic */
-/* Inspired by: Premium fintech apps, Figma, high-end banking interfaces */
-[data-theme="light"] {
-    /* Luxury cream/beige base - warm, inviting, sophisticated like premium stationery */
-    --bg-primary: #f7f5f0;      /* Soft cream - premium paper quality */
-    --bg-secondary: #ede8e0;    /* Rich beige - warm sections */
-    --bg-tertiary: #e3ddd3;     /* Deep beige - anchoring elements */
-    --bg-elevated: rgba(255, 253, 248, 0.9); /* Cards - luminous with soft inner glow */
-
-    /* Deep warm text - luxurious brown-blacks with perfect contrast */
-    --text-primary: #2a2520;    /* Deep warm espresso - primary content */
-    --text-secondary: #4a4238;  /* Medium warm brown - secondary text */
-    --text-tertiary: #6b6258;   /* Soft warm taupe - subtle text */
-
-    /* Refined borders with golden warmth - subtle luxury */
-    --border-subtle: rgba(42, 37, 32, 0.06);
-    --border-medium: rgba(42, 37, 32, 0.10);
-    --border-strong: rgba(42, 37, 32, 0.14);
-
-    /* Ambient shadows with golden warmth - depth and sophistication */
-    --shadow-sm: 0 1px 3px 0 rgba(42, 37, 32, 0.04), 0 1px 2px 0 rgba(139, 92, 46, 0.02);
-    --shadow-md: 0 4px 8px -2px rgba(42, 37, 32, 0.08), 0 2px 4px -1px rgba(139, 92, 46, 0.04);
-    --shadow-lg: 0 12px 24px -4px rgba(42, 37, 32, 0.1), 0 4px 8px -2px rgba(139, 92, 46, 0.05);
-    --shadow-xl: 0 24px 48px -12px rgba(42, 37, 32, 0.12), 0 8px 16px -4px rgba(139, 92, 46, 0.06);
-    --shadow-2xl: 0 32px 64px -12px rgba(42, 37, 32, 0.16), 0 12px 24px -6px rgba(139, 92, 46, 0.08);
-}
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    TYPOGRAPHY - Professional & Refined
@@ -156,76 +76,69 @@ section::after {
 }
 
 body {
-    background: #000000 !important;
+    background: var(--bg-body) !important;
     background-attachment: fixed !important;
     background-image: none !important;
 }
 
 [data-theme="light"] body {
-    background: #FFFFFF !important;
-    background-color: #FFFFFF !important;
+    background: var(--bg-body) !important;
+    background-color: var(--bg-body) !important;
     background-image: none !important;
 }
-
 /* Subtle paper texture overlay for luxury feel */
 [data-theme="light"] body::after {
     content: '';
     position: fixed;
     inset: 0;
     background-image:
-        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(42, 37, 32, 0.008) 2px, rgba(42, 37, 32, 0.008) 4px);
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 0, 0, 0.008) 2px, rgba(0, 0, 0, 0.008) 4px); /* Using black with low opacity for subtle effect */
     pointer-events: none;
     z-index: -1;
     mix-blend-mode: multiply;
     opacity: 0.5;
 }
-
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    HEADER - Refined Navigation
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 
 .header {
-    background: rgba(0, 0, 0, 0.95) !important;
+    background: var(--bg-header) !important;
     backdrop-filter: blur(20px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-    border-bottom: 1px solid #FFA500 !important;
-    box-shadow: var(--shadow-sm) !important;
+    border-bottom: 1px solid var(--border-medium) !important; /* Use border-medium for dark theme */
+    box-shadow: var(--card-shadow) !important; /* Use appropriate unified shadow */
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 [data-theme="light"] .header {
-    background: rgba(255, 253, 248, 0.88) !important;
+    background: var(--bg-header) !important;
     backdrop-filter: blur(24px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
-    border-bottom: 1px solid var(--border-subtle) !important;
-    box-shadow:
-        0 1px 3px 0 rgba(42, 37, 32, 0.06),
-        0 8px 16px -4px rgba(139, 92, 46, 0.03),
-        inset 0 1px 0 0 rgba(255, 255, 255, 0.6) !important;
+    border-bottom: 1px solid var(--card-border) !important; /* Use card-border for light theme */
+    box-shadow: var(--card-shadow) !important; /* Use appropriate unified shadow */
     z-index: 100;
 }
-
 /* Logo - subtle elegance */
 .logo-text {
     text-shadow: none !important;
-    color: #FFFFFF !important;
+    color: var(--text-main) !important;
     transition: all 0.3s ease;
 }
 
 /* Logo text stays white on hover */
 .logo:hover .logo-text {
-    color: #FFFFFF !important;
+    color: var(--text-main) !important;
 }
 
 .logo-svg {
-    filter: drop-shadow(0 2px 8px rgba(255, 107, 53, 0.2));
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2)); /* Using black for general drop shadow, might need adjustment */
     transition: filter 0.3s ease;
 }
 
 .logo:hover .logo-svg {
-    filter: drop-shadow(0 2px 12px rgba(255, 107, 53, 0.3));
+    filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.3)); /* Using black for general drop shadow, might need adjustment */
 }
-
 /* Navigation - minimalist text style */
 .nav-menu a {
     position: relative;
@@ -234,7 +147,7 @@ body {
     border-radius: 0;
     padding: 8px 4px;
     background: transparent !important;
-    color: rgba(255, 255, 255, 0.85) !important;
+    color: var(--text-secondary) !important;
     font-weight: 500;
     letter-spacing: 0.3px;
 }
@@ -250,9 +163,8 @@ body {
 .nav-menu a:hover {
     transform: none;
     box-shadow: none !important;
-    color: #01dba2 !important;
+    color: var(--accent-primary) !important;
 }
-
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    HERO SECTION - Sophisticated Entrance
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
@@ -282,18 +194,13 @@ body {
 }
 
 .gradient-text {
-    background: linear-gradient(
-        135deg,
-        var(--orange-500) 0%,
-        var(--orange-400) 100%
-    ) !important;
+    background: var(--accent-gradient) !important;
     background-clip: text !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     text-shadow: none !important;
     filter: none !important;
 }
-
 .hero-subtitle {
     font-size: 1.5rem;
     line-height: 1.6;
@@ -318,13 +225,13 @@ body {
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 
 .premium-hero-banner {
-    background: var(--bg-elevated) !important;
+    background: var(--bg-card) !important; /* Use bg-card */
     backdrop-filter: blur(24px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
-    border: 1px solid var(--border-medium) !important;
+    border: 1px solid var(--card-border) !important; /* Use card-border */
     border-radius: 24px;
     padding: 48px;
-    box-shadow: var(--shadow-xl) !important;
+    box-shadow: var(--card-shadow) !important; /* Use card-shadow */
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -334,8 +241,8 @@ body {
 
 .premium-hero-banner:hover {
     transform: translateY(-4px);
-    box-shadow: var(--shadow-2xl) !important;
-    border-color: var(--border-strong) !important;
+    box-shadow: var(--card-shadow) !important; /* Use card-shadow */
+    border-color: var(--border-accent-hover) !important; /* Use border-accent-hover */
 }
 
 /* Premium logo - clean elevation and even larger for better visibility */
@@ -343,9 +250,9 @@ body {
     width: 108px;
     height: 108px;
     border-radius: 24px;
-    background: var(--bg-elevated);
-    border: 1px solid var(--border-medium) !important;
-    box-shadow: var(--shadow-lg) !important;
+    background: var(--bg-card); /* Use bg-card */
+    border: 1px solid var(--card-border) !important; /* Use card-border */
+    box-shadow: var(--card-shadow) !important; /* Use card-shadow */
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
@@ -354,20 +261,19 @@ body {
 }
 
 .premium-hero-banner:hover .premium-hero-logo {
-    box-shadow: var(--shadow-xl) !important;
-    border-color: var(--border-strong) !important;
+    box-shadow: var(--card-shadow) !important; /* Use card-shadow */
+    border-color: var(--border-accent-hover) !important; /* Use border-accent-hover */
 }
-
 /* CTA button - refined gradient */
 .premium-cta-button {
-    background: linear-gradient(135deg, var(--orange-500), var(--orange-400)) !important;
+    background: var(--accent-gradient) !important;
     border: none;
     border-radius: 12px;
     padding: 14px 32px;
     font-weight: 600;
     font-size: 16px;
-    color: white !important;
-    box-shadow: var(--shadow-lg) !important;
+    color: var(--text-main) !important;
+    box-shadow: var(--shadow-button) !important;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
@@ -377,7 +283,7 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, var(--orange-400), var(--orange-light-400));
+    background: var(--accent-gradient);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -388,9 +294,8 @@ body {
 
 .premium-cta-button:hover {
     transform: translateY(-2px);
-    box-shadow: var(--shadow-xl) !important;
+    box-shadow: var(--shadow-button-hover) !important;
 }
-
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    SECTION TITLES - Refined Hierarchy
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
@@ -412,14 +317,13 @@ body {
 .section-title,
 .section-title span {
     text-shadow: none !important;
-    color: #FFFFFF !important;
+    color: var(--text-main) !important;
 }
 
 [data-theme="light"] .section-title,
 [data-theme="light"] .section-title span {
-    color: #FFA500 !important;
+    color: var(--accent-primary) !important;
 }
-
 .section-subtitle {
     font-size: 18px;
     color: var(--text-tertiary);
@@ -432,13 +336,13 @@ body {
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 
 .platform-card {
-    background: var(--bg-elevated) !important;
+    background: var(--bg-card) !important; /* Use bg-card */
     backdrop-filter: blur(20px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-    border: 1px solid var(--border-medium) !important;
+    border: 1px solid var(--card-border) !important; /* Use card-border */
     border-radius: 20px;
     padding: 24px;
-    box-shadow: var(--shadow-lg) !important;
+    box-shadow: var(--card-shadow) !important; /* Use card-shadow */
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     animation: cardFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
@@ -469,10 +373,9 @@ body {
 
 .platform-card:hover {
     transform: translateY(-6px);
-    box-shadow: var(--shadow-2xl) !important;
-    border-color: var(--border-strong) !important;
+    box-shadow: var(--card-shadow) !important; /* Use card-shadow */
+    border-color: var(--border-accent-hover) !important; /* Use border-accent-hover */
 }
-
 /* Click to flip cards - Desktop and Mobile */
 .platform-card {
     cursor: pointer;
@@ -506,9 +409,9 @@ body {
     width: 104px;
     height: 104px;
     border-radius: 20px;
-    background: var(--bg-elevated);
-    border: 1px solid var(--border-subtle) !important;
-    box-shadow: var(--shadow-md) !important;
+    background: var(--bg-card); /* Use bg-card */
+    border: 1px solid var(--card-border) !important; /* Use card-border */
+    box-shadow: var(--card-shadow) !important; /* Use card-shadow */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -517,23 +420,21 @@ body {
 }
 
 .platform-card:hover .platform-logo {
-    box-shadow: var(--shadow-lg) !important;
-    border-color: var(--border-medium) !important;
+    box-shadow: var(--card-shadow) !important; /* Use card-shadow */
+    border-color: var(--border-accent-hover) !important; /* Use border-accent-hover */
 }
-
 /* Rating badge - elegant */
 .rating-badge {
-    background: linear-gradient(135deg, var(--orange-500), var(--orange-400)) !important;
+    background: var(--accent-gradient) !important;
     border: none !important;
     border-radius: 8px;
     padding: 6px 12px;
-    box-shadow: var(--shadow-md) !important;
+    box-shadow: var(--shadow-button) !important;
     text-shadow: none !important;
-    color: white !important;
+    color: var(--text-main) !important;
     font-size: 13px;
     font-weight: 600;
 }
-
 /* KYC badges - refined colors */
 .kyc-badge {
     border-radius: 8px;
@@ -546,23 +447,22 @@ body {
 }
 
 .kyc-free {
-    background: rgba(255, 107, 53, 0.1) !important;
-    border: 1px solid var(--orange-500) !important;
-    color: var(--orange-500) !important;
+    background: rgba(0, 255, 179, 0.1) !important; /* Use neon green with opacity */
+    border: 1px solid var(--accent-primary) !important; /* Use accent-primary */
+    color: var(--accent-primary) !important; /* Use accent-primary */
     text-shadow: none !important;
 }
 
 .kyc-required {
-    background: rgba(251, 146, 60, 0.1) !important;
-    border: 1px solid #fb923c !important;
-    color: #fb923c !important;
+    background: rgba(255, 165, 0, 0.1) !important; /* Use orange with opacity */
+    border: 1px solid var(--accent-primary) !important; /* Use accent-primary */
+    color: var(--accent-primary) !important; /* Use accent-primary */
     text-shadow: none !important;
 }
-
 /* Tags - minimalist */
 .tag {
-    background: var(--bg-elevated) !important;
-    border: 1px solid var(--border-subtle) !important;
+    background: var(--bg-secondary) !important; /* Use bg-secondary */
+    border: 1px solid var(--card-border) !important; /* Use card-border */
     border-radius: 6px;
     padding: 4px 10px;
     font-size: 12px;
@@ -573,10 +473,9 @@ body {
 }
 
 .tag:hover {
-    background: var(--bg-tertiary) !important;
-    border-color: var(--border-medium) !important;
+    background: var(--bg-card-hover) !important; /* Use bg-card-hover */
+    border-color: var(--border-accent-hover) !important; /* Use border-accent-hover */
 }
-
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    CARD FRONT - LOGO ONLY REDESIGN
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
@@ -679,13 +578,13 @@ body {
 }
 
 .card-btn-primary {
-    background: linear-gradient(135deg, var(--orange-500), var(--orange-400)) !important;
+    background: var(--accent-gradient) !important;
     border: none !important;
     border-radius: 10px;
     padding: 12px 24px;
     font-weight: 600;
-    color: white !important;
-    box-shadow: var(--shadow-md) !important;
+    color: var(--text-main) !important;
+    box-shadow: var(--shadow-button) !important;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
@@ -698,7 +597,7 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, var(--orange-400), var(--orange-light-400));
+    background: var(--accent-gradient);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -709,12 +608,11 @@ body {
 
 .card-btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: var(--shadow-lg) !important;
+    box-shadow: var(--shadow-button-hover) !important;
 }
-
 .card-btn-secondary {
     background: transparent !important;
-    border: 1px solid var(--border-medium) !important;
+    border: 1px solid var(--card-border) !important; /* Use card-border */
     border-radius: 10px;
     padding: 12px 24px;
     font-weight: 500;
@@ -723,11 +621,10 @@ body {
 }
 
 .card-btn-secondary:hover {
-    background: var(--bg-elevated) !important;
-    border-color: var(--border-strong) !important;
-    color: var(--text-primary) !important;
+    background: var(--bg-card-hover) !important; /* Use bg-card-hover */
+    border-color: var(--border-accent-hover) !important; /* Use border-accent-hover */
+    color: var(--text-main) !important; /* Use text-main */
 }
-
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    CAROUSEL CONTROLS - Minimalist
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
@@ -735,12 +632,12 @@ body {
 .carousel-arrow {
     width: 40px;
     height: 40px;
-    background: var(--bg-elevated) !important;
+    background: var(--bg-card) !important; /* Use bg-card */
     backdrop-filter: blur(20px);
-    border: 1px solid var(--border-medium) !important;
+    border: 1px solid var(--card-border) !important; /* Use card-border */
     border-radius: 10px;
-    color: var(--text-primary) !important;
-    box-shadow: var(--shadow-md) !important;
+    color: var(--text-main) !important; /* Use text-main */
+    box-shadow: var(--card-shadow) !important; /* Use card-shadow */
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     align-items: center;
@@ -748,12 +645,11 @@ body {
 }
 
 .carousel-arrow:hover {
-    background: var(--bg-tertiary) !important;
-    border-color: var(--border-strong) !important;
+    background: var(--bg-card-hover) !important; /* Use bg-card-hover */
+    border-color: var(--border-accent-hover) !important; /* Use border-accent-hover */
     transform: scale(1.05);
-    box-shadow: var(--shadow-lg) !important;
+    box-shadow: var(--card-shadow) !important; /* Use card-shadow */
 }
-
 /* HIDE scroll indicators - only keep arrows */
 .scroll-dot {
     display: none !important;
@@ -768,8 +664,8 @@ body {
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 
 .theme-btn, .lang-btn {
-    background: var(--bg-elevated) !important;
-    border: 1px solid var(--border-subtle) !important;
+    background: var(--bg-card) !important; /* Use bg-card */
+    border: 1px solid var(--card-border) !important; /* Use card-border */
     border-radius: 8px;
     padding: 8px 12px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -782,48 +678,46 @@ body {
 
 .theme-btn:hover,
 .lang-btn:hover {
-    background: var(--bg-tertiary) !important;
-    border-color: var(--border-medium) !important;
+    background: var(--bg-card-hover) !important; /* Use bg-card-hover */
+    border-color: var(--border-accent-hover) !important; /* Use border-accent-hover */
     transform: translateY(-1px);
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--card-shadow); /* Use card-shadow */
 }
 
 .lang-btn.active {
-    background: linear-gradient(135deg, #01dba2, #a9d9df) !important;
-    color: white !important;
+    background: var(--accent-gradient) !important;
+    color: var(--text-main) !important;
     border-color: transparent !important;
 }
-
 /* Connect and PRO buttons */
 .connect-button, .pro-button,
 .mobile-connect-button, .mobile-pro-button {
-    background: linear-gradient(135deg, #01dba2 0%, #a9d9df 100%) !important;
+    background: var(--accent-gradient) !important;
     border: none;
     border-radius: 10px;
     padding: 10px 20px;
     font-weight: 600;
-    color: white !important;
-    box-shadow: var(--shadow-md) !important;
+    color: var(--text-main) !important;
+    box-shadow: var(--shadow-button) !important;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .connect-button:hover, .pro-button:hover,
 .mobile-connect-button:hover, .mobile-pro-button:hover {
     transform: translateY(-2px);
-    box-shadow: var(--shadow-lg) !important;
+    box-shadow: var(--shadow-button-hover) !important;
 }
-
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    PREMIUM ELEMENTS - Refined Versions
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 
 /* Trust badges - professional */
 .trust-badge {
-    background: var(--bg-elevated) !important;
+    background: var(--bg-card) !important; /* Use bg-card */
     backdrop-filter: blur(20px) !important;
-    border: 1px solid var(--border-medium) !important;
+    border: 1px solid var(--card-border) !important; /* Use card-border */
     border-radius: 16px;
-    box-shadow: var(--shadow-lg) !important;
+    box-shadow: var(--card-shadow) !important; /* Use card-shadow */
 }
 
 .trust-badge::before {
@@ -832,10 +726,9 @@ body {
 
 .trust-badge:hover {
     transform: translateY(-4px);
-    box-shadow: var(--shadow-xl) !important;
-    border-color: var(--border-strong) !important;
+    box-shadow: var(--card-shadow) !important; /* Use card-shadow */
+    border-color: var(--border-accent-hover) !important; /* Use border-accent-hover */
 }
-
 .badge-title {
     color: var(--text-primary) !important;
     text-shadow: none !important;
@@ -848,43 +741,39 @@ body {
 
 /* FAB - refined */
 .fab-button {
-    background: linear-gradient(135deg, var(--orange-500), var(--orange-400)) !important;
-    box-shadow: var(--shadow-xl) !important;
+    background: var(--accent-gradient) !important;
+    box-shadow: var(--shadow-button) !important;
 }
 
 .fab-button:hover {
-    box-shadow: var(--shadow-2xl) !important;
+    box-shadow: var(--shadow-button-hover) !important;
 }
-
 .fab-menu-item {
-    background: var(--bg-elevated) !important;
+    background: var(--bg-card) !important; /* Use bg-card */
     backdrop-filter: blur(20px) !important;
-    border: 1px solid var(--border-medium) !important;
-    box-shadow: var(--shadow-lg) !important;
+    border: 1px solid var(--card-border) !important; /* Use card-border */
+    box-shadow: var(--card-shadow) !important; /* Use card-shadow */
 }
-
 /* Toast - refined */
 .toast {
-    background: var(--bg-elevated) !important;
+    background: var(--bg-card) !important; /* Use bg-card */
     backdrop-filter: blur(24px) saturate(180%) !important;
-    border: 1px solid var(--border-medium) !important;
+    border: 1px solid var(--card-border) !important; /* Use card-border */
     border-radius: 12px;
-    box-shadow: var(--shadow-xl) !important;
+    box-shadow: var(--card-shadow) !important; /* Use card-shadow */
 }
-
 .toast-title {
     text-shadow: none !important;
 }
 
 /* Modal - glassmorphism */
 .premium-modal {
-    background: var(--bg-elevated) !important;
+    background: var(--bg-modal) !important; /* Use bg-modal */
     backdrop-filter: blur(32px) saturate(200%) !important;
-    border: 1px solid var(--border-medium) !important;
+    border: 1px solid var(--card-border) !important; /* Use card-border */
     border-radius: 24px;
-    box-shadow: var(--shadow-2xl) !important;
+    box-shadow: var(--card-shadow) !important; /* Use card-shadow */
 }
-
 .premium-modal::before {
     display: none !important;
 }
@@ -896,14 +785,13 @@ body {
 
 /* Tooltips - minimal */
 [data-tech-tooltip]::before {
-    background: var(--bg-elevated) !important;
+    background: var(--bg-card) !important; /* Use bg-card */
     backdrop-filter: blur(20px) !important;
-    border: 1px solid var(--border-medium) !important;
-    box-shadow: var(--shadow-lg) !important;
+    border: 1px solid var(--card-border) !important; /* Use card-border */
+    box-shadow: var(--card-shadow) !important; /* Use card-shadow */
     text-shadow: none !important;
-    color: var(--text-primary) !important;
+    color: var(--text-main) !important; /* Use text-main */
 }
-
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    RESPONSIVE REFINEMENTS
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
@@ -990,14 +878,13 @@ input:focus-visible {
 }
 
 .featured-cards-grid::-webkit-scrollbar-thumb {
-    background: rgba(255, 107, 53, 0.3);
+    background: var(--accent-primary);
     border-radius: 4px;
 }
 
 .featured-cards-grid::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 107, 53, 0.5);
+    background: var(--accent-secondary); /* Use a slightly darker accent on hover */
 }
-
 /* Featured card - premium elevation */
 .featured-card {
     width: 100%;
@@ -1058,19 +945,13 @@ input:focus-visible {
 .featured-card .card-front {
     transform: rotateY(0deg);
     -webkit-transform: rotateY(0deg);
-    background: var(--bg-elevated);
+    background: var(--bg-card); /* Use bg-card */
 
     /* Layered premium shadows */
-    box-shadow:
-        0 1px 3px rgba(0, 0, 0, 0.05),
-        0 8px 24px rgba(255, 107, 53, 0.12),
-        0 16px 48px rgba(255, 140, 66, 0.08),
-        0 24px 80px rgba(139, 92, 246, 0.05),
-        inset 0 1px 2px rgba(255, 255, 255, 0.1);
+    box-shadow: var(--card-shadow); /* Use card-shadow */
 
     transition: box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 /* Refined gradient border on front face */
 .featured-card .card-front::before {
     content: '';
@@ -1078,10 +959,7 @@ input:focus-visible {
     inset: 0;
     border-radius: 28px;
     padding: 2px;
-    background: linear-gradient(135deg,
-        rgba(255, 107, 53, 0.4) 0%,
-        rgba(255, 140, 66, 0.3) 50%,
-        rgba(255, 140, 66, 0.3) 100%);
+    background: var(--accent-gradient); /* Use accent-gradient */
     -webkit-mask:
         linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
@@ -1091,7 +969,6 @@ input:focus-visible {
     opacity: 0.6;
     transition: opacity 0.3s ease;
 }
-
 /* Subtle inner glow on front face */
 .featured-card .card-front::after {
     content: '';
@@ -1111,14 +988,13 @@ input:focus-visible {
 .featured-card .card-back {
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
-    background: var(--bg-elevated);
-    border: 2px solid rgba(255, 107, 53, 0.3);
+    background: var(--bg-card); /* Use bg-card */
+    border: 2px solid var(--card-border); /* Use card-border */
     padding: 35px 25px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-
 /* Fix featured section links - ensure they work */
 .featured-card .card-back a,
 .featured-card .card-back button {
@@ -1146,23 +1022,12 @@ input:focus-visible {
 
 /* Premium hover state - elegant lift (only when not flipped) */
 .featured-card:not(.flipped):hover .card-front {
-    box-shadow:
-        0 2px 4px rgba(0, 0, 0, 0.06),
-        0 12px 32px rgba(255, 107, 53, 0.18),
-        0 20px 60px rgba(255, 140, 66, 0.12),
-        0 32px 100px rgba(139, 92, 246, 0.08),
-        inset 0 2px 4px rgba(255, 255, 255, 0.15),
-        0 0 0 1px rgba(255, 107, 53, 0.15);
+    box-shadow: var(--card-shadow); /* Use card-shadow */
 }
-
 .featured-card:not(.flipped):hover .card-front::before {
     opacity: 1;
-    background: linear-gradient(135deg,
-        rgba(255, 107, 53, 0.6) 0%,
-        rgba(255, 140, 66, 0.5) 50%,
-        rgba(255, 140, 66, 0.4) 100%);
+    background: var(--accent-gradient); /* Use accent-gradient */
 }
-
 /* Featured card logo - clean, no background */
 .featured-card .card-front .platform-logo {
     width: 120px !important;
@@ -1233,19 +1098,14 @@ input:focus-visible {
 .featured-card .rating-badge {
     font-size: 15px;
     padding: 9px 16px;
-    box-shadow:
-        0 4px 12px rgba(255, 107, 53, 0.25),
-        0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-button); /* Use shadow-button */
     transition: all 0.3s ease;
 }
 
 .featured-card:hover .rating-badge {
     transform: translateY(-2px);
-    box-shadow:
-        0 6px 16px rgba(255, 107, 53, 0.35),
-        0 3px 8px rgba(0, 0, 0, 0.12);
+    box-shadow: var(--shadow-button-hover); /* Use shadow-button-hover */
 }
-
 /* Featured KYC badge - refined */
 .featured-card .kyc-badge {
     font-size: 12px;
@@ -1266,25 +1126,24 @@ input:focus-visible {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid #FF6B35;
+    background: var(--bg-secondary); /* Use bg-secondary */
+    border: 2px solid var(--accent-primary); /* Use accent-primary */
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     font-size: 24px;
-    color: #FF6B35;
+    color: var(--accent-primary); /* Use accent-primary */
     transition: all 0.3s;
     backdrop-filter: blur(10px);
 }
 
 .featured-arrow:hover {
-    background: #FF6B35;
-    color: #000;
+    background: var(--accent-primary); /* Use accent-primary */
+    color: var(--text-main); /* Use text-main */
     transform: scale(1.1);
-    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+    box-shadow: var(--shadow-button); /* Use shadow-button */
 }
-
 .featured-arrow:active {
     transform: scale(0.95);
 }
@@ -1365,109 +1224,69 @@ input:focus-visible {
 
 /* Featured cards - light theme */
 [data-theme="light"] .featured-card .card-front {
-    background: rgba(255, 254, 252, 0.98) !important;
-    box-shadow:
-        0 1px 3px rgba(0, 0, 0, 0.08),
-        0 8px 24px rgba(255, 107, 53, 0.15),
-        0 16px 48px rgba(255, 140, 66, 0.1),
-        inset 0 1px 2px rgba(255, 255, 255, 1) !important;
+    background: var(--bg-card) !important; /* Use bg-card */
+    box-shadow: var(--card-shadow) !important; /* Use card-shadow */
 }
-
 [data-theme="light"] .featured-card .card-back {
-    background: linear-gradient(135deg, rgba(255, 254, 252, 0.98) 0%, rgba(252, 250, 247, 0.96) 100%) !important;
-    border: 2px solid rgba(255, 107, 53, 0.38) !important;
+    background: var(--bg-card) !important; /* Use bg-card */
+    border: 2px solid var(--card-border) !important; /* Use card-border */
 }
-
 [data-theme="light"] .featured-card:not(.flipped):hover .card-front {
-    box-shadow:
-        0 2px 4px rgba(0, 0, 0, 0.1),
-        0 12px 32px rgba(255, 107, 53, 0.22),
-        0 20px 60px rgba(255, 140, 66, 0.15),
-        inset 0 2px 4px rgba(255, 255, 255, 1) !important;
+    box-shadow: var(--card-shadow) !important; /* Use card-shadow */
 }
-
 /* Platform cards - luminous with soft inner glow */
 [data-theme="light"] .platform-card {
-    background: var(--bg-elevated) !important;
-    border: 1px solid rgba(255, 255, 255, 0.8) !important;
-    box-shadow:
-        var(--shadow-lg),
-        inset 0 1px 1px 0 rgba(255, 255, 255, 0.9),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.4) !important;
+    background: var(--bg-card) !important; /* Use bg-card */
+    border: 1px solid var(--card-border) !important; /* Use card-border */
+    box-shadow: var(--card-shadow) !important; /* Use card-shadow */
 }
 
 [data-theme="light"] .platform-card:hover {
-    background: rgba(255, 255, 255, 0.95) !important;
-    border-color: rgba(255, 255, 255, 0.95) !important;
-    box-shadow:
-        var(--shadow-2xl),
-        inset 0 1px 2px 0 rgba(255, 255, 255, 1),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.6),
-        0 0 0 1px rgba(42, 37, 32, 0.04) !important;
+    background: var(--bg-card-hover) !important; /* Use bg-card-hover */
+    border-color: var(--border-accent-hover) !important; /* Use border-accent-hover */
+    box-shadow: var(--card-shadow) !important; /* Use card-shadow */
 }
-
 /* Premium hero banner - radiant luxury */
 [data-theme="light"] .premium-hero-banner {
-    background: rgba(255, 253, 248, 0.95) !important;
-    border: 1px solid rgba(255, 255, 255, 0.9) !important;
-    box-shadow:
-        var(--shadow-xl),
-        inset 0 2px 4px 0 rgba(255, 255, 255, 0.95),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.5) !important;
+    background: var(--bg-card) !important; /* Use bg-card */
+    border: 1px solid var(--card-border) !important; /* Use card-border */
+    box-shadow: var(--card-shadow) !important; /* Use card-shadow */
 }
 
 [data-theme="light"] .premium-hero-banner:hover {
-    background: rgba(255, 255, 255, 0.98) !important;
-    box-shadow:
-        var(--shadow-2xl),
-        inset 0 2px 4px 0 rgba(255, 255, 255, 1),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.7) !important;
+    background: var(--bg-card-hover) !important; /* Use bg-card-hover */
+    box-shadow: var(--card-shadow) !important; /* Use card-shadow */
 }
-
 /* Modals and overlays - luminous glass */
 [data-theme="light"] .premium-modal {
-    background: rgba(255, 253, 248, 0.96) !important;
-    border: 1px solid rgba(255, 255, 255, 0.9) !important;
-    box-shadow:
-        var(--shadow-2xl),
-        inset 0 2px 4px 0 rgba(255, 255, 255, 1),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.6) !important;
+    background: var(--bg-modal) !important; /* Use bg-modal */
+    border: 1px solid var(--card-border) !important; /* Use card-border */
+    box-shadow: var(--card-shadow) !important; /* Use card-shadow */
 }
-
 /* Trust badges - refined with subtle glow */
 [data-theme="light"] .trust-badge {
-    background: rgba(255, 253, 248, 0.9) !important;
-    border: 1px solid rgba(255, 255, 255, 0.8) !important;
-    box-shadow:
-        var(--shadow-lg),
-        inset 0 1px 1px 0 rgba(255, 255, 255, 0.9) !important;
+    background: var(--bg-card) !important; /* Use bg-card */
+    border: 1px solid var(--card-border) !important; /* Use card-border */
+    box-shadow: var(--card-shadow) !important; /* Use card-shadow */
 }
 
 [data-theme="light"] .trust-badge:hover {
-    background: rgba(255, 255, 255, 0.95) !important;
-    box-shadow:
-        var(--shadow-xl),
-        inset 0 1px 2px 0 rgba(255, 255, 255, 1) !important;
+    background: var(--bg-card-hover) !important; /* Use bg-card-hover */
+    box-shadow: var(--card-shadow) !important; /* Use card-shadow */
 }
-
 /* Logo containers - premium elevation */
 [data-theme="light"] .platform-logo,
 [data-theme="light"] .premium-hero-logo {
-    background: rgba(255, 255, 255, 0.8) !important;
-    border: 1px solid rgba(255, 255, 255, 0.9) !important;
-    box-shadow:
-        var(--shadow-md),
-        inset 0 1px 1px 0 rgba(255, 255, 255, 0.95) !important;
+    background: var(--bg-card) !important; /* Use bg-card */
+    border: 1px solid var(--card-border) !important; /* Use card-border */
+    box-shadow: var(--card-shadow) !important; /* Use card-shadow */
 }
 
 [data-theme="light"] .platform-card:hover .platform-logo,
 [data-theme="light"] .premium-hero-banner:hover .premium-hero-logo {
-    background: rgba(255, 255, 255, 0.95) !important;
-    box-shadow:
-        var(--shadow-lg),
-        inset 0 1px 2px 0 rgba(255, 255, 255, 1) !important;
+    background: var(--bg-card-hover) !important; /* Use bg-card-hover */
+    box-shadow: var(--card-shadow) !important; /* Use card-shadow */
 }
-
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    SCROLL FIX - Smooth scroll without white scrollbar
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
