@@ -4911,24 +4911,17 @@ select {
 
 
 
-/* 1. The Wrapper (The "Frame") */
-.kryptera-icon-wrapper {
-    width: 60px; /* Force standard icon size */
-    height: 60px;
-    border-radius: 50%;
-    overflow: hidden; /* CRITICAL: Crops the zoomed image */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff; /* White bg ensures transparency doesn't look weird */
-    padding: 0 !important;
-}
 
-/* 2. The Image (The "Zoom") */
-.kryptera-logo-zoomed {
+/* Ensures it fits within its parent container */
+.simple-kryptera-logo {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    /* THIS IS THE SECRET: Zoom in 130% to cut off white borders */
-    transform: scale(1.3);
+    object-fit: contain; /* Shows the whole image, even if small */
+    border-radius: 50%;
+}
+/* Ensure parent has a defined size */
+#p2p .card:first-child .card-icon {
+    width: 60px;
+    height: 60px;
+    padding: 0;
 }
