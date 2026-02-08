@@ -324,21 +324,27 @@ section {
 }
 
 .header-controls {
-    gap: 24px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 20px !important; /* Space between flag group and theme button */
 }
 
 .theme-btn {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    color: var(--text-main);
+    background: transparent;
+    border: none;
+    color: var(--text-main, #fff); /* Use variable if available, else white */
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
 }
-
 .theme-btn:hover {
-    background: var(--accent-primary);
-    border-color: var(--accent-primary);
-    color: var(--text-main); /* Ensure text is readable on hover */
+    transform: rotate(15deg) scale(1.1);
 }
-
 .lang-btn {
     background: transparent !important;
     border: none !important;
