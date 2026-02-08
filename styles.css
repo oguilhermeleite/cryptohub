@@ -209,37 +209,7 @@ img {
     --btn-secondary-hover-bg: rgba(0,0,0,0.05);
 }
 
-    /* Light Theme - Card Button Overrides for Contrast */
 
-    [data-theme="light"] .card-final-btn-primary {
-
-        background: var(--btn-primary-bg) !important;
-
-        color: var(--btn-primary-text) !important;
-
-        border-color: var(--btn-primary-border) !important;
-
-    }
-
-    
-
-    [data-theme="light"] .card-final-btn-primary:hover {
-    background: var(--btn-primary-hover-bg) !important;
-    color: var(--btn-primary-text) !important; /* Keep original text color or adjust if needed */
-    border-color: var(--btn-primary-hover-bg) !important;
-}
-
-[data-theme="light"] .card-final-btn-secondary {
-    background: var(--btn-secondary-bg) !important;
-    color: var(--btn-secondary-text) !important;
-    border-color: var(--btn-secondary-border) !important;
-}
-
-[data-theme="light"] .card-final-btn-secondary:hover {
-    background: var(--btn-secondary-hover-bg) !important;
-    color: var(--btn-secondary-text) !important; /* Keep original text color or adjust if needed */
-    border-color: var(--btn-secondary-border) !important; /* Keep original border or adjust if needed */
-}
     
 
     /* Base body background using the new variable */
