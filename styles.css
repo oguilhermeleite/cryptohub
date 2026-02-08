@@ -4907,3 +4907,27 @@ select {
     justify-content: center !important;
     overflow: hidden !important; /* Clip anything outside boundary */
 }
+
+
+/* ---- FORCE KRYPTERA LOGO FIX ---- */
+
+/* 1. Ensure the parent container has ABSOLUTELY NO padding interfering */
+#p2p .card:first-child .card-icon {
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Necessary to crop the image into a circle */
+}
+
+/* 2. Force the image itself to stretch and cover the entire area */
+.kryptera-force-fill {
+    width: 100% !important;
+    height: 100% !important;
+    /* 'cover' zooms the image until it fills the box, cutting off excess edges */
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    margin: 0 !important;
+    display: block !important;
+}
+/* -------------------------------- */
