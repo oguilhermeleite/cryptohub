@@ -4876,3 +4876,12 @@ select {
 .horizontal-cards-grid .platform-card-final {
     height: 100%;
 }
+
+/* Ensure content wrapper takes available space and centers its content */
+.card-content-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally within the wrapper */
+    justify-content: flex-start; /* Align content to the top within the wrapper */
+}
