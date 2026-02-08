@@ -2427,14 +2427,16 @@ section::-webkit-scrollbar,
     -webkit-backface-visibility: hidden;
 }
 
-.platform-icon-shield {
-    font-size: 40px; /* Adjust size to fill the circle nicely */
-    color: #FFD700;  /* Gold color (like the Kryptera emoji) */
-    /* Optional Gradient for a more premium look */
-    /* background: linear-gradient(45deg, #FFD700, #FFA500); */
-    /* -webkit-background-clip: text; */
-    /* -webkit-text-fill-color: transparent; */
+.platform-logo-full {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* Crucial: stretches image to fill, cropping excess */
+    border-radius: 50% !important;
+    margin: 0 !important;
+    display: block !important;
 }
+
+
 
 .platform-logo img.loaded {
     opacity: 1;
@@ -4896,4 +4898,12 @@ select {
     flex-direction: column;
     align-items: center; /* Center content horizontally within the wrapper */
     justify-content: flex-start; /* Align content to the top within the wrapper */
+}
+
+#p2p .card-logo-container { /* Targeting the specific container in the P2P section */
+    padding: 0 !important;
+    display: flex !important; /* Ensure these are overriding if needed */
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important; /* Clip anything outside boundary */
 }
