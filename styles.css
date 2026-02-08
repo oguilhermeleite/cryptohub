@@ -172,7 +172,7 @@ img {
     --text-tertiary: #6b7280;
     --text-quaternary: #9ca3af;
     --text-neon-green: #008f6b; /* Darker green for readability */
-    --text-muted: #6b7280; /* Medium gray for secondary text */
+    --text-muted: #4b5563; /* Dark Gray for descriptions inside cards */
 
     --card-bg: #ffffff; /* Pure white cards */
     --card-border: #e5e7eb; /* Subtle border definition */
@@ -195,21 +195,19 @@ img {
 
     /* --- CRITICAL: NEW BUTTON VARIABLES FOR LIGHT MODE --- */
     /* Primary Button (Visitar Site): Needs to be bold. Dark bg with light text works best. */
-    --btn-primary-bg: #111827; /* Very dark gray/almost black */
-    --btn-primary-text: #FCD34D; /* Bright yellow/gold accent text for pop */
-    --btn-primary-border: #111827;
+    --btn-primary-bg: #000000; /* Pure Black for maximum pop */
+    --btn-primary-text: #FFD700; /* Bright Gold text */
+    --btn-primary-border: #000000;
 
-        /* Secondary Button (Seguir no X): Needs a clear outline. */
+    /* Secondary Button (Seguir no X): Needs a clear outline. */
+    --btn-secondary-bg: transparent;
+    --btn-secondary-text: #000000; /* Pure Black text */
+    --btn-secondary-border: #000000; /* Pure Black border */
 
-        --btn-secondary-bg: transparent;
-
-        --btn-secondary-text: #1f2937; /* Dark text */
-
-        --btn-secondary-border: #d1d5db; /* Visible gray border */
-
-    }
-
-    
+    /* Hover States for Light Mode (Optional but recommended) */
+    --btn-primary-hover-bg: #333333;
+    --btn-secondary-hover-bg: rgba(0,0,0,0.05);
+}
 
     /* Light Theme - Card Button Overrides for Contrast */
 
@@ -226,39 +224,22 @@ img {
     
 
     [data-theme="light"] .card-final-btn-primary:hover {
+    background: var(--btn-primary-hover-bg) !important;
+    color: var(--btn-primary-text) !important; /* Keep original text color or adjust if needed */
+    border-color: var(--btn-primary-hover-bg) !important;
+}
 
-        background: #253447 !important; /* Slightly lighter dark gray for hover */
+[data-theme="light"] .card-final-btn-secondary {
+    background: var(--btn-secondary-bg) !important;
+    color: var(--btn-secondary-text) !important;
+    border-color: var(--btn-secondary-border) !important;
+}
 
-        color: #FFEA9F !important; /* Slightly lighter gold for hover */
-
-        border-color: #253447 !important;
-
-    }
-
-    
-
-    [data-theme="light"] .card-final-btn-secondary {
-
-        background: var(--btn-secondary-bg) !important;
-
-        color: var(--btn-secondary-text) !important;
-
-        border-color: var(--btn-secondary-border) !important;
-
-    }
-
-    
-
-    [data-theme="light"] .card-final-btn-secondary:hover {
-
-        background: #e0e4e8 !important; /* Light gray for hover */
-
-        color: #111827 !important; /* Dark text for hover */
-
-        border-color: #c1c5cb !important; /* Slightly darker border for hover */
-
-    }
-
+[data-theme="light"] .card-final-btn-secondary:hover {
+    background: var(--btn-secondary-hover-bg) !important;
+    color: var(--btn-secondary-text) !important; /* Keep original text color or adjust if needed */
+    border-color: var(--btn-secondary-border) !important; /* Keep original border or adjust if needed */
+}
     
 
     /* Base body background using the new variable */
@@ -618,7 +599,7 @@ section {
 }
 
 .card-final-description {
-    color: var(--text-secondary);
+    color: var(--text-muted);
 }
 
 .card-final-btn-primary {
