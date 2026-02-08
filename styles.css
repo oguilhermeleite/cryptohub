@@ -4909,24 +4909,36 @@ select {
 }
 
 
+
 
-
-/* Force the Google-fetched logo to fit perfectly */
-.kryptera-logo-fix {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important; /* Expands image to cover edges */
-    border-radius: 50% !important;
-    display: block !important;
-    margin: 0 !important;
-    padding: 0 !important;
+/* 1. Image Styling */
+.kryptera-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures logo isn't cut off */
+    border-radius: 50%;
 }
 
-/* Double-check parent container has no padding */
-#p2p .card:first-child .card-icon {
-    padding: 0 !important;
-    overflow: hidden;
+/* 2. Fallback Icon Styling (Gold Shield) */
+.kryptera-fallback-icon {
+    font-size: 40px; /* Big and bold */
+    color: #FFD700;  /* Gold color matching their brand vibe */
+    width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+}
+
+/* 3. Container Fix */
+.kryptera-icon-container {
+    width: 60px; /* Fixed size for consistency */
+    height: 60px;
+    padding: 5px; /* Slight padding so logo doesn't touch edges */
+    background: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
