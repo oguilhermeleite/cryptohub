@@ -2427,6 +2427,15 @@ section::-webkit-scrollbar,
     -webkit-backface-visibility: hidden;
 }
 
+.platform-icon-shield {
+    font-size: 40px; /* Adjust size to fill the circle nicely */
+    color: #FFD700;  /* Gold color (like the Kryptera emoji) */
+    /* Optional Gradient for a more premium look */
+    /* background: linear-gradient(45deg, #FFD700, #FFA500); */
+    /* -webkit-background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
+}
+
 .platform-logo img.loaded {
     opacity: 1;
 }
