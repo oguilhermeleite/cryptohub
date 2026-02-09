@@ -1335,5 +1335,47 @@ html {
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   LIGHT MODE BUTTON VISIBILITY FIX
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* Light mode button fixes - ensure visibility on cards */
+[data-theme="light"] .platform-card button,
+[data-theme="light"] .platform-card a.button,
+[data-theme="light"] .platform-card .card-btn-primary,
+[data-theme="light"] .platform-card .card-btn-secondary,
+[data-theme="light"] .featured-card button,
+[data-theme="light"] .featured-card a.button,
+[data-theme="light"] .featured-card .card-btn-primary,
+[data-theme="light"] .featured-card .card-btn-secondary {
+    background: #FF6B35 !important;
+    color: #FFFFFF !important;
+    border: 2px solid #FF6B35 !important;
+}
+
+[data-theme="light"] .platform-card button:hover,
+[data-theme="light"] .platform-card a.button:hover,
+[data-theme="light"] .platform-card .card-btn-primary:hover,
+[data-theme="light"] .platform-card .card-btn-secondary:hover,
+[data-theme="light"] .featured-card button:hover,
+[data-theme="light"] .featured-card a.button:hover,
+[data-theme="light"] .featured-card .card-btn-primary:hover,
+[data-theme="light"] .featured-card .card-btn-secondary:hover {
+    background: #E85A28 !important;
+    border-color: #E85A28 !important;
+}
+
+/* Ensure text is readable on cards */
+[data-theme="light"] .platform-card {
+    color: #000000;
+}
+
+[data-theme="light"] .platform-card h3,
+[data-theme="light"] .platform-card p,
+[data-theme="light"] .featured-card h3,
+[data-theme="light"] .featured-card p {
+    color: #1a1a1a !important;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    END OF PROFESSIONAL REFINED DESIGN
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
