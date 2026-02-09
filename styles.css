@@ -4431,6 +4431,7 @@ a:focus,
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-fill-color: transparent;
 }
 
 /* ============================================
@@ -5170,4 +5171,36 @@ select {
     margin: 0 !important;
     display: block;
 }
+/* ========================================= */
+/* FORCED LIGHT MODE BUTTON FIX (NUCLEAR)    */
+/* ========================================= */
 
+/* Force Primary Button (Visitar Site) to be BLACK with GOLD text in Light Mode */
+[data-theme="light"] .card-final-btn-primary,
+[data-theme="light"] .featured-button-primary {
+    background-color: #000000 !important;
+    color: #FFD700 !important; /* Gold text */
+    border: 1px solid #000000 !important;
+}
+
+/* Force Secondary Button (Seguir no X) to be TRANSPARENT with BLACK text/border */
+[data-theme="light"] .card-final-btn-secondary,
+[data-theme="light"] .featured-button-secondary {
+    background-color: transparent !important;
+    color: #000000 !important; /* Black text */
+    border: 1px solid #000000 !important;
+}
+
+/* Add hover effects for these specific overrides */
+[data-theme="light"] .card-final-btn-primary:hover,
+[data-theme="light"] .featured-button-primary:hover {
+    background-color: #333333 !important; /* Dark grey hover */
+    transform: translateY(-2px);
+}
+
+[data-theme="light"] .card-final-btn-secondary:hover,
+[data-theme="light"] .featured-button-secondary:hover {
+    background-color: rgba(0,0,0,0.1) !important; /* Light grey tint hover */
+    transform: translateY(-2px);
+}
+/* ========================================= */
