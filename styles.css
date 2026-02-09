@@ -4347,7 +4347,7 @@ a:focus,
 }
 
 .category-card p {
-    font-size: 1rem;
+    font-size: 1.0rem;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.7);
 }
@@ -5235,4 +5235,38 @@ select {
 [data-theme="light"] .card:not(.featured) .btn-primary:hover {
     filter: brightness(0.9);
     box-shadow: 0 4px 10px rgba(0, 255, 163, 0.4);
+}
+/* ============================================================ */
+/* LIGHT MODE FIX: MAKE BUTTONS SOLID & VISIBLE                 */
+/* ============================================================ */
+
+/* 1. PRIMARY BUTTON (Visitar Site) -> FILL IT WITH COLOR */
+[data-theme="light"] .card:not(.featured) .btn-primary,
+[data-theme="light"] .platform-card:not(.featured) .btn-primary {
+    /* Make the button look like a solid block */
+    background-color: #00ffa3 !important; /* REPLACE with exact Brand Green */
+    color: #000000 !important; /* Black text for contrast */
+    border: 1px solid #00ffa3 !important;
+    
+    /* Box Shadow to give it "height" / 3D feel */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    opacity: 1 !important;
+}
+
+/* 2. SECONDARY BUTTON (Seguir no X) -> THICK VISIBLE OUTLINE */
+[data-theme="light"] .card:not(.featured) .btn-secondary,
+[data-theme="light"] .platform-card:not(.featured) .btn-secondary {
+    background-color: transparent !important;
+    /* Visible border defining the button shape */
+    border: 2px solid #00ffa3 !important; /* Brand Green Border */
+    color: #005f3d !important; /* Darker green text for readability */
+    
+    /* Ensure shape is visible */
+    box-shadow: none !important;
+}
+
+/* Hover Effects to confirm it's clickable */
+[data-theme="light"] .card:not(.featured) .btn-primary:hover {
+    background-color: #00d488 !important; /* Slightly darker green */
+    transform: translateY(-2px);
 }
