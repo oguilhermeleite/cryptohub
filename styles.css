@@ -193,20 +193,21 @@ img {
     --shadow-button: 0 4px 6px -1px rgba(59, 130, 246, 0.1), 0 2px 4px -2px rgba(59, 130, 246, 0.06);
     --shadow-button-hover: 0 10px 15px -3px rgba(59, 130, 246, 0.1), 0 4px 6px -4px rgba(59, 130, 246, 0.08);
 
-    /* --- CRITICAL: NEW BUTTON VARIABLES FOR LIGHT MODE --- */
-    /* Primary Button (Visitar Site): Needs to be bold. Dark bg with light text works best. */
-    --btn-primary-bg: #000000; /* Pure Black for maximum pop */
-    --btn-primary-text: #FFD700; /* Bright Gold text */
-    --btn-primary-border: #000000;
+    /* --- FORCE HIGH CONTRAST BUTTONS FOR LIGHT MODE --- */
 
-    /* Secondary Button (Seguir no X): Needs a clear outline. */
-    --btn-secondary-bg: transparent;
-    --btn-secondary-text: #000000; /* Pure Black text */
-    --btn-secondary-border: #000000; /* Pure Black border */
+    /* Primary Button (Visitar Site) -> Solid Black BG + Gold Text */
+    --btn-primary-bg: #000000 !important;
+    --btn-primary-text: #FFD700 !important; /* Gold text pops on black */
+    --btn-primary-border: #000000 !important;
 
-    /* Hover States for Light Mode (Optional but recommended) */
-    --btn-primary-hover-bg: #333333;
-    --btn-secondary-hover-bg: rgba(0,0,0,0.05);
+    /* Secondary Button (Seguir no X) -> Transparent BG + Solid Black Outline */
+    --btn-secondary-bg: transparent !important;
+    --btn-secondary-text: #000000 !important; /* Black text */
+    --btn-secondary-border: #000000 !important; /* Solid Black border */
+
+    /* Hover States */
+    --btn-primary-hover-bg: #333333; /* Dark Gray on hover */
+    --btn-secondary-hover-bg: rgba(0,0,0,0.1); /* Slight shadow on hover */
 }
 
 
@@ -2582,20 +2583,25 @@ section::-webkit-scrollbar,
 }
 
 [data-theme="light"] .card-btn-primary {
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-    color: #0f0f0f;
+    background: var(--btn-primary-bg) !important;
+    color: var(--btn-primary-text) !important;
+    border: 1px solid var(--btn-primary-border) !important; /* Adding border for consistency */
     font-weight: 800;
 }
 
+[data-theme="light"] .card-btn-primary:hover {
+    background: var(--btn-primary-hover-bg) !important; /* Apply hover background from var */
+}
+
 [data-theme="light"] .card-btn-secondary {
-    background: transparent;
-    border: 2px solid rgba(180, 160, 140, 0.28);
-    color: #2a2a2a;
+    background: var(--btn-secondary-bg) !important;
+    color: var(--btn-secondary-text) !important;
+    border: 1px solid var(--btn-secondary-border) !important; /* Changed to 1px for consistency with primary border */
 }
 
 [data-theme="light"] .card-btn-secondary:hover {
-    background: rgba(180, 160, 140, 0.08);
-    border-color: rgba(180, 160, 140, 0.38);
+    background: var(--btn-secondary-hover-bg) !important;
+    border-color: var(--btn-secondary-border) !important; /* Use solid black border on hover */
 }
 
 /* Hide original card styling that's now on card-front */
