@@ -342,7 +342,7 @@ section {
 
 .pro-button, .connect-button {
     background: var(--accent-gradient);
-    color: var(--text-primary);
+    color: var(--text-main);
     box-shadow: var(--shadow-button);
 }
 
@@ -5204,3 +5204,35 @@ select {
     transform: translateY(-2px);
 }
 /* ========================================= */
+
+/* ====================================================== */
+/* LIGHT MODE BUTTON FIX: MATCH TITLE COLOR PALETTE       */
+/* ====================================================== */
+
+/* 1. Primary Button (Visitar Site) - Standard Cards */
+/* Exclude featured card if it has a specific class like .featured-card, otherwise apply to all */
+[data-theme="light"] .card:not(.featured) .btn-primary,
+[data-theme="light"] .platform-card:not(.featured) .btn-primary {
+    /* Use the site's main brand color (Green/Teal) */
+    /* If --primary-color exists, use it. If not, use the hex code for the title color */
+    background-color: #00ffa3 !important; /* Adjust this HEX to match your exact title color */
+    color: #000000 !important; /* Black text for contrast on neon green */
+    border: 1px solid #00ffa3 !important;
+    font-weight: 700 !important;
+}
+
+/* 2. Secondary Button (Seguir no X) - Standard Cards */
+[data-theme="light"] .card:not(.featured) .btn-secondary,
+[data-theme="light"] .platform-card:not(.featured) .btn-secondary {
+    background-color: transparent !important;
+    /* Outline color matches the title color */
+    color: #008f5d !important; /* Slightly darker green for text readability on white */
+    border: 2px solid #00ffa3 !important;
+    font-weight: 600 !important;
+}
+
+/* Hover effects */
+[data-theme="light"] .card:not(.featured) .btn-primary:hover {
+    filter: brightness(0.9);
+    box-shadow: 0 4px 10px rgba(0, 255, 163, 0.4);
+}
