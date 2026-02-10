@@ -33,8 +33,7 @@
     <link rel="stylesheet" href="featured-golden.css?v=20250110-golden">
     <!-- MOUSE FIX: Critical z-index and interaction fixes -->
     <link rel="stylesheet" href="mouse-fix-critical.css?v=20250115">
-    <!-- CHATBOT: Assistente inteligente de suporte -->
-    <link rel="stylesheet" href="css/chatbot.css?v=20250126-mobile">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- SCROLLBAR FIX: Only hide horizontal scrollbars on card containers -->
@@ -161,11 +160,7 @@
             <!-- Right: Language Buttons and Mobile Menu Toggle -->
             <div class="header-right-group">
                 <div class="header-controls">
-                    <div class="desktop-theme-toggle">
-                        <button id="desktopThemeToggle" class="theme-btn" aria-label="Alternar Tema">
-                            <i class="fa-solid fa-sun"></i>
-                        </button>
-                    </div>
+
                             <div class="language-selector">
                                 <button class="lang-btn active" data-lang-switch="pt"><img src="https://flagcdn.com/w40/br.png" alt="Português" class="lang-flag"></button>
                                 <button class="lang-btn" data-lang-switch="en"><img src="https://flagcdn.com/w40/us.png" alt="English" class="lang-flag"></button>
@@ -189,11 +184,7 @@
                 <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">&times;</button>
             </div>
             <nav class="mobile-menu-nav">
-                <div class="mobile-theme-toggle">
-                    <button id="mobileThemeToggle" class="theme-btn" aria-label="Alternar Tema">
-                        <i class="fa-solid fa-sun"></i>
-                    </button>
-                </div>
+
                 <div class="mobile-menu-separator"></div>
                         <div class="mobile-language-selector">
                             <button class="lang-btn active" data-lang-switch="pt"><img src="https://flagcdn.com/w40/br.png" alt="Português" class="lang-flag"></button>
@@ -1731,39 +1722,6 @@
         });
     </script>
 
-    <!-- CHATBOT: Assistente inteligente de suporte -->
-    <div id="chatbot-container" style="position: fixed !important; bottom: 0 !important; right: 0 !important; z-index: 999999 !important; pointer-events: none;">
-        <!-- Chatbot Toggle Button -->
-        <button class="chatbot-toggle" id="chatbotToggle" aria-label="Abrir chat" style="position: fixed !important; bottom: 24px !important; right: 24px !important; z-index: 999999 !important; pointer-events: auto !important;">
-            <span class="chatbot-toggle-icon">💬</span>
-            <span class="chatbot-badge" id="chatbotBadge">1</span>
-        </button>
 
-        <!-- Chatbot Window -->
-        <div class="chatbot-window" id="chatbotWindow" style="position: fixed !important; bottom: 100px !important; right: 24px !important; z-index: 999998 !important; pointer-events: auto !important;">
-            <div class="chatbot-header">
-                <div class="chatbot-avatar">🤖</div>
-                <div class="chatbot-info">
-                    <h3 class="chatbot-name">Crypto Aggregator - Suporte</h3>
-                    <span class="chatbot-status">Online</span>
-                </div>
-                <button class="chatbot-close" id="chatbotClose" aria-label="Fechar chat">×</button>
-            </div>
-
-            <div class="chatbot-messages" id="chatbotMessages">
-                <!-- Messages will be inserted here -->
-            </div>
-
-            <div class="chatbot-input-area">
-                <div class="chatbot-input-container">
-                    <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Digite sua mensagem..." maxlength="200">
-                    <button class="chatbot-send" id="chatbotSend" aria-label="Enviar">
-                        <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="js/chatbot.js?v=20250126-v3"></script>
 </body>
 </html>

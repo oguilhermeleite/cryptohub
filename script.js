@@ -632,7 +632,6 @@ class CryptoAggregator {
     }
 
     init() {
-        this.setupThemeToggle();
         this.setupLanguageToggle();
         this.setupMobileMenu();
         this.setupSmoothScrolling();
@@ -710,96 +709,7 @@ class CryptoAggregator {
         localStorage.setItem('cryptoaggregator_language', lang);
     }
 
-    // Theme Management
-    setupThemeToggle() {
-        const desktopThemeToggle = document.getElementById('desktopThemeToggle');
-        const mobileThemeToggle = document.getElementById('mobileThemeToggle');
-        const currentTheme = this.getStoredTheme() || 'dark';
 
-        console.log('Theme toggle setup:', {
-            desktop: !!desktopThemeToggle,
-            mobile: !!mobileThemeToggle,
-            currentTheme
-        });
-
-        // Set initial theme
-        this.setTheme(currentTheme);
-
-        // Theme switching function
-        const toggleTheme = () => {
-            const newTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-            console.log('Switching theme from', document.documentElement.getAttribute('data-theme'), 'to', newTheme);
-            this.setTheme(newTheme);
-            this.storeTheme(newTheme);
-            this.trackThemeSwitch(newTheme);
-        };
-
-        // Desktop theme toggle in header
-        if (desktopThemeToggle) {
-            console.log('Setting up desktop theme toggle');
-            desktopThemeToggle.addEventListener('click', toggleTheme);
-        }
-
-        // Mobile theme toggle in hamburger menu
-        if (mobileThemeToggle) {
-            console.log('Setting up mobile theme toggle');
-            mobileThemeToggle.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                console.log('Mobile theme toggle clicked');
-                toggleTheme();
-            });
-        }
-    }
-
-    setTheme(theme) {
-        console.log('Setting theme to:', theme);
-        document.documentElement.setAttribute('data-theme', theme);
-
-        // Update both desktop and mobile theme button appearance
-        const desktopThemeToggle = document.getElementById('desktopThemeToggle');
-        const mobileThemeToggle = document.getElementById('mobileThemeToggle');
-
-        const ariaLabel = theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme';
-
-        const currentThemeIconClass = theme === 'light' ? 'fa-sun' : 'fa-moon';
-        const newThemeIconClass = theme === 'light' ? 'fa-moon' : 'fa-sun';
-
-        if (desktopThemeToggle) {
-            desktopThemeToggle.setAttribute('aria-label', ariaLabel);
-            const icon = desktopThemeToggle.querySelector('i');
-            if (icon) {
-                icon.classList.remove('fa-sun', 'fa-moon');
-                icon.classList.add(newThemeIconClass);
-            }
-        }
-
-        if (mobileThemeToggle) {
-            mobileThemeToggle.setAttribute('aria-label', ariaLabel);
-            const icon = mobileThemeToggle.querySelector('i');
-            if (icon) {
-                icon.classList.remove('fa-sun', 'fa-moon');
-                icon.classList.add(newThemeIconClass);
-            }
-        }
-
-        console.log('Theme applied successfully:', theme);
-    }
-
-    getStoredTheme() {
-        return localStorage.getItem('cryptoaggregator_theme');
-    }
-
-    storeTheme(theme) {
-        localStorage.setItem('cryptoaggregator_theme', theme);
-    }
-
-    trackThemeSwitch(theme) {
-        console.log('Theme switch tracked:', {
-            theme: theme,
-            timestamp: new Date().toISOString()
-        });
-    }
 
     // Mobile Menu
     setupMobileMenu() {
