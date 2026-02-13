@@ -1575,18 +1575,14 @@
                 <div class="footer-newsletter">
                     <h4 data-lang="footer-newsletter-title">Fique Atualizado</h4>
                     <p class="newsletter-description" data-lang="footer-newsletter-desc">Receba as melhores oportunidades e notícias do mundo cripto.</p>
-                    <form class="newsletter-form" id="newsletterForm" action="https://formsubmit.co/thecryptoaggregator@gmail.com" method="POST">
-                        <input type="email"
-                               name="email"
-                               class="newsletter-input"
-                               placeholder="Seu melhor e-mail"
-                               data-lang-placeholder="footer-newsletter-placeholder"
-                               required
-                               aria-label="Email para newsletter">
+                    <form action="https://formsubmit.co/thecryptoaggregator@gmail.com" method="POST" class="newsletter-form">
                         <input type="hidden" name="_captcha" value="false">
-                        <button type="submit" class="newsletter-button" data-lang="footer-newsletter-button">
-                            Inscrever-se
-                        </button>
+                        
+                        <input type="hidden" name="_next" value="https://kryptera.io/">
+                        
+                        <input type="email" name="email" placeholder="Seu melhor e-mail" required class="newsletter-input">
+                        
+                        <button type="submit" class="newsletter-btn">Inscrever-se</button>
                     </form>
                     <p class="newsletter-success hidden" id="newsletterSuccess">✓ Obrigado por se inscrever!</p>
                 </div>
