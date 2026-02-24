@@ -1,61 +1,39 @@
 
 /* ========================================= */
-/* NEWSLETTER FORM HANDLING (AJAX)           */
+/* BULLETPROOF NEWSLETTER FORM (IFRAME)      */
 /* ========================================= */
 const newsletterForm = document.getElementById('newsletter-form');
 const formMessage = document.getElementById('form-message');
+window.submitted = false; // Global flag for iframe tracking
+
+// This function is called by the iframe's onload event in the HTML
+window.handleFormSuccess = function() {
+    const submitBtn = newsletterForm.querySelector('button[type="submit"]');
+    
+    // Success feedback
+    formMessage.style.color = '#00ffa3'; // Neon Green
+    formMessage.innerHTML = 'Inscrito com sucesso! 🚀';
+    
+    // Reset form and button
+    newsletterForm.reset();
+    submitBtn.innerText = 'Inscrever-se';
+    submitBtn.disabled = false;
+    window.submitted = false; // reset flag
+
+    // Clear message after 5 seconds
+    setTimeout(() => {
+        formMessage.innerHTML = '';
+    }, 5000);
+}
 
 if (newsletterForm) {
-    // Remove the old event listener by replacing the logic, or update the existing one:
-    newsletterForm.onsubmit = function(e) {
-        e.preventDefault(); // STOP page reload
-
-        const emailInput = this.querySelector('input[name="email"]').value;
+    newsletterForm.addEventListener('submit', function() {
+        window.submitted = true; // Set flag so iframe onload triggers success
         const submitBtn = this.querySelector('button[type="submit"]');
-        const originalBtnText = submitBtn.innerText;
-
-        // Visual feedback
+        
+        // Visual feedback immediately upon click
         submitBtn.innerText = 'Enviando...';
         submitBtn.disabled = true;
-
-        // USE THE SPECIFIC /ajax/ ENDPOINT
-        fetch('https://formsubmit.co/ajax/thecryptoaggregator@gmail.com', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify({
-                email: emailInput,
-                _subject: "Novo Lead Capturado!",
-                _captcha: "false"
-            })
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                // SUCCESS
-                formMessage.style.color = '#00ffa3'; // Neon Green
-                formMessage.innerHTML = 'Inscrito com sucesso! 🚀';
-                newsletterForm.reset(); // Clear input
-            } else {
-                throw new Error('Erro no servidor');
-            }
-        })
-        .catch(error => {
-            // ERROR
-            formMessage.style.color = '#ff4d4d'; // Red
-            formMessage.innerHTML = 'Erro de comunicação. Tente novamente.';
-        })
-        .finally(() => {
-            // Restore button
-            submitBtn.innerText = originalBtnText;
-            submitBtn.disabled = false;
-            
-            // Clear message after 5 seconds
-            setTimeout(() => {
-                formMessage.innerHTML = '';
-            }, 5000);
-        });
-    };
+        formMessage.innerHTML = ''; // clear previous messages
+    });
 }
