@@ -6808,7 +6808,7 @@ html {
   margin: 0 0 28px;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   letter-spacing: 0.2px;
 }
@@ -7000,7 +7000,7 @@ html {
   .card-final-description {
     font-size: 13px;
     margin-bottom: 24px;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 5;
   }
 
   .card-final-btn {
@@ -10333,7 +10333,7 @@ a {
     opacity: 0.95 !important;
     visibility: visible !important;
     display: -webkit-box !important;
-    -webkit-line-clamp: 4 !important;
+    -webkit-line-clamp: 5 !important;
     -webkit-box-orient: vertical !important;
 }
 /* CRITICAL: Card backgrounds use BRAND CYAN COLOR in light theme */
