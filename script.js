@@ -37,3 +37,21 @@ if (newsletterForm) {
         formMessage.innerHTML = ''; // clear previous messages
     });
 }
+
+/* Language Dropdown Toggle */
+const langBtn = document.getElementById('lang-globe-btn');
+const langDropdown = document.getElementById('lang-dropdown');
+
+if (langBtn && langDropdown) {
+    langBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        langDropdown.classList.toggle('hidden');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!langDropdown.classList.contains('hidden') && !e.target.closest('.lang-container')) {
+            langDropdown.classList.add('hidden');
+        }
+    });
+}
