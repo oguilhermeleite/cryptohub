@@ -55,3 +55,53 @@ if (langBtn && langDropdown) {
         }
     });
 }
+
+/* ========================================= */
+/* COPY COUPON LOGIC & TOAST NOTIFICATION    */
+/* ========================================= */
+const coupons = document.querySelectorAll('.clickable-coupon');
+const toast = document.getElementById('toast-notification');
+let toastTimeout;
+
+if (coupons.length > 0 && toast) {
+    coupons.forEach(coupon => {
+        coupon.addEventListener('click', function(e) {
+            e.preventDefault();
+            const codeToCopy = this.getAttribute('data-code');
+
+            // Copy to clipboard
+            navigator.clipboard.writeText(codeToCopy).then(() => {
+                // Show toast
+                showToast(`Cupom "${codeToCopy}" copiado! 🚀`);
+            }).catch(err => {
+                console.error('Falha ao copiar:', err);
+            });
+        });
+    });
+}
+
+function showToast(message) {
+    const toastMessage = toast.querySelector('.toast-message');
+    if (toastMessage) {
+        toastMessage.textContent = message;
+
+        // Clear existing timeout if user clicks multiple times
+        if (toastTimeout) clearTimeout(toastTimeout);
+
+        // Show toast
+        toast.classList.remove('hidden');
+        // Small delay to ensure transition works if it was display:none
+        setTimeout(() => {
+            toast.classList.add('show');
+        }, 10);
+
+        // Hide after 3 seconds
+        toastTimeout = setTimeout(() => {
+            toast.classList.remove('show');
+            // Add hidden class back after transition ends
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 400);
+        }, 3000);
+    }
+}
