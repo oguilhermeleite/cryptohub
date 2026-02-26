@@ -11251,28 +11251,4 @@ body > div:empty:not([id]):not([class]) {
     font-weight: 500;
 }
 
-/* Minimalist KYC Badge Styles */
-.kyc-badge {
-    display: inline-block;
-    padding: 4px 8px;
-    border-radius: 4px; /* Slight curve, not a full pill, for a tech look */
-    font-size: 0.65rem;
-    font-weight: 700;
-    margin-top: 5px;
-    margin-bottom: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-}
-
-.kyc-green {
-    background: rgba(0, 255, 163, 0.08);
-    color: #00ffa3; /* Neon Green */
-    border: 1px solid rgba(0, 255, 163, 0.25);
-}
-
-.kyc-red {
-    background: rgba(255, 77, 77, 0.08);
-    color: #ff4d4d; /* Soft Red */
-    border: 1px solid rgba(255, 77, 77, 0.25);
-}
 
