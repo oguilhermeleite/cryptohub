@@ -545,13 +545,29 @@ section {
 }
 
 .premium-cta-button {
-    background: var(--accent-gradient);
-    color: var(--text-main);
-    box-shadow: var(--shadow-button);
+    background: rgba(255, 255, 255, 0.03); /* Translucent background */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    color: #00ffa3; /* Brand highlight color (neon green) */
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .premium-cta-button:hover {
-    box-shadow: var(--shadow-button-hover);
+    background: rgba(0, 255, 163, 0.1); /* Subtle neon green tint */
+    border-color: rgba(0, 255, 163, 0.5); /* Illuminated border */
+    color: #00ffa3;
+    box-shadow: 0 0 20px rgba(0, 255, 163, 0.2), inset 0 0 10px rgba(0, 255, 163, 0.1);
+    transform: translateY(-2px);
 }
 
 .feature-text {
@@ -583,13 +599,23 @@ section {
 }
 
 .card-final-btn-primary {
-    background: var(--accent-gradient);
-    color: var(--text-main);
-    box-shadow: var(--shadow-button);
+    background: rgba(255, 255, 255, 0.03); /* Translucent background */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    color: #00ffa3; /* Brand highlight color (neon green) */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
 }
 
 .card-final-btn-primary:hover {
-    box-shadow: var(--shadow-button-hover);
+    background: rgba(0, 255, 163, 0.1); /* Subtle neon green tint */
+    border-color: rgba(0, 255, 163, 0.5); /* Illuminated border */
+    color: #00ffa3;
+    box-shadow: 0 0 15px rgba(0, 255, 163, 0.2), inset 0 0 10px rgba(0, 255, 163, 0.1);
+    transform: translateY(-2px);
 }
 
 .card-final-btn-secondary {
@@ -2553,15 +2579,17 @@ section::-webkit-scrollbar,
 
 /* Button Styles for Card Back */
 .card-btn-primary {
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-    color: white;
+    background: rgba(255, 255, 255, 0.03); /* Translucent background */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    color: #00ffa3; /* Brand highlight color (neon green) */
     padding: 18px;
     border-radius: 12px;
     font-weight: 600;
     font-size: 17px;
     text-align: center;
     text-decoration: none;
-    border: none;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
@@ -2571,8 +2599,11 @@ section::-webkit-scrollbar,
 }
 
 .card-btn-primary:hover {
+    background: rgba(0, 255, 163, 0.1); /* Subtle neon green tint */
+    border-color: rgba(0, 255, 163, 0.5); /* Illuminated border */
+    color: #00ffa3;
+    box-shadow: 0 0 15px rgba(0, 255, 163, 0.2), inset 0 0 10px rgba(0, 255, 163, 0.1);
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
 }
 
 .card-btn-secondary {
