@@ -273,14 +273,16 @@ section {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 24px;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    will-change: transform, box-shadow; /* Performance optimization */
     box-shadow: var(--card-shadow);
 }
 
 .platform-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--border-accent-hover);
-    box-shadow: var(--card-shadow); /* Keep the subtle shadow on hover */
+    transform: translateY(-5px) scale(1.01);
+    border-color: rgba(0, 255, 163, 0.2);
+    box-shadow: 0 15px 35px rgba(0, 255, 163, 0.1), 0 0 0 1px rgba(0, 255, 163, 0.2); 
+    z-index: 10;
 }
 
 /* Light Theme overrides for elements that need specific adjustments */
@@ -498,12 +500,15 @@ section {
     background: var(--bg-card);
     border: 2px solid var(--card-border);
     box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    will-change: transform, box-shadow; /* Performance optimization */
 }
 
 .premium-hero-banner:hover {
     transform: translateY(-8px) scale(1.01);
-    border-color: var(--border-accent-hover);
-    box-shadow: var(--card-shadow);
+    border-color: rgba(0, 255, 163, 0.2);
+    box-shadow: 0 20px 45px rgba(0, 255, 163, 0.15), 0 0 0 1px rgba(0, 255, 163, 0.2); 
+    z-index: 10;
 }
 
 .premium-hero-logo {
@@ -558,12 +563,15 @@ section {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
     box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    will-change: transform, box-shadow; /* Performance optimization */
 }
 
 .platform-card-final:hover {
-    transform: translateY(-5px);
-    border-color: var(--border-accent-hover);
-    box-shadow: var(--card-shadow);
+    transform: translateY(-5px) scale(1.01);
+    border-color: rgba(0, 255, 163, 0.2);
+    box-shadow: 0 15px 35px rgba(0, 255, 163, 0.1), 0 0 0 1px rgba(0, 255, 163, 0.2); 
+    z-index: 10;
 }
 
 .card-final-title {
@@ -613,12 +621,15 @@ section {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
     box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    will-change: transform, box-shadow; /* Performance optimization */
 }
 
 .security-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--border-accent-hover);
-    box-shadow: var(--card-shadow);
+    transform: translateY(-5px) scale(1.01);
+    border-color: rgba(0, 255, 163, 0.2);
+    box-shadow: 0 15px 35px rgba(0, 255, 163, 0.1), 0 0 0 1px rgba(0, 255, 163, 0.2); 
+    z-index: 10;
 }
 
 .security-card h3 {
@@ -655,12 +666,15 @@ section {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
     box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    will-change: transform, box-shadow; /* Performance optimization */
 }
 
 .category-info-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--border-accent-hover);
-    box-shadow: var(--card-shadow);
+    transform: translateY(-5px) scale(1.01);
+    border-color: rgba(0, 255, 163, 0.2);
+    box-shadow: 0 15px 35px rgba(0, 255, 163, 0.1), 0 0 0 1px rgba(0, 255, 163, 0.2); 
+    z-index: 10;
 }
 
 .category-info-card h3 {
