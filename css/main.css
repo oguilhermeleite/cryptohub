@@ -11351,84 +11351,95 @@ body > div:empty:not([id]):not([class]) {
         font-size: 0.9rem !important;
     }
 
-    /* 5. COMPACT FEATURED CARD (DESTAQUE) */
-    .premium-hero-banner {
-        width: 100% !important;
+    /* 5. AGGRESSIVE COMPACT FEATURED CARD (DESTAQUE) */
+    .featured-compact-mobile {
+        padding: 15px !important;
+        gap: 10px !important;
         min-height: auto !important;
-        padding: 20px 15px !important; /* Reduce internal padding */
-        gap: 15px !important;
-        border-radius: 20px !important;
+        width: 100% !important;
+        border-radius: 16px !important;
     }
-
-    .premium-hero-content {
+    
+    .featured-compact-mobile .premium-hero-content {
         flex-direction: column !important;
-        gap: 15px !important;
+        gap: 10px !important;
         text-align: center !important;
     }
 
-    /* Shrink the top 'Parceiro Oficial' badge */
-    .featured-badge, .premium-partner-badge {
+    /* Shrink the top badge (Parceiro Oficial) */
+    .featured-compact-mobile .featured-badge {
         font-size: 0.65rem !important;
         padding: 4px 10px !important;
-        margin-bottom: 10px !important;
-        top: 10px !important;
-        right: 10px !important;
-    }
-
-    /* Shrink the featured logo */
-    .premium-hero-logo {
-        width: 70px !important;
-        height: 70px !important;
-        margin: 0 auto 10px !important;
-        padding: 10px !important;
-    }
-
-    .premium-hero-logo img {
-        max-width: 100% !important;
-        max-height: 100% !important;
-    }
-
-    /* Adjust featured typography */
-    .premium-hero-title {
-        font-size: 1.4rem !important;
         margin-bottom: 5px !important;
-        line-height: 1.2 !important;
+        width: auto !important;
+        display: inline-block !important;
+        position: static !important; /* Move it inside the flow for better spacing */
+        margin: 0 auto 10px !important;
     }
 
-    .premium-hero-subtitle, .premium-hero-description {
-        font-size: 0.85rem !important;
-        margin-bottom: 10px !important;
-        line-height: 1.4 !important;
+    /* Shrink Logo */
+    .featured-compact-mobile .premium-hero-logo {
+        width: 55px !important;
+        height: 55px !important;
+        margin: 0 auto 5px !important;
+        padding: 8px !important;
+    }
+
+    .featured-compact-mobile .premium-hero-logo img {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    /* Shrink Typography */
+    .featured-compact-mobile .premium-hero-title {
+        font-size: 1.25rem !important;
+        margin-bottom: 2px !important;
+        line-height: 1.1 !important;
     }
     
-    /* Compact the extra items (100% Seguro, Ultra Rápido, etc) */
-    .premium-hero-features, .feature-badge-container {
-        display: flex !important;
-        justify-content: center !important;
-        flex-wrap: wrap !important;
-        gap: 8px !important;
-        margin-top: 10px !important;
+    .featured-compact-mobile .premium-hero-subtitle,
+    .featured-compact-mobile .premium-hero-description {
+        font-size: 0.8rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 10px !important;
     }
 
-    .feature-badge {
-        padding: 6px 10px !important;
-        font-size: 0.75rem !important;
-        margin: 0 !important;
-    }
-
-    .premium-hero-buttons {
+    /* Compact Main Buttons */
+    .featured-compact-mobile .premium-hero-buttons {
         display: flex !important;
         flex-direction: column !important;
+        gap: 8px !important;
         width: 100% !important;
-        gap: 10px !important;
-        margin-top: 15px !important;
     }
 
-    .premium-cta-button, .featured-button-primary, .featured-button-secondary {
-        width: 100% !important;
+    .featured-compact-mobile .premium-cta-button,
+    .featured-compact-mobile .featured-button-secondary {
+        padding: 10px 12px !important;
+        font-size: 0.8rem !important;
         margin: 0 !important;
-        padding: 12px 15px !important;
-        font-size: 0.85rem !important;
+        width: 100% !important;
+    }
+
+    /* Place the extra perks (100% Seguro, Ultra Rápido) side-by-side */
+    .featured-compact-mobile .premium-hero-features {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        width: 100% !important;
+        margin-top: 10px !important;
+    }
+    
+    .featured-compact-mobile .feature-badge {
+        flex: 1 !important;
+        margin: 0 !important;
+        padding: 6px 4px !important;
+        font-size: 0.7rem !important;
+        white-space: nowrap !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
 }
 
