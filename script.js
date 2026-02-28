@@ -332,39 +332,54 @@ function showToast(message) {
         });
         
 /* ========================================= */
-/* DYNAMIC TRADINGVIEW TICKER INJECTION      */
+/* BULLETPROOF TRADINGVIEW TICKER (BOTTOM)   */
 /* ========================================= */
-document.addEventListener('DOMContentLoaded', function() {
-    const tickerContainer = document.querySelector('#tv-ticker-container .tradingview-widget-container__widget');
+window.addEventListener('load', function() {
+    // 1. Create the main container
+    const tvContainer = document.createElement('div');
+    tvContainer.className = 'tradingview-widget-container';
     
-    if (tickerContainer) {
-        const script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js';
-        script.async = true;
-        
-        // Configuration JSON
-        const config = {
-            "symbols": [
-                { "proName": "CRYPTO:BTCUSD", "title": "Bitcoin" },
-                { "proName": "CRYPTO:ETHUSD", "title": "Ethereum" },
-                { "proName": "CRYPTO:USDTUSD", "title": "Tether" },
-                { "proName": "CRYPTO:BNBUSD", "title": "BNB" },
-                { "proName": "CRYPTO:SOLUSD", "title": "Solana" },
-                { "proName": "CRYPTO:USDCUSD", "title": "USDC" },
-                { "proName": "CRYPTO:XRPUSD", "title": "XRP" },
-                { "proName": "CRYPTO:DOGEUSD", "title": "Dogecoin" },
-                { "proName": "CRYPTO:ADAUSD", "title": "Cardano" },
-                { "proName": "CRYPTO:AVAXUSD", "title": "Avalanche" }
-            ],
-            "showSymbolLogo": true,
-            "isTransparent": true,
-            "displayMode": "adaptive",
-            "colorTheme": "dark",
-            "locale": "br"
-        };
+    // Force it to be fixed at the bottom, above everything else
+    tvContainer.style.cssText = 'position: fixed; bottom: 0; left: 0; width: 100%; z-index: 999999; background: #1a1a1a; border-top: 1px solid rgba(0, 255, 163, 0.2);';
 
-        script.textContent = JSON.stringify(config);
-        tickerContainer.appendChild(script);
-    }
+    // 2. Create the inner widget div
+    const tvWidget = document.createElement('div');
+    tvWidget.className = 'tradingview-widget-container__widget';
+    tvContainer.appendChild(tvWidget);
+
+    // 3. Create the script tag
+    const tvScript = document.createElement('script');
+    tvScript.type = 'text/javascript';
+    tvScript.src = 'https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js';
+    tvScript.async = true;
+
+    // 4. Configuration JSON
+    const tvConfig = {
+        "symbols": [
+            { "proName": "CRYPTO:BTCUSD", "title": "Bitcoin" },
+            { "proName": "CRYPTO:ETHUSD", "title": "Ethereum" },
+            { "proName": "CRYPTO:USDTUSD", "title": "Tether" },
+            { "proName": "CRYPTO:BNBUSD", "title": "BNB" },
+            { "proName": "CRYPTO:SOLUSD", "title": "Solana" },
+            { "proName": "CRYPTO:USDCUSD", "title": "USDC" },
+            { "proName": "CRYPTO:XRPUSD", "title": "XRP" },
+            { "proName": "CRYPTO:DOGEUSD", "title": "Dogecoin" },
+            { "proName": "CRYPTO:ADAUSD", "title": "Cardano" },
+            { "proName": "CRYPTO:AVAXUSD", "title": "Avalanche" }
+        ],
+        "showSymbolLogo": true,
+        "isTransparent": true,
+        "displayMode": "adaptive",
+        "colorTheme": "dark",
+        "locale": "br"
+    };
+
+    tvScript.innerHTML = JSON.stringify(tvConfig);
+    tvContainer.appendChild(tvScript);
+
+    // 5. Append to body
+    document.body.appendChild(tvContainer);
+    
+    // 6. Add padding to the body so the footer doesn't cover site content
+    document.body.style.paddingBottom = '45px';
 });
