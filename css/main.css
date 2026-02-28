@@ -11340,12 +11340,15 @@ body > div:empty:not([id]):not([class]) {
 
     /* 4. SECTION HEADER COMPACTION */
     .section-header {
-        margin-bottom: 30px !important; /* Proper spacing before the cards start */
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 24px !important; /* Forced gap between Title and Subtitle */
+        margin-bottom: 30px !important; /* Space before the cards start */
     }
 
     .section-title, section h3.section-title {
         font-size: 1.5rem !important;
-        margin-bottom: 8px !important; /* Breathing room below the title */
+        margin-bottom: 0 !important; /* Using container gap for spacing */
         line-height: 1.2 !important;
     }
 
@@ -11353,8 +11356,8 @@ body > div:empty:not([id]):not([class]) {
         font-size: 0.9rem !important;
         line-height: 1.4 !important;
         margin-top: 0 !important;
-        margin-bottom: 0 !important; /* The container handles the bottom margin */
-        padding: 0 15px !important; /* Prevent touching screen edges */
+        margin-bottom: 0 !important;
+        padding: 0 15px !important;
     }
 
     /* 5. FINE-TUNED FEATURED CARD (DESTAQUE) */
