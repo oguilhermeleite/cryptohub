@@ -11253,3 +11253,102 @@ body > div:empty:not([id]):not([class]) {
 }
 
 
+
+/* ==========================================================================
+   MOBILE LAYOUT HARMONIZATION (Optimized for Compactness & Proportions)
+   Target: Fixes 'elastic' look, massive text, and disproportionate cards
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    /* 1. HERO SECTION COMPACTION */
+    .hero-section, .hero {
+        padding: 40px 0 !important;
+        min-height: auto !important;
+    }
+
+    .hero-title, .hero h1, h1.hero-title {
+        font-size: 2rem !important; 
+        line-height: 1.2 !important;
+        margin-bottom: 15px !important;
+        padding: 0 15px !important;
+    }
+
+    .hero-subtitle, .hero-description, .hero p {
+        font-size: 0.95rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 10px !important;
+        padding: 0 20px !important;
+    }
+
+    .hero-badge {
+        font-size: 0.7rem !important;
+        padding: 4px 12px !important;
+        margin-bottom: 15px !important;
+    }
+
+    /* 2. CARD PROPORTIONS (Fixing the 'elastic' tall look) */
+    .platform-card, .platform-card-final, .card, .security-card, .category-info-card {
+        padding: 20px 15px !important;
+        min-height: auto !important;
+        gap: 10px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        height: auto !important;
+    }
+    
+    .card-logo-container {
+        width: 60px !important;
+        height: 60px !important;
+        margin-bottom: 10px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .card-logo-container img {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        object-fit: contain !important;
+    }
+
+    .card-final-title, .card-title, .security-card h3 {
+        font-size: 1.2rem !important;
+        margin-bottom: 5px !important;
+    }
+
+    .card-final-description, .card-description, .card-desc, .security-card p {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 15px !important;
+    }
+
+    /* 3. BUTTON COMPACTION */
+    .btn-primary, .btn-secondary, .card-btn, .card-final-btn, .card-final-btn-primary, .card-final-btn-secondary, .cta-button {
+        padding: 10px 15px !important;
+        font-size: 0.85rem !important;
+        width: 100% !important;
+        margin-bottom: 8px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .card-final-buttons, .premium-hero-buttons {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+        width: 100% !important;
+    }
+
+    /* 4. SECTION HEADER COMPACTION */
+    .section-header {
+        margin-bottom: 2rem !important;
+    }
+
+    .section-title {
+        font-size: 1.5rem !important;
+    }
+
+    .section-subtitle {
+        font-size: 0.9rem !important;
+    }
+}
+
