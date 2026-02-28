@@ -907,7 +907,7 @@ img {
 /* Header Styles */
 .header {
     position: fixed;
-    top: 0;
+    top: 40px;
     left: 0;
     right: 0;
     background: var(--bg-header);
@@ -11198,12 +11198,6 @@ body > div:empty:not([id]):not([class]) {
 }
 
 /* Clickable Coupon Styles */
-/* TradingView Ticker Tape Adjustments */
-@media (max-width: 768px) {
-    .tradingview-widget-container {
-        margin-top: 52px !important;
-    }
-}
 
 .clickable-coupon {
     display: inline-flex;
