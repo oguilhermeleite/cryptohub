@@ -124,29 +124,8 @@
     </script>
 </head>
 <body>
-<div class="tradingview-widget-container" style="width: 100%; position: relative; z-index: 9999; background: #000;">
+<div class="tradingview-widget-container" id="tv-ticker-container" style="width: 100%; position: relative; z-index: 9999; background: #000; border-bottom: 1px solid rgba(255,255,255,0.05);">
   <div class="tradingview-widget-container__widget"></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-  {
-  "symbols": [
-    { "proName": "CRYPTO:BTCUSD", "title": "Bitcoin" },
-    { "proName": "CRYPTO:ETHUSD", "title": "Ethereum" },
-    { "proName": "CRYPTO:USDTUSD", "title": "Tether" },
-    { "proName": "CRYPTO:BNBUSD", "title": "BNB" },
-    { "proName": "CRYPTO:SOLUSD", "title": "Solana" },
-    { "proName": "CRYPTO:USDCUSD", "title": "USDC" },
-    { "proName": "CRYPTO:XRPUSD", "title": "XRP" },
-    { "proName": "CRYPTO:DOGEUSD", "title": "Dogecoin" },
-    { "proName": "CRYPTO:ADAUSD", "title": "Cardano" },
-    { "proName": "CRYPTO:AVAXUSD", "title": "Avalanche" }
-  ],
-  "showSymbolLogo": true,
-  "isTransparent": false,
-  "displayMode": "adaptive",
-  "colorTheme": "dark",
-  "locale": "br"
-}
-  </script>
 </div>
     <!-- Header -->
     <header class="header">

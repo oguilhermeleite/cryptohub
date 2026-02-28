@@ -331,3 +331,40 @@ function showToast(message) {
             });
         });
         
+/* ========================================= */
+/* DYNAMIC TRADINGVIEW TICKER INJECTION      */
+/* ========================================= */
+document.addEventListener('DOMContentLoaded', function() {
+    const tickerContainer = document.querySelector('#tv-ticker-container .tradingview-widget-container__widget');
+    
+    if (tickerContainer) {
+        const script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js';
+        script.async = true;
+        
+        // Configuration JSON
+        const config = {
+            "symbols": [
+                { "proName": "CRYPTO:BTCUSD", "title": "Bitcoin" },
+                { "proName": "CRYPTO:ETHUSD", "title": "Ethereum" },
+                { "proName": "CRYPTO:USDTUSD", "title": "Tether" },
+                { "proName": "CRYPTO:BNBUSD", "title": "BNB" },
+                { "proName": "CRYPTO:SOLUSD", "title": "Solana" },
+                { "proName": "CRYPTO:USDCUSD", "title": "USDC" },
+                { "proName": "CRYPTO:XRPUSD", "title": "XRP" },
+                { "proName": "CRYPTO:DOGEUSD", "title": "Dogecoin" },
+                { "proName": "CRYPTO:ADAUSD", "title": "Cardano" },
+                { "proName": "CRYPTO:AVAXUSD", "title": "Avalanche" }
+            ],
+            "showSymbolLogo": true,
+            "isTransparent": false,
+            "displayMode": "adaptive",
+            "colorTheme": "dark",
+            "locale": "br"
+        };
+        
+        script.innerHTML = JSON.stringify(config);
+        tickerContainer.appendChild(script);
+    }
+});
