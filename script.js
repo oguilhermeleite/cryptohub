@@ -358,13 +358,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 { "proName": "CRYPTO:AVAXUSD", "title": "Avalanche" }
             ],
             "showSymbolLogo": true,
-            "isTransparent": false,
+            "isTransparent": true,
             "displayMode": "adaptive",
             "colorTheme": "dark",
             "locale": "br"
         };
-        
-        script.innerHTML = JSON.stringify(config);
+
+        script.textContent = JSON.stringify(config);
         tickerContainer.appendChild(script);
     }
 });
