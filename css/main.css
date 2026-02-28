@@ -11198,6 +11198,13 @@ body > div:empty:not([id]):not([class]) {
 }
 
 /* Clickable Coupon Styles */
+/* TradingView Ticker Tape Adjustments */
+@media (max-width: 768px) {
+    .tradingview-widget-container {
+        margin-top: 52px !important;
+    }
+}
+
 .clickable-coupon {
     display: inline-flex;
     align-items: center;
