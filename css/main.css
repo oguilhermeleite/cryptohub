@@ -11350,5 +11350,85 @@ body > div:empty:not([id]):not([class]) {
     .section-subtitle {
         font-size: 0.9rem !important;
     }
+
+    /* 5. COMPACT FEATURED CARD (DESTAQUE) */
+    .premium-hero-banner {
+        width: 100% !important;
+        min-height: auto !important;
+        padding: 20px 15px !important; /* Reduce internal padding */
+        gap: 15px !important;
+        border-radius: 20px !important;
+    }
+
+    .premium-hero-content {
+        flex-direction: column !important;
+        gap: 15px !important;
+        text-align: center !important;
+    }
+
+    /* Shrink the top 'Parceiro Oficial' badge */
+    .featured-badge, .premium-partner-badge {
+        font-size: 0.65rem !important;
+        padding: 4px 10px !important;
+        margin-bottom: 10px !important;
+        top: 10px !important;
+        right: 10px !important;
+    }
+
+    /* Shrink the featured logo */
+    .premium-hero-logo {
+        width: 70px !important;
+        height: 70px !important;
+        margin: 0 auto 10px !important;
+        padding: 10px !important;
+    }
+
+    .premium-hero-logo img {
+        max-width: 100% !important;
+        max-height: 100% !important;
+    }
+
+    /* Adjust featured typography */
+    .premium-hero-title {
+        font-size: 1.4rem !important;
+        margin-bottom: 5px !important;
+        line-height: 1.2 !important;
+    }
+
+    .premium-hero-subtitle, .premium-hero-description {
+        font-size: 0.85rem !important;
+        margin-bottom: 10px !important;
+        line-height: 1.4 !important;
+    }
+    
+    /* Compact the extra items (100% Seguro, Ultra Rápido, etc) */
+    .premium-hero-features, .feature-badge-container {
+        display: flex !important;
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+        margin-top: 10px !important;
+    }
+
+    .feature-badge {
+        padding: 6px 10px !important;
+        font-size: 0.75rem !important;
+        margin: 0 !important;
+    }
+
+    .premium-hero-buttons {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 10px !important;
+        margin-top: 15px !important;
+    }
+
+    .premium-cta-button, .featured-button-primary, .featured-button-secondary {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 12px 15px !important;
+        font-size: 0.85rem !important;
+    }
 }
 
