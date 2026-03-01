@@ -11465,6 +11465,6 @@ body > div:empty:not([id]):not([class]) {
 
     /* Ensure body has enough padding so the ticker doesn't hide content */
     body {
-        padding-bottom: 60px !important; /* Slightly larger padding for mobile */
+        padding-bottom: 45px !important; /* Reduced padding for the thinner ticker */
     }
 }

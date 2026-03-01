@@ -369,7 +369,8 @@ window.addEventListener('load', function() {
         ],
         "showSymbolLogo": true,
         "isTransparent": true,
-        "displayMode": "adaptive",
+        // Detect mobile screen: use 'regular' (thin 1-line) for mobile, 'adaptive' for desktop
+        "displayMode": window.innerWidth <= 768 ? "regular" : "adaptive",
         "colorTheme": "dark",
         "locale": "br"
     };
