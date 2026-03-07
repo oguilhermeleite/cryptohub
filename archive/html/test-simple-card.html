@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste - Cards Simples (Sem Flip)</title>
+    <link rel="stylesheet" href="cards-simple.css">
+    <style>
+        body {
+            background: #0a0a0f;
+            padding: 50px 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #00f5a0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+        }
+        .info-box {
+            background: rgba(0, 245, 160, 0.1);
+            border: 2px solid rgba(0, 245, 160, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            color: #00f5a0;
+        }
+        .info-box h2 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+        .info-box ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>✅ Sistema de Cards Simples (100% Funcional)</h1>
+
+        <div class="info-box">
+            <h2>🎯 Este sistema funciona porque:</h2>
+            <ul>
+                <li>✅ SEM flip de card - nada para dar errado</li>
+                <li>✅ SEM JavaScript interferindo com links</li>
+                <li>✅ Botões são links HTML puros com href</li>
+                <li>✅ CSS simples sem conflitos</li>
+                <li>✅ Sempre funciona em todos os navegadores</li>
+            </ul>
+            <p><strong>👇 Clique nos botões abaixo para testar:</strong></p>
+        </div>
+
+        <div class="cards-grid">
+            <!-- Card 1: Binance -->
+            <div class="platform-card-simple" data-platform="binance">
+                <div class="card-badges">
+                    <span class="badge badge-rating">⭐⭐⭐⭐⭐ 4.8</span>
+                    <span class="badge badge-kyc">SEM KYC</span>
+                </div>
+
+                <div class="card-logo">
+                    <img src="https://logo.clearbit.com/binance.com" alt="Binance" onerror="this.src='https://www.google.com/s2/favicons?domain=binance.com&sz=128'">
+                </div>
+
+                <h3 class="card-title">Binance</h3>
+
+                <div class="card-tags">
+                    <span class="card-tag">EXCHANGE</span>
+                    <span class="card-tag">CEX</span>
+                    <span class="card-tag">GLOBAL</span>
+                </div>
+
+                <p class="card-description">
+                    Maior exchange do mundo com +270 milhões de usuários. Taxas baixas, alta liquidez e +500 criptomoedas disponíveis.
+                </p>
+
+                <div class="card-buttons">
+                    <a href="https://www.binance.com/activity/referral-entry/CPA?ref=CPA_0001DCF8M6"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="card-btn card-btn-primary">
+                        🌐 Visitar Site Oficial
+                    </a>
+                    <a href="https://twitter.com/binance"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="card-btn card-btn-secondary">
+                        🐦 Seguir no X / Twitter
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 2: Bybit -->
+            <div class="platform-card-simple" data-platform="bybit">
+                <div class="card-badges">
+                    <span class="badge badge-rating">⭐⭐⭐⭐⭐ 4.6</span>
+                    <span class="badge badge-kyc">KYC PARCIAL</span>
+                </div>
+
+                <div class="card-logo">
+                    <img src="https://logo.clearbit.com/bybit.com" alt="Bybit">
+                </div>
+
+                <h3 class="card-title">Bybit</h3>
+
+                <div class="card-tags">
+                    <span class="card-tag">EXCHANGE</span>
+                    <span class="card-tag">DERIVATIVOS</span>
+                    <span class="card-tag">TRADING</span>
+                </div>
+
+                <p class="card-description">
+                    Exchange líder em trading de derivativos. Plataforma avançada, alta liquidez e bônus para novos usuários.
+                </p>
+
+                <div class="card-buttons">
+                    <a href="https://www.bybit.com"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="card-btn card-btn-primary">
+                        🌐 Visitar Site Oficial
+                    </a>
+                    <a href="https://twitter.com/bybit_official"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="card-btn card-btn-secondary">
+                        🐦 Seguir no X / Twitter
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 3: Phantom -->
+            <div class="platform-card-simple" data-platform="phantom">
+                <div class="card-badges">
+                    <span class="badge badge-rating">⭐⭐⭐⭐⭐ 4.7</span>
+                    <span class="badge badge-kyc">SEM KYC</span>
+                </div>
+
+                <div class="card-logo">
+                    <img src="https://logo.clearbit.com/phantom.app" alt="Phantom">
+                </div>
+
+                <h3 class="card-title">Phantom</h3>
+
+                <div class="card-tags">
+                    <span class="card-tag">WALLET</span>
+                    <span class="card-tag">SOLANA</span>
+                    <span class="card-tag">WEB3</span>
+                </div>
+
+                <p class="card-description">
+                    Carteira Web3 para Solana e Ethereum. Interface amigável, suporte a NFTs e integração completa com DeFi.
+                </p>
+
+                <div class="card-buttons">
+                    <a href="https://phantom.app"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="card-btn card-btn-primary">
+                        🌐 Visitar Site Oficial
+                    </a>
+                    <a href="https://twitter.com/phantom"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="card-btn card-btn-secondary">
+                        🐦 Seguir no X / Twitter
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="cards-simple.js"></script>
+    <script>
+        // Log para debug
+        console.log('🧪 Página de teste carregada');
+        console.log('📦 Total de cards:', document.querySelectorAll('.platform-card-simple').length);
+        console.log('🔗 Total de botões:', document.querySelectorAll('.card-btn').length);
+    </script>
+</body>
+</html>

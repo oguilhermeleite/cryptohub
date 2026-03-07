@@ -1,0 +1,2 @@
+# Cards - KYC Required
+s/(data-platform="kast"[^>]*>\s*<div class="card-inner">\s*<!-- Front Face -->\s*<div class="card-front">\s*<div class="rating-badge">[^<]*<span class="stars">[^<]*<\/span>\s*<span class="score">[^<]*<\/span>\s*<\/div>)(\s*<div class="card-content">)/\1\n                                <div class="kyc-badge kyc-required">KYC<\/div>\2/
