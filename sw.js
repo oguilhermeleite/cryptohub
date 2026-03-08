@@ -1,7 +1,7 @@
 // Service Worker - Stale While Revalidate Strategy
 // Assets are served from cache instantly, then updated in background.
 // Next page load always has the latest version.
-const CACHE_NAME = 'crypto-aggregator-v8';
+const CACHE_NAME = 'crypto-aggregator-v9';
 
 const PRECACHE_ASSETS = [
   '/',
