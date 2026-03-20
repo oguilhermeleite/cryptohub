@@ -125,61 +125,53 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <div class="header-content header-single-row" style="display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 15px 4%; box-sizing: border-box;">
-            <!-- CHILD 1: FAR LEFT CONTAINER (LOGO) -->
-            <div style="flex: 1; display: flex; justify-content: flex-start; align-items: center;">
-                <div class="logo" style="display: flex; align-items: center; gap: 10px; max-width: 220px;">
-                    <img src="https://unavatar.io/x/criptoagg" alt="Logo" style="height: 45px; width: 45px; border-radius: 50%; object-fit: cover;">
-                    <h1 class="logo-text">
-                        <span class="logo-white">CRYPTO</span><span class="logo-gradient">AGGREGATOR</span>
-                    </h1>
-                </div>
-            </div>
+    <header style="display: flex !important; justify-content: space-between !important; align-items: center !important; width: 100% !important; padding: 15px 4% !important; box-sizing: border-box !important; overflow: hidden !important; background: var(--bg-header) !important; position: fixed !important; top: 0 !important; left: 0 !important; z-index: 1000 !important; border-bottom: 1px solid var(--card-border) !important;">
 
-            <!-- CHILD 2: CENTER CONTAINER (LINKS) -->
-            <div style="flex: 2; display: flex; justify-content: center; gap: 1vw; font-size: 0.9rem; margin: 0 15px; white-space: nowrap;">
-                <nav class="navigation">
-                    <ul class="nav-menu" style="display: flex; gap: 1vw; list-style: none; margin: 0; padding: 0;">
-                        <li><a href="#p2p" data-section="p2p" data-i18n="p2pTitle">P2P</a></li>
-                        <li><a href="#exchanges" data-section="exchanges" data-i18n="exchangesTitle">Exchanges</a></li>
-                        <li><a href="#dexs" data-section="dexs" data-i18n="dexsTitle">DEXs</a></li>
-                        <li><a href="#bridges" data-section="bridges"><span data-lang="nav-bridges" data-i18n="navBridges">Bridges</span></a></li>
-                        <li><a href="#cards" data-section="cards"><span data-lang="nav-cards" data-i18n="navCards">Cards</span></a></li>
-                        <li><a href="#banks" data-section="banks"><span data-lang="nav-banks" data-i18n="navBanks">Banks</span></a></li>
-                        <li><a href="#hot-wallets" data-section="wallets"><span data-lang="nav-wallets" data-i18n="navWallets">Wallets</span></a></li>
-                    </ul>
-                </nav>
-            </div>
-
-            <!-- CHILD 3: FAR RIGHT CONTAINER (PROFILE & GLOBE) -->
-            <div style="flex: 1; display: flex; justify-content: flex-end; align-items: center; gap: 15px;">
-                <div class="lang-container" style="position: relative; display: inline-block;">
-                    <button id="lang-globe-btn" aria-label="Mudar idioma" style="background: none; border: none; cursor: pointer; color: white; display: flex; align-items: center; justify-content: center; padding: 5px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="2" y1="12" x2="22" y2="12"></line>
-                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                        </svg>
-                    </button>
-                    <div id="lang-dropdown" class="lang-dropdown hidden">
-                        <p class="lang-dropdown-title" data-i18n="langTitle">Idioma</p>
-                        <ul class="lang-list">
-                            <li class="lang-option active" data-lang="pt" data-i18n="langPt">Português</li>
-                            <li class="lang-option" data-lang="en" data-i18n="langEn">Inglês</li>
-                        </ul>
-                    </div>
-                </div>
-                <img src="https://unavatar.io/x/criptoagg" alt="X Profile" style="height: 38px; width: 38px; border-radius: 50%; object-fit: cover;">
-                
-                <!-- Mobile Menu Button (kept for functionality, hidden on desktop by CSS) -->
-                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu" style="display: none;">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+      <div style="flex: 1 !important; display: flex !important; justify-content: flex-start !important; min-width: 220px !important; align-items: center !important;">
+        <div style="display: flex !important; align-items: center !important; gap: 10px !important;">
+          <img src="https://unavatar.io/x/criptoagg" alt="Logo" style="height: 40px !important; width: 40px !important; border-radius: 50% !important; object-fit: cover !important;">
+          <h1 style="margin: 0 !important; font-family: 'Orbitron', sans-serif !important; font-size: 18px !important; font-weight: 800 !important; letter-spacing: 1px !important; display: flex !important; gap: 5px !important;">
+            <span style="color: white !important;">CRYPTO</span><span style="color: var(--text-neon-green) !important;">AGGREGATOR</span>
+          </h1>
         </div>
+      </div>
+
+      <nav style="flex: 2 !important; display: flex !important; justify-content: center !important; align-items: center !important; gap: 1.5vw !important; white-space: nowrap !important;">
+        <a href="#p2p" style="color: white !important; text-decoration: none !important; font-size: 14px !important; font-weight: 600 !important; transition: 0.3s !important; text-transform: uppercase !important;">P2P</a>
+        <a href="#exchanges" style="color: white !important; text-decoration: none !important; font-size: 14px !important; font-weight: 600 !important; transition: 0.3s !important; text-transform: uppercase !important;">Exchanges</a>
+        <a href="#dexs" style="color: white !important; text-decoration: none !important; font-size: 14px !important; font-weight: 600 !important; transition: 0.3s !important; text-transform: uppercase !important;">DEXs</a>
+        <a href="#bridges" style="color: white !important; text-decoration: none !important; font-size: 14px !important; font-weight: 600 !important; transition: 0.3s !important; text-transform: uppercase !important;">Bridges</a>
+        <a href="#cards" style="color: white !important; text-decoration: none !important; font-size: 14px !important; font-weight: 600 !important; transition: 0.3s !important; text-transform: uppercase !important;">Cards</a>
+        <a href="#banks" style="color: white !important; text-decoration: none !important; font-size: 14px !important; font-weight: 600 !important; transition: 0.3s !important; text-transform: uppercase !important;">Banks</a>
+        <a href="#hot-wallets" style="color: white !important; text-decoration: none !important; font-size: 14px !important; font-weight: 600 !important; transition: 0.3s !important; text-transform: uppercase !important;">Wallets</a>
+      </nav>
+
+      <div style="flex: 1 !important; display: flex !important; justify-content: flex-end !important; align-items: center !important; gap: 15px !important; min-width: 150px !important;">
+        <div class="lang-container" style="position: relative !important; display: inline-block !important;">
+          <button id="lang-globe-btn" aria-label="Mudar idioma" style="background: none !important; border: none !important; cursor: pointer !important; color: white !important; display: flex !important; align-items: center !important; justify-content: center !important; padding: 5px !important;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </button>
+          <div id="lang-dropdown" class="lang-dropdown hidden" style="position: absolute !important; right: 0 !important; top: 100% !important;">
+              <p class="lang-dropdown-title" data-i18n="langTitle">Idioma</p>
+              <ul class="lang-list">
+                  <li class="lang-option active" data-lang="pt" data-i18n="langPt">Português</li>
+                  <li class="lang-option" data-lang="en" data-i18n="langEn">Inglês</li>
+              </ul>
+          </div>
+        </div>
+        <img src="https://unavatar.io/x/criptoagg" alt="X Profile" style="width: 38px !important; height: 38px !important; border-radius: 50% !important; object-fit: cover !important; border: 2px solid var(--accent-primary) !important;">
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu" style="background: none !important; border: none !important; cursor: pointer !important; display: none !important;">
+            <span style="display: block !important; width: 25px !important; height: 2px !important; background: white !important; margin: 5px 0 !important;"></span>
+            <span style="display: block !important; width: 25px !important; height: 2px !important; background: white !important; margin: 5px 0 !important;"></span>
+            <span style="display: block !important; width: 25px !important; height: 2px !important; background: white !important; margin: 5px 0 !important;"></span>
+        </button>
+      </div>
+
     </header>
 
     <!-- Mobile Menu Overlay -->
