@@ -26,6 +26,15 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <style>
+        /* Force featured logo visibility */
+        .premium-hero-logo img {
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: block !important;
+        }
+    </style>
+
     <!-- SCROLLBAR FIX: Only hide horizontal scrollbars on card containers -->
     <style>
         /* Hide ONLY horizontal scrollbars on card containers (NOT the main page scrollbar!) */
@@ -238,10 +247,11 @@
                 <span class="featured-badge" data-lang="partner-badge" data-i18n="partnerBadge">PARCEIRO OFICIAL</span>
 
                 <div class="premium-hero-content">
-                    <div class="premium-hero-logo">
+                    <div class="premium-hero-logo" style="width: 55px; height: 55px; background-color: #00ff88; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px auto; box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);">
                         <img src="https://app.comprecripto.io/assets/images/logos/favicon.png" 
                              alt="Compre Cripto Logo" 
-                             style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                             class="loaded"
+                             style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; opacity: 1 !important;">
                     </div>
 
                     <div class="premium-hero-text">
