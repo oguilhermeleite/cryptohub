@@ -127,17 +127,18 @@
     <!-- Header -->
     <header class="header">
         <div class="header-content header-single-row" style="display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 15px 4%;">
-            <!-- Left: Logo Wrapper -->
-            <div style="flex: 1; display: flex; justify-content: flex-start;">
-                <div class="logo">
+            <!-- CHILD 1: FAR LEFT CONTAINER (LOGO) -->
+            <div style="flex: 1; display: flex; justify-content: flex-start; align-items: center;">
+                <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+                    <img src="https://unavatar.io/x/criptoagg" alt="Logo" style="height: 45px; width: 45px; border-radius: 50%; object-fit: cover;">
                     <h1 class="logo-text">
                         <span class="logo-white">CRYPTO</span><span class="logo-gradient">AGGREGATOR</span>
                     </h1>
                 </div>
             </div>
 
-            <!-- Center: Nav Links Wrapper -->
-            <div style="flex: 2; display: flex; justify-content: center;">
+            <!-- CHILD 2: CENTER CONTAINER (LINKS) -->
+            <div style="flex: 2; display: flex; justify-content: center; gap: 20px;">
                 <nav class="navigation">
                     <ul class="nav-menu" style="display: flex; gap: 20px; list-style: none; margin: 0; padding: 0;">
                         <li><a href="#p2p" data-section="p2p" data-i18n="p2pTitle">P2P</a></li>
@@ -151,35 +152,32 @@
                 </nav>
             </div>
 
-            <!-- Right: Profile & Icons Wrapper -->
+            <!-- CHILD 3: FAR RIGHT CONTAINER (PROFILE & GLOBE) -->
             <div style="flex: 1; display: flex; justify-content: flex-end; align-items: center; gap: 15px;">
-                <div class="header-right-group" style="display: flex; align-items: center; gap: 15px;">
-                    <div class="header-controls">
-                        <div class="lang-container" style="position: relative; display: inline-block;">
-                            <button id="lang-globe-btn" aria-label="Mudar idioma" style="background: none; border: none; cursor: pointer; color: white; display: flex; align-items: center; justify-content: center; padding: 5px;">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <line x1="2" y1="12" x2="22" y2="12"></line>
-                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                                </svg>
-                            </button>
-                            <div id="lang-dropdown" class="lang-dropdown hidden">
-                                <p class="lang-dropdown-title" data-i18n="langTitle">Idioma</p>
-                                <ul class="lang-list">
-                                    <li class="lang-option active" data-lang="pt" data-i18n="langPt">Português</li>
-                                    <li class="lang-option" data-lang="en" data-i18n="langEn">Inglês</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Mobile Menu Button (hidden on desktop) -->
-                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                <div class="lang-container" style="position: relative; display: inline-block;">
+                    <button id="lang-globe-btn" aria-label="Mudar idioma" style="background: none; border: none; cursor: pointer; color: white; display: flex; align-items: center; justify-content: center; padding: 5px;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
                     </button>
+                    <div id="lang-dropdown" class="lang-dropdown hidden">
+                        <p class="lang-dropdown-title" data-i18n="langTitle">Idioma</p>
+                        <ul class="lang-list">
+                            <li class="lang-option active" data-lang="pt" data-i18n="langPt">Português</li>
+                            <li class="lang-option" data-lang="en" data-i18n="langEn">Inglês</li>
+                        </ul>
+                    </div>
                 </div>
                 <img src="https://unavatar.io/x/criptoagg" alt="X Profile" style="height: 40px; width: 40px; border-radius: 50%; object-fit: cover;">
+                
+                <!-- Mobile Menu Button (kept for functionality, hidden on desktop by CSS) -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu" style="display: none;">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </header>
