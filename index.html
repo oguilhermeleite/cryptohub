@@ -126,10 +126,10 @@
 <body>
     <!-- Header -->
     <header class="header">
-        <div class="header-content header-single-row" style="display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; width: 100%; padding: 15px 5%; box-sizing: border-box;">
+        <div class="header-content header-single-row" style="display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 15px 4%; box-sizing: border-box;">
             <!-- CHILD 1: FAR LEFT CONTAINER (LOGO) -->
-            <div style="justify-self: start; display: flex; align-items: center;">
-                <div class="logo" style="display: flex; align-items: center; gap: 10px; max-width: 280px;">
+            <div style="flex: 1; display: flex; justify-content: flex-start; align-items: center;">
+                <div class="logo" style="display: flex; align-items: center; gap: 10px; max-width: 220px;">
                     <img src="https://unavatar.io/x/criptoagg" alt="Logo" style="height: 45px; width: 45px; border-radius: 50%; object-fit: cover;">
                     <h1 class="logo-text">
                         <span class="logo-white">CRYPTO</span><span class="logo-gradient">AGGREGATOR</span>
@@ -138,9 +138,9 @@
             </div>
 
             <!-- CHILD 2: CENTER CONTAINER (LINKS) -->
-            <div style="justify-self: center; display: flex; gap: 20px; white-space: nowrap;">
+            <div style="flex: 2; display: flex; justify-content: center; gap: 1vw; font-size: 0.9rem; margin: 0 15px; white-space: nowrap;">
                 <nav class="navigation">
-                    <ul class="nav-menu" style="display: flex; gap: 20px; list-style: none; margin: 0; padding: 0;">
+                    <ul class="nav-menu" style="display: flex; gap: 1vw; list-style: none; margin: 0; padding: 0;">
                         <li><a href="#p2p" data-section="p2p" data-i18n="p2pTitle">P2P</a></li>
                         <li><a href="#exchanges" data-section="exchanges" data-i18n="exchangesTitle">Exchanges</a></li>
                         <li><a href="#dexs" data-section="dexs" data-i18n="dexsTitle">DEXs</a></li>
@@ -153,7 +153,7 @@
             </div>
 
             <!-- CHILD 3: FAR RIGHT CONTAINER (PROFILE & GLOBE) -->
-            <div style="justify-self: end; display: flex; align-items: center; gap: 15px;">
+            <div style="flex: 1; display: flex; justify-content: flex-end; align-items: center; gap: 15px;">
                 <div class="lang-container" style="position: relative; display: inline-block;">
                     <button id="lang-globe-btn" aria-label="Mudar idioma" style="background: none; border: none; cursor: pointer; color: white; display: flex; align-items: center; justify-content: center; padding: 5px;">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -170,7 +170,7 @@
                         </ul>
                     </div>
                 </div>
-                <img src="https://unavatar.io/x/criptoagg" alt="X Profile" style="height: 40px; width: 40px; border-radius: 50%; object-fit: cover;">
+                <img src="https://unavatar.io/x/criptoagg" alt="X Profile" style="height: 38px; width: 38px; border-radius: 50%; object-fit: cover;">
                 
                 <!-- Mobile Menu Button (kept for functionality, hidden on desktop by CSS) -->
                 <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu" style="display: none;">
