@@ -831,5 +831,31 @@
     <script src="performance.js?v=20241125f" defer></script>
     <!-- Premium Elements System -->
     <script src="premium-elements.js?v=premium-2026"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Targeted selection of outbound links (affiliate links)
+        const outboundLinks = document.querySelectorAll('a[href^="http"]');
+        outboundLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Only send event if Google Analytics (gtag) is fully loaded
+                if (typeof gtag === 'function') {
+                    const platformUrl = this.getAttribute('href');
+                    // Attempt to find the closest card title to know WHICH platform was clicked
+                    const card = this.closest('.platform-card-final') || this.closest('.premium-hero-banner') || this.closest('div'); 
+                    const titleElement = card ? card.querySelector('h3, h2, h4') : null;
+                    const platformName = titleElement ? titleElement.innerText.trim() : platformUrl;
+
+                    gtag('event', 'platform_click', {
+                        'event_category': 'Affiliate Link',
+                        'event_label': platformName,
+                        'link_url': platformUrl,
+                        'platform_name': platformName // Added for redundancy with existing structure
+                    });
+                    console.log('Analytics Event Sent:', platformName);
+                }
+            });
+        });
+    });
+    </script>
 </body>
 </html>
