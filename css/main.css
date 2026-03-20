@@ -4633,8 +4633,8 @@ a:focus,
     /* CRITICAL: Single row layout for header (GRID as per new instruction) */
     .header-content.header-single-row { /* Specificity for header-single-row */
         display: grid !important;
-        /* Column 1 (Logo), Column 2 (Nav - takes available space), Column 3 (Flags) */
-        grid-template-columns: auto 1fr auto !important;
+        /* Center navigation perfectly by using equal width side columns (1fr) */
+        grid-template-columns: 1fr auto 1fr !important;
         align-items: center !important;
         width: 100% !important;
         padding: 15px 4% !important;
