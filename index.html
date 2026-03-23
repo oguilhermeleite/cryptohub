@@ -153,6 +153,7 @@
         <a href="#cards" style="color: white !important; text-decoration: none !important; font-size: 14px !important; font-weight: 600 !important; transition: 0.3s !important; text-transform: uppercase !important;">Cards</a>
         <a href="#banks" style="color: white !important; text-decoration: none !important; font-size: 14px !important; font-weight: 600 !important; transition: 0.3s !important; text-transform: uppercase !important;">Banks</a>
         <a href="#hot-wallets" style="color: white !important; text-decoration: none !important; font-size: 14px !important; font-weight: 600 !important; transition: 0.3s !important; text-transform: uppercase !important;">Wallets</a>
+        <a href="#trackers" style="color: white !important; text-decoration: none !important; font-size: 14px !important; font-weight: 600 !important; transition: 0.3s !important; text-transform: uppercase !important;">Trackers</a>
       </nav>
 
       <div style="flex: 1 !important; display: flex !important; justify-content: flex-end !important; align-items: center !important; gap: 15px !important; min-width: 150px !important;">
@@ -1438,6 +1439,111 @@
                         <div class="scroll-dot"></div>
                     </div>
                     <button class="carousel-arrow carousel-arrow-right" aria-label="Next" data-carousel="bridges">
+                        →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trackers Section -->
+    <section class="platform-section" id="trackers">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title">
+                    <span data-i18n="trackersTitle">Trackers</span>
+                </h3>
+                <p class="section-subtitle" data-lang="trackers-subtitle" data-i18n="trackersSubtitle">Acompanhamento de mercado e dados em tempo real</p>
+            </div>
+            <div class="horizontal-scroll-container">
+                <div class="cards-final-grid">
+                    <!-- CoinMarketCap -->
+                    <div class="platform-card-final">
+                        <div class="card-logo-container">
+                            <img src="https://unavatar.io/x/CoinMarketCap" alt="CoinMarketCap" style="border-radius: 50%;">
+                        </div>
+                        <h3 class="card-final-title">CoinMarketCap</h3>
+                        <p class="card-final-description">
+                            Crypto prices, charts, and market cap.
+                        </p>
+                        <div class="card-final-buttons">
+                            <a href="https://coinmarketcap.com/" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('CoinMarketCap', 'Tracker')" data-i18n="btnVisit">
+                                Visitar Site
+                            </a>
+                            <a href="https://twitter.com/CoinMarketCap" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('CoinMarketCap', 'Social')" data-i18n="btnFollowX">
+                                Seguir no X
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- CoinGecko -->
+                    <div class="platform-card-final">
+                        <div class="card-logo-container">
+                            <img src="https://unavatar.io/x/coingecko" alt="CoinGecko" style="border-radius: 50%;">
+                        </div>
+                        <h3 class="card-final-title">CoinGecko</h3>
+                        <p class="card-final-description">
+                            360-degree market overview and data.
+                        </p>
+                        <div class="card-final-buttons">
+                            <a href="https://www.coingecko.com/" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('CoinGecko', 'Tracker')" data-i18n="btnVisit">
+                                Visitar Site
+                            </a>
+                            <a href="https://twitter.com/coingecko" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('CoinGecko', 'Social')" data-i18n="btnFollowX">
+                                Seguir no X
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- CoinGlass -->
+                    <div class="platform-card-final">
+                        <div class="card-logo-container">
+                            <img src="https://unavatar.io/x/coinglass_com" alt="CoinGlass" style="border-radius: 50%;">
+                        </div>
+                        <h3 class="card-final-title">CoinGlass</h3>
+                        <p class="card-final-description">
+                            Crypto derivatives and liquidation data.
+                        </p>
+                        <div class="card-final-buttons">
+                            <a href="https://www.coinglass.com/" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('CoinGlass', 'Tracker')" data-i18n="btnVisit">
+                                Visitar Site
+                            </a>
+                            <a href="https://twitter.com/coinglass_com" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('CoinGlass', 'Social')" data-i18n="btnFollowX">
+                                Seguir no X
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- TradingView -->
+                    <div class="platform-card-final">
+                        <div class="card-logo-container">
+                            <img src="https://unavatar.io/x/tradingview" alt="TradingView" style="border-radius: 50%;">
+                        </div>
+                        <h3 class="card-final-title">TradingView</h3>
+                        <p class="card-final-description">
+                            Advanced charts and trading network.
+                        </p>
+                        <div class="card-final-buttons">
+                            <a href="https://www.tradingview.com/" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('TradingView', 'Tracker')" data-i18n="btnVisit">
+                                Visitar Site
+                            </a>
+                            <a href="https://twitter.com/tradingview" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('TradingView', 'Social')" data-i18n="btnFollowX">
+                                Seguir no X
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-navigation">
+                    <button class="carousel-arrow carousel-arrow-left" aria-label="Previous" data-carousel="trackers">
+                        ←
+                    </button>
+                    <div class="scroll-indicator">
+                        <div class="scroll-dot active"></div>
+                        <div class="scroll-dot"></div>
+                        <div class="scroll-dot"></div>
+                        <div class="scroll-dot"></div>
+                    </div>
+                    <button class="carousel-arrow carousel-arrow-right" aria-label="Next" data-carousel="trackers">
                         →
                     </button>
                 </div>
