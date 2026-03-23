@@ -135,8 +135,7 @@ function showToast(message) {
                         descCamilaP2P: "Especialista brasileira em P2P. Com taxas baixas e suporte para +1.000 Criptomoedas. <br> <strong>Cupom <span class=\"clickable-coupon\" data-code=\"MQM\">MQM <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\" ry=\"2\"></rect><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"></path></svg></span> para desconto.</strong>",
                         descP2Pme: "P2P.me é uma plataforma P2P confiável para compra e venda de criptomoedas com segurança e rapidez.",
                         desc4PFinance: "P2P on-chain e pagamento de boletos. <br> <strong>Cupom <span class=\"clickable-coupon\" data-code=\"DOGDAMASSA\">DOGDAMASSA <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\" ry=\"2\"></rect><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"></path></svg></span> para desconto.</strong>",
-                        descCrypix: "Multi-chain: converta cripto em PIX e pague boletos. Taxa 2%, setup em 2 minutos.",
-                        descPixgo: "Receba PIX sem banco. Pagamentos digitais sem burocracia, taxa 2%, setup em 2 minutos.",
+
                         btnAccessNow: "ACESSAR AGORA →",                btnVisit: "Visitar Site",
                 btnFollowX: "Seguir no X",
                 p2pTitle: "P2P",
@@ -218,8 +217,7 @@ function showToast(message) {
                         descCamilaP2P: "Brazilian P2P specialist. With low fees and support for +1,000 Cryptocurrencies. <br> <strong>Coupon <span class=\"clickable-coupon\" data-code=\"MQM\">MQM <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\" ry=\"2\"></rect><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"></path></svg></span> for discount.</strong>",
                         descP2Pme: "P2P.me is a reliable P2P platform for buying and selling cryptocurrencies safely and quickly.",
                         desc4PFinance: "P2P on-chain and bill payments. <br> <strong>Coupon <span class=\"clickable-coupon\" data-code=\"DOGDAMASSA\">DOGDAMASSA <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\" ry=\"2\"></rect><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"></path></svg></span> for discount.</strong>",
-                        descCrypix: "Multi-chain: convert crypto to PIX and pay bills. 2% fee, setup in 2 minutes.",
-                        descPixgo: "Receive PIX without a bank. Digital payments without bureaucracy, 2% fee, setup in 2 minutes.",
+
                         btnAccessNow: "ACCESS NOW →",                btnVisit: "Visit Site",
                 btnFollowX: "Follow on X",
                 p2pTitle: "P2P",
