@@ -131,6 +131,30 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "ug118e6101");
     </script>
+
+    <style>
+      @media (max-width: 768px) {
+        /* Break the single line and allow wrapping */
+        header { flex-wrap: wrap !important; padding: 15px 5% !important; gap: 10px 0 !important; }
+        
+        /* Logo stays top left */
+        header > div:first-child { flex: 1 1 50% !important; min-width: 140px !important; }
+        header img { max-width: 150px !important; }
+        
+        /* Translation Widget stays top right */
+        header > div:last-child { flex: 1 1 50% !important; justify-content: flex-end !important; }
+        
+        /* Nav Links drop to the bottom and scroll horizontally */
+        header > nav { flex: 1 1 100% !important; order: 3 !important; justify-content: flex-start !important; overflow-x: auto !important; padding-top: 10px !important; padding-bottom: 5px !important; gap: 20px !important; -webkit-overflow-scrolling: touch; border-top: 1px solid rgba(255,255,255,0.1); }
+        header > nav a { font-size: 14px !important; }
+      }
+      
+      /* Styling to make the Google Translate widget match the dark/neon theme */
+      .goog-te-banner-frame.skiptranslate { display: none !important; }
+      body { top: 0px !important; }
+      .goog-te-gadget { color: transparent !important; font-size: 0 !important; }
+      .goog-te-gadget .goog-te-combo { background-color: #0a0a0a; color: #00ff88; border: 1px solid #00ff88; border-radius: 8px; padding: 6px; font-family: inherit; font-size: 14px; outline: none; cursor: pointer; }
+    </style>
 </head>
 <body style="padding-bottom: 50px;">
     <!-- Header -->
@@ -158,20 +182,7 @@
 
       <div style="flex: 1 !important; display: flex !important; justify-content: flex-end !important; align-items: center !important; gap: 15px !important; min-width: 150px !important;">
         <div class="lang-container" style="position: relative !important; display: inline-block !important;">
-          <button id="lang-globe-btn" aria-label="Mudar idioma" style="background: none !important; border: none !important; cursor: pointer !important; color: white !important; display: flex !important; align-items: center !important; justify-content: center !important; padding: 5px !important;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="2" y1="12" x2="22" y2="12"></line>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-            </svg>
-          </button>
-          <div id="lang-dropdown" class="lang-dropdown hidden" style="position: absolute !important; right: 0 !important; top: 100% !important;">
-              <p class="lang-dropdown-title" data-i18n="langTitle">Idioma</p>
-              <ul class="lang-list">
-                  <li class="lang-option active" data-lang="pt" data-i18n="langPt">Português</li>
-                  <li class="lang-option" data-lang="en" data-i18n="langEn">Inglês</li>
-              </ul>
-          </div>
+          <div id="google_translate_element"></div>
         </div>
         
         <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu" style="background: none !important; border: none !important; cursor: pointer !important; display: none !important;">
@@ -1863,5 +1874,16 @@
     }
       </script>
     </div>
+
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'pt',
+          includedLanguages: 'en,es,pt', 
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
