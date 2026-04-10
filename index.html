@@ -165,10 +165,10 @@
       .lang-btn.active { opacity: 1; background: rgba(0,255,136,0.15); }
       .lang-divider { color: rgba(0,255,136,0.35); font-size: 11px; user-select: none; }
 
-      /* Hide GT banner and raw widget — keep element in DOM for GT to attach to */
+      /* Hide GT banner — keep element accessible for GT to initialise */
       .goog-te-banner-frame.skiptranslate { display: none !important; }
       body { top: 0px !important; }
-      #google_translate_element { display: none !important; }
+      #google_translate_element { position: absolute; width: 0; height: 0; overflow: hidden; opacity: 0; pointer-events: none; }
       .goog-te-gadget { font-size: 0 !important; }
     </style>
 </head>
@@ -1903,26 +1903,16 @@
       }
 
       function setLang(lang) {
-        // Update button active states
-        document.querySelectorAll('.lang-btn[data-lang]').forEach(function(b) {
-          b.classList.toggle('active', b.dataset.lang === lang);
-        });
-
-        var select = document.querySelector('.goog-te-combo');
-        if (select) {
-          select.value = lang === 'pt' ? '' : lang;
-          select.dispatchEvent(new Event('change'));
+        if (lang === 'pt') {
+          // Clear translation cookie and restore original
+          document.cookie = 'googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC;';
+          document.cookie = 'googtrans=; path=/; domain=.' + location.hostname + '; expires=Thu, 01 Jan 1970 00:00:00 UTC;';
         } else {
-          // GT not ready yet — use cookie + reload fallback
-          if (lang === 'pt') {
-            document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-            document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + location.hostname;
-          } else {
-            document.cookie = 'googtrans=/pt/' + lang + '; path=/';
-            document.cookie = 'googtrans=/pt/' + lang + '; path=/; domain=.' + location.hostname;
-          }
-          window.location.reload();
+          // Set translation target language
+          document.cookie = 'googtrans=/pt/' + lang + '; path=/';
+          document.cookie = 'googtrans=/pt/' + lang + '; path=/; domain=.' + location.hostname;
         }
+        window.location.reload();
       }
 
       // Sync button state on load based on active GT cookie
