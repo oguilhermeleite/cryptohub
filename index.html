@@ -336,17 +336,17 @@
     <div id="languageModal" class="lang-modal-overlay">
       <div class="lang-modal-box">
         <button id="closeLangModal" class="lang-modal-close" aria-label="Close Modal">✕</button>
-        <h3 class="lang-modal-title" data-i18n="langModalTitle">IDIOMA</h3>
-        <p class="lang-modal-subtitle" data-i18n="langModalSubtitle">Selecione o idioma de sua preferência</p>
+        <h3 class="lang-modal-title" data-i18n="modal_title">IDIOMA</h3>
+        <p class="lang-modal-subtitle" data-i18n="modal_sub">Selecione o idioma de sua preferência</p>
         <div class="lang-options">
-          <button class="lang-option-btn active" data-lang="pt">
+          <button class="lang-btn active" data-lang="pt">
             <div class="btn-content">
               <img src="https://flagcdn.com/w40/br.png" alt="Português" class="lang-flag">
               <span>Português</span>
             </div>
             <span class="check-icon">✓</span>
           </button>
-          <button class="lang-option-btn" data-lang="en">
+          <button class="lang-btn" data-lang="en">
             <div class="btn-content">
               <img src="https://flagcdn.com/w40/us.png" alt="English" class="lang-flag">
               <span>Inglês</span>
@@ -395,17 +395,17 @@
             <div class="hero-badge" data-i18n="heroBadge">
                 ✨ O maior hub cripto do Brasil
             </div>
-            <h1 class="hero-title gradient-text-full" data-i18n="heroTitle">
+            <h1 class="hero-title gradient-text-full" data-i18n="hero_title">
                 Sua porta de entrada e saída para o mundo cripto
             </h1>
-            <p class="hero-subtitle" data-i18n="heroSubtitle">
+            <p class="hero-subtitle" data-i18n="hero_sub">
                 O Primeiro Agregador On-Ramp e Off-Ramp do Mercado
             </p>
-            <p class="hero-description" data-i18n="heroDesc">
+            <p class="hero-description" data-i18n="hero_desc">
                 Encontre a melhor forma de comprar, vender e usar criptomoedas com segurança.
             </p>
             <div style="margin-top: 35px; display: flex; justify-content: center; width: 100%;">
-              <a href="https://x.com/criptoagg?s=21" target="_blank" rel="noopener noreferrer" style="background: linear-gradient(90deg, #00ff88 0%, #00b8ff 100%); color: #0a0a0a !important; font-size: 1.1rem; font-weight: 700; letter-spacing: 1px; font-family: 'Inter', system-ui, sans-serif; padding: 16px 45px; border-radius: 40px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0, 255, 136, 0.25);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 25px rgba(0, 255, 136, 0.45)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0, 255, 136, 0.25)';">
+              <a href="https://x.com/criptoagg?s=21" target="_blank" rel="noopener noreferrer" style="background: linear-gradient(90deg, #00ff88 0%, #00b8ff 100%); color: #0a0a0a !important; font-size: 1.1rem; font-weight: 700; letter-spacing: 1px; font-family: 'Inter', system-ui, sans-serif; padding: 16px 45px; border-radius: 40px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0, 255, 136, 0.25);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 25px rgba(0, 255, 136, 0.45)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0, 255, 136, 0.25)';" data-i18n="hero_btn">
                 Junte-se ao nosso 𝕏 ➔
               </a>
             </div>
@@ -2038,220 +2038,67 @@
       </script>
     </div>
 
-    <script type="text/javascript">
+    <script>
+      // 1. COMPLETE TRANSLATION DICTIONARY
       const translations = {
-        'pt': {
-          'langModalTitle': 'IDIOMA',
-          'langModalSubtitle': 'Selecione o idioma de sua preferência',
-          'p2pTitle': 'P2P',
-          'exchangesTitle': 'Exchanges',
-          'dexsTitle': 'DEXs',
-          'navBridges': 'Bridges',
-          'navCards': 'Cards',
-          'navBanks': 'Banks',
-          'navWallets': 'Wallets',
-          'trackersTitle': 'Trackers',
-          'heroBadge': '✨ O maior hub cripto do Brasil',
-          'heroTitle': 'Sua porta de entrada e saída para o mundo cripto',
-          'heroSubtitle': 'O Primeiro Agregador On-Ramp e Off-Ramp do Mercado',
-          'heroDesc': 'Encontre a melhor forma de comprar, vender e usar criptomoedas com segurança.',
-          'featuredTitle': 'Destaque',
-          'featuredSubtitle': 'Plataforma em destaque da nossa comunidade',
-          'partnerBadge': 'PARCEIRO OFICIAL',
-          'descCompreCriptoFeatured': 'Facilita a compra de criptomoedas de forma simples e segura',
-          'btnAccessNow': 'ACESSAR AGORA →',
-          'p2pSubtitle': 'Compra e venda direto entre pessoas',
-          'btnVisit': 'Visitar Site',
-          'btnFollowX': 'Seguir no X',
-          'exchangesSubtitle': 'Trading e conversão de criptomoedas',
-          'hotWalletsTitle': 'Hot Wallets',
-          'hotWalletsSubtitle': 'Carteiras online conectadas à internet para uso diário',
-          'cardsTitle': 'Cartões Cripto',
-          'cardsSubtitle': 'Use cripto no dia a dia com cartões',
-          'banksTitle': 'Bancos Digitais',
-          'banksSubtitle': 'Bancos digitais com recursos crypto integrados',
-          'coldWalletsTitle': 'Cold Wallets',
-          'coldWalletsSubtitle': 'Carteiras físicas offline para máxima segurança',
-          'securityTitle': 'Protegendo você dos erros mais comuns em cripto',
-          'securityDesc': 'Crypto Aggregator funciona como um filtro de acesso ao ecossistema cripto, validando fontes, links oficiais e informações antes de direcionar o usuário.',
-          'securityExtremaTitle': 'Segurança Extrema',
-          'securityExtremaDesc': 'Verificação rigorosa de todos os parceiros listados.',
-          'securityTransTitle': 'Transparência',
-          'securityTransDesc': 'Simples de entender, fácil de confiar.',
-          'securityCuradoriaTitle': 'Curadoria Inteligente',
-          'securityCuradoriaDesc': 'Selecionamos apenas o que realmente faz sentido, evitando ruído, promessas vazias e projetos desnecessários.',
-          'securityNavegacaoTitle': 'Navegação Guiada',
-          'securityNavegacaoDesc': 'Ajudamos você a entender antes de usar. Informação vem antes da ação.',
-          'eduTitle': 'EDUCAÇÃO PRIMEIRO',
-          'eduDesc': 'Pensado para iniciantes e avançados. Nossa missão é garantir que você tenha clareza e segurança em cada clique.',
-          'catTitle': 'Cripto sem complicação,',
-          'catTitleSpan': 'tudo em um só lugar',
-          'catP2PTitle': 'P2P (Peer-to-Peer)',
-          'catP2PDesc': 'Plataformas onde pessoas negociam cripto diretamente entre si, sem intermediários.',
-          'catExTitle': 'Exchanges (Corretoras)',
-          'catExDesc': 'Plataformas centralizadas que permitem comprar, vender e negociar cripto com facilidade.',
-          'catDexTitle': 'DEXs (Corretoras Descentralizadas)',
-          'catDexDesc': 'Plataformas descentralizadas onde você troca cripto direto da sua carteira, sem custódia.',
-          'catBanksTitle': 'Digital Banks (Bancos)',
-          'catBanksDesc': 'Bancos digitais e serviços financeiros que integram cripto ao sistema tradicional.',
-          'catCardsTitle': 'Crypto Cards (Cartões Cripto)',
-          'catCardsDesc': 'Cartões que permitem gastar criptomoedas no mundo real.',
-          'catBridgesTitle': 'Bridges (Pontes)',
-          'catBridgesDesc': 'Ferramentas que permitem mover ativos entre diferentes blockchains.',
-          'catWalletsTitle': 'Wallets (Carteiras)',
-          'catWalletsDesc': 'Aplicativos onde você guarda, envia e recebe criptomoedas com controle total.',
-          'footerDesc': 'Sua porta de entrada e saída para o mundo cripto',
-          'footerServices': 'Serviços',
-          'footerNewsletterTitle': 'Fique Atualizado',
-          'footerNewsletterDesc': 'Receba as melhores oportunidades e notícias do mundo cripto.',
-          'newsletterPlaceholder': 'Seu melhor e-mail',
-          'newsletterBtn': 'Inscrever-se',
-          'newsletterSuccess': '✓ Obrigado por se inscrever!',
-          'footerRights': 'Todos os direitos reservados.',
-          'toastCopied': 'Cupom copiado com sucesso!',
-          'navHome': 'Home'
+        pt: {
+          hero_title: "Sua porta de entrada e saída para o mundo cripto",
+          hero_sub: "O Primeiro Agregador On-Ramp e Off-Ramp do Mercado",
+          hero_desc: "Encontre a melhor forma de comprar, vender e usar criptomoedas com segurança.",
+          hero_btn: "Junte-se ao nosso 𝕏 ➔",
+          modal_title: "IDIOMA",
+          modal_sub: "SELECIONE O IDIOMA DE SUA PREFERÊNCIA"
         },
-        'en': {
-          'langModalTitle': 'LANGUAGE',
-          'langModalSubtitle': 'Select your preferred language',
-          'p2pTitle': 'P2P',
-          'exchangesTitle': 'Exchanges',
-          'dexsTitle': 'DEXs',
-          'navBridges': 'Bridges',
-          'navCards': 'Cards',
-          'navBanks': 'Banks',
-          'navWallets': 'Wallets',
-          'trackersTitle': 'Trackers',
-          'heroBadge': '✨ Brazil\'s Largest Crypto Hub',
-          'heroTitle': 'Your Gateway In and Out of the Crypto World',
-          'heroSubtitle': 'The Market\'s First On-Ramp and Off-Ramp Aggregator',
-          'heroDesc': 'Find the best way to buy, sell, and use cryptocurrencies safely.',
-          'featuredTitle': 'Featured',
-          'featuredSubtitle': 'Featured platform from our community',
-          'partnerBadge': 'OFFICIAL PARTNER',
-          'descCompreCriptoFeatured': 'Facilitates cryptocurrency purchases simply and safely',
-          'btnAccessNow': 'ACCESS NOW →',
-          'p2pSubtitle': 'Buy and sell directly between people',
-          'btnVisit': 'Visit Site',
-          'btnFollowX': 'Follow on X',
-          'exchangesSubtitle': 'Crypto trading and conversion',
-          'hotWalletsTitle': 'Hot Wallets',
-          'hotWalletsSubtitle': 'Online wallets connected to the internet for daily use',
-          'cardsTitle': 'Crypto Cards',
-          'cardsSubtitle': 'Use crypto in daily life with cards',
-          'banksTitle': 'Digital Banks',
-          'banksSubtitle': 'Digital banks with integrated crypto features',
-          'coldWalletsTitle': 'Cold Wallets',
-          'coldWalletsSubtitle': 'Offline hardware wallets for maximum security',
-          'securityTitle': 'Protecting You from the Most Common Crypto Mistakes',
-          'securityDesc': 'Crypto Aggregator works as an access filter to the crypto ecosystem, validating sources, official links, and information before directing the user.',
-          'securityExtremaTitle': 'Extreme Security',
-          'securityExtremaDesc': 'Rigorous verification of all listed partners.',
-          'securityTransTitle': 'Transparency',
-          'securityTransDesc': 'Simple to understand, easy to trust.',
-          'securityCuradoriaTitle': 'Intelligent Curation',
-          'securityCuradoriaDesc': 'We select only what really makes sense, avoiding noise, empty promises, and unnecessary projects.',
-          'securityNavegacaoTitle': 'Guided Navigation',
-          'securityNavegacaoDesc': 'We help you understand before you use. Information comes before action.',
-          'eduTitle': 'EDUCATION FIRST',
-          'eduDesc': 'Designed for beginners and advanced users. Our mission is to ensure you have clarity and safety in every click.',
-          'catTitle': 'Crypto without complication,',
-          'catTitleSpan': 'everything in one place',
-          'catP2PTitle': 'P2P (Peer-to-Peer)',
-          'catP2PDesc': 'Platforms where people trade crypto directly with each other, without intermediaries.',
-          'catExTitle': 'Exchanges',
-          'catExDesc': 'Centralized platforms that allow you to buy, sell, and trade crypto with ease.',
-          'catDexTitle': 'DEXs (Decentralized Exchanges)',
-          'catDexDesc': 'Decentralized platforms where you trade crypto directly from your wallet, without custody.',
-          'catBanksTitle': 'Digital Banks',
-          'catBanksDesc': 'Digital banks and financial services that integrate crypto with the traditional system.',
-          'catCardsTitle': 'Crypto Cards',
-          'catCardsDesc': 'Cards that allow you to spend cryptocurrencies in the real world.',
-          'catBridgesTitle': 'Bridges',
-          'catBridgesDesc': 'Tools that allow you to move assets between different blockchains.',
-          'catWalletsTitle': 'Wallets',
-          'catWalletsDesc': 'Apps where you store, send, and receive cryptocurrencies with full control.',
-          'footerDesc': 'Your gateway in and out of the crypto world',
-          'footerServices': 'Services',
-          'footerNewsletterTitle': 'Stay Updated',
-          'footerNewsletterDesc': 'Receive the best opportunities and news from the crypto world.',
-          'newsletterPlaceholder': 'Your best email',
-          'newsletterBtn': 'Subscribe',
-          'newsletterSuccess': '✓ Thanks for subscribing!',
-          'footerRights': 'All rights reserved.',
-          'toastCopied': 'Coupon copied successfully!',
-          'navHome': 'Home'
+        en: {
+          hero_title: "Your gateway in and out of the crypto world",
+          hero_sub: "The First On-Ramp and Off-Ramp Aggregator in the Market",
+          hero_desc: "Find the best way to safely buy, sell, and use cryptocurrencies.",
+          hero_btn: "Join our 𝕏 ➔",
+          modal_title: "LANGUAGE",
+          modal_sub: "SELECT YOUR PREFERRED LANGUAGE"
         }
       };
 
-      let currentLang = localStorage.getItem('preferredLang') || 'pt';
+      // 2. MODAL OPEN/CLOSE LOGIC
+      const modal = document.getElementById('languageModal');
+      const trigger = document.getElementById('lang-modal-trigger');
+      const closeBtn = document.getElementById('closeLangModal');
 
-      function updateContent() {
-        document.querySelectorAll('[data-i18n]').forEach(el => {
-          const key = el.getAttribute('data-i18n');
-          if (translations[currentLang][key]) {
-            el.innerText = translations[currentLang][key];
-          }
-        });
-
-        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-          const key = el.getAttribute('data-i18n-placeholder');
-          if (translations[currentLang][key]) {
-            el.setAttribute('placeholder', translations[currentLang][key]);
-          }
-        });
-
-        // Update active class in modal
-        document.querySelectorAll('.lang-option-btn').forEach(btn => {
-          btn.classList.toggle('active', btn.getAttribute('data-lang') === currentLang);
-        });
-
-        document.documentElement.setAttribute('lang', currentLang === 'pt' ? 'pt-BR' : 'en');
+      if (trigger) {
+        trigger.addEventListener('click', () => { modal.style.display = 'flex'; });
       }
-
-      function setLanguage(lang) {
-        currentLang = lang;
-        localStorage.setItem('preferredLang', currentLang);
-        updateContent();
-        
-        // Visual feedback before closing
-        setTimeout(() => {
-          document.getElementById('languageModal').classList.remove('active');
-        }, 300);
+      if (closeBtn) {
+        closeBtn.addEventListener('click', () => { modal.style.display = 'none'; });
       }
+      // Close when clicking outside the black box
+      window.addEventListener('click', (e) => {
+        if (e.target === modal) modal.style.display = 'none';
+      });
 
-      document.addEventListener('DOMContentLoaded', () => {
-        updateContent();
-
-        // Modal triggers
-        const trigger = document.getElementById('lang-modal-trigger');
-        const modal = document.getElementById('languageModal');
-        const closeBtn = document.getElementById('closeLangModal');
-
-        if (trigger) {
-          trigger.addEventListener('click', () => {
-            modal.classList.add('active');
+      // 3. TRANSLATION ENGINE LOGIC
+      const langBtns = document.querySelectorAll('.lang-btn');
+      langBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          // Visual button update
+          langBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          
+          const selectedLang = this.getAttribute('data-lang');
+          const dict = translations[selectedLang];
+          
+          // Translate all mapped elements
+          document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (dict[key]) {
+              el.innerHTML = dict[key];
+            }
           });
-        }
-
-        if (closeBtn) {
-          closeBtn.addEventListener('click', () => {
-            modal.classList.remove('active');
-          });
-        }
-
-        // Close modal on overlay click
-        modal.addEventListener('click', (e) => {
-          if (e.target === modal) {
-            modal.classList.remove('active');
-          }
-        });
-
-        // Language buttons click
-        document.querySelectorAll('.lang-option-btn').forEach(btn => {
-          btn.addEventListener('click', () => {
-            setLanguage(btn.getAttribute('data-lang'));
-          });
+          
+          // Update HTML lang tag for SEO
+          document.documentElement.lang = selectedLang;
+          
+          // Close modal smoothly after 0.2s
+          setTimeout(() => { modal.style.display = 'none'; }, 200);
         });
       });
     </script>
