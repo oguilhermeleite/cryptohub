@@ -133,65 +133,62 @@
     </script>
 
     <style>
+      /* Header Base Styles (Desktop) */
+      .site-header { display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 15px 4%; box-sizing: border-box; background: var(--bg-header); position: fixed; top: 0; left: 0; z-index: 1000; border-bottom: 1px solid var(--card-border); }
+      .header-logo { flex: 1; display: flex; justify-content: flex-start; align-items: center; gap: 10px; }
+      .header-logo img { height: 40px; width: 40px; border-radius: 50%; object-fit: cover; }
+      .header-logo h1 { margin: 0; font-family: 'Orbitron', sans-serif; font-size: 18px; font-weight: 800; letter-spacing: 1px; display: flex; gap: 5px; }
+      .header-logo h1 .text-white { color: white; }
+      .header-logo h1 .text-neon { color: var(--text-neon-green); }
+      .header-nav { flex: 2; display: flex; justify-content: center; gap: 2vw; white-space: nowrap; }
+      .header-nav a { color: white; text-decoration: none; font-size: 14px; font-weight: 600; transition: 0.3s; text-transform: uppercase; }
+      .header-actions { flex: 1; display: flex; justify-content: flex-end; align-items: center; gap: 15px; }
+
+      /* Mobile Styles */
       @media (max-width: 768px) {
-        /* Break the single line and allow wrapping */
-        header { flex-wrap: wrap !important; padding: 15px 5% !important; gap: 10px 0 !important; }
-        
-        /* Logo stays top left */
-        header > div:first-child { flex: 1 1 50% !important; min-width: 140px !important; }
-        header img { max-width: 150px !important; }
-        
-        /* Translation Widget stays top right */
-        header > div:last-child { flex: 1 1 50% !important; justify-content: flex-end !important; }
-        
-        /* Nav Links drop to the bottom and scroll horizontally */
-        header > nav { flex: 1 1 100% !important; order: 3 !important; justify-content: flex-start !important; overflow-x: auto !important; padding-top: 10px !important; padding-bottom: 5px !important; gap: 20px !important; -webkit-overflow-scrolling: touch; border-top: 1px solid rgba(255,255,255,0.1); }
-        header > nav a { font-size: 14px !important; }
+        .site-header { flex-wrap: wrap; padding: 15px 5% 5px 5%; gap: 10px 0; }
+        .header-logo { flex: 1 1 50%; min-width: 140px; }
+        .header-actions { flex: 1 1 50%; justify-content: flex-end; }
+        .header-nav { flex: 1 1 100%; order: 3; margin-top: 10px; padding: 12px 0; justify-content: flex-start; overflow-x: auto; -webkit-overflow-scrolling: touch; border-top: 1px solid rgba(255,255,255,0.1); gap: 20px; }
+        .header-nav::-webkit-scrollbar { display: none; }
       }
       
-      /* Styling to make the Google Translate widget match the dark/neon theme */
+      /* Google Translate specific styling */
       .goog-te-banner-frame.skiptranslate { display: none !important; }
       body { top: 0px !important; }
-      .goog-te-gadget { color: transparent !important; font-size: 0 !important; }
-      .goog-te-gadget .goog-te-combo { background-color: #0a0a0a; color: #00ff88; border: 1px solid #00ff88; border-radius: 8px; padding: 6px; font-family: inherit; font-size: 14px; outline: none; cursor: pointer; }
+      .goog-te-gadget { color: transparent !important; font-size: 0px !important; margin: 0; }
+      .goog-te-gadget .goog-te-combo { background-color: #0a0a0a; color: #00ff88; border: 1px solid #00ff88; border-radius: 6px; padding: 6px; font-family: inherit; font-size: 13px; outline: none; cursor: pointer; }
     </style>
 </head>
 <body style="padding-bottom: 50px;">
     <!-- Header -->
-    <header style="display: flex !important; justify-content: space-between !important; align-items: center !important; width: 100% !important; padding: 15px 4% !important; box-sizing: border-box !important; overflow: hidden !important; background: var(--bg-header) !important; position: fixed !important; top: 0 !important; left: 0 !important; z-index: 1000 !important; border-bottom: 1px solid var(--card-border) !important;">
-
-      <div style="flex: 1 !important; display: flex !important; justify-content: flex-start !important; min-width: 220px !important; align-items: center !important;">
-        <div style="display: flex !important; align-items: center !important; gap: 10px !important;">
-          <img src="https://unavatar.io/x/criptoagg" alt="Logo" style="height: 40px !important; width: 40px !important; border-radius: 50% !important; object-fit: cover !important;">
-          <h1 style="margin: 0 !important; font-family: 'Orbitron', sans-serif !important; font-size: 18px !important; font-weight: 800 !important; letter-spacing: 1px !important; display: flex !important; gap: 5px !important;">
-            <span style="color: white !important;">CRYPTO</span><span style="color: var(--text-neon-green) !important;">AGGREGATOR</span>
-          </h1>
-        </div>
+    <header class="site-header">
+      <div class="header-logo">
+        <img src="https://unavatar.io/x/criptoagg" alt="Logo">
+        <h1>
+          <span class="text-white">CRYPTO</span><span class="text-neon">AGGREGATOR</span>
+        </h1>
       </div>
 
-      <nav style="flex: 2 !important; display: flex !important; justify-content: center !important; align-items: center !important; gap: 1.5vw !important; white-space: nowrap !important;">
-        <a href="#p2p" style="color: white !important; text-decoration: none !important; font-size: 14px !important; font-weight: 600 !important; transition: 0.3s !important; text-transform: uppercase !important;">P2P</a>
-        <a href="#exchanges" style="color: white !important; text-decoration: none !important; font-size: 14px !important; font-weight: 600 !important; transition: 0.3s !important; text-transform: uppercase !important;">Exchanges</a>
-        <a href="#dexs" style="color: white !important; text-decoration: none !important; font-size: 14px !important; font-weight: 600 !important; transition: 0.3s !important; text-transform: uppercase !important;">DEXs</a>
-        <a href="#bridges" style="color: white !important; text-decoration: none !important; font-size: 14px !important; font-weight: 600 !important; transition: 0.3s !important; text-transform: uppercase !important;">Bridges</a>
-        <a href="#cards" style="color: white !important; text-decoration: none !important; font-size: 14px !important; font-weight: 600 !important; transition: 0.3s !important; text-transform: uppercase !important;">Cards</a>
-        <a href="#banks" style="color: white !important; text-decoration: none !important; font-size: 14px !important; font-weight: 600 !important; transition: 0.3s !important; text-transform: uppercase !important;">Banks</a>
-        <a href="#hot-wallets" style="color: white !important; text-decoration: none !important; font-size: 14px !important; font-weight: 600 !important; transition: 0.3s !important; text-transform: uppercase !important;">Wallets</a>
-        <a href="#trackers" style="color: white !important; text-decoration: none !important; font-size: 14px !important; font-weight: 600 !important; transition: 0.3s !important; text-transform: uppercase !important;">Trackers</a>
+      <nav class="header-nav">
+        <a href="#p2p">P2P</a>
+        <a href="#exchanges">Exchanges</a>
+        <a href="#dexs">DEXs</a>
+        <a href="#bridges">Bridges</a>
+        <a href="#cards">Cards</a>
+        <a href="#banks">Banks</a>
+        <a href="#hot-wallets">Wallets</a>
+        <a href="#trackers">Trackers</a>
       </nav>
 
-      <div style="flex: 1 !important; display: flex !important; justify-content: flex-end !important; align-items: center !important; gap: 15px !important; min-width: 150px !important;">
-        <div class="lang-container" style="position: relative !important; display: inline-block !important;">
-          <div id="google_translate_element"></div>
-        </div>
-        
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu" style="background: none !important; border: none !important; cursor: pointer !important; display: none !important;">
-            <span style="display: block !important; width: 25px !important; height: 2px !important; background: white !important; margin: 5px 0 !important;"></span>
-            <span style="display: block !important; width: 25px !important; height: 2px !important; background: white !important; margin: 5px 0 !important;"></span>
-            <span style="display: block !important; width: 25px !important; height: 2px !important; background: white !important; margin: 5px 0 !important;"></span>
+      <div class="header-actions">
+        <div id="google_translate_element"></div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu" style="background: none; border: none; cursor: pointer; display: none;">
+            <span style="display: block; width: 25px; height: 2px; background: white; margin: 5px 0;"></span>
+            <span style="display: block; width: 25px; height: 2px; background: white; margin: 5px 0;"></span>
+            <span style="display: block; width: 25px; height: 2px; background: white; margin: 5px 0;"></span>
         </button>
       </div>
-
     </header>
 
     <!-- Mobile Menu Overlay -->
