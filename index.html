@@ -157,15 +157,19 @@
       .mobile-menu-btn { background: none; border: none; cursor: pointer; display: none; padding: 0; }
       .mobile-menu-btn span { display: block; width: 25px; height: 2px; background: white; margin: 5px 0; }
 
-      /* Bulletproof Translate Wrapper */
-      .translate-wrapper { display: flex; align-items: center; gap: 5px; background: rgba(0, 255, 136, 0.1); padding: 4px 10px; border-radius: 20px; border: 1px solid rgba(0, 255, 136, 0.3); }
+      /* Translate Wrapper */
+      .translate-wrapper { display: flex; align-items: center; gap: 8px; background: rgba(0,255,136,0.08); padding: 5px 12px; border-radius: 20px; border: 1px solid rgba(0,255,136,0.3); }
+      .lang-btns { display: flex; align-items: center; gap: 2px; }
+      .lang-btn { background: none; border: none; color: #00ff88; font-size: 12px; font-weight: 700; cursor: pointer; padding: 2px 5px; border-radius: 4px; opacity: 0.45; transition: opacity 0.2s, background 0.2s; font-family: inherit; letter-spacing: 0.5px; }
+      .lang-btn:hover { opacity: 0.8; }
+      .lang-btn.active { opacity: 1; background: rgba(0,255,136,0.15); }
+      .lang-divider { color: rgba(0,255,136,0.35); font-size: 11px; user-select: none; }
 
-      /* Safe Google Translate Styling */
+      /* Hide GT banner and raw widget — keep element in DOM for GT to attach to */
       .goog-te-banner-frame.skiptranslate { display: none !important; }
       body { top: 0px !important; }
-      .goog-te-gadget { color: transparent !important; font-size: 0px !important; margin: 0 !important; }
-      .goog-te-gadget .goog-te-combo { background-color: transparent; color: #00ff88; border: none; font-size: 13px; font-weight: 600; outline: none; cursor: pointer; text-transform: uppercase; margin: 0; }
-      .goog-te-gadget .goog-te-combo option { background-color: #000; color: #fff; }
+      #google_translate_element { display: none !important; }
+      .goog-te-gadget { font-size: 0 !important; }
     </style>
 </head>
 <body style="padding-bottom: 50px;">
@@ -192,7 +196,12 @@
       <div class="header-actions">
         <div class="translate-area">
           <div class="translate-wrapper">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00ff88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#00ff88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <div class="lang-btns">
+              <button class="lang-btn active" data-lang="pt" onclick="setLang('pt')">PT</button>
+              <span class="lang-divider">|</span>
+              <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+            </div>
             <div id="google_translate_element"></div>
           </div>
         </div>
@@ -1889,9 +1898,41 @@
       function googleTranslateElementInit() {
         new google.translate.TranslateElement({
           pageLanguage: 'pt',
-          includedLanguages: 'en,es,pt'
+          includedLanguages: 'en,pt'
         }, 'google_translate_element');
       }
+
+      function setLang(lang) {
+        // Update button active states
+        document.querySelectorAll('.lang-btn[data-lang]').forEach(function(b) {
+          b.classList.toggle('active', b.dataset.lang === lang);
+        });
+
+        var select = document.querySelector('.goog-te-combo');
+        if (select) {
+          select.value = lang === 'pt' ? '' : lang;
+          select.dispatchEvent(new Event('change'));
+        } else {
+          // GT not ready yet — use cookie + reload fallback
+          if (lang === 'pt') {
+            document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+            document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + location.hostname;
+          } else {
+            document.cookie = 'googtrans=/pt/' + lang + '; path=/';
+            document.cookie = 'googtrans=/pt/' + lang + '; path=/; domain=.' + location.hostname;
+          }
+          window.location.reload();
+        }
+      }
+
+      // Sync button state on load based on active GT cookie
+      document.addEventListener('DOMContentLoaded', function() {
+        var match = document.cookie.match(/googtrans=\/pt\/([a-z]+)/);
+        var activeLang = match ? match[1] : 'pt';
+        document.querySelectorAll('.lang-btn[data-lang]').forEach(function(b) {
+          b.classList.toggle('active', b.dataset.lang === activeLang);
+        });
+      });
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
