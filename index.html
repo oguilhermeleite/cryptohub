@@ -157,11 +157,15 @@
       .mobile-menu-btn { background: none; border: none; cursor: pointer; display: none; padding: 0; }
       .mobile-menu-btn span { display: block; width: 25px; height: 2px; background: white; margin: 5px 0; }
 
-      /* Google Translate specific styling */
+      /* Bulletproof Translate Wrapper */
+      .translate-wrapper { display: flex; align-items: center; gap: 5px; background: rgba(0, 255, 136, 0.1); padding: 4px 10px; border-radius: 20px; border: 1px solid rgba(0, 255, 136, 0.3); }
+
+      /* Safe Google Translate Styling */
       .goog-te-banner-frame.skiptranslate { display: none !important; }
       body { top: 0px !important; }
-      .goog-te-gadget { color: transparent !important; font-size: 0px !important; margin: 0; }
-      .goog-te-gadget .goog-te-combo { background-color: #0a0a0a; color: #00ff88; border: 1px solid #00ff88; border-radius: 6px; padding: 6px; font-family: inherit; font-size: 13px; outline: none; cursor: pointer; }
+      .goog-te-gadget { color: transparent !important; font-size: 0px !important; margin: 0 !important; }
+      .goog-te-gadget .goog-te-combo { background-color: transparent; color: #00ff88; border: none; font-size: 13px; font-weight: 600; outline: none; cursor: pointer; text-transform: uppercase; margin: 0; }
+      .goog-te-gadget .goog-te-combo option { background-color: #000; color: #fff; }
     </style>
 </head>
 <body style="padding-bottom: 50px;">
@@ -186,7 +190,12 @@
       </nav>
 
       <div class="header-actions">
-        <div id="google_translate_element"></div>
+        <div class="translate-area">
+          <div class="translate-wrapper">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00ff88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <div id="google_translate_element"></div>
+          </div>
+        </div>
         <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
             <span></span>
             <span></span>
@@ -1880,8 +1889,7 @@
       function googleTranslateElementInit() {
         new google.translate.TranslateElement({
           pageLanguage: 'pt',
-          includedLanguages: 'en,es,pt', 
-          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          includedLanguages: 'en,es,pt'
         }, 'google_translate_element');
       }
     </script>
