@@ -195,15 +195,15 @@
         opacity: 1;
       }
       .lang-modal-box { 
-        background: #0a0a0a; 
-        border: 1px solid rgba(230, 255, 0, 0.2); 
+        background: #000000; 
+        border: 1px solid rgba(255, 255, 0, 0.2); 
         border-radius: 12px; 
         padding: 40px 30px; 
         width: 90%; 
         max-width: 360px; 
         text-align: center; 
         position: relative; 
-        box-shadow: 0 10px 40px rgba(0,0,0,0.8), 0 0 20px rgba(230, 255, 0, 0.05); 
+        box-shadow: 0 10px 40px rgba(0,0,0,0.8), 0 0 20px rgba(255, 255, 0, 0.05); 
         transform: translateY(20px);
         transition: transform 0.3s ease;
       }
@@ -216,16 +216,16 @@
         right: 20px; 
         background: transparent; 
         border: none; 
-        color: #666; 
+        color: #FFFFFF; 
         font-size: 20px; 
         cursor: pointer; 
         transition: color 0.3s ease;
       }
       .lang-modal-close:hover {
-        color: #fff;
+        color: #FFFF00;
       }
       .lang-modal-title { 
-        color: #e6ff00; 
+        color: #FFFF00; 
         font-size: 24px; 
         font-weight: 900; 
         margin: 0 0 8px 0; 
@@ -234,12 +234,11 @@
         letter-spacing: 2px;
       }
       .lang-modal-subtitle { 
-        color: #888; 
+        color: #FFFFFF; 
         font-size: 13px; 
         margin-bottom: 30px; 
         font-weight: 500;
-        text-transform: uppercase;
-        letter-spacing: 1px;
+        letter-spacing: 0.5px;
       }
       .lang-options {
         display: flex;
@@ -249,31 +248,41 @@
       .lang-option-btn { 
         display: flex; 
         align-items: center;
-        justify-content: center;
-        gap: 12px;
+        justify-content: space-between;
         width: 100%; 
         background: rgba(255,255,255,0.03); 
-        color: #fff; 
+        color: #FFFFFF; 
         border: 1px solid #222; 
         border-radius: 10px; 
-        padding: 16px; 
+        padding: 16px 20px; 
         font-size: 16px; 
         font-weight: 700; 
         cursor: pointer; 
         transition: all 0.3s ease; 
         font-family: 'Inter', sans-serif;
-        text-transform: uppercase;
-        letter-spacing: 1px;
+      }
+      .lang-option-btn .btn-content {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .lang-option-btn .check-icon {
+        display: none;
+        color: #000;
+        font-size: 18px;
       }
       .lang-option-btn:hover { 
-        border-color: rgba(230, 255, 0, 0.4); 
-        background: rgba(230, 255, 0, 0.05);
+        border-color: rgba(255, 255, 0, 0.4); 
+        background: rgba(255, 255, 0, 0.05);
       }
       .lang-option-btn.active { 
-        background: #e6ff00; 
+        background: #FFFF00; 
         color: #000; 
-        border-color: #e6ff00; 
-        box-shadow: 0 0 15px rgba(230, 255, 0, 0.3);
+        border-color: #FFFF00; 
+        box-shadow: 0 0 15px rgba(255, 255, 0, 0.3);
+      }
+      .lang-option-btn.active .check-icon {
+        display: block;
       }
       .lang-flag {
         width: 24px;
@@ -331,12 +340,18 @@
         <p class="lang-modal-subtitle" data-i18n="langModalSubtitle">Selecione o idioma de sua preferência</p>
         <div class="lang-options">
           <button class="lang-option-btn active" data-lang="pt">
-            <img src="https://flagcdn.com/w40/br.png" alt="Português" class="lang-flag">
-            PORTUGUÊS
+            <div class="btn-content">
+              <img src="https://flagcdn.com/w40/br.png" alt="Português" class="lang-flag">
+              <span>Português</span>
+            </div>
+            <span class="check-icon">✓</span>
           </button>
           <button class="lang-option-btn" data-lang="en">
-            <img src="https://flagcdn.com/w40/us.png" alt="English" class="lang-flag">
-            INGLÊS
+            <div class="btn-content">
+              <img src="https://flagcdn.com/w40/us.png" alt="English" class="lang-flag">
+              <span>Inglês</span>
+            </div>
+            <span class="check-icon">✓</span>
           </button>
         </div>
       </div>
