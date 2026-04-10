@@ -157,37 +157,129 @@
       .mobile-menu-btn { background: none; border: none; cursor: pointer; display: none; padding: 0; }
       .mobile-menu-btn span { display: block; width: 25px; height: 2px; background: white; margin: 5px 0; }
 
-      /* Glowing Language Pill Button */
-      #langSwitcherPill {
+      /* Language Modal Trigger Globe Icon */
+      #lang-modal-trigger {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #fff;
         display: flex;
         align-items: center;
-        gap: 8px;
-        padding: 8px 18px;
-        border-radius: 40px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        background: linear-gradient(90deg, #00ff88 0%, #00b8ff 100%);
-        box-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
-        color: #0a0a0a;
-        font-weight: 800;
-        font-size: 13px;
+        justify-content: center;
+        padding: 8px;
+        transition: transform 0.3s ease, color 0.3s ease;
+      }
+      #lang-modal-trigger:hover {
+        transform: scale(1.1);
+        color: #e6ff00;
+      }
+
+      /* Language Modal Overlay */
+      .lang-modal-overlay { 
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%; 
+        background: rgba(0, 0, 0, 0.85); 
+        backdrop-filter: blur(8px); 
+        z-index: 9999; 
+        display: none; 
+        justify-content: center; 
+        align-items: center; 
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      .lang-modal-overlay.active {
+        display: flex;
+        opacity: 1;
+      }
+      .lang-modal-box { 
+        background: #0a0a0a; 
+        border: 1px solid rgba(230, 255, 0, 0.2); 
+        border-radius: 12px; 
+        padding: 40px 30px; 
+        width: 90%; 
+        max-width: 360px; 
+        text-align: center; 
+        position: relative; 
+        box-shadow: 0 10px 40px rgba(0,0,0,0.8), 0 0 20px rgba(230, 255, 0, 0.05); 
+        transform: translateY(20px);
+        transition: transform 0.3s ease;
+      }
+      .lang-modal-overlay.active .lang-modal-box {
+        transform: translateY(0);
+      }
+      .lang-modal-close { 
+        position: absolute; 
+        top: 20px; 
+        right: 20px; 
+        background: transparent; 
+        border: none; 
+        color: #666; 
+        font-size: 20px; 
+        cursor: pointer; 
+        transition: color 0.3s ease;
+      }
+      .lang-modal-close:hover {
+        color: #fff;
+      }
+      .lang-modal-title { 
+        color: #e6ff00; 
+        font-size: 24px; 
+        font-weight: 900; 
+        margin: 0 0 8px 0; 
+        text-transform: uppercase; 
+        font-family: 'Orbitron', sans-serif;
+        letter-spacing: 2px;
+      }
+      .lang-modal-subtitle { 
+        color: #888; 
+        font-size: 13px; 
+        margin-bottom: 30px; 
+        font-weight: 500;
         text-transform: uppercase;
-        border: none;
-        outline: none;
-        white-space: nowrap;
+        letter-spacing: 1px;
+      }
+      .lang-options {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .lang-option-btn { 
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        width: 100%; 
+        background: rgba(255,255,255,0.03); 
+        color: #fff; 
+        border: 1px solid #222; 
+        border-radius: 10px; 
+        padding: 16px; 
+        font-size: 16px; 
+        font-weight: 700; 
+        cursor: pointer; 
+        transition: all 0.3s ease; 
         font-family: 'Inter', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
       }
-      #langSwitcherPill:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 0 30px rgba(0, 255, 136, 0.8);
+      .lang-option-btn:hover { 
+        border-color: rgba(230, 255, 0, 0.4); 
+        background: rgba(230, 255, 0, 0.05);
       }
-      #langSwitcherPill svg {
-        flex-shrink: 0;
+      .lang-option-btn.active { 
+        background: #e6ff00; 
+        color: #000; 
+        border-color: #e6ff00; 
+        box-shadow: 0 0 15px rgba(230, 255, 0, 0.3);
       }
-      #langSwitcherPill .arrow-icon {
-        font-size: 12px;
-        margin-left: 2px;
-        opacity: 0.8;
+      .lang-flag {
+        width: 24px;
+        height: auto;
+        border-radius: 3px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
       }
 
       /* Hide GT banner — keep element accessible for GT to initialise */
@@ -219,11 +311,9 @@
       </nav>
 
       <div class="header-actions">
-        <div id="langSwitcherPill" onclick="toggleLanguage()">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-          <span id="langText">English</span>
-          <span class="arrow-icon">▼</span>
-        </div>
+        <button id="lang-modal-trigger" aria-label="Select Language">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+        </button>
         <div id="google_translate_element"></div>
         <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
             <span></span>
@@ -232,6 +322,25 @@
         </button>
       </div>
     </header>
+
+    <!-- Language Selection Modal -->
+    <div id="languageModal" class="lang-modal-overlay">
+      <div class="lang-modal-box">
+        <button id="closeLangModal" class="lang-modal-close" aria-label="Close Modal">✕</button>
+        <h3 class="lang-modal-title" data-i18n="langModalTitle">IDIOMA</h3>
+        <p class="lang-modal-subtitle" data-i18n="langModalSubtitle">Selecione o idioma de sua preferência</p>
+        <div class="lang-options">
+          <button class="lang-option-btn active" data-lang="pt">
+            <img src="https://flagcdn.com/w40/br.png" alt="Português" class="lang-flag">
+            PORTUGUÊS
+          </button>
+          <button class="lang-option-btn" data-lang="en">
+            <img src="https://flagcdn.com/w40/us.png" alt="English" class="lang-flag">
+            INGLÊS
+          </button>
+        </div>
+      </div>
+    </div>
 
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay" id="mobileMenuOverlay">
@@ -1917,6 +2026,8 @@
     <script type="text/javascript">
       const translations = {
         'pt': {
+          'langModalTitle': 'IDIOMA',
+          'langModalSubtitle': 'Selecione o idioma de sua preferência',
           'p2pTitle': 'P2P',
           'exchangesTitle': 'Exchanges',
           'dexsTitle': 'DEXs',
@@ -1983,10 +2094,11 @@
           'newsletterSuccess': '✓ Obrigado por se inscrever!',
           'footerRights': 'Todos os direitos reservados.',
           'toastCopied': 'Cupom copiado com sucesso!',
-          'navHome': 'Home',
-          'langLabel': 'English'
+          'navHome': 'Home'
         },
         'en': {
+          'langModalTitle': 'LANGUAGE',
+          'langModalSubtitle': 'Select your preferred language',
           'p2pTitle': 'P2P',
           'exchangesTitle': 'Exchanges',
           'dexsTitle': 'DEXs',
@@ -2053,8 +2165,7 @@
           'newsletterSuccess': '✓ Thanks for subscribing!',
           'footerRights': 'All rights reserved.',
           'toastCopied': 'Coupon copied successfully!',
-          'navHome': 'Home',
-          'langLabel': 'Português'
+          'navHome': 'Home'
         }
       };
 
@@ -2075,21 +2186,59 @@
           }
         });
 
-        const langTextEl = document.getElementById('langText');
-        if (langTextEl) {
-          langTextEl.innerText = translations[currentLang]['langLabel'];
-        }
+        // Update active class in modal
+        document.querySelectorAll('.lang-option-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.getAttribute('data-lang') === currentLang);
+        });
 
         document.documentElement.setAttribute('lang', currentLang === 'pt' ? 'pt-BR' : 'en');
       }
 
-      function toggleLanguage() {
-        currentLang = currentLang === 'pt' ? 'en' : 'pt';
+      function setLanguage(lang) {
+        currentLang = lang;
         localStorage.setItem('preferredLang', currentLang);
         updateContent();
+        
+        // Visual feedback before closing
+        setTimeout(() => {
+          document.getElementById('languageModal').classList.remove('active');
+        }, 300);
       }
 
-      document.addEventListener('DOMContentLoaded', updateContent);
+      document.addEventListener('DOMContentLoaded', () => {
+        updateContent();
+
+        // Modal triggers
+        const trigger = document.getElementById('lang-modal-trigger');
+        const modal = document.getElementById('languageModal');
+        const closeBtn = document.getElementById('closeLangModal');
+
+        if (trigger) {
+          trigger.addEventListener('click', () => {
+            modal.classList.add('active');
+          });
+        }
+
+        if (closeBtn) {
+          closeBtn.addEventListener('click', () => {
+            modal.classList.remove('active');
+          });
+        }
+
+        // Close modal on overlay click
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            modal.classList.remove('active');
+          }
+        });
+
+        // Language buttons click
+        document.querySelectorAll('.lang-option-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            setLanguage(btn.getAttribute('data-lang'));
+          });
+        });
+      });
     </script>
 </body>
 </html>
