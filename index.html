@@ -20,7 +20,7 @@
     <meta name="author" content="CRYPTO AGGREGATOR">
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="cryptoaggregator-legitimate-platform">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://*.clarity.ms https://s3.tradingview.com https://*.tradingview.com https://*.google.com https://*.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.googleapis.com https://*.google.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://*.clarity.ms https://*.tradingview.com https://*.googleapis.com https://*.google.com; frame-src 'self' https://*.tradingview.com https://*.google.com;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://*.clarity.ms https://s3.tradingview.com https://*.tradingview.com https://translate.google.com https://translate.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://translate.googleapis.com https://translate.google.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://*.clarity.ms https://*.tradingview.com https://translate.googleapis.com; frame-src 'self' https://*.tradingview.com https://translate.google.com;">
 
     <link rel="stylesheet" href="css/main.css?v=20260308">
 
@@ -1898,55 +1898,29 @@
       function googleTranslateElementInit() {
         new google.translate.TranslateElement({
           pageLanguage: 'pt',
-          includedLanguages: 'en,pt',
-          autoDisplay: false
+          includedLanguages: 'en,pt'
         }, 'google_translate_element');
       }
 
       function setLang(lang) {
-        // Update button UI
-        document.querySelectorAll('.lang-btn[data-lang]').forEach(function(b) {
-          b.classList.toggle('active', b.dataset.lang === lang);
-        });
-
         if (lang === 'pt') {
-          // Restore original: clear cookie and reload (most reliable)
+          // Clear translation cookie and restore original
           document.cookie = 'googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC;';
           document.cookie = 'googtrans=; path=/; domain=.' + location.hostname + '; expires=Thu, 01 Jan 1970 00:00:00 UTC;';
-          window.location.reload();
-          return;
+        } else {
+          // Set translation target language
+          document.cookie = 'googtrans=/pt/' + lang + '; path=/';
+          document.cookie = 'googtrans=/pt/' + lang + '; path=/; domain=.' + location.hostname;
         }
-
-        // Persist language choice in cookie
-        document.cookie = 'googtrans=/pt/' + lang + '; path=/';
-        document.cookie = 'googtrans=/pt/' + lang + '; path=/; domain=.' + location.hostname;
-
-        // Method 1: doGTranslate — internal GT API, translates without reload
-        if (typeof doGTranslate === 'function') {
-          doGTranslate('pt|' + lang);
-          return;
-        }
-
-        // Method 2: drive the hidden select element
-        var select = document.querySelector('.goog-te-combo');
-        if (select) {
-          select.value = lang;
-          var evt = document.createEvent('HTMLEvents');
-          evt.initEvent('change', true, true);
-          select.dispatchEvent(evt);
-          return;
-        }
-
-        // Method 3: reload — GT will pick up the cookie on next load
         window.location.reload();
       }
 
-      // Sync active button from cookie on page load
+      // Sync button state on load based on active GT cookie
       document.addEventListener('DOMContentLoaded', function() {
-        var m = document.cookie.match(/googtrans=\/pt\/([a-z]{2})/);
-        var active = (m && m[1] !== 'pt') ? m[1] : 'pt';
+        var match = document.cookie.match(/googtrans=\/pt\/([a-z]+)/);
+        var activeLang = match ? match[1] : 'pt';
         document.querySelectorAll('.lang-btn[data-lang]').forEach(function(b) {
-          b.classList.toggle('active', b.dataset.lang === active);
+          b.classList.toggle('active', b.dataset.lang === activeLang);
         });
       });
     </script>
