@@ -2132,7 +2132,16 @@
           'newsletterSuccess': '✓ Obrigado por se inscrever!',
           'footerRights': 'Todos os direitos reservados.',
           'toastCopied': 'Cupom copiado com sucesso!',
-          'navHome': 'Home'
+          'navHome': 'Home',
+          'dexsSubtitle': 'Exchanges descentralizadas para trading sem intermediários',
+          'bridgesSubtitle': 'Transfira ativos entre diferentes blockchains',
+          'descCompreCriptoFeatured': 'Facilita a compra de criptomoedas de forma simples e segura',
+          'descCompreCriptoShort': 'Compre Cripto facilita a compra de criptomoedas de forma simples e segura.',
+          'descPagCrypto': 'Pag Finance oferece soluções completas para pagamentos com criptomoedas no Brasil.',
+          'descKryptera': 'Negociação P2P de criptomoedas com segurança e praticidade.<br><strong>Cupom <span class="clickable-coupon" data-code="MQM">MQM <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span> para 10% de desconto.</strong>',
+          'descCamilaP2P': 'Especialista brasileira em P2P. Com taxas baixas e suporte para +1.000 Criptomoedas.<br><strong>Cupom <span class="clickable-coupon" data-code="MQM">MQM <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span> para desconto.</strong>',
+          'descP2Pme': 'P2P.me é uma plataforma P2P confiável para compra e venda de criptomoedas com segurança e rapidez.',
+          'desc4PFinance': 'P2P on-chain e pagamento de boletos.<br><strong>Cupom <span class="clickable-coupon" data-code="DOGDAMASSA">DOGDAMASSA <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span> para desconto.</strong>'
         },
         'en': {
           'langModalTitle': 'LANGUAGE',
@@ -2203,7 +2212,16 @@
           'newsletterSuccess': '✓ Thanks for subscribing!',
           'footerRights': 'All rights reserved.',
           'toastCopied': 'Coupon copied successfully!',
-          'navHome': 'Home'
+          'navHome': 'Home',
+          'dexsSubtitle': 'Decentralized exchanges for trading without intermediaries',
+          'bridgesSubtitle': 'Transfer assets between different blockchains',
+          'descCompreCriptoFeatured': 'Facilitates the purchase of cryptocurrencies in a simple and secure way',
+          'descCompreCriptoShort': 'Compre Cripto facilitates the purchase of cryptocurrencies in a simple and secure way.',
+          'descPagCrypto': 'Pag Finance offers complete solutions for crypto payments in Brazil.',
+          'descKryptera': 'P2P trading of cryptocurrencies with security and practicality.<br><strong>Coupon <span class="clickable-coupon" data-code="MQM">MQM <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span> for 10% discount.</strong>',
+          'descCamilaP2P': 'Brazilian P2P specialist. With low fees and support for +1,000 Cryptocurrencies.<br><strong>Coupon <span class="clickable-coupon" data-code="MQM">MQM <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span> for discount.</strong>',
+          'descP2Pme': 'P2P.me is a reliable P2P platform for buying and selling cryptocurrencies safely and quickly.',
+          'desc4PFinance': 'P2P on-chain and bill payments.<br><strong>Coupon <span class="clickable-coupon" data-code="DOGDAMASSA">DOGDAMASSA <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span> for discount.</strong>'
         }
       };
 
@@ -2213,7 +2231,7 @@
         document.querySelectorAll('[data-i18n]').forEach(el => {
           const key = el.getAttribute('data-i18n');
           if (translations[currentLang][key]) {
-            el.innerText = translations[currentLang][key];
+            el.innerHTML = translations[currentLang][key];
           }
         });
 
@@ -2229,7 +2247,27 @@
           btn.classList.toggle('active', btn.getAttribute('data-lang') === currentLang);
         });
 
+        // Update active class in mobile language selector
+        document.querySelectorAll('.lang-btn[data-lang-switch]').forEach(btn => {
+          btn.classList.toggle('active', btn.getAttribute('data-lang-switch') === currentLang);
+        });
+
         document.documentElement.setAttribute('lang', currentLang === 'pt' ? 'pt-BR' : 'en');
+
+        // Re-bind coupon click handlers after innerHTML may have replaced nodes
+        bindCouponHandlers();
+      }
+
+      function bindCouponHandlers() {
+        document.querySelectorAll('.clickable-coupon').forEach(coupon => {
+          coupon.addEventListener('click', function(e) {
+            e.preventDefault();
+            const code = this.getAttribute('data-code');
+            navigator.clipboard.writeText(code).then(() => {
+              if (typeof showToast === 'function') showToast('"' + code + '" copiado! 🚀');
+            }).catch(() => {});
+          });
+        });
       }
 
       function setLanguage(lang) {
@@ -2270,10 +2308,17 @@
           }
         });
 
-        // Language buttons click
+        // Language buttons click (modal)
         document.querySelectorAll('.lang-option-btn').forEach(btn => {
           btn.addEventListener('click', () => {
             setLanguage(btn.getAttribute('data-lang'));
+          });
+        });
+
+        // Mobile language buttons click
+        document.querySelectorAll('.lang-btn[data-lang-switch]').forEach(btn => {
+          btn.addEventListener('click', () => {
+            setLanguage(btn.getAttribute('data-lang-switch'));
           });
         });
 
