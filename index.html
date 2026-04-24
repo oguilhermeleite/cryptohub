@@ -33,6 +33,32 @@
             visibility: visible !important;
             display: block !important;
         }
+
+        
+        /* Thinner TradingView Ticker at the bottom */
+        .tradingview-widget-container {
+            height: 32px !important;
+            overflow: hidden !important;
+            display: flex !important;
+            align-items: center !important;
+            background: #131722 !important; /* TV default background */
+            position: fixed !important;
+            bottom: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            z-index: 999999 !important;
+        }
+        
+        .tradingview-widget-container iframe {
+            height: 32px !important;
+            vertical-align: middle !important;
+        }
+
+        /* Adjust body padding-bottom for the thinner ticker */
+        body {
+            padding-bottom: 32px !important;
+        }
+
     </style>
 
     <!-- SCROLLBAR FIX: Only hide horizontal scrollbars on card containers -->
@@ -1697,7 +1723,7 @@
                     <!-- Moshe -->
                     <div class="platform-card-final">
                         <div class="card-logo-container">
-                            <img src="https://d335luupugsy2.cloudfront.net/cms/files/1075026/1759969521/$76udpx5a6wm" alt="Moshe" style="width: 100%; max-height: 85px; object-fit: contain; background-color: #F8F9FA; padding: 12px; border-radius: 8px; margin-bottom: 15px;">
+                            <img src="https://d335luupugsy2.cloudfront.net/cms/files/1075026/1759969521/$76udpx5a6wm" alt="Moshe" style="width: 60px; height: 60px; object-fit: cover; object-position: 1% center; border-radius: 50%; background-color: #F8F9FA; padding: 5px; margin-bottom: 15px;">
                         </div>
                         <h3 class="card-final-title">Moshe</h3>
                         <p data-i18n="desc_moshe" class="card-final-description">
