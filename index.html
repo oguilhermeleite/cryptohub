@@ -184,145 +184,12 @@
         .logo-container img { max-width: 160px; }
       }
       
-      /* Language Modal Trigger Globe Icon */
-      #lang-modal-trigger {
-        background: none;
-        border: none;
-        cursor: pointer;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 8px;
-        transition: transform 0.3s ease, color 0.3s ease;
-      }
-      #lang-modal-trigger:hover {
-        transform: scale(1.1);
-        color: #e6ff00;
-      }
-
-      /* Language Modal Overlay */
-      .lang-modal-overlay { 
-        position: fixed; 
-        top: 0; 
-        left: 0; 
-        width: 100%; 
-        height: 100%; 
-        background: rgba(0, 0, 0, 0.85); 
-        backdrop-filter: blur(8px); 
-        z-index: 9999; 
-        display: none; 
-        justify-content: center; 
-        align-items: center; 
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-      .lang-modal-overlay.active {
-        display: flex;
-        opacity: 1;
-      }
-      .lang-modal-box { 
-        background: #000000; 
-        border: 1px solid rgba(255, 255, 0, 0.2); 
-        border-radius: 12px; 
-        padding: 40px 30px; 
-        width: 90%; 
-        max-width: 360px; 
-        text-align: center; 
-        position: relative; 
-        box-shadow: 0 10px 40px rgba(0,0,0,0.8), 0 0 20px rgba(255, 255, 0, 0.05); 
-        transform: translateY(20px);
-        transition: transform 0.3s ease;
-      }
-      .lang-modal-overlay.active .lang-modal-box {
-        transform: translateY(0);
-      }
-      .lang-modal-close { 
-        position: absolute; 
-        top: 20px; 
-        right: 20px; 
-        background: transparent; 
-        border: none; 
-        color: #FFFFFF; 
-        font-size: 20px; 
-        cursor: pointer; 
-        transition: color 0.3s ease;
-      }
-      .lang-modal-close:hover {
-        color: #FFFF00;
-      }
-      .lang-modal-title { 
-        color: #FFFF00; 
-        font-size: 24px; 
-        font-weight: 900; 
-        margin: 0 0 8px 0; 
-        text-transform: uppercase; 
-        font-family: 'Orbitron', sans-serif;
-        letter-spacing: 2px;
-      }
-      .lang-modal-subtitle { 
-        color: #FFFFFF; 
-        font-size: 13px; 
-        margin-bottom: 30px; 
-        font-weight: 500;
-        letter-spacing: 0.5px;
-      }
-      .lang-options {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-      }
-      .lang-option-btn { 
-        display: flex; 
-        align-items: center;
-        justify-content: space-between;
-        width: 100%; 
-        background: rgba(255,255,255,0.03); 
-        color: #FFFFFF; 
-        border: 1px solid #222; 
-        border-radius: 10px; 
-        padding: 16px 20px; 
-        font-size: 16px; 
-        font-weight: 700; 
-        cursor: pointer; 
-        transition: all 0.3s ease; 
-        font-family: 'Inter', sans-serif;
-      }
-      .lang-option-btn .btn-content {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-      .lang-option-btn .check-icon {
-        display: none;
-        color: #000;
-        font-size: 18px;
-      }
-      .lang-option-btn:hover { 
-        border-color: rgba(255, 255, 0, 0.4); 
-        background: rgba(255, 255, 0, 0.05);
-      }
-      .lang-option-btn.active { 
-        background: #FFFF00; 
-        color: #000; 
-        border-color: #FFFF00; 
-        box-shadow: 0 0 15px rgba(255, 255, 0, 0.3);
-      }
-      .lang-option-btn.active .check-icon {
-        display: block;
-      }
-      .lang-flag {
-        width: 24px;
-        height: auto;
-        border-radius: 3px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-      }
-
-      /* Hide GT banner — keep element accessible for GT to initialise */
-      .goog-te-banner-frame.skiptranslate { display: none !important; }
-      body { top: 0px !important; }
-      #google_translate_element { position: absolute; width: 0; height: 0; overflow: hidden; opacity: 0; pointer-events: none; }
-      .goog-te-gadget { font-size: 0 !important; }
+      /* Inline Language Toggle */
+      .lang-toggle-container { display: flex; align-items: center; gap: 8px; font-family: 'Orbitron', monospace; font-size: 14px; font-weight: 600; }
+      .lang-btn { background: none; border: none; padding: 0; margin: 0; color: #666; cursor: pointer; transition: color 0.3s ease; text-transform: uppercase; font-family: inherit; font-size: inherit; font-weight: inherit; }
+      .lang-btn:hover { color: #00ff88; }
+      .lang-btn.active { color: #fff; }
+      .lang-separator { color: #444; }
     </style>
 </head>
 <body style="padding-bottom: 50px;">
@@ -341,41 +208,19 @@
         <a href="#banks">Banks</a>
         <a href="#hot-wallets">Wallets</a>
         <a href="#trackers">Trackers</a>
+        <a href="#tax-legal">Tax & Legal</a>
       </nav>
 
       <div class="actions-container">
-        <button id="lang-modal-trigger" aria-label="Select Language">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-        </button>
+        <div class="lang-toggle-container">
+          <button id="lang-pt" class="lang-btn active">PT</button>
+          <span class="lang-separator">/</span>
+          <button id="lang-en" class="lang-btn">EN</button>
+        </div>
         <button id="mobile-menu-btn" style="background: none; border: none; color: #00ff88; font-size: 28px; cursor: pointer; margin-left: 15px; display: none;">☰</button>
       </div>
     </header>
     <div id="google_translate_element"></div>
-
-    <!-- Language Selection Modal -->
-    <div id="languageModal" class="lang-modal-overlay">
-      <div class="lang-modal-box">
-        <button id="closeLangModal" class="lang-modal-close" aria-label="Close Modal">✕</button>
-        <h3 class="lang-modal-title" data-i18n="langModalTitle">IDIOMA</h3>
-        <p class="lang-modal-subtitle" data-i18n="langModalSubtitle">Selecione o idioma de sua preferência</p>
-        <div class="lang-options">
-          <button class="lang-option-btn active" data-lang="pt">
-            <div class="btn-content">
-              <img src="https://flagcdn.com/w40/br.png" alt="Português" class="lang-flag">
-              <span>Português</span>
-            </div>
-            <span class="check-icon">✓</span>
-          </button>
-          <button class="lang-option-btn" data-lang="en">
-            <div class="btn-content">
-              <img src="https://flagcdn.com/w40/us.png" alt="English" class="lang-flag">
-              <span>Inglês</span>
-            </div>
-            <span class="check-icon">✓</span>
-          </button>
-        </div>
-      </div>
-    </div>
 
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay" id="mobileMenuOverlay">
@@ -385,12 +230,6 @@
                 <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">&times;</button>
             </div>
             <nav class="mobile-menu-nav">
-
-                <div class="mobile-menu-separator"></div>
-                        <div class="mobile-language-selector">
-                            <button class="lang-btn active" data-lang-switch="pt"><img src="https://flagcdn.com/w40/br.png" alt="Português" class="lang-flag"></button>
-                            <button class="lang-btn" data-lang-switch="en"><img src="https://flagcdn.com/w40/us.png" alt="English" class="lang-flag"></button>
-                        </div>                <div class="mobile-menu-separator"></div>
                 <ul class="mobile-nav-list">
                     <li><a href="#p2p" data-section="p2p" data-i18n="p2pTitle">P2P</a></li>
                     <li><a href="#exchanges" data-section="exchanges" data-i18n="exchangesTitle">Exchanges</a></li>
@@ -400,6 +239,7 @@
                     <li><a href="#banks" data-section="banks" data-i18n="navBanks">Banks</a></li>
                     <li><a href="#hot-wallets" data-section="wallets"><span data-lang="nav-wallets" data-i18n="navWallets">Wallets</span></a></li>
                     <li><a href="#trackers" data-section="trackers" data-i18n="trackersTitle">Trackers</a></li>
+                    <li><a href="#tax-legal" data-section="tax-legal">Tax & Legal</a></li>
                 </ul>
             </nav>
         </div>
@@ -425,7 +265,7 @@
                 Encontre a melhor forma de comprar, vender e usar criptomoedas com segurança.
             </p>
             <div style="margin-top: 35px; display: flex; justify-content: center; width: 100%;">
-              <a href="https://x.com/criptoagg?s=21" target="_blank" rel="noopener noreferrer" style="background: linear-gradient(90deg, #00ff88 0%, #00b8ff 100%); color: #0a0a0a !important; font-size: 1.1rem; font-weight: 700; letter-spacing: 1px; font-family: 'Inter', system-ui, sans-serif; padding: 16px 45px; border-radius: 40px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0, 255, 136, 0.25);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 25px rgba(0, 255, 136, 0.45)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0, 255, 136, 0.25)';">
+              <a href="https://x.com/criptoagg?s=21" target="_blank" rel="noopener noreferrer" style="display: none !important; background: linear-gradient(90deg, #00ff88 0%, #00b8ff 100%); color: #0a0a0a !important; font-size: 1.1rem; font-weight: 700; letter-spacing: 1px; font-family: 'Inter', system-ui, sans-serif; padding: 16px 45px; border-radius: 40px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0, 255, 136, 0.25);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 25px rgba(0, 255, 136, 0.45)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0, 255, 136, 0.25)';">
                 Junte-se ao nosso 𝕏 ➔
               </a>
             </div>
@@ -1939,6 +1779,40 @@
         </div>
     </section>
 
+    <!-- Tax & Legal Section -->
+    <section class="platform-section" id="tax-legal">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title">
+                    <span data-i18n="taxLegalTitle">Tax & Legal</span>
+                </h3>
+                <p class="section-subtitle">Assessoria jurídica e contábil especializada em criptoativos.</p>
+            </div>
+            <div class="horizontal-scroll-container">
+                <div class="cards-final-grid">
+                    <!-- Moshe -->
+                    <div class="platform-card-final">
+                        <div class="card-logo-container">
+                            <img src="https://unavatar.io/x/ojedabtc" alt="Moshe" style="border-radius: 50%;">
+                        </div>
+                        <h3 class="card-final-title">Moshe</h3>
+                        <p class="card-final-description">
+                            Ajudo você a tirar o Brasil do seu dinheiro. Assessoria internacional.
+                        </p>
+                        <div class="card-final-buttons">
+                            <a href="https://moshe-internacional.rds.land/lp-mqm" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('Moshe', 'TaxLegal')" data-i18n="btnVisit">
+                                Visitar Site
+                            </a>
+                            <a href="https://x.com/ojedabtc" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('Moshe', 'Social')" data-i18n="btnFollowX">
+                                Seguir no X
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -2139,10 +2013,9 @@
     </div>
 
     <script type="text/javascript">
-      const translations = {
+      // Create a dictionary for key UI elements
+      const translationDict = {
         'pt': {
-          'langModalTitle': 'IDIOMA',
-          'langModalSubtitle': 'Selecione o idioma de sua preferência',
           'p2pTitle': 'P2P',
           'exchangesTitle': 'Exchanges',
           'dexsTitle': 'DEXs',
@@ -2151,6 +2024,7 @@
           'navBanks': 'Banks',
           'navWallets': 'Wallets',
           'trackersTitle': 'Trackers',
+          'taxLegalTitle': 'Tax & Legal',
           'heroBadge': '✨ O maior hub cripto do Brasil',
           'heroTitle': 'Sua porta de entrada e saída para o mundo cripto',
           'heroSubtitle': 'O Primeiro Agregador On-Ramp e Off-Ramp do Mercado',
@@ -2212,8 +2086,6 @@
           'navHome': 'Home'
         },
         'en': {
-          'langModalTitle': 'LANGUAGE',
-          'langModalSubtitle': 'Select your preferred language',
           'p2pTitle': 'P2P',
           'exchangesTitle': 'Exchanges',
           'dexsTitle': 'DEXs',
@@ -2222,6 +2094,7 @@
           'navBanks': 'Banks',
           'navWallets': 'Wallets',
           'trackersTitle': 'Trackers',
+          'taxLegalTitle': 'Tax & Legal',
           'heroBadge': '✨ Brazil\'s Largest Crypto Hub',
           'heroTitle': 'Your Gateway In and Out of the Crypto World',
           'heroSubtitle': 'The Market\'s First On-Ramp and Off-Ramp Aggregator',
@@ -2284,92 +2157,63 @@
         }
       };
 
+      const langPtBtn = document.getElementById('lang-pt');
+      const langEnBtn = document.getElementById('lang-en');
       let currentLang = localStorage.getItem('preferredLang') || 'pt';
 
-      function updateContent() {
+      function switchLanguage(lang) {
+        currentLang = lang;
+        localStorage.setItem('preferredLang', lang);
+        
+        // 1. Update active button states
+        if (lang === 'pt') { 
+            langPtBtn.classList.add('active'); 
+            langEnBtn.classList.remove('active'); 
+        } else { 
+            langEnBtn.classList.add('active'); 
+            langPtBtn.classList.remove('active'); 
+        }
+        
+        // 2. Update DOM content
         document.querySelectorAll('[data-i18n]').forEach(el => {
           const key = el.getAttribute('data-i18n');
-          if (translations[currentLang][key]) {
-            el.innerText = translations[currentLang][key];
+          if (translationDict[lang][key]) {
+            el.innerText = translationDict[lang][key];
           }
         });
 
         document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
           const key = el.getAttribute('data-i18n-placeholder');
-          if (translations[currentLang][key]) {
-            el.setAttribute('placeholder', translations[currentLang][key]);
+          if (translationDict[lang][key]) {
+            el.setAttribute('placeholder', translationDict[lang][key]);
           }
         });
 
-        // Update active class in modal
-        document.querySelectorAll('.lang-option-btn').forEach(btn => {
-          btn.classList.toggle('active', btn.getAttribute('data-lang') === currentLang);
+        document.documentElement.setAttribute('lang', lang === 'pt' ? 'pt-BR' : 'en');
+      }
+
+      langPtBtn.addEventListener('click', () => switchLanguage('pt'));
+      langEnBtn.addEventListener('click', () => switchLanguage('en'));
+
+      // Hamburger Menu Toggle
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const desktopNav = document.querySelector('.desktop-nav');
+      
+      if(mobileBtn && desktopNav) {
+        mobileBtn.addEventListener('click', function() {
+          desktopNav.classList.toggle('mobile-active');
         });
-
-        document.documentElement.setAttribute('lang', currentLang === 'pt' ? 'pt-BR' : 'en');
-      }
-
-      function setLanguage(lang) {
-        currentLang = lang;
-        localStorage.setItem('preferredLang', currentLang);
-        updateContent();
         
-        // Visual feedback before closing
-        setTimeout(() => {
-          document.getElementById('languageModal').classList.remove('active');
-        }, 300);
+        desktopNav.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            desktopNav.classList.remove('mobile-active');
+          });
+        });
       }
 
+      // Initialize language on load
       document.addEventListener('DOMContentLoaded', () => {
-        updateContent();
-
-        // Modal triggers
-        const trigger = document.getElementById('lang-modal-trigger');
-        const modal = document.getElementById('languageModal');
-        const closeBtn = document.getElementById('closeLangModal');
-
-        if (trigger) {
-          trigger.addEventListener('click', () => {
-            modal.classList.add('active');
-          });
-        }
-
-        if (closeBtn) {
-          closeBtn.addEventListener('click', () => {
-            modal.classList.remove('active');
-          });
-        }
-
-        // Close modal on overlay click
-        modal.addEventListener('click', (e) => {
-          if (e.target === modal) {
-            modal.classList.remove('active');
-          }
-        });
-
-        // Language buttons click
-        document.querySelectorAll('.lang-option-btn').forEach(btn => {
-          btn.addEventListener('click', () => {
-            setLanguage(btn.getAttribute('data-lang'));
-          });
-        });
-
-        // Hamburger Menu Toggle
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        const desktopNav = document.querySelector('.desktop-nav');
-        
-        if(mobileBtn && desktopNav) {
-          mobileBtn.addEventListener('click', function() {
-            desktopNav.classList.toggle('mobile-active');
-          });
-          
-          // Close menu when a link is clicked
-          desktopNav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-              desktopNav.classList.remove('mobile-active');
-            });
-          });
-        }
+        switchLanguage(currentLang);
       });
     </script>
 </body>
