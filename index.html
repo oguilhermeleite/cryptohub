@@ -212,12 +212,10 @@
       </nav>
 
       <div class="actions-container">
-        <div class="lang-toggle-container">
-          <button id="lang-pt" class="lang-btn active">PT</button>
-          <span class="lang-separator">/</span>
-          <button id="lang-en" class="lang-btn">EN</button>
-          <span class="lang-separator">/</span>
-          <button id="lang-es" class="lang-btn">ES</button>
+        <div id="language-switcher" style="display:flex; gap:10px; align-items:center; color:white; font-weight:bold; cursor:pointer;">
+          <span id="btn-pt" onclick="setLang('pt')" style="opacity:1;">PT</span> / 
+          <span id="btn-en" onclick="setLang('en')" style="opacity:0.5;">EN</span> / 
+          <span id="btn-es" onclick="setLang('es')" style="opacity:0.5;">ES</span>
         </div>
         <button id="mobile-menu-btn" style="background: none; border: none; color: #00ff88; font-size: 28px; cursor: pointer; margin-left: 15px; display: none;">☰</button>
       </div>
@@ -1672,9 +1670,9 @@
     <section class="platform-section" id="tax-legal">
         <div class="container">
             <div class="section-header">
-                <h3 class="section-title">
+                <h2 class="section-title">
                     <span data-i18n="tax_title">Tax & Legal</span>
-                </h3>
+                </h2>
                 <p class="section-subtitle" data-i18n="tax_subtitle">Assessoria jurídica e contábil especializada em criptoativos.</p>
             </div>
             <div class="horizontal-scroll-container">
@@ -2295,6 +2293,28 @@
       document.addEventListener('DOMContentLoaded', () => {
         switchLanguage(currentLang);
       });
+    </script>
+    <script>
+      const dict = {
+        pt: { tax_title: "Advogados e contabilidade", tax_sub: "Contadores e advogados especializados em cripto" },
+        en: { tax_title: "Lawyers & Accounting", tax_sub: "Crypto-specialized accountants and lawyers" },
+        es: { tax_title: "Abogados y Contabilidad", tax_sub: "Contadores y abogados especializados en cripto" }
+      };
+      function setLang(lang) {
+        document.getElementById('btn-pt').style.opacity = lang === 'pt' ? '1' : '0.5';
+        document.getElementById('btn-en').style.opacity = lang === 'en' ? '1' : '0.5';
+        document.getElementById('btn-es').style.opacity = lang === 'es' ? '1' : '0.5';
+        
+        const taxSection = document.getElementById('tax-legal');
+        if(taxSection) {
+           taxSection.querySelector('h2').innerText = dict[lang].tax_title;
+           taxSection.querySelector('p').innerText = dict[lang].tax_sub;
+        }
+        // Sync with existing language logic
+        if (typeof switchLanguage === 'function') {
+          switchLanguage(lang);
+        }
+      }
     </script>
 </body>
 </html>
