@@ -1903,39 +1903,28 @@
     </script>
 
     <script>
-      // VERBOSE DIAGNOSTIC SCRIPT
       const dict = {
         pt: { t: "Advogados e contabilidade", s: "Contadores e advogados especializados em cripto" },
         en: { t: "Lawyers & Accounting", s: "Crypto-specialized accountants and lawyers" },
-        es: { t: "Abogados y Contabilidad", s: "Contadores y abogados especializados em cripto" }
+        es: { t: "Abogados y Contabilidad", s: "Contadores y abogados especializados en cripto" }
       };
 
       function setLang(lang) {
-        // DIAGNOSTIC ALERT 1
-        alert("Clicou em: " + lang);
-
         // Update Buttons Visuals
         ['pt','en','es'].forEach(l => {
           const b = document.getElementById('btn-' + l);
           if(b) b.style.opacity = lang === l ? '1' : '0.5';
         });
 
-        // Update Text - PRECISION TARGETING
+        // Update Text
         const t = document.getElementById('tax-title');
         const s = document.getElementById('tax-subtitle');
 
-        if(!t) { alert("ERRO: H2 com ID 'tax-title' NAO ENCONTRADO NO HTML!"); }
-        else { t.innerText = dict[lang].t; }
-
-        if(!s) { alert("ERRO: P com ID 'tax-subtitle' NAO ENCONTRADO NO HTML!"); }
-        else { s.innerText = dict[lang].s; }
+        if(t) t.innerText = dict[lang].t;
+        if(s) s.innerText = dict[lang].s;
       }
 
-      // ATTACH EVENTS SAFELY AFTER LOAD
       window.addEventListener('load', () => {
-        // DIAGNOSTIC ALERT 2
-        alert("Script carregado. Vinculando botões...");
-        
         document.getElementById('btn-pt')?.addEventListener('click', () => setLang('pt'));
         document.getElementById('btn-en')?.addEventListener('click', () => setLang('en'));
         document.getElementById('btn-es')?.addEventListener('click', () => setLang('es'));
