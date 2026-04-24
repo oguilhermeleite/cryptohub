@@ -255,13 +255,13 @@
             <div class="hero-badge" data-i18n="heroBadge">
                 ✨ O maior hub cripto do Brasil
             </div>
-            <h1 class="hero-title gradient-text-full" data-i18n="heroTitle">
+            <h1 class="hero-title gradient-text-full" id="hero-title" data-i18n="heroTitle">
                 Sua porta de entrada e saída para o mundo cripto
             </h1>
-            <p class="hero-subtitle" data-i18n="heroSubtitle">
+            <p class="hero-subtitle" id="hero-subtitle" data-i18n="heroSubtitle">
                 O Primeiro Agregador On-Ramp e Off-Ramp do Mercado
             </p>
-            <p class="hero-description" data-i18n="heroDesc">
+            <p class="hero-description" id="hero-desc" data-i18n="heroDesc">
                 Encontre a melhor forma de comprar, vender e usar criptomoedas com segurança.
             </p>
             <div style="margin-top: 35px; display: flex; justify-content: center; width: 100%;">
@@ -1904,24 +1904,43 @@
 
     <script>
       const dict = {
-        pt: { t: "Advogados e contabilidade", s: "Contadores e advogados especializados em cripto" },
-        en: { t: "Lawyers & Accounting", s: "Crypto-specialized accountants and lawyers" },
-        es: { t: "Abogados y Contabilidad", s: "Contadores y abogados especializados en cripto" }
+        pt: { 
+          tax_title: "Advogados e contabilidade", tax_sub: "Contadores e advogados especializados em cripto",
+          hero_title: "Sua porta de entrada e saída para o mundo cripto",
+          hero_subtitle: "O Primeiro Agregador On-Ramp e Off-Ramp do Mercado",
+          hero_desc: "Encontre a melhor forma de comprar, vender e usar criptomoedas com segurança."
+        },
+        en: { 
+          tax_title: "Lawyers & Accounting", tax_sub: "Crypto-specialized accountants and lawyers",
+          hero_title: "Your gateway in and out of the crypto world",
+          hero_subtitle: "The First On-Ramp and Off-Ramp Aggregator in the Market",
+          hero_desc: "Find the best way to securely buy, sell, and use cryptocurrencies."
+        },
+        es: { 
+          tax_title: "Abogados y Contabilidad", tax_sub: "Contadores y abogados especializados en cripto",
+          hero_title: "Tu puerta de entrada y salida al mundo cripto",
+          hero_subtitle: "El Primer Agregador On-Ramp e Off-Ramp del Mercado",
+          hero_desc: "Encuentra la mejor manera de comprar, vender y usar criptomonedas con seguridad."
+        }
       };
 
       function setLang(lang) {
-        // Update Buttons Visuals
+        // 1. Update Buttons Visuals
         ['pt','en','es'].forEach(l => {
           const b = document.getElementById('btn-' + l);
           if(b) b.style.opacity = lang === l ? '1' : '0.5';
         });
 
-        // Update Text
-        const t = document.getElementById('tax-title');
-        const s = document.getElementById('tax-subtitle');
+        // 2. Update Texts
+        const map = {
+          'tax-title': 'tax_title', 'tax-subtitle': 'tax_sub',
+          'hero-title': 'hero_title', 'hero-subtitle': 'hero_subtitle', 'hero-desc': 'hero_desc'
+        };
 
-        if(t) t.innerText = dict[lang].t;
-        if(s) s.innerText = dict[lang].s;
+        for (const [id, key] of Object.entries(map)) {
+          const el = document.getElementById(id);
+          if (el) el.innerText = dict[lang][key];
+        }
       }
 
       window.addEventListener('load', () => {
