@@ -216,6 +216,8 @@
           <button id="lang-pt" class="lang-btn active">PT</button>
           <span class="lang-separator">/</span>
           <button id="lang-en" class="lang-btn">EN</button>
+          <span class="lang-separator">/</span>
+          <button id="lang-es" class="lang-btn">ES</button>
         </div>
         <button id="mobile-menu-btn" style="background: none; border: none; color: #00ff88; font-size: 28px; cursor: pointer; margin-left: 15px; display: none;">☰</button>
       </div>
@@ -1671,9 +1673,9 @@
         <div class="container">
             <div class="section-header">
                 <h3 class="section-title">
-                    <span data-i18n="taxLegalTitle">Tax & Legal</span>
+                    <span data-i18n="tax_title">Tax & Legal</span>
                 </h3>
-                <p class="section-subtitle">Assessoria jurídica e contábil especializada em criptoativos.</p>
+                <p class="section-subtitle" data-i18n="tax_subtitle">Assessoria jurídica e contábil especializada em criptoativos.</p>
             </div>
             <div class="horizontal-scroll-container">
                 <div class="cards-final-grid" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
@@ -2025,6 +2027,8 @@
           'navWallets': 'Wallets',
           'trackersTitle': 'Trackers',
           'taxLegalTitle': 'Tax & Legal',
+          'tax_title': 'Advogados e contabilidade',
+          'tax_subtitle': 'Contadores e advogados especializados em cripto',
           'heroBadge': '✨ O maior hub cripto do Brasil',
           'heroTitle': 'Sua porta de entrada e saída para o mundo cripto',
           'heroSubtitle': 'O Primeiro Agregador On-Ramp e Off-Ramp do Mercado',
@@ -2095,6 +2099,8 @@
           'navWallets': 'Wallets',
           'trackersTitle': 'Trackers',
           'taxLegalTitle': 'Tax & Legal',
+          'tax_title': 'Lawyers & Accounting',
+          'tax_subtitle': 'Crypto-specialized accountants and lawyers',
           'heroBadge': '✨ Brazil\'s Largest Crypto Hub',
           'heroTitle': 'Your Gateway In and Out of the Crypto World',
           'heroSubtitle': 'The Market\'s First On-Ramp and Off-Ramp Aggregator',
@@ -2154,11 +2160,84 @@
           'footerRights': 'All rights reserved.',
           'toastCopied': 'Coupon copied successfully!',
           'navHome': 'Home'
+        },
+        'es': {
+          'p2pTitle': 'P2P',
+          'exchangesTitle': 'Exchanges',
+          'dexsTitle': 'DEXs',
+          'navBridges': 'Bridges',
+          'navCards': 'Tarjetas',
+          'navBanks': 'Bancos',
+          'navWallets': 'Billeteras',
+          'trackersTitle': 'Trackers',
+          'taxLegalTitle': 'Tax & Legal',
+          'tax_title': 'Abogados y Contabilidad',
+          'tax_subtitle': 'Contadores y abogados especializados en cripto',
+          'heroBadge': '✨ El mayor hub cripto de Brasil',
+          'heroTitle': 'Su puerta de entrada y salida al mundo cripto',
+          'heroSubtitle': 'El primer agregador On-Ramp y Off-Ramp del mercado',
+          'heroDesc': 'Encuentre la mejor forma de comprar, vender y usar criptomonedas con seguridad.',
+          'featuredTitle': 'Destacado',
+          'featuredSubtitle': 'Plataforma destacada de nuestra comunidad',
+          'partnerBadge': 'SOCIO OFICIAL',
+          'descCompreCriptoFeatured': 'Facilita la compra de criptomonedas de forma sencilla y segura',
+          'btnAccessNow': 'ACCEDER AHORA →',
+          'p2pSubtitle': 'Compra y venta directa entre personas',
+          'btnVisit': 'Visitar Sitio',
+          'btnFollowX': 'Seguir en X',
+          'exchangesSubtitle': 'Trading y conversión de criptomonedas',
+          'hotWalletsTitle': 'Hot Wallets',
+          'hotWalletsSubtitle': 'Billeteras en línea conectadas a internet para uso diario',
+          'cardsTitle': 'Tarjetas Cripto',
+          'cardsSubtitle': 'Use cripto en el día a día con tarjetas',
+          'banksTitle': 'Bancos Digitales',
+          'banksSubtitle': 'Bancos digitales con funciones cripto integradas',
+          'coldWalletsTitle': 'Cold Wallets',
+          'coldWalletsSubtitle': 'Billeteras físicas fuera de línea para máxima seguridad',
+          'securityTitle': 'Protegiéndote de los errores más comunes en cripto',
+          'securityDesc': 'Crypto Aggregator funciona como un filtro de acceso al ecosistema cripto, validando fuentes, enlaces oficiales e información antes de dirigir al usuario.',
+          'securityExtremaTitle': 'Seguridad Extrema',
+          'securityExtremaDesc': 'Verificación rigurosa de todos los socios listados.',
+          'securityTransTitle': 'Transparencia',
+          'securityTransDesc': 'Simple de entender, fácil de confiar.',
+          'securityCuradoriaTitle': 'Curaduría Inteligente',
+          'securityCuradoriaDesc': 'Seleccionamos solo lo que realmente tiene sentido, evitando ruidos, promesas vacías y proyectos innecesarios.',
+          'securityNavegacaoTitle': 'Navegación Guiada',
+          'securityNavegacaoDesc': 'Te ayudamos a entender antes de usar. La información viene antes de la acción.',
+          'eduTitle': 'EDUCACIÓN PRIMERO',
+          'eduDesc': 'Pensado para principiantes y avanzados. Nuestra misión es garantizar que tengas claridad y seguridad en cada clic.',
+          'catTitle': 'Cripto sin complicaciones,',
+          'catTitleSpan': 'todo en un solo lugar',
+          'catP2PTitle': 'P2P (Peer-to-Peer)',
+          'catP2PDesc': 'Plataformas donde las personas negocian cripto directamente entre sí, sin intermediarios.',
+          'catExTitle': 'Exchanges (Casas de Cambio)',
+          'catExDesc': 'Plataformas centralizadas que permiten comprar, vender y negociar cripto con facilidad.',
+          'catDexTitle': 'DEXs (Exchanges Descentralizados)',
+          'catDexDesc': 'Plataformas descentralizadas donde intercambias cripto directamente desde tu billetera, sin custodia.',
+          'catBanksTitle': 'Digital Banks (Bancos)',
+          'catBanksDesc': 'Bancos digitales y servicios financieros que integran cripto al sistema tradicional.',
+          'catCardsTitle': 'Crypto Cards (Tarjetas Cripto)',
+          'catCardsDesc': 'Tarjetas que permiten gastar criptomonedas en el mundo real.',
+          'catBridgesTitle': 'Bridges (Puentes)',
+          'catBridgesDesc': 'Herramientas que permiten mover activos entre diferentes blockchains.',
+          'catWalletsTitle': 'Wallets (Billeteras)',
+          'catWalletsDesc': 'Aplicaciones donde guardas, envías y recibes criptomonedas com control total.',
+          'footerDesc': 'Su puerta de entrada y salida al mundo cripto',
+          'footerServices': 'Servicios',
+          'footerNewsletterTitle': 'Mantente Actualizado',
+          'footerNewsletterDesc': 'Recibe las mejores oportunidades y noticias del mundo cripto.',
+          'newsletterPlaceholder': 'Tu mejor correo',
+          'newsletterBtn': 'Suscribirse',
+          'newsletterSuccess': '✓ ¡Gracias por suscribirte!',
+          'footerRights': 'Todos los derechos reservados.',
+          'toastCopied': '¡Cupón copiado con éxito!',
+          'navHome': 'Inicio'
         }
       };
 
       const langPtBtn = document.getElementById('lang-pt');
       const langEnBtn = document.getElementById('lang-en');
+      const langEsBtn = document.getElementById('lang-es');
       let currentLang = localStorage.getItem('preferredLang') || 'pt';
 
       function switchLanguage(lang) {
@@ -2166,13 +2245,12 @@
         localStorage.setItem('preferredLang', lang);
         
         // 1. Update active button states
-        if (lang === 'pt') { 
-            langPtBtn.classList.add('active'); 
-            langEnBtn.classList.remove('active'); 
-        } else { 
-            langEnBtn.classList.add('active'); 
-            langPtBtn.classList.remove('active'); 
-        }
+        [langPtBtn, langEnBtn, langEsBtn].forEach(btn => {
+          if (btn) btn.classList.remove('active');
+        });
+        
+        const activeBtn = document.getElementById(`lang-${lang}`);
+        if (activeBtn) activeBtn.classList.add('active');
         
         // 2. Update DOM content
         document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -2189,11 +2267,13 @@
           }
         });
 
-        document.documentElement.setAttribute('lang', lang === 'pt' ? 'pt-BR' : 'en');
+        const htmlLang = lang === 'pt' ? 'pt-BR' : (lang === 'es' ? 'es' : 'en');
+        document.documentElement.setAttribute('lang', htmlLang);
       }
 
       langPtBtn.addEventListener('click', () => switchLanguage('pt'));
       langEnBtn.addEventListener('click', () => switchLanguage('en'));
+      langEsBtn.addEventListener('click', () => switchLanguage('es'));
 
       // Hamburger Menu Toggle
       const mobileBtn = document.getElementById('mobile-menu-btn');
