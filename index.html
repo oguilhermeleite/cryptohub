@@ -1670,10 +1670,10 @@
     <section class="platform-section" id="tax-legal">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">
+                <h2 class="section-title" id="tax-title">
                     <span data-i18n="tax_title">Tax & Legal</span>
                 </h2>
-                <p class="section-subtitle" data-i18n="tax_subtitle">Assessoria jurídica e contábil especializada em criptoativos.</p>
+                <p class="section-subtitle" id="tax-subtitle" data-i18n="tax_subtitle">Assessoria jurídica e contábil especializada em criptoativos.</p>
             </div>
             <div class="horizontal-scroll-container">
                 <div class="cards-final-grid" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
@@ -2311,13 +2311,20 @@
         if(btnEn) btnEn.style.opacity = lang === 'en' ? '1' : '0.5';
         if(btnEs) btnEs.style.opacity = lang === 'es' ? '1' : '0.5';
 
-        // 2. Update Tax & Legal text
-        const taxSection = document.getElementById('tax-legal');
-        if(taxSection) {
-           const h2 = taxSection.querySelector('h2');
-           const p = taxSection.querySelector('p');
-           if(h2) h2.innerText = dict[lang].tax_title;
-           if(p) p.innerText = dict[lang].tax_sub;
+        // 2. Update Tax & Legal text directly by ID
+        const titleEl = document.getElementById('tax-title');
+        const subEl = document.getElementById('tax-subtitle');
+        
+        if (titleEl) {
+            titleEl.innerText = dict[lang].tax_title;
+        } else {
+            console.warn("Element 'tax-title' not found");
+        }
+        
+        if (subEl) {
+            subEl.innerText = dict[lang].tax_sub;
+        } else {
+            console.warn("Element 'tax-subtitle' not found");
         }
         
         // 3. Sync with existing language logic
