@@ -212,10 +212,10 @@
       </nav>
 
       <div class="actions-container">
-        <div id="language-switcher" style="display:flex; gap:10px; align-items:center; color:white; font-weight:bold; cursor:pointer;">
-          <span id="btn-pt" onclick="setLang('pt')" style="opacity:1;">PT</span> / 
-          <span id="btn-en" onclick="setLang('en')" style="opacity:0.5;">EN</span> / 
-          <span id="btn-es" onclick="setLang('es')" style="opacity:0.5;">ES</span>
+        <div id="language-switcher" style="display:flex; gap:10px; align-items:center; color:white; font-weight:bold; cursor:pointer; position:relative; z-index:9999; pointer-events:auto;">
+          <span id="btn-pt" style="opacity:1; cursor:pointer; pointer-events:auto;">PT</span> / 
+          <span id="btn-en" style="opacity:0.5; cursor:pointer; pointer-events:auto;">EN</span> / 
+          <span id="btn-es" style="opacity:0.5; cursor:pointer; pointer-events:auto;">ES</span>
         </div>
         <button id="mobile-menu-btn" style="background: none; border: none; color: #00ff88; font-size: 28px; cursor: pointer; margin-left: 15px; display: none;">☰</button>
       </div>
@@ -2300,21 +2300,46 @@
         en: { tax_title: "Lawyers & Accounting", tax_sub: "Crypto-specialized accountants and lawyers" },
         es: { tax_title: "Abogados y Contabilidad", tax_sub: "Contadores y abogados especializados en cripto" }
       };
+
       function setLang(lang) {
-        document.getElementById('btn-pt').style.opacity = lang === 'pt' ? '1' : '0.5';
-        document.getElementById('btn-en').style.opacity = lang === 'en' ? '1' : '0.5';
-        document.getElementById('btn-es').style.opacity = lang === 'es' ? '1' : '0.5';
-        
+        // 1. Update visual opacity
+        const btnPt = document.getElementById('btn-pt');
+        const btnEn = document.getElementById('btn-en');
+        const btnEs = document.getElementById('btn-es');
+
+        if(btnPt) btnPt.style.opacity = lang === 'pt' ? '1' : '0.5';
+        if(btnEn) btnEn.style.opacity = lang === 'en' ? '1' : '0.5';
+        if(btnEs) btnEs.style.opacity = lang === 'es' ? '1' : '0.5';
+
+        // 2. Update Tax & Legal text
         const taxSection = document.getElementById('tax-legal');
         if(taxSection) {
-           taxSection.querySelector('h2').innerText = dict[lang].tax_title;
-           taxSection.querySelector('p').innerText = dict[lang].tax_sub;
+           const h2 = taxSection.querySelector('h2');
+           const p = taxSection.querySelector('p');
+           if(h2) h2.innerText = dict[lang].tax_title;
+           if(p) p.innerText = dict[lang].tax_sub;
         }
-        // Sync with existing language logic
+        
+        // 3. Sync with existing language logic
         if (typeof switchLanguage === 'function') {
           switchLanguage(lang);
         }
       }
+
+      // 4. Attach click events safely
+      window.addEventListener('DOMContentLoaded', () => {
+        const btnPt = document.getElementById('btn-pt');
+        const btnEn = document.getElementById('btn-en');
+        const btnEs = document.getElementById('btn-es');
+
+        if(btnPt) btnPt.addEventListener('click', () => setLang('pt'));
+        if(btnEn) btnEn.addEventListener('click', () => setLang('en'));
+        if(btnEs) btnEs.addEventListener('click', () => setLang('es'));
+        
+        // Initial state sync
+        const currentPreferred = localStorage.getItem('preferredLang') || 'pt';
+        setLang(currentPreferred);
+      });
     </script>
 </body>
 </html>
