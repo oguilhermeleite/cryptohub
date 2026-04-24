@@ -1670,10 +1670,8 @@
     <section class="platform-section" id="tax-legal">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" id="tax-title">
-                    <span data-i18n="tax_title">Tax & Legal</span>
-                </h2>
-                <p class="section-subtitle" id="tax-subtitle" data-i18n="tax_subtitle">Assessoria jurídica e contábil especializada em criptoativos.</p>
+                <h2 id="tax-title">Advogados e contabilidade</h2>
+                <p id="tax-subtitle">Contadores e advogados especializados em cripto</p>
             </div>
             <div class="horizontal-scroll-container">
                 <div class="cards-final-grid" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
@@ -2302,7 +2300,6 @@
       };
 
       function setLang(lang) {
-        // 1. Update visual opacity
         const btnPt = document.getElementById('btn-pt');
         const btnEn = document.getElementById('btn-en');
         const btnEs = document.getElementById('btn-es');
@@ -2311,41 +2308,17 @@
         if(btnEn) btnEn.style.opacity = lang === 'en' ? '1' : '0.5';
         if(btnEs) btnEs.style.opacity = lang === 'es' ? '1' : '0.5';
 
-        // 2. Update Tax & Legal text directly by ID
         const titleEl = document.getElementById('tax-title');
         const subEl = document.getElementById('tax-subtitle');
-        
-        if (titleEl) {
-            titleEl.innerText = dict[lang].tax_title;
-        } else {
-            console.warn("Element 'tax-title' not found");
-        }
-        
-        if (subEl) {
-            subEl.innerText = dict[lang].tax_sub;
-        } else {
-            console.warn("Element 'tax-subtitle' not found");
-        }
-        
-        // 3. Sync with existing language logic
-        if (typeof switchLanguage === 'function') {
-          switchLanguage(lang);
-        }
+
+        if(titleEl) titleEl.innerText = dict[lang].tax_title;
+        if(subEl) subEl.innerText = dict[lang].tax_sub;
       }
 
-      // 4. Attach click events safely
       window.addEventListener('DOMContentLoaded', () => {
-        const btnPt = document.getElementById('btn-pt');
-        const btnEn = document.getElementById('btn-en');
-        const btnEs = document.getElementById('btn-es');
-
-        if(btnPt) btnPt.addEventListener('click', () => setLang('pt'));
-        if(btnEn) btnEn.addEventListener('click', () => setLang('en'));
-        if(btnEs) btnEs.addEventListener('click', () => setLang('es'));
-        
-        // Initial state sync
-        const currentPreferred = localStorage.getItem('preferredLang') || 'pt';
-        setLang(currentPreferred);
+        document.getElementById('btn-pt')?.addEventListener('click', () => setLang('pt'));
+        document.getElementById('btn-en')?.addEventListener('click', () => setLang('en'));
+        document.getElementById('btn-es')?.addEventListener('click', () => setLang('es'));
       });
     </script>
 </body>
