@@ -220,6 +220,8 @@
           padding: 20px; 
           z-index: 1000; 
         }
+
+        #nav-menu { display: none !important; }
       }
       
       /* Moshe Logo Override */
@@ -296,7 +298,7 @@
       </nav>
 
       <div class="actions-container">
-        <button id="mobile-menu-btn" style="background: none; border: none; color: #00ff88; font-size: 28px; cursor: pointer; margin-left: 15px; display: none;">☰</button>
+        <button id="mobile-menu-btn" style="position: relative; z-index: 99999; cursor: pointer; background: none; border: none; color: #00ff88; font-size: 28px; margin-left: 15px; display: none;">☰</button>
       </div>
     </header>
     <div id="google_translate_element"></div>
@@ -2430,18 +2432,32 @@
 
         const menuBtn = document.getElementById('mobile-menu-btn');
         const navMenu = document.getElementById('nav-menu');
-        
+
         if (menuBtn && navMenu) {
-          // Force toggle on click
-          menuBtn.onclick = function(e) {
+          // Rigid state tracker
+          let menuOpen = false;
+
+          menuBtn.addEventListener('click', function(e) {
             e.preventDefault();
-            navMenu.classList.toggle('active');
-          };
-          
-          // Auto-close when clicking any link or language button inside the menu
-          const menuItems = navMenu.querySelectorAll('a, span[id^="btn-"]');
-          menuItems.forEach(item => {
+            e.stopPropagation(); // Stop click from hitting elements underneath
+
+            menuOpen = !menuOpen; // Flip the state
+
+            if (menuOpen) {
+              navMenu.style.setProperty('display', 'flex', 'important');
+              navMenu.classList.add('active');
+            } else {
+              navMenu.style.setProperty('display', 'none', 'important');
+              navMenu.classList.remove('active');
+            }
+          });
+
+          // Auto-close when clicking links/languages
+          const navItems = navMenu.querySelectorAll('a, span[id^="btn-"]');
+          navItems.forEach(item => {
             item.addEventListener('click', () => {
+              menuOpen = false;
+              navMenu.style.setProperty('display', 'none', 'important');
               navMenu.classList.remove('active');
             });
           });
