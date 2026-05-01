@@ -208,6 +208,32 @@
         
         /* Ensure logo and actions fit */
         .logo-container img { max-width: 160px; }
+
+        #nav-menu.active { 
+          display: flex !important; 
+          flex-direction: column; 
+          position: absolute; 
+          top: 100%; 
+          left: 0; 
+          width: 100%; 
+          background: #111; 
+          padding: 20px; 
+          z-index: 1000; 
+        }
+      }
+      
+      /* Moshe Logo Override */
+      .moshe-logo-override {
+        width: 100% !important;
+        max-width: 220px !important;
+        height: auto !important;
+        max-height: 70px !important;
+        object-fit: contain !important;
+        background-color: #ffffff !important;
+        border-radius: 8px !important;
+        padding: 12px !important;
+        margin: 0 auto 15px auto !important;
+        display: block !important;
       }
       
       /* Inline Language Toggle */
@@ -225,7 +251,7 @@
         <h1 style="color: #00ff88; font-size: 22px; font-weight: 900; margin: 0; text-transform: uppercase; white-space: nowrap;">CRYPTO AGGREGATOR</h1>
       </div>
 
-      <nav class="desktop-nav">
+      <nav class="desktop-nav" id="nav-menu">
         <a href="#p2p">
                                 P2P</a>
         <a href="#exchanges">Exchanges</a>
@@ -236,14 +262,15 @@
         <a href="#hot-wallets">Wallets</a>
         <a href="#trackers">Trackers</a>
         <a href="#tax-legal">Tax & Legal</a>
-      </nav>
-
-      <div class="actions-container">
-        <div id="language-switcher" style="display:flex; gap:10px; align-items:center; color:white; font-weight:bold; cursor:pointer; position:relative; z-index:9999; pointer-events:auto;">
+        
+        <div id="language-switcher" style="margin-top: 20px; display: flex; justify-content: center; gap: 10px; align-items:center; color:white; font-weight:bold; cursor:pointer; position:relative; z-index:9999; pointer-events:auto;">
           <span id="btn-pt" style="opacity:1; cursor:pointer; pointer-events:auto;">PT</span> / 
           <span id="btn-en" style="opacity:0.5; cursor:pointer; pointer-events:auto;">EN</span> / 
           <span id="btn-es" style="opacity:0.5; cursor:pointer; pointer-events:auto;">ES</span>
         </div>
+      </nav>
+
+      <div class="actions-container">
         <button id="mobile-menu-btn" style="background: none; border: none; color: #00ff88; font-size: 28px; cursor: pointer; margin-left: 15px; display: none;">☰</button>
       </div>
     </header>
@@ -1723,7 +1750,7 @@
                     <!-- Moshe -->
                     <div class="platform-card-final">
                         <div class="card-logo-container" style="width: 100%; display: flex; justify-content: center; background: transparent; border: none; box-shadow: none;">
-                            <img src="https://d335luupugsy2.cloudfront.net/cms/files/1075026/1759969521/$76udpx5a6wm" alt="Moshe" style="width: 100%; max-width: 220px; height: auto; max-height: 70px; object-fit: contain; background-color: #ffffff; border-radius: 8px; padding: 12px; margin-bottom: 15px;">
+                            <img src="https://d335luupugsy2.cloudfront.net/cms/files/1075026/1759969521/$76udpx5a6wm" alt="Moshe" class="moshe-logo-override" style="width: 100%; max-width: 220px; height: auto; max-height: 70px; object-fit: contain; background-color: #ffffff; border-radius: 8px; padding: 12px; margin-bottom: 15px;">
                         </div>
                         <h3 class="card-final-title">Moshe</h3>
                         <p data-i18n="desc_moshe" class="card-final-description">
@@ -2375,6 +2402,14 @@
         
         const savedLang = localStorage.getItem('prefLang') || 'pt';
         setLang(savedLang);
+
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+        if (menuBtn && navMenu) {
+          menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+          });
+        }
       });
     </script>
 </body>
