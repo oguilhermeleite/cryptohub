@@ -2434,31 +2434,40 @@
         const navMenu = document.getElementById('nav-menu');
 
         if (menuBtn && navMenu) {
-          // Rigid state tracker
-          let menuOpen = false;
-
+          // 1. Toggle menu on hamburger click
           menuBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation(); // Stop click from hitting elements underneath
-
-            menuOpen = !menuOpen; // Flip the state
-
-            if (menuOpen) {
-              navMenu.style.setProperty('display', 'flex', 'important');
-              navMenu.classList.add('active');
-            } else {
-              navMenu.style.setProperty('display', 'none', 'important');
+            e.stopPropagation(); // Prevents the document listener from firing immediately
+            
+            const isActive = navMenu.classList.contains('active');
+            if (isActive) {
               navMenu.classList.remove('active');
+              navMenu.style.setProperty('display', 'none', 'important');
+            } else {
+              navMenu.classList.add('active');
+              navMenu.style.setProperty('display', 'flex', 'important');
             }
           });
 
-          // Auto-close when clicking links/languages
+          // 2. "Click Outside" to close
+          document.addEventListener('click', function(e) {
+            if (navMenu.classList.contains('active')) {
+              // Check if the click was outside the menu AND outside the button
+              const isClickInsideMenu = navMenu.contains(e.target);
+              const isClickOnButton = menuBtn.contains(e.target);
+
+              if (!isClickInsideMenu && !isClickOnButton) {
+                navMenu.classList.remove('active');
+                navMenu.style.setProperty('display', 'none', 'important');
+              }
+            }
+          });
+
+          // 3. Auto-close when clicking any link or language option
           const navItems = navMenu.querySelectorAll('a, span[id^="btn-"]');
           navItems.forEach(item => {
             item.addEventListener('click', () => {
-              menuOpen = false;
-              navMenu.style.setProperty('display', 'none', 'important');
               navMenu.classList.remove('active');
+              navMenu.style.setProperty('display', 'none', 'important');
             });
           });
         }
