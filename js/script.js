@@ -35,6 +35,14 @@ if (newsletterForm) {
         submitBtn.innerText = 'Enviando...';
         submitBtn.disabled = true;
         formMessage.innerHTML = ''; // clear previous messages
+
+        // Analytics Track
+        if (typeof gtag === 'function') {
+            gtag('event', 'newsletter_signup', {
+                'method': 'formsubmit',
+                'transport_type': 'beacon'
+            });
+        }
     });
 }
 
@@ -73,6 +81,14 @@ if (coupons.length > 0 && toast) {
             navigator.clipboard.writeText(codeToCopy).then(() => {
                 // Show toast
                 showToast(`Cupom "${codeToCopy}" copiado! 🚀`);
+
+                // Analytics Track
+                if (typeof gtag === 'function') {
+                    gtag('event', 'coupon_copy', {
+                        'coupon_code': codeToCopy,
+                        'transport_type': 'beacon'
+                    });
+                }
             }).catch(err => {
                 console.error('Falha ao copiar:', err);
             });

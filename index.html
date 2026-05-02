@@ -140,11 +140,10 @@
             'platform_name': platform,
             'category': category,
             'device': /Mobile/i.test(navigator.userAgent) ? 'mobile' : 'desktop',
-            'timestamp': new Date().toISOString()
+            'timestamp': new Date().toISOString(),
+            'transport_type': 'beacon'
           });
           console.log('[Analytics] Event sent to GA4');
-        } else {
-          console.error('[Analytics] gtag function not available');
         }
       }
     </script>
@@ -2423,9 +2422,21 @@
       }
 
       window.addEventListener('load', () => {
-        document.getElementById('btn-pt')?.addEventListener('click', () => { setLang('pt'); localStorage.setItem('prefLang', 'pt'); });
-        document.getElementById('btn-en')?.addEventListener('click', () => { setLang('en'); localStorage.setItem('prefLang', 'en'); });
-        document.getElementById('btn-es')?.addEventListener('click', () => { setLang('es'); localStorage.setItem('prefLang', 'es'); });
+        document.getElementById('btn-pt')?.addEventListener('click', () => { 
+          setLang('pt'); 
+          localStorage.setItem('prefLang', 'pt'); 
+          gtag('event', 'change_language', { 'language': 'pt' });
+        });
+        document.getElementById('btn-en')?.addEventListener('click', () => { 
+          setLang('en'); 
+          localStorage.setItem('prefLang', 'en'); 
+          gtag('event', 'change_language', { 'language': 'en' });
+        });
+        document.getElementById('btn-es')?.addEventListener('click', () => { 
+          setLang('es'); 
+          localStorage.setItem('prefLang', 'es'); 
+          gtag('event', 'change_language', { 'language': 'es' });
+        });
         
         const savedLang = localStorage.getItem('prefLang') || 'pt';
         setLang(savedLang);
