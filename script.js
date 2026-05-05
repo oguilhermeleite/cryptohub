@@ -135,6 +135,10 @@ function showToast(message) {
                         descCamilaP2P: "Especialista brasileira em P2P. Com taxas baixas e suporte para +1.000 Criptomoedas. <br> <strong>Cupom <span class=\"clickable-coupon\" data-code=\"MQM\">MQM <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\" ry=\"2\"></rect><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"></path></svg></span> para desconto.</strong>",
                         descP2Pme: "P2P.me é uma plataforma P2P confiável para compra e venda de criptomoedas com segurança e rapidez.",
                         desc4PFinance: "P2P on-chain e pagamento de boletos. <br> <strong>Cupom <span class=\"clickable-coupon\" data-code=\"DOGDAMASSA\">DOGDAMASSA <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\" ry=\"2\"></rect><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"></path></svg></span> para desconto.</strong>",
+                desc_xstocks: "Negocie ações e ativos tradicionais tokenizados diretamente na rede.",
+                desc_ondo: "Líder em RWA, trazendo títulos do tesouro americano para o mundo on-chain.",
+                desc_kamino: "Protocolo avançado de empréstimos e otimização de liquidez na rede Solana.",
+                desc_aave: "O maior protocolo de empréstimos descentralizados do mundo.",
 
                         btnAccessNow: "ACESSAR AGORA →",                btnVisit: "Visitar Site",
                 btnFollowX: "Seguir no X",
@@ -219,6 +223,10 @@ function showToast(message) {
                         descCamilaP2P: "Brazilian P2P specialist. With low fees and support for +1,000 Cryptocurrencies. <br> <strong>Coupon <span class=\"clickable-coupon\" data-code=\"MQM\">MQM <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\" ry=\"2\"></rect><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"></path></svg></span> for discount.</strong>",
                         descP2Pme: "P2P.me is a reliable P2P platform for buying and selling cryptocurrencies safely and quickly.",
                         desc4PFinance: "P2P on-chain and bill payments. <br> <strong>Coupon <span class=\"clickable-coupon\" data-code=\"DOGDAMASSA\">DOGDAMASSA <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\" ry=\"2\"></rect><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"></path></svg></span> for discount.</strong>",
+                        desc_xstocks: "Trade tokenized stocks and traditional assets directly on-chain.",
+                        desc_ondo: "Leader in RWA, bringing US treasury bonds to the on-chain world.",
+                        desc_kamino: "Advanced lending and liquidity optimization protocol on Solana.",
+                        desc_aave: "The world's largest decentralized lending and borrowing protocol.",
 
                         btnAccessNow: "ACCESS NOW →",                btnVisit: "Visit Site",
                 btnFollowX: "Follow on X",
@@ -329,6 +337,22 @@ function showToast(message) {
                     setLanguage(selectedLang);
                     const dropdown = document.getElementById('lang-dropdown');
                     if (dropdown) dropdown.classList.add('hidden'); // Close dropdown
+                });
+            });
+
+            // Connect All Platforms Language Buttons (data-lang-switch)
+            document.querySelectorAll('[data-lang-switch]').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const selectedLang = this.getAttribute('data-lang-switch');
+                    setLanguage(selectedLang);
+                    
+                    // Update active state for these specific buttons
+                    document.querySelectorAll('[data-lang-switch]').forEach(b => {
+                        b.classList.remove('active');
+                        if (b.getAttribute('data-lang-switch') === selectedLang) {
+                            b.classList.add('active');
+                        }
+                    });
                 });
             });
         });
