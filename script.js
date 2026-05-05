@@ -392,11 +392,11 @@ function showToast(message) {
             }
         };
         
-        let currentLang = localStorage.getItem('siteLang') || 'pt';
+        let currentLang = localStorage.getItem('prefLang') || 'pt';
         
         function setLanguage(lang) {
             currentLang = lang;
-            localStorage.setItem('siteLang', lang);
+            localStorage.setItem('prefLang', lang);
         
             // Update all elements with data-i18n attribute
             document.querySelectorAll('[data-i18n]').forEach(el => {

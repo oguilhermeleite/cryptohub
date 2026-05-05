@@ -1,7 +1,7 @@
 # ESTADO ATUAL DO SITE - NÃO MODIFICAR
 
-**Data:** 2024-12-17
-**Status:** ✅ TUDO FUNCIONANDO PERFEITAMENTE
+**Data:** 2026-05-05
+**Status:** ✅ TUDO FUNCIONANDO PERFEITAMENTE - DEXS EXPANDIDAS E ESPANHOL ADICIONADO
 
 ---
 
@@ -173,24 +173,25 @@ Texto Secundário: #4a4a4a
 <div class="language-selector">
     <button class="lang-btn active" data-lang-switch="pt">PT</button>
     <button class="lang-btn" data-lang-switch="en">EN</button>
+    <button class="lang-btn" data-lang-switch="es">ES</button>
 </div>
 ```
 
-**IMPORTANTE:** Usa texto "PT" e "EN", NÃO usa bandeiras (🇧🇷🇺🇸)
+**IMPORTANTE:** Usa texto "PT", "EN" e "ES", NÃO usa bandeiras (🇧🇷🇺🇸🇪🇸)
 
 ---
 
 ## 📁 ARQUIVOS MODIFICADOS RECENTEMENTE
 
 ### Últimas Mudanças:
-1. ✅ index.html - Hero section com texto original + gradiente
-2. ✅ all-platforms.html - Hero section atualizado
-3. ✅ styles.css - Glassmorphism, tema claro, security section, gradientes
-4. ✅ card-flip.js - Sistema de flip reescrito
+1. ✅ index.html - Adição de xStocks, Ondo, Kamino e Aave. Fix no logo Aave.
+2. ✅ all-platforms.html - Sincronização com novas DEXs e migração para data-i18n.
+3. ✅ script.js - Suporte total a Espanhol (ES) e unificação de i18n.
+4. ✅ styles.css - Glassmorphism, tema claro, security section, gradientes
 
 ### Cache Busting:
-- card-flip.js?v=20241216-COMPLETE-REWRITE
-- styles.css?v=20241127-viewport-center
+- script.js?v=20241127-rebuild-v2
+- all-platforms.html (Sincronizado)
 
 ---
 
@@ -201,7 +202,7 @@ Texto Secundário: #4a4a4a
 - Ratings e KYC badges
 - Tags de categorias
 - Theme toggle (🌙 / ☀️)
-- Language selector (PT / EN)
+- Language selector (PT / EN / ES)
 - Price ticker (no header)
 - Google Analytics (G-5S6MB3MSVV)
 - Microsoft Clarity (ug118e6101)
@@ -240,11 +241,11 @@ Texto Secundário: #4a4a4a
 
 ### Histórico Recente:
 ```
-1e14eff - fix: change gradient to orange/orange tones
-71b4718 - fix: corrigir tema claro - tudo claro, visível e funcional
-cbbab5c - fix: restore original hero text with gradient styling
-64e6b79 - feat: add premium glassmorphism design, hero and security sections
-ad77968 - fix: COMPLETE REWRITE of card flip system
+25f1308 - style(i18n): unify internationalization system and sync all-platforms content
+ab13087 - feat(i18n): add Spanish support to all-platforms and fix lang attribute
+96aaaa8 - refactor(i18n): fix all-platforms language switching and sync translations
+d864bff - style(ui): fix aave logo visibility on dark theme
+67c3db7 - feat: add xStocks, Ondo, Kamino and Aave to DEXs section
 ```
 
 ---
@@ -257,15 +258,15 @@ ad77968 - fix: COMPLETE REWRITE of card flip system
 - ✅ Security section com conteúdo correto
 - ✅ Tema claro 100% claro e legível
 - ✅ Tema escuro 100% funcional
-- ✅ Language selector com PT/EN
+- ✅ Language selector com PT/EN/ES
 - ✅ Todas as funcionalidades preservadas
 - ✅ Responsive em todos os dispositivos
 - ✅ Analytics funcionando
 - ✅ Affiliate links preservados
 
-**STATUS GERAL:** 🟢 PERFEITO - NÃO MEXER SEM NECESSIDADE
+**STATUS GERAL:** 🟢 PERFEITO - NOVAS DEXS ATIVAS
 
 ---
 
-**ÚLTIMA ATUALIZAÇÃO:** 2024-12-17
+**ÚLTIMA ATUALIZAÇÃO:** 2026-05-05
 **PRÓXIMA REVISÃO:** Antes de qualquer mudança significativa
