@@ -2502,7 +2502,7 @@
         });
         document.querySelectorAll('[data-i18n]').forEach(el => {
           const key = el.getAttribute('data-i18n');
-          if (dict[lang] && dict[lang][key]) el.innerText = dict[lang][key];
+          if (dict[lang] && dict[lang][key]) el.innerHTML = dict[lang][key];
         });
         // Also handle placeholders
         document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
