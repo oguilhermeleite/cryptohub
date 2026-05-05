@@ -1555,11 +1555,43 @@
         </div>
     </footer>
 
-    <script src="script.js?v=20260308"></script>
+    <!-- SCROLL FIX: Native smooth scroll (MUST LOAD FIRST) -->
+    <script src="js/scroll-unblock.js?v=20260308"></script>
+    <!-- MOUSE FIX: Force enable mouse interactions -->
+    <script src="js/mouse-fix-force.js?v=20260308"></script>
+    <script src="js/script.js?v=20260308"></script>
     <!-- Performance Optimization Script -->
-    <script src="performance.js?v=20260308" defer></script>
+    <script src="js/performance.js?v=20260308" defer></script>
     <!-- Premium Elements System -->
-    <script src="premium-elements.js?v=20260308"></script>
+    <script src="js/premium-elements.js?v=20260308"></script>
+    <!-- Universal Carousel Navigation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const carouselArrows = document.querySelectorAll('.carousel-arrow');
+            carouselArrows.forEach(arrow => {
+                arrow.addEventListener('click', () => {
+                    const isLeft = arrow.classList.contains('carousel-arrow-left');
+                    const section = arrow.closest('.platform-section');
+                    const grid = section?.querySelector('.cards-final-grid');
+                    if (grid) {
+                        const scrollAmount = 374;
+                        grid.scrollBy({ left: isLeft ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+                    }
+                });
+            });
+            document.querySelectorAll('.cards-final-grid').forEach(grid => {
+                grid.addEventListener('scroll', () => {
+                    const section = grid.closest('.platform-section');
+                    const dots = section?.querySelectorAll('.scroll-dot');
+                    if (dots && dots.length > 0) {
+                        const scrollPercentage = (grid.scrollLeft / (grid.scrollWidth - grid.clientWidth)) * 100;
+                        const activeIndex = Math.round((scrollPercentage / 100) * (dots.length - 1));
+                        dots.forEach((dot, index) => { dot.classList.toggle('active', index === activeIndex); });
+                    }
+                });
+            });
+        });
+    </script>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Targeted selection of outbound links (affiliate links)
