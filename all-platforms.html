@@ -137,14 +137,6 @@
                 </div>
 
                 <div class="header-controls">
-                    <!-- THEME TOGGLE TEMPORARIAMENTE DESABILITADO - Manter código para reimplementação futura
-                    <div class="theme-toggle desktop-theme-toggle">
-                        <button class="theme-btn" id="desktopThemeToggle" aria-label="Toggle theme">
-                            <span class="theme-icon theme-icon-dark">🌙</span>
-                            <span class="theme-icon theme-icon-light">☀️</span>
-                        </button>
-                    </div>
-                    -->
                     <div class="language-selector">
                         <button class="lang-btn active" data-lang-switch="pt">PT</button>
                         <button class="lang-btn" data-lang-switch="en">EN</button>
@@ -199,16 +191,6 @@
                 <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">&times;</button>
             </div>
             <nav class="mobile-menu-nav">
-                <!-- THEME TOGGLE TEMPORARIAMENTE DESABILITADO - Manter código para reimplementação futura
-                <div class="mobile-theme-toggle">
-                    <button class="mobile-theme-btn" id="mobileThemeToggle" aria-label="Toggle theme">
-                        <span class="theme-icon theme-icon-dark">🌙</span>
-                        <span class="theme-icon theme-icon-light">☀️</span>
-                        <span class="theme-text" data-i18n="themeToggle">Tema</span>
-                    </button>
-                </div>
-                <div class="mobile-menu-separator"></div>
-                -->
                 <div class="mobile-language-selector">
                     <button class="lang-btn active" data-lang-switch="pt">PT</button>
                     <button class="lang-btn" data-lang-switch="en">EN</button>
@@ -256,7 +238,7 @@
                 <h3 class="section-title">
                     <span data-i18n="p2p_title">P2P</span>
                 </h3>
-                <p class="section-subtitle" data-lang="p2p-subtitle" data-i18n="p2p_sub">Compra e venda direto entre pessoas</p>
+                <p class="section-subtitle" data-i18n="p2p_sub">Compra e venda direto entre pessoas</p>
             </div>
             <div class="horizontal-scroll-container">
                 <div class="cards-final-grid">
@@ -307,7 +289,7 @@
                         </div>
                         <h3 class="card-final-title">Kryptera</h3>
 
-                        <p class="card-final-description" data-i18n="descKryptera">
+                        <p class="card-final-description" data-i18n="desc_kryptera">
                             Negociação P2P de criptomoedas com segurança e praticidade.
                             <br>
                             <strong>Cupom <span class="clickable-coupon" data-code="MQM">MQM <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span> para 10% de desconto.</strong>
@@ -371,7 +353,7 @@
                         </div>
                         <h3 class="card-final-title">4P Finance</h3>
 
-                        <p class="card-final-description" data-i18n="desc4PFinance">
+                        <p class="card-final-description" data-i18n="desc_4pfinance">
                             P2P on-chain e pagamento de boletos.
                             <br>
                             <strong>Cupom <span class="clickable-coupon" data-code="DOGDAMASSA">DOGDAMASSA <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span> para desconto.</strong>
@@ -405,10 +387,6 @@
                             </a>
                         </div>
                     </div>
-
-
-
-
                 </div>
                 <div class="carousel-navigation">
                     <button class="carousel-arrow carousel-arrow-left" aria-label="Previous" data-carousel="p2p">
@@ -428,18 +406,17 @@
         </div>
     </section>
 
+    <!-- Exchanges Section -->
     <section class="platform-section" id="exchanges">
         <div class="container">
             <div class="section-header">
                 <h3 class="section-title">
                     <span data-i18n="exch_title">Exchanges</span>
                 </h3>
-                <p class="section-subtitle" data-lang="exchanges-subtitle" data-i18n="exch_sub">Trading e conversão de criptomoedas</p>
+                <p class="section-subtitle" data-i18n="exch_sub">Trading e conversão de criptomoedas</p>
             </div>
             <div class="horizontal-scroll-container">
                 <div class="cards-final-grid">
-
-
                     <!-- Binance -->
                     <div class="platform-card-final">
                         <div class="card-logo-container">
@@ -459,8 +436,6 @@
                             </a>
                         </div>
                     </div>
-
-
 
                     <!-- Bybit -->
                     <div class="platform-card-final">
@@ -565,7 +540,7 @@
                     <!-- Gate.io -->
                     <div class="platform-card-final">
                         <div class="card-logo-container">
-                            <img src="https://www.google.com/s2/favicons?domain=gate.io&sz=128" alt="Gate.io" onerror="this.src='https://logo.clearbit.com/gate.io'">
+                            <img src="https://logo.clearbit.com/gate.io" alt="Gate.io" onerror="this.src='https://logo.clearbit.com/gate.io'">
                         </div>
                         <h3 class="card-final-title">Gate.io</h3>
 
@@ -601,13 +576,14 @@
         </div>
     </section>
 
+    <!-- Hot Wallets Section -->
     <section class="platform-section" id="hot-wallets">
         <div class="container">
             <div class="section-header">
                 <h3 class="section-title">
-                    <span data-lang="hot-wallets-title" data-i18n="wallet_title">Hot Wallets</span>
+                    <span data-i18n="wallet_title">Hot Wallets</span>
                 </h3>
-                <p class="section-subtitle" data-lang="hot-wallets-subtitle" data-i18n="wallet_sub">Carteiras online conectadas à internet para uso diário</p>
+                <p class="section-subtitle" data-i18n="wallet_sub">Carteiras online conectadas à internet para uso diário</p>
             </div>
             <div class="horizontal-scroll-container">
                 <div class="cards-final-grid">
@@ -725,7 +701,7 @@
                             <a data-i18n="btn_visit" href="https://unisat.io/download" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('UniSat', 'Hot Wallet')">
                                 Visitar Site
                             </a>
-                            <a data-i18n="btn_follow" href="https://twitter.com/unisat_wallet" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('Unisat', 'Social')">
+                            <a data-i18n="btn_follow" href="https://twitter.com/unisat_wallet" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('UniSat', 'Social')">
                                 Seguir no X
                             </a>
                         </div>
@@ -749,100 +725,14 @@
         </div>
     </section>
 
-    <section class="platform-section" id="cold-wallets">
-        <div class="container">
-            <div class="section-header">
-                <h3 class="section-title">
-                    <span data-lang="cold-wallets-title" data-i18n="coldWalletsTitle">Cold Wallets</span>
-                </h3>
-                <p class="section-subtitle" data-lang="cold-wallets-subtitle" data-i18n="coldWalletsSubtitle">Carteiras físicas offline para máxima segurança</p>
-            </div>
-            <div class="horizontal-scroll-container">
-                <div class="cards-final-grid">
-                    <!-- Ledger -->
-                    <div class="platform-card-final">
-                        <div class="card-logo-container">
-                            <img src="https://logo.clearbit.com/ledger.com" alt="Ledger" onerror="this.src='https://www.google.com/s2/favicons?domain=ledger.com&sz=64'">
-                        </div>
-                        <h3 class="card-final-title">Ledger</h3>
-
-                        <p data-i18n="desc_ledger" class="card-final-description">
-                            Ledger oferece hardware wallets de máxima segurança para armazenamento de criptomoedas offline.
-                        </p>
-                        <div class="card-final-buttons">
-                            <a data-i18n="btn_visit" href="https://shop.ledger.com/?r=9414e4bea285&tracker=MY_TRACKER" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('Ledger', 'Cold Wallet')">
-                                Visitar Site
-                            </a>
-                            <a data-i18n="btn_follow" href="https://twitter.com/Ledger" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('Ledger', 'Social')">
-                                Seguir no X
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Trezor -->
-                    <div class="platform-card-final">
-                        <div class="card-logo-container">
-                            <img src="https://logo.clearbit.com/trezor.io" alt="Trezor" onerror="this.src='https://www.google.com/s2/favicons?domain=trezor.io&sz=64'">
-                        </div>
-                        <h3 class="card-final-title">Trezor</h3>
-
-                        <p data-i18n="desc_trezor" class="card-final-description">
-                            Pioneira em hardware wallets, oferece máxima segurança para criptomoedas com código open-source.
-                        </p>
-                        <div class="card-final-buttons">
-                            <a data-i18n="btn_visit" href="http://trezorio.refr.cc/default/u/marcelomachado" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('Trezor', 'Cold Wallet')">
-                                Visitar Site
-                            </a>
-                            <a data-i18n="btn_follow" href="https://twitter.com/Trezor" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('Trezor', 'Social')">
-                                Seguir no X
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- OneKey -->
-                    <div class="platform-card-final">
-                        <div class="card-logo-container">
-                            <img src="https://logo.clearbit.com/onekey.so" alt="OneKey" onerror="this.src='https://www.google.com/s2/favicons?domain=onekey.so&sz=64'">
-                        </div>
-                        <h3 class="card-final-title">OneKey</h3>
-
-                        <p data-i18n="desc_onekey" class="card-final-description">
-                            Hardware wallets open-source com suporte multi-chain para 5.000+ criptomoedas e segurança EAL 6+.
-                        </p>
-                        <div class="card-final-buttons">
-                            <a data-i18n="btn_visit" href="https://onekey.so/" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('OneKey', 'Cold Wallet')">
-                                Visitar Site
-                            </a>
-                            <a data-i18n="btn_follow" href="https://twitter.com/OneKeyHQ" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('OneKey', 'Social')">
-                                Seguir no X
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-navigation">
-                    <button class="carousel-arrow carousel-arrow-left" aria-label="Previous" data-carousel="cold-wallets">
-                        ←
-                    </button>
-                    <div class="scroll-indicator">
-                        <div class="scroll-dot active"></div>
-                        <div class="scroll-dot"></div>
-                        <div class="scroll-dot"></div>
-                    </div>
-                    <button class="carousel-arrow carousel-arrow-right" aria-label="Next" data-carousel="cold-wallets">
-                        →
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <!-- Crypto Cards Section -->
     <section class="platform-section" id="cards">
         <div class="container">
             <div class="section-header">
                 <h3 class="section-title">
-                    <span data-lang="cards-title" data-i18n="cardsec_title">Cartões Cripto</span>
+                    <span data-i18n="cardsec_title">Cartões Cripto</span>
                 </h3>
-                <p class="section-subtitle" data-lang="cards-subtitle" data-i18n="cardsec_sub">Use cripto no dia a dia com cartões</p>
+                <p class="section-subtitle" data-i18n="cardsec_sub">Use cripto no dia a dia com cartões</p>
             </div>
             <div class="horizontal-scroll-container">
                 <div class="cards-final-grid">
@@ -874,7 +764,7 @@
                         <h3 class="card-final-title">Offramp</h3>
 
                         <p data-i18n="desc_offramp" class="card-final-description">
-                            Offramp facilita a conversão de cripto para fiat com cartões e soluções de pagamento.
+                            Offramp facilita a conversão de cripto para fiat with cards and soluciones de pagamento.
                         </p>
                         <div class="card-final-buttons">
                             <a data-i18n="btn_visit" href="https://app.offramp.xyz/login?referralCode=iokost" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('Offramp', 'Crypto Card')">
@@ -1024,388 +914,17 @@
         </div>
     </section>
 
-    <section class="platform-section" id="banks">
-        <div class="container">
-            <div class="section-header">
-                <h3 class="section-title">
-                    <span data-lang="banks-title" data-i18n="bank_title">Bancos Digitais</span>
-                </h3>
-                <p class="section-subtitle" data-lang="banks-subtitle" data-i18n="bank_sub">Bancos digitais com recursos crypto integrados</p>
-            </div>
-            <div class="horizontal-scroll-container">
-                <div class="cards-final-grid">
-                    <!-- Neobankless -->
-                    <div class="platform-card-final">
-                        <div class="card-logo-container">
-                            <img src="https://www.google.com/s2/favicons?domain=neobankless.com&sz=128" alt="Neobankless" onerror="this.src='https://logo.clearbit.com/neobankless.com'">
-                        </div>
-                        <h3 class="card-final-title">Neobankless</h3>
-
-                        <p data-i18n="desc_neobankless" class="card-final-description">
-                            Neobankless é um banco digital com integração total de serviços cripto.
-                        </p>
-                        <div class="card-final-buttons">
-                            <a data-i18n="btn_visit" href="https://neobankless.com/MQM" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('Neobankless', 'Digital Bank')">
-                                Visitar Site
-                            </a>
-                            <a data-i18n="btn_follow" href="https://twitter.com/neobankless" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('Neobankless', 'Social')">
-                                Seguir no X
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Revolut -->
-                    <div class="platform-card-final">
-                        <div class="card-logo-container">
-                            <img src="https://logo.clearbit.com/revolut.com" alt="Revolut" onerror="this.src='https://www.google.com/s2/favicons?domain=revolut.com&sz=64'">
-                        </div>
-                        <h3 class="card-final-title">Revolut</h3>
-
-                        <p data-i18n="desc_revolut" class="card-final-description">
-                            Revolut é um banco digital que integra crypto, permitindo compra, venda e troca de criptomoedas.
-                        </p>
-                        <div class="card-final-buttons">
-                            <a data-i18n="btn_visit" href="https://revolut.com/referral/?referral-code=waldir3l75!SEP1-25-AR-MDL-ROI&geo-redirect" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('Revolut', 'Digital Bank')">
-                                Visitar Site
-                            </a>
-                            <a data-i18n="btn_follow" href="https://twitter.com/RevolutApp" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('Revolut', 'Social')">
-                                Seguir no X
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Bitybank -->
-                    <div class="platform-card-final">
-                        <div class="card-logo-container">
-                            <img src="https://www.google.com/s2/favicons?domain=bity.com.br&sz=128" alt="Bitybank" onerror="this.src='https://logo.clearbit.com/bity.com.br'">
-                        </div>
-                        <h3 class="card-final-title">Bitybank</h3>
-
-                        <p data-i18n="desc_bitybank" class="card-final-description">
-                            Bitybank é um banco digital brasileiro com foco em criptomoedas e finanças descentralizadas.
-                        </p>
-                        <div class="card-final-buttons">
-                            <a data-i18n="btn_visit" href="https://bity.com.br/mgm/180879" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('Bitybank', 'Digital Bank')">
-                                Visitar Site
-                            </a>
-                            <a data-i18n="btn_follow" href="https://twitter.com/BityPrePay" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('Bitybank', 'Social')">
-                                Seguir no X
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Nexo -->
-                    <div class="platform-card-final">
-                        <div class="card-logo-container">
-                            <img src="https://logo.clearbit.com/nexo.com" alt="Nexo" onerror="this.src='https://www.google.com/s2/favicons?domain=nexo.com&sz=128'">
-                        </div>
-                        <h3 class="card-final-title">Nexo</h3>
-
-                        <p data-i18n="desc_nexo" class="card-final-description">
-                            Banco digital focado em crypto com cartão, rendimentos e empréstimos garantidos por cripto.
-                        </p>
-                        <div class="card-final-buttons">
-                            <a data-i18n="btn_visit" href="https://nexo.com" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('Nexo', 'Digital Bank')">
-                                Visitar Site
-                            </a>
-                            <a data-i18n="btn_follow" href="https://twitter.com/Nexo" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('Nexo', 'Social')">
-                                Seguir no X
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Defibank -->
-                    <div class="platform-card-final">
-                        <div class="card-logo-container">
-                            <img src="https://unavatar.io/x/defibankoficial" alt="Defibank" style="border-radius: 50%;">
-                        </div>
-                        <h3 class="card-final-title">Defibank</h3>
-
-                        <p data-i18n="desc_defibank" class="card-final-description">
-                            O banco digital focado em liberdade financeira e cripto.
-                        </p>
-                        <div class="card-final-buttons">
-                            <a data-i18n="btn_visit" href="https://app.defibank.digital/register?ref=JW9MEEFD" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('Defibank', 'Digital Bank')">
-                                Visitar Site
-                            </a>
-                            <a data-i18n="btn_follow" href="https://x.com/defibankoficial" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('Defibank', 'Social')">
-                                Seguir no X
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-navigation">
-                    <button class="carousel-arrow carousel-arrow-left" aria-label="Previous" data-carousel="banks">
-                        ←
-                    </button>
-                    <div class="scroll-indicator">
-                        <div class="scroll-dot active"></div>
-                        <div class="scroll-dot"></div>
-                        <div class="scroll-dot"></div>
-                        <div class="scroll-dot"></div>
-                    </div>
-                    <button class="carousel-arrow carousel-arrow-right" aria-label="Next" data-carousel="banks">
-                        →
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="platform-section" id="trackers">
-        <div class="container">
-            <div class="section-header">
-                <h3 class="section-title">
-                    <span data-i18n="track_title">Trackers</span>
-                </h3>
-                <p class="section-subtitle" data-lang="trackers-subtitle" data-i18n="track_sub">Acompanhamento de mercado e dados em tempo real</p>
-            </div>
-            <div class="horizontal-scroll-container">
-                <div class="cards-final-grid">
-                    <!-- CoinMarketCap -->
-                    <div class="platform-card-final">
-                        <div class="card-logo-container">
-                            <img src="https://unavatar.io/x/CoinMarketCap" alt="CoinMarketCap" style="border-radius: 50%;">
-                        </div>
-                        <h3 class="card-final-title">CoinMarketCap</h3>
-                        <p data-i18n="desc_coinmarketcap" class="card-final-description">
-                            Crypto prices, charts, and market cap.
-                        </p>
-                        <div class="card-final-buttons">
-                            <a data-i18n="btn_visit" href="https://coinmarketcap.com/" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('CoinMarketCap', 'Tracker')">
-                                Visitar Site
-                            </a>
-                            <a data-i18n="btn_follow" href="https://twitter.com/CoinMarketCap" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('CoinMarketCap', 'Social')">
-                                Seguir no X
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- CoinGecko -->
-                    <div class="platform-card-final">
-                        <div class="card-logo-container">
-                            <img src="https://unavatar.io/x/coingecko" alt="CoinGecko" style="border-radius: 50%;">
-                        </div>
-                        <h3 class="card-final-title">CoinGecko</h3>
-                        <p data-i18n="desc_coingecko" class="card-final-description">
-                            360-degree market overview and data.
-                        </p>
-                        <div class="card-final-buttons">
-                            <a data-i18n="btn_visit" href="https://www.coingecko.com/" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('CoinGecko', 'Tracker')">
-                                Visitar Site
-                            </a>
-                            <a data-i18n="btn_follow" href="https://twitter.com/coingecko" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('CoinGecko', 'Social')">
-                                Seguir no X
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- CoinGlass -->
-                    <div class="platform-card-final">
-                        <div class="card-logo-container">
-                            <img src="https://unavatar.io/x/coinglass_com" alt="CoinGlass" style="border-radius: 50%;">
-                        </div>
-                        <h3 class="card-final-title">CoinGlass</h3>
-                        <p data-i18n="desc_coinglass" class="card-final-description">
-                            Crypto derivatives and liquidation data.
-                        </p>
-                        <div class="card-final-buttons">
-                            <a data-i18n="btn_visit" href="https://www.coinglass.com/" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('CoinGlass', 'Tracker')">
-                                Visitar Site
-                            </a>
-                            <a data-i18n="btn_follow" href="https://twitter.com/coinglass_com" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('CoinGlass', 'Social')">
-                                Seguir no X
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- TradingView -->
-                    <div class="platform-card-final">
-                        <div class="card-logo-container">
-                            <img src="https://unavatar.io/x/tradingview" alt="TradingView" style="border-radius: 50%;">
-                        </div>
-                        <h3 class="card-final-title">TradingView</h3>
-                        <p data-i18n="desc_tradingview" class="card-final-description">
-                            Advanced charts and trading network.
-                        </p>
-                        <div class="card-final-buttons">
-                            <a data-i18n="btn_visit" href="https://www.tradingview.com/" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('TradingView', 'Tracker')">
-                                Visitar Site
-                            </a>
-                            <a data-i18n="btn_follow" href="https://twitter.com/tradingview" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('TradingView', 'Social')">
-                                Seguir no X
-                            </a>
-                        </div>
-                    </div>
-                    <!-- DexScreener -->
-                    <div class="platform-card-final">
-                        <div class="card-logo-container">
-                            <img src="https://unavatar.io/x/dexscreener" alt="DexScreener" style="border-radius: 50%;">
-                        </div>
-                        <h3 class="card-final-title">DexScreener</h3>
-                        <p data-i18n="desc_dexscreener" class="card-final-description">
-                            Gráficos em tempo real e análise de tokens em DEXs.
-                        </p>
-                        <div class="card-final-buttons">
-                            <a data-i18n="btn_visit" href="https://dexscreener.com/" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('DexScreener', 'Tracker')">
-                                Visitar Site
-                            </a>
-                            <a data-i18n="btn_follow" href="https://x.com/dexscreener" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('DexScreener', 'Social')">
-                                Seguir no X
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="carousel-navigation">
-                    <button class="carousel-arrow carousel-arrow-left" aria-label="Previous" data-carousel="trackers">
-                        ←
-                    </button>
-                    <div class="scroll-indicator">
-                        <div class="scroll-dot active"></div>
-                        <div class="scroll-dot"></div>
-                        <div class="scroll-dot"></div>
-                        <div class="scroll-dot"></div>
-                    </div>
-                    <button class="carousel-arrow carousel-arrow-right" aria-label="Next" data-carousel="trackers">
-                        →
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <!-- DEXs Section -->
     <section class="platform-section" id="dexs">
         <div class="container">
             <div class="section-header">
                 <h3 class="section-title">
                     <span data-i18n="dex_title">DEXs</span>
                 </h3>
-                <p class="section-subtitle" data-lang="dexs-subtitle" data-i18n="dex_sub">Exchanges descentralizadas para trading sem intermediários</p>
+                <p class="section-subtitle" data-i18n="dex_sub">Exchanges descentralizadas para trading sem intermediários</p>
             </div>
             <div class="horizontal-scroll-container">
                 <div class="cards-final-grid">
-
-                    <!-- Uniswap -->
-                    <div class="platform-card-final">
-                        <div class="card-logo-container">
-                            <img src="https://logo.clearbit.com/uniswap.org" alt="Uniswap" onerror="this.src='https://www.google.com/s2/favicons?domain=uniswap.org&sz=128'">
-                        </div>
-                        <h3 class="card-final-title">Uniswap</h3>
-
-                        <p data-i18n="desc_uniswap" class="card-final-description">
-                            Uniswap é a maior DEX do Ethereum, permitindo trocas descentralizadas sem intermediários.
-                        </p>
-                        <div class="card-final-buttons">
-                            <a data-i18n="btn_visit" href="https://app.uniswap.org" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('Uniswap', 'DEX')">
-                                Visitar Site
-                            </a>
-                            <a data-i18n="btn_follow" href="https://twitter.com/Uniswap" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('Uniswap', 'Social')">
-                                Seguir no X
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Jupiter -->
-                    <div class="platform-card-final">
-                        <div class="card-logo-container">
-                            <img src="https://logo.clearbit.com/jup.ag" alt="Jupiter" onerror="this.src='https://www.google.com/s2/favicons?domain=jup.ag&sz=128'">
-                        </div>
-                        <h3 class="card-final-title">Jupiter</h3>
-
-                        <p data-i18n="desc_jupiter" class="card-final-description">
-                            Jupiter é a principal DEX agregadora em Solana, oferecendo as melhores rotas de swap.
-                        </p>
-                        <div class="card-final-buttons">
-                            <a data-i18n="btn_visit" href="https://jup.ag/swap" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('Jupiter', 'DEX')">
-                                Visitar Site
-                            </a>
-                            <a data-i18n="btn_follow" href="https://twitter.com/JupiterExchange" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('Jupiter', 'Social')">
-                                Seguir no X
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Meteora -->
-                    <div class="platform-card-final">
-                        <div class="card-logo-container">
-                            <img src="https://logo.clearbit.com/meteora.ag" alt="Meteora" onerror="this.src='https://www.google.com/s2/favicons?domain=meteora.ag&sz=128'">
-                        </div>
-                        <h3 class="card-final-title">Meteora</h3>
-
-                        <p data-i18n="desc_meteora" class="card-final-description">
-                            Meteora é uma DEX inovadora em Solana com pools dinâmicos e alta eficiência de capital.
-                        </p>
-                        <div class="card-final-buttons">
-                            <a data-i18n="btn_visit" href="https://app.meteora.ag" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('Meteora', 'DEX')">
-                                Visitar Site
-                            </a>
-                            <a data-i18n="btn_follow" href="https://twitter.com/MeteoraAG" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('Meteora', 'Social')">
-                                Seguir no X
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- PRJX -->
-                    <div class="platform-card-final">
-                        <div class="card-logo-container">
-                            <img src="https://pbs.twimg.com/profile_images/1684343164172472320/u3Oa_f_t_400x400.jpg" alt="PRJX" style="border-radius: 50%;" onerror="this.src='https://www.google.com/s2/favicons?domain=prjx.com&sz=128'">
-                        </div>
-                        <h3 class="card-final-title">PRJX</h3>
-
-                        <p data-i18n="desc_prjx" class="card-final-description">
-                            Plataforma e portfólio de negociação descentralizada.
-                        </p>
-                        <div class="card-final-buttons">
-                            <a data-i18n="btn_visit" href="https://www.prjx.com/@MQM" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('PRJX', 'DEX')">
-                                Visitar Site
-                            </a>
-                            <a data-i18n="btn_follow" href="https://x.com/prjx_hl" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('PRJX', 'Social')">
-                                Seguir no X
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Bitflow -->
-                    <div class="platform-card-final">
-                        <div class="card-logo-container">
-                            <img src="https://www.google.com/s2/favicons?domain=bitflow.finance&sz=128" alt="Bitflow" onerror="this.src='https://logo.clearbit.com/bitflow.finance'">
-                        </div>
-                        <h3 class="card-final-title">Bitflow</h3>
-
-                        <p data-i18n="desc_bitflow" class="card-final-description">
-                            DEX no ecossistema Bitcoin/Stacks. Realize swaps e proveja liquidez com total segurança.
-                        </p>
-                        <div class="card-final-buttons">
-                            <a data-i18n="btn_visit" href="https://bitflow.finance" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('Bitflow', 'DEX')">
-                                Visitar Site
-                            </a>
-                            <a data-i18n="btn_follow" href="https://x.com/bitflow" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('Bitflow', 'Social')">
-                                Seguir no X
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- PancakeSwap -->
-                    <div class="platform-card-final">
-                        <div class="card-logo-container">
-                            <img src="https://logo.clearbit.com/pancakeswap.finance" alt="PancakeSwap" onerror="this.src='https://www.google.com/s2/favicons?domain=pancakeswap.finance&sz=128'">
-                        </div>
-                        <h3 class="card-final-title">PancakeSwap</h3>
-
-                        <p data-i18n="desc_pancakeswap" class="card-final-description">
-                            PancakeSwap é a maior DEX da BNB Chain com yields competitivos e diversas features DeFi.
-                        </p>
-                        <div class="card-final-buttons">
-                            <a data-i18n="btn_visit" href="https://pancakeswap.finance/swap" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('PancakeSwap', 'DEX')">
-                                Visitar Site
-                            </a>
-                            <a data-i18n="btn_follow" href="https://twitter.com/PancakeSwap" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('PancakeSwap', 'Social')">
-                                Seguir no X
-                            </a>
-                        </div>
-                    </div>
-
                     <!-- Raydium -->
                     <div class="platform-card-final">
                         <div class="card-logo-container">
@@ -1426,6 +945,26 @@
                         </div>
                     </div>
 
+                    <!-- Bitflow -->
+                    <div class="platform-card-final">
+                        <div class="card-logo-container">
+                            <img src="https://logo.clearbit.com/bitflow.finance" alt="Bitflow" onerror="this.src='https://www.google.com/s2/favicons?domain=bitflow.finance&sz=128'">
+                        </div>
+                        <h3 class="card-final-title">Bitflow</h3>
+
+                        <p data-i18n="desc_bitflow" class="card-final-description">
+                            DEX no ecossistema Bitcoin/Stacks. Realize swaps e proveja liquidez com total segurança.
+                        </p>
+                        <div class="card-final-buttons">
+                            <a data-i18n="btn_visit" href="https://bitflow.finance" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('Bitflow', 'DEX')">
+                                Visitar Site
+                            </a>
+                            <a data-i18n="btn_follow" href="https://twitter.com/bitflow" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('Bitflow', 'Social')">
+                                Seguir no X
+                            </a>
+                        </div>
+                    </div>
+
                     <!-- Liquidium -->
                     <div class="platform-card-final">
                         <div class="card-logo-container">
@@ -1441,6 +980,26 @@
                                 Visitar Site
                             </a>
                             <a data-i18n="btn_follow" href="https://x.com/liquidiumfi" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('Liquidium', 'Social')">
+                                Seguir no X
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Sats Terminal -->
+                    <div class="platform-card-final">
+                        <div class="card-logo-container">
+                            <img src="https://logo.clearbit.com/satsterminal.com" alt="Sats Terminal" onerror="this.src='https://www.google.com/s2/favicons?domain=satsterminal.com&sz=128'">
+                        </div>
+                        <h3 class="card-final-title">Sats Terminal</h3>
+
+                        <p data-i18n="desc_satsterminal" class="card-final-description">
+                            Swaps, empréstimos e yield de Bitcoin. Agregação de liquidez no ecossistema Bitcoin.
+                        </p>
+                        <div class="card-final-buttons">
+                            <a data-i18n="btn_visit" href="https://www.satsterminal.com" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('Sats Terminal', 'DEX')">
+                                Visitar Site
+                            </a>
+                            <a data-i18n="btn_follow" href="https://x.com/SatsTerminal" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('Sats Terminal', 'Social')">
                                 Seguir no X
                             </a>
                         </div>
@@ -1564,20 +1123,21 @@
         </div>
     </section>
 
+    <!-- Bridges Section -->
     <section class="platform-section" id="bridges">
         <div class="container">
             <div class="section-header">
                 <h3 class="section-title">
-                    <span data-lang="bridges-title" data-i18n="bridge_title">Bridges</span>
+                    <span data-i18n="bridge_title">Bridges</span>
                 </h3>
-                <p class="section-subtitle" data-lang="bridges-subtitle" data-i18n="bridge_sub">Transfira ativos entre diferentes blockchains</p>
+                <p class="section-subtitle" data-i18n="bridge_sub">Transfira ativos entre diferentes blockchains</p>
             </div>
             <div class="horizontal-scroll-container">
                 <div class="cards-final-grid">
                     <!-- SideShift.ai -->
                     <div class="platform-card-final">
                         <div class="card-logo-container">
-                            <img src="https://logo.clearbit.com/sideshift.ai" alt="SideShift.ai" onerror="this.src='https://www.google.com/s2/favicons?domain=sideshift.ai&sz=128'">
+                            <img src="https://logo.clearbit.com/sideshift.ai" alt="SideShift.ai" onerror="this.src='https://www.google.com/s2/favicons?domain=sideshift.ai&sz=128'" style="background-color: #ffffff; padding: 4px; border-radius: 50%; object-fit: contain;">
                         </div>
                         <h3 class="card-final-title">SideShift.ai</h3>
 
@@ -1672,11 +1232,14 @@
         </div>
     </section>
 
+    <!-- Tax & Legal Section -->
     <section class="platform-section" id="tax-legal">
         <div class="container">
             <div class="section-header">
-                <h2 data-i18n="tax_title">Advogados e contabilidade</h2>
-                <p data-i18n="tax_sub">Contadores e advogados especializados em cripto</p>
+                <h3 class="section-title">
+                    <span data-i18n="tax_title">Advogados e contabilidade</span>
+                </h3>
+                <p class="section-subtitle" data-i18n="tax_sub">Contadores e advogados especializados em cripto</p>
             </div>
             <div class="horizontal-scroll-container">
                 <div class="cards-final-grid" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
@@ -1703,7 +1266,241 @@
         </div>
     </section>
 
-    
+    <!-- Trackers Section -->
+    <section class="platform-section" id="trackers">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title">
+                    <span data-i18n="track_title">Trackers</span>
+                </h3>
+                <p class="section-subtitle" data-i18n="track_sub">Acompanhamento de mercado e dados em tempo real</p>
+            </div>
+            <div class="horizontal-scroll-container">
+                <div class="cards-final-grid">
+                    <!-- CoinMarketCap -->
+                    <div class="platform-card-final">
+                        <div class="card-logo-container">
+                            <img src="https://unavatar.io/x/CoinMarketCap" alt="CoinMarketCap" style="border-radius: 50%;">
+                        </div>
+                        <h3 class="card-final-title">CoinMarketCap</h3>
+                        <p data-i18n="desc_coinmarketcap" class="card-final-description">
+                            Crypto prices, charts, and market cap.
+                        </p>
+                        <div class="card-final-buttons">
+                            <a data-i18n="btn_visit" href="https://coinmarketcap.com/" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('CoinMarketCap', 'Tracker')">
+                                Visitar Site
+                            </a>
+                            <a data-i18n="btn_follow" href="https://twitter.com/CoinMarketCap" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('CoinMarketCap', 'Social')">
+                                Seguir no X
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- CoinGecko -->
+                    <div class="platform-card-final">
+                        <div class="card-logo-container">
+                            <img src="https://unavatar.io/x/coingecko" alt="CoinGecko" style="border-radius: 50%;">
+                        </div>
+                        <h3 class="card-final-title">CoinGecko</h3>
+                        <p data-i18n="desc_coingecko" class="card-final-description">
+                            360-degree market overview and data.
+                        </p>
+                        <div class="card-final-buttons">
+                            <a data-i18n="btn_visit" href="https://www.coingecko.com/" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('CoinGecko', 'Tracker')">
+                                Visitar Site
+                            </a>
+                            <a data-i18n="btn_follow" href="https://twitter.com/coingecko" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('CoinGecko', 'Social')">
+                                Seguir no X
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- CoinGlass -->
+                    <div class="platform-card-final">
+                        <div class="card-logo-container">
+                            <img src="https://unavatar.io/x/coinglass_com" alt="CoinGlass" style="border-radius: 50%;">
+                        </div>
+                        <h3 class="card-final-title">CoinGlass</h3>
+                        <p data-i18n="desc_coinglass" class="card-final-description">
+                            Crypto derivatives and liquidation data.
+                        </p>
+                        <div class="card-final-buttons">
+                            <a data-i18n="btn_visit" href="https://www.coinglass.com/" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('CoinGlass', 'Tracker')">
+                                Visitar Site
+                            </a>
+                            <a data-i18n="btn_follow" href="https://twitter.com/coinglass_com" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('CoinGlass', 'Social')">
+                                Seguir no X
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- TradingView -->
+                    <div class="platform-card-final">
+                        <div class="card-logo-container">
+                            <img src="https://unavatar.io/x/tradingview" alt="TradingView" style="border-radius: 50%;">
+                        </div>
+                        <h3 class="card-final-title">TradingView</h3>
+                        <p data-i18n="desc_tradingview" class="card-final-description">
+                            Advanced charts and trading network.
+                        </p>
+                        <div class="card-final-buttons">
+                            <a data-i18n="btn_visit" href="https://www.tradingview.com/" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('TradingView', 'Tracker')">
+                                Visitar Site
+                            </a>
+                            <a data-i18n="btn_follow" href="https://twitter.com/tradingview" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('TradingView', 'Social')">
+                                Seguir no X
+                            </a>
+                        </div>
+                    </div>
+                    <!-- DexScreener -->
+                    <div class="platform-card-final">
+                        <div class="card-logo-container">
+                            <img src="https://unavatar.io/x/dexscreener" alt="DexScreener" style="border-radius: 50%;">
+                        </div>
+                        <h3 class="card-final-title">DexScreener</h3>
+                        <p data-i18n="desc_dexscreener" class="card-final-description">
+                            Gráficos em tempo real e análise de tokens em DEXs.
+                        </p>
+                        <div class="card-final-buttons">
+                            <a data-i18n="btn_visit" href="https://dexscreener.com/" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('DexScreener', 'Tracker')">
+                                Visitar Site
+                            </a>
+                            <a data-i18n="btn_follow" href="https://x.com/dexscreener" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('DexScreener', 'Social')">
+                                Seguir no X
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-navigation">
+                    <button class="carousel-arrow carousel-arrow-left" aria-label="Previous" data-carousel="trackers">
+                        ←
+                    </button>
+                    <div class="scroll-indicator">
+                        <div class="scroll-dot active"></div>
+                        <div class="scroll-dot"></div>
+                        <div class="scroll-dot"></div>
+                        <div class="scroll-dot"></div>
+                    </div>
+                    <button class="carousel-arrow carousel-arrow-right" aria-label="Next" data-carousel="trackers">
+                        →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section - Premium Design -->
+    <section class="security-section">
+        <div class="security-content">
+            <h2 class="security-title" data-i18n="securityTitle">
+                Protegendo você dos erros mais comuns em cripto
+            </h2>
+
+            <p class="security-description" data-i18n="securityDesc">
+                Crypto Aggregator funciona como um filtro de acesso ao ecossistema cripto, validando fontes, links oficiais e informações antes de direcionar o usuário.
+            </p>
+
+            <div class="security-grid">
+                <div class="security-card">
+                    <div class="security-icon">🔒</div>
+                    <h3 data-i18n="securityExtremaTitle">Segurança Extrema</h3>
+                    <p data-i18n="securityExtremaDesc">Verificação rigorosa de todos os parceiros listados.</p>
+                </div>
+
+                <div class="security-card">
+                    <div class="security-icon">📋</div>
+                    <h3 data-i18n="securityTransTitle">Transparência</h3>
+                    <p data-i18n="securityTransDesc">Simples de entender, fácil de confiar.</p>
+                </div>
+
+                <div class="security-card">
+                    <div class="security-icon">🧠</div>
+                    <h3 data-i18n="securityCuradoriaTitle">Curadoria Inteligente</h3>
+                    <p data-i18n="securityCuradoriaDesc">Selecionamos apenas o que realmente faz sentido, evitando ruído, promessas vazias e projetos desnecessários.</p>
+                </div>
+
+                <div class="security-card">
+                    <div class="security-icon">🧭</div>
+                    <h3 data-i18n="securityNavegacaoTitle">Navegação Guiada</h3>
+                    <p data-i18n="securityNavegacaoDesc">Ajudamos você a entender antes de usar. Informação vem antes da ação.</p>
+                </div>
+            </div>
+
+            <div class="education-box">
+                <h4 data-i18n="eduTitle">EDUCAÇÃO PRIMEIRO</h4>
+                <p data-i18n="eduDesc">Pensado para iniciantes e avançados. Nossa missão é garantir que você tenha clareza e segurança em cada clique.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Explanation Cards Section -->
+    <section class="category-info-section">
+        <div class="category-info-container">
+            <h2 class="category-info-title" data-i18n="catTitle">
+                Cripto sem complicação,
+                <span class="gradient-text" data-i18n="catTitleSpan">tudo em um só lugar</span>
+            </h2>
+            <p style="text-align: center; width: 100%; margin-top: 10px; font-size: 0.9rem; opacity: 0.8;" data-i18n="catSubtitle">&#x2705; Todos os links são verificados e confiáveis.</p>
+            <div style="text-align: center; margin-top: 15px; margin-bottom: 10px;">
+                <a href="https://x.com/criptoagg?s=21" target="_blank" rel="noopener noreferrer" style="display: inline-block; transition: opacity 0.3s;" onmouseover="this.style.opacity=0.7" onmouseout="this.style.opacity=1">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="category-cards-grid">
+            <!-- P2P Card -->
+            <div class="category-info-card">
+                <div class="category-icon">👥</div>
+                <h3 data-i18n="catP2PTitle">P2P (Peer-to-Peer)</h3>
+                <p data-i18n="catP2PDesc">Plataformas onde pessoas negociam cripto diretamente entre si, sem intermediários.</p>
+            </div>
+
+            <!-- Exchanges Card -->
+            <div class="category-info-card">
+                <div class="category-icon">↔️</div>
+                <h3 data-i18n="catExTitle">Exchanges (Corretoras)</h3>
+                <p data-i18n="catExDesc">Plataformas centralizadas que permitem comprar, vender e negociar cripto con facilidad.</p>
+            </div>
+
+            <!-- DEXs Card -->
+            <div class="category-info-card">
+                <div class="category-icon">🔀</div>
+                <h3 data-i18n="catDexTitle">DEXs (Corretoras Descentralizadas)</h3>
+                <p data-i18n="catDexDesc">Plataformas descentralizadas onde você troca cripto direto da sua carteira, sem custódia.</p>
+            </div>
+
+            <!-- Banks Card -->
+            <div class="category-info-card">
+                <div class="category-icon">🏦</div>
+                <h3 data-i18n="catBanksTitle">Digital Banks (Bancos)</h3>
+                <p data-i18n="catBanksDesc">Bancos digitais e serviços financeiros que integram cripto ao sistema tradicional.</p>
+            </div>
+
+            <!-- Crypto Cards -->
+            <div class="category-info-card">
+                <div class="category-icon">💳</div>
+                <h3 data-i18n="catCardsTitle">Crypto Cards (Cartões Cripto)</h3>
+                <p data-i18n="catCardsDesc">Cartões que permitem gastar criptomoedas no mundo real.</p>
+            </div>
+
+            <!-- Bridges Card -->
+            <div class="category-info-card">
+                <div class="category-icon">🔗</div>
+                <h3 data-i18n="catBridgesTitle">Bridges (Pontes)</h3>
+                <p data-i18n="catBridgesDesc">Ferramentas que permitem mover ativos entre diferentes blockchains.</p>
+            </div>
+
+            <!-- Wallets Card -->
+            <div class="category-info-card">
+                <div class="category-icon">👛</div>
+                <h3 data-i18n="catWalletsTitle">Wallets (Carteiras)</h3>
+                <p data-i18n="catWalletsDesc">Aplicativos onde você guarda, envia e recebe criptomoedas com controle total.</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
