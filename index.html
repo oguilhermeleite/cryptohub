@@ -2000,6 +2000,39 @@
                 });
             });
         });
+
+        // --- PRECISION ANALYTICS: ZERO "(not set)" PARTNER TRACKING ---
+        document.addEventListener('click', function(e) {
+            // Find the closest anchor tag even if the user clicks an image or span inside the button
+            const link = e.target.closest('a');
+            
+            // Check if it's a valid external link
+            if (link && link.href && link.href.startsWith('http') && !link.href.includes(window.location.hostname)) {
+                try {
+                    const urlObj = new URL(link.href);
+                    // Clean the domain to use as the exact platform name (e.g., "binance.com", "jup.ag")
+                    const exactPlatform = urlObj.hostname.replace('www.', '');
+
+                    // 1. Send to GA4 with exact parameter
+                    if (typeof window.gtag === 'function') {
+                        window.gtag('event', 'partner_click', {
+                            'platform_name': exactPlatform,
+                            'link_url': link.href
+                        });
+                    }
+
+                    // 2. Send to PostHog with exact parameter
+                    if (typeof window.posthog !== 'undefined') {
+                        window.posthog.capture('partner_click', {
+                            platform_name: exactPlatform,
+                            link_url: link.href
+                        });
+                    }
+                } catch (error) {
+                    console.error('Tracking error:', error);
+                }
+            }
+        });
     </script>
 </body>
 </html>
