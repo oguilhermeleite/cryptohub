@@ -268,6 +268,44 @@
       .lang-btn:hover { color: #00ff88; }
       .lang-btn.active { color: #fff; }
       .lang-separator { color: #444; }
+
+      /* Precision Desktop Repositioning */
+      @media (min-width: 769px) {
+        .site-header {
+          display: flex !important;
+          justify-content: space-between !important;
+          align-items: center !important;
+          width: 100% !important;
+        }
+
+        #language-switcher {
+          order: 3 !important;
+          margin-left: auto !important;
+          margin-bottom: 0 !important;
+          width: auto !important;
+          border-bottom: none !important;
+          padding-bottom: 0 !important;
+          display: flex !important;
+          gap: 10px !important;
+          white-space: nowrap !important;
+        }
+
+        #nav-menu {
+          order: 2 !important;
+          flex: 2 !important;
+          display: flex !important;
+          justify-content: center !important;
+        }
+
+        .logo-area {
+          order: 1 !important;
+          flex: 1 !important;
+        }
+        
+        .actions-container {
+          order: 4 !important;
+        }
+      }
     </style>
     <script>
         !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="Mi Ri init Vi Gi Rr Wi Ji Bi capture calculateEventProperties tn register register_once register_for_session unregister unregister_for_session an getFeatureFlag getFeatureFlagPayload getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurveyAsync un identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty nn Xi createPersonProfile setInternalOrTestUser sn Hi cn opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Ki debug Lr rn getPageViewId captureTraceFeedback captureTraceMetric Di".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
@@ -286,12 +324,6 @@
       </div>
 
       <nav class="desktop-nav" id="nav-menu">
-        <div id="language-switcher" style="margin-bottom: 20px; display: flex; justify-content: center; gap: 15px; width: 100%; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; align-items:center; color:white; font-weight:bold; cursor:pointer; position:relative; z-index:9999; pointer-events:auto;">
-          <span id="btn-pt" style="opacity:1; cursor:pointer; pointer-events:auto;">PT</span> / 
-          <span id="btn-en" style="opacity:0.5; cursor:pointer; pointer-events:auto;">EN</span> / 
-          <span id="btn-es" style="opacity:0.5; cursor:pointer; pointer-events:auto;">ES</span>
-        </div>
-
         <a href="#p2p" data-i18n="p2p_title">P2P</a>
         <a href="#exchanges" data-i18n="exch_title">Exchanges</a>
         <a href="#dexs" data-i18n="dex_title">DEXs</a>
@@ -302,6 +334,12 @@
         <a href="#trackers" data-i18n="track_title">Trackers</a>
         <a href="#tax-legal" data-i18n="tax_title">Tax & Legal</a>
       </nav>
+
+      <div id="language-switcher" style="margin-bottom: 20px; display: flex; justify-content: center; gap: 15px; width: 100%; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; align-items:center; color:white; font-weight:bold; cursor:pointer; position:relative; z-index:9999; pointer-events:auto;">
+        <span id="btn-pt" style="opacity:1; cursor:pointer; pointer-events:auto;">PT</span> / 
+        <span id="btn-en" style="opacity:0.5; cursor:pointer; pointer-events:auto;">EN</span> / 
+        <span id="btn-es" style="opacity:0.5; cursor:pointer; pointer-events:auto;">ES</span>
+      </div>
 
       <div class="actions-container">
         <button id="mobile-menu-btn" style="position: relative; z-index: 99999; cursor: pointer; background: none; border: none; color: #00ff88; font-size: 28px; margin-left: 15px; display: none;">☰</button>
