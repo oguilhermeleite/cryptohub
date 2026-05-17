@@ -664,3 +664,41 @@ window.addEventListener('load', function() {
     // Add padding to the body so the footer doesn't cover site content
     document.body.style.paddingBottom = '45px';
 });
+
+/* ========================================= */
+/* MOBILE MENU TOGGLE LOGIC                  */
+/* ========================================= */
+document.addEventListener('DOMContentLoaded', function() {
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const navMenu = document.getElementById('nav-menu');
+
+  if (menuBtn && navMenu) {
+    // Force reset to avoid any overlapping bindings
+    menuBtn.replaceWith(menuBtn.cloneNode(true));
+    const newMenuBtn = document.getElementById('mobile-menu-btn');
+
+    newMenuBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      const isOpen = navMenu.classList.contains('active');
+      if (isOpen) {
+        navMenu.classList.remove('active');
+        navMenu.style.setProperty('display', 'none', 'important');
+      } else {
+        navMenu.classList.add('active');
+        navMenu.style.setProperty('display', 'flex', 'important');
+      }
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', function(e) {
+      if (navMenu.classList.contains('active')) {
+        if (!navMenu.contains(e.target) && !newMenuBtn.contains(e.target)) {
+          navMenu.classList.remove('active');
+          navMenu.style.setProperty('display', 'none', 'important');
+        }
+      }
+    });
+  }
+});
