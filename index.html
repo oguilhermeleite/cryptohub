@@ -146,6 +146,23 @@
           console.log('[Analytics] Event sent to GA4');
         }
       }
+
+      // Track creator/partner social clicks (handle goes in platform_name)
+      function trackPartnerClick(handle, platform) {
+        console.log('[Analytics] Partner click:', handle, platform);
+
+        if (typeof gtag === 'function') {
+          gtag('event', 'partner_click', {
+            'platform_name': handle,
+            'platform': platform,
+            'device': /Mobile/i.test(navigator.userAgent) ? 'mobile' : 'desktop',
+            'timestamp': new Date().toISOString()
+          });
+          console.log('[Analytics] partner_click sent to GA4');
+        } else {
+          console.error('[Analytics] gtag function not available');
+        }
+      }
     </script>
 
     <!-- Microsoft Clarity Analytics -->
@@ -358,6 +375,7 @@
             </div>
             <nav class="mobile-menu-nav">
                 <ul class="mobile-nav-list">
+                    <li><a href="#creators" data-section="creators">Creators</a></li>
                     <li><a href="#p2p" data-section="p2p">P2P</a></li>
                     <li><a href="#exchanges" data-section="exchanges">Exchanges</a></li>
                     <li><a href="#dexs" data-section="dexs">DEXs</a></li>
@@ -458,6 +476,204 @@
                                 <span class="feature-icon">⚡</span> Ultra Rápido
                             </span>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creators & Research Section -->
+    <style>
+      .creators-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        margin-top: 10px;
+      }
+      .creator-card {
+        background: linear-gradient(160deg, #131313 0%, #0c0c0c 100%);
+        border: 1px solid rgba(0, 255, 136, 0.12);
+        border-radius: 18px;
+        padding: 28px 20px 24px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      }
+      .creator-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(0, 255, 136, 0.45);
+        box-shadow: 0 12px 30px rgba(0, 255, 136, 0.12);
+      }
+      .creator-avatar {
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #00ff88;
+        box-shadow: 0 0 18px rgba(0, 255, 136, 0.35);
+        background: #1a1a1a;
+      }
+      .creator-name {
+        margin: 16px 0 10px;
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #ffffff;
+      }
+      .creator-tags {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+        margin-bottom: 14px;
+      }
+      .creator-tag {
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+        color: #00ff88;
+        background: rgba(0, 255, 136, 0.08);
+        border: 1px solid rgba(0, 255, 136, 0.25);
+        border-radius: 999px;
+        padding: 4px 10px;
+      }
+      .creator-description {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        color: #a8a8a8;
+        margin-bottom: 20px;
+        flex-grow: 1;
+      }
+      .creator-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+      }
+      .creator-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 10px 14px;
+        border-radius: 10px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+      .creator-btn-x {
+        background: #00ff88;
+        color: #0a0a0a;
+      }
+      .creator-btn-x:hover {
+        background: #00e07a;
+        box-shadow: 0 4px 14px rgba(0, 255, 136, 0.3);
+      }
+      .creator-btn-ig {
+        background: transparent;
+        color: #ffffff;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+      }
+      .creator-btn-ig:hover {
+        border-color: #00ff88;
+        color: #00ff88;
+      }
+      @media (max-width: 1024px) {
+        .creators-grid { grid-template-columns: repeat(2, 1fr); }
+      }
+      @media (max-width: 560px) {
+        .creators-grid { grid-template-columns: 1fr; }
+      }
+    </style>
+    <section class="platform-section" id="creators">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title">
+                    <span data-i18n="creatorsTitle">Creators &amp; Research</span>
+                </h3>
+                <p class="section-subtitle" data-i18n="creatorsSubtitle">Os criadores e analistas de referência da nossa comunidade</p>
+            </div>
+
+            <div class="creators-grid">
+                <!-- Augusto Backes -->
+                <div class="creator-card">
+                    <img class="creator-avatar" src="https://unavatar.io/twitter/augustobackes" alt="Augusto Backes" loading="lazy"
+                         onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=x.com&sz=128'">
+                    <h4 class="creator-name">Augusto Backes</h4>
+                    <div class="creator-tags">
+                        <span class="creator-tag">Pioneiro Cripto</span>
+                        <span class="creator-tag">Price Action</span>
+                    </div>
+                    <p class="creator-description">Um dos maiores pioneiros e principais referências em educação de criptoativos no Brasil, especialista em análise técnica e psicologia de mercado.</p>
+                    <div class="creator-buttons">
+                        <a class="creator-btn creator-btn-x" href="https://x.com/augustobackes" target="_blank" rel="noopener noreferrer" onclick="trackPartnerClick('backes_x', 'X')">
+                            <span>𝕏</span> Seguir no X
+                        </a>
+                        <a class="creator-btn creator-btn-ig" href="https://www.instagram.com/augustobackes" target="_blank" rel="noopener noreferrer" onclick="trackPartnerClick('backes_instagram', 'Instagram')">
+                            <span>📷</span> Seguir no Instagram
+                        </a>
+                    </div>
+                </div>
+
+                <!-- mQm Crypto -->
+                <div class="creator-card">
+                    <img class="creator-avatar" src="https://unavatar.io/twitter/mqmcrypto" alt="mQm Crypto" loading="lazy"
+                         onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=x.com&sz=128'">
+                    <h4 class="creator-name">mQm Crypto</h4>
+                    <div class="creator-tags">
+                        <span class="creator-tag">Visão de Mercado</span>
+                        <span class="creator-tag">Alpha Call</span>
+                    </div>
+                    <p class="creator-description">Investidor estratégico com uma visão de mercado surreal, focado em identificar assimetrias e narrativas de alta performance antes do consenso.</p>
+                    <div class="creator-buttons">
+                        <a class="creator-btn creator-btn-x" href="https://x.com/mqmcrypto" target="_blank" rel="noopener noreferrer" onclick="trackPartnerClick('mqm_x', 'X')">
+                            <span>𝕏</span> Seguir no X
+                        </a>
+                        <a class="creator-btn creator-btn-ig" href="https://www.instagram.com/mqmcrypto" target="_blank" rel="noopener noreferrer" onclick="trackPartnerClick('mqm_instagram', 'Instagram')">
+                            <span>📷</span> Seguir no Instagram
+                        </a>
+                    </div>
+                </div>
+
+                <!-- João Campos -->
+                <div class="creator-card">
+                    <img class="creator-avatar" src="https://unavatar.io/twitter/joocamp07717668" alt="João Campos" loading="lazy"
+                         onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=x.com&sz=128'">
+                    <h4 class="creator-name">João Campos</h4>
+                    <div class="creator-tags">
+                        <span class="creator-tag">Dados On-Chain</span>
+                        <span class="creator-tag">Análise Macro</span>
+                    </div>
+                    <p class="creator-description">Especialista em análise de dados on-chain, rastreando o fluxo de baleias, contratos inteligentes e métricas fundamentais da blockchain.</p>
+                    <div class="creator-buttons">
+                        <a class="creator-btn creator-btn-x" href="https://x.com/joocamp07717668" target="_blank" rel="noopener noreferrer" onclick="trackPartnerClick('joaocampos_x', 'X')">
+                            <span>𝕏</span> Seguir no X
+                        </a>
+                        <a class="creator-btn creator-btn-ig" href="https://www.instagram.com/joocampos" target="_blank" rel="noopener noreferrer" onclick="trackPartnerClick('joaocampos_instagram', 'Instagram')">
+                            <span>📷</span> Seguir no Instagram
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Maticoy -->
+                <div class="creator-card">
+                    <img class="creator-avatar" src="https://unavatar.io/twitter/maticoytb" alt="Maticoy" loading="lazy"
+                         onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=x.com&sz=128'">
+                    <h4 class="creator-name">Maticoy</h4>
+                    <div class="creator-tags">
+                        <span class="creator-tag">Airdrop Hunter</span>
+                        <span class="creator-tag">DeFi Ecosystems</span>
+                    </div>
+                    <p class="creator-description">Especialista estratégico em caça de Airdrops e posicionamento inicial em novos protocolos DeFi nas redes mais promissoras do mercado.</p>
+                    <div class="creator-buttons">
+                        <a class="creator-btn creator-btn-x" href="https://x.com/maticoytb" target="_blank" rel="noopener noreferrer" onclick="trackPartnerClick('maticoy_x', 'X')">
+                            <span>𝕏</span> Seguir no X
+                        </a>
+                        <a class="creator-btn creator-btn-ig" href="https://www.instagram.com/maticoy" target="_blank" rel="noopener noreferrer" onclick="trackPartnerClick('maticoy_instagram', 'Instagram')">
+                            <span>📷</span> Seguir no Instagram
+                        </a>
                     </div>
                 </div>
             </div>
