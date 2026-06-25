@@ -176,26 +176,31 @@
 
     <style>
       /* Header Base Styles (Desktop) */
-      .site-header { 
-        display: flex; 
-        justify-content: space-between; 
-        align-items: center; 
-        width: 100%; 
-        padding: 15px 4%; 
-        box-sizing: border-box; 
-        background: #0a0a0a; 
-        position: fixed; 
-        top: 0; 
-        left: 0; 
-        z-index: 1000; 
-        border-bottom: 1px solid rgba(255, 107, 53, 0.2); 
+      .site-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 62px;
+        padding: 0 4%;
+        box-sizing: border-box;
+        background: rgba(10, 10, 10, 0.82);
+        -webkit-backdrop-filter: blur(18px) saturate(150%);
+        backdrop-filter: blur(18px) saturate(150%);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       }
       .logo-container { flex: 1; display: flex; justify-content: flex-start; align-items: center; }
       .logo-container img { height: 40px; width: auto; object-fit: contain; }
       
-      .desktop-nav { display: flex; gap: 20px; transition: all 0.3s ease; flex: 2; justify-content: center; }
-      .desktop-nav a { color: white; text-decoration: none; font-size: 14px; font-weight: 600; transition: 0.3s; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap !important; }
-      .desktop-nav a:hover { color: #FF6B35; }
+      .desktop-nav { display: flex; align-items: center; gap: 2px; transition: all 0.3s ease; flex: 1 1 auto; justify-content: center; }
+      .desktop-nav a { position: relative; color: rgba(255, 255, 255, 0.62); text-decoration: none; font-size: 12.5px; font-weight: 500; padding: 8px 13px; border-radius: 7px; transition: color 0.2s ease, background 0.2s ease; text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap !important; }
+      .desktop-nav a:hover { color: #fff; background: rgba(255, 255, 255, 0.05); }
+      .desktop-nav a::after { content: ''; position: absolute; left: 13px; right: 13px; bottom: 5px; height: 1.5px; border-radius: 2px; background: #FF6B35; transform: scaleX(0); transform-origin: center; transition: transform 0.25s ease; }
+      .desktop-nav a:hover::after { transform: scaleX(1); }
       
       .actions-container { flex: 1; display: flex; justify-content: flex-end; align-items: center; gap: 15px; }
 
@@ -297,14 +302,15 @@
 
         #language-switcher {
           order: 4 !important;
-          margin-left: auto !important;
+          margin-left: 22px !important;
           margin-right: 0 !important;
           margin-bottom: 0 !important;
           width: auto !important;
           border-bottom: none !important;
-          padding-bottom: 0 !important;
+          border-left: 1px solid rgba(255, 255, 255, 0.1) !important;
+          padding: 0 0 0 22px !important;
           display: flex !important;
-          gap: 12px !important;
+          gap: 8px !important;
           white-space: nowrap !important;
         }
 
@@ -324,6 +330,45 @@
           order: 3 !important;
           display: none !important;
         }
+      }
+
+      /* Language Switcher — refined toggle */
+      #language-switcher {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        user-select: none;
+        position: relative;
+        z-index: 1001;
+      }
+      #language-switcher span {
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        color: rgba(255, 255, 255, 0.4);
+        transition: color 0.2s ease;
+        pointer-events: auto;
+      }
+      #language-switcher span:hover { color: #fff; }
+      #language-switcher span.lang-active { color: #FF6B35; }
+
+      /* Tablet / small laptop — keep the nav on one tidy line */
+      @media (min-width: 769px) and (max-width: 1200px) {
+        .desktop-nav { gap: 0; }
+        .desktop-nav a { font-size: 11.5px; padding: 6px 9px; letter-spacing: 0.03em; }
+        .desktop-nav a::after { left: 9px; right: 9px; }
+        .logo-area h1 { font-size: 18px !important; }
+        #language-switcher { margin-left: 14px !important; padding-left: 14px !important; }
+      }
+
+      /* Mobile header polish */
+      @media (max-width: 768px) {
+        .site-header { height: 56px; padding: 0 16px; }
+        .logo-area { min-width: 0 !important; }
+        .logo-area h1 { font-size: 17px !important; }
+        #language-switcher { gap: 6px !important; }
+        #language-switcher span { font-size: 11px; }
       }
     </style>
     <script>
@@ -354,10 +399,10 @@
         <a href="#tax-legal" data-i18n="tax_title">Tax & Legal</a>
       </nav>
 
-      <div id="language-switcher" style="margin-bottom: 20px; display: flex; justify-content: center; gap: 15px; width: 100%; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; align-items:center; color:white; font-weight:bold; cursor:pointer; position:relative; z-index:9999; pointer-events:auto;">
-        <span id="btn-pt" style="opacity:1; cursor:pointer; pointer-events:auto;">PT</span> / 
-        <span id="btn-en" style="opacity:0.5; cursor:pointer; pointer-events:auto;">EN</span> / 
-        <span id="btn-es" style="opacity:0.5; cursor:pointer; pointer-events:auto;">ES</span>
+      <div id="language-switcher">
+        <span id="btn-pt">PT</span>
+        <span id="btn-en">EN</span>
+        <span id="btn-es">ES</span>
       </div>
 
       <div class="actions-container">

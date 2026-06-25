@@ -11583,3 +11583,12 @@ body > div:empty:not([id]):not([class]) {
     background: var(--accent-primary);
     box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.18);
 }
+
+/* all-platforms.html hero (.hero) had min-height:60vh + flex-start, leaving a
+   large empty gap below the short title/subtitle. Tighten it. (index.html uses
+   .hero-section, so it is unaffected.) */
+.hero {
+    min-height: auto !important;
+    padding: 120px 0 50px !important;
+    align-items: center !important;
+}

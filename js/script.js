@@ -593,7 +593,7 @@ function setLanguage(lang) {
     // Sync with inline switchers if they exist (btn-pt, btn-en, btn-es)
     ['pt','en','es'].forEach(l => {
         const b = document.getElementById('btn-' + l);
-        if(b) b.style.opacity = lang === l ? '1' : '0.5';
+        if(b) b.classList.toggle('lang-active', lang === l);
     });
     
     // Update active state in dropdown
