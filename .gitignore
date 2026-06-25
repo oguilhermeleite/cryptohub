@@ -1,0 +1,9 @@
+# OS
+.DS_Store
+**/.DS_Store
+
+# Local editor/agent config
+.claude/settings.local.json
+
+# Logs
+server.log

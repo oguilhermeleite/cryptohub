@@ -35,15 +35,10 @@ const platformsData = {
         twitter: '@PagFinance',
         twitterUrl: 'https://twitter.com/PagFinance'
     },
-    'Compre Cripto': {
-        site: 'https://app.comprecripto.io/register/mqm',
-        twitter: '@comprecripto',
-        twitterUrl: 'https://twitter.com/comprecripto'
-    },
 
     // EXCHANGES
     'Binance': {
-        site: 'https://www.binance.com/activity/referral-entry/CPA?ref=CPA_0001DCF8M6',
+        site: 'https://www.binance.com/activity/trading-competition/referral-tournament-june?ref=MQMCRYPTO',
         twitter: '@binance',
         twitterUrl: 'https://twitter.com/binance'
     },
@@ -87,7 +82,7 @@ const platformsData = {
 
     // CRYPTO CARDS
     'Kast Finance': {
-        site: 'https://kast.xyz',
+        site: 'https://app.kast.xyz/referral/ERQOFY4N',
         twitter: '@kastfinance',
         twitterUrl: 'https://twitter.com/kastfinance'
     },
@@ -97,14 +92,9 @@ const platformsData = {
         twitterUrl: 'https://twitter.com/OfframpMoney'
     },
     'Ether.fi': {
-        site: 'https://ether.fi',
+        site: 'https://www.ether.fi/app/cash/referral?ref_code=9e42b133',
         twitter: '@ether_fi',
         twitterUrl: 'https://twitter.com/ether_fi'
-    },
-    'Bitso': {
-        site: 'https://bitso.com',
-        twitter: '@Bitso',
-        twitterUrl: 'https://twitter.com/Bitso'
     },
 
     // DIGITAL BANKS
@@ -122,11 +112,6 @@ const platformsData = {
         site: 'https://neobankless.com',
         twitter: '@neobankless',
         twitterUrl: 'https://twitter.com/neobankless'
-    },
-    'Nexo': {
-        site: 'https://nexo.com',
-        twitter: '@Nexo',
-        twitterUrl: 'https://twitter.com/Nexo'
     },
 
     // COLD WALLETS
