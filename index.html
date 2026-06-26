@@ -9,9 +9,30 @@
     <meta name="description" content="Encontre a melhor forma de comprar, vender e usar criptomoedas com segurança. P2P, Exchanges, Cartões Cripto e Segurança.">
     <meta name="keywords" content="bitcoin, criptomoedas, p2p, exchange, cartão cripto, ledger, segurança, crypto aggregator">
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Crypto Aggregator - Best Crypto Platforms">
+    <link rel="canonical" href="https://cryptoaggregator.io/">
+    <meta name="theme-color" content="#FF6B35">
+
+    <!-- Open Graph Meta Tags (WhatsApp / Facebook / LinkedIn link preview) -->
+    <meta property="og:type" content="website">
     <meta property="og:site_name" content="Crypto Aggregator">
+    <meta property="og:title" content="Crypto Aggregator — As melhores plataformas de cripto, reunidas e verificadas">
+    <meta property="og:description" content="P2P, exchanges, DEXs, cartões, carteiras e segurança — as melhores plataformas de cripto reunidas e verificadas em um só lugar. Sem cadastro.">
+    <meta property="og:url" content="https://cryptoaggregator.io/">
+    <meta property="og:image" content="https://cryptoaggregator.io/assets/og-image.png?v=20260626">
+    <meta property="og:image:secure_url" content="https://cryptoaggregator.io/assets/og-image.png?v=20260626">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Crypto Aggregator - melhores plataformas de cripto verificadas">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="es_ES">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Crypto Aggregator — As melhores plataformas de cripto, reunidas e verificadas">
+    <meta name="twitter:description" content="P2P, exchanges, DEXs, cartões, carteiras e segurança — tudo em um só lugar, sem cadastro.">
+    <meta name="twitter:image" content="https://cryptoaggregator.io/assets/og-image.png?v=20260626">
 
     <!-- Apple Meta Tags -->
     <meta name="apple-mobile-web-app-title" content="Crypto Aggregator">
@@ -119,7 +140,13 @@
     <link rel="preconnect" href="https://www.google.com">
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="https://unavatar.io/x/criptoagg">
+    <!-- Favicons / App icons (Crypto Aggregator brand) -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="mask-icon" href="assets/favicon.svg" color="#FF6B35">
+    <link rel="manifest" href="manifest.json">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5S6MB3MSVV"></script>
@@ -403,9 +430,15 @@
       </nav>
 
       <div id="language-switcher">
-        <span id="btn-pt">PT</span>
-        <span id="btn-en">EN</span>
-        <span id="btn-es">ES</span>
+        <span id="btn-pt" class="lang-flag lang-active" title="Português" role="button" aria-label="Português">
+          <svg viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" fill="#009b3a"/><path d="M14 2.6 25.5 10 14 17.4 2.5 10Z" fill="#fedf00"/><circle cx="14" cy="10" r="3.7" fill="#002776"/></svg>
+        </span>
+        <span id="btn-en" class="lang-flag" title="English" role="button" aria-label="English">
+          <svg viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" fill="#b22234"/><rect y="1.54" width="28" height="1.54" fill="#fff"/><rect y="4.62" width="28" height="1.54" fill="#fff"/><rect y="7.69" width="28" height="1.54" fill="#fff"/><rect y="10.77" width="28" height="1.54" fill="#fff"/><rect y="13.85" width="28" height="1.54" fill="#fff"/><rect y="16.92" width="28" height="1.54" fill="#fff"/><rect width="12" height="10.77" fill="#3c3b6e"/></svg>
+        </span>
+        <span id="btn-es" class="lang-flag" title="Español" role="button" aria-label="Español">
+          <svg viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" fill="#c60b1e"/><rect y="5" width="28" height="10" fill="#ffc400"/></svg>
+        </span>
       </div>
 
       <div class="actions-container">
@@ -779,6 +812,9 @@
                         <div class="card-final-buttons">
                             <a data-i18n="btn_visit" href="https://b2pix.org/bolao/palpites?turma=dogdamassa&ref=dogdamassa" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-primary" onclick="trackPlatformClick('B2Pix', 'P2P')">
                                 Visitar Site
+                            </a>
+                            <a data-i18n="btn_follow" href="https://x.com/b2pixorg" target="_blank" rel="noopener noreferrer" class="card-final-btn card-final-btn-secondary" onclick="trackPlatformClick('B2Pix', 'Social')">
+                                Seguir no X
                             </a>
                         </div>
                     </div>
