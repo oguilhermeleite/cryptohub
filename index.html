@@ -18,8 +18,8 @@
     <meta property="og:title" content="Crypto Aggregator — As melhores plataformas de cripto, reunidas e verificadas">
     <meta property="og:description" content="P2P, exchanges, DEXs, cartões, carteiras e segurança — as melhores plataformas de cripto reunidas e verificadas em um só lugar. Sem cadastro.">
     <meta property="og:url" content="https://cryptoaggregator.io/">
-    <meta property="og:image" content="https://cryptoaggregator.io/assets/og-image.png?v=20260626">
-    <meta property="og:image:secure_url" content="https://cryptoaggregator.io/assets/og-image.png?v=20260626">
+    <meta property="og:image" content="https://cryptoaggregator.io/assets/og-image.png?v=2">
+    <meta property="og:image:secure_url" content="https://cryptoaggregator.io/assets/og-image.png?v=2">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -32,7 +32,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Crypto Aggregator — As melhores plataformas de cripto, reunidas e verificadas">
     <meta name="twitter:description" content="P2P, exchanges, DEXs, cartões, carteiras e segurança — tudo em um só lugar, sem cadastro.">
-    <meta name="twitter:image" content="https://cryptoaggregator.io/assets/og-image.png?v=20260626">
+    <meta name="twitter:image" content="https://cryptoaggregator.io/assets/og-image.png?v=2">
 
     <!-- Apple Meta Tags -->
     <meta name="apple-mobile-web-app-title" content="Crypto Aggregator">
@@ -140,12 +140,15 @@
     <link rel="preconnect" href="https://www.google.com">
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <!-- Favicons / App icons (Crypto Aggregator brand) -->
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="mask-icon" href="assets/favicon.svg" color="#FF6B35">
+    <!-- Favicons / App icons (Crypto Aggregator brand) — ?v bump busts the browser favicon cache -->
+    <link rel="icon" href="/favicon.ico?v=2" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png?v=2">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png?v=2">
+    <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png?v=2">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=2">
+    <link rel="mask-icon" href="assets/favicon.svg?v=2" color="#FF6B35">
     <link rel="manifest" href="manifest.json">
 
     <!-- Google tag (gtag.js) -->
@@ -2212,6 +2215,14 @@
                 <div class="footer-brand">
                     <h3 class="footer-logo">CRYPTO AGGREGATOR</h3>
                     <p class="footer-slogan" data-i18n="footerDesc">Sua porta de entrada e saída para o mundo cripto</p>
+                    <div class="footer-social">
+                        <a href="https://x.com/criptoagg" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" title="X">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/></svg>
+                        </a>
+                        <a href="mailto:thecryptoaggregator@gmail.com" aria-label="E-mail" title="E-mail">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Links Column -->
