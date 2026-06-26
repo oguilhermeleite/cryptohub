@@ -409,6 +409,37 @@
         #mobile-menu-btn { font-size: 24px !important; margin-left: 10px !important; }
       }
     </style>
+
+    <!-- FIX: mobile menu tap-through. The open dropdown was trapped in the
+         header's z-index:10 stacking context — equal to .hero-section (z:10),
+         which paints later in the DOM and swallowed taps on the menu links.
+         Lift the header above page content and make the menu a real overlay. -->
+    <style>
+      @media (max-width: 1024px) {
+        header.site-header { z-index: 900 !important; }
+        nav#nav-menu.active {
+          position: absolute !important;
+          top: 100% !important;
+          left: 0 !important;
+          right: 0 !important;
+          width: 100% !important;
+          margin: 0 !important;
+          padding: 8px 0 14px !important;
+          background: #0a0a0a !important;
+          border-bottom: 2px solid #FF6B35 !important;
+          box-shadow: 0 16px 30px rgba(0, 0, 0, 0.55) !important;
+          z-index: 5 !important;
+          pointer-events: auto !important;
+          max-height: calc(100vh - 56px) !important;
+          overflow-y: auto !important;
+        }
+        nav#nav-menu.active a {
+          position: relative !important;
+          z-index: 1 !important;
+          pointer-events: auto !important;
+        }
+      }
+    </style>
 </head>
 <body style="padding-bottom: 50px;">
     <!-- Header -->
@@ -2295,6 +2326,19 @@
                 }
             }
         });
+
+        // Close the mobile dropdown after tapping a nav link, so the target
+        // section is visible (otherwise the open overlay covers it).
+        (function () {
+            var navMenu = document.getElementById('nav-menu');
+            if (!navMenu) return;
+            navMenu.addEventListener('click', function (e) {
+                var link = e.target.closest('a[href^="#"]');
+                if (!link) return;
+                navMenu.classList.remove('active');
+                navMenu.style.setProperty('display', 'none', 'important');
+            });
+        })();
     </script>
 </body>
 </html>
