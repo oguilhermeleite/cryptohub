@@ -1,32 +1,33 @@
 // Service Worker - Stale While Revalidate Strategy
 // Assets are served from cache instantly, then updated in background.
 // Next page load always has the latest version.
-const CACHE_NAME = 'crypto-aggregator-v9';
+const CACHE_NAME = 'crypto-aggregator-v10';
 
+// NOTE: paths must match the real files on disk. CSS lives in /css and JS in /js.
+// (The old list pointed to root-level files that no longer exist, which made
+// cache.addAll() reject and silently broke every SW update.)
 const PRECACHE_ASSETS = [
   '/',
   '/index.html',
   '/all-platforms.html',
-  '/styles.css',
-  '/professional-refined.css',
-  '/premium-elements.css',
-  '/cards-final.css',
-  '/theme-fixes.css',
-  '/featured-golden.css',
-  '/mouse-fix-critical.css',
-  '/script.js',
-  '/performance.js',
-  '/premium-elements.js',
-  '/scroll-unblock.js',
-  '/mouse-fix-force.js'
+  '/css/main.css',
+  '/js/script.js',
+  '/js/performance.js',
+  '/js/premium-elements.js',
+  '/js/scroll-unblock.js',
+  '/js/mouse-fix-force.js'
 ];
 
-// Install: pre-cache assets and activate immediately
+// Install: pre-cache assets and activate immediately.
+// Use allSettled + individual add() so one missing asset can never abort the
+// whole install (which would leave the previous SW serving stale content).
 self.addEventListener('install', (event) => {
   console.log('[SW] Installing', CACHE_NAME);
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then((cache) => cache.addAll(PRECACHE_ASSETS))
+      .then((cache) => Promise.allSettled(
+        PRECACHE_ASSETS.map((asset) => cache.add(asset))
+      ))
       .then(() => self.skipWaiting())
   );
 });

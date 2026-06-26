@@ -11592,3 +11592,142 @@ body > div:empty:not([id]):not([class]) {
     padding: 120px 0 50px !important;
     align-items: center !important;
 }
+
+/* ============================================
+   FOOTER — refined ambiance & organization
+   ============================================ */
+.footer {
+    background:
+        radial-gradient(120% 130% at 50% 0%, rgba(255, 107, 53, 0.07) 0%, rgba(255, 107, 53, 0) 55%),
+        #050505 !important;
+    border-top: 1px solid rgba(255, 107, 53, 0.16) !important;
+    padding: 4.5rem 0 1.75rem !important;
+    position: relative;
+    overflow: hidden;
+}
+.footer::before {
+    content: "";
+    position: absolute;
+    top: -1px; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.85), transparent);
+}
+
+.footer .footer-content {
+    grid-template-columns: 1.3fr 1fr 1.15fr !important;
+    gap: 2.5rem 3.5rem !important;
+    align-items: start !important;
+    margin-bottom: 2.5rem !important;
+}
+
+/* Brand column */
+.footer-brand { gap: 1.1rem !important; }
+.footer-logo {
+    font-size: 1.55rem !important;
+    letter-spacing: 0.02em;
+}
+.footer-slogan { max-width: 300px; }
+
+.footer-social {
+    display: flex !important;
+    gap: 10px !important;
+    margin-top: 0.5rem !important;
+}
+.footer-social a {
+    width: 38px !important;
+    height: 38px !important;
+    flex: 0 0 auto !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 11px !important;
+    color: rgba(255, 255, 255, 0.72) !important;
+    background: rgba(255, 255, 255, 0.045) !important;
+    border: 1px solid rgba(255, 255, 255, 0.09) !important;
+    transition: color 0.25s ease, background 0.25s ease, border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+.footer-social a:hover {
+    color: #fff !important;
+    background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%) !important;
+    border-color: transparent !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(255, 107, 53, 0.32) !important;
+}
+.footer-social a svg {
+    width: 18px !important;
+    height: 18px !important;
+    display: block !important;
+    flex: 0 0 auto !important;
+}
+
+/* Column headings — eyebrow style with accent underline */
+.footer-section h4,
+.footer-newsletter h4 {
+    position: relative;
+    padding-bottom: 0.65rem !important;
+    margin-bottom: 1.2rem !important;
+    font-size: 0.78rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.55) !important;
+}
+.footer-section h4::after,
+.footer-newsletter h4::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 26px; height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #FF6B35, #F7931E);
+}
+
+/* Links list */
+.footer .footer-links { justify-content: flex-start !important; }
+.footer-section ul {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.6rem 2.25rem !important;
+}
+.footer-section ul li { margin-bottom: 0 !important; }
+.footer-section ul li a {
+    display: inline-block;
+    font-size: 0.92rem !important;
+    color: rgba(255, 255, 255, 0.66) !important;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+.footer-section ul li a:hover {
+    color: var(--accent-primary) !important;
+    transform: translateX(3px);
+}
+
+/* Newsletter */
+.footer-newsletter .newsletter-input {
+    border-radius: 10px !important;
+}
+
+/* Bottom bar */
+.footer .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    padding-top: 1.6rem;
+    text-align: center;
+}
+.footer .footer-bottom p {
+    font-size: 0.84rem !important;
+    color: rgba(255, 255, 255, 0.45) !important;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .footer .footer-content {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+        text-align: center;
+    }
+    .footer-slogan { max-width: none; margin-left: auto; margin-right: auto; }
+    .footer-social { justify-content: center; }
+    .footer-section h4::after,
+    .footer-newsletter h4::after { left: 50%; transform: translateX(-50%); }
+    .footer-section ul { justify-items: center; }
+    .footer-section ul li a:hover { transform: none; }
+}
