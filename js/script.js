@@ -104,7 +104,7 @@ const translations = {
         heroTitle: "Sua porta de entrada e saída para o mundo cripto",
         heroSubtitle: "Agregador on-ramp e off-ramp para comprar, vender e usar cripto.",
         heroDesc: "Plataformas selecionadas e seus links oficiais — para você acessar com segurança.",
-        lastUpdated: "Atualizado em 25/06/2026",
+        lastUpdated: "Atualizado em {date}",
         featuredTitle: "Destaque",
         featuredSubtitle: "Plataforma em destaque da nossa comunidade",
         partnerBadge: "PARCEIRO OFICIAL",
@@ -263,7 +263,7 @@ const translations = {
         heroTitle: "Your gateway in and out of the crypto world",
         heroSubtitle: "An on-ramp and off-ramp aggregator to buy, sell and use crypto.",
         heroDesc: "Hand-picked platforms and their official links — so you can access them safely.",
-        lastUpdated: "Updated on June 25, 2026",
+        lastUpdated: "Updated on {date}",
         featuredTitle: "Highlight",
         featuredSubtitle: "Featured platform of our community",
         partnerBadge: "OFFICIAL PARTNER",
@@ -422,7 +422,7 @@ const translations = {
         heroTitle: "Tu puerta de entrada y salida al mundo cripto",
         heroSubtitle: "Agregador on-ramp y off-ramp para comprar, vender y usar cripto.",
         heroDesc: "Plataformas seleccionadas y sus enlaces oficiales — para que accedas con seguridad.",
-        lastUpdated: "Actualizado el 25/06/2026",
+        lastUpdated: "Actualizado el {date}",
         featuredTitle: "Destacado",
         featuredSubtitle: "Plataforma destacada de nuestra comunidad",
         partnerBadge: "SOCIO OFICIAL",
@@ -567,15 +567,32 @@ const translations = {
 
 let currentLang = localStorage.getItem('prefLang') || 'pt';
 
+// Always-current date for the "Atualizado em {date}" hero badge. Computed from the
+// visitor's local clock on every load, so it auto-rolls at midnight with no cron
+// job and no daily commit. PT/ES use dd/mm/yyyy; EN uses a long-form date.
+function formatTodayDate(lang) {
+    const d = new Date();
+    if (lang === 'en') {
+        return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    }
+    const dd = String(d.getDate()).padStart(2, '0');
+    const mm = String(d.getMonth() + 1).padStart(2, '0');
+    return dd + '/' + mm + '/' + d.getFullYear();
+}
+
 function setLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('prefLang', lang);
-    
+
     // Update all elements with data-i18n attribute
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (translations[lang] && translations[lang][key]) {
-            el.innerHTML = translations[lang][key];
+            let value = translations[lang][key];
+            if (key === 'lastUpdated') {
+                value = value.replace('{date}', formatTodayDate(lang));
+            }
+            el.innerHTML = value;
         }
     });
 
