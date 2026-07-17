@@ -11475,3 +11475,56 @@ a[href="#creators"],
 [id*="creators-link"] {
     display: none !important;
 }
+
+/* Fix header layout to prevent language selector overflow */
+@media (min-width: 769px) {
+    /* Ensure header is properly centered */
+    .site-header {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 0 20px !important;
+    }
+
+    /* Constrain navigation menu to prevent expanding and pushing language selector */
+    #nav-menu {
+        order: 2 !important;
+        flex: 0 1 auto !important;
+        display: flex !important;
+        justify-content: center !important;
+        gap: 20px !important;
+        max-width: 70% !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    /* Prevent language selector from being squeezed or pushed off-screen */
+    #language-switcher {
+        order: 4 !important;
+        margin-left: auto !important;
+        margin-right: 0 !important;
+        margin-bottom: 0 !important;
+        width: auto !important;
+        flex-shrink: 0 !important;
+        border-bottom: none !important;
+        padding-bottom: 0 !important;
+        display: flex !important;
+        gap: 12px !important;
+        white-space: nowrap !important;
+        padding: 0 10px !important;
+    }
+
+    .logo-area {
+        order: 1 !important;
+        flex: 0 1 auto !important;
+        display: flex !important;
+        align-items: center !important;
+        min-width: 200px !important;
+    }
+
+    .actions-container {
+        order: 3 !important;
+        display: none !important;
+    }
+}
