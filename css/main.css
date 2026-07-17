@@ -11565,37 +11565,36 @@ a[href="#creators"],
         align-items: center !important;
     }
 
-    /* ========== HEADER MOCKUP LAYOUT ========== */
-    /* Master header container - Premium tall design */
+    /* ========== HEADER MOCKUP LAYOUT WITH TRUE GEOMETRIC CENTERING ========== */
+    /* Master header container - Premium tall design with 3-column layout */
     .site-header {
         display: flex !important;
-        justify-content: space-between !important;
         align-items: center !important;
+        justify-content: space-between !important;
         height: 75px !important;
         padding: 0 4% !important;
         width: 100% !important;
         box-sizing: border-box !important;
-        gap: 20px !important;
     }
 
-    /* Zone 1: Logo (Left) - Fixed width */
+    /* Column 1: Logo (Left) - Takes flex: 1 for symmetric geometry */
     .site-header .logo-area {
-        flex: 0 0 auto !important;
+        flex: 1 !important;
         order: 1 !important;
         display: flex !important;
         align-items: center !important;
+        justify-content: flex-start !important;
     }
 
-    /* Zone 2: Main Navigation (Center) - All 9 links inline with dividers */
+    /* Column 2: Main Navigation (Center) - Auto width, perfectly centered */
     .site-header .desktop-nav {
-        flex: 0 0 auto !important;
+        flex: 0 1 auto !important;
         order: 2 !important;
         display: flex !important;
         flex-wrap: nowrap !important;
         justify-content: center !important;
         align-items: center !important;
         gap: 0 !important;
-        margin: 0 auto !important;
     }
 
     /* Navigation links with dividers */
@@ -11628,14 +11627,11 @@ a[href="#creators"],
         color: var(--accent-primary, #00ff88) !important;
     }
 
-    /* Zone 3: Language Selector (Right) - LOCKED, never shrinks */
+    /* Column 3: Language Selector (Right) - Takes flex: 1 for symmetric geometry, LOCKED from shrinking */
     .site-header #language-switcher {
-        flex: 0 0 auto !important;
+        flex: 1 !important;
         order: 4 !important;
-        margin-left: auto !important;
-        margin-right: 0 !important;
-        margin-bottom: 0 !important;
-        margin-top: 0 !important;
+        margin: 0 !important;
         width: auto !important;
         border-bottom: none !important;
         padding: 0 !important;
@@ -11652,7 +11648,6 @@ a[href="#creators"],
         position: relative !important;
         z-index: 9999 !important;
         pointer-events: auto !important;
-        min-width: 80px !important;
     }
 
     /* Hide mobile elements on desktop */
