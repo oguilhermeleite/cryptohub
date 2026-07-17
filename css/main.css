@@ -11463,3 +11463,15 @@ body > div:empty:not([id]):not([class]) {
         padding-bottom: 45px !important; /* Reduced padding for the thinner ticker */
     }
 }
+
+/* Hide Creators section - preserving HTML for future restoration */
+#creators {
+    display: none !important;
+}
+
+/* Hide Creators menu links */
+.nav-links a[href="#creators"],
+a[href="#creators"],
+[id*="creators-link"] {
+    display: none !important;
+}
