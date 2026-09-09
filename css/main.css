@@ -590,10 +590,10 @@ section {
     z-index: 10;
 }
 
-/* Gold Highlight for Featured First Cards */
+/* Neon Highlight for Featured First Cards */
 .card-highlight {
-    border: 2px solid rgba(255, 215, 0, 0.6) !important;
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3), inset 0 0 20px rgba(255, 215, 0, 0.05) !important;
+    border: 2px solid rgba(0, 255, 136, 0.8) !important;
+    box-shadow: 0 0 25px rgba(0, 255, 136, 0.5), 0 0 50px rgba(0, 255, 136, 0.25), inset 0 0 20px rgba(0, 255, 136, 0.1) !important;
     position: relative;
 }
 
@@ -603,20 +603,20 @@ section {
     top: -12px;
     left: 50%;
     transform: translateX(-50%);
-    background: linear-gradient(90deg, #FFD700, #FFA500);
+    background: #00ff88;
     color: #000;
     padding: 4px 12px;
     border-radius: 20px;
     font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: 1px;
-    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.6);
     z-index: 20;
 }
 
 .card-highlight:hover {
-    border-color: rgba(255, 215, 0, 0.9) !important;
-    box-shadow: 0 0 30px rgba(255, 215, 0, 0.5), inset 0 0 20px rgba(255, 215, 0, 0.1) !important;
+    border-color: rgba(0, 255, 136, 1) !important;
+    box-shadow: 0 0 40px rgba(0, 255, 136, 0.7), 0 0 80px rgba(0, 255, 136, 0.3), inset 0 0 20px rgba(0, 255, 136, 0.2) !important;
     transform: translateY(-8px) scale(1.02);
 }
 
