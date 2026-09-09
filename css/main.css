@@ -586,8 +586,38 @@ section {
 .platform-card-final:hover {
     transform: translateY(-5px) scale(1.01);
     border-color: rgba(0, 255, 163, 0.2);
-    box-shadow: 0 15px 35px rgba(0, 255, 163, 0.1), 0 0 0 1px rgba(0, 255, 163, 0.2); 
+    box-shadow: 0 15px 35px rgba(0, 255, 163, 0.1), 0 0 0 1px rgba(0, 255, 163, 0.2);
     z-index: 10;
+}
+
+/* Gold Highlight for Featured First Cards */
+.card-highlight {
+    border: 2px solid rgba(255, 215, 0, 0.6) !important;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3), inset 0 0 20px rgba(255, 215, 0, 0.05) !important;
+    position: relative;
+}
+
+.card-highlight::before {
+    content: '✨ DESTAQUE';
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #FFD700, #FFA500);
+    color: #000;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+    z-index: 20;
+}
+
+.card-highlight:hover {
+    border-color: rgba(255, 215, 0, 0.9) !important;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.5), inset 0 0 20px rgba(255, 215, 0, 0.1) !important;
+    transform: translateY(-8px) scale(1.02);
 }
 
 .card-final-title {
