@@ -2679,12 +2679,19 @@ section::-webkit-scrollbar,
 /* Old styles removed - now using card-front and card-back */
 
 .featured-card {
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
-    border-color: rgba(255, 215, 0, 0.2);
+    background: linear-gradient(180deg, #181920 0%, #0f1015 100%);
+    border: 1px solid rgba(249, 115, 22, 0.4);
+    box-shadow:
+        0 0 0 1px rgba(249, 115, 22, 0.15) inset,
+        0 8px 32px rgba(217, 119, 6, 0.15);
 }
 
 .featured-card:hover {
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
+    background: linear-gradient(180deg, #1f2229 0%, #151a1f 100%);
+    border-color: rgba(249, 115, 22, 0.6);
+    box-shadow:
+        0 0 0 1px rgba(249, 115, 22, 0.25) inset,
+        0 12px 40px rgba(217, 119, 6, 0.25);
 }
 
 .card-content {
@@ -2708,8 +2715,8 @@ section::-webkit-scrollbar,
 
 .platform-card:hover .platform-logo {
     transform: scale(1.1);
-    background: rgba(255, 215, 0, 0.2);
-    border-color: rgba(255, 215, 0, 0.3);
+    background: rgba(249, 115, 22, 0.15);
+    border-color: rgba(249, 115, 22, 0.3);
 }
 
 
@@ -11740,4 +11747,80 @@ a[href="#creators"],
         order: 3 !important;
         display: none !important;
     }
+}
+
+/* ============================================
+   mQm PIX FEATURED CARD - Dark Amber Theme
+   ============================================ */
+
+/* Featured card in the P2P grid */
+.cards-final-grid .platform-card-final.featured-card {
+    background: linear-gradient(180deg, #181920 0%, #0f1015 100%);
+    border: 1px solid rgba(249, 115, 22, 0.4);
+    box-shadow:
+        0 0 0 1px rgba(249, 115, 22, 0.15) inset,
+        0 12px 40px rgba(217, 119, 6, 0.2),
+        0 0 60px rgba(249, 115, 22, 0.12);
+}
+
+.cards-final-grid .platform-card-final.featured-card:hover {
+    background: linear-gradient(180deg, #1f2229 0%, #151a1f 100%);
+    border-color: rgba(249, 115, 22, 0.65);
+    transform: translateY(-8px);
+    box-shadow:
+        0 0 0 1px rgba(249, 115, 22, 0.25) inset,
+        0 16px 48px rgba(217, 119, 6, 0.3),
+        0 0 80px rgba(249, 115, 22, 0.18);
+}
+
+/* Featured card logo styling */
+.cards-final-grid .platform-card-final.featured-card .card-logo-container {
+    border: 1.5px solid rgba(249, 115, 22, 0.3);
+    background: linear-gradient(135deg,
+        rgba(249, 115, 22, 0.08) 0%,
+        rgba(249, 115, 22, 0.03) 100%);
+}
+
+.cards-final-grid .platform-card-final.featured-card:hover .card-logo-container {
+    border-color: rgba(249, 115, 22, 0.5);
+    background: linear-gradient(135deg,
+        rgba(249, 115, 22, 0.12) 0%,
+        rgba(249, 115, 22, 0.05) 100%);
+}
+
+/* Featured card title */
+.cards-final-grid .platform-card-final.featured-card .card-final-title {
+    color: #f97316;
+    text-shadow: 0 0 20px rgba(249, 115, 22, 0.3);
+}
+
+/* Featured card primary button */
+.cards-final-grid .platform-card-final.featured-card .card-final-btn-primary {
+    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+    color: #ffffff;
+    border: 1px solid rgba(249, 115, 22, 0.6);
+    box-shadow: 0 6px 20px rgba(249, 115, 22, 0.25);
+    transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.cards-final-grid .platform-card-final.featured-card .card-final-btn-primary:hover {
+    background: linear-gradient(135deg, #ea580c 0%, #d97706 100%);
+    border-color: rgba(249, 115, 22, 0.8);
+    box-shadow: 0 10px 30px rgba(249, 115, 22, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Featured card secondary button */
+.cards-final-grid .platform-card-final.featured-card .card-final-btn-secondary {
+    background: transparent;
+    color: #f97316;
+    border: 1.5px solid rgba(249, 115, 22, 0.5);
+    transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.cards-final-grid .platform-card-final.featured-card .card-final-btn-secondary:hover {
+    background: rgba(249, 115, 22, 0.1);
+    border-color: rgba(249, 115, 22, 0.8);
+    color: #ffa94d;
+    box-shadow: 0 6px 16px rgba(249, 115, 22, 0.2);
 }
