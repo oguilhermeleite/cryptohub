@@ -13,9 +13,10 @@ if (newsletterForm) {
 
 function handleFormSuccess() {
     if (formMessage) {
-        formMessage.textContent = 'Obrigado por se inscrever!';
+        formMessage.textContent = translations[currentLang]?.newsletterSuccess || 'Obrigado por se inscrever!';
         formMessage.style.color = '#00ff88';
         newsletterForm.reset();
+        window.submitted = false;
     }
 }
 
@@ -88,6 +89,9 @@ function showToast(message) {
 const translations = {
     pt: {
         langTitle: "Idioma",
+        nav_more: "Mais ▼",
+        creatorsTitle: "Criadores e análises",
+        creatorsSubtitle: "Os criadores e analistas de referência da nossa comunidade",
         langPt: "Português",
         langEn: "Inglês",
         navHome: "Home",
@@ -155,7 +159,7 @@ const translations = {
         descCamilaP2P: "Especialista brasileira em P2P. Com taxas baixas e suporte para +1.000 Criptomoedas. Cupom MQM para desconto.",
         descP2Pme: "P2P.me é uma plataforma P2P confiável para compra e venda de criptomoedas com segurança e rapidez.",
         desc_binance: "Maior exchange do mundo com +270 milhões de usuários. Taxas baixas e +500 criptomoedas disponíveis.",
-        desc_bybit: "Exchange global de criptomoedas with high liquidity, advanced derivatives and competitive fees.",
+        desc_bybit: "Exchange global de criptomoedas com alta liquidez, derivativos avançados e taxas competitivas.",
         desc_kraken: "Kraken é uma das exchanges mais antigas e confiáveis, conhecida por sua segurança e conformidade regulatória.",
         desc_mexc: "MEXC é uma exchange global com ampla seleção de altcoins e trading de futuros.",
         desc_coinbase: "Coinbase é a exchange mais amigável para iniciantes, com interface simples e alta segurança.",
@@ -168,7 +172,7 @@ const translations = {
         desc_slush: "Carteira elegante para Sui. Super app para investir, swap, stake e DeFi no ecossistema Sui.",
         desc_unisat: "Carteira Bitcoin para Alkanes, Ordinals e Runes. Gerencie ativos digitais no Bitcoin.",
         desc_kastfinance: "Kast oferece cartões cripto que permitem gastar suas criptomoedas no dia a dia com facilidade.",
-        desc_offramp: "Offramp facilita a conversão de cripto para fiat with cards and solutions de pagamento.",
+        desc_offramp: "Offramp facilita a conversão de cripto para moeda fiduciária com cartões e soluções de pagamento.",
         desc_etherfi: "Ether.fi oferece staking descentralizado e cartões cripto com recompensas.",
         desc_bitso: "Cartão cripto para gastar criptomoedas em qualquer lugar da América Latina.",
         desc_cypher: "Cartão cripto para uso diário. Recarregue com +500 tokens de EVM, Cosmos, Solana e Tron.",
@@ -251,6 +255,9 @@ const translations = {
     },
     en: {
         langTitle: "Language",
+        nav_more: "More ▼",
+        creatorsTitle: "Creators & Research",
+        creatorsSubtitle: "Leading creators and analysts from our community",
         langPt: "Portuguese",
         langEn: "English",
         navHome: "Home",
@@ -414,6 +421,9 @@ const translations = {
     },
     es: {
         langTitle: "Idioma",
+        nav_more: "Más ▼",
+        creatorsTitle: "Creadores y análisis",
+        creatorsSubtitle: "Creadores y analistas destacados de nuestra comunidad",
         langPt: "Português",
         langEn: "Inglés",
         navHome: "Inicio",
@@ -596,6 +606,7 @@ function setLanguage(lang) {
         const key = el.getAttribute('data-i18n-placeholder');
         if (translations[lang] && translations[lang][key]) {
             el.setAttribute('placeholder', translations[lang][key]);
+            el.setAttribute('aria-label', translations[lang][key]);
         }
     });
 
@@ -605,7 +616,11 @@ function setLanguage(lang) {
     // Sync with inline switchers if they exist (btn-pt, btn-en, btn-es)
     ['pt','en','es'].forEach(l => {
         const b = document.getElementById('btn-' + l);
-        if(b) b.style.opacity = lang === l ? '1' : '0.5';
+        if (b) {
+            const isActive = lang === l;
+            b.style.opacity = isActive ? '1' : '0.5';
+            b.setAttribute('aria-pressed', String(isActive));
+        }
     });
     
     // Update active state in dropdown
@@ -627,6 +642,18 @@ function setLanguage(lang) {
 
 document.addEventListener('DOMContentLoaded', function() {
     initCouponSystem();
+
+    const navDropdown = document.querySelector('.nav-dropdown');
+    const dropdownToggle = navDropdown?.querySelector('.dropdown-toggle');
+    if (navDropdown && dropdownToggle) {
+        const setDropdownState = (isOpen) => dropdownToggle.setAttribute('aria-expanded', String(isOpen));
+        navDropdown.addEventListener('mouseenter', () => setDropdownState(true));
+        navDropdown.addEventListener('mouseleave', () => setDropdownState(false));
+        navDropdown.addEventListener('focusin', () => setDropdownState(true));
+        navDropdown.addEventListener('focusout', (event) => {
+            if (!navDropdown.contains(event.relatedTarget)) setDropdownState(false);
+        });
+    }
     
     // Initial language setup
     setLanguage(currentLang);
@@ -691,9 +718,11 @@ document.addEventListener('DOMContentLoaded', function() {
       if (isOpen) {
         navMenu.classList.remove('active');
         navMenu.style.setProperty('display', 'none', 'important');
+        newMenuBtn.setAttribute('aria-expanded', 'false');
       } else {
         navMenu.classList.add('active');
         navMenu.style.setProperty('display', 'flex', 'important');
+        newMenuBtn.setAttribute('aria-expanded', 'true');
       }
     });
 
@@ -703,8 +732,29 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!navMenu.contains(e.target) && !newMenuBtn.contains(e.target)) {
           navMenu.classList.remove('active');
           navMenu.style.setProperty('display', 'none', 'important');
+          newMenuBtn.setAttribute('aria-expanded', 'false');
         }
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        navMenu.style.setProperty('display', 'none', 'important');
+        newMenuBtn.setAttribute('aria-expanded', 'false');
+        newMenuBtn.focus();
       }
     });
   }
 });
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch((error) => {
+      console.warn('[PWA] Service worker registration failed:', error);
+    });
+  });
+}
+
+const copyrightYear = document.getElementById('copyright-year');
+if (copyrightYear) copyrightYear.textContent = String(new Date().getFullYear());

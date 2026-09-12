@@ -11756,7 +11756,8 @@ a[href="#creators"],
     }
 
     /* Show dropdown on hover */
-    .nav-dropdown:hover .dropdown-menu {
+    .nav-dropdown:hover .dropdown-menu,
+    .nav-dropdown:focus-within .dropdown-menu {
         display: block !important;
     }
 

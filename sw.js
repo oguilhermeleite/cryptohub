@@ -1,24 +1,18 @@
 // Service Worker - Stale While Revalidate Strategy
 // Assets are served from cache instantly, then updated in background.
 // Next page load always has the latest version.
-const CACHE_NAME = 'crypto-aggregator-v9';
+const CACHE_NAME = 'crypto-aggregator-v10';
 
 const PRECACHE_ASSETS = [
   '/',
   '/index.html',
-  '/all-platforms.html',
-  '/styles.css',
-  '/professional-refined.css',
-  '/premium-elements.css',
-  '/cards-final.css',
-  '/theme-fixes.css',
-  '/featured-golden.css',
-  '/mouse-fix-critical.css',
-  '/script.js',
-  '/performance.js',
-  '/premium-elements.js',
-  '/scroll-unblock.js',
-  '/mouse-fix-force.js'
+  '/css/main.css',
+  '/js/script.js',
+  '/js/performance.js',
+  '/js/premium-elements.js',
+  '/js/scroll-unblock.js',
+  '/js/mouse-fix-force.js',
+  '/assets/images/logo-original.jpeg'
 ];
 
 // Install: pre-cache assets and activate immediately

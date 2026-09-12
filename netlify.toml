@@ -4,6 +4,12 @@
 [build.environment]
   NODE_VERSION = "18"
 
+[[redirects]]
+  from = "/all-platforms.html"
+  to = "/"
+  status = 301
+  force = true
+
 # Force HTTPS
 [[redirects]]
   from = "http://cryptoaggregator.io/*"

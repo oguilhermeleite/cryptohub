@@ -1,4 +1,6 @@
 # Force HTTPS redirect
+/all-platforms.html / 301!
+
 http://cryptoaggregator.io/* https://cryptoaggregator.io/:splat 301!
 http://www.cryptoaggregator.io/* https://cryptoaggregator.io/:splat 301!
 
